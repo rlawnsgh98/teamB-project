@@ -26,6 +26,10 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    //김준호 빌드 오류나서 넣음
+    task wrapper(type: Wrapper) {
+        gradleVersion = '7.0'
+    }
 }
 
 dependencies {
@@ -39,3 +43,5 @@ dependencies {
     //구글카드뷰 23/01/02 김준호
     implementation 'com.google.android.material:material:1.0.0'
 }
+//김준호 빌드 오류 나서 넣음
+tasks.register("prepareKotlinBuildScriptModel"){}
