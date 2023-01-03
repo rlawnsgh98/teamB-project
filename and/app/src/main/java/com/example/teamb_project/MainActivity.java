@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(b.getRoot());
 
 
+        b.btnBoard.setOnClickListener(this);
         b.btnNotice.setOnClickListener(this);
 
     }
@@ -27,7 +28,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(v.getId() == R.id.btn_notice){
             Intent intent = new Intent(MainActivity.this, NoticeActivity.class);
             startActivity(intent);
+        }else if(v.getId()==R.id.btn_board){
+            Intent intent = new Intent(MainActivity.this, BoardActivity.class);
+            startActivity(intent);
         }
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        b = null;
     }
 }

@@ -13,4 +13,11 @@
         android:text="공지사항"
         />
 
+    <Button
+        android:id="@+id/btn_board"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="자유게시판"
+        />
+
 </LinearLayout>

@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ScrollView;
 
+import com.example.teamb_project.common.Common;
 import com.example.teamb_project.databinding.ActivityBoardBinding;
 import com.example.teamb_project.databinding.ActivityNoticeBinding;
 
@@ -23,25 +24,15 @@ public class NoticeActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         b = ActivityNoticeBinding.inflate(getLayoutInflater());
         setContentView(b.getRoot());
+        //메소드 재활용
+        Common common = new Common();
 
         //클릭이벤트
         b.ivBack.setOnClickListener(this);
         b.cardGoTop.setOnClickListener(this);
 
         //스크롤 내리면 최상단 이동 버튼 보이기
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            b.scrNotice.setOnScrollChangeListener(new View.OnScrollChangeListener() {
-                @Override
-                public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
-                    Log.d("log", "onScrollChange: "+b.scrNotice.getScrollY());
-                    if(b.scrNotice.getScrollY()>100){
-                        b.cardGoTop.setVisibility(View.VISIBLE);
-                    }else{
-                        b.cardGoTop.setVisibility(View.GONE);
-                    }
-                }
-            });
-        }
+        common.scrollTop(b.scrNotice, b.cardGoTop);
 
         //어댑터로 보내줄 공지사항 리스트
         ArrayList<Object> list = new ArrayList<>();
