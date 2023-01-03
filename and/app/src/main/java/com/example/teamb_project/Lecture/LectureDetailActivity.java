@@ -15,7 +15,6 @@ import com.google.android.material.tabs.TabLayout;
 public class LectureDetailActivity extends AppCompatActivity {
 
     TabLayout tab_layout;
-    FrameLayout container;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,8 +28,10 @@ public class LectureDetailActivity extends AppCompatActivity {
         tab_layout.addTab(tab_layout.newTab().setText("과제관리"));
         tab_layout.addTab(tab_layout.newTab().setText("영상관리"));
 
-        tab_layout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+        //프래그먼트처음 화면
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, new LectureNoticeFragment()).commit();
 
+        tab_layout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
 
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -61,7 +62,7 @@ public class LectureDetailActivity extends AppCompatActivity {
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, new LectureStudentFragment()).commit();
                 break ;
             case 2 :
-
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, new LectureHomeworkFragment()).commit();
                 break ;
 
         }

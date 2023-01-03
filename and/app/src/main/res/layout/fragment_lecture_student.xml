@@ -15,6 +15,7 @@
         app:contentPadding="5dp"
         app:strokeColor="@color/black"
         app:strokeWidth="1dp"
+        android:layout_marginVertical="20dp"
         >
         <LinearLayout
             android:layout_width="match_parent"
