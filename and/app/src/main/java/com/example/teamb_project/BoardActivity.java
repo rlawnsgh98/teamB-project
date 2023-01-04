@@ -1,14 +1,18 @@
 package com.example.teamb_project;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.widget.NestedScrollView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
@@ -25,18 +29,36 @@ import java.util.ArrayList;
 
 public class BoardActivity extends AppCompatActivity implements View.OnClickListener{
     ActivityBoardBinding b;
+    final String TAG = "log";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         b = ActivityBoardBinding.inflate(getLayoutInflater());
         setContentView(b.getRoot());
 
+        Log.d(TAG, "onCreate: ");
         Common common = new Common();
+
+        //리사이클러뷰에 들어갈 데이터 List
+        ArrayList<Object> list = new ArrayList<>();
+        for(int i = 0; i < 10; i++){
+            list.add("");
+        }
 
         //클릭이벤트
         b.ivSearch.setOnClickListener(this);
         b.cardGoTop.setOnClickListener(this);
         b.ivBack.setOnClickListener(this);
+
+        //리사이클러뷰 스크롤 이벤트
+       b.scrBoard.setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
+           @Override
+           public void onScrollChange(@NonNull NestedScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
+//               Log.d(TAG, "onScrollChange: "+v.getMaxScrollAmount());
+               if(b.recvBoard.canScrollVertically(1)) Log.d(TAG, "onScrollChange: 최하단");;
+           }
+       });
 
         //스피너 설정
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
@@ -62,8 +84,7 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
         //스크롤 내리면 아이콘 보이게
         common.scrollTop(b.scrBoard, b.cardGoTop);
 
-        //리사이클러뷰에 들어갈 데이터 List
-        ArrayList<Object> list = new ArrayList<>();
+
         //어댑터 설정
         b.recvBoard.setAdapter(new BoardAdapter(getLayoutInflater(), list));
         b.recvBoard.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));

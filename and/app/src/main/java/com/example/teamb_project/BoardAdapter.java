@@ -26,13 +26,13 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.ViewHolder> 
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder h, int i) {
 
     }
 
     @Override
     public int getItemCount() {
-        return 10;
+        return list.size();
     }
     @Override
     public long getItemId(int i){return i;}
