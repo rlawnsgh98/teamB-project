@@ -20,25 +20,12 @@
             android:layout_height="100dp"
             android:orientation="horizontal">
             <Button
+                android:id="@+id/tt_btn"
                 android:drawableLeft="@drawable/ic_baseline_person_24_dark_gray"
                 android:layout_marginRight="5dp"
                 android:backgroundTint="#111"
                 style="@style/TEXT_STYLE_3"
-                android:text="공지사항"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <Button
-                android:drawableLeft="@drawable/ic_baseline_person_24_dark_gray"
-                android:layout_marginLeft="5dp"
-                android:backgroundTint="#111"
-                style="@style/TEXT_STYLE_3"
-                android:text="학원 공지사항"
+                android:text="시간표"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"/>
         </LinearLayout>
