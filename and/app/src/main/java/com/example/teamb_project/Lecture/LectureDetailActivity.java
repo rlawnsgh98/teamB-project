@@ -3,11 +3,6 @@ package com.example.teamb_project.Lecture;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.example.teamb_project.R;
 import com.google.android.material.tabs.TabLayout;
@@ -23,13 +18,12 @@ public class LectureDetailActivity extends AppCompatActivity {
 
         /*탭 레이아웃*/
         tab_layout = findViewById(R.id.tab_layout);
-        tab_layout.addTab(tab_layout.newTab().setText("강의공지"));
+        tab_layout.addTab(tab_layout.newTab().setText("강의홈"));
         tab_layout.addTab(tab_layout.newTab().setText("수강생목록"));
         tab_layout.addTab(tab_layout.newTab().setText("과제관리"));
-        tab_layout.addTab(tab_layout.newTab().setText("영상관리"));
 
         //프래그먼트처음 화면
-        getSupportFragmentManager().beginTransaction().replace(R.id.container, new LectureNoticeFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, new LectureHomeFragment()).commit();
 
         tab_layout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
 
@@ -56,7 +50,7 @@ public class LectureDetailActivity extends AppCompatActivity {
 
         switch (index) {
             case 0 :
-                getSupportFragmentManager().beginTransaction().replace(R.id.container, new LectureNoticeFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, new LectureHomeFragment()).commit();
                 break ;
             case 1 :
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, new LectureStudentFragment()).commit();
