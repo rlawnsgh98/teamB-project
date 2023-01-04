@@ -8,6 +8,9 @@ import android.widget.ImageView;
 
 public class Common {
 
+
+
+    // 스크롤 내리면 TOP 버튼 보이기
     public void scrollTop(View scroll, View btnTop){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             scroll.setOnScrollChangeListener(new View.OnScrollChangeListener() {
