@@ -29,10 +29,6 @@
             />
     </RelativeLayout>
 
-
-
-
-
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -73,11 +69,20 @@
                             android:paddingTop="10dp"
                             android:paddingBottom="10dp"
                             >
+                            <!-- 스피너 -->
+                            <Spinner
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:id="@+id/spinner"
+                                android:layout_marginLeft="15dp"
+                                android:gravity="center"
+                                android:layout_centerVertical="true"
+                                />
                             <!-- style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" -->
                             <EditText
                                 android:id="@+id/edt_search"
                                 android:layout_width="335dp"
-                                android:layout_height="50dp"
+                                android:layout_height="45dp"
                                 android:background="@drawable/edittext_search"
                                 android:layout_marginLeft="15dp"
                                 android:paddingLeft="15dp"

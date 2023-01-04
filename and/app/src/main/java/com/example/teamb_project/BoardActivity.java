@@ -38,6 +38,24 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
         b.cardGoTop.setOnClickListener(this);
         b.ivBack.setOnClickListener(this);
 
+        //스피너 설정
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+                this, R.array.spinner_category, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
+        b.spinner.setAdapter(adapter);
+
+        b.spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
         //EditText 입력이벤트
 //        b.edtSearch.addTextChangedListener(common.getTextWatcher(b.ivTextRemove));
 
@@ -67,5 +85,9 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
         }
     }
 
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        b = null;
+    }
 }

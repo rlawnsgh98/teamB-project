@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">TeamB-Project</string>
+    <string name="app_name">teamB-project</string>
+
+    <string-array name="spinner_category">
+        <item>제목</item>
+        <item>내용</item>
+        <item>작성자</item>
+    </string-array>
 </resources>
