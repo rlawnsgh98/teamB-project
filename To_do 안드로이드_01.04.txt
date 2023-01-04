@@ -4,7 +4,7 @@
 				왼쪽, 오른쪽 여백 dp 맞추기
 				
 
-NewBoardActivity	-	사진,파일 등록처리
+NewBoardActivity	-	사진,파일 등록처리 -> 파일첨부시 위쪽 구분선 보이게
 				글 DB에 저장처리
 
 BoardActivity	-	스크롤 최하단 도달시 리사이클러뷰 더 불러오기

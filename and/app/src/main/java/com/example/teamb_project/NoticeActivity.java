@@ -52,4 +52,5 @@ public class NoticeActivity extends AppCompatActivity implements View.OnClickLis
             b.scrNotice.fullScroll(ScrollView.FOCUS_UP);
         }
     }
+    //
 }
