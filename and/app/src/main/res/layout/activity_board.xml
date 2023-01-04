@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="자유게시판"
-            android:textSize="24dp"
+            android:textSize="20dp"
             android:textColor="@color/font_black"
             android:layout_centerInParent="true"
             />

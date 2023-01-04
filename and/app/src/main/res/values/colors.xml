@@ -12,6 +12,8 @@
     <color name="gray">#EAEAEA</color>
     <color name="font_black">#000</color>
 
+    <color name="main_blue">#55CDF2</color>
+
     <color name="line_gray">#EAEAEA</color>
 
 </resources>
