@@ -15,10 +15,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         b = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(b.getRoot());
-
+        getSupportActionBar().hide();
 
         b.btnBoard.setOnClickListener(this);
         b.btnNotice.setOnClickListener(this);
+        b.btnVideo.setOnClickListener(this);
+        b.btnBoardDetail.setOnClickListener(this);
 
     }
 
@@ -30,6 +32,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
         }else if(v.getId()==R.id.btn_board){
             Intent intent = new Intent(MainActivity.this, BoardActivity.class);
+            startActivity(intent);
+        }else if(v.getId()==R.id.btn_video){
+            Intent intent = new Intent(MainActivity.this, TessstActivity.class);
+            startActivity(intent);
+        }else if(v.getId()==R.id.btn_board_detail){
+            Intent intent = new Intent(MainActivity.this, BoardDetailActivity.class);
             startActivity(intent);
         }
 

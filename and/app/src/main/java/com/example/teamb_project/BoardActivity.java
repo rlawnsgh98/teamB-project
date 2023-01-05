@@ -14,6 +14,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -36,13 +37,14 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         b = ActivityBoardBinding.inflate(getLayoutInflater());
         setContentView(b.getRoot());
+        getSupportActionBar().hide();
 
         Log.d(TAG, "onCreate: ");
         Common common = new Common();
 
         //리사이클러뷰에 들어갈 데이터 List
         ArrayList<Object> list = new ArrayList<>();
-        for(int i = 0; i < 10; i++){
+        for(int i = 0; i < 30; i++){
             list.add("");
         }
 
@@ -50,15 +52,24 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
         b.ivSearch.setOnClickListener(this);
         b.cardGoTop.setOnClickListener(this);
         b.ivBack.setOnClickListener(this);
+        b.ivWrite.setOnClickListener(this);
 
         //리사이클러뷰 스크롤 이벤트
-       b.scrBoard.setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
-           @Override
-           public void onScrollChange(@NonNull NestedScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
-//               Log.d(TAG, "onScrollChange: "+v.getMaxScrollAmount());
-               if(b.recvBoard.canScrollVertically(1)) Log.d(TAG, "onScrollChange: 최하단");;
-           }
-       });
+        b.scrBoard.setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
+            @Override
+            public void onScrollChange(@NonNull NestedScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
+//               Log.d(TAG, "MaxScrollAmount: "+v.getMaxScrollAmount());   //최대 스크롤값
+//                Log.d(TAG, "scrollY: "+scrollY);   //
+//               if(b.recvBoard.canScrollVertically(1)) Log.d(TAG, "onScrollChange: 최하단ㅇㄴㅇㄹㄴㄷㄹ");;
+                ViewGroup.LayoutParams params = b.scrBoard.getLayoutParams();
+                int contentHeight = b.scrBoard.getHeight();
+                if (scrollY + params.height >= contentHeight) {
+                    // The user has reached the bottom of the scrollable view
+                    Log.d(TAG, "최하단 입니당");
+                }
+            }
+        });
+
 
         //스피너 설정
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
@@ -69,12 +80,12 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
         b.spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
+                //선택됐을때
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
+                //선택x
             }
         });
 
@@ -84,9 +95,8 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
         //스크롤 내리면 아이콘 보이게
         common.scrollTop(b.scrBoard, b.cardGoTop);
 
-
         //어댑터 설정
-        b.recvBoard.setAdapter(new BoardAdapter(getLayoutInflater(), list));
+        b.recvBoard.setAdapter(new BoardAdapter(getLayoutInflater(), list, this));
         b.recvBoard.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
     }
 
@@ -103,12 +113,18 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
             //돌아가기
             Intent intent = new Intent(BoardActivity.this, MainActivity.class);
             startActivity(intent);
+        }else if(v.getId()==R.id.iv_write){
+            //글 작성
+            Intent intent = new Intent(BoardActivity.this, NewBoardActivity.class);
+            startActivity(intent);
         }
     }
 
+    //onResume?
     @Override
     protected void onDestroy() {
         super.onDestroy();
         b = null;
     }
+
 }

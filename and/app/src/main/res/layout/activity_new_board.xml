@@ -60,14 +60,17 @@
         <!-- 글 내용 입력 -->
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginTop="10dp"
             android:hint="내용을 입력하세요."
             android:paddingLeft="10dp"
-            android:textSize="16dp"
+            android:textSize="18dp"
             android:background="@drawable/edittext_none"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:padding="10dp"
             />
     </LinearLayout>
 

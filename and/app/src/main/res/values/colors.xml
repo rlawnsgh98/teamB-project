@@ -16,4 +16,7 @@
 
     <color name="line_gray">#EAEAEA</color>
 
+    <!-- 댓글 수정,삭제 font blue -->
+    <color name="font_blue">#3D88D3</color>
+
 </resources>

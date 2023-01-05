@@ -126,6 +126,40 @@
                     android:id="@+id/recv_board"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
+
+                <!-- 더보기 버튼 - 추가 로딩 처리 -->
+                <LinearLayout
+                    android:id="@+id/lin_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line_gray"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_margin="15dp"
+                        >
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_arrow_down_gray"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="더보기"
+                            android:layout_gravity="center"
+                            android:textSize="15dp"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
         <!-- 위로가기 버튼 -->

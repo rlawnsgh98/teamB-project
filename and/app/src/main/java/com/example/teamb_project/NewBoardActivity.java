@@ -16,7 +16,7 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         b = ActivityNewBoardBinding.inflate(getLayoutInflater());
         setContentView(b.getRoot());
-
+        getSupportActionBar().hide();
 
         //글 등록 버튼 클릭
         b.cardInsert.setOnClickListener(this);
