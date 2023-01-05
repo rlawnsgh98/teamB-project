@@ -18,7 +18,6 @@ import com.example.teamb_project.teacher.notice.NoticeActivity;
 
 public class TeacherHomeActivity extends AppCompatActivity implements View.OnClickListener{
     ActivityTeacherhomeBinding t;
-   //CardView cv_mylecture, cv_notice, cv_board;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +28,9 @@ public class TeacherHomeActivity extends AppCompatActivity implements View.OnCli
         t.cvBoard.setOnClickListener(this);
         t.cvNotice.setOnClickListener(this);
         t.cvMylecture.setOnClickListener(this);
+        t.cvConsult.setOnClickListener(this);
+        t.cvAttendance.setOnClickListener(this);
+        t.cvSchedule.setOnClickListener(this);
     }
 
     @Override
