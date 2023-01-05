@@ -1,4 +1,4 @@
-package com.example.teamb_project;
+package com.example.teamb_project.teacher.board;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -6,6 +6,8 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.teamb_project.R;
 
 import java.util.ArrayList;
 

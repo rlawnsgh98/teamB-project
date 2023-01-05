@@ -10,6 +10,9 @@ import android.view.View;
 import com.example.conn.ApiClient;
 import com.example.conn.CommonMethod;
 import com.example.teamb_project.databinding.ActivityMainBinding;
+import com.example.teamb_project.teacher.board.BoardActivity;
+import com.example.teamb_project.teacher.board.BoardDetailActivity;
+import com.example.teamb_project.teacher.notice.NoticeActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     ActivityMainBinding b;

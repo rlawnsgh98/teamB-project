@@ -1,18 +1,17 @@
-package com.example.teamb_project;
+package com.example.teamb_project.teacher.notice;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ScrollView;
 
+import com.example.teamb_project.MainActivity;
+import com.example.teamb_project.R;
 import com.example.teamb_project.common.Common;
-import com.example.teamb_project.databinding.ActivityBoardBinding;
 import com.example.teamb_project.databinding.ActivityNoticeBinding;
 
 import java.util.ArrayList;
@@ -45,10 +44,9 @@ public class NoticeActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View v) {
-        if(v.getId()==R.id.iv_back){
+        if(v.getId()== R.id.iv_back){
             //뒤로가기 클릭시
-            Intent intent = new Intent(NoticeActivity.this, MainActivity.class);
-            startActivity(intent);
+            onBackPressed();
         }else if(v.getId()==R.id.card_go_top){
             //스크롤 최상단으로 이동
             b.scrNotice.fullScroll(ScrollView.FOCUS_UP);
