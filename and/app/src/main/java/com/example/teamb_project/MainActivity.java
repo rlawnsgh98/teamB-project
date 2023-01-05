@@ -4,12 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
+import com.example.conn.ApiClient;
+import com.example.conn.CommonMethod;
 import com.example.teamb_project.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     ActivityMainBinding b;
+    final String TAG = "log";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,10 +22,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(b.getRoot());
         getSupportActionBar().hide();
 
+        ApiClient.setBASEURL("http://192.168.0.115/middle/");
+
         b.btnBoard.setOnClickListener(this);
         b.btnNotice.setOnClickListener(this);
         b.btnVideo.setOnClickListener(this);
         b.btnBoardDetail.setOnClickListener(this);
+
+
+        //스프링 연동
+        b.tvTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                new CommonMethod().setParams("pw", "뿅").sendGet("and", (isResult, data) -> {
+                    Log.d(TAG, "보냈다!" + data);
+                });
+
+            }
+        });
 
     }
 

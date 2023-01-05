@@ -34,4 +34,15 @@
         android:text="자유게시판 상세 페이지"
         />
 
+    <TextView
+        android:id="@+id/tv_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="안드로이드에서 보냄!"
+        android:layout_margin="10dp"
+        android:textColor="@color/font_black"
+        android:textSize="20dp"
+        />
+
+
 </LinearLayout>

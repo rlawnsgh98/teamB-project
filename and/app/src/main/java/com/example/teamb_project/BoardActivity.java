@@ -44,8 +44,14 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
 
         //리사이클러뷰에 들어갈 데이터 List
         ArrayList<Object> list = new ArrayList<>();
-        for(int i = 0; i < 30; i++){
+        for(int i = 0; i < 10; i++){
             list.add("");
+        }
+
+        //글이 11개 이상일 경우 더보기 보이게 하기
+        b.linMore.setVisibility(View.GONE);
+        if(list.size() > 10){
+            b.linMore.setVisibility(View.VISIBLE);
         }
 
         //클릭이벤트

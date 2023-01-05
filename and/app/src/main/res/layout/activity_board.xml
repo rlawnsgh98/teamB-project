@@ -79,9 +79,9 @@
                                 android:orientation="horizontal">
                                 <!-- 스피너 -->
                                 <Spinner
+                                    android:id="@+id/spinner"
                                     android:layout_width="110dp"
                                     android:layout_height="40dp"
-                                    android:id="@+id/spinner"
                                     android:gravity="center"
                                     android:layout_centerVertical="true"
                                     android:layout_gravity="center"
@@ -133,12 +133,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
+                    android:layout_marginBottom="5dp"
                     >
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="@color/line_gray"
-                        />
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
