@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View v) {
 
-                new CommonMethod().setParams("pw", "뿅").sendGet("and", (isResult, data) -> {
+                new CommonMethod().setParams("id", "user3").sendGet("and", (isResult, data) -> {
                     Log.d(TAG, "보냈다!" + data);
                 });
 

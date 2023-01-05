@@ -1,0 +1,11 @@
+Uri uri = Uri.parse("http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4");
+
+playerView = b.videoView;
+
+ExoPlayer player = new SimpleExoPlayer.Builder(this).build();
+player.setMediaItem(new MediaItem.Builder().setUri(uri).build());
+playerView.setPlayer( player);
+
+
+//샘플 동영상
+https://jinha3211.tistory.com/28

@@ -52,4 +52,9 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-scalars:2.5.0'
     // Material EditText 2023.01.03-김원희     에딧텍스트
     implementation 'com.google.android.material:material:1.1.0'
+
+    // ExoPlayer 동영상 재생
+    implementation 'com.google.android.exoplayer:exoplayer:2.15.0'
+
+
 }
