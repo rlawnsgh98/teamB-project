@@ -23,6 +23,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
         <activity
             android:name=".JoinActivity"
             android:exported="false">
@@ -30,6 +31,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
         <activity
             android:name=".FindActivity"
             android:exported="false">
@@ -37,6 +39,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
         <activity
             android:name=".LoginActivity"
             android:exported="false">
@@ -44,7 +47,11 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity android:name=".teacher.mylecture.lecturehome.studentinfo.StudentDetailActivity" />
+
+        <activity
+            android:name=".teacher.mylecture.lecturehome.studentinfo.StudentDetailActivity">
+        </activity>
+
         <activity
             android:name=".teacher.board.BoardDetailActivity"
             android:exported="false">
@@ -52,19 +59,35 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity android:name=".teacher.mylecture.lecturehome.LectureDetailActivity" />
+
+        <activity android:name=".teacher.mylecture.lecturehome.LectureDetailActivity">
+
+        </activity>
+
         <activity
             android:name=".teacher.board.NewBoardActivity"
-            android:exported="false" />
+            android:exported="false">
+
+        </activity>
+
         <activity
             android:name=".TessstActivity"
-            android:exported="false" />
+            android:exported="false">
+
+        </activity>
+
         <activity
             android:name=".teacher.notice.NoticeActivity"
-            android:exported="false" />
+            android:exported="false">
+
+        </activity>
+
         <activity
             android:name=".teacher.board.BoardActivity"
-            android:exported="false" />
+            android:exported="false">
+
+        </activity>
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -72,6 +95,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
         <activity
             android:name=".teacher.mylecture.MyLectureActivity"
             android:exported="false">
@@ -79,18 +103,23 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
         <activity
             android:name=".teacher.TeacherHomeActivity"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".student.StudentHomeActivity"
+            android:exported="true">
+
         </activity>
     </application>
 
