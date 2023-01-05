@@ -1,10 +1,13 @@
-package com.example.teamb_project.Lecture;
+package com.example.teamb_project.teacher.mylecture.lecturehome;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
 import com.example.teamb_project.R;
+import com.example.teamb_project.teacher.mylecture.lecturehome.LectureHomeFragment;
+import com.example.teamb_project.teacher.mylecture.lecturehome.LectureHomeworkFragment;
+import com.example.teamb_project.teacher.mylecture.lecturehome.LectureStudentFragment;
 import com.google.android.material.tabs.TabLayout;
 
 public class LectureDetailActivity extends AppCompatActivity {

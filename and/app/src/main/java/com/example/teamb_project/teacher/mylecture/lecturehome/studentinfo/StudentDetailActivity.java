@@ -1,10 +1,13 @@
-package com.example.teamb_project.Lecture;
+package com.example.teamb_project.teacher.mylecture.lecturehome.studentinfo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
 import com.example.teamb_project.R;
+import com.example.teamb_project.teacher.mylecture.lecturehome.studentinfo.StudentAttendanceFragment;
+import com.example.teamb_project.teacher.mylecture.lecturehome.studentinfo.StudentHomeworkFragment;
+import com.example.teamb_project.teacher.mylecture.lecturehome.studentinfo.StudentTestresultFragment;
 import com.google.android.material.tabs.TabLayout;
 
 public class StudentDetailActivity extends AppCompatActivity {
@@ -53,7 +56,7 @@ public class StudentDetailActivity extends AppCompatActivity {
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, new StudentHomeworkFragment()).commit();
                 break ;
             case 2 :
-                getSupportFragmentManager().beginTransaction().replace(R.id.container, new StudentTestFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, new StudentTestresultFragment()).commit();
                 break ;
 
         }

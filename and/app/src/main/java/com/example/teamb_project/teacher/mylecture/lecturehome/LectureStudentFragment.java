@@ -1,4 +1,4 @@
-package com.example.teamb_project.Lecture;
+package com.example.teamb_project.teacher.mylecture.lecturehome;
 
 import android.os.Bundle;
 

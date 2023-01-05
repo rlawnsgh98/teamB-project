@@ -9,13 +9,13 @@
 
 
     <LinearLayout
-        android:id="@+id/lin_view_detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         >
         <!-- 펼치기 전 보이는 곳 -->
         <LinearLayout
+            android:id="@+id/lin_view_detail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -30,7 +30,7 @@
                     android:id="@+id/tv_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="[공지사항] 제목"
+                    android:text="[과제] 제목"
                     android:textSize="20dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="15dp"
@@ -64,16 +64,44 @@
             android:id="@+id/lin_detail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:padding="20dp"
             android:layout_marginBottom="15dp"
             android:visibility="visible"
             >
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="공지사항 내용입니다"
-                />
+            <LinearLayout
+                android:id="@+id/lin_homework_sub"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="제출자"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="26명"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_homework_nosub"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="미제출자"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7명"/>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
     <!-- 구분선 -->

@@ -1,10 +1,11 @@
-package com.example.teamb_project.Lecture;
+package com.example.teamb_project.teacher.mylecture.lecturehome;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -32,7 +33,20 @@ public class LectureHomeAdapter extends RecyclerView.Adapter<LectureHomeAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
-
+        h.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(h.detail.getVisibility() == View.GONE){
+                    //닫혀있는 상태
+                    h.arrow.setRotationX(180);
+                    h.detail.setVisibility(View.VISIBLE);
+                }else{
+                    //열려있던 상태
+                    h.arrow.setRotationX(0);
+                    h.detail.setVisibility(View.GONE);
+                }
+            }
+        });
     }
 
     @Override
@@ -41,8 +55,13 @@ public class LectureHomeAdapter extends RecyclerView.Adapter<LectureHomeAdapter.
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+        ImageView arrow;
+        LinearLayout detail, view_detail;
         public ViewHolder(@NonNull View v) {
             super(v);
+            arrow = v.findViewById(R.id.iv_drop_down);
+            detail = v.findViewById(R.id.lin_detail);
+            view_detail = v.findViewById(R.id.lin_view_detail);
         }
     }
 }

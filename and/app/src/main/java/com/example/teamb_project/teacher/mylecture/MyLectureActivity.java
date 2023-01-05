@@ -1,10 +1,9 @@
-package com.example.teamb_project.Lecture;
+package com.example.teamb_project.teacher.mylecture;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
 
 import com.example.teamb_project.R;
 import com.example.teamb_project.common.CommonMethod;

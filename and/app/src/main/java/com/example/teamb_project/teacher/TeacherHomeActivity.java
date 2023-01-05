@@ -1,4 +1,4 @@
-package com.example.teamb_project.Home;
+package com.example.teamb_project.teacher;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.teamb_project.Lecture.MyLectureActivity;
+import com.example.teamb_project.teacher.mylecture.MyLectureActivity;
 import com.example.teamb_project.R;
 
 public class TeacherHomeActivity extends AppCompatActivity {
