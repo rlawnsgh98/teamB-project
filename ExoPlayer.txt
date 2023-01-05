@@ -7,5 +7,11 @@ player.setMediaItem(new MediaItem.Builder().setUri(uri).build());
 playerView.setPlayer( player);
 
 
+//layout.xml
+<com.google.android.exoplayer2.ui.PlayerView ... />
+
+//gradle.app
+implementation 'com.google.android.exoplayer:exoplayer:2.15.0'
+
 //샘플 동영상
 https://jinha3211.tistory.com/28
