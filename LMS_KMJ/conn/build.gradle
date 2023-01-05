@@ -1,19 +1,17 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
 }
 
 android {
-    namespace 'com.example.lms_kmj'
+    namespace 'com.example.conn'
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.example.lms_kmj"
         minSdk 21
         targetSdk 32
-        versionCode 1
-        versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -29,18 +27,14 @@ android {
 }
 
 dependencies {
+
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.7.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation project(path: ':conn')
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
 
-    // 2023.01.14 yd5726 _ 적용 : 로그인, 회원가입 / 목적 : TextInputLayout 사용
-    implementation 'com.google.android.material:material:1.2.1'
-
-    // 2023.01.14 yd5726 _ 적용 : 데이터 컨버팅(JSON 형태로 데이터 변환), 목적 : retrofit 2 사용
+    // 데이터 컨버팅 용, JSON 형태로 데이터 변환
     // https://mvnrepository.com/artifact/com.google.code.gson/gson
     implementation group: 'com.google.code.gson', name: 'gson', version: '2.8.9'
     // https://mvnrepository.com/artifact/com.squareup.retrofit2/retrofit
