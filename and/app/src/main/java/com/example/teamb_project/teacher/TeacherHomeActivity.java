@@ -10,6 +10,7 @@ import android.view.View;
 import com.example.teamb_project.MainActivity;
 import com.example.teamb_project.TessstActivity;
 import com.example.teamb_project.databinding.ActivityTeacherhomeBinding;
+import com.example.teamb_project.student.StudentHomeActivity;
 import com.example.teamb_project.teacher.board.BoardActivity;
 import com.example.teamb_project.teacher.board.BoardDetailActivity;
 import com.example.teamb_project.teacher.mylecture.MyLectureActivity;
@@ -25,12 +26,19 @@ public class TeacherHomeActivity extends AppCompatActivity implements View.OnCli
         t=ActivityTeacherhomeBinding.inflate(getLayoutInflater());
         setContentView(t.getRoot());
 
-        t.cvBoard.setOnClickListener(this);
-        t.cvNotice.setOnClickListener(this);
         t.cvMylecture.setOnClickListener(this);
+        t.cvNotice.setOnClickListener(this);
+        t.cvBoard.setOnClickListener(this);
         t.cvConsult.setOnClickListener(this);
         t.cvAttendance.setOnClickListener(this);
         t.cvSchedule.setOnClickListener(this);
+
+        t.btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), StudentHomeActivity.class));
+            }
+        });
     }
 
     @Override
@@ -44,6 +52,13 @@ public class TeacherHomeActivity extends AppCompatActivity implements View.OnCli
         }else if(v.getId()==R.id.cv_board){
             Intent intent = new Intent(this, BoardActivity.class);
             startActivity(intent);
+        }else if(v.getId()==R.id.cv_consult){
+
+        }else if(v.getId()==R.id.cv_attendance){
+
+        }
+        else if(v.getId()==R.id.cv_schedule){
+
         }
     }
 }
