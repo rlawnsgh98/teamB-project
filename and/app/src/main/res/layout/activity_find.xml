@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FindActivity">
+    <!--상단바-->
+    <include layout="@layout/top_toolbar"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="200dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/pw_find_title"
+            style="@style/TEXT_STYLE_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="비밀번호 찾기" />
+        <EditText
+            android:id="@+id/pw_find_et1"
+            android:hint="아이디를 입력해주세요."
+            android:layout_below="@+id/pw_find_title"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/pw_find_et2"
+            android:hint="이메일을 입력해주세요."
+            android:layout_below="@+id/pw_find_et1"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/pw_find_tv"
+            android:layout_below="@+id/pw_find_et2"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:padding="18dp"
+            android:gravity="center"
+            android:background="@drawable/selector_tv"
+            android:text="확인"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</LinearLayout>
