@@ -7,4 +7,16 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- custom colors -->
+    <color name="gray">#EAEAEA</color>
+    <color name="font_black">#000</color>
+
+    <color name="main_blue">#55CDF2</color>
+
+    <color name="line_gray">#EAEAEA</color>
+
+    <!-- 댓글 수정,삭제 font blue -->
+    <color name="font_blue">#3D88D3</color>
+
 </resources>
