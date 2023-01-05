@@ -1,4 +1,4 @@
-package com.example.teamb_project;
+package com.example.teamb_project.teacher.board;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.teamb_project.R;
 import com.example.teamb_project.databinding.ActivityNewBoardBinding;
 
 public class NewBoardActivity extends AppCompatActivity implements View.OnClickListener{
@@ -32,10 +33,10 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
         //자유게시판으로 이동하는 Intent
         Intent board_intent = new Intent(NewBoardActivity.this, BoardActivity.class);
 
-        if(v.getId()==R.id.iv_back){
-            startActivity(board_intent);
+        if(v.getId()== R.id.iv_back){
+            onBackPressed();
         }else if(v.getId()==R.id.card_back){
-            startActivity(board_intent);
+            onBackPressed();
         }else if(v.getId()==R.id.card_insert){
             //글 등록처리
         }

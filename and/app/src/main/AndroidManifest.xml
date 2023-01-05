@@ -21,7 +21,7 @@
         </activity>
 
         <activity
-            android:name=".BoardDetailActivity"
+            android:name=".teacher.board.BoardDetailActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -31,16 +31,16 @@
             android:name=".teacher.mylecture.lecturehome.LectureDetailActivity">
         </activity>
         <activity
-            android:name=".NewBoardActivity"
+            android:name=".teacher.board.NewBoardActivity"
             android:exported="false"></activity>
         <activity
             android:name=".TessstActivity"
             android:exported="false"></activity>
         <activity
-            android:name=".NoticeActivity"
+            android:name=".teacher.notice.NoticeActivity"
             android:exported="false"></activity>
         <activity
-            android:name=".BoardActivity"
+            android:name=".teacher.board.BoardActivity"
             android:exported="false"></activity>
         <activity
             android:name=".MainActivity"

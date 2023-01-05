@@ -1,4 +1,4 @@
-package com.example.teamb_project;
+package com.example.teamb_project.teacher.board;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.teamb_project.R;
 import com.example.teamb_project.databinding.ActivityBoardDetailBinding;
 
 import java.util.ArrayList;
@@ -48,9 +49,8 @@ public class BoardDetailActivity extends AppCompatActivity implements View.OnCli
     @Override
     public void onClick(View v) {
 
-        if(v.getId()==R.id.iv_back){
-            Intent intent = new Intent(BoardDetailActivity.this, BoardActivity.class);
-            startActivity(intent);
+        if(v.getId()== R.id.iv_back){
+            onBackPressed();
         }
     }
 

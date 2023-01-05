@@ -1,4 +1,4 @@
-package com.example.teamb_project;
+package com.example.teamb_project.teacher.board;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,23 +6,17 @@ import androidx.core.widget.NestedScrollView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 
+import com.example.teamb_project.MainActivity;
+import com.example.teamb_project.R;
 import com.example.teamb_project.common.Common;
 import com.example.teamb_project.databinding.ActivityBoardBinding;
 
@@ -117,8 +111,7 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
             b.scrBoard.fullScroll(ScrollView.FOCUS_UP);
         }else if(v.getId()==R.id.iv_back){
             //돌아가기
-            Intent intent = new Intent(BoardActivity.this, MainActivity.class);
-            startActivity(intent);
+            onBackPressed();
         }else if(v.getId()==R.id.iv_write){
             //글 작성
             Intent intent = new Intent(BoardActivity.this, NewBoardActivity.class);

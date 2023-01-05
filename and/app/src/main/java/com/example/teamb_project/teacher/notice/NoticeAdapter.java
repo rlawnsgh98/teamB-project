@@ -1,4 +1,4 @@
-package com.example.teamb_project;
+package com.example.teamb_project.teacher.notice;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +8,8 @@ import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.teamb_project.R;
 
 import java.util.ArrayList;
 
