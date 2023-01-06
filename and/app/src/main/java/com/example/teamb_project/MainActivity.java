@@ -2,6 +2,7 @@ package com.example.teamb_project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,6 +14,8 @@ import com.example.teamb_project.databinding.ActivityMainBinding;
 import com.example.teamb_project.teacher.board.BoardActivity;
 import com.example.teamb_project.teacher.board.BoardDetailActivity;
 import com.example.teamb_project.teacher.notice.NoticeActivity;
+import com.example.teamb_project.video_board.VideoBoardActivity;
+import com.example.teamb_project.video_board.VideoDetailActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     ActivityMainBinding b;
@@ -31,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         b.btnNotice.setOnClickListener(this);
         b.btnVideo.setOnClickListener(this);
         b.btnBoardDetail.setOnClickListener(this);
+        b.btnVideoBoard.setOnClickListener(this);
 
 
         //스프링 연동
@@ -57,10 +61,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(MainActivity.this, BoardActivity.class);
             startActivity(intent);
         }else if(v.getId()==R.id.btn_video){
-            Intent intent = new Intent(MainActivity.this, TessstActivity.class);
+            Intent intent = new Intent(MainActivity.this, VideoDetailActivity.class);
             startActivity(intent);
         }else if(v.getId()==R.id.btn_board_detail){
             Intent intent = new Intent(MainActivity.this, BoardDetailActivity.class);
+            startActivity(intent);
+        }else if(v.getId()==R.id.btn_video_board){
+            Intent intent = new Intent(MainActivity.this, VideoBoardActivity.class);
             startActivity(intent);
         }
 

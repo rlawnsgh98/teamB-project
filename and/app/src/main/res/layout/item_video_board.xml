@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="10dp"
     android:orientation="vertical">
 
 
@@ -42,21 +41,21 @@
                 android:text="강의 영상인데 제목잉ㅇㅇㅇ"
                 android:textSize="18dp"
                 android:textColor="@color/font_black"
-                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="김강사"
+                android:textSize="16dp"
+                android:layout_below="@+id/tv_title"
+                android:textColor="@color/font_black"
+                android:layout_marginTop="3dp"
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:layout_marginBottom="10dp"
                 >
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="김강사"
-                    android:textSize="16dp"
-                    android:textColor="@color/font_black"
-                    />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

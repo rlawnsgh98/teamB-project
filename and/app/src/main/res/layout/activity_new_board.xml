@@ -11,20 +11,22 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/gray"
+        android:background="@color/blue"
         >
         <ImageView
             android:id="@+id/iv_back"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_24_white"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="자유게시판 글쓰기"
-            android:textSize="20dp"
-            android:textColor="@color/font_black"
+            android:textSize="18dp"
+            android:textColor="@color/white"
             android:layout_centerInParent="true"
             />
     </RelativeLayout>

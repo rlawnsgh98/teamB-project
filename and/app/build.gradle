@@ -58,6 +58,8 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-scalars:2.5.0'
     // Material EditText 2023.01.03-김원희     에딧텍스트
     implementation 'com.google.android.material:material:1.1.0'
+    // ExoPlayer 동영상 플레이어 - 2023.01.06-김원희      엑소플레이어
+    implementation 'com.google.android.exoplayer:exoplayer:2.15.0'
 }
 //김준호 빌드 오류 나서 넣음
 tasks.register("prepareKotlinBuildScriptModel"){}

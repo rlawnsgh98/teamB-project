@@ -16,10 +16,10 @@ public class VideoBoardActivity extends AppCompatActivity implements View.OnClic
         super.onCreate(savedInstanceState);
         b = ActivityVideoBoardBinding.inflate(getLayoutInflater());
         setContentView(b.getRoot());
+        getSupportActionBar().hide();
 
-        CommonMethod common = new CommonMethod();
 
-        common.setSpinner(b.spinner, this);
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, new VideoBoardFragment()).commit();
 
 
     }

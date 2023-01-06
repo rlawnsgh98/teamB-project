@@ -23,6 +23,12 @@
         />
 
     <Button
+        android:id="@+id/btn_video_board"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="강의 영상 목록" />
+
+    <Button
         android:id="@+id/btn_video"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
