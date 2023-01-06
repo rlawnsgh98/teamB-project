@@ -1,0 +1,6 @@
+package visual;
+
+public class VisualService {
+	// 부서별 사원 수 조회
+	// 채용 인원 수(년도별/월별) 조회
+}
