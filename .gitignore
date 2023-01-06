@@ -5,12 +5,14 @@
 # Compiled class file
 *.class
 
+work
+
 # Log file
 *.log
 
 # BlueJ files
 *.ctxt
-workspace/.metadata
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
@@ -180,5 +182,3 @@ fabric.properties
 !/gradle/wrapper/gradle-wrapper.jar
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,androidstudio,java
-workspace/.metadata/.log
-*.log
