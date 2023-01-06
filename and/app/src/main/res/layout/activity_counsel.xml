@@ -32,17 +32,32 @@
             />
     </RelativeLayout>
 
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+    <RelativeLayout
         android:layout_weight="1"
-        >
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recv_counsel"
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            >
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recv_counsel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </androidx.core.widget.NestedScrollView>
 
-    </androidx.core.widget.NestedScrollView>
+
+        <ImageView
+            android:id="@+id/iv_plus"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/plus_circle"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="25dp"
+            />
+    </RelativeLayout>
 
 </LinearLayout>

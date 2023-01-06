@@ -8,13 +8,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <!-- custom colors -->
+    <!-- wonhee's colors -->
     <color name="gray">#EAEAEA</color>
     <color name="font_black">#000</color>
-
     <color name="main_blue">#55CDF2</color>
-
     <color name="line_gray">#EAEAEA</color>
+    <color name="view_red">#E95E5E</color>
+    <color name="view_green">#5EE97D</color>
 
     <!-- 댓글 수정,삭제 font blue -->
     <color name="font_blue">#3D88D3</color>

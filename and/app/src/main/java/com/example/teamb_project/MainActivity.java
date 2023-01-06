@@ -10,6 +10,7 @@ import android.view.View;
 
 import com.example.conn.ApiClient;
 import com.example.conn.CommonMethod;
+import com.example.teamb_project.counselling.CounselActivity;
 import com.example.teamb_project.databinding.ActivityMainBinding;
 import com.example.teamb_project.teacher.board.BoardActivity;
 import com.example.teamb_project.teacher.board.BoardDetailActivity;
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         b.btnVideo.setOnClickListener(this);
         b.btnBoardDetail.setOnClickListener(this);
         b.btnVideoBoard.setOnClickListener(this);
+        b.btnCounsel.setOnClickListener(this);
 
 
         //스프링 연동
@@ -69,7 +71,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }else if(v.getId()==R.id.btn_video_board){
             Intent intent = new Intent(MainActivity.this, VideoBoardActivity.class);
             startActivity(intent);
+        }else if(v.getId()==R.id.btn_counsel){
+            Intent intent = new Intent(MainActivity.this, CounselActivity.class);
+            startActivity(intent);
         }
+
 
     }
 

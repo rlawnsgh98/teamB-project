@@ -25,14 +25,71 @@
         </com.google.android.material.card.MaterialCardView>
 
         <!-- 텍스트 -->
-        <LinearLayout
+        <RelativeLayout
+
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             >
-            
-        </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/rel_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="[상담] 상담상담"
+                    android:textSize="16dp"
+                    android:textColor="@color/font_black"
+                    />
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_title"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="0dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_centerVertical="true"
+                    >
+                    <View
+                        android:id="@+id/v_state"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:background="#E95E5E"
+                        />
+                </com.google.android.material.card.MaterialCardView>
+            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="김강사"
+                android:textSize="16dp"
+                android:layout_below="@+id/rel_title"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/font_black"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2023.01.06"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="삭제"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
 
     </LinearLayout>
 
