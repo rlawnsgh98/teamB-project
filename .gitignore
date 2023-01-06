@@ -12,8 +12,8 @@ pom.properties
 MANIFEST.MF
 
 ### Eclipse ###
-workspace/.metadata
-/workspace/.metadata
+workspace/.metadata/
+/workspace/.metadata/
 .metadata
 bin/
 tmp/
@@ -115,3 +115,4 @@ hs_err_pid*
 workspace/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log
 workspace/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log
 workspace/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log
+workspace/.metadata/.log
