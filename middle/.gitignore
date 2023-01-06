@@ -111,4 +111,3 @@ hs_err_pid*
 # End of https://www.toptal.com/developers/gitignore/api/eclipse,java
 *.log
 workspace/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log
-workspace/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log
