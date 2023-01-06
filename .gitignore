@@ -5,6 +5,7 @@ mybatis-config.xml
 log4j.xml
 
 lecture
+middle/target
 target
 pom.properties
 .classpath
