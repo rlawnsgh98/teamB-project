@@ -182,9 +182,8 @@ fabric.properties
 !/gradle/wrapper/gradle-wrapper.jar
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,androidstudio,java
-workspace/.metadata/*
+
 workspace/.metadata/
 /workspace/.metadata/
 /.metadata/
 workspace/.metadata/
-workspace/.metadata/.plugins/
