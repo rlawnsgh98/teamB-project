@@ -3,7 +3,9 @@ package com.example.teamb_project.student;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -26,6 +28,16 @@ public class StudentHomeActivity extends AppCompatActivity implements View.OnCli
         s= ActivityStudenthomeBinding.inflate(getLayoutInflater());
         setContentView(s.getRoot());
 
+        s.logininfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = getIntent();
+
+                String s = intent.getStringExtra("logininfo");
+                Log.d("TAG", "onClick: "+s);
+            }
+        });
+
         s.cvBoard.setOnClickListener(this);
         s.cvNotice.setOnClickListener(this);
         s.cvMylecture.setOnClickListener(this);
@@ -45,7 +57,11 @@ public class StudentHomeActivity extends AppCompatActivity implements View.OnCli
     @Override
     public void onClick(View v) {
         if(v.getId()==R.id.cv_mylecture){
+            Intent i = getIntent();
+            String logininfo = i.getStringExtra("logininfo");
+
             Intent intent = new Intent(this, stu_MyLectureActivity.class);
+            intent.putExtra("logininfo", logininfo);
             startActivity(intent);
         }else if(v.getId()==R.id.cv_notice){
             Intent intent = new Intent(this, NoticeActivity.class);

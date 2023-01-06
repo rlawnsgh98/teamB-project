@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.teamb_project.R;
+import com.example.teamb_project.student.mylecture.lecturehome.stu_LectureDetailActivity;
 import com.example.teamb_project.teacher.mylecture.lecturehome.LectureDetailActivity;
 
 public class stu_MyLectureAdapter extends RecyclerView.Adapter<stu_MyLectureAdapter.ViewHolder> {
@@ -35,7 +36,7 @@ public class stu_MyLectureAdapter extends RecyclerView.Adapter<stu_MyLectureAdap
         h.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                context.startActivity(new Intent(context, LectureDetailActivity.class));
+                context.startActivity(new Intent(context, stu_LectureDetailActivity.class));
             }
         });
     }
