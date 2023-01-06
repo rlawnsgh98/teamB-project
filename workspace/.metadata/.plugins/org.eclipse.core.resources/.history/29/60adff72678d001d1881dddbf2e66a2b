@@ -1,0 +1,107 @@
+package com.and.middle;
+
+import java.util.HashMap;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import lms_member.MemberVO;
+import lms_member.TESTMemberVO;
+
+@RestController
+public class LMSController {
+	//@Autowired @Qualifier("smart01") private SqlSession session;
+	@Autowired @Qualifier("bteam") private SqlSession session;
+	
+	@RequestMapping("/and")
+	public String andController_test() {
+		return "and";
+	}
+	
+	@RequestMapping(value = "/home.mj", produces ="text/html;charset=UTF-8")
+	public String home() {
+		List<TESTMemberVO> list = session.selectList("lms.home");
+		System.out.println("list.size() : " + list.size());
+		System.out.println("sql.selectList(\"lms.login\").size() : "
+				+ session.selectList("lms.login").size());
+		
+		return new Gson().toJson(list);
+	}
+	
+	// http://localhost:80/smart/login.mj?userid=admin
+	@RequestMapping(value = "/login.mj", produces ="text/html;charset=UTF-8")
+	//public String login(String userid) {
+	public String login(String id) {
+		//TESTMemberVO test_member = session.selectOne("lms.login",userid);
+		MemberVO member = session.selectOne("lms.login",id);
+		//System.out.println(test_member.getUserid()); // admin
+		System.out.println(member.getId());
+		
+		//return new Gson().toJson(test_member); // {"userid":"admin"}
+		return new Gson().toJson(member); // {"userid":"admin"}
+	}
+	
+	// http://localhost/smart/login1.mj?id=user3&pw=000aA
+	// WiFi : hanul202 _ http://192.168.0.8/smart/login1.mj?id=user3&pw=000aA
+	// Spring을 연 곳이 서버 _ 202호 컴퓨터 _ 192.168.0.122로 안드로이드 ip 설정
+	// http://192.168.0.122/smart/login1.mj?id=user3&pw=000aA
+	@RequestMapping(value = "/login1.mj", produces ="text/html;charset=UTF-8")
+	public String login1(String id, String pw) {
+		HashMap<String,String> map = new HashMap<String, String>();
+		map.put("id", id);
+		map.put("pw", pw);
+		
+		MemberVO member = session.selectOne("lms.login1", map);
+		//System.out.println(member.getId());	//user3
+		if(member != null) {
+			System.out.println("id:" + member.getId());	//id:user3
+			System.out.println("email:" + member.getEmail()); //email:user3@gg.com
+		}
+		
+		return new Gson().toJson(member);
+		//return member.getId();
+	}
+	
+	@RequestMapping(value = "/join.mj", produces ="text/html;charset=utf-8")
+	//public String join(MemberVO param) {
+	public String join(MemberVO member, String param, Object map, HttpServletRequest request) {
+		HashMap<String,Object> v1 = new Gson().fromJson( request.getParameter("map"),  new TypeToken<HashMap<String,Object>>(){}.getType());
+		int result = session.insert("lms.join",v1.get("vo"));
+		
+		MemberVO v3 = new Gson().fromJson( v1.toString(), MemberVO.class);
+		
+		MemberVO v2 = new Gson().fromJson( request.getParameter("vo"),  new TypeToken<MemberVO>(){}.getType());
+
+		
+		//		System.out.println(param);
+		MemberVO vo = new Gson().fromJson(param, MemberVO.class);
+		//MemberVO vo = new MemberVO(); 
+		//vo.setId("id1");
+		//vo.setPw("pw2");
+		//vo.setMember_name("new_join123");
+		//vo.setGender("여");
+		//vo.setEmail("email@naver.com");
+		//vo.setBirth("97/11/13");
+		//vo.setPhone("01048483212");
+		//vo.setType("TEACH");
+
+//		int result = session.insert("lms.join",vo);
+//		int result = session.insert("lms.join",param);
+		
+		return new Gson().toJson(result + "");
+	}
+	/*
+	 * insert into member(member_code,id,pw,member_name,gender
+	 * ,email,birth,phone,type) values(SEQ_MEMBER.nextval,'minju','1234A','kmj','여'
+	 * ,'yd5726@naver.com','97/11/13','010.9797.1234','TEACH');
+	 */
+}

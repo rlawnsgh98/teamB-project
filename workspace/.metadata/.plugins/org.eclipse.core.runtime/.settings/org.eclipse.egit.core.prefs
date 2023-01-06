@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 GitRepositoriesView.GitDirectories=D\:\\_Project\\teamB-project\\.git;
 GitRepositoriesView.GitDirectories.relative=D\:\\_Project\\teamB-project\\.git;
+=======
+GitRepositoriesView.GitDirectories=D\:\\teamB-project\\.git;
+GitRepositoriesView.GitDirectories.relative=D\:\\teamB-project\\.git;
+>>>>>>> main
 core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1

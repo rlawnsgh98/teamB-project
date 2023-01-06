@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 eclipse.preferences.version=1
 platformState=1672986122538
+=======
+IMPORT_FILES_AND_FOLDERS_MODE=prompt
+IMPORT_FILES_AND_FOLDERS_VIRTUAL_FOLDER_MODE=prompt
+eclipse.preferences.version=1
+platformState=1672983454809
+>>>>>>> main
 quickStart=false
 tipsAndTricks=true
