@@ -1,7 +1,6 @@
 package com.and.middle;
 
 import java.util.HashMap;
-
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -9,12 +8,11 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import lms_member.MemberVO;
 import lms_member.TESTMemberVO;
@@ -63,8 +61,7 @@ public class LMSController {
 		map.put("pw", pw);
 		
 		MemberVO member = session.selectOne("lms.login1", map);
-		System.out.println(member.getId());	//user3
-		
+		//System.out.println(member.getId());	//user3
 		if(member != null) {
 			System.out.println("id:" + member.getId());	//id:user3
 			System.out.println("email:" + member.getEmail()); //email:user3@gg.com
@@ -73,4 +70,36 @@ public class LMSController {
 		return new Gson().toJson(member);
 		//return member.getId();
 	}
+	
+	@RequestMapping(value = "/join.mj", produces ="text/html;charset=utf-8")
+	//public String join(MemberVO param) {
+	public String join(MemberVO member, String param, Object map, HttpServletRequest request) {
+		HashMap<String,Object> v1 = new Gson().fromJson( request.getParameter("map"),  new TypeToken<HashMap<String,Object>>(){}.getType());
+		int result = session.insert("lms.join",v1.get("vo"));
+		
+		//MemberVO v2 = new Gson().fromJson( request.getParameter("vo"),  new TypeToken<MemberVO>(){}.getType());
+
+		
+		//		System.out.println(param);
+		MemberVO vo = new Gson().fromJson(param, MemberVO.class);
+		//MemberVO vo = new MemberVO(); 
+		//vo.setId("id1");
+		//vo.setPw("pw2");
+		//vo.setMember_name("new_join123");
+		//vo.setGender("여");
+		//vo.setEmail("email@naver.com");
+		//vo.setBirth("97/11/13");
+		//vo.setPhone("01048483212");
+		//vo.setType("TEACH");
+
+//		int result = session.insert("lms.join",vo);
+//		int result = session.insert("lms.join",param);
+		
+		return new Gson().toJson(result + "");
+	}
+	/*
+	 * insert into member(member_code,id,pw,member_name,gender
+	 * ,email,birth,phone,type) values(SEQ_MEMBER.nextval,'minju','1234A','kmj','여'
+	 * ,'yd5726@naver.com','97/11/13','010.9797.1234','TEACH');
+	 */
 }
