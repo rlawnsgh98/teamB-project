@@ -10,7 +10,7 @@ target
 pom.properties
 .classpath
 MANIFEST.MF
-
+workspace/.metadata/
 ### Eclipse ###
 .metadata
 bin/
