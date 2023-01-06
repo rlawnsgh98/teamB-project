@@ -14,4 +14,10 @@
         <!-- Customize your theme here. -->
 
     </style>
+    <style name="Theme.TeamBProject.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.TeamBProject.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.TeamBProject.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

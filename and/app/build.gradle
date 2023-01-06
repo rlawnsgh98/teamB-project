@@ -34,6 +34,9 @@ android {
     viewBinding {
         enabled true
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -44,7 +47,9 @@ dependencies {
 
     // 모듈 추가시
     implementation project(path: ':connnect')
-
+    implementation 'androidx.navigation:navigation-fragment:2.4.1'
+    implementation 'androidx.navigation:navigation-ui:2.4.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
@@ -58,6 +63,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-scalars:2.5.0'
     // Material EditText 2023.01.03-김원희     에딧텍스트
     implementation 'com.google.android.material:material:1.1.0'
+
 }
 //김준호 빌드 오류 나서 넣음
 tasks.register("prepareKotlinBuildScriptModel"){}

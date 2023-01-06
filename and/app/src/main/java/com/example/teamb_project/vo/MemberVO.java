@@ -1,4 +1,4 @@
-package com.example.teamb_project;
+package com.example.teamb_project.vo;
 
 public class MemberVO {
     private String member_code, id, pw, member_name, gender

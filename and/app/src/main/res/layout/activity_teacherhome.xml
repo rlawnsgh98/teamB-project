@@ -6,7 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".teacher.TeacherHomeActivity">
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn"
+            android:text="선생"/>
 
 
         <GridLayout
@@ -18,6 +22,7 @@
             android:orientation="horizontal">
 
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cv_attendance"
                 android:layout_width="150dp"
                 android:layout_height="170dp"
                 android:layout_marginRight="15dp"
@@ -46,6 +51,7 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cv_schedule"
                 android:layout_width="150dp"
                 android:layout_height="170dp"
                 android:layout_marginBottom="15dp"
@@ -99,6 +105,7 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cv_consult"
                 android:layout_width="150dp"
                 android:layout_height="170dp"
                 android:layout_marginBottom="15dp"

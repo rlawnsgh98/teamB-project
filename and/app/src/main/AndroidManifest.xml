@@ -17,6 +17,20 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".student.mylecture.lecturehome.stu_LectureDetailActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".student.mylecture.stu_MyLectureActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".TTActivity"
             android:exported="false">
             <meta-data
@@ -42,16 +56,25 @@
 
         <activity
             android:name=".LoginActivity"
-            android:exported="false">
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+<<<<<<< HEAD
 
         <activity
             android:name=".teacher.mylecture.lecturehome.studentinfo.StudentDetailActivity">
         </activity>
 
+=======
+        <activity android:name=".teacher.mylecture.lecturehome.studentinfo.StudentDetailActivity"></activity>
+>>>>>>> 김준호
         <activity
             android:name=".teacher.board.BoardDetailActivity"
             android:exported="false">
@@ -59,6 +82,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+<<<<<<< HEAD
 
         <activity android:name=".teacher.mylecture.lecturehome.LectureDetailActivity">
 
@@ -88,6 +112,21 @@
 
         </activity>
 
+=======
+        <activity android:name=".teacher.mylecture.lecturehome.LectureDetailActivity"></activity>
+        <activity
+            android:name=".teacher.board.NewBoardActivity"
+            android:exported="false"></activity>
+        <activity
+            android:name=".TessstActivity"
+            android:exported="false"></activity>
+        <activity
+            android:name=".teacher.notice.NoticeActivity"
+            android:exported="false"></activity>
+        <activity
+            android:name=".teacher.board.BoardActivity"
+            android:exported="false"></activity>
+>>>>>>> 김준호
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -110,11 +149,19 @@
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
+<<<<<<< HEAD
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+=======
+        </activity>
+        <activity
+            android:name=".student.StudentHomeActivity"
+            android:exported="true">
+
+>>>>>>> 김준호
         </activity>
         <activity
             android:name=".student.StudentHomeActivity"
