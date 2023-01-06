@@ -18,6 +18,7 @@ import android.widget.ScrollView;
 import com.example.teamb_project.MainActivity;
 import com.example.teamb_project.R;
 import com.example.teamb_project.common.Common;
+import com.example.teamb_project.common.CommonMethod;
 import com.example.teamb_project.databinding.ActivityBoardBinding;
 
 import java.util.ArrayList;
@@ -35,6 +36,7 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
 
         Log.d(TAG, "onCreate: ");
         Common common = new Common();
+        CommonMethod commonMethod = new CommonMethod();
 
         //리사이클러뷰에 들어갈 데이터 List
         ArrayList<Object> list = new ArrayList<>();
@@ -72,22 +74,7 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
 
 
         //스피너 설정
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
-                this, R.array.spinner_category, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
-        adapter.setDropDownViewResource(androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
-        b.spinner.setAdapter(adapter);
-
-        b.spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                //선택됐을때
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                //선택x
-            }
-        });
+        commonMethod.setSpinner(b.spinner, this);
 
         //EditText 입력이벤트
 //        b.edtSearch.addTextChangedListener(common.getTextWatcher(b.ivTextRemove));
