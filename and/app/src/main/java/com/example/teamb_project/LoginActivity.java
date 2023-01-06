@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.conn.ApiClient;
 import com.example.conn.CommonMethod;
+import com.example.teamb_project.student.StudentHomeActivity;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class LoginActivity extends AppCompatActivity {
@@ -41,7 +42,8 @@ public class LoginActivity extends AppCompatActivity {
                             public void result(boolean isResult, String data) {
                                 Log.d("로그", "result:" + data);
                                 if(data != null){
-                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                    Intent intent = new Intent(LoginActivity.this, StudentHomeActivity.class);
+                                    intent.putExtra("logininfo", data);
                                     startActivity(intent);
                                 }
                             }
