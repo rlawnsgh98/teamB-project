@@ -10,34 +10,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="025a1b72-cbd9-4dee-ad7c-db6d1ccdc453" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/notice/NewNoticeActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/video_board/VideoBoardAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/video_board/VideoDetailActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_new_notice.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_video_detail.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/counselling/CounselActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_counsel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_counsel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/video_board/VideoBoardActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/video_board/VideoBoardActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/video_board/VideoBoardFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/video_board/VideoBoardFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_board_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_board_detail.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_new_board.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_new_board.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_video_board.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_video_board.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_video_board.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_video_board.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/.factorypath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/.springBeans" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/src/main/java/and_member/AndMemberVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/src/main/java/com/and/middle/AndController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/src/main/java/com/and/middle/AndMemberController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/src/main/java/com/and/middle/CustomerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/src/main/java/com/and/middle/ExamController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/src/main/java/com/and/middle/HomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/src/main/java/com/and/middle/LMSController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/src/main/java/com/and/middle/TestVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/src/main/java/common/CommonService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/src/main/java/customer/CustomerVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/src/main/java/lms_member/MemberVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/src/main/java/lms_member/TESTMemberVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/src/main/resources/dbconn/conn.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/src/main/resources/dbconn/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/src/main/resources/log4j.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/src/main/resources/sqlmap/exam-mapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/src/main/resources/sqlmap/lms-mapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/src/main/resources/sqlmap/member-mapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/src/main/resources/sqlmap/test-mapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/src/main/webapp/WEB-INF/spring/root-context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/src/test/resources/log4j.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/target/classes/dbconn/conn.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/target/classes/dbconn/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/target/classes/log4j.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/target/classes/sqlmap/exam-mapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/target/classes/sqlmap/lms-mapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/target/classes/sqlmap/member-mapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/target/classes/sqlmap/test-mapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/target/m2e-wtp/web-resources/META-INF/maven/co.kr/smart/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/target/m2e-wtp/web-resources/META-INF/maven/co.kr/smart/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middle/target/test-classes/log4j.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[RFCT610YB8T]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\admin\.android\avd\Pixel_4.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -47,9 +68,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="valueResourceFile" />
+        <option value="Class" />
         <option value="resourceFile" />
         <option value="layoutResourceFile" />
-        <option value="Class" />
       </list>
     </option>
   </component>
@@ -85,6 +106,7 @@
   </component>
   <component name="RecentsManager">
     <key name="android.template.-978635717">
+      <recent name="com.example.teamb_project.counselling" />
       <recent name="com.example.teamb_project.teacher.notice" />
       <recent name="com.example.teamb_project.video_board" />
     </key>

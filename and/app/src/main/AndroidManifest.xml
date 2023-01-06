@@ -17,10 +17,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".teacher.notice.NewNoticeActivity"
+            android:name=".counselling.CounselActivity"
             android:exported="false">
-
         </activity>
+        <activity
+            android:name=".teacher.notice.NewNoticeActivity"
+            android:exported="false"></activity>
         <activity
             android:name=".video_board.VideoDetailActivity"
             android:exported="false" />
@@ -74,7 +76,7 @@
             android:exported="false" />
         <activity
             android:name=".teacher.TeacherHomeActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".student.StudentHomeActivity"
             android:exported="true" />
