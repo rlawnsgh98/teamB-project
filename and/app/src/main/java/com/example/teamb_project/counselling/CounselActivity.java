@@ -4,14 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.teamb_project.R;
 import com.example.teamb_project.databinding.ActivityCounselBinding;
 
 import java.util.ArrayList;
 
-public class CounselActivity extends AppCompatActivity {
+public class CounselActivity extends AppCompatActivity implements View.OnClickListener{
     ActivityCounselBinding b;
 
     @Override
@@ -25,8 +27,22 @@ public class CounselActivity extends AppCompatActivity {
         ArrayList<Object> list = new ArrayList<>();
 
         //어댑터 설정
-        b.recvCounsel.setAdapter(new CounselAdapter(getLayoutInflater(), list));
+        b.recvCounsel.setAdapter(new CounselAdapter(getLayoutInflater(), list, this));
         b.recvCounsel.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
+
+        //클릭 이벤트
+        b.ivPlus.setOnClickListener(this);
+
+
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        if(v.getId()==R.id.iv_plus){
+            Intent intent = new Intent(CounselActivity.this, NewCounselActivity.class);
+            startActivity(intent);
+        }
 
     }
 
@@ -35,4 +51,6 @@ public class CounselActivity extends AppCompatActivity {
         super.onDestroy();
         b = null;
     }
+
+
 }

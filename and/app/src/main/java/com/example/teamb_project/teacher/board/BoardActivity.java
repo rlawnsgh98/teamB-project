@@ -15,11 +15,15 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ScrollView;
 
+import com.example.conn.ApiClient;
+import com.example.conn.CommonMethod;
 import com.example.teamb_project.MainActivity;
 import com.example.teamb_project.R;
 import com.example.teamb_project.common.Common;
-import com.example.teamb_project.common.CommonMethod;
 import com.example.teamb_project.databinding.ActivityBoardBinding;
+import com.example.teamb_project.vo.BoardVO;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
 
@@ -38,17 +42,30 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
         Common common = new Common();
         CommonMethod commonMethod = new CommonMethod();
 
-        //리사이클러뷰에 들어갈 데이터 List
-        ArrayList<Object> list = new ArrayList<>();
-        for(int i = 0; i < 10; i++){
-            list.add("");
-        }
+        ApiClient.setBASEURL("http://192.168.1.2/middle/");
 
-        //글이 11개 이상일 경우 더보기 보이게 하기
-        b.linMore.setVisibility(View.GONE);
-        if(list.size() > 10){
-            b.linMore.setVisibility(View.VISIBLE);
-        }
+        commonMethod.sendPost("list.bo", (isResult, data) -> {
+            Log.d(TAG, "result : " + isResult);
+
+            //리사이클러뷰에 들어갈 데이터 List
+            ArrayList<BoardVO> list = new Gson().fromJson(data, new TypeToken<ArrayList<BoardVO>>(){}.getType());
+
+
+            //글이 11개 이상일 경우 더보기 보이게 하기 -> 보여줄 아이템이 남아있으면 보이게
+            b.linMore.setVisibility(View.GONE);
+            if(list == null){
+                if(list.size() > 10){
+                    b.linMore.setVisibility(View.VISIBLE);
+                }
+            }
+
+            //어댑터 설정
+            b.recvBoard.setAdapter(new BoardAdapter(getLayoutInflater(), list, this));
+            b.recvBoard.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
+
+        });
+
+
 
         //클릭이벤트
         b.ivSearch.setOnClickListener(this);
@@ -56,25 +73,9 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
         b.ivBack.setOnClickListener(this);
         b.ivWrite.setOnClickListener(this);
 
-        //리사이클러뷰 스크롤 이벤트
-        b.scrBoard.setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
-            @Override
-            public void onScrollChange(@NonNull NestedScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
-//               Log.d(TAG, "MaxScrollAmount: "+v.getMaxScrollAmount());   //최대 스크롤값
-//                Log.d(TAG, "scrollY: "+scrollY);   //
-//               if(b.recvBoard.canScrollVertically(1)) Log.d(TAG, "onScrollChange: 최하단ㅇㄴㅇㄹㄴㄷㄹ");;
-                ViewGroup.LayoutParams params = b.scrBoard.getLayoutParams();
-                int contentHeight = b.scrBoard.getHeight();
-                if (scrollY + params.height >= contentHeight) {
-                    // The user has reached the bottom of the scrollable view
-                    Log.d(TAG, "최하단 입니당");
-                }
-            }
-        });
-
 
         //스피너 설정
-        commonMethod.setSpinner(b.spinner, this);
+        common.setSpinner(b.spinner, this);
 
         //EditText 입력이벤트
 //        b.edtSearch.addTextChangedListener(common.getTextWatcher(b.ivTextRemove));
@@ -82,9 +83,7 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
         //스크롤 내리면 아이콘 보이게
         common.scrollTop(b.scrBoard, b.cardGoTop);
 
-        //어댑터 설정
-        b.recvBoard.setAdapter(new BoardAdapter(getLayoutInflater(), list, this));
-        b.recvBoard.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
+
     }
 
     @Override

@@ -3,10 +3,18 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-
+    <!-- 게시판 검색필터 -->
     <string-array name="spinner_category">
         <item>제목</item>
         <item>내용</item>
         <item>작성자</item>
+    </string-array>
+
+    <!-- 상담 강사목록 -->
+    <string-array name="counsel_teacher">
+        <item>김강사</item>
+        <item>나강사</item>
+        <item>박강사</item>
+        <item>최강사</item>
     </string-array>
 </resources>
