@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
-<aop-project name="smart"/>
-<aop-project name="spring01"/>
-<aop-project name="spring02"/>
+<aop-project name="test"/>
 <aop-project name="middle"/>
 </aop-reference-model>

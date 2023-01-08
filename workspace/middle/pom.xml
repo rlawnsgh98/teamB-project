@@ -28,6 +28,7 @@
 		    <version>2.9.0</version>
 		</dependency>
 			
+			
 		<!-- spring에서 jdbc를 사용하도록 연결하는 라이브러리 -->
 		<dependency>
 		    <groupId>org.springframework</groupId>
@@ -232,6 +233,7 @@
                     <downloadJavadocs>true</downloadJavadocs>
                 </configuration>
             </plugin>
+            
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

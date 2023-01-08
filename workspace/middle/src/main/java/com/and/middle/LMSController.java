@@ -19,7 +19,6 @@ import lms_member.TESTMemberVO;
 
 @RestController
 public class LMSController {
-	//@Autowired @Qualifier("smart01") private SqlSession session;
 	@Autowired @Qualifier("bteam") private SqlSession session;
 	
 	@RequestMapping("/and")

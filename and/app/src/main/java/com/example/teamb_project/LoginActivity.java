@@ -13,7 +13,9 @@ import android.widget.Toast;
 import com.example.conn.ApiClient;
 import com.example.conn.CommonMethod;
 import com.example.teamb_project.student.StudentHomeActivity;
+import com.example.teamb_project.vo.MemberVO;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.gson.Gson;
 
 public class LoginActivity extends AppCompatActivity {
     TextView join_tv,login_tv,find_tv;
@@ -25,7 +27,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         // IP 설정
-        ApiClient.setBASEURL("http://192.168.0.122/smart/");
+        ApiClient.setBASEURL("http://210.123.231.86//smart/");
 
         id_et = findViewById(R.id.id_et);
         pw_et = findViewById(R.id.id_pw);
@@ -40,11 +42,14 @@ public class LoginActivity extends AppCompatActivity {
                         .sendPost("login1.mj", new CommonMethod.CallBackResult() {
                             @Override
                             public void result(boolean isResult, String data) {
-                                Log.d("로그", "result:" + data);
-                                if(data != null){
+                                MemberVO vo = new Gson().fromJson(data, MemberVO.class);
+                                Log.d("로그", "result:" + vo.getPw());
+
+                                if(pw_et.getText().toString().equals(vo.getPw())){
                                     Intent intent = new Intent(LoginActivity.this, StudentHomeActivity.class);
-                                    intent.putExtra("logininfo", data);
                                     startActivity(intent);
+                                }else{
+                                    Toast.makeText(LoginActivity.this, "아이디 또는 비밀번호가 틀립니다", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });

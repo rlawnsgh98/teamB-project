@@ -1,51 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.jst.jsp.ui.internal.preferences.ui.JSPTemplatePreferencePage$JSPEditTemplateDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="-162"/>
-		<item key="DIALOG_Y_ORIGIN" value="0"/>
-		<item key="DIALOG_WIDTH" value="928"/>
-		<item key="DIALOG_HEIGHT" value="1040"/>
+		<item key="DIALOG_X_ORIGIN" value="228"/>
+		<item key="DIALOG_Y_ORIGIN" value="-12"/>
+		<item key="DIALOG_WIDTH" value="612"/>
+		<item key="DIALOG_HEIGHT" value="436"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="동적"/>
+		<item key="selection" value="join"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="동적"/>
-			<item value="!"/>
-			<item value="_top3("/>
-			<item value="_top3"/>
-			<item value="data:"/>
-			<item value="begin"/>
-			<item value="기본년도"/>
-			<item value="date"/>
-			<item value="년"/>
-			<item value="hite_date"/>
-			<item value="map"/>
-			<item value="Map"/>
-			<item value="string"/>
-			<item value="$(document).on"/>
-			<item value="_comp"/>
+			<item value="join"/>
+			<item value="idcheck"/>
+			<item value="id"/>
+			<item value="update"/>
+			<item value="find"/>
+			<item value="infd"/>
+			<item value="fil"/>
+			<item value="my"/>
+			<item value="dbcp"/>
+			<item value="apache"/>
+			<item value="insert"/>
+			<item value="source"/>
+			<item value="mvc"/>
+			<item value="test"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="807"/>
-		<item key="DIALOG_Y_ORIGIN" value="268"/>
+		<item key="DIALOG_X_ORIGIN" value="1204"/>
+		<item key="DIALOG_Y_ORIGIN" value="91"/>
 		<item key="DIALOG_WIDTH" value="322"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 	<section name="org.eclipse.wst.xml.ui.internal.preferences.XMLTemplatePreferencePage$XMLEditTemplateDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="75"/>
-		<item key="DIALOG_Y_ORIGIN" value="0"/>
-		<item key="DIALOG_WIDTH" value="726"/>
-		<item key="DIALOG_HEIGHT" value="1040"/>
+		<item key="DIALOG_X_ORIGIN" value="218"/>
+		<item key="DIALOG_Y_ORIGIN" value="58"/>
+		<item key="DIALOG_WIDTH" value="818"/>
+		<item key="DIALOG_HEIGHT" value="477"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 </section>
