@@ -11,9 +11,36 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 
 import com.example.teamb_project.R;
+import com.example.teamb_project.vo.MemberVO;
+
+import java.lang.reflect.Member;
 
 public class Common {
+    static MemberVO loginInfo;
 
+    //로그인 정보 저장
+    public void setLoginInfo(MemberVO vo){
+         this.loginInfo = vo;
+    }
+    //로그인 정보 조회
+    public MemberVO getLoginInfo(){
+        return loginInfo;
+    }
+
+    //임시 로그인 정보 저장
+    public void setTempLoginInfo(){
+        MemberVO temp = new MemberVO();
+        temp.setMember_code("3");
+        temp.setMember_name("테스트유저1");
+        temp.setGender("남");
+        temp.setEmail("user1@gg.com");
+        temp.setPhone("12363121");
+        temp.setType("S");
+        temp.setId("user1");
+        temp.setPw("000aA");
+        temp.setBirth("23/01/02");
+        this.loginInfo = temp;
+    }
 
     //스피너 - 검색에서 제목,내용,작성자 <- 이 스피너 한정
     public void setSpinner(Spinner spinner, Context context){

@@ -38,30 +38,35 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
         setContentView(b.getRoot());
         getSupportActionBar().hide();
 
+
         Log.d(TAG, "onCreate: ");
         Common common = new Common();
         CommonMethod commonMethod = new CommonMethod();
+        //임시로그인
+        common.setTempLoginInfo();
 
-        ApiClient.setBASEURL("http://192.168.1.2/middle/");
+        ApiClient.setBASEURL("http://192.168.0.115/middle/");
 
         commonMethod.sendPost("list.bo", (isResult, data) -> {
-            Log.d(TAG, "result : " + isResult);
+            if(isResult){
+                //리사이클러뷰에 들어갈 데이터 List
+                ArrayList<BoardVO> list = new Gson().fromJson(data, new TypeToken<ArrayList<BoardVO>>(){}.getType());
 
-            //리사이클러뷰에 들어갈 데이터 List
-            ArrayList<BoardVO> list = new Gson().fromJson(data, new TypeToken<ArrayList<BoardVO>>(){}.getType());
-
-
-            //글이 11개 이상일 경우 더보기 보이게 하기 -> 보여줄 아이템이 남아있으면 보이게
-            b.linMore.setVisibility(View.GONE);
-            if(list == null){
-                if(list.size() > 10){
-                    b.linMore.setVisibility(View.VISIBLE);
+                //글이 11개 이상일 경우 더보기 보이게 하기 -> 보여줄 아이템이 남아있으면 보이게
+                b.linMore.setVisibility(View.GONE);
+                if(list == null){
+                    if(list.size() > 10){
+                        b.linMore.setVisibility(View.VISIBLE);
+                    }
                 }
+
+                //어댑터 설정
+                b.recvBoard.setAdapter(new BoardAdapter(getLayoutInflater(), list, this));
+                b.recvBoard.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
+            }else{
+                Log.d(TAG, " 실패 ");
             }
 
-            //어댑터 설정
-            b.recvBoard.setAdapter(new BoardAdapter(getLayoutInflater(), list, this));
-            b.recvBoard.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
 
         });
 

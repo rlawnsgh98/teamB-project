@@ -10,55 +10,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="025a1b72-cbd9-4dee-ad7c-db6d1ccdc453" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/counselling/CounselActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_counsel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_counsel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/.factorypath" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/.springBeans" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/src/main/java/and_member/AndMemberVO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/src/main/java/com/and/middle/AndController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/src/main/java/com/and/middle/AndMemberController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/src/main/java/com/and/middle/CustomerController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/src/main/java/com/and/middle/ExamController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/src/main/java/com/and/middle/HomeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/src/main/java/com/and/middle/LMSController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/src/main/java/com/and/middle/TestVO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/src/main/java/common/CommonService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/src/main/java/customer/CustomerVO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/src/main/java/lms_member/MemberVO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/src/main/java/lms_member/TESTMemberVO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/src/main/resources/dbconn/conn.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/src/main/resources/dbconn/db.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/src/main/resources/log4j.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/src/main/resources/sqlmap/exam-mapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/src/main/resources/sqlmap/lms-mapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/src/main/resources/sqlmap/member-mapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/src/main/resources/sqlmap/test-mapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/src/main/webapp/WEB-INF/spring/root-context.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/src/test/resources/log4j.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/target/classes/dbconn/conn.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/target/classes/dbconn/db.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/target/classes/log4j.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/target/classes/sqlmap/exam-mapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/target/classes/sqlmap/lms-mapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/target/classes/sqlmap/member-mapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/target/classes/sqlmap/test-mapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/target/m2e-wtp/web-resources/META-INF/maven/co.kr/smart/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/target/m2e-wtp/web-resources/META-INF/maven/co.kr/smart/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../middle/target/test-classes/log4j.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/common/Common.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/common/Common.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/board/BoardActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/board/BoardActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/board/BoardAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/board/BoardAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/board/NewBoardActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/board/NewBoardActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_board.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_board.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_new_board.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_new_board.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\admin\.android\avd\Pixel_4.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[RFCT610YB8T]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -102,7 +67,7 @@
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Study_Android/workspace/LastProject" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.-978635717">

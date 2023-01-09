@@ -37,7 +37,7 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
 
-        h.id.setText(list.get(i).getBoard_code());
+        h.id.setText(list.get(i).getBoard_code()+"");
         h.title.setText(list.get(i).getTitle());
         h.writedate.setText(list.get(i).getWritedate().toString());
 
