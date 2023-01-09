@@ -17,4 +17,11 @@
         <item>박강사</item>
         <item>최강사</item>
     </string-array>
+
+    <!-- 수정/삭제 -->
+    <string-array name="edit_delete">
+        <item>수정</item>
+        <item>삭제</item>
+    </string-array>
+
 </resources>

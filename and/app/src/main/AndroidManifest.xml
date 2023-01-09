@@ -17,6 +17,13 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".teacher.board.BoardModifyActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".counselling.CounselDetailActivity"
             android:exported="false">
             <meta-data
@@ -25,7 +32,7 @@
         </activity>
         <activity
             android:name=".counselling.NewCounselActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".counselling.CounselActivity"
             android:exported="false" />

@@ -7,8 +7,10 @@
     tools:context=".teacher.board.BoardDetailActivity"
     android:orientation="vertical">
 
+
     <!-- 상단 바 -->
     <RelativeLayout
+        android:id="@+id/rel_bar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/blue"
@@ -40,16 +42,64 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             >
-            <!-- 글 제목 -->
-            <TextView
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="제목제목"
-                android:textColor="@color/font_black"
-                android:textSize="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                />
+                >
+                <!-- 글 제목 -->
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="제목제목"
+                    android:textColor="@color/font_black"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    />
+                <!-- 메뉴 : 수정,삭제 -->
+                <ImageView
+                    android:id="@+id/iv_more"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_more_100"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="20dp"
+                    />
+                <!--수정 삭제-->
+                <RelativeLayout
+                    android:visibility="visible"
+                    android:id="@+id/lin_modify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/white"
+                    android:layout_marginRight="15dp"
+                    android:layout_alignParentBottom="true"
+                    >
+                    <TextView
+                        android:id="@+id/tv_modify"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="수정"
+                        android:padding="5dp"
+                        android:textColor="@color/blue"
+                        android:textSize="16dp"
+                        android:layout_marginRight="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/tv_delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="삭제"
+                        android:padding="5dp"
+                        android:textColor="@color/view_red"
+                        android:textSize="16dp"
+                        android:layout_toRightOf="@+id/tv_modify"
+                        />
+                </RelativeLayout>
+            </RelativeLayout>
 
             <!-- 구분선 -->
             <View
@@ -71,6 +121,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/tv_writer"
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -79,6 +130,7 @@
                     android:textSize="18dp"
                     />
                 <TextView
+                    android:id="@+id/tv_writedate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2023.01.03"
@@ -94,6 +146,7 @@
                     android:textSize="16dp"
                     />
                 <TextView
+                    android:id="@+id/tv_readcnt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="16"
@@ -159,8 +212,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:layout_marginBottom="50dp"
                 >
                 <TextView
+                    android:id="@+id/tv_content"
                     android:layout_margin="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -170,6 +225,8 @@
                     android:textSize="16dp"
                     />
             </LinearLayout>
+
+
 
             <!--구분선-->
             <View
@@ -265,6 +322,7 @@
             </LinearLayout>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
+
 
 
 </LinearLayout>

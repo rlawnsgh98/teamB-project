@@ -23,6 +23,7 @@ import com.example.teamb_project.common.Common;
 import com.example.teamb_project.databinding.ActivityBoardBinding;
 import com.example.teamb_project.vo.BoardVO;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
@@ -38,7 +39,6 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
         setContentView(b.getRoot());
         getSupportActionBar().hide();
 
-
         Log.d(TAG, "onCreate: ");
         Common common = new Common();
         CommonMethod commonMethod = new CommonMethod();
@@ -50,7 +50,7 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
         commonMethod.sendPost("list.bo", (isResult, data) -> {
             if(isResult){
                 //리사이클러뷰에 들어갈 데이터 List
-                ArrayList<BoardVO> list = new Gson().fromJson(data, new TypeToken<ArrayList<BoardVO>>(){}.getType());
+                ArrayList<BoardVO> list = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, new TypeToken<ArrayList<BoardVO>>(){}.getType());
 
                 //글이 11개 이상일 경우 더보기 보이게 하기 -> 보여줄 아이템이 남아있으면 보이게
                 b.linMore.setVisibility(View.GONE);

@@ -42,7 +42,7 @@ public class Common {
         this.loginInfo = temp;
     }
 
-    //스피너 - 검색에서 제목,내용,작성자 <- 이 스피너 한정
+    //스피너 - 검색에서 제목,내용,작성자 <- 이 스피너 한정임! 재활용시 수정 필요
     public void setSpinner(Spinner spinner, Context context){
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 context, R.array.spinner_category, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);

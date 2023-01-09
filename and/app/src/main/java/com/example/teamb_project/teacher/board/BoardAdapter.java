@@ -37,18 +37,16 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
 
-        h.id.setText(list.get(i).getBoard_code()+"");
+        h.id.setText(list.get(i).getNo()+"");
         h.title.setText(list.get(i).getTitle());
+        h.writer.setText(list.get(i).getMember_name());
         h.writedate.setText(list.get(i).getWritedate().toString());
 
         //특정 게시글 클릭시 해당 게시글 상세 Act 이동
-        h.board.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, BoardDetailActivity.class);
-                //intent 에 해당 게시글 id 값 담기
-                context.startActivity(intent);
-            }
+        h.board.setOnClickListener(v -> {
+            Intent intent = new Intent(context, BoardDetailActivity.class);
+            intent.putExtra("board_code", list.get(i).getBoard_code());
+            context.startActivity(intent);
         });
 
     }

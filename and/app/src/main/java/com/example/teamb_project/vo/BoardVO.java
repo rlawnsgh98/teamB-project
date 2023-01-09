@@ -3,9 +3,25 @@ package com.example.teamb_project.vo;
 import java.sql.Date;
 
 public class BoardVO {
-    private int board_code, writer, readcnt, root, indent, step, lecture_code;
-    private String title, content, category;
+    private int board_code, writer, readcnt, root, indent, step, lecture_code, no;
+    private String title, content, category, member_name;
     private Date writedate;
+
+    public void setNo(int no) {
+        this.no = no;
+    }
+
+    public int getNo() {
+        return no;
+    }
+
+    public void setMember_name(String member_name) {
+        this.member_name = member_name;
+    }
+
+    public String getMember_name() {
+        return member_name;
+    }
 
     public void setBoard_code(int board_code) {
         this.board_code = board_code;

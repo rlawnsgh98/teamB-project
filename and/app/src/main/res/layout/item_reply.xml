@@ -41,6 +41,7 @@
                 android:layout_marginBottom="5dp"
                 >
                 <TextView
+                    android:id="@+id/tv_writer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="댓글 작성자"
@@ -69,7 +70,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="삭제"
-                        android:textColor="@color/font_blue"
+                        android:textColor="@color/view_red"
                         android:textSize="15dp"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
@@ -77,6 +78,7 @@
                 </LinearLayout>
             </RelativeLayout>
             <TextView
+                android:id="@+id/tv_content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="25dp"
@@ -86,6 +88,7 @@
                 android:textColor="@color/font_black"
                 />
             <TextView
+                android:id="@+id/tv_writedate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2023.01.05"
