@@ -1,28 +1,23 @@
 package com.example.teamb_project.teacher.board;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 
-import com.example.conn.ApiClient;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.conn.CommonMethod;
 import com.example.teamb_project.R;
 import com.example.teamb_project.common.Common;
 import com.example.teamb_project.databinding.ActivityBoardDetailBinding;
 import com.example.teamb_project.vo.BoardVO;
 import com.example.teamb_project.vo.ReplyVO;
-import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 public class BoardDetailActivity extends AppCompatActivity implements View.OnClickListener{
@@ -40,7 +35,7 @@ public class BoardDetailActivity extends AppCompatActivity implements View.OnCli
         Common common = new Common();
         CommonMethod commonMethod = new CommonMethod();
         Intent intent = getIntent();
-        ApiClient.setBASEURL("http://192.168.0.115/middle/");
+
 
         //특정 게시판 정보 조회
         commonMethod.setParams("board_code", intent.getIntExtra("board_code", -1))
@@ -87,6 +82,8 @@ public class BoardDetailActivity extends AppCompatActivity implements View.OnCli
         b.tvDelete.setOnClickListener(this);
         b.tvModify.setOnClickListener(this);
 
+        //edt 값 입력시
+        b.edtReply.addTextChangedListener(common.getTextWatcher(b.ivClose, b.ivSend));
 
     }
 

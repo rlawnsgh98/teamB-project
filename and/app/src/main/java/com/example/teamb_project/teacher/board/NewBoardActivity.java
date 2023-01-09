@@ -1,7 +1,5 @@
 package com.example.teamb_project.teacher.board;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -9,7 +7,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.conn.ApiClient;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.conn.CommonMethod;
 import com.example.teamb_project.R;
 import com.example.teamb_project.common.Common;
@@ -45,7 +44,7 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
         Intent board_intent = new Intent(NewBoardActivity.this, BoardActivity.class);
         CommonMethod commonMethod = new CommonMethod();
         Common common = new Common();
-        ApiClient.setBASEURL("http://192.168.0.115/middle/");
+//        ApiClient.setBASEURL("http://192.168.0.115/middle/");
 
 
         if(v.getId()== R.id.iv_back){

@@ -263,18 +263,45 @@
                         />
                 </com.google.android.material.card.MaterialCardView>
                 <!-- 댓글 입력칸 -->
-                <EditText
+                <RelativeLayout
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:hint="댓글 추가..."
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/edittext_none"
-                    android:textSize="16dp"
-                    android:paddingTop="5dp"
-                    android:paddingBottom="5dp"
-                    android:inputType="textMultiLine"
-                    />
+                    android:layout_gravity="center"
+                    >
+                    <EditText
+                        android:id="@+id/edt_reply"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="댓글 추가..."
+                        android:background="@drawable/edittext_none"
+                        android:textSize="16dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:inputType="textMultiLine"
+                        android:layout_centerVertical="true"
+                        />
+                    <ImageView
+                        android:id="@+id/iv_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_close_blue"
+                        android:layout_marginRight="42dp"
+                        android:visibility="gone"
+                        />
+                    <ImageView
+                        android:id="@+id/iv_send"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_send_blue"
+                        android:layout_marginRight="10dp"
+                        android:visibility="gone"
+                        />
+                </RelativeLayout>
             </LinearLayout>
 
             <!--구분선-->

@@ -13,10 +13,11 @@ import android.widget.Spinner;
 import com.example.teamb_project.R;
 import com.example.teamb_project.vo.MemberVO;
 
-import java.lang.reflect.Member;
-
 public class Common {
     static MemberVO loginInfo;
+
+    public static String BASE;
+
 
     //로그인 정보 저장
     public void setLoginInfo(MemberVO vo){
@@ -79,8 +80,6 @@ public class Common {
         }
     }
 
-
-
     // EditText 입력되어있을때만 지우기(닫기) 버튼 보이기
     // EditText.addTextChangedListener( 여기에 넘겨줄 TextWatcher )
     // TextWatcher
@@ -99,6 +98,32 @@ public class Common {
                 }else{
                     //값 입력시
                     close.setVisibility(View.VISIBLE);
+                }
+            }
+            @Override
+            public void afterTextChanged(Editable s) {
+                //입력 끝난 후
+            }
+        };
+        return tw;
+    }
+    public TextWatcher getTextWatcher(ImageView close, ImageView send){
+        TextWatcher tw = new TextWatcher(){
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                //입력 전
+            }
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                //입력칸 변화시
+                if(s.toString().equals("")){
+                    //값 없을때
+                    close.setVisibility(View.GONE);
+                    send.setVisibility(View.GONE);
+                }else{
+                    //값 입력시
+                    close.setVisibility(View.VISIBLE);
+                    send.setVisibility(View.VISIBLE);
                 }
             }
             @Override

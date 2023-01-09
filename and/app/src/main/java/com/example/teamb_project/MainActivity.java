@@ -1,12 +1,11 @@
 package com.example.teamb_project;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.conn.ApiClient;
 import com.example.conn.CommonMethod;
@@ -29,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(b.getRoot());
         getSupportActionBar().hide();
 
-        ApiClient.setBASEURL("http://192.168.0.115/middle/");
+        ApiClient.setBASEURL("http://192.168.1.2/middle/");
 
         b.btnBoard.setOnClickListener(this);
         b.btnNotice.setOnClickListener(this);
