@@ -1,23 +1,7 @@
 INDEX VERSION 1.131
-D:\Study_Spring\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\390785669.index
+D:\teamB-project - 복사본\WorkSpace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\390785669.index
 \middle\src\main\java
-D:\Study_Spring\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\261363581.index
-\smart\src\main\java
-D:\Study_Spring\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\461047950.index
-\smart\src\main\java
-D:\Study_Spring\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\862591626.index
-\spring01\src\main\java
-D:\Study_Spring\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\118008708.index
-\spring01\src\main\java
-D:\Study_Spring\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3654023241.index
-\smart\src\main\java
-D:\Study_Spring\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\387344873.index
-\smart\src\main\java
-D:\Study_Spring\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3583565915.index
-\smart\src\main\java
-D:\Study_Spring\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\596817716.index
-\smart\src\main\java
-D:\Study_Spring\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\155065331.index
-\smart\src\main\java
-D:\Study_Spring\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\541205497.index
-\spring02\src\main\java
+D:\teamB-project - 복사본\WorkSpace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1823557430.index
+\test\src\main\java
+D:\teamB-project-backup\WorkSpace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\390785669.index
+\middle\src\main\java

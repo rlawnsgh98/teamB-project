@@ -1,7 +1,7 @@
 package com.example.teamb_project.vo;
 
 public class EnrolmentVO {
-    int enrolment_code, lecture_code, member_code, status;
+    private int enrolment_code, lecture_code, member_code, status;
 
     public int getEnrolment_code() {
         return enrolment_code;

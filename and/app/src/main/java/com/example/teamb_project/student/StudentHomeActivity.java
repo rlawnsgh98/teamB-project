@@ -10,6 +10,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import com.example.teamb_project.LoginInfo;
 import com.example.teamb_project.R;
 import com.example.teamb_project.databinding.ActivityStudenthomeBinding;
 import com.example.teamb_project.databinding.ActivityTeacherhomeBinding;
@@ -31,10 +32,7 @@ public class StudentHomeActivity extends AppCompatActivity implements View.OnCli
         s.logininfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = getIntent();
-
-                String s = intent.getStringExtra("logininfo");
-                Log.d("TAG", "onClick: "+s);
+                Log.d("로그", "LoginInfo.check_id: "+ LoginInfo.check_id);
             }
         });
 
@@ -45,23 +43,21 @@ public class StudentHomeActivity extends AppCompatActivity implements View.OnCli
         s.cvAttendance.setOnClickListener(this);
         s.cvSchedule.setOnClickListener(this);
 
-
+        //임시
         s.btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(v.getContext(), TeacherHomeActivity.class));
             }
         });
+
+
     }
 
     @Override
     public void onClick(View v) {
         if(v.getId()==R.id.cv_mylecture){
-            Intent i = getIntent();
-            String logininfo = i.getStringExtra("logininfo");
-
             Intent intent = new Intent(this, stu_MyLectureActivity.class);
-            intent.putExtra("logininfo", logininfo);
             startActivity(intent);
         }else if(v.getId()==R.id.cv_notice){
             Intent intent = new Intent(this, NoticeActivity.class);

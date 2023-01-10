@@ -47,7 +47,7 @@
 		<item key="create_package_info_java" value="false"/>
 	</section>
 	<section name="ClasspathContainerSelectionPage">
-		<item key="index" value="2"/>
+		<item key="index" value="5"/>
 	</section>
 	<section name="org.eclipse.jdt.internal.ui.dialogs.OpenTypeSelectionDialog2">
 		<item key="ShowStatusLine" value="true"/>

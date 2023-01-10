@@ -18,6 +18,7 @@
             android:layout_height="120dp"
             android:src="@drawable/ic_empty_profile"/>
         <TextView
+            android:id="@+id/tv_lecture_teacher"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="강사이름"/>

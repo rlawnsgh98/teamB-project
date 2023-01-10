@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.example.conn.ApiClient;
 import com.example.conn.CommonMethod;
 import com.example.teamb_project.student.StudentHomeActivity;
+import com.example.teamb_project.teacher.TeacherHomeActivity;
 import com.example.teamb_project.vo.MemberVO;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.gson.Gson;
@@ -27,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         // IP 설정
-        ApiClient.setBASEURL("http://210.123.231.86//smart/");
+        ApiClient.setBASEURL("http://192.168.0.26/middle/");
 
         id_et = findViewById(R.id.id_et);
         pw_et = findViewById(R.id.id_pw);
@@ -39,17 +40,28 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 new CommonMethod().setParams("id", id_et.getText().toString())
                         .setParams("pw", pw_et.getText().toString())
-                        .sendPost("login1.mj", new CommonMethod.CallBackResult() {
+                        .sendPost("login", new CommonMethod.CallBackResult() {
                             @Override
                             public void result(boolean isResult, String data) {
-                                MemberVO vo = new Gson().fromJson(data, MemberVO.class);
-                                Log.d("로그", "result:" + vo.getPw());
+                                if(isResult) {
+                                    MemberVO vo = new Gson().fromJson(data, MemberVO.class);
 
-                                if(pw_et.getText().toString().equals(vo.getPw())){
-                                    Intent intent = new Intent(LoginActivity.this, StudentHomeActivity.class);
-                                    startActivity(intent);
-                                }else{
-                                    Toast.makeText(LoginActivity.this, "아이디 또는 비밀번호가 틀립니다", Toast.LENGTH_SHORT).show();
+                                    if (vo != null) {
+                                        if(vo.getType().equals("STUD")){
+                                            Intent intent = new Intent(LoginActivity.this, StudentHomeActivity.class);
+                                            LoginInfo.check_id = vo.getId();
+                                            LoginInfo.member_code = vo.getMember_code();
+                                            startActivity(intent);
+                                        }else if(vo.getType().equals("TEACH")){
+                                            Intent intent = new Intent(LoginActivity.this, TeacherHomeActivity.class);
+                                            LoginInfo.check_id = vo.getId();
+                                            LoginInfo.member_code = vo.getMember_code();
+                                            startActivity(intent);
+                                        }
+
+                                    } else {
+                                        Toast.makeText(LoginActivity.this, "아이디 또는 비밀번호가 틀립니다", Toast.LENGTH_SHORT).show();
+                                    }
                                 }
                             }
                         });

@@ -1,21 +1,19 @@
 package com.example.teamb_project.student.mylecture.lecturehome;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import com.example.teamb_project.R;
-import com.example.teamb_project.databinding.ActivityLectureDetailBinding;
 import com.example.teamb_project.databinding.ActivityStuLectureDetailBinding;
-import com.example.teamb_project.databinding.ActivityStudentDetailBinding;
-import com.example.teamb_project.databinding.ActivityStudenthomeBinding;
-import com.example.teamb_project.teacher.mylecture.lecturehome.LectureHomeFragment;
-import com.example.teamb_project.teacher.mylecture.lecturehome.LectureHomeworkFragment;
-import com.example.teamb_project.teacher.mylecture.lecturehome.LectureStudentFragment;
 import com.google.android.material.tabs.TabLayout;
 
 public class stu_LectureDetailActivity extends AppCompatActivity {
     ActivityStuLectureDetailBinding d;
+    //stu_Mylecture 에서 lecture_code를 받아준 후 fragment에 전달
+    int lecture_code;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +21,14 @@ public class stu_LectureDetailActivity extends AppCompatActivity {
         d = ActivityStuLectureDetailBinding.inflate(getLayoutInflater());
         setContentView(d.getRoot());
 
+
+        lecture_code = getIntent().getIntExtra("lecture_code", 0);
+
+        //탭레이아웃-프래그먼트전환
         d.tabLayout.addTab(d.tabLayout.newTab().setText("강의홈"));
         d.tabLayout.addTab(d.tabLayout.newTab().setText("강의영상"));
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.container, new stu_LectureHomeFragment()).commit();
-
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, new stu_LectureHomeFragment(lecture_code)).commit();
         d.tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -45,18 +46,20 @@ public class stu_LectureDetailActivity extends AppCompatActivity {
 
             }
         });
+
     }
     private void changeView(int index) {
-
         switch (index) {
             case 0 :
-                getSupportFragmentManager().beginTransaction().replace(R.id.container, new stu_LectureHomeFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, new stu_LectureHomeFragment(lecture_code)).commit();
                 break ;
             case 1 :
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, new stu_LectureVideoFragment()).commit();
                 break ;
 
-
         }
     }
+
+
+
 }

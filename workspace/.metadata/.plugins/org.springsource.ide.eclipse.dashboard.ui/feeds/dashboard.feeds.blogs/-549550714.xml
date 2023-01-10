@@ -5,7 +5,33 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2023-01-05T11:00:00Z</updated>
+  <updated>2023-01-10T08:00:00Z</updated>
+  <entry>
+    <title>This Week in Spring - January 9th, 2023</title>
+    <link rel="alternate" href="https://spring.io/blog/2023/01/10/this-week-in-spring-january-9th-2023" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2023-01-10:5052</id>
+    <updated>2023-01-10T08:00:00Z</updated>
+    <content type="html">&lt;p&gt;Hi, Spring fans! As I write this I&amp;rsquo;m on a plane winging my way to Helsinki, Finland. A new year and new journeys begin. It&amp;rsquo;s going to be cold there. Wish me luck! Do you know what always warms me up? The thrill of learning. And this week&amp;rsquo;s no different. This week we&amp;rsquo;ve got some good stuff line up so let&amp;rsquo;s get right into it!&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m starting to put out easy-to-remember visual cards introducing a blink-and-you-&amp;rsquo;ll-miss-it aspect of awesomeness in the Spring ecosystem as part of my &lt;a href="https://twitter.com/SpringTipslive"&gt;&amp;ldquo;Spring Tips&amp;rdquo; (@springtipslive)&lt;/a&gt; series. So now you&amp;rsquo;ll be notified of not only new videos but might get some useful information directly in the tweets themselves, too. &lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The first one &lt;a href="https://twitter.com/SpringTipsLive/status/1608026764936093696/photo/1"&gt;looks at the Spring AOT support&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;this one looks at &lt;a href="https://twitter.com/SpringTipsLive/status/1612017678633369600"&gt;the Spring Java Formatter plugin&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;this one looks at using PostgreSQL as &lt;a href="https://twitter.com/SpringTipsLive/status/1608614143648571394"&gt;a message queue with Spring Integration&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;our pal Maciej has a new CLI called &lt;code&gt;just&lt;/code&gt; which endeavors to make life easier for Spring Boot developers. &lt;a href="https://www.infoq.com/news/2023/01/just-spring-boot-cli/"&gt;InfoQ has a nice writeup; check it out!&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Amigoscode has a nice video introducing &lt;a href="https://www.youtube.com/watch?v=KxqlJblhzfI"&gt;Spring Boot 3 and Spring Security 6 for JWT authentication and authorization&lt;/a&gt;. Check it out!&lt;/li&gt;
+  &lt;li&gt;The In28Minutes channel has an introduction &lt;a href="https://www.youtube.com/watch?v=esdkqu6lInw"&gt;to versioning a Spring Boot REST API, too&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2023/01/05/a-bootiful-podcast-spring-legend-ramnivas-laddad"&gt;A Bootiful Podcast: Spring legend Ramnivas Laddad&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/723638450/0/baeldung~Difference-Between-JPA-and-Spring-Data-JPA"&gt;Difference Between JPA and Spring Data JPA&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/723733244/0/baeldung~Encoding-of-URI-Variables-on-RestTemplate"&gt;Encoding of URI Variables on RestTemplate&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2023/01/03/spring-tools-4-17-1-released"&gt;Spring Tools 4.17.1 released&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;The Java Techie channel has a video &lt;a href="https://www.youtube.com/watch?v=huUdmP5iPM8"&gt;looking at how to do dynamic file upload using Spring Batch&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>A Bootiful Podcast: Spring legend Ramnivas Laddad</title>
     <link rel="alternate" href="https://spring.io/blog/2023/01/05/a-bootiful-podcast-spring-legend-ramnivas-laddad" />
@@ -633,19 +659,6 @@ dependencyManagement {&#xD;
 &lt;p&gt;We have added a collection of scripts to the Spring Cloud Data Flow that makes it easy to launch a local Kuberenetes cluster and install SCDF with MariaDB and RabbitMQ or Kafka. See the &lt;a href="https://docs.spring.io/spring-cloud-dataflow/docs/current/reference/htmlsingle/#local-k8s-development"&gt;Reference Guide&lt;/a&gt; for more info.&lt;/p&gt;
 &lt;p&gt;The detailed &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow/releases/tag/v2.10.0"&gt;release notes&lt;/a&gt; contain more info.&lt;/p&gt;&lt;h2&gt;&lt;a href="#stay-in-touch-hellip" class="anchor" name="stay-in-touch-hellip"&gt;&lt;/a&gt;Stay in touch&amp;hellip;&lt;/h2&gt;
 &lt;p&gt;As always, we welcome feedback and contributions, so please reach out to us on &lt;a href="https://stackoverflow.com/questions/tagged/spring-cloud-dataflow"&gt;Stackoverflow&lt;/a&gt; or &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow/issues"&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>A Bootiful Podcast: Vaadin's Marcus Hellberg on rich UIs, Spring Boot 3, GraalVM native images, and more</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/12/08/a-bootiful-podcast-vaadin-s-marcus-hellberg-on-rich-uis-spring-boot-3-graalvm-native-images-and-more" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2022-12-08:5032</id>
-    <updated>2022-12-08T11:00:00Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! In this installment, &lt;a href="https://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; talks to Vaadin&amp;rsquo;s &lt;a href="https://twitter.com/marcushellberg"&gt;Marcus Hellberg (@marcushellberg)&lt;/a&gt; about rich UIs, Vaadin Flow, the new Hilla Framework, GraalVM native image compilation, and so much more &lt;/p&gt;
-&lt;iframe title="Vaadin¡¯s Marcus Hellberg on rich UIs, Spring Boot 3, GraalVM native images, and more " allowtransparency="true" height="150" width="100%" style="border: none; min-width: min(100%, 430px);" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=wreg8-1333b75-pb&amp;from=pb6admin&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Arial&amp;skin=1&amp;font-color=&amp;logo_link=episode_page&amp;btn-skin=7"&gt;&lt;/iframe&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>
