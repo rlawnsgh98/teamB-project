@@ -3,6 +3,7 @@ package com.example.teamb_project.teacher.mylecture.lecturehome.studentinfo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import com.example.teamb_project.R;
 import com.example.teamb_project.teacher.mylecture.lecturehome.studentinfo.StudentAttendanceFragment;
@@ -11,9 +12,15 @@ import com.example.teamb_project.teacher.mylecture.lecturehome.studentinfo.Stude
 import com.google.android.material.tabs.TabLayout;
 
 public class StudentDetailActivity extends AppCompatActivity {
+    int member_code;
     TabLayout tab_layout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        //선택한 학생의 멤버코드
+        member_code = getIntent().getIntExtra("member_code", -1);
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_detail);
         /*탭 레이아웃*/

@@ -71,6 +71,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="D:\teamB-project-backup\WorkSpace"/>
 			<item value="D:\teamB-project - 복사본\WorkSpace"/>
 			<item value="D:\Study_Spring\middle"/>
 			<item value="D:\Study_Spring\smart"/>

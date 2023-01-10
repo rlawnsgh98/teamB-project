@@ -25,11 +25,13 @@ import java.util.List;
 
 public class LectureStudentFragment extends Fragment {
     int Lecture_code;
+
     public LectureStudentFragment(int lecture_code) {
         Lecture_code = lecture_code;
     }
 
     ArrayList<MemberVO> student_list;
+    String student_list2;
     ArrayList<MemberVO> search_list = new ArrayList<>();
 
     RecyclerView recv_student;
@@ -37,62 +39,58 @@ public class LectureStudentFragment extends Fragment {
     LectureStudentAdapter adapter;
     //검색할 아이템 목록
 
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_lecture_student, container, false);
 
         recv_student = v.findViewById(R.id.recv_student);
+        edt_search = v.findViewById(R.id.edt_search);
 
-        new com.example.conn.CommonMethod().setParams("lecture_code", Lecture_code).sendPost("student_list.le", new com.example.conn.CommonMethod.CallBackResult() {
+        new com.example.conn.CommonMethod().setParams("lecture_code", Lecture_code).sendGet("student_list.le", new com.example.conn.CommonMethod.CallBackResult() {
                     @Override
                     public void result(boolean isResult, String data) {
                         student_list = new Gson().fromJson(data, new TypeToken<List<MemberVO>>(){}.getType());
-                        Log.d("로그", "onCreateView: " + student_list);
+                        adapter = new LectureStudentAdapter(getLayoutInflater(), getContext(), student_list);
 
+                        edt_search.addTextChangedListener(new TextWatcher() {
+                            @Override
+                            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                            }
+
+                            @Override
+                            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                            }
+
+                            @Override
+                            public void afterTextChanged(Editable s) {
+                                String searchText = edt_search.getText().toString();
+                                search_list.clear();
+
+                                Log.d("로그", "afterTextChanged: "+searchText);
+                                if(searchText.equals("")){
+                                    adapter.setItems(student_list);
+                                }
+                                else{
+                                    for (int a = 0; a < student_list.size(); a++) {
+                                        if (student_list.get(a).getMember_name().toLowerCase().contains(searchText.toLowerCase())) {
+                                            search_list.add(student_list.get(a));
+                                        }
+                                        adapter.setItems(search_list);
+                                    }
+                                }
+
+                            }
+                        });
+                        recv_student.setAdapter(adapter);
+                        recv_student.setLayoutManager(CommonMethod.getManager(getContext()));
                     }
+
                 });
 
-        Log.d("로그1", "onCreateView: " + student_list);
-
-
-        edt_search = v.findViewById(R.id.edt_search);
-//        edt_search.addTextChangedListener(new TextWatcher() {
-//            @Override
-//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//
-//            }
-//
-//            @Override
-//            public void onTextChanged(CharSequence s, int start, int before, int count) {
-//
-//            }
-//
-//            @Override
-//            public void afterTextChanged(Editable s) {
-//                String searchText = edt_search.getText().toString();
-//                search_list.clear();
-//
-//                if(searchText.equals("")){
-//                    adapter.setItems(student_list);
-//                }
-//                else {
-//                    // 검색 단어를 포함하는지 확인
-////                    for (int a = 0; a < student_list.size(); a++) {
-////                        if (student_list.get(a).getMember_name().toLowerCase().contains(searchText.toLowerCase())) {
-////                            search_list.add(student_list.get(a));
-////                        }
-////                        adapter.setItems(search_list);
-////                    }
-//                }
-//            }
-//        });
-
-
         return v;
-
     }
 
     private void selectStudent(){

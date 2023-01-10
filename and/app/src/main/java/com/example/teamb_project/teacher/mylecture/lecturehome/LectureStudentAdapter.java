@@ -2,6 +2,7 @@ package com.example.teamb_project.teacher.mylecture.lecturehome;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,7 +50,9 @@ public class LectureStudentAdapter extends RecyclerView.Adapter<LectureStudentAd
         h.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                context.startActivity(new Intent(context, StudentDetailActivity.class));
+                Intent intent = new Intent(context, StudentDetailActivity.class);
+                intent.putExtra("member_code", list.get(idx).getMember_code());
+                context.startActivity(intent);
             }
         });
     }

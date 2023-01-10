@@ -27,8 +27,10 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        // IP 설정
-        ApiClient.setBASEURL("http://192.168.0.26/middle/");
+        // IP 설정 // 학교
+//        ApiClient.setBASEURL("http://192.168.0.26/middle/");
+        //집
+        ApiClient.setBASEURL("http://210.123.231.86/middle/");
 
         id_et = findViewById(R.id.id_et);
         pw_et = findViewById(R.id.id_pw);
