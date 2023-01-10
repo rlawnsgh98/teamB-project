@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(b.getRoot());
         getSupportActionBar().hide();
 
-        ApiClient.setBASEURL("http://192.168.0.115/middle/");
+        ApiClient.setBASEURL("http://192.168.0.2/middle/");
 
         b.btnBoard.setOnClickListener(this);
         b.btnNotice.setOnClickListener(this);

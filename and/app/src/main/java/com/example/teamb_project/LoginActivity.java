@@ -25,7 +25,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         // IP 설정
-        ApiClient.setBASEURL("http://192.168.0.122/smart/");
+        ApiClient.setBASEURL("http://192.168.0.2/smart/");
 
         id_et = findViewById(R.id.id_et);
         pw_et = findViewById(R.id.id_pw);
@@ -37,7 +37,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 new CommonMethod().setParams("id", id_et.getText().toString())
                         .setParams("pw", pw_et.getText().toString())
-                        .sendPost("login1.mj", new CommonMethod.CallBackResult() {
+                        .sendPost("login.mj", new CommonMethod.CallBackResult() {
                             @Override
                             public void result(boolean isResult, String data) {
                                 Log.d("로그", "result:" + data);
