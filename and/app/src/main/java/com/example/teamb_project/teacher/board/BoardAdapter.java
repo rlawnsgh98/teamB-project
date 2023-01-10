@@ -46,6 +46,7 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.ViewHolder> 
         h.board.setOnClickListener(v -> {
             Intent intent = new Intent(context, BoardDetailActivity.class);
             intent.putExtra("board_code", list.get(i).getBoard_code());
+            intent.putExtra("writer", list.get(i).getWriter());
             context.startActivity(intent);
         });
 

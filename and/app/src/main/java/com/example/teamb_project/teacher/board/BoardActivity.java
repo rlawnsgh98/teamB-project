@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ScrollView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,10 +21,13 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class BoardActivity extends AppCompatActivity implements View.OnClickListener{
     ActivityBoardBinding b;
     final String TAG = "log";
+    int cnt = 1;
+    BoardAdapter adapter = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,36 +42,55 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
         //임시로그인
         common.setTempLoginInfo();
 
-        commonMethod.sendPost("list.bo", (isResult, data) -> {
+        //'더보기' 클릭시
+        b.linMore.setOnClickListener(v -> {
+            cnt++;
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            AlertDialog ad = builder.create();
+            ad.setMessage("불러오는 중...");
+            ad.show();
+            commonMethod.setParams("cnt", cnt)
+                    .sendPost("cal.bo",(isResult, data) -> {
+                        //댓글 조회
+                        selectList();
+                        //남은 댓글 수
+                        int boardCnt = Integer.parseInt(data.toString());
+                        //남은 댓글 수가 0개 이하면 '더보기' 안보이게
+                        if(boardCnt <= 0){
+                            b.linMore.setVisibility(View.GONE);
+                        }else{
+
+                        }
+                        ad.dismiss();
+                    });
+        });
+
+        // 기본 10개 보이기
+        commonMethod.setParams("cnt", cnt)
+                .sendPost("list.bo", (isResult, data) -> {
             if(isResult){
                 //리사이클러뷰에 들어갈 데이터 List
                 ArrayList<BoardVO> list = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, new TypeToken<ArrayList<BoardVO>>(){}.getType());
 
-                //글이 11개 이상일 경우 더보기 보이게 하기 -> 보여줄 아이템이 남아있으면 보이게
-                b.linMore.setVisibility(View.GONE);
-                if(list == null){
-                    if(list.size() > 10){
-                        b.linMore.setVisibility(View.VISIBLE);
-                    }
+                if(list.size() == 0){
+                    b.linMore.setVisibility(View.GONE);
                 }
 
                 //어댑터 설정
-                b.recvBoard.setAdapter(new BoardAdapter(getLayoutInflater(), list, this));
+                adapter = new BoardAdapter(getLayoutInflater(), list, this);
+                b.recvBoard.setAdapter(adapter);
                 b.recvBoard.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
             }else{
                 Log.d(TAG, " 실패 ");
             }
 
-
         });
-
 
         //클릭이벤트
         b.ivSearch.setOnClickListener(this);
         b.cardGoTop.setOnClickListener(this);
         b.ivBack.setOnClickListener(this);
         b.ivWrite.setOnClickListener(this);
-
 
         //스피너 설정
         common.setSpinner(b.spinner, this);
@@ -78,7 +101,23 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
         //스크롤 내리면 아이콘 보이게
         common.scrollTop(b.scrBoard, b.cardGoTop);
 
+    }
 
+
+    //게시글 목록 불러오기
+    public void selectList(){
+        new CommonMethod().setParams("cnt", cnt)
+                .sendPost("list.bo", (isResult, data) -> {
+                    if(isResult){
+                        //리사이클러뷰에 들어갈 데이터 List
+                        ArrayList<BoardVO> list = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, new TypeToken<ArrayList<BoardVO>>(){}.getType());
+                        //어댑터 설정
+                        adapter.list = list;
+                        adapter.notifyDataSetChanged();
+                    }else{
+                        Log.d(TAG, " 실패 ");
+                    }
+                });
     }
 
     @Override

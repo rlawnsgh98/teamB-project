@@ -166,46 +166,19 @@
                 android:background="@color/line_gray"
                 />
 
-            <!-- 첨부된 파일이 있으면 보일 공간 -->
-            <LinearLayout
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recv_files"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
+                />
+            <!--구분선-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                >
-                <!-- 파일 1 -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingLeft="5dp"
-                    >
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:padding="7dp"
-                        android:src="@drawable/attach_file"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="임시 파일명.txt"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="5dp"
-                        android:textColor="@color/font_black"
-                        />
-                </LinearLayout>
-                <!--구분선-->
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/line_gray"
-                    />
-            </LinearLayout>
+                android:background="@color/line_gray"
+                />
 
             <!-- 글 내용 -->
             <LinearLayout
@@ -280,16 +253,6 @@
                         android:paddingBottom="5dp"
                         android:inputType="textMultiLine"
                         android:layout_centerVertical="true"
-                        />
-                    <ImageView
-                        android:id="@+id/iv_close"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:src="@drawable/ic_close_blue"
-                        android:layout_marginRight="42dp"
-                        android:visibility="gone"
                         />
                     <ImageView
                         android:id="@+id/iv_send"

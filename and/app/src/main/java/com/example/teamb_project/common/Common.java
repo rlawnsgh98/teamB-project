@@ -1,12 +1,16 @@
 package com.example.teamb_project.common;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
@@ -15,9 +19,6 @@ import com.example.teamb_project.vo.MemberVO;
 
 public class Common {
     static MemberVO loginInfo;
-
-    public static String BASE;
-
 
     //로그인 정보 저장
     public void setLoginInfo(MemberVO vo){
@@ -41,6 +42,26 @@ public class Common {
         temp.setPw("000aA");
         temp.setBirth("23/01/02");
         this.loginInfo = temp;
+    }
+
+    //키보드 보이기
+    public void showKeyBoard(Activity activity, EditText edt){
+        InputMethodManager imm = (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.showSoftInput(edt, InputMethodManager.SHOW_IMPLICIT);
+    }
+
+    //키보드 내리기
+    public void hideKeyBoard(Activity activity){
+        InputMethodManager manager = (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
+        manager.hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+    }
+
+    public void refresh(Activity activity){
+        Intent intent = activity.getIntent();
+        activity.finish();
+        activity.overridePendingTransition(0,0);
+        activity.startActivity(intent);
+        activity.overridePendingTransition(0,0);
     }
 
     //스피너 - 검색에서 제목,내용,작성자 <- 이 스피너 한정임! 재활용시 수정 필요

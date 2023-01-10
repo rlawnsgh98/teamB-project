@@ -7,6 +7,7 @@
     >
 
     <LinearLayout
+        android:id="@+id/lin_item_reply"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -50,6 +51,7 @@
                     />
                 <!-- 댓글 수정 버튼 - 작성자만 보이게 처리 -->
                 <LinearLayout
+                    android:id="@+id/lin_modify_delete"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -57,6 +59,7 @@
                     android:layout_centerVertical="true"
                     >
                     <TextView
+                        android:id="@+id/tv_modify"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="수정"
@@ -67,6 +70,7 @@
                         android:paddingRight="10dp"
                         />
                     <TextView
+                        android:id="@+id/tv_delete"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="삭제"
@@ -77,16 +81,42 @@
                         />
                 </LinearLayout>
             </RelativeLayout>
-            <TextView
-                android:id="@+id/tv_content"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="25dp"
                 android:layout_marginBottom="5dp"
-                android:text="댓글 내용 댓글 내용 댓글 내용 댓글 내용 댓글 내용 댓글 내용 댓글 내용 댓글 내용댓글 내용 댓글 내용 댓글 내용 댓글 내용 댓글 내용 댓글"
-                android:textSize="15dp"
-                android:textColor="@color/font_black"
-                />
+                >
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="댓글 내용 댓글 내용 댓글 내용 댓글 내용 댓글 내용 댓글 내용 댓글 내용 댓글 내용댓글 내용 댓글 내용 댓글 내용 댓글 내용 댓글 내용 댓글"
+                    android:textSize="15dp"
+                    android:textColor="@color/font_black"
+                    />
+                <EditText
+                    android:id="@+id/edt_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_none"
+                    android:padding="5dp"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:visibility="gone"
+                    android:inputType="textMultiLine"
+                    />
+                <ImageView
+                    android:id="@+id/iv_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_send_blue"
+                    android:layout_marginRight="10dp"
+                    android:visibility="gone"
+                    />
+            </RelativeLayout>
             <TextView
                 android:id="@+id/tv_writedate"
                 android:layout_width="wrap_content"
