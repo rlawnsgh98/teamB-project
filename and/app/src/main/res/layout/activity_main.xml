@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="공지사항"
+        />
+
+
+    <Button
+        android:id="@+id/btn_board"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="자유게시판"
+        />
+
+    <Button
+        android:id="@+id/btn_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비디오 테스트"
+        />
+
+    <Button
+        android:id="@+id/btn_board_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="자유게시판 상세 페이지"
+        />
+
+    <TextView
+        android:id="@+id/tv_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="안드로이드에서 보냄!"
+        android:layout_margin="10dp"
+        android:textColor="@color/font_black"
+        android:textSize="20dp"
+        />
+
+
+</LinearLayout>

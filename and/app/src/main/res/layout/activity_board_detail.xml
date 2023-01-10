@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".teacher.board.BoardDetailActivity"
+    android:orientation="vertical">
+
+    <!-- 상단 바 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/gray"
+        >
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_back"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="자유게시판"
+            android:textSize="20dp"
+            android:textColor="@color/font_black"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+
+    <!-- 스크롤 -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <!-- 글 제목 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="제목제목"
+                android:textColor="@color/font_black"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                />
+
+            <!-- 구분선 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/line_gray"
+                android:layout_marginTop="5dp"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="15dp"
+                android:paddingLeft="5dp"
+                >
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="글 작성자"
+                    android:textColor="@color/font_black"
+                    android:textSize="18dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2023.01.03"
+                    android:textColor="@color/font_black"
+                    android:textSize="16dp"
+                    android:layout_marginRight="20dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="조회"
+                    android:layout_marginRight="5dp"
+                    android:textSize="16dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="16"
+                    android:textColor="@color/font_black"
+                    android:textSize="16dp"
+                    android:layout_marginRight="10dp"
+                    />
+
+            </LinearLayout>
+
+            <!--구분선-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/line_gray"
+                />
+
+            <!-- 첨부된 파일이 있으면 보일 공간 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                >
+                <!-- 파일 1 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp"
+                    >
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="7dp"
+                        android:src="@drawable/attach_file"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="임시 파일명.txt"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/font_black"
+                        />
+                </LinearLayout>
+                <!--구분선-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_gray"
+                    />
+            </LinearLayout>
+
+            <!-- 글 내용 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_margin="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="글 내용 내용 입 입니 다 입닏 ㄴㄷㄹㄴㄹㅋㄴㄷㄶㄴ콘ㅋㄷㅋ녿ㅋ논ㄷㅋㄴ돈돜ㄴㄷ"
+                    android:textColor="@color/font_black"
+                    android:textSize="16dp"
+                    />
+            </LinearLayout>
+
+            <!--구분선-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/line_gray"
+                />
+
+            <!-- 댓글 입력 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                >
+                <!-- 프로필 이미지 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="60dp"
+                    app:cardElevation="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="25dp"
+                    >
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="#336"
+                        />
+                </com.google.android.material.card.MaterialCardView>
+                <!-- 댓글 입력칸 -->
+                <EditText
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="댓글 추가..."
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edittext_none"
+                    android:textSize="16dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:inputType="textMultiLine"
+                    />
+            </LinearLayout>
+
+            <!--구분선-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/line_gray"
+                />
+
+            <!-- 다른 유저 댓글 - 리사이클러뷰 -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recv_reply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <!-- 더보기 버튼 - 추가 로딩 처리 -->
+            <LinearLayout
+                android:id="@+id/lin_more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="5dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_margin="15dp"
+                    >
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/ic_arrow_down_gray"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="더보기"
+                        android:layout_gravity="center"
+                        android:textSize="15dp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>
