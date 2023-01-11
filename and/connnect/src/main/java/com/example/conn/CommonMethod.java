@@ -3,16 +3,21 @@ package com.example.conn;
 import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Environment;
 import android.provider.MediaStore;
+
+import androidx.annotation.RequiresApi;
 
 import com.google.gson.Gson;
 
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
@@ -72,8 +77,10 @@ public class CommonMethod {
     //갤러리에서 가져온 이미지 패스가 URI 형태로 실제 물리적인 주소가 x -> file로 만들수 없ㅇ므
     //해당하는 메소드는 URI 를 통해 실제 이미지 물리적 주소를 얻어오는 메소드
     // 2022.12.26 kwh 만듬 (협업 tip)
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public String getRealPath(Uri uri, Context context){
         String rtn = null; //리턴용
+
         String[] proj = {MediaStore.Images.Media.DATA};
         Cursor cursor = context.getContentResolver().query(uri, proj, null, null);
         if(cursor.moveToFirst()){
@@ -81,6 +88,7 @@ public class CommonMethod {
             rtn = cursor.getString(column_index);
         }
         cursor.close();
+
         return rtn;
     }
 
@@ -100,9 +108,40 @@ public class CommonMethod {
         return rtnFile;
     }
 
-    public void sendPostFile(String url, String filepath, CallBackResult callback){
+    // HashMap 받아서  for 문처리
+    public void sendPostFile(String url, ArrayList<String> filepath, CallBackResult callback){
+
+        for(int i = 0; i < filepath.size(); i++){
+
+            ApiInterface apiInterface = new ApiClient().getApiClient().create(ApiInterface.class);
+            Call<String> apiTest = apiInterface.connFilePost(url, stringToRequest(), pathToPartFile(filepath.get(i)));
+
+            apiTest.enqueue(new Callback<String>() {
+                @Override
+                public void onResponse(Call<String> call, Response<String> response) {
+                    callback.result(true, response.body());
+                }
+
+                @Override
+                public void onFailure(Call<String> call, Throwable t) {
+                    callback.result(false, "");
+                    t.printStackTrace(); // 어떤 오류인지 로그에 찍히게 처리
+                }
+            });
+
+        }
+    }
+
+
+
+    // HashMap 받아서  for 문처리
+    public void sendPostFiles(String url, ArrayList<String> filepath, CallBackResult callback) {
+        List<MultipartBody.Part> list  = new ArrayList<>();
+        for (int i = 0; i < filepath.size(); i++) {
+            list.add( pathToPartFile(filepath.get(i)));
+        }
         ApiInterface apiInterface = new ApiClient().getApiClient().create(ApiInterface.class);
-        Call<String> apiTest = apiInterface.connFilePost(url, stringToRequest(), pathToPartFile(filepath));
+        Call<String> apiTest = apiInterface.connFilesPost(url, stringToRequest(), list);
 
         apiTest.enqueue(new Callback<String>() {
             @Override
@@ -116,11 +155,12 @@ public class CommonMethod {
                 t.printStackTrace(); // 어떤 오류인지 로그에 찍히게 처리
             }
         });
+
     }
 
-    public MultipartBody.Part pathToPartFile(String path){
-        if( path != null ){
-            RequestBody fileBody = RequestBody.create(MediaType.parse("image/jpeg"), new File(path));
+    public MultipartBody.Part pathToPartFile(String filepath){
+        if( filepath != null ){
+            RequestBody fileBody = RequestBody.create(MediaType.parse("image/jpeg"), new File(filepath));
             MultipartBody.Part filePart
                     = MultipartBody.Part.createFormData("file", "img.png", fileBody);
             return filePart;

@@ -3,25 +3,45 @@ package com.example.teamb_project.teacher.board;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.conn.CommonMethod;
 import com.example.teamb_project.R;
 import com.example.teamb_project.common.Common;
 import com.example.teamb_project.databinding.ActivityNewBoardBinding;
+import com.example.teamb_project.vo.BoardFileVO;
+import com.example.teamb_project.vo.BoardVO;
+
+import java.util.ArrayList;
 
 public class NewBoardActivity extends AppCompatActivity implements View.OnClickListener{
     ActivityNewBoardBinding b;
     final String TAG = "log";
+    public final int GALLERY_CODE = 1000;
+    public final int FILE_CODE = 1001;
+
+    ArrayList<String> path_list = null;
+    ArrayList<BoardFileVO> file_list = null;
+    NewBoardAdapter adapter = null;
+
+    String img_path;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,8 +73,6 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
         Intent board_intent = new Intent(NewBoardActivity.this, BoardActivity.class);
         CommonMethod commonMethod = new CommonMethod();
         Common common = new Common();
-//        ApiClient.setBASEURL("http://192.168.0.115/middle/");
-
 
         if(v.getId()== R.id.iv_back){
             onBackPressed();
@@ -64,10 +82,13 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
             //글 등록처리
             if(!TextUtils.isEmpty(b.edtTitle.getText().toString()) && !TextUtils.isEmpty(b.edtContent.getText().toString())){
                 Log.d(TAG, "글 등록 가능");
-                commonMethod.setParams("writer", common.getLoginInfo().getMember_code())
-                        .setParams("title", b.edtTitle.getText().toString())
-                        .setParams("content", b.edtContent.getText().toString())
-                        .sendPost("insert.bo", (isResult, data) -> {
+
+                BoardVO vo = new BoardVO();
+                vo.setTitle(b.edtTitle.getText().toString());
+                vo.setContent(b.edtContent.getText().toString());
+                //게시글 insert 처리
+                commonMethod .setParams("tempVo", "aaaaaa")
+                        .sendPostFiles("insert.fi", path_list, (isResult, data) -> {
                     if(isResult){
                         Toast.makeText(this, "글 등록 완료", Toast.LENGTH_SHORT).show();
                         startActivity(board_intent);
@@ -75,6 +96,7 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
                         Log.d(TAG, " insert 실패 ");
                     }
                 });
+
             }else{
                 Log.d(TAG, "값 입력 필요");
                 Toast.makeText(this, "제목, 내용을 모두 입력하세요", Toast.LENGTH_LONG).show();
@@ -84,9 +106,61 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
 
         }else if(v.getId()==R.id.iv_picture){
             //사진 첨부
-
+            galleryMethod();
         }
 
+    }
+
+    //갤러리 선택시 실행 메소드
+    public void galleryMethod(){
+        //2023-01-11 사진 선택을 여러개 할수있게  INTENT 액션부분 손봐야함.
+        Intent intent = new Intent(Intent.ACTION_PICK);
+        intent.setType("image/*");
+
+        intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
+
+        startActivityForResult(Intent.createChooser(intent, "사진 선택"), GALLERY_CODE);
+        // onActivityResult GALLERY_CODE <- 코드가 나오면 갤러리 액티비티 종료시점을 알 수 있음
+    }
+
+    //어떤 인텐트로 startActivityForResult 를 실행하든 그 결과는 무조건 ↓
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        CommonMethod commonMethod = new CommonMethod();
+        if(requestCode == FILE_CODE && resultCode == RESULT_OK){
+            //img_path 라는 변수에 이미지 경로가 담겨있게 됨 -> 임시파일이 용량을 가지고 실제 이미지파일로 됨
+        }else if(requestCode == GALLERY_CODE && resultCode == RESULT_OK){
+
+//            Log.d(TAG, "이미지 이름 : " + getImageNameToUri(data.getData()));
+
+            Log.d(TAG, "data 확인 : " + data.getClipData().getItemAt(0).getUri());
+
+            path_list = new ArrayList<>();  //==> String (path)
+            file_list = new ArrayList<>();   // ==> BoardFileVO
+
+            BoardFileVO vo = new BoardFileVO();
+            for (int i = 0; i < data.getClipData().getItemCount(); i++){
+//                img_path = new CommonMethod().getRealPath(data.getClipData().getItemAt(i).getUri(), this);         //가짜 URI주소로 실제 물리적인 사진파일 위치를 받아옴
+                path_list.add(commonMethod.getRealPath(data.getClipData().getItemAt(i).getUri(), this));
+                vo.setFilename( getImageNameToUri(data.getClipData().getItemAt(i).getUri()) );
+                vo.setFilepath( path_list.get(i) );
+
+                file_list.add(vo);
+            }
+
+//            list.add(vo);
+
+
+            //어댑터
+            adapter = new NewBoardAdapter(getLayoutInflater(), file_list, this);
+            b.recvImgs.setAdapter(adapter);
+            b.recvImgs.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
+            // data 변화 생기면 다시 읽어서 보여줌..?
+            adapter.notifyDataSetChanged();
+
+        }
     }
 
     // 권한레벨 - 낮음 : 인터넷 - 사용하겠다고 메니페스트에 명시만하면 OK
@@ -133,6 +207,20 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
                 }
             }
         }
+    }
+
+    // 선택된 이미지 파일명 가져오기
+    public String getImageNameToUri(Uri data) {
+        String[] proj = { MediaStore.Images.Media.DATA };
+        Cursor cursor = managedQuery(data, proj, null, null, null);
+        int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+
+        cursor.moveToFirst();
+
+        String imgPath = cursor.getString(column_index);
+        String imgName = imgPath.substring(imgPath.lastIndexOf("/")+1);
+
+        return imgName;
     }
 
     //바인딩 비우기
