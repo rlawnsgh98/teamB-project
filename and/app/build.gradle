@@ -64,6 +64,16 @@ dependencies {
     // Material EditText 2023.01.03-김원희     에딧텍스트
     implementation 'com.google.android.material:material:1.1.0'
 
+
+
+// https://mvnrepository.com/artifact/com.journeyapps/zxing-android-embedded 박현빈
+    implementation 'com.journeyapps:zxing-android-embedded:3.6.0'
+
+
+
 }
 //김준호 빌드 오류 나서 넣음
 tasks.register("prepareKotlinBuildScriptModel"){}
+
+
+

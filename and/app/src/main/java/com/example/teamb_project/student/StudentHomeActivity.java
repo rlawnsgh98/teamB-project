@@ -1,22 +1,18 @@
 package com.example.teamb_project.student;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
 import com.example.teamb_project.R;
 import com.example.teamb_project.databinding.ActivityStudenthomeBinding;
-import com.example.teamb_project.databinding.ActivityTeacherhomeBinding;
+import com.example.teamb_project.student.chulhuyn.ChulActivity;
 import com.example.teamb_project.student.mylecture.stu_MyLectureActivity;
 import com.example.teamb_project.teacher.TeacherHomeActivity;
 import com.example.teamb_project.teacher.board.BoardActivity;
-import com.example.teamb_project.teacher.mylecture.MyLectureActivity;
 import com.example.teamb_project.teacher.notice.NoticeActivity;
 
 public class StudentHomeActivity extends AppCompatActivity implements View.OnClickListener{
@@ -72,7 +68,8 @@ public class StudentHomeActivity extends AppCompatActivity implements View.OnCli
         }else if(v.getId()==R.id.cv_consult){
 
         }else if(v.getId()==R.id.cv_attendance){
-
+            Intent intent = new Intent(this, ChulActivity.class);
+            startActivity(intent);
         }else if(v.getId()==R.id.cv_schedule){
 
         }
