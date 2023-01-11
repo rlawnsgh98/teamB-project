@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialiconsround/close/round_close_24.xml" />
+                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialiconsround/arrow_upward/round_arrow_upward_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -29,7 +29,7 @@
                         <option name="values">
                           <map>
                             <entry key="color" value="47628d" />
-                            <entry key="outputName" value="ic_close_blue" />
+                            <entry key="outputName" value="ic_arrow_up_blue" />
                             <entry key="sourceFile" value="C:\_Project\teamB-project\and\app" />
                           </map>
                         </option>
