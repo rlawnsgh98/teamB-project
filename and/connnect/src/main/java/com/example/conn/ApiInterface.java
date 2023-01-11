@@ -1,6 +1,7 @@
 package com.example.conn;
 
 import java.util.HashMap;
+import java.util.List;
 
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
@@ -34,6 +35,14 @@ public interface ApiInterface {
             , @Part("param") RequestBody param  //데이터 부분
             , @Part MultipartBody.Part file //파일부분
                             );
+
+
+    @POST("{path}")     // localhost/middle/{path}
+    @Multipart  // <--  @FormUrlEncoded 사용 금지됨, @Path 어노테이션을 써줘야함.
+    Call<String> connFilesPost(@Path("path") String url
+            , @Part("param") RequestBody param  //데이터 부분
+            , @Part List<MultipartBody.Part> file //파일부분
+    );
     //폼 태그 대용으로 Multipart 사용
 //    public interface GitHubService {
 //        @GET("users/{user}/repos")
