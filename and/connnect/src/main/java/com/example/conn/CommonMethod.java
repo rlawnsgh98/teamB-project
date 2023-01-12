@@ -109,10 +109,10 @@ public class CommonMethod {
     }
 
 
-    public void sendPostFile(String url, String filepath, CallBackResult callback){
+    public void sendPostFile(String url, String filepath, String filename, CallBackResult callback){
 
         ApiInterface apiInterface = new ApiClient().getApiClient().create(ApiInterface.class);
-        Call<String> apiTest = apiInterface.connFilePost(url, stringToRequest(), pathToPartFile(filepath));
+        Call<String> apiTest = apiInterface.connFilePost(url, stringToRequest(), pathToPartFile(filepath, filename));
 
         apiTest.enqueue(new Callback<String>() {
             @Override
@@ -129,10 +129,10 @@ public class CommonMethod {
 
     }
 
-    public void sendPostFiles(String url, ArrayList<String> filepath, CallBackResult callback) {
+    public void sendPostFiles(String url, ArrayList<String> filepath, ArrayList<String> name_list, CallBackResult callback) {
         List<MultipartBody.Part> list  = new ArrayList<>();
         for (int i = 0; i < filepath.size(); i++) {
-            list.add( pathToPartFile(filepath.get(i)) );
+            list.add( pathToPartFile(filepath.get(i), name_list.get(i)));
         }
         ApiInterface apiInterface = new ApiClient().getApiClient().create(ApiInterface.class);
         Call<String> apiTest = apiInterface.connFilesPost(url, stringToRequest(), list);
@@ -152,12 +152,12 @@ public class CommonMethod {
 
     }
 
-    public MultipartBody.Part pathToPartFile(String filepath){
+    public MultipartBody.Part pathToPartFile(String filepath, String filename){
         if( filepath != null ){
 
             RequestBody fileBody = RequestBody.create(MediaType.parse("image/jpeg"), new File(filepath));
             MultipartBody.Part filePart
-                    = MultipartBody.Part.createFormData("file", "filename", fileBody);
+                    = MultipartBody.Part.createFormData("file", filename, fileBody);
             return filePart;
         }
         return null;
@@ -173,7 +173,6 @@ public class CommonMethod {
                     )
             );
         }
-
         return data;
     }
 

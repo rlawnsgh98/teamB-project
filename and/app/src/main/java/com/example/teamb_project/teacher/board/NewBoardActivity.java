@@ -39,9 +39,9 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
     public final int FILE_CODE = 1001;
 
     ArrayList<String> path_list = null;
+    ArrayList<String> name_list = null;
     ArrayList<BoardFileVO> file_list = null;
     NewBoardAdapter adapter = null;
-    ArrayList<String> name_list = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,8 +90,7 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
                 //====================================================
                 //게시글 insert 처리
                 commonMethod .setParams("param", vo)
-                        .setParams("name_list", name_list)
-                        .sendPostFiles("insert.fi", path_list, (isResult, data) -> {
+                        .sendPostFiles("insert.fi", path_list, name_list, (isResult, data) -> {
                     if(isResult){
                         Toast.makeText(this, "글 등록 완료", Toast.LENGTH_SHORT).show();
                         startActivity(board_intent);
@@ -137,15 +136,16 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
 
             Log.d(TAG, "data 확인 : " + data.getClipData().getItemAt(0).getUri());
 
-            path_list = new ArrayList<>();  //==> String (path)
             name_list = new ArrayList<>();
+            path_list = new ArrayList<>();  //==> String (path)
             file_list = new ArrayList<>();   // ==> BoardFileVO
 
             for (int i = 0; i < data.getClipData().getItemCount(); i++){
                 BoardFileVO vo = new BoardFileVO();
 //                img_path = new CommonMethod().getRealPath(data.getClipData().getItemAt(i).getUri(), this);         //가짜 URI주소로 실제 물리적인 사진파일 위치를 받아옴
+                name_list.add( getImageNameToUri(data.getClipData().getItemAt(i).getUri()) );
                 path_list.add(commonMethod.getRealPath(data.getClipData().getItemAt(i).getUri(), this));
-                name_list.add(getImageNameToUri(data.getClipData().getItemAt(i).getUri()));
+
                 vo.setFile_name( getImageNameToUri(data.getClipData().getItemAt(i).getUri()) );
 //                vo.setPath( path_list.get(i) );
 
