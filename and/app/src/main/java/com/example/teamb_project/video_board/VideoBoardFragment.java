@@ -14,6 +14,7 @@ import com.example.teamb_project.databinding.FragmentVideoBoardBinding;
 
 import java.util.ArrayList;
 
+
 public class VideoBoardFragment extends Fragment {
     FragmentVideoBoardBinding b;
     @Override
@@ -26,6 +27,7 @@ public class VideoBoardFragment extends Fragment {
 
         //어댑터에 보낼 ArrayList
         ArrayList<Object> list = new ArrayList<>();
+
 
         //어댑터 설정
         b.recvVideoBoard.setAdapter(new VideoBoardAdapter(inflater, list));
