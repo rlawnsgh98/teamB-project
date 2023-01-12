@@ -61,8 +61,15 @@ public class BoardDetailActivity extends AppCompatActivity implements View.OnCli
                         b.tvWritedate.setText(vo.getWritedate().toString());
                         b.tvReadcnt.setText(vo.getReadcnt()+"");
 
+                        //이미지 ArrayList
+                        List<BoardFileVO> img_list = vo.getFileList();
+
                         //첨부파일 ArrayList
                         List<BoardFileVO> file_list =  vo.getFileList();
+
+                        //이미지 어댑터 설정
+                        b.recvImgs.setAdapter(new NewBoardAdapter(getLayoutInflater(), img_list, this));
+                        b.recvImgs.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
 
                         //첨부파일 어댑터 설정
                         b.recvFiles.setAdapter(new BoardFileAdapter(getLayoutInflater(), file_list));

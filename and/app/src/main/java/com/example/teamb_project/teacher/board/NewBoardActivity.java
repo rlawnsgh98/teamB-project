@@ -28,7 +28,6 @@ import com.example.teamb_project.common.Common;
 import com.example.teamb_project.databinding.ActivityNewBoardBinding;
 import com.example.teamb_project.vo.BoardFileVO;
 import com.example.teamb_project.vo.BoardVO;
-import com.example.teamb_project.vo.FileVO;
 
 import java.util.ArrayList;
 
