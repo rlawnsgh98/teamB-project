@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.provider.OpenableColumns;
 
 import androidx.annotation.RequiresApi;
 
@@ -78,16 +79,26 @@ public class CommonMethod {
     //해당하는 메소드는 URI 를 통해 실제 이미지 물리적 주소를 얻어오는 메소드
     // 2022.12.26 kwh 만듬 (협업 tip)
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public String getRealPath(Uri uri, Context context){
+    public String getRealPath(Uri uri, Context context, int type){
         String rtn = null; //리턴용
-
-        String[] proj = {MediaStore.Images.Media.DATA};
-        Cursor cursor = context.getContentResolver().query(uri, proj, null, null);
-        if(cursor.moveToFirst()){
-            int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-            rtn = cursor.getString(column_index);
+        //이미지
+        if(type == 1000){
+            String[] proj = {MediaStore.Images.Media.DATA};
+            Cursor cursor = context.getContentResolver().query(uri, proj, null, null);
+            if(cursor.moveToFirst()){
+                int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+                rtn = cursor.getString(column_index);
+            }
+            cursor.close();
+        }else if(type == 1001){
+            //파일
+            String[] proj = {OpenableColumns.DISPLAY_NAME};
+            Cursor cursor = context.getContentResolver().query(uri, proj, null, null, null);
+            if(cursor.moveToFirst()){
+                int column_index = cursor.getColumnIndexOrThrow(OpenableColumns.DISPLAY_NAME);
+                rtn = cursor.getString(column_index);
+            }
         }
-        cursor.close();
 
         return rtn;
     }
