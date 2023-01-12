@@ -85,9 +85,11 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
 
                 BoardVO vo = new BoardVO();
                 vo.setTitle(b.edtTitle.getText().toString());
+                vo.setWriter(Integer.parseInt(common.getLoginInfo().getMember_code()));
                 vo.setContent(b.edtContent.getText().toString());
+                //====================================================
                 //게시글 insert 처리
-                commonMethod .setParams("tempVo", "aaaaaa")
+                commonMethod .setParams("param", vo)
                         .sendPostFiles("insert.fi", path_list, (isResult, data) -> {
                     if(isResult){
                         Toast.makeText(this, "글 등록 완료", Toast.LENGTH_SHORT).show();
@@ -96,7 +98,7 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
                         Log.d(TAG, " insert 실패 ");
                     }
                 });
-
+                //====================================================
             }else{
                 Log.d(TAG, "값 입력 필요");
                 Toast.makeText(this, "제목, 내용을 모두 입력하세요", Toast.LENGTH_LONG).show();
@@ -113,10 +115,9 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
 
     //갤러리 선택시 실행 메소드
     public void galleryMethod(){
-        //2023-01-11 사진 선택을 여러개 할수있게  INTENT 액션부분 손봐야함.
         Intent intent = new Intent(Intent.ACTION_PICK);
         intent.setType("image/*");
-
+        //2023-01-11 사진 선택을 여러개 할수있게
         intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
 
         startActivityForResult(Intent.createChooser(intent, "사진 선택"), GALLERY_CODE);
@@ -140,8 +141,8 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
             path_list = new ArrayList<>();  //==> String (path)
             file_list = new ArrayList<>();   // ==> BoardFileVO
 
-            BoardFileVO vo = new BoardFileVO();
             for (int i = 0; i < data.getClipData().getItemCount(); i++){
+                BoardFileVO vo = new BoardFileVO();
 //                img_path = new CommonMethod().getRealPath(data.getClipData().getItemAt(i).getUri(), this);         //가짜 URI주소로 실제 물리적인 사진파일 위치를 받아옴
                 path_list.add(commonMethod.getRealPath(data.getClipData().getItemAt(i).getUri(), this));
                 vo.setFilename( getImageNameToUri(data.getClipData().getItemAt(i).getUri()) );

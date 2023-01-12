@@ -94,7 +94,7 @@ public class CommonMethod {
 
     //카메라로 찍은 사진을 우리가 만든 임시파일로 가져오기 위한 처리
     public File createFile(Context context) {
-        String fileName = "LastProject" + new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        String fileName = "Project" + new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         //사진파일을 저장하기 위한 경로 == 해당 메소드 부분은 계속 바뀌므로 따로 공부x
         File storageDir = context.getExternalFilesDir(Environment.DIRECTORY_PICTURES);
         File rtnFile = null; //IO Exception 발생함
@@ -108,37 +108,31 @@ public class CommonMethod {
         return rtnFile;
     }
 
-    // HashMap 받아서  for 문처리
-    public void sendPostFile(String url, ArrayList<String> filepath, CallBackResult callback){
 
-        for(int i = 0; i < filepath.size(); i++){
+    public void sendPostFile(String url, String filepath, CallBackResult callback){
 
-            ApiInterface apiInterface = new ApiClient().getApiClient().create(ApiInterface.class);
-            Call<String> apiTest = apiInterface.connFilePost(url, stringToRequest(), pathToPartFile(filepath.get(i)));
+        ApiInterface apiInterface = new ApiClient().getApiClient().create(ApiInterface.class);
+        Call<String> apiTest = apiInterface.connFilePost(url, stringToRequest(), pathToPartFile(filepath));
 
-            apiTest.enqueue(new Callback<String>() {
-                @Override
-                public void onResponse(Call<String> call, Response<String> response) {
-                    callback.result(true, response.body());
-                }
+        apiTest.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+                callback.result(true, response.body());
+            }
 
-                @Override
-                public void onFailure(Call<String> call, Throwable t) {
-                    callback.result(false, "");
-                    t.printStackTrace(); // 어떤 오류인지 로그에 찍히게 처리
-                }
-            });
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+                callback.result(false, "");
+                t.printStackTrace(); // 어떤 오류인지 로그에 찍히게 처리
+            }
+        });
 
-        }
     }
 
-
-
-    // HashMap 받아서  for 문처리
     public void sendPostFiles(String url, ArrayList<String> filepath, CallBackResult callback) {
         List<MultipartBody.Part> list  = new ArrayList<>();
         for (int i = 0; i < filepath.size(); i++) {
-            list.add( pathToPartFile(filepath.get(i)));
+            list.add( pathToPartFile(filepath.get(i)) );
         }
         ApiInterface apiInterface = new ApiClient().getApiClient().create(ApiInterface.class);
         Call<String> apiTest = apiInterface.connFilesPost(url, stringToRequest(), list);
