@@ -2,19 +2,20 @@ package com.example.teamb_project.vo;
 
 import java.sql.Date;
 import java.util.ArrayList;
+import java.util.List;
 
 public class BoardVO {
     private int board_code, writer, readcnt, root, indent, step, lecture_code, no;
     private String title, content, category, member_name;
     private Date writedate;
-    private ArrayList<BoardFileVO> filelist;
+    private List<BoardFileVO> fileList;
 
-    public void setFilelist(ArrayList<BoardFileVO> list) {
-        this.filelist = filelist;
+    public void setFileList(List<BoardFileVO> list) {
+        this.fileList = fileList;
     }
 
-    public ArrayList<BoardFileVO> getFilelist() {
-        return filelist;
+    public List<BoardFileVO> getFileList() {
+        return fileList;
     }
 
     public void setNo(int no) {

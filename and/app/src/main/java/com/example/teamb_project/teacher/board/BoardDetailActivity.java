@@ -22,6 +22,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class BoardDetailActivity extends AppCompatActivity implements View.OnClickListener{
     ActivityBoardDetailBinding b;
@@ -47,12 +48,6 @@ public class BoardDetailActivity extends AppCompatActivity implements View.OnCli
             b.ivMore.setVisibility(View.VISIBLE);
         }
 
-        //첨부파일 ArrayList
-        ArrayList<BoardFileVO> file_list = new ArrayList<>();
-
-        //첨부파일 어댑터 설정
-        b.recvFiles.setAdapter(new BoardFileAdapter(getLayoutInflater(), file_list));
-        b.recvFiles.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
 
         //해당 게시판 정보 조회
         commonMethod.setParams("board_code", intent.getIntExtra("board_code", -1))
@@ -65,6 +60,14 @@ public class BoardDetailActivity extends AppCompatActivity implements View.OnCli
                         b.tvWriter.setText(vo.getMember_name());
                         b.tvWritedate.setText(vo.getWritedate().toString());
                         b.tvReadcnt.setText(vo.getReadcnt()+"");
+
+                        //첨부파일 ArrayList
+                        List<BoardFileVO> file_list =  vo.getFileList();
+
+                        //첨부파일 어댑터 설정
+                        b.recvFiles.setAdapter(new BoardFileAdapter(getLayoutInflater(), file_list));
+                        b.recvFiles.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
+
                     }else{
                         Log.d(TAG, "조회 실패");
                     }
@@ -100,7 +103,7 @@ public class BoardDetailActivity extends AppCompatActivity implements View.OnCli
                     if(isResult){
                         Log.d(TAG, "댓글 data : " + data);
                         //댓글 리스트 ArrayList
-                        ArrayList<ReplyVO> list = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, new TypeToken<ArrayList<ReplyVO>>(){}.getType());
+                        ArrayList<ReplyVO> list = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm").create().fromJson(data, new TypeToken<ArrayList<ReplyVO>>(){}.getType());
 
                         //댓글 11개 이상일 경우 더보기 보이게 하기
                         if(list.size()<10){
@@ -133,7 +136,7 @@ public class BoardDetailActivity extends AppCompatActivity implements View.OnCli
                 .setParams("board_code", getIntent().getIntExtra("board_code", -1))
                 .sendPost("list.re", (isResult, data) -> {
                     if(isResult){
-                        ArrayList<ReplyVO> list = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, new TypeToken<ArrayList<ReplyVO>>(){}.getType());
+                        ArrayList<ReplyVO> list = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm").create().fromJson(data, new TypeToken<ArrayList<ReplyVO>>(){}.getType());
                         //어댑터 설정 - 댓글
                         adapter.list = list;
                         adapter.notifyDataSetChanged();

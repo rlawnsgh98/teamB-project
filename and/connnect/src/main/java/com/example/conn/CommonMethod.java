@@ -154,9 +154,10 @@ public class CommonMethod {
 
     public MultipartBody.Part pathToPartFile(String filepath){
         if( filepath != null ){
+
             RequestBody fileBody = RequestBody.create(MediaType.parse("image/jpeg"), new File(filepath));
             MultipartBody.Part filePart
-                    = MultipartBody.Part.createFormData("file", "img.png", fileBody);
+                    = MultipartBody.Part.createFormData("file", "filename", fileBody);
             return filePart;
         }
         return null;
@@ -172,7 +173,9 @@ public class CommonMethod {
                     )
             );
         }
+
         return data;
     }
+
 
 }

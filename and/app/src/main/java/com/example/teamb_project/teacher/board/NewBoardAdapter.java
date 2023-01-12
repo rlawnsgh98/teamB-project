@@ -35,7 +35,7 @@ public class NewBoardAdapter extends RecyclerView.Adapter<NewBoardAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
 
-        Glide.with(context).load( list.get(i).getFilepath() ).into(h.img);
+        Glide.with(context).load(list.get(i).getPath()).into(h.img);
 
     }
 

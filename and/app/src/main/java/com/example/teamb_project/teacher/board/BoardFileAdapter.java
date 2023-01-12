@@ -1,5 +1,6 @@
 package com.example.teamb_project.teacher.board;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,12 +13,13 @@ import com.example.teamb_project.R;
 import com.example.teamb_project.vo.BoardFileVO;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class BoardFileAdapter extends RecyclerView.Adapter<BoardFileAdapter.ViewHolder>{
     LayoutInflater inflater;
-    ArrayList<BoardFileVO> list;
+    List<BoardFileVO> list;
 
-    public BoardFileAdapter(LayoutInflater inflater, ArrayList<BoardFileVO> list) {
+    public BoardFileAdapter(LayoutInflater inflater, List<BoardFileVO> list) {
         this.inflater = inflater;
         this.list = list;
     }
@@ -31,11 +33,15 @@ public class BoardFileAdapter extends RecyclerView.Adapter<BoardFileAdapter.View
     @Override
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
 
+        h.fileName.setText(list.get(i).getFile_name());
+
+
+        Log.d("log", "onBindViewHolder: ");
     }
 
     @Override
     public int getItemCount() {
-        return 2;
+        return list.size();
     }
     @Override
     public long getItemId(int i){return i;}

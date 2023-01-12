@@ -28,6 +28,7 @@ import com.example.teamb_project.common.Common;
 import com.example.teamb_project.databinding.ActivityNewBoardBinding;
 import com.example.teamb_project.vo.BoardFileVO;
 import com.example.teamb_project.vo.BoardVO;
+import com.example.teamb_project.vo.FileVO;
 
 import java.util.ArrayList;
 
@@ -40,8 +41,7 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
     ArrayList<String> path_list = null;
     ArrayList<BoardFileVO> file_list = null;
     NewBoardAdapter adapter = null;
-
-    String img_path;
+    ArrayList<String> name_list = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,6 +90,7 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
                 //====================================================
                 //게시글 insert 처리
                 commonMethod .setParams("param", vo)
+                        .setParams("name_list", name_list)
                         .sendPostFiles("insert.fi", path_list, (isResult, data) -> {
                     if(isResult){
                         Toast.makeText(this, "글 등록 완료", Toast.LENGTH_SHORT).show();
@@ -134,21 +135,23 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
             //img_path 라는 변수에 이미지 경로가 담겨있게 됨 -> 임시파일이 용량을 가지고 실제 이미지파일로 됨
         }else if(requestCode == GALLERY_CODE && resultCode == RESULT_OK){
 
-//            Log.d(TAG, "이미지 이름 : " + getImageNameToUri(data.getData()));
-
             Log.d(TAG, "data 확인 : " + data.getClipData().getItemAt(0).getUri());
 
             path_list = new ArrayList<>();  //==> String (path)
+            name_list = new ArrayList<>();
             file_list = new ArrayList<>();   // ==> BoardFileVO
 
             for (int i = 0; i < data.getClipData().getItemCount(); i++){
                 BoardFileVO vo = new BoardFileVO();
 //                img_path = new CommonMethod().getRealPath(data.getClipData().getItemAt(i).getUri(), this);         //가짜 URI주소로 실제 물리적인 사진파일 위치를 받아옴
                 path_list.add(commonMethod.getRealPath(data.getClipData().getItemAt(i).getUri(), this));
-                vo.setFilename( getImageNameToUri(data.getClipData().getItemAt(i).getUri()) );
-                vo.setFilepath( path_list.get(i) );
+                name_list.add(getImageNameToUri(data.getClipData().getItemAt(i).getUri()));
+                vo.setFile_name( getImageNameToUri(data.getClipData().getItemAt(i).getUri()) );
+//                vo.setPath( path_list.get(i) );
 
+                vo.setPath( commonMethod.getRealPath(data.getClipData().getItemAt(i).getUri(), this) );
                 file_list.add(vo);
+                Log.d(TAG, "onActivityResult: ");
             }
 
 //            list.add(vo);
