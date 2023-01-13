@@ -4,25 +4,50 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
+import com.example.conn.CommonMethod;
 import com.example.teamb_project.R;
 import com.example.teamb_project.teacher.mylecture.lecturehome.studentinfo.StudentAttendanceFragment;
 import com.example.teamb_project.teacher.mylecture.lecturehome.studentinfo.StudentHomeworkFragment;
 import com.example.teamb_project.teacher.mylecture.lecturehome.studentinfo.StudentTestresultFragment;
+import com.example.teamb_project.vo.MemberVO;
 import com.google.android.material.tabs.TabLayout;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.util.List;
 
 public class StudentDetailActivity extends AppCompatActivity {
-    int member_code;
+    int student_code, lecture_code;
     TabLayout tab_layout;
+    TextView tv_student_name, tv_student_phone;
+    MemberVO info;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-        //선택한 학생의 멤버코드
-        member_code = getIntent().getIntExtra("member_code", -1);
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_detail);
+
+        //선택한 학생의 멤버코드
+        student_code = getIntent().getIntExtra("student_code", -1);
+        lecture_code = getIntent().getIntExtra("lecture_code", -1);
+
+
+
+        tv_student_name = findViewById(R.id.tv_student_name);
+        tv_student_phone = findViewById(R.id.tv_student_phone);
+
+        new CommonMethod().setParams("member_code", student_code).sendPost("member_info", new CommonMethod.CallBackResult() {
+            @Override
+            public void result(boolean isResult, String data) {
+                info = new Gson().fromJson(data, new TypeToken<MemberVO>(){}.getType());
+                tv_student_name.setText(info.getMember_name());
+                tv_student_phone.setText(info.getPhone());
+            }
+        });
+
+
         /*탭 레이아웃*/
         tab_layout = findViewById(R.id.tab_layout);
         tab_layout.addTab(tab_layout.newTab().setText("출결"));
@@ -30,7 +55,7 @@ public class StudentDetailActivity extends AppCompatActivity {
         tab_layout.addTab(tab_layout.newTab().setText("시험성적"));
 
         //프래그먼트처음 화면
-        getSupportFragmentManager().beginTransaction().replace(R.id.container, new StudentAttendanceFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, new StudentAttendanceFragment(student_code,lecture_code)).commit();
 
         tab_layout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
 
@@ -57,10 +82,10 @@ public class StudentDetailActivity extends AppCompatActivity {
 
         switch (index) {
             case 0 :
-                getSupportFragmentManager().beginTransaction().replace(R.id.container, new StudentAttendanceFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, new StudentAttendanceFragment(student_code, lecture_code)).commit();
                 break ;
             case 1 :
-                getSupportFragmentManager().beginTransaction().replace(R.id.container, new StudentHomeworkFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, new StudentHomeworkFragment(student_code, lecture_code)).commit();
                 break ;
             case 2 :
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, new StudentTestresultFragment()).commit();

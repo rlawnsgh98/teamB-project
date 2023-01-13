@@ -13,6 +13,9 @@ import com.google.android.material.tabs.TabLayout;
 public class LectureDetailActivity extends AppCompatActivity {
     int lecture_code;
     TabLayout tab_layout;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,7 +63,7 @@ public class LectureDetailActivity extends AppCompatActivity {
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, new LectureStudentFragment(lecture_code)).commit();
                 break ;
             case 2 :
-                getSupportFragmentManager().beginTransaction().replace(R.id.container, new LectureHomeworkFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, new LectureHomeworkFragment(lecture_code)).commit();
                 break ;
 
         }

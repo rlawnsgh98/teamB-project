@@ -22,9 +22,7 @@ public class LectureStudentAdapter extends RecyclerView.Adapter<LectureStudentAd
 
     LayoutInflater inflater;
     Context context;
-    ArrayList<MemberVO> list = null;
-
-
+    ArrayList<MemberVO> list;
 
     public LectureStudentAdapter(LayoutInflater inflater, Context context,ArrayList<MemberVO> list) {
         this.inflater = inflater;
@@ -51,7 +49,9 @@ public class LectureStudentAdapter extends RecyclerView.Adapter<LectureStudentAd
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, StudentDetailActivity.class);
-                intent.putExtra("member_code", list.get(idx).getMember_code());
+                intent.putExtra("student_code", list.get(idx).getMember_code())
+                        .putExtra("lecture_code", list.get(idx).getLecture_code());
+
                 context.startActivity(intent);
             }
         });

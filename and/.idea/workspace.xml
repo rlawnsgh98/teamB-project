@@ -15,6 +15,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9ac2f6b-cbea-46a3-bd23-39b261bec454" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/Servers/Tomcat v9.0 Server at localhost-config/catalina.policy" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/Servers/Tomcat v9.0 Server at localhost-config/catalina.policy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/Servers/Tomcat v9.0 Server at localhost-config/catalina.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/Servers/Tomcat v9.0 Server at localhost-config/catalina.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/Servers/Tomcat v9.0 Server at localhost-config/context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/Servers/Tomcat v9.0 Server at localhost-config/context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/Servers/Tomcat v9.0 Server at localhost-config/server.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/Servers/Tomcat v9.0 Server at localhost-config/server.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/Servers/Tomcat v9.0 Server at localhost-config/tomcat-users.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/Servers/Tomcat v9.0 Server at localhost-config/tomcat-users.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/Servers/Tomcat v9.0 Server at localhost-config/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/Servers/Tomcat v9.0 Server at localhost-config/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/.springBeans" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/middle/.springBeans" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/middle/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/src/main/java/and_member/AndMemberVO.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/src/main/java/com/and/middle/AndController.java" beforeDir="false" />
@@ -22,30 +29,63 @@
       <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/src/main/java/com/and/middle/CustomerController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/src/main/java/com/and/middle/ExamController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/src/main/java/com/and/middle/HomeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/src/main/java/com/and/middle/LMSController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/middle/src/main/java/com/and/middle/LMSController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/src/main/java/com/and/middle/LMSController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/middle/src/main/java/com/and/middle/MemberController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/src/main/java/com/and/middle/TestVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/src/main/java/common/CommonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/middle/src/main/java/common/CommonService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/src/main/java/customer/CustomerVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/src/main/java/lms_member/MemberVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/middle/src/main/java/member/MemberVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/src/main/java/lms_member/TESTMemberVO.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/src/main/resources/dbconn/conn.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/middle/src/main/resources/dbconn/conn.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/src/main/resources/dbconn/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/middle/src/main/resources/dbconn/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/src/main/resources/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/middle/src/main/resources/log4j.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/src/main/resources/sqlmap/exam-mapper.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/src/main/resources/sqlmap/lms-mapper.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/src/main/resources/sqlmap/member-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/middle/src/main/resources/sqlmap/member-mapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/src/main/resources/sqlmap/test-mapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/middle/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/src/main/webapp/WEB-INF/spring/root-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/middle/src/main/webapp/WEB-INF/spring/root-context.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/src/main/webapp/WEB-INF/views/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/middle/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/middle/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/src/test/resources/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/middle/src/test/resources/log4j.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/.springBeans" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/test/.springBeans" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/test/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/src/main/resources/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/test/src/main/resources/log4j.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/test/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/src/main/webapp/WEB-INF/spring/root-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/test/src/main/webapp/WEB-INF/spring/root-context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/src/main/webapp/WEB-INF/views/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/test/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/test/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/src/test/resources/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/test/src/test/resources/log4j.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/target/classes/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/test/target/classes/log4j.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/test/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/target/test-classes/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/test/target/test-classes/log4j.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/.springBeans" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/src/main/java/com/kym/test/HomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/src/main/resources/log4j.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/src/main/webapp/WEB-INF/spring/root-context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/src/main/webapp/WEB-INF/views/home.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/src/test/resources/log4j.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/target/classes/log4j.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/target/m2e-wtp/web-resources/META-INF/maven/com.kym/test/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/target/m2e-wtp/web-resources/META-INF/maven/com.kym/test/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/target/test-classes/log4j.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/app/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/app/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/app/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/app/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/example/teamb_project/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/example/teamb_project/ExampleInstrumentedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/FindActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/FindActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/JoinActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/JoinActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/LoginActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/TTActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/TTActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/TTAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/TTAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/TessstActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/TessstActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/common/Common.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/common/Common.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/common/CommonMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/common/CommonMethod.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/student/StudentHomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/student/StudentHomeActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/student/mylecture/lecturehome/stu_LectureDetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/student/mylecture/lecturehome/stu_LectureDetailActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/student/mylecture/lecturehome/stu_LectureHomeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/student/mylecture/lecturehome/stu_LectureHomeAdapter.java" afterDir="false" />
@@ -53,29 +93,129 @@
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/student/mylecture/lecturehome/stu_LectureVideoFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/student/mylecture/lecturehome/stu_LectureVideoFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/student/mylecture/stu_MyLectureActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/student/mylecture/stu_MyLectureActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/student/mylecture/stu_MyLectureAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/student/mylecture/stu_MyLectureAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/TeacherHomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/TeacherHomeActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/board/BoardActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/board/BoardActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/board/BoardAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/board/BoardAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/board/BoardDetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/board/BoardDetailActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/board/NewBoardActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/board/NewBoardActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/board/ReplyAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/board/ReplyAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/MyLectureActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/MyLectureActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/MyLectureAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/MyLectureAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/lecturehome/LectureDetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/lecturehome/LectureDetailActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/lecturehome/LectureHomeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/lecturehome/LectureHomeAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/lecturehome/LectureHomeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/lecturehome/LectureHomeFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/lecturehome/LectureHomeworkAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/lecturehome/LectureHomeworkAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/lecturehome/LectureHomeworkFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/lecturehome/LectureHomeworkFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/lecturehome/LectureStudentAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/lecturehome/LectureStudentAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/lecturehome/LectureStudentFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/lecturehome/LectureStudentFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/lecturehome/studentinfo/StudentAttendanceFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/lecturehome/studentinfo/StudentAttendanceFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/lecturehome/studentinfo/StudentDetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/lecturehome/studentinfo/StudentDetailActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/lecturehome/studentinfo/StudentHomeworkAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/lecturehome/studentinfo/StudentHomeworkAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/lecturehome/studentinfo/StudentHomeworkFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/lecturehome/studentinfo/StudentHomeworkFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/lecturehome/studentinfo/StudentTestresultAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/lecturehome/studentinfo/StudentTestresultAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/lecturehome/studentinfo/StudentTestresultFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/lecturehome/studentinfo/StudentTestresultFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/notice/NoticeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/notice/NoticeActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/notice/NoticeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/notice/NoticeAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/vo/EnrolmentVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/vo/EnrolmentVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/vo/MemberVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/vo/MemberVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/edittext_none.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/edittext_none.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_baseline_arrow_back_24_white.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_baseline_arrow_back_24_white.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_baseline_menu_24_white.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_baseline_menu_24_white.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_arrow_down_gray.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_arrow_down_gray.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_arrow_up.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_arrow_up.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_article.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_article.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_back.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_back.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_book.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_book.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_calendar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_calendar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_campaign.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_campaign.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_check.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_check.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_drop_down_100.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_drop_down_100.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_empty_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_empty_profile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_message.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_message.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_right_arrowhead.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_right_arrowhead.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_search.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_search.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_write_black.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_write_black.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/round_btn_custom_clicked.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/round_btn_custom_clicked.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/round_btn_custom_none.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/round_btn_custom_none.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/selector_tv.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/selector_tv.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_board.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_board.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_board_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_board_detail.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_find.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_find.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_join.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_join.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_lecture_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_lecture_detail.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_my_lecture.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_my_lecture.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_new_board.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_new_board.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_notice.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_notice.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_stu_lecture_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_stu_lecture_detail.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_stu_my_lecture.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_stu_my_lecture.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_student_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_student_detail.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_studenthome.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_studenthome.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_teacherhome.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_teacherhome.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_tessst.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_tessst.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_tt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_tt.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/card_banner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/card_banner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_first.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_first.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_lecture_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_lecture_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_lecture_homework.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_lecture_homework.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_lecture_student.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_lecture_student.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_second.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_stu__lecture_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_stu__lecture_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_stu__lecture_video.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_stu__lecture_video.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_student_attendance.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_student_attendance.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_student_homework.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_student_homework.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_student_test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_student_test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_board.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_board.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_lecture_homework_check.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_lecture_homework_check.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_lecture_notice.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_lecture_notice.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_my_lecture.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_my_lecture.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_notice.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_notice.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_reply.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_reply.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_student.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_student.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_student_homework.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_student_homework.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_student_testresult.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_student_testresult.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_tt_recv.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_tt_recv.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/top_toolbar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/top_toolbar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/top_menu_toolbar_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/top_menu_toolbar_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/nav_graph.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/nav_graph.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-land/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-land/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-w1240dp/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-w1240dp/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-w600dp/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-w600dp/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/style.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/style.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/backup_rules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/backup_rules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/data_extraction_rules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/teamb_project/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/example/teamb_project/ExampleUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connnect/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/connnect/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connnect/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/connnect/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connnect/src/androidTest/java/com/example/conn/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/connnect/src/androidTest/java/com/example/conn/ExampleInstrumentedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connnect/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/connnect/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connnect/src/main/java/com/example/conn/ApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/connnect/src/main/java/com/example/conn/ApiClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connnect/src/main/java/com/example/conn/ApiInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/connnect/src/main/java/com/example/conn/ApiInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connnect/src/main/java/com/example/conn/CommonMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/connnect/src/main/java/com/example/conn/CommonMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connnect/src/test/java/com/example/conn/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/connnect/src/test/java/com/example/conn/ExampleUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\hoho0\.android\avd\Pixel_4_API_32.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\admin\.android\avd\Pixel_4_API_32.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -84,6 +224,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="layoutResourceFile" />
+        <option value="valueResourceFile" />
         <option value="Class" />
       </list>
     </option>
@@ -113,8 +255,13 @@
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="android-custom-viewC:/Users/admin/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED" value="RecyclerView" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Study_Android/workspace/LastProject" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/vo" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\teamB-project-backup\and\app\src\main\java\com\example\teamb_project\vo" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
@@ -200,5 +347,31 @@
       <updated>1673082139267</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/lecturehome/studentinfo/StudentAttendanceFragment.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/lecturehome/studentinfo/StudentAttendanceFragment.java</url>
+          <line>135</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/mylecture/lecturehome/studentinfo/StudentAttendanceFragment.java</url>
+          <line>143</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="AndroidRunConfigurationType">
+        <watch expression="2012" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

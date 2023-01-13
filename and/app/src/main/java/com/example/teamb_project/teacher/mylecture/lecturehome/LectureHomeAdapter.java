@@ -1,6 +1,7 @@
 package com.example.teamb_project.teacher.mylecture.lecturehome;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.teamb_project.R;
 import com.example.teamb_project.vo.LectureBoardVO;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 public class LectureHomeAdapter extends RecyclerView.Adapter<LectureHomeAdapter.ViewHolder> {
@@ -39,8 +41,10 @@ public class LectureHomeAdapter extends RecyclerView.Adapter<LectureHomeAdapter.
     @Override
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
         final int idx = i;
+
         h.tv_notice_title.setText(list.get(idx).getTitle());
-        h.tv_notice_writedate.setText(list.get(idx).getWritedate());
+       // Log.d("로그", "onBindViewHolder: "+list.get(idx).getWritedate().toString());
+        h.tv_notice_writedate.setText(list.get(idx).getWritedate().toString());
         h.tv_notice_content.setText(list.get(idx).getContent());
 
         h.itemView.setOnClickListener(new View.OnClickListener() {

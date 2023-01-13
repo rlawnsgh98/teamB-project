@@ -24,6 +24,7 @@
                 android:backgroundTint="#888"
                 app:cardCornerRadius="30dp">
                 <TextView
+                    android:id="@+id/tv_ok"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -52,6 +53,7 @@
                 android:backgroundTint="#888"
                 app:cardCornerRadius="30dp">
                 <TextView
+                    android:id="@+id/tv_no"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -64,7 +66,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
-                android:text="출석"/>
+                android:text="결석"/>
         </LinearLayout>
 
         <LinearLayout
@@ -79,6 +81,7 @@
                 android:backgroundTint="#888"
                 app:cardCornerRadius="30dp">
                 <TextView
+                    android:id="@+id/tv_hf"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -91,9 +94,35 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
-                android:text="출석"/>
+                android:text="조퇴"/>
         </LinearLayout>
     </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Spinner
+        android:id="@+id/spinner_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+        <Spinner
+            android:id="@+id/spinner_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recv_attendance_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
 
 
 </LinearLayout>

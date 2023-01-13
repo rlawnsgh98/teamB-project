@@ -1,9 +1,12 @@
 package com.example.teamb_project.vo;
 
+import java.sql.Date;
+
 public class LectureBoardVO {
 
-    private String title, content, writer, writedate, category;
+    private String title, content, writer, category;
     private int board_code, readcnt, root, step, lecture_code;
+    private Date writedate;
 
     public String getTitle() {
         return title;
@@ -29,11 +32,11 @@ public class LectureBoardVO {
         this.writer = writer;
     }
 
-    public String getWritedate() {
+    public Date getWritedate() {
         return writedate;
     }
 
-    public void setWritedate(String writedate) {
+    public void setWritedate(Date writedate) {
         this.writedate = writedate;
     }
 

@@ -17,6 +17,7 @@ import com.example.teamb_project.student.mylecture.lecturehome.stu_LectureHomeAd
 import com.example.teamb_project.vo.LectureBoardVO;
 import com.example.teamb_project.vo.MemberVO;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
@@ -54,7 +55,7 @@ public class LectureHomeFragment extends Fragment {
                 .sendPost("lecture_notice.le", new com.example.conn.CommonMethod.CallBackResult() {
                     @Override
                     public void result(boolean isResult, String data) {
-                        list = new Gson().fromJson(data, new TypeToken<List<LectureBoardVO>>() {
+                        list = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, new TypeToken<List<LectureBoardVO>>() {
                         }.getType());
 
                         recv_lecture_notice.setAdapter(new LectureHomeAdapter(getLayoutInflater(), getContext(), list));

@@ -27,6 +27,7 @@
                 android:orientation="vertical"
                 >
                 <TextView
+                    android:id="@+id/tv_notice_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="[공지사항] 제목"
@@ -36,6 +37,7 @@
                     android:layout_marginTop="15dp"
                     />
                 <TextView
+                    android:id="@+id/tv_notice_writedate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2023-01-03"
@@ -71,6 +73,7 @@
             android:visibility="gone"
             >
             <TextView
+                android:id="@+id/tv_notice_content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="공지사항 내용입니다"

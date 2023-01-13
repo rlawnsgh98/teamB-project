@@ -8,10 +8,6 @@
     tools:context=".teacher.mylecture.lecturehome.LectureStudentFragment"
     android:orientation="vertical">
 
-    <SearchView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,7 +15,7 @@
         app:contentPadding="5dp"
         app:strokeColor="@color/black"
         app:strokeWidth="1dp"
-        android:layout_marginVertical="20dp"
+
         >
         <LinearLayout
             android:layout_width="match_parent"

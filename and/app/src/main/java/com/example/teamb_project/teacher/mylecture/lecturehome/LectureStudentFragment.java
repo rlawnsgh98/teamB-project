@@ -31,13 +31,12 @@ public class LectureStudentFragment extends Fragment {
     }
 
     ArrayList<MemberVO> student_list;
-    String student_list2;
     ArrayList<MemberVO> search_list = new ArrayList<>();
 
     RecyclerView recv_student;
     EditText edt_search;
     LectureStudentAdapter adapter;
-    //검색할 아이템 목록
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -47,7 +46,7 @@ public class LectureStudentFragment extends Fragment {
         recv_student = v.findViewById(R.id.recv_student);
         edt_search = v.findViewById(R.id.edt_search);
 
-        new com.example.conn.CommonMethod().setParams("lecture_code", Lecture_code).sendGet("student_list.le", new com.example.conn.CommonMethod.CallBackResult() {
+        new com.example.conn.CommonMethod().setParams("lecture_code", Lecture_code).sendPost("student_list.le", new com.example.conn.CommonMethod.CallBackResult() {
                     @Override
                     public void result(boolean isResult, String data) {
                         student_list = new Gson().fromJson(data, new TypeToken<List<MemberVO>>(){}.getType());

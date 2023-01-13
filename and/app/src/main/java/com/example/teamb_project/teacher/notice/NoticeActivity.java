@@ -9,15 +9,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ScrollView;
 
+import com.example.conn.CommonMethod;
 import com.example.teamb_project.MainActivity;
 import com.example.teamb_project.R;
 import com.example.teamb_project.common.Common;
 import com.example.teamb_project.databinding.ActivityNoticeBinding;
+import com.example.teamb_project.vo.BoardVO;
+import com.example.teamb_project.vo.MemberVO;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
 
 public class NoticeActivity extends AppCompatActivity implements View.OnClickListener{
     ActivityNoticeBinding b;
+    ArrayList<BoardVO> list;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,11 +43,8 @@ public class NoticeActivity extends AppCompatActivity implements View.OnClickLis
         //스크롤 내리면 최상단 이동 버튼 보이기
         common.scrollTop(b.scrNotice, b.cardGoTop);
 
-        //어댑터로 보내줄 공지사항 리스트
-        ArrayList<Object> list = new ArrayList<>();
-        //어댑터 설정
-        b.recvNotice.setAdapter(new NoticeAdapter(getLayoutInflater(), list));
-        b.recvNotice.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
+        selectNotice();
+
     }
 
     @Override
@@ -52,5 +57,17 @@ public class NoticeActivity extends AppCompatActivity implements View.OnClickLis
             b.scrNotice.fullScroll(ScrollView.FOCUS_UP);
         }
     }
-    //
+
+    void selectNotice(){
+        new CommonMethod().sendPost("notice_list.bo", new CommonMethod.CallBackResult() {
+            @Override
+            public void result(boolean isResult, String data) {
+                list = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, new TypeToken<ArrayList<BoardVO>>(){}.getType());
+
+                b.recvNotice.setAdapter(new NoticeAdapter(getLayoutInflater(), list));
+                b.recvNotice.setLayoutManager(com.example.teamb_project.common.CommonMethod.getManager(b.getRoot().getContext()));
+            }
+        });
+    }
+
 }

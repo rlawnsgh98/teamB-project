@@ -35,16 +35,40 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="15dp"
                     />
-                <TextView
-                    android:id="@+id/tv_date"
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2023-01-03"
-                    android:textSize="18dp"
+                    android:orientation="horizontal"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="15dp"
-                    />
+                    android:layout_marginBottom="15dp">
+
+                    <TextView
+                        android:id="@+id/tv_writedate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2023-01-03"
+                        android:textSize="18dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="~"
+                        android:textSize="18dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_duedate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2023-01-03"
+                        android:textSize="18dp"
+                        />
+
+                </LinearLayout>
+
             </LinearLayout>
             <!-- 펼치기 버튼(이미지) -->
             <RelativeLayout
@@ -81,6 +105,7 @@
                     android:text="제출자"/>
 
                 <TextView
+                    android:id="@+id/tv_subcnt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="26명"/>
@@ -98,6 +123,7 @@
                     android:text="미제출자"/>
 
                 <TextView
+                    android:id="@+id/tv_notcnt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="7명"/>

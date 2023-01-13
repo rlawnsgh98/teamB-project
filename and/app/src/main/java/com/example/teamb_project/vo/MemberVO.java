@@ -4,7 +4,16 @@ public class MemberVO {
     private String id, pw, member_name, gender
             , email, birth, phone, post, address
             , type, profilepath, salt;
-    private int  member_code;
+
+    private int  member_code, lecture_code;
+
+    public int getLecture_code() {
+        return lecture_code;
+    }
+
+    public void setLecture_code(int lecture_code) {
+        this.lecture_code = lecture_code;
+    }
 
     public int getMember_code() {
         return member_code;
