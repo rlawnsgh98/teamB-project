@@ -7,8 +7,11 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.provider.OpenableColumns;
+import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -30,6 +33,8 @@ import com.example.teamb_project.databinding.ActivityNewBoardBinding;
 import com.example.teamb_project.vo.BoardFileVO;
 import com.example.teamb_project.vo.BoardVO;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class NewBoardActivity extends AppCompatActivity implements View.OnClickListener{
@@ -54,7 +59,11 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
         getSupportActionBar().hide();
 
         checkDangerousPermissions();
-
+        Intent intent = new Intent();
+        intent.setAction(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
+        Uri uri = Uri.fromParts("package", this.getPackageName(), null);
+        intent.setData(uri);
+        startActivity(intent);
         Common common = new Common();
         //임시로그인 - user1
         common.setTempLoginInfo();
@@ -93,7 +102,7 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
                 //====================================================
                 //게시글 insert 처리
                 commonMethod .setParams("param", vo)
-                        .sendPostFiles("insert.fi", path_list, name_list, (isResult, data) -> {
+                        .sendPostFiles("insert.fi", path_list, name_list, FILE_CODE, (isResult, data) -> {
                     if(isResult){
                         Toast.makeText(this, "글 등록 완료", Toast.LENGTH_SHORT).show();
                         startActivity(board_intent);
@@ -129,6 +138,7 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
     public void fileMethod(){
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent.setType("*/*");
+//        intent.putExtra(Intent.)
         intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
         startActivityForResult(Intent.createChooser(intent, "파일 선택"), FILE_CODE);
     }
@@ -169,27 +179,42 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
         name_list = new ArrayList<>();
         path_list = new ArrayList<>();  //==> String (path)
         file_list = new ArrayList<>();   // ==> BoardFileVO
-        String path = null;
+        String realPath = null;
         for (int i = 0; i < data.getClipData().getItemCount(); i++){
             BoardFileVO vo = new BoardFileVO();
             if(type==GALLERY_CODE){
+                //사진처리
                 String name = getImageNameToUri(data.getClipData().getItemAt(i).getUri());
                 name_list.add( name );
                 vo.setFile_name( name );
-                path = commonMethod.getRealPath(data.getClipData().getItemAt(i).getUri(), this, type);
+                realPath = commonMethod.getRealPath(data.getClipData().getItemAt(i).getUri(), this, type);
             }else if(type==FILE_CODE){
+                //파일처리
+                realPath = getFilePath(data.getClipData().getItemAt(i).getUri());
                 String name = getFileNameToUri(data.getClipData().getItemAt(i).getUri());
                 name_list.add( name );
                 vo.setFile_name( name );
-                path = data.getClipData().getItemAt(i).getUri().getPath();
+
             }
-//            String path = data.getClipData().getItemAt(i).getUri().getPath();
-//            String path = commonMethod.getRealPath(data.getClipData().getItemAt(i).getUri(), this, type);
-            path_list.add( path );
-            vo.setPath( path );
+            path_list.add( realPath );
+            vo.setPath( realPath );
 
             file_list.add(vo);
         }
+    }
+
+    //파일 경로 찾기
+    public String getFilePath(Uri uri){
+        final String docId = DocumentsContract.getDocumentId(uri);
+        final String[] split = docId.split(":");
+        final String type= split[0];
+        String path = null;
+        if ("primary".equalsIgnoreCase(type)) {
+            path = Environment.getExternalStorageDirectory() + "/" + (split.length > 1 ? split[1] : ""); //split[1];
+        } else if ("home".equalsIgnoreCase(type)) {
+            path = Environment.getExternalStorageDirectory() + "/Documents/" + (split.length > 1 ? split[1] : ""); //split[1];
+        }
+        return path;
     }
 
     // 권한레벨 - 낮음 : 인터넷 - 사용하겠다고 메니페스트에 명시만하면 OK
@@ -200,7 +225,10 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
                 Manifest.permission.CAMERA,
                 Manifest.permission.ACCESS_MEDIA_LOCATION,
                 Manifest.permission.READ_EXTERNAL_STORAGE,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE
+                Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                Manifest.permission.MANAGE_DOCUMENTS,
+                Manifest.permission.MANAGE_MEDIA,
+                Manifest.permission.MANAGE_EXTERNAL_STORAGE
         };
 
         int permissionCheck = PackageManager.PERMISSION_GRANTED;

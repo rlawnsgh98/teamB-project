@@ -66,6 +66,10 @@ dependencies {
     // 이미지 활용 Glide 2023.01.11-김원희
     implementation 'com.github.bumptech.glide:glide:4.11.0'
 
+    // https://mvnrepository.com/artifact/com.squareup.retrofit2/converter-moshi
+    implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
+
+
 }
 //김준호 빌드 오류 나서 넣음
 tasks.register("prepareKotlinBuildScriptModel"){}

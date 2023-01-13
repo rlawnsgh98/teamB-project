@@ -1,10 +1,12 @@
 package com.example.conn;
 
+import android.app.appsearch.StorageInfo;
 import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
+import android.os.storage.StorageManager;
 import android.provider.MediaStore;
 import android.provider.OpenableColumns;
 
@@ -120,10 +122,10 @@ public class CommonMethod {
     }
 
 
-    public void sendPostFile(String url, String filepath, String filename, CallBackResult callback){
+    public void sendPostFile(String url, String filepath, String filename, int type, CallBackResult callback){
 
         ApiInterface apiInterface = new ApiClient().getApiClient().create(ApiInterface.class);
-        Call<String> apiTest = apiInterface.connFilePost(url, stringToRequest(), pathToPartFile(filepath, filename));
+        Call<String> apiTest = apiInterface.connFilePost(url, stringToRequest(), pathToPartFile(filepath, filename, type));
 
         apiTest.enqueue(new Callback<String>() {
             @Override
@@ -140,10 +142,10 @@ public class CommonMethod {
 
     }
 
-    public void sendPostFiles(String url, ArrayList<String> filepath, ArrayList<String> name_list, CallBackResult callback) {
+    public void sendPostFiles(String url, ArrayList<String> filepath, ArrayList<String> name_list, int type, CallBackResult callback) {
         List<MultipartBody.Part> list  = new ArrayList<>();
         for (int i = 0; i < filepath.size(); i++) {
-            list.add( pathToPartFile(filepath.get(i), name_list.get(i)));
+            list.add( pathToPartFile(filepath.get(i), name_list.get(i), type));
         }
         ApiInterface apiInterface = new ApiClient().getApiClient().create(ApiInterface.class);
         Call<String> apiTest = apiInterface.connFilesPost(url, stringToRequest(), list);
@@ -163,10 +165,15 @@ public class CommonMethod {
 
     }
 
-    public MultipartBody.Part pathToPartFile(String filepath, String filename){
+    public MultipartBody.Part pathToPartFile(String filepath, String filename, int type){
+        String ss = filename.substring(filename.indexOf(".") , filename.length());
         if( filepath != null ){
-
-            RequestBody fileBody = RequestBody.create(MediaType.parse("image/jpeg"), new File(filepath));
+            RequestBody fileBody = null;
+            if(type==1000){
+                fileBody = RequestBody.create(MediaType.parse("image/jpeg"), new File(filepath));
+            }else if(type==1001){
+                fileBody = RequestBody.create(MediaType.parse("application/"+filename.substring(filename.indexOf(".")+1 , filename.length())), new File(filepath));
+            }
             MultipartBody.Part filePart
                     = MultipartBody.Part.createFormData("file", filename, fileBody);
             return filePart;
