@@ -1,6 +1,5 @@
-package com.example.teamb_project.video_board;
+package com.example.teamb_project.teacher.board;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,26 +7,23 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.teamb_project.R;
-import com.example.teamb_project.vo.BoardVO;
+import com.example.teamb_project.vo.BoardFileVO;
 
-import java.util.ArrayList;
+import java.util.List;
 
-public class VideoBoardAdapter extends RecyclerView.Adapter<VideoBoardAdapter.ViewHolder>{
+public class BoardImgAdapter extends RecyclerView.Adapter<BoardImgAdapter.ViewHolder>{
     LayoutInflater inflater;
-    ArrayList<BoardVO> list;
-    Context context;
+    List<BoardFileVO> list;
 
-    public VideoBoardAdapter(LayoutInflater inflater, ArrayList<BoardVO> list, Context context) {
+    public BoardImgAdapter(LayoutInflater inflater, List<BoardFileVO> list) {
         this.inflater = inflater;
         this.list = list;
-        this.context = context;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(inflater.inflate(R.layout.item_video_board, parent, false));
+        return null;
     }
 
     @Override
@@ -37,7 +33,7 @@ public class VideoBoardAdapter extends RecyclerView.Adapter<VideoBoardAdapter.Vi
 
     @Override
     public int getItemCount() {
-        return 10;
+        return 0;
     }
     @Override
     public long getItemId(int i){return i;}
@@ -45,6 +41,7 @@ public class VideoBoardAdapter extends RecyclerView.Adapter<VideoBoardAdapter.Vi
     public int getItemViewType(int i){return i;}
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+
 
         public ViewHolder(@NonNull View v) {
             super(v);

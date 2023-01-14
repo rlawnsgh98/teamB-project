@@ -3,11 +3,23 @@ package com.example.teamb_project.video_board;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ScrollView;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.teamb_project.common.Common;
+import com.example.teamb_project.databinding.FragmentVideoBoardBinding;
+import com.example.teamb_project.video_board.VideoBoardAdapter;
+import com.example.teamb_project.vo.BoardVO;
+import com.google.gson.GsonBuilder;
+
+import java.util.ArrayList;
+
+import android.util.Log;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
@@ -16,10 +28,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.conn.CommonMethod;
 import com.example.teamb_project.R;
-import com.example.teamb_project.common.Common;
-import com.example.teamb_project.databinding.FragmentVideoBoardBinding;
-import com.example.teamb_project.vo.BoardVO;
-import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
@@ -43,13 +51,20 @@ public class VideoBoardFragment extends Fragment implements View.OnClickListener
         b = FragmentVideoBoardBinding.inflate(inflater);
 
         Common common = new Common();
+
+        //어댑터에 보낼 ArrayList
+        ArrayList<Object> list = new ArrayList<>();
         CommonMethod commonMethod = new CommonMethod();
 
         //리사이클러뷰에 들어갈 데이터 List
         ArrayList<BoardVO> tempList = new ArrayList<>();
+        for(int i = 0; i < 20; i++){
+            tempList.add(new BoardVO());
+        }
         //게시글 11개 이상 DB에 있을때만 '더보기' 버튼 보이기
         if(tempList.size() < 11){b.linMore.setVisibility(View.GONE);}
         //어댑터 설정
+
         adapter = new VideoBoardAdapter(getLayoutInflater(), tempList, getContext());
         b.recvVideoBoard.setAdapter(adapter);
         b.recvVideoBoard.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
@@ -63,8 +78,10 @@ public class VideoBoardFragment extends Fragment implements View.OnClickListener
                         board_list = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, new TypeToken<ArrayList<BoardVO>>(){}.getType());
 
                         //게시글 11개 이상 DB에 있을때만 '더보기' 버튼 보이기
-                        if(board_list.size() < 11){
-                            b.linMore.setVisibility(View.GONE);
+                        if(board_list!=null){
+                            if(board_list.size() < 11){
+                                b.linMore.setVisibility(View.GONE);
+                            }
                         }
 
                         //검색

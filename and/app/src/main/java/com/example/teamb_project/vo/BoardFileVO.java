@@ -1,20 +1,20 @@
 package com.example.teamb_project.vo;
 
 public class BoardFileVO {
-	private String filename, filepath;
+	private String file_name, path;
 	private int id, board_code;
 	
-	public String getFilename() {
-		return filename;
+	public String getFile_name() {
+		return file_name;
 	}
-	public void setFilename(String filename) {
-		this.filename = filename;
+	public void setFile_name(String file_name) {
+		this.file_name = file_name;
 	}
-	public String getFilepath() {
-		return filepath;
+	public String getPath() {
+		return path;
 	}
-	public void setFilepath(String filepath) {
-		this.filepath = filepath;
+	public void setPath(String path) {
+		this.path = path;
 	}
 	public int getId() {
 		return id;

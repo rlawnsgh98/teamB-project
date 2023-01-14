@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(b.getRoot());
         getSupportActionBar().hide();
 
-        ApiClient.setBASEURL("http://192.168.1.2/middle/");
+        ApiClient.setBASEURL("http://192.168.0.115/middle/");
 
         b.btnBoard.setOnClickListener(this);
         b.btnNotice.setOnClickListener(this);
@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         b.btnBoardDetail.setOnClickListener(this);
         b.btnVideoBoard.setOnClickListener(this);
         b.btnCounsel.setOnClickListener(this);
+
 
         //스프링 연동
         b.tvTest.setOnClickListener(new View.OnClickListener() {

@@ -8,7 +8,6 @@
 
 
     <LinearLayout
-        android:id="@+id/lin_board"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -46,7 +45,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="강사이름"
+                android:text="김강사"
                 android:textSize="16dp"
                 android:layout_below="@+id/tv_title"
                 android:textColor="@color/font_black"
@@ -61,8 +60,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2023.01.06"
-                    android:textSize="16dp"
+                    android:textSize="15dp"
                     android:textColor="@color/font_black"
+                    android:layout_alignParentRight="true"
                     />
             </RelativeLayout>
         </RelativeLayout>

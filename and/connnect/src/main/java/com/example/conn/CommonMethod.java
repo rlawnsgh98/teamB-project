@@ -1,11 +1,14 @@
 package com.example.conn;
 
+import android.app.appsearch.StorageInfo;
 import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
+import android.os.storage.StorageManager;
 import android.provider.MediaStore;
+import android.provider.OpenableColumns;
 
 import androidx.annotation.RequiresApi;
 
@@ -78,23 +81,33 @@ public class CommonMethod {
     //해당하는 메소드는 URI 를 통해 실제 이미지 물리적 주소를 얻어오는 메소드
     // 2022.12.26 kwh 만듬 (협업 tip)
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public String getRealPath(Uri uri, Context context){
+    public String getRealPath(Uri uri, Context context, int type){
         String rtn = null; //리턴용
-
-        String[] proj = {MediaStore.Images.Media.DATA};
-        Cursor cursor = context.getContentResolver().query(uri, proj, null, null);
-        if(cursor.moveToFirst()){
-            int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-            rtn = cursor.getString(column_index);
+        //이미지
+        if(type == 1000){
+            String[] proj = {MediaStore.Images.Media.DATA};
+            Cursor cursor = context.getContentResolver().query(uri, proj, null, null);
+            if(cursor.moveToFirst()){
+                int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+                rtn = cursor.getString(column_index);
+            }
+            cursor.close();
+        }else if(type == 1001){
+            //파일
+            String[] proj = {OpenableColumns.DISPLAY_NAME};
+            Cursor cursor = context.getContentResolver().query(uri, proj, null, null, null);
+            if(cursor.moveToFirst()){
+                int column_index = cursor.getColumnIndexOrThrow(OpenableColumns.DISPLAY_NAME);
+                rtn = cursor.getString(column_index);
+            }
         }
-        cursor.close();
 
         return rtn;
     }
 
     //카메라로 찍은 사진을 우리가 만든 임시파일로 가져오기 위한 처리
     public File createFile(Context context) {
-        String fileName = "LastProject" + new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        String fileName = "Project" + new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         //사진파일을 저장하기 위한 경로 == 해당 메소드 부분은 계속 바뀌므로 따로 공부x
         File storageDir = context.getExternalFilesDir(Environment.DIRECTORY_PICTURES);
         File rtnFile = null; //IO Exception 발생함
@@ -108,37 +121,31 @@ public class CommonMethod {
         return rtnFile;
     }
 
-    // HashMap 받아서  for 문처리
-    public void sendPostFile(String url, ArrayList<String> filepath, CallBackResult callback){
 
-        for(int i = 0; i < filepath.size(); i++){
+    public void sendPostFile(String url, String filepath, String filename, int type, CallBackResult callback){
 
-            ApiInterface apiInterface = new ApiClient().getApiClient().create(ApiInterface.class);
-            Call<String> apiTest = apiInterface.connFilePost(url, stringToRequest(), pathToPartFile(filepath.get(i)));
+        ApiInterface apiInterface = new ApiClient().getApiClient().create(ApiInterface.class);
+        Call<String> apiTest = apiInterface.connFilePost(url, stringToRequest(), pathToPartFile(filepath, filename, type));
 
-            apiTest.enqueue(new Callback<String>() {
-                @Override
-                public void onResponse(Call<String> call, Response<String> response) {
-                    callback.result(true, response.body());
-                }
+        apiTest.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+                callback.result(true, response.body());
+            }
 
-                @Override
-                public void onFailure(Call<String> call, Throwable t) {
-                    callback.result(false, "");
-                    t.printStackTrace(); // 어떤 오류인지 로그에 찍히게 처리
-                }
-            });
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+                callback.result(false, "");
+                t.printStackTrace(); // 어떤 오류인지 로그에 찍히게 처리
+            }
+        });
 
-        }
     }
 
-
-
-    // HashMap 받아서  for 문처리
-    public void sendPostFiles(String url, ArrayList<String> filepath, CallBackResult callback) {
+    public void sendPostFiles(String url, ArrayList<String> filepath, ArrayList<String> name_list, int type, CallBackResult callback) {
         List<MultipartBody.Part> list  = new ArrayList<>();
         for (int i = 0; i < filepath.size(); i++) {
-            list.add( pathToPartFile(filepath.get(i)));
+            list.add( pathToPartFile(filepath.get(i), name_list.get(i), type));
         }
         ApiInterface apiInterface = new ApiClient().getApiClient().create(ApiInterface.class);
         Call<String> apiTest = apiInterface.connFilesPost(url, stringToRequest(), list);
@@ -158,11 +165,17 @@ public class CommonMethod {
 
     }
 
-    public MultipartBody.Part pathToPartFile(String filepath){
+    public MultipartBody.Part pathToPartFile(String filepath, String filename, int type){
+        String ss = filename.substring(filename.indexOf(".") , filename.length());
         if( filepath != null ){
-            RequestBody fileBody = RequestBody.create(MediaType.parse("image/jpeg"), new File(filepath));
+            RequestBody fileBody = null;
+            if(type==1000){
+                fileBody = RequestBody.create(MediaType.parse("image/jpeg"), new File(filepath));
+            }else if(type==1001){
+                fileBody = RequestBody.create(MediaType.parse("application/"+filename.substring(filename.indexOf(".")+1 , filename.length())), new File(filepath));
+            }
             MultipartBody.Part filePart
-                    = MultipartBody.Part.createFormData("file", "img.png", fileBody);
+                    = MultipartBody.Part.createFormData("file", filename, fileBody);
             return filePart;
         }
         return null;
@@ -180,5 +193,6 @@ public class CommonMethod {
         }
         return data;
     }
+
 
 }

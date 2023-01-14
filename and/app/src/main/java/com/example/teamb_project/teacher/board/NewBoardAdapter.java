@@ -13,14 +13,14 @@ import com.bumptech.glide.Glide;
 import com.example.teamb_project.R;
 import com.example.teamb_project.vo.BoardFileVO;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class NewBoardAdapter extends RecyclerView.Adapter<NewBoardAdapter.ViewHolder>{
     LayoutInflater inflater;
-    ArrayList<BoardFileVO> list;
+    List<BoardFileVO> list;
     Context context;
 
-    public NewBoardAdapter(LayoutInflater inflater, ArrayList<BoardFileVO> list, Context context) {
+    public NewBoardAdapter(LayoutInflater inflater, List<BoardFileVO> list, Context context) {
         this.inflater = inflater;
         this.list = list;
         this.context = context;
@@ -35,7 +35,7 @@ public class NewBoardAdapter extends RecyclerView.Adapter<NewBoardAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
 
-        Glide.with(context).load( list.get(i).getFilepath() ).into(h.img);
+        Glide.with(context).load(list.get(i).getPath()).into(h.img);
 
     }
 

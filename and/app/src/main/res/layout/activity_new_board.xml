@@ -62,11 +62,24 @@
                 android:layout_marginRight="15dp"
                 android:background="@color/line_gray"
                 />
-            <RelativeLayout
+            <LinearLayout
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:orientation="vertical"
                 >
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recv_files"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recv_imgs"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
                 <!-- 글 내용 입력 -->
                 <EditText
                     android:id="@+id/edt_content"
@@ -84,14 +97,8 @@
                     android:padding="10dp"
                     android:layout_below="@+id/recv_imgs"
                     />
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recv_imgs"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-            </RelativeLayout>
+
+            </LinearLayout>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

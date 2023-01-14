@@ -7,7 +7,11 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.DocumentsContract;
 import android.provider.MediaStore;
+import android.provider.OpenableColumns;
+import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -29,6 +33,8 @@ import com.example.teamb_project.databinding.ActivityNewBoardBinding;
 import com.example.teamb_project.vo.BoardFileVO;
 import com.example.teamb_project.vo.BoardVO;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class NewBoardActivity extends AppCompatActivity implements View.OnClickListener{
@@ -37,11 +43,13 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
     public final int GALLERY_CODE = 1000;
     public final int FILE_CODE = 1001;
 
+    CommonMethod commonMethod = new CommonMethod();
+
     ArrayList<String> path_list = null;
+    ArrayList<String> name_list = null;
     ArrayList<BoardFileVO> file_list = null;
     NewBoardAdapter adapter = null;
-
-    String img_path;
+    BoardFileAdapter file_adapter = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +59,11 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
         getSupportActionBar().hide();
 
         checkDangerousPermissions();
-
+        Intent intent = new Intent();
+        intent.setAction(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
+        Uri uri = Uri.fromParts("package", this.getPackageName(), null);
+        intent.setData(uri);
+        startActivity(intent);
         Common common = new Common();
         //임시로그인 - user1
         common.setTempLoginInfo();
@@ -85,10 +97,12 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
 
                 BoardVO vo = new BoardVO();
                 vo.setTitle(b.edtTitle.getText().toString());
+                vo.setWriter(Integer.parseInt(common.getLoginInfo().getMember_code()));
                 vo.setContent(b.edtContent.getText().toString());
+                //====================================================
                 //게시글 insert 처리
-                commonMethod .setParams("tempVo", "aaaaaa")
-                        .sendPostFiles("insert.fi", path_list, (isResult, data) -> {
+                commonMethod .setParams("param", vo)
+                        .sendPostFiles("insert.fi", path_list, name_list, FILE_CODE, (isResult, data) -> {
                     if(isResult){
                         Toast.makeText(this, "글 등록 완료", Toast.LENGTH_SHORT).show();
                         startActivity(board_intent);
@@ -96,14 +110,14 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
                         Log.d(TAG, " insert 실패 ");
                     }
                 });
-
+                //====================================================
             }else{
                 Log.d(TAG, "값 입력 필요");
                 Toast.makeText(this, "제목, 내용을 모두 입력하세요", Toast.LENGTH_LONG).show();
             }
         }else if(v.getId()==R.id.iv_file){
             //파일 첨부
-
+            fileMethod();
         }else if(v.getId()==R.id.iv_picture){
             //사진 첨부
             galleryMethod();
@@ -113,14 +127,20 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
 
     //갤러리 선택시 실행 메소드
     public void galleryMethod(){
-        //2023-01-11 사진 선택을 여러개 할수있게  INTENT 액션부분 손봐야함.
         Intent intent = new Intent(Intent.ACTION_PICK);
         intent.setType("image/*");
-
+        //2023-01-11 사진 선택을 여러개 할수있게
         intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
-
         startActivityForResult(Intent.createChooser(intent, "사진 선택"), GALLERY_CODE);
-        // onActivityResult GALLERY_CODE <- 코드가 나오면 갤러리 액티비티 종료시점을 알 수 있음
+    }
+
+    //파일 선택시 실행 메소드
+    public void fileMethod(){
+        Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+        intent.setType("*/*");
+//        intent.putExtra(Intent.)
+        intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
+        startActivityForResult(Intent.createChooser(intent, "파일 선택"), FILE_CODE);
     }
 
     //어떤 인텐트로 startActivityForResult 를 실행하든 그 결과는 무조건 ↓
@@ -128,39 +148,73 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        CommonMethod commonMethod = new CommonMethod();
+
         if(requestCode == FILE_CODE && resultCode == RESULT_OK){
-            //img_path 라는 변수에 이미지 경로가 담겨있게 됨 -> 임시파일이 용량을 가지고 실제 이미지파일로 됨
+
+            allMethod(data, FILE_CODE);
+
+            //어댑터
+            file_adapter = new BoardFileAdapter(getLayoutInflater(), file_list);
+            b.recvFiles.setAdapter(file_adapter);
+            b.recvFiles.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
+            file_adapter.notifyDataSetChanged();
+
         }else if(requestCode == GALLERY_CODE && resultCode == RESULT_OK){
 
-//            Log.d(TAG, "이미지 이름 : " + getImageNameToUri(data.getData()));
-
-            Log.d(TAG, "data 확인 : " + data.getClipData().getItemAt(0).getUri());
-
-            path_list = new ArrayList<>();  //==> String (path)
-            file_list = new ArrayList<>();   // ==> BoardFileVO
-
-            BoardFileVO vo = new BoardFileVO();
-            for (int i = 0; i < data.getClipData().getItemCount(); i++){
-//                img_path = new CommonMethod().getRealPath(data.getClipData().getItemAt(i).getUri(), this);         //가짜 URI주소로 실제 물리적인 사진파일 위치를 받아옴
-                path_list.add(commonMethod.getRealPath(data.getClipData().getItemAt(i).getUri(), this));
-                vo.setFilename( getImageNameToUri(data.getClipData().getItemAt(i).getUri()) );
-                vo.setFilepath( path_list.get(i) );
-
-                file_list.add(vo);
-            }
-
-//            list.add(vo);
-
+            allMethod(data, GALLERY_CODE);
 
             //어댑터
             adapter = new NewBoardAdapter(getLayoutInflater(), file_list, this);
             b.recvImgs.setAdapter(adapter);
             b.recvImgs.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
-            // data 변화 생기면 다시 읽어서 보여줌..?
             adapter.notifyDataSetChanged();
-
         }
+    }
+
+    //내보낼 파일 정보 담기
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public void allMethod(Intent data, int type){
+        Log.d(TAG, "data 확인 : " + data.getClipData().getItemAt(0).getUri());
+
+        name_list = new ArrayList<>();
+        path_list = new ArrayList<>();  //==> String (path)
+        file_list = new ArrayList<>();   // ==> BoardFileVO
+        String realPath = null;
+        for (int i = 0; i < data.getClipData().getItemCount(); i++){
+            BoardFileVO vo = new BoardFileVO();
+            if(type==GALLERY_CODE){
+                //사진처리
+                String name = getImageNameToUri(data.getClipData().getItemAt(i).getUri());
+                name_list.add( name );
+                vo.setFile_name( name );
+                realPath = commonMethod.getRealPath(data.getClipData().getItemAt(i).getUri(), this, type);
+            }else if(type==FILE_CODE){
+                //파일처리
+                realPath = getFilePath(data.getClipData().getItemAt(i).getUri());
+                String name = getFileNameToUri(data.getClipData().getItemAt(i).getUri());
+                name_list.add( name );
+                vo.setFile_name( name );
+
+            }
+            path_list.add( realPath );
+            vo.setPath( realPath );
+
+            file_list.add(vo);
+        }
+    }
+
+    //파일 경로 찾기
+    public String getFilePath(Uri uri){
+        final String docId = DocumentsContract.getDocumentId(uri);
+        final String[] split = docId.split(":");
+        final String type= split[0];
+        String path = null;
+        if ("primary".equalsIgnoreCase(type)) {
+            path = Environment.getExternalStorageDirectory() + "/" + (split.length > 1 ? split[1] : ""); //split[1];
+        } else if ("home".equalsIgnoreCase(type)) {
+            path = Environment.getExternalStorageDirectory() + "/Documents/" + (split.length > 1 ? split[1] : ""); //split[1];
+        }
+        return path;
     }
 
     // 권한레벨 - 낮음 : 인터넷 - 사용하겠다고 메니페스트에 명시만하면 OK
@@ -171,7 +225,10 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
                 Manifest.permission.CAMERA,
                 Manifest.permission.ACCESS_MEDIA_LOCATION,
                 Manifest.permission.READ_EXTERNAL_STORAGE,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE
+                Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                Manifest.permission.MANAGE_DOCUMENTS,
+                Manifest.permission.MANAGE_MEDIA,
+                Manifest.permission.MANAGE_EXTERNAL_STORAGE
         };
 
         int permissionCheck = PackageManager.PERMISSION_GRANTED;
@@ -207,6 +264,15 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
                 }
             }
         }
+    }
+
+    // 선택된 파일 이름 가져오기
+    public String getFileNameToUri(Uri data){
+        Cursor returnCursor = getContentResolver().query(data, null, null, null, null);
+        int nameIndex = returnCursor.getColumnIndexOrThrow(OpenableColumns.DISPLAY_NAME);
+        returnCursor.moveToFirst();
+        String fileName = returnCursor.getString(nameIndex);
+        return fileName;
     }
 
     // 선택된 이미지 파일명 가져오기
