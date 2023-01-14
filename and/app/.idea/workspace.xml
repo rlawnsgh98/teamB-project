@@ -9,20 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f65e850-5353-40a0-a4e0-bec67319969b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_arrow_up_blue.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/teamb_project/video_board/VideoBoardAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/teamb_project/video_board/VideoBoardAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/teamb_project/video_board/VideoBoardFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/teamb_project/video_board/VideoBoardFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_board.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_board.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_video_board.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_video_board.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/item_video_board.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/item_video_board.xml" afterDir="false" />
-    </list>
+    <list default="true" id="1f65e850-5353-40a0-a4e0-bec67319969b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
