@@ -1,0 +1,14 @@
+package co.kr.smart;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class VisualizationController {
+	// 시각화 화면 요청
+	@RequestMapping("/list.vi")
+	public String list() {
+		return "";
+	}
+	
+}
