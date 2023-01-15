@@ -84,7 +84,7 @@
 	</select>
 	
 	<!-- 수강생 선택-> 선택한 학생의 출결일 보기 -->
-	<select id="student_attendance_detail" resultType="attendance.AttendanceVO">
+	<select id="student_attendance_detail" resultType="attendance.AttendanceVO" parameterType="Map">
 		select a.* , TO_CHAR(attendance_time, 'day') week
 		from attendance a
 		where lecture_code = #{lecture_code}
