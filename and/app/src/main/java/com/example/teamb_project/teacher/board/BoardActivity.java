@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ScrollView;
 
 import androidx.appcompat.app.AlertDialog;
@@ -21,13 +22,14 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class BoardActivity extends AppCompatActivity implements View.OnClickListener{
     ActivityBoardBinding b;
     final String TAG = "log";
     int cnt = 1;
     BoardAdapter adapter = null;
+    Common common = new Common();
+    CommonMethod commonMethod = new CommonMethod();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +39,7 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
         getSupportActionBar().hide();
 
         Log.d(TAG, "onCreate: " + ApiClient.getBASEURL());
-        Common common = new Common();
-        CommonMethod commonMethod = new CommonMethod();
+
         //임시로그인
         common.setTempLoginInfo();
 
@@ -94,6 +95,17 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
 
         //스피너 설정
         common.setSpinner(b.spinner, this);
+        b.spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                //검색 버튼 눌렀을때
+                b.ivSearch.setOnClickListener(v -> {
+                    searchBoard(position, b.edtSearch.getText().toString());
+                });
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {}
+        });
 
         //EditText 입력이벤트
 //        b.edtSearch.addTextChangedListener(common.getTextWatcher(b.ivTextRemove));
@@ -103,6 +115,22 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
 
     }
 
+
+    //검색
+    public void searchBoard(int position, String search){
+        String column = null;
+        if(position==0) column = "title";
+        else if(position==1) column = "content";
+        else if(position==2) column = "member_name";
+        commonMethod.setParams("column", column)
+                .setParams("search", b.edtSearch.getText().toString())
+                .sendPost("search.bo", (isResult, data) -> {
+                    Log.d(TAG, "검색 결과 : " + isResult);
+                    //검색한 결과 보이기
+                    selectList();
+                });
+
+    }
 
     //게시글 목록 불러오기
     public void selectList(){

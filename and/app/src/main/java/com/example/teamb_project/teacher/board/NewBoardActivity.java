@@ -33,8 +33,6 @@ import com.example.teamb_project.databinding.ActivityNewBoardBinding;
 import com.example.teamb_project.vo.BoardFileVO;
 import com.example.teamb_project.vo.BoardVO;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class NewBoardActivity extends AppCompatActivity implements View.OnClickListener{
@@ -101,15 +99,29 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
                 vo.setContent(b.edtContent.getText().toString());
                 //====================================================
                 //게시글 insert 처리
-                commonMethod .setParams("param", vo)
-                        .sendPostFiles("insert.fi", path_list, name_list, FILE_CODE, (isResult, data) -> {
-                    if(isResult){
-                        Toast.makeText(this, "글 등록 완료", Toast.LENGTH_SHORT).show();
-                        startActivity(board_intent);
-                    }else{
-                        Log.d(TAG, " insert 실패 ");
-                    }
-                });
+                if(path_list == null){
+                    //첨부파일 없는 게시글
+                    commonMethod.setParams("param", vo)
+                            .sendPost("insert.bo", (isResult, data) -> {
+                                if(isResult){
+                                    Toast.makeText(this, "글 등록 완료", Toast.LENGTH_SHORT).show();
+                                    startActivity(board_intent);
+                                }else{
+                                    Log.d(TAG, " insert 실패 ");
+                                }
+                            });
+                }else{
+                    //첨부파일 있는 게시글
+                    commonMethod.setParams("param", vo)
+                            .sendPostFiles("insert.fi", path_list, name_list, FILE_CODE, (isResult, data) -> {
+                                if(isResult){
+                                    Toast.makeText(this, "글 등록 완료", Toast.LENGTH_SHORT).show();
+                                    startActivity(board_intent);
+                                }else{
+                                    Log.d(TAG, " insert 실패 ");
+                                }
+                            });
+                }
                 //====================================================
             }else{
                 Log.d(TAG, "값 입력 필요");
@@ -194,7 +206,6 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
                 String name = getFileNameToUri(data.getClipData().getItemAt(i).getUri());
                 name_list.add( name );
                 vo.setFile_name( name );
-
             }
             path_list.add( realPath );
             vo.setPath( realPath );

@@ -31,7 +31,7 @@ public class VideoBoardAdapter extends RecyclerView.Adapter<VideoBoardAdapter.Vi
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder h, int i) {
 
     }
 

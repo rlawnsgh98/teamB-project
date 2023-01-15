@@ -47,6 +47,7 @@ dependencies {
 
     // 모듈 추가시
     implementation project(path: ':connnect')
+    implementation fileTree(dir: 'C:\\_Project\\teamB-project\\and\\app\\libs', include: ['*.aar', '*.jar'], exclude: [])
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
@@ -68,6 +69,9 @@ dependencies {
 
     // https://mvnrepository.com/artifact/com.squareup.retrofit2/converter-moshi
     implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
+
+    // 유튜브 재생 라이브러리 2023.01.15 김원희
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
 
 
 }
