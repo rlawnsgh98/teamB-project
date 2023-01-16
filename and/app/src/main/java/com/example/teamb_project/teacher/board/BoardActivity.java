@@ -163,7 +163,7 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
         b.edtSearch.clearFocus();
 
         if(v.getId()==R.id.iv_search){
-            //검색처리
+            //검색처리 --> 위에서 함
         }else if(v.getId()==R.id.card_go_top){
             //스크롤 최상단으로 이동
             b.scrBoard.fullScroll(ScrollView.FOCUS_UP);
