@@ -105,16 +105,11 @@ public class StudentAttendanceFragment extends Fragment {
         YearMonth yearMonth = YearMonth.from(LocalDate.parse(start, DateTimeFormatter.ofPattern("yyyyMMdd")));
         end= yearMonth.atEndOfMonth().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
 
-
-
-
-
-
-
         recv_attendance_detail=v.findViewById(R.id.recv_attendance_detail);
         tv_ok = v.findViewById(R.id.tv_ok);
         tv_no = v.findViewById(R.id.tv_no);
         tv_hf = v.findViewById(R.id.tv_hf);
+
         selectAttendance();
         selectAttendanceList();
         return v;
@@ -142,7 +137,7 @@ public class StudentAttendanceFragment extends Fragment {
                     @Override
                     public void result(boolean isResult, String data) {
                         list = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, new TypeToken<ArrayList<AttendanceVO>>(){}.getType());
-                        Log.d("TAG", "result: "+list);
+
                         recv_attendance_detail.setAdapter(new StudentAttendanceAdapter(getLayoutInflater(), getContext(), list));
                         recv_attendance_detail.setLayoutManager(com.example.teamb_project.common.CommonMethod.getManager(getContext()));
 

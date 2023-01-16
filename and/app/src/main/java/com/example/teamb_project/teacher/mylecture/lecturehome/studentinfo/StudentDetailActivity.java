@@ -89,7 +89,7 @@ public class StudentDetailActivity extends AppCompatActivity {
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, new StudentHomeworkFragment(student_code, lecture_code)).commit();
                 break ;
             case 2 :
-                getSupportFragmentManager().beginTransaction().replace(R.id.container, new StudentTestresultFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, new StudentTestresultFragment(student_code, lecture_code)).commit();
                 break ;
 
         }

@@ -1103,356 +1103,7 @@ java.io.FileNotFoundException: /org/springframework/beans/factory/xml/spring-bea
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 16:23:57.943
 !MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.UYYWihgO => OK
-
-!ENTRY org.eclipse.core.jobs 4 2 2023-01-16 17:07:31.426
-!MESSAGE An internal error occurred during: "Periodic workspace save.".
-!STACK 0
-java.lang.NumberFormatException: null
-	at java.base/java.lang.Integer.parseInt(Integer.java:614)
-	at java.base/java.lang.Integer.parseInt(Integer.java:770)
-	at org.eclipse.core.internal.resources.SaveManager.validateMasterTableBeforeSave(SaveManager.java:1586)
-	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1263)
-	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1255)
-	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1232)
-	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1143)
-	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:55)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.springframework.ide.eclipse.beans.core 2 0 2023-01-16 17:07:32.677
-!MESSAGE Error occured while running bean post processors
-!STACK 0
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.and.middle.LectureController]; nested exception is java.io.IOException: Could not find com.and.middle$LectureController
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:183)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:308)
-	at org.springframework.ide.eclipse.metadata.process.JdtConfigurationClassPostProcessor.postProcess(JdtConfigurationClassPostProcessor.java:88)
-	at org.springframework.ide.eclipse.beans.core.internal.model.BeansConfig$4.run(BeansConfig.java:775)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.springframework.ide.eclipse.beans.core.internal.model.BeansConfig.executePostProcessor(BeansConfig.java:758)
-	at org.springframework.ide.eclipse.beans.core.internal.model.BeansConfig.postProcess(BeansConfig.java:641)
-	at org.springframework.ide.eclipse.beans.core.internal.model.BeansConfig.access$8(BeansConfig.java:600)
-	at org.springframework.ide.eclipse.beans.core.internal.model.BeansConfig$3.call(BeansConfig.java:460)
-	at org.springframework.ide.eclipse.beans.core.internal.model.BeansConfig$3.call(BeansConfig.java:1)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.io.IOException: Could not find com.and.middle$LectureController
-	at org.springframework.ide.eclipse.core.java.classreading.JdtMetadataReaderFactory.getMetadataReader(JdtMetadataReaderFactory.java:50)
-	at org.springframework.ide.eclipse.core.java.classreading.CachingJdtMetadataReaderFactory.getMetadataReader(CachingJdtMetadataReaderFactory.java:38)
-	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:701)
-	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:656)
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:245)
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:200)
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:169)
-	... 15 more
-
-!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-01-16 17:07:34.343
-!MESSAGE Unable to add com/and/middle/1.0.0-BUILD-SNAPSHOT/middle-1.0.0-BUILD-SNAPSHOT.pom
-!STACK 0
-org.apache.lucene.store.AlreadyClosedException: this IndexWriter is closed
-	at org.apache.lucene.index.IndexWriter.ensureOpen(IndexWriter.java:720)
-	at org.apache.lucene.index.IndexWriter.ensureOpen(IndexWriter.java:734)
-	at org.apache.lucene.index.IndexWriter.nrtIsCurrent(IndexWriter.java:4602)
-	at org.apache.lucene.index.StandardDirectoryReader.doOpenFromWriter(StandardDirectoryReader.java:282)
-	at org.apache.lucene.index.StandardDirectoryReader.doOpenIfChanged(StandardDirectoryReader.java:261)
-	at org.apache.lucene.index.StandardDirectoryReader.doOpenIfChanged(StandardDirectoryReader.java:251)
-	at org.apache.lucene.index.DirectoryReader.openIfChanged(DirectoryReader.java:137)
-	at org.apache.lucene.search.SearcherManager.refreshIfNeeded(SearcherManager.java:154)
-	at org.apache.lucene.search.SearcherManager.refreshIfNeeded(SearcherManager.java:58)
-	at org.apache.lucene.search.ReferenceManager.doMaybeRefresh(ReferenceManager.java:176)
-	at org.apache.lucene.search.ReferenceManager.maybeRefresh(ReferenceManager.java:225)
-	at org.apache.maven.index.context.DefaultIndexingContext.acquireIndexSearcher(DefaultIndexingContext.java:556)
-	at org.apache.maven.index.DefaultIndexerEngine.getOldDocument(DefaultIndexerEngine.java:135)
-	at org.apache.maven.index.DefaultIndexerEngine.update(DefaultIndexerEngine.java:80)
-	at org.apache.maven.index.DefaultIndexer.addArtifactsToIndex(DefaultIndexer.java:129)
-	at org.apache.maven.index.DefaultNexusIndexer.addArtifactToIndex(DefaultNexusIndexer.java:347)
-	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager.addDocument(NexusIndexManager.java:613)
-	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager.mavenProjectChanged(NexusIndexManager.java:781)
-	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:806)
-	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:972)
-	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:305)
-	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.getProjectFacade(MavenBuilder.java:151)
-	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$0(MavenBuilder.java:89)
-	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:182)
-	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:156)
-	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:103)
-	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:88)
-	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:198)
-	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:860)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:281)
-	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:334)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:337)
-	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:392)
-	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:417)
-	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:161)
-	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:255)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-Caused by: java.nio.file.NoSuchFileException: D:\teamB-project\WorkSpace\.metadata\.plugins\org.eclipse.m2e.core\nexus\830bc118332e77292949ed1e6d2fabe0\write.lock
-	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
-	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
-	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
-	at java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:53)
-	at java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:38)
-	at java.base/sun.nio.fs.WindowsFileSystemProvider.readAttributes(WindowsFileSystemProvider.java:198)
-	at java.base/java.nio.file.Files.readAttributes(Files.java:1764)
-	at org.apache.lucene.store.NativeFSLockFactory$NativeFSLock.ensureValid(NativeFSLockFactory.java:177)
-	at org.apache.lucene.store.LockValidatingDirectoryWrapper.createOutput(LockValidatingDirectoryWrapper.java:43)
-	at org.apache.lucene.store.TrackingDirectoryWrapper.createOutput(TrackingDirectoryWrapper.java:43)
-	at org.apache.lucene.codecs.compressing.CompressingStoredFieldsWriter.<init>(CompressingStoredFieldsWriter.java:108)
-	at org.apache.lucene.codecs.compressing.CompressingStoredFieldsFormat.fieldsWriter(CompressingStoredFieldsFormat.java:128)
-	at org.apache.lucene.codecs.lucene50.Lucene50StoredFieldsFormat.fieldsWriter(Lucene50StoredFieldsFormat.java:183)
-	at org.apache.lucene.index.DefaultIndexingChain.initStoredFieldsWriter(DefaultIndexingChain.java:81)
-	at org.apache.lucene.index.DefaultIndexingChain.startStoredFields(DefaultIndexingChain.java:279)
-	at org.apache.lucene.index.DefaultIndexingChain.processDocument(DefaultIndexingChain.java:316)
-	at org.apache.lucene.index.DocumentsWriterPerThread.updateDocument(DocumentsWriterPerThread.java:234)
-	at org.apache.lucene.index.DocumentsWriter.updateDocument(DocumentsWriter.java:450)
-	at org.apache.lucene.index.IndexWriter.updateDocument(IndexWriter.java:1477)
-	at org.apache.maven.index.DefaultIndexerEngine.update(DefaultIndexerEngine.java:86)
-	... 26 more
-
-!ENTRY org.springframework.ide.eclipse.beans.core 2 0 2023-01-16 17:07:35.012
-!MESSAGE Error occured while running bean post processors
-!STACK 0
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.and.middle.LectureController]; nested exception is java.io.IOException: Could not find com.and.middle$LectureController
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:183)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:308)
-	at org.springframework.ide.eclipse.metadata.process.JdtConfigurationClassPostProcessor.postProcess(JdtConfigurationClassPostProcessor.java:88)
-	at org.springframework.ide.eclipse.beans.core.internal.model.BeansConfig$4.run(BeansConfig.java:775)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.springframework.ide.eclipse.beans.core.internal.model.BeansConfig.executePostProcessor(BeansConfig.java:758)
-	at org.springframework.ide.eclipse.beans.core.internal.model.BeansConfig.postProcess(BeansConfig.java:641)
-	at org.springframework.ide.eclipse.beans.core.internal.model.BeansConfig.access$8(BeansConfig.java:600)
-	at org.springframework.ide.eclipse.beans.core.internal.model.BeansConfig$3.call(BeansConfig.java:460)
-	at org.springframework.ide.eclipse.beans.core.internal.model.BeansConfig$3.call(BeansConfig.java:1)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.io.IOException: Could not find com.and.middle$LectureController
-	at org.springframework.ide.eclipse.core.java.classreading.JdtMetadataReaderFactory.getMetadataReader(JdtMetadataReaderFactory.java:50)
-	at org.springframework.ide.eclipse.core.java.classreading.CachingJdtMetadataReaderFactory.getMetadataReader(CachingJdtMetadataReaderFactory.java:38)
-	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:701)
-	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:656)
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:245)
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:200)
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:169)
-	... 15 more
-
-!ENTRY org.eclipse.jdt.core 4 0 2023-01-16 17:07:35.269
-!MESSAGE Failed to update qualified index.
-!STACK 0
-java.io.UTFDataFormatException
-	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:983)
-	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:689)
-	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategory(DiskIndex.java:485)
-	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategories(DiskIndex.java:477)
-	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:579)
-	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
-	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
-	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1248)
-	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1224)
-	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:819)
-	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:422)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
-!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:07:35.672
-!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
-
-!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:07:35.681
-!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
-
-!ENTRY org.eclipse.jdt.core 4 4 2023-01-16 17:08:26.181
-!MESSAGE Failed to save JDT index: Index for /middle/src/main/java
-!STACK 0
-java.io.IOException: Failed to read index data from file:/D:/teamB-project/WorkSpace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/390785669.index at offset 888 and size 1131376244
-	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:685)
-	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategory(DiskIndex.java:485)
-	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategories(DiskIndex.java:477)
-	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:579)
-	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
-	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:1143)
-	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1201)
-	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:819)
-	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:422)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.OutOfMemoryError: Java heap space
-	at org.eclipse.jdt.internal.compiler.util.HashtableOfObject.<init>(HashtableOfObject.java:56)
-	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:681)
-	... 9 more
-
-!ENTRY org.eclipse.jdt.core 4 0 2023-01-16 17:08:26.183
-!MESSAGE Failed to update qualified index.
-!STACK 0
-java.io.UTFDataFormatException
-	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:983)
-	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:689)
-	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategory(DiskIndex.java:485)
-	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategories(DiskIndex.java:477)
-	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:579)
-	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
-	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
-	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1248)
-	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1224)
-	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:819)
-	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:422)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
-!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:08:26.301
-!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
-
-!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:08:26.306
-!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
-
-!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:08:26.480
-!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
-
-!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:08:26.483
-!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
-
-!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:08:26.811
-!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
-
-!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:08:26.826
-!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
-
-!ENTRY org.eclipse.wst.validation 4 0 2023-01-16 17:08:27.947
-!MESSAGE OperationCanceledException
-!STACK 0
-org.eclipse.core.runtime.OperationCanceledException: 
-	at org.eclipse.wst.validation.internal.operations.ValidationOperation.checkCanceled(ValidationOperation.java:197)
-	at org.eclipse.wst.validation.internal.operations.ValidationOperation.run(ValidationOperation.java:652)
-	at org.eclipse.wst.validation.internal.operations.ValidationBuilder.build(ValidationBuilder.java:192)
-	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:860)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:281)
-	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:334)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:337)
-	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:392)
-	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:417)
-	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:161)
-	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:255)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:08:28.130
-!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
-
-!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:08:28.133
-!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
-
-!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:08:28.317
-!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
-
-!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:08:28.319
-!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
-
-!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:08:28.509
-!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
-
-!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:08:28.511
-!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
-
-!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:08:29.601
-!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
-
-!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:08:29.609
-!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
-
-!ENTRY org.eclipse.jdt.core 4 4 2023-01-16 17:08:30.208
-!MESSAGE Failed to save JDT index: Index for /middle/src/main/java
-!STACK 0
-java.io.IOException: Failed to read index data from file:/D:/teamB-project/WorkSpace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/390785669.index at offset 888 and size 1131376244
-	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:685)
-	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategory(DiskIndex.java:485)
-	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategories(DiskIndex.java:477)
-	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:579)
-	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
-	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:1143)
-	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1201)
-	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:819)
-	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:422)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.OutOfMemoryError: Java heap space
-	at org.eclipse.jdt.internal.compiler.util.HashtableOfObject.<init>(HashtableOfObject.java:56)
-	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:681)
-	... 9 more
-
-!ENTRY org.eclipse.jdt.core 4 0 2023-01-16 17:08:30.214
-!MESSAGE Failed to update qualified index.
-!STACK 0
-java.io.UTFDataFormatException
-	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:983)
-	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:689)
-	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategory(DiskIndex.java:485)
-	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategories(DiskIndex.java:477)
-	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:579)
-	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
-	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
-	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1248)
-	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1224)
-	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:819)
-	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:422)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
-!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:08:30.431
-!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
-
-!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:08:30.434
-!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
-
-!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:08:30.654
-!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
-
-!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:08:30.657
-!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
-
-!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:08:31.689
-!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
-
-!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:08:31.691
-!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
-
-!ENTRY org.eclipse.jdt.core 4 4 2023-01-16 17:09:32.130
-!MESSAGE Failed to save JDT index: Index for /middle/src/main/java
-!STACK 0
-java.io.IOException: Failed to read index data from file:/D:/teamB-project/WorkSpace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/390785669.index at offset 888 and size 1131376244
-	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:685)
-	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategory(DiskIndex.java:485)
-	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategories(DiskIndex.java:477)
-	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:579)
-	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
-	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:1143)
-	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1201)
-	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:819)
-	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:422)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.OutOfMemoryError: Java heap space
-
-!ENTRY org.eclipse.jdt.core 4 0 2023-01-16 17:09:32.133
-!MESSAGE Failed to update qualified index.
-!STACK 0
-java.io.UTFDataFormatException
-	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:983)
-	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:689)
-	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategory(DiskIndex.java:485)
-	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategories(DiskIndex.java:477)
-	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:579)
-	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
-	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
-	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1248)
-	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1224)
-	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:819)
-	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:422)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-!SESSION 2023-01-16 17:11:13.692 -----------------------------------------------
+!SESSION 2023-01-16 17:12:47.513 -----------------------------------------------
 eclipse.buildId=4.14.0.202203131612
 java.version=11.0.16.1
 java.vendor=Oracle Corporation
@@ -1460,15 +1111,15 @@ BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
 Framework arguments:  -product org.springframework.boot.ide.branding.sts4
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -clean -product org.springframework.boot.ide.branding.sts4
 
-!ENTRY org.eclipse.jface 2 0 2023-01-16 17:11:38.259
+!ENTRY org.eclipse.jface 2 0 2023-01-16 17:13:10.690
 !MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2023-01-16 17:11:38.259
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-01-16 17:13:10.690
 !MESSAGE A conflict occurred for CTRL+SHIFT+T:
 Binding(CTRL+SHIFT+T,
 	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
 		Open a type in a Java editor,
 		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7364073b,
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@63df2eb8,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
@@ -1476,17 +1127,17 @@ Binding(CTRL+SHIFT+T,
 	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
 		,
 		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@50331591,
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@49c72fb7,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2023-01-16 17:11:38.259
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-01-16 17:13:10.690
 !MESSAGE A conflict occurred for ALT+SHIFT+R:
 Binding(ALT+SHIFT+R,
 	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
 		Rename the selected element,
 		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5cfde2a4,
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@565983f3,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
@@ -1494,40 +1145,311 @@ Binding(ALT+SHIFT+R,
 	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
 		Rename the selected item,
 		Category(org.eclipse.ui.category.file,File,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@53fb3e1b,
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@68024e57,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
 
-!ENTRY org.eclipse.mylyn.tasks.core 4 0 2023-01-16 17:11:40.028
+!ENTRY org.eclipse.mylyn.tasks.core 4 0 2023-01-16 17:13:11.817
 !MESSAGE Unexpected error while loading repository template extensions
-!SUBENTRY 1 org.eclipse.mylyn.tasks.core 4 0 2023-01-16 17:11:40.028
+!SUBENTRY 1 org.eclipse.mylyn.tasks.core 4 0 2023-01-16 17:13:11.817
 !MESSAGE Could not load repository template extension contributed by 'org.eclipse.mylyn.bugzilla.ide' with connectorKind 'bugzilla'
 
-!ENTRY org.eclipse.egit.ui 2 0 2023-01-16 17:11:52.919
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 17:13:18.561
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 17:13:18.566
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@6e7560d1[org.springframework.tooling.boot.ls:1.32.0.202203131529(id=801)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 17:13:18.581
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 17:13:19.458
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 4 0 2023-01-16 17:13:21.153
+!MESSAGE /org/springframework/beans/factory/xml/spring-beans.dtd
+!STACK 0
+java.io.FileNotFoundException: /org/springframework/beans/factory/xml/spring-beans.dtd
+	at org.eclipse.osgi.storage.url.bundleentry.Handler.findBundleEntry(Handler.java:55)
+	at org.eclipse.osgi.storage.url.BundleResourceHandler.openConnection(BundleResourceHandler.java:182)
+	at java.base/java.net.URL.openConnection(URL.java:1099)
+	at org.eclipse.core.internal.boot.PlatformURLConnection.connect(PlatformURLConnection.java:115)
+	at org.eclipse.core.internal.boot.PlatformURLConnection.getURLAsLocal(PlatformURLConnection.java:240)
+	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:37)
+	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:263)
+	at org.eclipse.wildwebdeveloper.xml.internal.ui.preferences.XMLCatalogs.createURI(XMLCatalogs.java:139)
+	at org.eclipse.wildwebdeveloper.xml.internal.ui.preferences.XMLCatalogs.lambda$3(XMLCatalogs.java:69)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:274)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at org.eclipse.wildwebdeveloper.xml.internal.ui.preferences.XMLCatalogs.getWTPExtensionCatalog(XMLCatalogs.java:65)
+	at org.eclipse.wildwebdeveloper.xml.internal.ui.preferences.XMLCatalogs.getAllCatalogs(XMLCatalogs.java:52)
+	at org.eclipse.wildwebdeveloper.xml.internal.ui.preferences.XMLPreferenceConstants.storePreferencesToLemminxOptions(XMLPreferenceConstants.java:90)
+	at org.eclipse.wildwebdeveloper.xml.internal.XMLLanguageServer.mergeCustomInitializationOptions(XMLLanguageServer.java:163)
+	at org.eclipse.wildwebdeveloper.xml.internal.XMLLanguageServer.getInitializationOptions(XMLLanguageServer.java:158)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$8(LanguageServerWrapper.java:353)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1072)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1705)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1692)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-01-16 17:13:24.397
 !MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
 user global configuration and to define the default location to store repositories: 'C:\Users\admin'. If this is
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
 
-!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:12:07.284
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 17:13:33.957
+!MESSAGE Boot LS startup time from start to initialized: 15347ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 17:13:34.295
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.UbupphzGisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 17:13:34.298
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 17:13:34.306
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 17:13:34.306
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 17:13:34.307
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.UbupphzG => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 17:13:34.307
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 17:13:34.320
+!MESSAGE classpath=39 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 17:13:34.324
+!MESSAGE buffering callback sts4.classpath.UbupphzG middle false 39
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 17:13:34.330
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 17:13:34.351
+!MESSAGE classpath=59 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 17:13:34.371
+!MESSAGE buffering callback sts4.classpath.UbupphzG web false 59
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 17:13:34.371
+!MESSAGE executing callback sts4.classpath.UbupphzG 2 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 17:13:35.266
+!MESSAGE executing callback sts4.classpath.UbupphzG SUCCESS [done]
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:16:55.043
 !MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
 
-!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:12:07.316
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:16:55.063
 !MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
 
-!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:12:12.359
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:16:56.305
 !MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
 
-!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:12:12.368
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:16:56.309
 !MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
 
-!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:12:12.378
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:18:10.185
 !MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
 
-!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:12:14.908
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:18:10.209
 !MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
 
-!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:12:14.920
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 17:18:10.248
 !MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 17:18:18.585
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.UbupphzG
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 17:18:18.585
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.UbupphzG
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 17:18:18.586
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 17:18:18.586
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.UbupphzG => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 18:42:56.772
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 18:42:56.781
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@6e7560d1[org.springframework.tooling.boot.ls:1.32.0.202203131529(id=801)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 18:42:56.782
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 18:43:01.048
+!MESSAGE Boot LS startup time from start to initialized: 4263ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 18:43:01.235
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.SAqWSTvMisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 18:43:01.236
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 18:43:01.236
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 18:43:01.237
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 18:43:01.237
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 18:43:01.237
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.SAqWSTvM => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 18:43:01.240
+!MESSAGE classpath=39 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 18:43:01.242
+!MESSAGE buffering callback sts4.classpath.SAqWSTvM middle false 39
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 18:43:01.243
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 18:43:01.246
+!MESSAGE classpath=59 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 18:43:01.249
+!MESSAGE buffering callback sts4.classpath.SAqWSTvM web false 59
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 18:43:01.249
+!MESSAGE executing callback sts4.classpath.SAqWSTvM 2 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 18:43:01.908
+!MESSAGE executing callback sts4.classpath.SAqWSTvM SUCCESS [done]
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 18:45:36.740
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 18:45:36.782
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 18:51:54.240
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 18:51:54.243
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 18:52:11.462
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 18:52:11.466
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 18:52:39.355
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 18:52:39.358
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 4 0 2023-01-16 18:53:53.859
+!MESSAGE /org/springframework/beans/factory/xml/spring-beans.dtd
+!STACK 0
+java.io.FileNotFoundException: /org/springframework/beans/factory/xml/spring-beans.dtd
+	at org.eclipse.osgi.storage.url.bundleentry.Handler.findBundleEntry(Handler.java:55)
+	at org.eclipse.osgi.storage.url.BundleResourceHandler.openConnection(BundleResourceHandler.java:182)
+	at java.base/java.net.URL.openConnection(URL.java:1099)
+	at org.eclipse.core.internal.boot.PlatformURLConnection.connect(PlatformURLConnection.java:115)
+	at org.eclipse.core.internal.boot.PlatformURLConnection.getURLAsLocal(PlatformURLConnection.java:240)
+	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:37)
+	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:263)
+	at org.eclipse.wildwebdeveloper.xml.internal.ui.preferences.XMLCatalogs.createURI(XMLCatalogs.java:139)
+	at org.eclipse.wildwebdeveloper.xml.internal.ui.preferences.XMLCatalogs.lambda$3(XMLCatalogs.java:69)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:274)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at org.eclipse.wildwebdeveloper.xml.internal.ui.preferences.XMLCatalogs.getWTPExtensionCatalog(XMLCatalogs.java:65)
+	at org.eclipse.wildwebdeveloper.xml.internal.ui.preferences.XMLCatalogs.getAllCatalogs(XMLCatalogs.java:52)
+	at org.eclipse.wildwebdeveloper.xml.internal.ui.preferences.XMLPreferenceConstants.storePreferencesToLemminxOptions(XMLPreferenceConstants.java:90)
+	at org.eclipse.wildwebdeveloper.xml.internal.XMLLanguageServer.mergeCustomInitializationOptions(XMLLanguageServer.java:163)
+	at org.eclipse.wildwebdeveloper.xml.internal.XMLLanguageServer.getInitializationOptions(XMLLanguageServer.java:158)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$8(LanguageServerWrapper.java:353)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1072)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1705)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1692)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 18:54:14.640
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 18:54:14.643
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 18:55:00.141
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 18:55:00.145
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 19:11:05.743
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 19:11:05.746
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 19:19:41.853
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 19:19:41.858
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 19:24:48.660
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 19:24:48.662
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 20:00:46.778
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-16 20:00:46.781
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 20:15:27.843
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.SAqWSTvM
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 20:15:27.844
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.SAqWSTvM
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 20:15:27.844
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-16 20:15:27.845
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.SAqWSTvM => OK

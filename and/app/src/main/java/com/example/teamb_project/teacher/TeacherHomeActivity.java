@@ -8,10 +8,10 @@ import android.view.View;
 
 import com.example.teamb_project.databinding.ActivityTeacherhomeBinding;
 import com.example.teamb_project.student.StudentHomeActivity;
-import com.example.teamb_project.teacher.board.BoardActivity;
+import com.example.teamb_project.board.BoardActivity;
 import com.example.teamb_project.teacher.mylecture.MyLectureActivity;
 import com.example.teamb_project.R;
-import com.example.teamb_project.teacher.notice.NoticeActivity;
+import com.example.teamb_project.notice.NoticeActivity;
 
 public class TeacherHomeActivity extends AppCompatActivity implements View.OnClickListener{
     ActivityTeacherhomeBinding t;
@@ -19,7 +19,7 @@ public class TeacherHomeActivity extends AppCompatActivity implements View.OnCli
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        t=ActivityTeacherhomeBinding.inflate(getLayoutInflater());
+        t= ActivityTeacherhomeBinding.inflate(getLayoutInflater());
         setContentView(t.getRoot());
 
         t.cvMylecture.setOnClickListener(this);

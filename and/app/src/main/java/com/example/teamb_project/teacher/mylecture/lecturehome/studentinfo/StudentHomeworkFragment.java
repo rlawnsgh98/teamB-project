@@ -23,13 +23,14 @@ import java.util.List;
 public class StudentHomeworkFragment extends Fragment {
     int  lecture_code;
     String member_code;
+
+    RecyclerView recv_student_homework;
+    ArrayList<HomeworkVO> list;
+
     public StudentHomeworkFragment(String member_code, int lecture_code) {
         this.member_code = member_code;
         this.lecture_code = lecture_code;
     }
-
-    RecyclerView recv_student_homework;
-    ArrayList<HomeworkVO> list;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

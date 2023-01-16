@@ -15,6 +15,7 @@ import com.google.gson.GsonBuilder;
 
 import vo.AttendanceVO;
 import vo.EnrolmentVO;
+import vo.ExamVO;
 import vo.HomeworkSubmitVO;
 import vo.HomeworkVO;
 import vo.LectureBoardVO;
@@ -102,6 +103,7 @@ public class LectureController {
 			return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(list);
 		}
 		
+		//강의선택->학생선택->학생의 출결 리스트 조회 ->한달 끊어서
 		@RequestMapping(value = "/student_attendance_detail.le", produces ="text/html;charset=UTF-8")
 		public String student_attendance_detail(int lecture_code, int member_code, String start, String end) {
 			
@@ -112,6 +114,18 @@ public class LectureController {
 			map.put("end", end);
 			
 			List<AttendanceVO> list = sql.selectList("lecture.student_attendance_detail", map);
+			return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(list);
+		}
+		
+		//강의선택->학생선택->시험성적 조회
+		@RequestMapping(value = "/student_exam.le", produces ="text/html;charset=UTF-8")
+		public String student_exam(int lecture_code, String member_code) {
+			
+			HashMap<String, Object> map = new HashMap<String, Object>();
+			map.put("member_code", member_code);
+			map.put("lecture_code", lecture_code);
+			
+			List<ExamVO> list = sql.selectList("lecture.student_exam", map);
 			return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(list);
 		}
 		

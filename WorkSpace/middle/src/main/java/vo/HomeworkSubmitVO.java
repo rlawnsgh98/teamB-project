@@ -6,6 +6,7 @@ import java.sql.Date;
 public class HomeworkSubmitVO {
 	private int submit_code, homework_code, member_code, state, subcnt, notcnt;
 	private Date submitdate;
+	
 	public int getSubmit_code() {
 		return submit_code;
 	}

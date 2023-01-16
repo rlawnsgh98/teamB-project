@@ -91,4 +91,13 @@
 		and member_code = #{member_code}
 		and attendance_time between TO_DATE(#{start}, 'yymmdd') and TO_DATE(#{end}, 'yymmdd')
 	</select>
+	
+	<!-- 강의선택->학생선택->시험성적 조회 -->
+	<select id="student_exam" resultType="vo.ExamVO" parameterType="Map">
+		select *
+		from exam  left outer join exam_take 
+		using (exam_code)
+		where lecture_code = #{lecture_code}
+		and member_code = #{member_code}
+	</select>
 </mapper>
