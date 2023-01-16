@@ -12,7 +12,6 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "TeamB-Project"
+rootProject.name = "LMS_KMJ"
 include ':app'
 include ':conn'
-include ':connnect'

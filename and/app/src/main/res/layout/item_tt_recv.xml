@@ -19,13 +19,13 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <TextView
+        <!--<TextView
             android:id="@+id/tt_recv_time"
             style="@style/TEXT_STYLE_2"
             android:text="14:00 ~ 15:00"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"/>-->
         <TextView
             android:id="@+id/tt_recv_content"
             style="@style/TEXT_STYLE_4"

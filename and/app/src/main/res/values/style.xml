@@ -21,4 +21,9 @@
         <item name = "android:textColor">@color/black</item>
         <item name = "android:textStyle">normal</item>
     </style>
+    <style name = "TEXT_STYLE_5">
+        <item name = "android:textSize">30dp</item>
+        <item name = "android:textColor">@color/black</item>
+        <item name = "android:textStyle">bold</item>
+    </style>
 </resources>

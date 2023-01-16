@@ -9,5 +9,5 @@
     app:titleTextColor="@color/white"
     android:background="@color/blue"
     app:navigationIcon="@drawable/ic_baseline_arrow_back_24_white"
-    app:menu="@menu/top_menu_toolbar_main">
+    app:menu="@menu/top_menu_toolbar">
 </androidx.appcompat.widget.Toolbar>
