@@ -154,4 +154,14 @@ public class Common {
         };
         return tw;
     }
+
+//    //새로고침 - activity
+//    public void refresh(Activity activity){
+//        activity.finish();//인텐트 종료
+//        activity.overridePendingTransition(0, 0);//인텐트 효과 없애기
+//        Intent intent = activity.getIntent(); //인텐트
+//        activity.startActivity(intent); //액티비티 열기
+//        activity.overridePendingTransition(0, 0);//인텐트 효과 없애기
+//    }
+
 }

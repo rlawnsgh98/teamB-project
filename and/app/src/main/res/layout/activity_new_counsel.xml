@@ -49,16 +49,15 @@
             android:layout_gravity="center"
             android:layout_marginLeft="5dp"
             />
-        <EditText
-            android:id="@+id/edt_search"
+        <TextView
+            android:id="@+id/tv_teacher_name"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="45dp"
-            android:layout_gravity="center"
+            android:layout_height="wrap_content"
             android:paddingLeft="2dp"
-            android:background="@drawable/edittext_none"
-            android:hint="상담 강사"
-
+            android:text="상담 강사"
+            android:textSize="18dp"
+            android:layout_gravity="center"
             />
     </LinearLayout>
 
@@ -73,6 +72,7 @@
 
     <!-- 제목 입력 -->
     <EditText
+        android:id="@+id/edt_title"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="15dp"
@@ -101,6 +101,7 @@
         >
         <!-- 글 내용 입력 -->
         <EditText
+            android:id="@+id/edt_content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="15dp"

@@ -12,20 +12,15 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.example.conn.CommonMethod;
 import com.example.teamb_project.R;
 import com.example.teamb_project.common.Common;
-import com.example.teamb_project.vo.BoardVO;
 import com.example.teamb_project.vo.CounselVO;
-import com.example.teamb_project.vo.MemberVO;
-import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class CounselAdapter extends RecyclerView.Adapter<CounselAdapter.ViewHolder>{
     LayoutInflater inflater;
@@ -49,11 +44,16 @@ public class CounselAdapter extends RecyclerView.Adapter<CounselAdapter.ViewHold
     @Override
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
 
-
-
         //기본 정보 출력
         h.title.setText(list.get(i).getTitle());
-        h.writedate.setText(list.get(i).getWritedate().toString());
+        h.writedate.setText(list.get(i).getWrite_date().toString());
+        //답변 있으면 빨강 -> 초록
+        if(list.get(i).getAnswer() != null){
+            h.state.setBackgroundColor(ContextCompat.getColor(context, R.color.view_green));
+        }else{
+            h.state.setBackgroundColor(ContextCompat.getColor(context, R.color.view_red));
+        }
+
         if(common.getLoginInfo().getType().equals("STUD")){
             //학생
             h.name.setText(list.get(i).getReceiver());
@@ -68,10 +68,14 @@ public class CounselAdapter extends RecyclerView.Adapter<CounselAdapter.ViewHold
             h.name.setText(list.get(i).getWriter());
         }
 
-        //특정 상담 클릭
+        //특정 item 클릭
         h.detail.setOnClickListener(v -> {
             Intent intent  = new Intent(context, CounselDetailActivity.class);
             intent.putExtra("counsel_code", list.get(i).getCounsel_code());   //클릭한 상담의 id값 필요!
+            intent.putExtra("receiver", list.get(i).getReceiver());
+            intent.putExtra("receiver_name", list.get(i).getReceiver_name());
+            intent.putExtra("answer", list.get(i).getAnswer());
+
             context.startActivity(intent);
         });
 
@@ -87,7 +91,7 @@ public class CounselAdapter extends RecyclerView.Adapter<CounselAdapter.ViewHold
 
     @Override
     public int getItemCount() {
-        return list.size();
+        return 10;
     }
     @Override
     public long getItemId(int i){return i;}

@@ -109,15 +109,6 @@
                         android:visibility="gone"
                         >
                         <TextView
-                            android:id="@+id/tv_modify"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="수정"
-                            android:layout_marginRight="20dp"
-                            android:padding="2dp"
-                            android:textColor="@color/font_blue"
-                            />
-                        <TextView
                             android:id="@+id/tv_delete"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"

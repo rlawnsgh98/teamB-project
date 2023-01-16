@@ -2,13 +2,11 @@ package com.example.teamb_project;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.conn.ApiClient;
-import com.example.conn.CommonMethod;
 import com.example.teamb_project.counselling.CounselActivity;
 import com.example.teamb_project.databinding.ActivityMainBinding;
 import com.example.teamb_project.teacher.board.BoardActivity;
@@ -28,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(b.getRoot());
         getSupportActionBar().hide();
 
-        ApiClient.setBASEURL("http://192.168.0.115/middle/");
+        ApiClient.setBASEURL("http://192.168.1.2/middle/");
 
         b.btnBoard.setOnClickListener(this);
         b.btnNotice.setOnClickListener(this);
@@ -38,17 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         b.btnCounsel.setOnClickListener(this);
 
 
-        //스프링 연동
-        b.tvTest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                new CommonMethod().setParams("pw", "뿅").sendGet("and", (isResult, data) -> {
-                    Log.d(TAG, "보냈다!" + data);
-                });
-
-            }
-        });
 
     }
 
