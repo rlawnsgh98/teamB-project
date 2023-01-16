@@ -184,6 +184,7 @@ public class CommonMethod {
     //Multipart로 데이터 동시에 보내서 요청
     public RequestBody stringToRequest(){
         RequestBody data = null;
+        String test = new Gson().toJson( params.get(params));
         if(!params.isEmpty()){
             data = RequestBody.create(
                     MediaType.parse("multipart/form-data"), new Gson().toJson(

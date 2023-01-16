@@ -102,6 +102,7 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 //검색 버튼 눌렀을때
                 b.ivSearch.setOnClickListener(v -> {
+                    Log.d(TAG, "검색 누름");
                     searchBoard(position, b.edtSearch.getText().toString());
                 });
             }
@@ -129,7 +130,11 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
                 .sendPost("search.bo", (isResult, data) -> {
                     Log.d(TAG, "검색 결과 : " + isResult);
                     //검색한 결과 보이기
-                    selectList();
+                    ArrayList<BoardVO> list = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, new TypeToken<ArrayList<BoardVO>>(){}.getType());
+                    b.linMore.setVisibility(View.GONE);
+                    adapter.list = list;
+                    adapter.notifyDataSetChanged();
+//                    selectList();
                 });
 
     }
@@ -141,6 +146,9 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
                     if(isResult){
                         //리사이클러뷰에 들어갈 데이터 List
                         ArrayList<BoardVO> list = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, new TypeToken<ArrayList<BoardVO>>(){}.getType());
+                        if(list.size()<11){
+                            b.linMore.setVisibility(View.GONE);
+                        }
                         //어댑터 설정
                         adapter.list = list;
                         adapter.notifyDataSetChanged();

@@ -32,6 +32,7 @@ import com.example.teamb_project.common.Common;
 import com.example.teamb_project.databinding.ActivityNewBoardBinding;
 import com.example.teamb_project.vo.BoardFileVO;
 import com.example.teamb_project.vo.BoardVO;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
@@ -43,11 +44,11 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
 
     CommonMethod commonMethod = new CommonMethod();
 
-    ArrayList<String> path_list = null;
-    ArrayList<String> name_list = null;
-    ArrayList<BoardFileVO> file_list = null;
-    NewBoardAdapter adapter = null;
-    BoardFileAdapter file_adapter = null;
+    ArrayList<String> path_list;
+    ArrayList<String> name_list;
+    ArrayList<BoardFileVO> file_list;
+    NewBoardAdapter adapter;
+    BoardFileAdapter file_adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,7 +102,7 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
                 //게시글 insert 처리
                 if(path_list == null){
                     //첨부파일 없는 게시글
-                    commonMethod.setParams("param", vo)
+                    commonMethod.setParams("param", new Gson().toJson(vo))
                             .sendPost("insert.bo", (isResult, data) -> {
                                 if(isResult){
                                     Toast.makeText(this, "글 등록 완료", Toast.LENGTH_SHORT).show();
@@ -166,7 +167,7 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
             allMethod(data, FILE_CODE);
 
             //어댑터
-            file_adapter = new BoardFileAdapter(getLayoutInflater(), file_list);
+            file_adapter = new BoardFileAdapter(getLayoutInflater(), file_list, this);
             b.recvFiles.setAdapter(file_adapter);
             b.recvFiles.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
             file_adapter.notifyDataSetChanged();
@@ -186,7 +187,7 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
     //내보낼 파일 정보 담기
     @RequiresApi(api = Build.VERSION_CODES.O)
     public void allMethod(Intent data, int type){
-        Log.d(TAG, "data 확인 : " + data.getClipData().getItemAt(0).getUri());
+//        Log.d(TAG, "data 확인 : " + data.getClipData().getItemAt(0).getUri());
 
         name_list = new ArrayList<>();
         path_list = new ArrayList<>();  //==> String (path)

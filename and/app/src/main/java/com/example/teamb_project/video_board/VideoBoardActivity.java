@@ -21,7 +21,6 @@ public class VideoBoardActivity extends AppCompatActivity implements View.OnClic
 
         getSupportFragmentManager().beginTransaction().replace(R.id.container, new VideoBoardFragment()).commit();
 
-
     }
 
     @Override

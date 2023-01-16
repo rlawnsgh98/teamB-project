@@ -9,20 +9,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.conn.CommonMethod;
 import com.example.teamb_project.databinding.ActivityVideoDetailBinding;
+import com.example.teamb_project.vo.BoardVO;
 import com.google.android.exoplayer2.ExoPlayer;
 import com.google.android.exoplayer2.MediaItem;
 import com.google.android.exoplayer2.SimpleExoPlayer;
-import com.google.android.youtube.player.YouTubePlayer;
-import com.google.android.youtube.player.YouTubePlayerView;
+import com.google.gson.GsonBuilder;
 
 public class VideoDetailActivity extends AppCompatActivity implements View.OnClickListener {
     ActivityVideoDetailBinding b;
-    YouTubePlayerView yPlayerView;
-    YouTubePlayer yPlayer;
     final String TAG = "log";
-
-//    String API_KEY = "AIzaSyARwP_xzcQggI8KGVkocJdk5W0TdDdk0M8";
-//    String videoId = "ViuzCw1nGvE";
 
     CommonMethod commonMethod = new CommonMethod();
 
@@ -31,22 +26,31 @@ public class VideoDetailActivity extends AppCompatActivity implements View.OnCli
         super.onCreate(savedInstanceState);
         b = ActivityVideoDetailBinding.inflate(getLayoutInflater());
         setContentView(b.getRoot());
-//        getSupportActionBar().hide();
+        getSupportActionBar().hide();
+
+        commonMethod.setParams("board_code", getIntent().getIntExtra("board_code", -1))
+                .sendPost("info.vi", (isResult, data) -> {
+                    Log.d(TAG, "강의영상 data : " + data);
+
+                    //DB 조회해온 강의영상 객체
+                    BoardVO vo = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, BoardVO.class);
+                    b.tvTitle.setText(vo.getTitle());
+                    b.tvContent.setText(vo.getContent());
+                    b.tvWriter.setText(vo.getMember_name());
+                    b.tvWritedate.setText(vo.getWritedate().toString());
+                    b.tvReadcnt.setText(vo.getReadcnt()+"");
+                    vo.getFileList().get(0).getPath();
+
+//                    Uri uri = Uri.parse("http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4");
+                    Uri uri = Uri.parse(vo.getFileList().get(0).getPath());
+
+                    ExoPlayer player = new SimpleExoPlayer.Builder(this).build();
+                    player.setMediaItem(new MediaItem.Builder().setUri(uri).build());
+                    b.videoView.setPlayer( player);
 
 
-        Uri uri = Uri.parse("http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4");
-
-        ExoPlayer player = new SimpleExoPlayer.Builder(this).build();
-        player.setMediaItem(new MediaItem.Builder().setUri(uri).build());
-        b.videoView.setPlayer( player);
-
-        //해당 영상 Uri 조회
-        commonMethod.setParams("board_code", getIntent())
-                .sendPost("selectVideo", (isResult, data) -> {
-                    Log.d(TAG, "가져온 uri : " + data);
-                    Uri uri1 = Uri.parse(data);
-                    //exoPlayer 에 setUri
                 });
+
 
     }
 

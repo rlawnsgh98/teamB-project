@@ -1,9 +1,13 @@
 package com.example.teamb_project.video_board;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -33,11 +37,19 @@ public class VideoBoardAdapter extends RecyclerView.Adapter<VideoBoardAdapter.Vi
     @Override
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
 
+        //특정 강의영상 클릭
+        h.video.setOnClickListener(v -> {
+            Log.d("log", "강의영상 code : " + list.get(i).getBoard_code());
+            Intent intent = new Intent(context, VideoDetailActivity.class);
+            intent.putExtra("board_code", list.get(i).getBoard_code());
+            context.startActivity(intent);
+        });
+
     }
 
     @Override
     public int getItemCount() {
-        return 10;
+        return list.size();
     }
     @Override
     public long getItemId(int i){return i;}
@@ -45,9 +57,11 @@ public class VideoBoardAdapter extends RecyclerView.Adapter<VideoBoardAdapter.Vi
     public int getItemViewType(int i){return i;}
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-
+        LinearLayout video;
         public ViewHolder(@NonNull View v) {
             super(v);
+            video = v.findViewById(R.id.lin_video);
         }
+
     }
 }

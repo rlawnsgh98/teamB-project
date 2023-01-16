@@ -44,9 +44,11 @@ public class BoardDetailActivity extends AppCompatActivity implements View.OnCli
 
         b.ivMore.setVisibility(View.GONE);
         //로그인정보 일치시에만 보이기
-        if(common.getLoginInfo().getMember_code().equals(intent.getIntExtra("writer", -1)+"")){
-            b.ivMore.setVisibility(View.VISIBLE);
-        }
+//        if(common.getLoginInfo().getMember_code().equals(intent.getIntExtra("writer", -1)+"")){
+//            b.ivMore.setVisibility(View.VISIBLE);
+//        }
+
+        Log.d(TAG, "getIntent" + getIntent().getStringExtra("id"));
 
 
         //해당 게시판 정보 조회
@@ -68,11 +70,11 @@ public class BoardDetailActivity extends AppCompatActivity implements View.OnCli
                         List<BoardFileVO> file_list =  vo.getFileList();
 
                         //이미지 어댑터 설정
-                        b.recvImgs.setAdapter(new NewBoardAdapter(getLayoutInflater(), img_list, this));
+                        b.recvImgs.setAdapter(new BoardDetailAdapter(getLayoutInflater(), img_list, this));
                         b.recvImgs.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
 
                         //첨부파일 어댑터 설정
-                        b.recvFiles.setAdapter(new BoardFileAdapter(getLayoutInflater(), file_list));
+                        b.recvFiles.setAdapter(new BoardFileAdapter(getLayoutInflater(), file_list, this));
                         b.recvFiles.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
 
                     }else{

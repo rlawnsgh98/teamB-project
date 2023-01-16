@@ -1,8 +1,6 @@
 package com.example.teamb_project.teacher.board;
 
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,16 +16,13 @@ import com.example.teamb_project.R;
 import com.example.teamb_project.vo.BoardFileVO;
 
 import java.util.List;
-import java.util.Locale;
 
-import retrofit2.http.Url;
-
-public class NewBoardAdapter extends RecyclerView.Adapter<NewBoardAdapter.ViewHolder>{
+public class BoardDetailAdapter extends RecyclerView.Adapter<BoardDetailAdapter.ViewHolder>{
     LayoutInflater inflater;
     List<BoardFileVO> list;
     Context context;
 
-    public NewBoardAdapter(LayoutInflater inflater, List<BoardFileVO> list, Context context) {
+    public BoardDetailAdapter(LayoutInflater inflater, List<BoardFileVO> list, Context context) {
         this.inflater = inflater;
         this.list = list;
         this.context = context;
@@ -42,7 +37,14 @@ public class NewBoardAdapter extends RecyclerView.Adapter<NewBoardAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
 
-        Glide.with(context).load(list.get(i).getPath()).into(h.img);
+        String name = list.get(i).getFile_name().toLowerCase();
+//        Log.d("log", "file_name : " + name);
+        if(name.contains("jpg") || name.contains("png")){
+            Log.d("log", "이미지 Glide");
+            Glide.with(context).load(list.get(i).getPath()).into(h.img);
+        }else{
+            h.img.setVisibility(View.GONE);
+        }
 
     }
 
