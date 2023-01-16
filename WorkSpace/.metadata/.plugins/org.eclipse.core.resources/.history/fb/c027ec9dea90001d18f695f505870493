@@ -1,13 +1,12 @@
-package com.and.middle;
+package test;
 
 public class TestVO {
 	private int iVal;
 	private String sVal;
 	private double dVal;
 	
-	public TestVO() {
-		
-	}
+	public TestVO() {}
+	
 	public TestVO(int iVal, String sVal, double dVal) {
 		super();
 		this.iVal = iVal;
