@@ -24,14 +24,28 @@
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
+		<beans:property name="order" value='2'/>
 	</beans:bean>
 	
-	<context:component-scan base-package="com.and.middle" />
+	<beans:bean class='org.springframework.web.servlet.view.tiles3.TilesViewResolver'>
+		<beans:property name="order" value='1'/>
+	</beans:bean>
+	
+	<beans:bean class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+		<beans:property name="definitions" value="/WEB-INF/views/tiles/config.xml"/>
+	</beans:bean>
+	
+	
+	
+	
+	
+	
+	<context:component-scan base-package="com.and.web" />
 	
 	<!-- 파일업로드를 위한 객체 -->
-	<beans:bean id='multipartResolver' 
+<!-- 	<beans:bean id='multipartResolver' 
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 		<beans:property name="defaultEncoding" value='UTF-8'/>
-	</beans:bean>
+	</beans:bean> -->
 	
 </beans:beans>
