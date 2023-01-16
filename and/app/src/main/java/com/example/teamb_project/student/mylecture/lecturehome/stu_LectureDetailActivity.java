@@ -8,6 +8,7 @@ import android.util.Log;
 
 import com.example.teamb_project.R;
 import com.example.teamb_project.databinding.ActivityStuLectureDetailBinding;
+import com.example.teamb_project.student.mylecture.lecturehome.video_board.VideoBoardFragment;
 import com.google.android.material.tabs.TabLayout;
 
 public class stu_LectureDetailActivity extends AppCompatActivity {
@@ -54,7 +55,7 @@ public class stu_LectureDetailActivity extends AppCompatActivity {
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, new stu_LectureHomeFragment(lecture_code)).commit();
                 break ;
             case 1 :
-                getSupportFragmentManager().beginTransaction().replace(R.id.container, new stu_LectureVideoFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, new VideoBoardFragment(lecture_code)).commit();
                 break ;
 
         }

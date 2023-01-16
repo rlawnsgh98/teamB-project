@@ -13,6 +13,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="c9ac2f6b-cbea-46a3-bd23-39b261bec454" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.bak_0.log" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.bak_0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.log" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.log" afterDir="false" />
@@ -99,6 +100,10 @@
       <change beforePath="$PROJECT_DIR$/../WorkSpace/test/target/test-classes/log4j.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/web/target/m2e-wtp/web-resources/META-INF/maven/co.kr/smart/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/web/target/m2e-wtp/web-resources/META-INF/maven/co.kr/smart/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
+=======
+    <list default="true" id="025a1b72-cbd9-4dee-ad7c-db6d1ccdc453" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/checksums/checksums.lock" afterDir="false" />
+>>>>>>> origin/wonhee_main
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
@@ -106,15 +111,29 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/LoginActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/board/BoardActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/board/BoardActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/video_board/VideoDetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/video_board/VideoDetailActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_video_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_video_detail.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+>>>>>>> origin/wonhee_main
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\admin\.android\avd\Pixel_4_API_32.avd]" />
+=======
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[RFCT610YB8T]" />
+>>>>>>> origin/wonhee_main
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -125,7 +144,13 @@
       <list>
         <option value="layoutResourceFile" />
         <option value="valueResourceFile" />
+<<<<<<< HEAD
         <option value="Class" />
+=======
+        <option value="resourceFile" />
+        <option value="Class" />
+        <option value="layoutResourceFile" />
+>>>>>>> origin/wonhee_main
       </list>
     </option>
   </component>
@@ -152,6 +177,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+<<<<<<< HEAD
     <property name="android-custom-viewC:/Users/admin/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED" value="RecyclerView" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -159,10 +185,42 @@
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+=======
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android-custom-viewC:/Users/admin/AppData/Local/Android/Sdk/sources/android-32/android/view/View.java_SELECTED" value="View" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Study_Android/workspace/LastProject" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+>>>>>>> origin/wonhee_main
   </component>
   <component name="RecentsManager">
+    <key name="android.template.-978635717">
+      <recent name="com.example.teamb_project.counselling" />
+      <recent name="com.example.teamb_project.teacher.notice" />
+      <recent name="com.example.teamb_project.video_board" />
+    </key>
+    <key name="android.template.-1885642989">
+      <recent name="com.example.teamb_project.teacher.board" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+<<<<<<< HEAD
       <recent name="D:\teamB-project-backup\and\app\src\main\java\com\example\teamb_project\vo" />
+=======
+      <recent name="D:\_Project\teamB-project\and\app\src\main\java\com\example\teamb_project\vo" />
+      <recent name="D:\_Project\teamB-project\and\app\src\main\res\layout" />
+      <recent name="D:\teamB-project\and\app\src\main\res\drawable-v24" />
+      <recent name="D:\teamB-project\and\app\src\main\res\menu" />
+      <recent name="D:\_Project\teamB-project\and\app\src\main\java\com\example\teamb_project\conn" />
+    </key>
+    <key name="android.template.1853151360">
+      <recent name="com.example.teamb_project" />
+    </key>
+    <key name="android.template.-1177064240">
+      <recent name="com.example.teamb_project" />
+    </key>
+    <key name="android.template.-2097210264">
+      <recent name="com.example.teamb_project" />
+>>>>>>> origin/wonhee_main
     </key>
   </component>
   <component name="RunManager">
@@ -275,5 +333,31 @@
         <watch expression="2012" language="JAVA" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/teacher/board/NewBoardActivity.java</url>
+          <line>190</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/connnect/src/main/java/com/example/conn/CommonMethod.java</url>
+          <line>150</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/connnect/src/main/java/com/example/conn/CommonMethod.java</url>
+          <line>149</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/connnect/src/main/java/com/example/conn/CommonMethod.java</url>
+          <line>168</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

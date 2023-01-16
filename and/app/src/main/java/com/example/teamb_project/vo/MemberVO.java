@@ -1,11 +1,14 @@
 package com.example.teamb_project.vo;
 
 public class MemberVO {
-    private String id, pw, member_name, gender
+    private String id, pw, member_name, gender, member_code
             , email, birth, phone, post, address
             , type, profilepath, salt;
 
-    private int  member_code, lecture_code;
+    private int lecture_code;
+
+
+
 
     public int getLecture_code() {
         return lecture_code;
@@ -15,11 +18,11 @@ public class MemberVO {
         this.lecture_code = lecture_code;
     }
 
-    public int getMember_code() {
+    public String getMember_code() {
         return member_code;
     }
 
-    public void setMember_code(int member_code) {
+    public void setMember_code(String member_code) {
         this.member_code = member_code;
     }
 

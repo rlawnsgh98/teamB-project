@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -34,7 +35,17 @@ public class StudentAttendanceAdapter extends RecyclerView.Adapter<StudentAttend
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder h, int i) {
+        final int idx = i;
+        h.tv_attendance_date.setText(list.get(idx).getAttendance_time().toString());
+        h.tv_week.setText(list.get(idx).getWeek());
+        if(list.get(idx).getState().equals("OK")){
+            h.tv_state.setText("출석");
+        }else if(list.get(idx).getState().equals("NO")){
+            h.tv_state.setText("결석");
+        }else if(list.get(idx).getState().equals("HF")){
+            h.tv_state.setText("조퇴");
+        }
 
     }
 
@@ -44,8 +55,12 @@ public class StudentAttendanceAdapter extends RecyclerView.Adapter<StudentAttend
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+        TextView tv_attendance_date, tv_week, tv_state;
         public ViewHolder(@NonNull View v) {
             super(v);
+            tv_attendance_date = v.findViewById(R.id.tv_attendance_date);
+            tv_week = v.findViewById(R.id.tv_week);
+            tv_state = v.findViewById(R.id.tv_state);
         }
     }
 }

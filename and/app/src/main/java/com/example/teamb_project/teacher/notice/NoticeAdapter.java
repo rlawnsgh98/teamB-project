@@ -35,7 +35,7 @@ public class NoticeAdapter extends RecyclerView.Adapter<NoticeAdapter.ViewHolder
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
         final int idx = i;
         h.tv_notice_title.setText(list.get(idx).getTitle());
-        h.tv_notice_writedate.setText(list.get(idx).getWritedate());
+        h.tv_notice_writedate.setText(list.get(idx).getWritedate().toString());
         h.tv_notice_content.setText(list.get(idx).getContent());
 
         //공지사항 자세히보기 클릭

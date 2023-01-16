@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.google.gson.Gson;
 
-import member.MemberVO;
+import vo.MemberVO;
 
 @RestController
 public class MemberController {
@@ -33,7 +33,6 @@ public class MemberController {
 		map.put("id", id);
 		map.put("pw", pw);
 		
-		System.out.println("ddd");
 		MemberVO member = sql.selectOne("member.login", map);
 		return new Gson().toJson(member);
 	}

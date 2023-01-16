@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.RestController;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import Enrolment.EnrolmentVO;
-import attendance.AttendanceVO;
-import homework.HomeworkSubmitVO;
-import homework.HomeworkVO;
-import lecture.LectureBoardVO;
-import lecture.LectureVO;
-import member.MemberVO;
+import vo.AttendanceVO;
+import vo.EnrolmentVO;
+import vo.HomeworkSubmitVO;
+import vo.HomeworkVO;
+import vo.LectureBoardVO;
+import vo.LectureVO;
+import vo.MemberVO;
 
 @RestController
 public class LectureController {
@@ -34,7 +34,7 @@ public class LectureController {
 	}
 	//강사 홈 -> 내강의조회 -> 강사가 강의중인 강의목록 조회
 	@RequestMapping(value = "/teacher_lecture_list.le", produces ="text/html;charset=UTF-8")
-	public String teach_list(int id) {
+	public String teach_list(String id) {
 		List<LectureVO> list = sql.selectList("lecture.teach_list", id);
 	
 		return new Gson().toJson(list);

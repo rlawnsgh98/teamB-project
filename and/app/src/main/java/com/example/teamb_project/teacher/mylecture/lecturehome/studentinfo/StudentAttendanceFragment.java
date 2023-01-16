@@ -35,7 +35,8 @@ import java.util.List;
 
 
 public class StudentAttendanceFragment extends Fragment {
-    int member_code, lecture_code;
+    int lecture_code;
+    String member_code;
     AttendanceVO vo;
     TextView tv_ok, tv_no, tv_hf;
     String year, month, start, end;
@@ -43,7 +44,7 @@ public class StudentAttendanceFragment extends Fragment {
     RecyclerView recv_attendance_detail;
     ArrayList<AttendanceVO> list;
 
-    public StudentAttendanceFragment(int member_code, int lecture_code) {
+    public StudentAttendanceFragment(String member_code, int lecture_code) {
         this.member_code = member_code;
         this.lecture_code = lecture_code;
     }

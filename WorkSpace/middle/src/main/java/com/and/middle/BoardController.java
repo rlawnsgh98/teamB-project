@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import board.BoardVO;
-import lecture.LectureVO;
+import vo.BoardVO;
+import vo.LectureVO;
 
 @RestController
 public class BoardController {

@@ -21,8 +21,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StudentHomeworkFragment extends Fragment {
-    int member_code, lecture_code;
-    public StudentHomeworkFragment(int member_code, int lecture_code) {
+    int  lecture_code;
+    String member_code;
+    public StudentHomeworkFragment(String member_code, int lecture_code) {
         this.member_code = member_code;
         this.lecture_code = lecture_code;
     }

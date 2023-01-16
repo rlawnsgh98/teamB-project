@@ -1,30 +1,35 @@
 package com.example.teamb_project.teacher.board;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.widget.NestedScrollView;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ScrollView;
 
-import com.example.teamb_project.MainActivity;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.conn.ApiClient;
+import com.example.conn.CommonMethod;
 import com.example.teamb_project.R;
 import com.example.teamb_project.common.Common;
 import com.example.teamb_project.databinding.ActivityBoardBinding;
+import com.example.teamb_project.vo.BoardVO;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
 
 public class BoardActivity extends AppCompatActivity implements View.OnClickListener{
     ActivityBoardBinding b;
     final String TAG = "log";
+    int cnt = 1;
+    BoardAdapter adapter = null;
+    Common common = new Common();
+    CommonMethod commonMethod = new CommonMethod();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,20 +38,56 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
         setContentView(b.getRoot());
         getSupportActionBar().hide();
 
-        Log.d(TAG, "onCreate: ");
-        Common common = new Common();
+        Log.d(TAG, "onCreate: " + ApiClient.getBASEURL());
 
-        //리사이클러뷰에 들어갈 데이터 List
-        ArrayList<Object> list = new ArrayList<>();
-        for(int i = 0; i < 10; i++){
-            list.add("");
-        }
+        //임시로그인
+        common.setTempLoginInfo();
 
-        //글이 11개 이상일 경우 더보기 보이게 하기
-        b.linMore.setVisibility(View.GONE);
-        if(list.size() > 10){
-            b.linMore.setVisibility(View.VISIBLE);
-        }
+        //'더보기' 클릭시
+        b.linMore.setOnClickListener(v -> {
+            cnt++;
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            AlertDialog ad = builder.create();
+            ad.setMessage("불러오는 중...");
+            ad.show();
+            commonMethod.setParams("cnt", cnt)
+                    .sendPost("cal.bo",(isResult, data) -> {
+                        //댓글 조회
+                        selectList();
+                        //남은 댓글 수
+                        int boardCnt = Integer.parseInt(data.toString());
+                        //남은 댓글 수가 0개 이하면 '더보기' 안보이게
+                        if(boardCnt <= 0){
+                            b.linMore.setVisibility(View.GONE);
+                        }else{
+
+                        }
+                        ad.dismiss();
+                    });
+        });
+
+        // 기본 10개 보이기
+        commonMethod.setParams("cnt", cnt)
+                .sendPost("list.bo", (isResult, data) -> {
+            if(isResult){
+                //리사이클러뷰에 들어갈 데이터 List
+                ArrayList<BoardVO> list = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, new TypeToken<ArrayList<BoardVO>>(){}.getType());
+
+                if(list != null){
+                    if(list.size() == 0){
+                        b.linMore.setVisibility(View.GONE);
+                    }
+                }
+
+                //어댑터 설정
+                adapter = new BoardAdapter(getLayoutInflater(), list, this);
+                b.recvBoard.setAdapter(adapter);
+                b.recvBoard.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
+            }else{
+                Log.d(TAG, " 실패 ");
+            }
+
+        });
 
         //클릭이벤트
         b.ivSearch.setOnClickListener(this);
@@ -54,39 +95,18 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
         b.ivBack.setOnClickListener(this);
         b.ivWrite.setOnClickListener(this);
 
-        //리사이클러뷰 스크롤 이벤트
-        b.scrBoard.setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
-            @Override
-            public void onScrollChange(@NonNull NestedScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
-//               Log.d(TAG, "MaxScrollAmount: "+v.getMaxScrollAmount());   //최대 스크롤값
-//                Log.d(TAG, "scrollY: "+scrollY);   //
-//               if(b.recvBoard.canScrollVertically(1)) Log.d(TAG, "onScrollChange: 최하단ㅇㄴㅇㄹㄴㄷㄹ");;
-                ViewGroup.LayoutParams params = b.scrBoard.getLayoutParams();
-                int contentHeight = b.scrBoard.getHeight();
-                if (scrollY + params.height >= contentHeight) {
-                    // The user has reached the bottom of the scrollable view
-                    Log.d(TAG, "최하단 입니당");
-                }
-            }
-        });
-
-
         //스피너 설정
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
-                this, R.array.spinner_category, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
-        adapter.setDropDownViewResource(androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
-        b.spinner.setAdapter(adapter);
-
+        common.setSpinner(b.spinner, this);
         b.spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                //선택됐을때
+                //검색 버튼 눌렀을때
+                b.ivSearch.setOnClickListener(v -> {
+                    searchBoard(position, b.edtSearch.getText().toString());
+                });
             }
-
             @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                //선택x
-            }
+            public void onNothingSelected(AdapterView<?> parent) {}
         });
 
         //EditText 입력이벤트
@@ -95,9 +115,39 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
         //스크롤 내리면 아이콘 보이게
         common.scrollTop(b.scrBoard, b.cardGoTop);
 
-        //어댑터 설정
-        b.recvBoard.setAdapter(new BoardAdapter(getLayoutInflater(), list, this));
-        b.recvBoard.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
+    }
+
+
+    //검색
+    public void searchBoard(int position, String search){
+        String column = null;
+        if(position==0) column = "title";
+        else if(position==1) column = "content";
+        else if(position==2) column = "member_name";
+        commonMethod.setParams("column", column)
+                .setParams("search", b.edtSearch.getText().toString())
+                .sendPost("search.bo", (isResult, data) -> {
+                    Log.d(TAG, "검색 결과 : " + isResult);
+                    //검색한 결과 보이기
+                    selectList();
+                });
+
+    }
+
+    //게시글 목록 불러오기
+    public void selectList(){
+        new CommonMethod().setParams("cnt", cnt)
+                .sendPost("list.bo", (isResult, data) -> {
+                    if(isResult){
+                        //리사이클러뷰에 들어갈 데이터 List
+                        ArrayList<BoardVO> list = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, new TypeToken<ArrayList<BoardVO>>(){}.getType());
+                        //어댑터 설정
+                        adapter.list = list;
+                        adapter.notifyDataSetChanged();
+                    }else{
+                        Log.d(TAG, " 실패 ");
+                    }
+                });
     }
 
     @Override

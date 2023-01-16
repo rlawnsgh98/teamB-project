@@ -14,6 +14,7 @@
         >
 
         <TextView
+            android:id="@+id/tv_id"
             android:layout_width="65dp"
             android:layout_height="80dp"
             android:text="1"
@@ -23,6 +24,7 @@
             />
 
         <TextView
+            android:id="@+id/tv_title"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -39,6 +41,7 @@
             android:layout_marginRight="15dp"
             >
             <TextView
+                android:id="@+id/tv_writer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="작성자"
@@ -46,6 +49,7 @@
                 android:textAlignment="textEnd"
                 />
             <TextView
+                android:id="@+id/tv_writedate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2023.01.03"

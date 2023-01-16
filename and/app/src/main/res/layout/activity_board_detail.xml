@@ -7,24 +7,28 @@
     tools:context=".teacher.board.BoardDetailActivity"
     android:orientation="vertical">
 
+
     <!-- 상단 바 -->
     <RelativeLayout
+        android:id="@+id/rel_bar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/gray"
+        android:background="@color/blue"
         >
         <ImageView
             android:id="@+id/iv_back"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_24_white"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="자유게시판"
-            android:textSize="20dp"
-            android:textColor="@color/font_black"
+            android:textSize="19dp"
+            android:textColor="@color/white"
             android:layout_centerInParent="true"
             />
     </RelativeLayout>
@@ -38,16 +42,64 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             >
-            <!-- 글 제목 -->
-            <TextView
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="제목제목"
-                android:textColor="@color/font_black"
-                android:textSize="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                />
+                >
+                <!-- 글 제목 -->
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="제목제목"
+                    android:textColor="@color/font_black"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    />
+                <!-- 메뉴 : 수정,삭제 -->
+                <ImageView
+                    android:id="@+id/iv_more"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_more_100"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="20dp"
+                    />
+                <!--수정 삭제-->
+                <RelativeLayout
+                    android:visibility="visible"
+                    android:id="@+id/lin_modify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/white"
+                    android:layout_marginRight="15dp"
+                    android:layout_alignParentBottom="true"
+                    >
+                    <TextView
+                        android:id="@+id/tv_modify"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="수정"
+                        android:padding="5dp"
+                        android:textColor="@color/blue"
+                        android:textSize="16dp"
+                        android:layout_marginRight="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/tv_delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="삭제"
+                        android:padding="5dp"
+                        android:textColor="@color/view_red"
+                        android:textSize="16dp"
+                        android:layout_toRightOf="@+id/tv_modify"
+                        />
+                </RelativeLayout>
+            </RelativeLayout>
 
             <!-- 구분선 -->
             <View
@@ -69,6 +121,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/tv_writer"
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -77,6 +130,7 @@
                     android:textSize="18dp"
                     />
                 <TextView
+                    android:id="@+id/tv_writedate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2023.01.03"
@@ -92,6 +146,7 @@
                     android:textSize="16dp"
                     />
                 <TextView
+                    android:id="@+id/tv_readcnt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="16"
@@ -111,54 +166,34 @@
                 android:background="@color/line_gray"
                 />
 
-            <!-- 첨부된 파일이 있으면 보일 공간 -->
-            <LinearLayout
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recv_files"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
+                />
+            <!--구분선-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                >
-                <!-- 파일 1 -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingLeft="5dp"
-                    >
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:padding="7dp"
-                        android:src="@drawable/attach_file"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="임시 파일명.txt"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="5dp"
-                        android:textColor="@color/font_black"
-                        />
-                </LinearLayout>
-                <!--구분선-->
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/line_gray"
-                    />
-            </LinearLayout>
+                android:background="@color/line_gray"
+                />
 
             <!-- 글 내용 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:layout_marginBottom="50dp"
                 >
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/recv_imgs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
                 <TextView
+                    android:id="@+id/tv_content"
                     android:layout_margin="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -168,6 +203,8 @@
                     android:textSize="16dp"
                     />
             </LinearLayout>
+
+
 
             <!--구분선-->
             <View
@@ -204,18 +241,35 @@
                         />
                 </com.google.android.material.card.MaterialCardView>
                 <!-- 댓글 입력칸 -->
-                <EditText
+                <RelativeLayout
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:hint="댓글 추가..."
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/edittext_none"
-                    android:textSize="16dp"
-                    android:paddingTop="5dp"
-                    android:paddingBottom="5dp"
-                    android:inputType="textMultiLine"
-                    />
+                    android:layout_gravity="center"
+                    >
+                    <EditText
+                        android:id="@+id/edt_reply"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="댓글 추가..."
+                        android:background="@drawable/edittext_none"
+                        android:textSize="16dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:inputType="textMultiLine"
+                        android:layout_centerVertical="true"
+                        />
+                    <ImageView
+                        android:id="@+id/iv_send"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_send_blue"
+                        android:layout_marginRight="10dp"
+                        android:visibility="gone"
+                        />
+                </RelativeLayout>
             </LinearLayout>
 
             <!--구분선-->
@@ -263,6 +317,7 @@
             </LinearLayout>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
+
 
 
 </LinearLayout>

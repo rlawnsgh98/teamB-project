@@ -23,6 +23,12 @@
         />
 
     <Button
+        android:id="@+id/btn_video_board"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="강의 영상 목록" />
+
+    <Button
         android:id="@+id/btn_video"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,6 +40,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="자유게시판 상세 페이지"
+        />
+
+    <Button
+        android:id="@+id/btn_counsel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="상담 목록"
         />
 
     <TextView

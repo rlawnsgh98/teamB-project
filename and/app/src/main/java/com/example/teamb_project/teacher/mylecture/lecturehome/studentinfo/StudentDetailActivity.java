@@ -19,7 +19,8 @@ import com.google.gson.reflect.TypeToken;
 import java.util.List;
 
 public class StudentDetailActivity extends AppCompatActivity {
-    int student_code, lecture_code;
+    int lecture_code;
+    String student_code;
     TabLayout tab_layout;
     TextView tv_student_name, tv_student_phone;
     MemberVO info;
@@ -30,7 +31,7 @@ public class StudentDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_student_detail);
 
         //선택한 학생의 멤버코드
-        student_code = getIntent().getIntExtra("student_code", -1);
+        student_code = getIntent().getStringExtra("student_code");
         lecture_code = getIntent().getIntExtra("lecture_code", -1);
 
 

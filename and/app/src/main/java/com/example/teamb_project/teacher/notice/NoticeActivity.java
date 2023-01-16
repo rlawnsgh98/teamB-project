@@ -1,22 +1,16 @@
 package com.example.teamb_project.teacher.notice;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ScrollView;
 
 import com.example.conn.CommonMethod;
-import com.example.teamb_project.MainActivity;
 import com.example.teamb_project.R;
 import com.example.teamb_project.common.Common;
 import com.example.teamb_project.databinding.ActivityNoticeBinding;
 import com.example.teamb_project.vo.BoardVO;
-import com.example.teamb_project.vo.MemberVO;
-import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
