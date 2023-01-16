@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="and">
+	
+	<!-- 강의영상 uri 조회 -->
+	<select id="selectVideo" resultType='String'>
+	select path from board where board_code = #{board_code}
+	</select>
+	
+	<!-- 자유게시판 검색 -->
+	<select id="search_board" resultType='vo.BoardVO'>
+	select  *
+	from    (select b.*, member_name, row_number() over(order by board_code) no 
+	        from board b inner join member m 
+	        on b.writer = m.member_code 
+	        where category = 'bo')
+	<choose>
+		<when test="column=='title'">where title like '%' || #{search} || '%'</when>
+		<when test="column=='content'">where title like '%' || #{search} || '%'</when>
+		<when test="column=='member_name'">where member_name like '%' || #{search} || '%'</when>
+	</choose>
+	order by no desc
+	</select>
+	
+	<!-- 강의영상 정보 조회 - 특정 강의 카테고리 -->
+	<select id="video_list" resultType='vo.BoardVO'>
+	select  *
+	from    (select b.*, member_name, row_number() over(order by board_code) no 
+        from board b inner join member m 
+        on b.writer = m.member_code 
+        where category = #{category})
+	where no between    (select  max(no)-(9*#{cnt})
+                            from    (select row_number() over(order by board_code) no 
+                            from board
+                            where category = #{category}))
+                and 
+                    (select  max(no)
+                            from    (select row_number() over(order by board_code) no 
+                            from board
+                            where category = #{category}))
+                
+	order by no desc
+	</select>
+	
+	<!-- 강의영상 삭제 -->
+	<delete id="delete_video">
+	delete from board where board_code = #{board_code}	
+	</delete>
+	
+	<!-- 댓글 삭제 -->
+	<delete id="reply_delete">
+	delete from board_reply where reply_code = #{reply_code}
+	</delete>
+	
+	<!-- 댓글 update -->
+	<update id="reply_update">
+	update board_reply set content = #{content}, writedate = sysdate where reply_code = #{reply_code}
+	</update>
+	
+	<!-- 댓글 insert -->
+	<insert id="reply_insert">
+	insert into board_reply (board_code, writer, content)
+	values (#{board_code}, #{writer}, #{content})
+	</insert>
+	
+	<!-- 특정 게시판의 댓글 조회 -->
+	<select id="reply_list" resultType='vo.ReplyVO'>
+	select  *
+	from    (select r.*, member_name, row_number() over(order by reply_code) no 
+        from board_reply r inner join member m 
+        on r.writer = m.member_code 
+        where board_code = #{board_code})
+	where no between    (select  max(no)-(9*#{cnt})
+                            from    (select row_number() over(order by reply_code) no 
+                            from board_reply
+                            where board_code = #{board_code}))
+                and 
+                    (select  max(no)
+                            from    (select row_number() over(order by reply_code) no 
+                            from board_reply
+                            where board_code = #{board_code}))
+	order by no desc
+	</select>
+	
+	<!-- 자유게시판 update -->
+	<update id="board_update">
+	update board set title = #{title}, content = #{content} where board_code = #{board_code}
+	</update>
+	
+	<!-- 자유게시판 삭제 -->
+	<delete id="board_delete">
+	delete from board where board_code = #{board_code}
+	</delete>
+	
+	<!-- 자유게시판 신규 등록 -->
+	<insert id="board_insert">
+	insert into board (title, content, writer, category)
+	values(#{title}, #{content}, #{writer}, 'bo')
+	<selectKey keyProperty="board_code" resultType="integer" order="AFTER">
+			select seq_board.currval from dual
+	</selectKey>
+	</insert>
+	
+	<!-- 첨부파일 insert -->
+	<insert id="file_insert">
+	<foreach item="item" collection="fileList"
+        open="insert all " separator=" " close="select * from dual">
+          into board_file(board_code, file_name, path)
+		  values( #{board_code}, #{item.file_name}, #{item.path} )
+   	</foreach>
+	</insert>
+	
+	<!-- 특정 게시글의 첨부파일 조회 -->
+	<select id="file_info" resultType='vo.BoardFileVO'>
+	select * from board_file where board_code = #{board_code}
+	</select>
+	
+	<!-- 특정 게시판 정보 조회 -->
+	<select id="board_info" resultType='vo.BoardVO'>
+	select  *
+	from    (select b.*, member_name from board b inner join member m on b.writer = m.member_code)
+	where	board_code = #{board_code}
+	</select>
+	
+	<!-- 특정 게시판 조회시 조회수 증가 -->
+	<update id="readcnt">
+	update board set readcnt = readcnt + 1 where board_code = #{board_code}
+	</update>
+	
+	<!-- 자유게시판 조회 -->
+	<select id="board_list" resultType='vo.BoardVO'>
+	select  *
+	from    (select b.*, member_name, row_number() over(order by board_code) no 
+        from board b inner join member m 
+        on b.writer = m.member_code 
+        where category = 'bo')
+	where no between    (select  max(no)-(9*#{cnt})
+                            from    (select row_number() over(order by board_code) no 
+                            from board
+                            where category = 'bo'))
+                and 
+                    (select  max(no)
+                            from    (select row_number() over(order by board_code) no 
+                            from board
+                            where category = 'bo'))
+	order by no desc
+	</select>
+	
+	<!-- 총 게시글 수 조회 -->
+	<select id="cal_board" resultType='integer'>
+	select count(*) from board where category = 'bo'
+	</select>
+	
+	<!-- 해당 게시글의 총 댓글 수 조회 -->
+	<select id="cal_reply" resultType='integer'>
+	select count(*) from board_reply where board_code = #{board_code}
+	</select>
+	
+	<!-- 특정 강의 강의영상 수 조회 -->
+	<select id="cal_video" resultType='integer'>
+	select count(*) from board where category = #{category}
+	</select>
+	
+	<!-- writer -> member_code 조회 -->
+<!-- 	<select id="board_writer" resultType='string'> -->
+<!-- 	select member_name from member where member_code = #{writer} -->
+<!-- 	</select> -->
+	
+</mapper>

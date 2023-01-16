@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">TeamB-Project</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- 게시판 검색필터 -->
+    <string-array name="spinner_category">
+        <item>제목</item>
+        <item>내용</item>
+        <item>작성자</item>
+    </string-array>
+
+    <string name="title_activity_stu_my_lecture">Stu_MyLectureActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+
+    <!-- 상담 강사목록 -->
+    <string-array name="counsel_teacher">
+        <item>김강사</item>
+        <item>나강사</item>
+        <item>박강사</item>
+        <item>최강사</item>
+    </string-array>
+
+    <!-- 수정/삭제 -->
+    <string-array name="edit_delete">
+        <item>수정</item>
+        <item>삭제</item>
+    </string-array>
+
+</resources>
