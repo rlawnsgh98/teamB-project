@@ -21,8 +21,8 @@ public class VideoDetailActivity extends AppCompatActivity implements View.OnCli
     YouTubePlayer yPlayer;
     final String TAG = "log";
 
-    String API_KEY = "AIzaSyARwP_xzcQggI8KGVkocJdk5W0TdDdk0M8";
-    String videoId = "ViuzCw1nGvE";
+//    String API_KEY = "AIzaSyARwP_xzcQggI8KGVkocJdk5W0TdDdk0M8";
+//    String videoId = "ViuzCw1nGvE";
 
     CommonMethod commonMethod = new CommonMethod();
 

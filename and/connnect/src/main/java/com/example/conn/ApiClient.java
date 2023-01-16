@@ -10,7 +10,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class ApiClient {
-    public static String BASEURL = "http://192.168.1.2/middle/";
+    public static String BASEURL = "";
     public static void setBASEURL(String BASEURL) {
         ApiClient.BASEURL = BASEURL;
     }

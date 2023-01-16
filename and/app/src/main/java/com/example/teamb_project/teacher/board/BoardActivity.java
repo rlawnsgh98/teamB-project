@@ -73,8 +73,10 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
                 //리사이클러뷰에 들어갈 데이터 List
                 ArrayList<BoardVO> list = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, new TypeToken<ArrayList<BoardVO>>(){}.getType());
 
-                if(list.size() == 0){
-                    b.linMore.setVisibility(View.GONE);
+                if(list != null){
+                    if(list.size() == 0){
+                        b.linMore.setVisibility(View.GONE);
+                    }
                 }
 
                 //어댑터 설정
