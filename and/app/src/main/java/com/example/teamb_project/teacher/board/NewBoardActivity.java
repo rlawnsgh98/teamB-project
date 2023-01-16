@@ -152,6 +152,7 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent.setType("*/*");
 //        intent.putExtra(Intent.)
+
         intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
         startActivityForResult(Intent.createChooser(intent, "파일 선택"), FILE_CODE);
     }
@@ -193,25 +194,41 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
         path_list = new ArrayList<>();  //==> String (path)
         file_list = new ArrayList<>();   // ==> BoardFileVO
         String realPath = null;
-        for (int i = 0; i < data.getClipData().getItemCount(); i++){
+        if( data.getClipData() == null ){
+            //한개 선택시 바로 mData 로 접근
             BoardFileVO vo = new BoardFileVO();
-            if(type==GALLERY_CODE){
-                //사진처리
-                String name = getImageNameToUri(data.getClipData().getItemAt(i).getUri());
-                name_list.add( name );
-                vo.setFile_name( name );
-                realPath = commonMethod.getRealPath(data.getClipData().getItemAt(i).getUri(), this, type);
-            }else if(type==FILE_CODE){
+            if(type==FILE_CODE){
                 //파일처리
-                realPath = getFilePath(data.getClipData().getItemAt(i).getUri());
-                String name = getFileNameToUri(data.getClipData().getItemAt(i).getUri());
+                realPath = getFilePath(data.getData());
+                String name = getFileNameToUri(data.getData());
                 name_list.add( name );
                 vo.setFile_name( name );
             }
             path_list.add( realPath );
             vo.setPath( realPath );
-
             file_list.add(vo);
+        }else{
+            //여러개 선택시 clipData 있음
+            for (int i = 0; i < data.getClipData().getItemCount(); i++){
+                BoardFileVO vo = new BoardFileVO();
+                if(type==GALLERY_CODE){
+                    //사진처리
+                    String name = getImageNameToUri(data.getClipData().getItemAt(i).getUri());
+                    name_list.add( name );
+                    vo.setFile_name( name );
+                    realPath = commonMethod.getRealPath(data.getClipData().getItemAt(i).getUri(), this, type);
+                }else if(type==FILE_CODE){
+                    //파일처리
+                    realPath = getFilePath(data.getClipData().getItemAt(i).getUri());
+                    String name = getFileNameToUri(data.getClipData().getItemAt(i).getUri());
+                    name_list.add( name );
+                    vo.setFile_name( name );
+                }
+                path_list.add( realPath );
+                vo.setPath( realPath );
+
+                file_list.add(vo);
+            }
         }
     }
 

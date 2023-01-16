@@ -39,7 +39,6 @@ public class VideoDetailActivity extends AppCompatActivity implements View.OnCli
                     b.tvWriter.setText(vo.getMember_name());
                     b.tvWritedate.setText(vo.getWritedate().toString());
                     b.tvReadcnt.setText(vo.getReadcnt()+"");
-                    vo.getFileList().get(0).getPath();
 
 //                    Uri uri = Uri.parse("http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4");
                     Uri uri = Uri.parse(vo.getFileList().get(0).getPath());
