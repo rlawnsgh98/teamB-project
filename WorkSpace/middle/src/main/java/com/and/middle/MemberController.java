@@ -32,7 +32,8 @@ public class MemberController {
 		HashMap<String,String> map = new HashMap<String, String>();
 		map.put("id", id);
 		map.put("pw", pw);
-	
+		
+		System.out.println("ddd");
 		MemberVO member = sql.selectOne("member.login", map);
 		return new Gson().toJson(member);
 	}

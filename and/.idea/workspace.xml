@@ -15,23 +15,12 @@
   <component name="ChangeListManager">
     <list default="true" id="c9ac2f6b-cbea-46a3-bd23-39b261bec454" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.log" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.core.resources/.projects/.org.eclipse.egit.core.cmp/.location" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.core.resources/.projects/.org.eclipse.egit.core.cmp/.location" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.core.resources/.projects/Servers/org.eclipse.egit.core/GitProjectData.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.core.resources/.projects/Servers/org.eclipse.egit.core/GitProjectData.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.core.resources/.projects/middle/.indexes/af/history.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.core.resources/.projects/middle/.indexes/e4/b9/22/2/history.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.core.resources/.projects/middle/.indexes/e4/b9/22/81/d7/6b/history.index" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.core.resources/.projects/middle/.indexes/e4/b9/22/81/d7/6b/history.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.core.resources/.projects/middle/.indexes/e4/b9/22/de/history.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.core.resources/.projects/middle/.indexes/e4/b9/db/32/history.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.core.resources/.projects/middle/.indexes/e4/b9/db/56/history.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.core.resources/.projects/middle/.indexes/history.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.core.resources/.projects/middle/.markers" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.core.resources/.projects/middle/.indexes/e4/b9/22/81/d7/6b/history.index" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.core.resources/.projects/middle/org.eclipse.egit.core/GitProjectData.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.core.resources/.projects/middle/org.eclipse.egit.core/GitProjectData.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.egit.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.egit.core.prefs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.debug.core/.launches/Tomcat v9.0 Server at localhost.launch" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.debug.core/.launches/Tomcat v9.0 Server at localhost.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.jdt.core/1448863697.index" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.jdt.core/1448863697.index" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" afterDir="false" />
@@ -39,91 +28,64 @@
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.jdt.launching/.install.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.jdt.launching/.install.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/0.png" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/8.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2862305764.index" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2862305764.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/_10.cfe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/_10.cfs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/_10.si" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.core/nexus/7cc749b93e389d5594f16b5293f8b29f/segments_2i" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_5z.fdt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_5z.fdx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_5z.fnm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_5z.nvd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_5z.nvm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_5z.si" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_5z_1.liv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_5z_Lucene50_0.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_5z_Lucene50_0.pos" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_5z_Lucene50_0.tim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_5z_Lucene50_0.tip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_61.cfe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_61.cfs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_61.si" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_63.cfe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_63.cfs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_63.si" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_64.cfe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_64.cfs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_64.si" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_65.cfe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_65.cfs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_65.si" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.core/workspaceState.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.core/workspaceState.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.core/workspacestate.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.core/workspacestate.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.jdt/middle.container" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.jdt/middle.container" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.jsdt.core/externalLibsTimeStamps" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.jsdt.core/externalLibsTimeStamps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes/2013465274.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes/3705698301.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes/3986990737.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes/75631704.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes/991161325.index" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes/savedIndexNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes/savedIndexNames.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.jsdt.core/variablesAndContainers.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.jsdt.core/variablesAndContainers.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.server.core/publish/publish0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.server.core/publish/publish0.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/conf/server.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/conf/server.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/publish.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/publish.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/middle/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/middle/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/middle/META-INF/maven/co.kr/smart/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/middle/META-INF/maven/co.kr/smart/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/middle/WEB-INF/classes/com/and/middle/LMSController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/middle/WEB-INF/classes/lecture/LectureBoardVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/middle/WEB-INF/classes/lecture/LectureBoardVO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/middle/WEB-INF/classes/lecture/LectureVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/middle/WEB-INF/classes/lecture/LectureVO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/middle/WEB-INF/classes/lms_member/MemberVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/middle/WEB-INF/classes/lms_member/TESTMemberVO.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/middle/WEB-INF/classes/member/MemberVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/middle/WEB-INF/classes/member/MemberVO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/middle/WEB-INF/classes/sqlmap/lecture-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/middle/WEB-INF/classes/sqlmap/lecture-mapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.sse.core/task-tags.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.sse.core/task-tags.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.validation/dep.index" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.validation/dep.index" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.xml.core/system_catalog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.eclipse.wst.xml.core/system_catalog.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.springsource.ide.eclipse.dashboard.ui/feeds/dashboard.feeds.blogs/-549550714.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/.plugins/org.springsource.ide.eclipse.dashboard.ui/feeds/dashboard.feeds.blogs/-549550714.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/.metadata/version.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/.metadata/version.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/Servers/Tomcat v9.0 Server at localhost-config/server.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/Servers/Tomcat v9.0 Server at localhost-config/server.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/src/main/java/com/and/middle/LMSController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/src/main/java/lms_member/MemberVO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/src/main/java/lms_member/TESTMemberVO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/target/classes/com/and/middle/LMSController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/target/classes/lecture/LectureBoardVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/middle/target/classes/lecture/LectureBoardVO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/target/classes/lecture/LectureVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/middle/target/classes/lecture/LectureVO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/target/classes/lms_member/MemberVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/target/classes/lms_member/TESTMemberVO.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/target/classes/member/MemberVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/middle/target/classes/member/MemberVO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/middle/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/target/m2e-wtp/web-resources/META-INF/maven/co.kr/smart/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/middle/target/m2e-wtp/web-resources/META-INF/maven/co.kr/smart/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/target/m2e-wtp/web-resources/META-INF/maven/com.and/middle/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/middle/target/m2e-wtp/web-resources/META-INF/maven/com.and/middle/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/target/m2e-wtp/web-resources/META-INF/maven/com.test/test/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../WorkSpace/test/target/m2e-wtp/web-resources/META-INF/maven/com.test/test/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/.settings/org.eclipse.wst.common.component" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/.settings/org.eclipse.wst.common.project.facet.core.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/.settings/org.eclipse.wst.validation.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/.settings/org.springframework.ide.eclipse.beans.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/.settings/org.springframework.ide.eclipse.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/.springBeans" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/src/main/java/com/kym/test/HomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/src/main/java/com/test/kjh/HomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/src/main/java/com/test/test/HomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/src/main/resources/log4j.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/src/main/webapp/WEB-INF/spring/root-context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/src/main/webapp/WEB-INF/views/home.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/src/test/resources/log4j.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/target/classes/com/kym/test/HomeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/target/classes/com/test/kjh/HomeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/target/classes/com/test/test/HomeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/target/classes/log4j.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/target/m2e-wtp/web-resources/META-INF/maven/com.kym/test/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/target/m2e-wtp/web-resources/META-INF/maven/com.kym/test/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/target/m2e-wtp/web-resources/META-INF/maven/com.test/test/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/target/m2e-wtp/web-resources/META-INF/maven/com.test/test/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WorkSpace/test/target/test-classes/log4j.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/teamb_project/LoginActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
@@ -132,7 +94,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\hoho0\.android\avd\Pixel_4_API_32.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\admin\.android\avd\Pixel_4_API_32.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -173,6 +135,9 @@
     <property name="android-custom-viewC:/Users/admin/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED" value="RecyclerView" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="RecentsManager">
