@@ -1,32 +1,211 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".TTActivity">
     <!--상단바-->
-    <include layout="@layout/top_toolbar"/>
-    <!--시간표-->
-    <androidx.core.widget.NestedScrollView
+    <include layout="@layout/tt_toolbar"/>
+    <TableLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
+        android:layout_height="wrap_content">
+        <TableRow
             android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:background="@drawable/make_box_white"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="교시"
+                style="@style/TEXT_STYLE_1"
+                android:layout_width="0dp"
+                android:layout_height="50dp"/>
+            <TextView
+                android:background="@drawable/make_box_white"
+                android:layout_weight="1"
+                android:gravity="center"
+                style="@style/TEXT_STYLE_1"
+                android:text="월"
+                android:layout_width="0dp"
+                android:layout_height="50dp"/>
+            <TextView
+                android:background="@drawable/make_box_white"
+                android:layout_weight="1"
+                android:gravity="center"
+                style="@style/TEXT_STYLE_1"
+                android:text="화"
+                android:layout_width="0dp"
+                android:layout_height="50dp"/>
+            <TextView
+                android:background="@drawable/make_box_white"
+                android:layout_weight="1"
+                android:gravity="center"
+                style="@style/TEXT_STYLE_1"
+                android:text="수"
+                android:layout_width="0dp"
+                android:layout_height="50dp"/>
+            <TextView
+                android:background="@drawable/make_box_white"
+                android:layout_weight="1"
+                android:gravity="center"
+                style="@style/TEXT_STYLE_1"
+                android:text="목"
+                android:layout_width="0dp"
+                android:layout_height="50dp"/>
+            <TextView
+                android:background="@drawable/make_box_white"
+                android:layout_weight="1"
+                android:gravity="center"
+                style="@style/TEXT_STYLE_1"
+                android:text="금"
+                android:layout_width="0dp"
+                android:layout_height="50dp"/>
+        </TableRow>
+    </TableLayout>
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/ln_layout0"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:background="#BABABA"
             android:layout_height="match_parent"
-            android:orientation="vertical">
-            <CalendarView
-                android:layout_width="match_parent"
-                android:layout_height="300dp"/>
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/tt_recv_list"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-            <include layout="@layout/card_banner"/>
-        </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+            android:orientation="vertical" />
+        <LinearLayout
+            android:id="@+id/ln_layout1"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+        <LinearLayout
+            android:background="#BABABA"
+            android:id="@+id/ln_layout2"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+        <LinearLayout
+            android:id="@+id/ln_layout3"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+        <LinearLayout
+            android:background="#BABABA"
+            android:id="@+id/ln_layout4"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+        <LinearLayout
+            android:id="@+id/ln_layout5"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+    </LinearLayout>
+    <View
+        android:background="@color/dark_gray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/ln_layout6"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:background="#BABABA"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+        <LinearLayout
+            android:id="@+id/ln_layout7"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+        <LinearLayout
+            android:background="#BABABA"
+            android:id="@+id/ln_layout8"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+        <LinearLayout
+            android:id="@+id/ln_layout9"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+        <LinearLayout
+            android:background="#BABABA"
+            android:id="@+id/ln_layout10"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+        <LinearLayout
+            android:id="@+id/ln_layout11"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+    </LinearLayout>
+    <View
+        android:background="@color/dark_gray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/ln_layout12"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:background="#BABABA"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+        <LinearLayout
+            android:id="@+id/ln_layout13"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+        <LinearLayout
+            android:background="#BABABA"
+            android:id="@+id/ln_layout14"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+        <LinearLayout
+            android:id="@+id/ln_layout15"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+        <LinearLayout
+            android:background="#BABABA"
+            android:id="@+id/ln_layout16"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+        <LinearLayout
+            android:id="@+id/ln_layout17"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+    </LinearLayout>
 </LinearLayout>

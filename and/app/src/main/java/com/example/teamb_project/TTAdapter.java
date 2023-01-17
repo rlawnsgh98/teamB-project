@@ -8,11 +8,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.teamb_project.vo.BoardVO;
+
+import java.util.ArrayList;
+
 public class TTAdapter extends RecyclerView.Adapter<TTAdapter.ViewHolder>{
     LayoutInflater inflater;
+    ArrayList<BoardVO> aclist;
 
-    public TTAdapter(LayoutInflater inflater) {
+    public TTAdapter(LayoutInflater inflater, ArrayList<BoardVO> aclist) {
         this.inflater = inflater;
+        this.aclist = aclist;
     }
 
     @NonNull
@@ -26,28 +32,24 @@ public class TTAdapter extends RecyclerView.Adapter<TTAdapter.ViewHolder>{
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.tt_recv_date.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-        holder.tt_recv_date.setText("-월 -일 (-)");
-        holder.tt_recv_time.setText("-:-- ~ -:--");
-        holder.tt_recv_content.setText("쉽니다-- -- --");
+        holder.tt_recv_date.setText(aclist.get(position).getWritedate().toString());
+        //holder.tt_recv_date.setText(aclist.get(position).getWritedate());
+        //holder.tt_recv_time.setText(time);
+        holder.tt_recv_content.setText(aclist.get(position).getContent());
     }
 
     @Override
     public int getItemCount() {
-        return 15;
+        return (null != aclist ? aclist.size() : 0);
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         TextView tt_recv_date, tt_recv_time, tt_recv_content;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tt_recv_date = itemView.findViewById(R.id.tt_recv_date);
-            tt_recv_time = itemView.findViewById(R.id.tt_recv_time);
+            //tt_recv_time = itemView.findViewById(R.id.tt_recv_time);
             tt_recv_content = itemView.findViewById(R.id.tt_recv_content);
         }
     }

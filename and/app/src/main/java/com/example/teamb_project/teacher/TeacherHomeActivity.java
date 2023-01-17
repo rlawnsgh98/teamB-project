@@ -1,12 +1,24 @@
 package com.example.teamb_project.teacher;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
+import android.widget.TextView;
 
+import com.example.teamb_project.LoginActivity;
+import com.example.teamb_project.TTActivity;
+import com.example.teamb_project.counselling.CounselActivity;
 import com.example.teamb_project.databinding.ActivityTeacherhomeBinding;
+import com.example.teamb_project.drawer.AcCalendarActivity;
+import com.example.teamb_project.drawer.AcInfoActivity;
+import com.example.teamb_project.drawer.MyInfoActivity;
 import com.example.teamb_project.student.StudentHomeActivity;
 import com.example.teamb_project.board.BoardActivity;
 import com.example.teamb_project.teacher.mylecture.MyLectureActivity;
@@ -15,6 +27,10 @@ import com.example.teamb_project.notice.NoticeActivity;
 
 public class TeacherHomeActivity extends AppCompatActivity implements View.OnClickListener{
     ActivityTeacherhomeBinding t;
+    DrawerLayout drawerLayout;
+    View drawerView;
+    TextView myInfo_tv,acCalendar_tv,acInfo_tv,logout_tv;
+    Toolbar top_toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +39,11 @@ public class TeacherHomeActivity extends AppCompatActivity implements View.OnCli
         setContentView(t.getRoot());
         getSupportActionBar().hide();
 
+        top_toolbar = findViewById(R.id.top_toolbar);
+        myInfo_tv = findViewById(R.id.myInfo_tv);
+        acCalendar_tv = findViewById(R.id.acCalendar_tv);
+        acInfo_tv = findViewById(R.id.acInfo_tv);
+        logout_tv = findViewById(R.id.logout_tv);
         t.cvMylecture.setOnClickListener(this);
         t.cvNotice.setOnClickListener(this);
         t.cvBoard.setOnClickListener(this);
@@ -30,10 +51,63 @@ public class TeacherHomeActivity extends AppCompatActivity implements View.OnCli
         t.cvAttendance.setOnClickListener(this);
         t.cvSchedule.setOnClickListener(this);
 
+        // 상단바
+        top_toolbar.setTitle("홈");
+        top_toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                if (item.getItemId() == R.id.top_toolbar_more) {
+                    drawerLayout.openDrawer(drawerView);
+                }
+                return true;
+            }
+        });
+
+
         t.btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(v.getContext(), StudentHomeActivity.class));
+            }
+        });
+
+        // 서랍
+        drawerLayout.setDrawerListener(listener);
+        drawerView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return true;
+            }
+        });
+        // 서랍 목록 - 내 정보, 학원 일정, 학원 소개, 로그아웃
+        myInfo_tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TeacherHomeActivity.this, MyInfoActivity.class);
+                startActivity(intent);
+            }
+        });
+        acCalendar_tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TeacherHomeActivity.this, AcCalendarActivity.class);
+                startActivity(intent);
+            }
+        });
+        acInfo_tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TeacherHomeActivity.this, AcInfoActivity.class);
+                startActivity(intent);
+            }
+        });
+        logout_tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TeacherHomeActivity.this, LoginActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                startActivity(intent);
             }
         });
     }
@@ -53,12 +127,38 @@ public class TeacherHomeActivity extends AppCompatActivity implements View.OnCli
             Intent intent = new Intent(this, BoardActivity.class);
             startActivity(intent);
         }else if(v.getId()==R.id.cv_consult){
-
+            //상담화면 이동
+            Intent intent = new Intent(TeacherHomeActivity.this, CounselActivity.class);
+            startActivity(intent);
         }else if(v.getId()==R.id.cv_attendance){
 
         }
         else if(v.getId()==R.id.cv_schedule){
-
+            Intent intent = new Intent(TeacherHomeActivity.this, TTActivity.class);
+            startActivity(intent);
         }
     }
+
+    // 서랍
+    DrawerLayout.DrawerListener listener = new DrawerLayout.DrawerListener() {
+        @Override
+        public void onDrawerSlide(@NonNull View drawerView, float slideOffset) {
+
+        }
+
+        @Override
+        public void onDrawerOpened(@NonNull View drawerView) {
+
+        }
+
+        @Override
+        public void onDrawerClosed(@NonNull View drawerView) {
+
+        }
+
+        @Override
+        public void onDrawerStateChanged(int newState) {
+
+        }
+    };
 }

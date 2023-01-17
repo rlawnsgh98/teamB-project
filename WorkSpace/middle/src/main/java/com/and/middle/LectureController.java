@@ -129,4 +129,14 @@ public class LectureController {
 			return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(list);
 		}
 		
+		//회원 상세정보
+	    @RequestMapping(value = "/member_info", produces ="text/html;charset=UTF-8")
+	    public String student_info(int member_code) {
+	        MemberVO vo = sql.selectOne("lecture.member_info", member_code);
+
+	        return new Gson().toJson(vo);
+	    }
+	    
+	    
+		
 }

@@ -18,7 +18,7 @@ import com.example.teamb_project.R;
 import com.example.teamb_project.vo.MemberVO;
 
 public class Common {
-    static MemberVO loginInfo;
+    public static MemberVO loginInfo;
 
     //로그인 정보 저장
     public void setLoginInfo(MemberVO vo){

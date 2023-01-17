@@ -12,20 +12,25 @@ import android.widget.Toast;
 
 import com.example.conn.ApiClient;
 import com.example.conn.CommonMethod;
+import com.example.teamb_project.common.Common;
 import com.example.teamb_project.student.StudentHomeActivity;
 import com.example.teamb_project.teacher.TeacherHomeActivity;
 import com.example.teamb_project.vo.MemberVO;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 public class LoginActivity extends AppCompatActivity {
     TextView join_tv,login_tv,find_tv;
     TextInputEditText id_et, pw_et;
 
+    Common common = new Common();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        getSupportActionBar().hide();
 
         // IP 설정
         ApiClient.setBASEURL("http://192.168.0.115/middle/");
@@ -42,12 +47,12 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 new CommonMethod().setParams("id", id_et.getText().toString())
                         .setParams("pw", pw_et.getText().toString())
-                        .sendPost("login", new CommonMethod.CallBackResult() {
+                        .sendPost("login.mj", new CommonMethod.CallBackResult() {
                             @Override
                             public void result(boolean isResult, String data) {
                                 if(isResult) {
-                                    MemberVO vo = new Gson().fromJson(data, MemberVO.class);
-
+                                    MemberVO vo = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, MemberVO.class);
+                                    common.loginInfo = vo;
                                     if (vo != null) {
                                         if(vo.getType().equals("STUD")){
                                             Intent intent = new Intent(LoginActivity.this, StudentHomeActivity.class);

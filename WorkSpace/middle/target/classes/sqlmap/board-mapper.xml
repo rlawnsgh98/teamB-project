@@ -10,5 +10,13 @@
 	and lecture_code is null
 	order by writedate desc
 </select>
-	
+
+<!-- board 날짜별 정보 조회 -->
+<select id="list" resultType="vo.BoardVO">
+select writedate,title,content
+from board
+where category = 'no'
+and to_char(writedate,'yyyy-MM-dd') = #{writedate}
+</select>
+
 </mapper>

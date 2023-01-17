@@ -122,6 +122,24 @@ public class CommonMethod {
     }
 
 
+    public void sendPostFile(String url, String filePath, CallBackResult callback){
+        ApiInterface apiInterface = new ApiClient().getApiClient().create(ApiInterface.class);
+        Call<String> apiTest = apiInterface.connFilePost(url, stringToRequest(), pathToPartFile(filePath, "", 1000));
+
+        apiTest.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+                callback.result(true, response.body());
+            }
+
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+                callback.result(false, "");
+                t.printStackTrace(); // <= 어떤 오류인지 로그에 찍히게 처리
+            }
+        });
+    }//sendPostFile
+    //파일 이름 필요한  sendPostFile
     public void sendPostFile(String url, String filepath, String filename, int type, CallBackResult callback){
 
         ApiInterface apiInterface = new ApiClient().getApiClient().create(ApiInterface.class);

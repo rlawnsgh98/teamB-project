@@ -100,4 +100,11 @@
 		where lecture_code = #{lecture_code}
 		and member_code = #{member_code}
 	</select>
+	
+	<!-- 회원 상세정보 조회 -->
+	<select id="member_info" resultType="vo.MemberVO">
+	    select *
+	    from member
+	    where member_code = #{member_code}
+	</select>
 </mapper>

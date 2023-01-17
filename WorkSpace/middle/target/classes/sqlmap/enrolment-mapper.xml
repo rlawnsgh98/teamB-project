@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lecture">
+
+<!-- 해당 강사의 일주일 시간표 출력 -->
+<select id="list" resultType="vo.EnrolmentVO">
+select to_char(dates,'dy') vDay, L.lecture_name, L.room_code
+,R.room_name, L.timetable_code 
+from(
+select trunc(sysdate,'iw') dates from dual 
+union 
+select trunc(sysdate,'iw')+1 dates from dual 
+union 
+select trunc(sysdate,'iw')+2 dates from dual 
+union 
+select trunc(sysdate,'iw')+3 dates from dual 
+union
+select trunc(sysdate,'iw')+4 dates from dual)T 
+left outer join lecture L 
+on T.dates between L.startdate and L.enddate 
+left outer join room R
+on L.room_code = R.room_code
+where teacher_code = #{id} 
+order by dates, timetable_code asc
+</select>
+<select id="st_list" resultType="vo.EnrolmentVO">
+select to_char(dates,'dy') vDay, L.teacher_code,
+L.lecture_name,R.room_name,
+L.timetable_code 
+from(
+    select trunc(sysdate,'iw') dates from dual
+    union 
+    select trunc(sysdate,'iw')+1 dates from dual 
+    union 
+    select trunc(sysdate,'iw')+2 dates from dual 
+    union 
+    select trunc(sysdate,'iw')+3 dates from dual 
+    union
+    select trunc(sysdate,'iw')+4 dates from dual)T 
+    left outer join lecture L 
+    on T.dates between L.startdate and L.enddate 
+    left outer join room R
+    on L.room_code = R.room_code
+where lecture_code
+in (select lecture_code 
+    from enrolment
+    where member_code = #{member_code})
+order by dates, timetable_code asc
+</select>
+
+</mapper>

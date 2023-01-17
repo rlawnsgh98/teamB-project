@@ -42,7 +42,8 @@ public class StudentDetailActivity extends AppCompatActivity {
         new CommonMethod().setParams("member_code", student_code).sendPost("member_info", new CommonMethod.CallBackResult() {
             @Override
             public void result(boolean isResult, String data) {
-                info = new Gson().fromJson(data, new TypeToken<MemberVO>(){}.getType());
+//                info = new Gson().fromJson(data, new TypeToken<MemberVO>(){}.getType());
+                info = new Gson().fromJson(data, MemberVO.class);
                 tv_student_name.setText(info.getMember_name());
                 tv_student_phone.setText(info.getPhone());
             }
