@@ -1,5 +1,6 @@
 package com.example.teamb_project.student.mylecture.lecturehome.video_board;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -27,17 +28,16 @@ import java.util.ArrayList;
 public class VideoBoardFragment extends Fragment implements View.OnClickListener{
     FragmentVideoBoardBinding b;
     VideoBoardAdapter adapter;
+    int lecture_code;
+    public VideoBoardFragment(int lecture_code){
+        this.lecture_code = lecture_code;
+    }
+    public VideoBoardFragment(){}
 
     //강의카테고리 - 테스트
     String category = "test";
 
     int cnt = 1;
-
-    public VideoBoardFragment(int lecture_code) {
-        this.lecture_code = lecture_code;
-    }
-
-    int lecture_code;
     final String TAG = "log";
 
     ArrayList<BoardVO> board_list;
@@ -131,9 +131,9 @@ public class VideoBoardFragment extends Fragment implements View.OnClickListener
                     .sendPost("cal.vi",(isResult, data) -> {
                         //댓글 조회
                         selectList();
-                        //남은 댓글 수
+                        //남은 글 수
                         int boardCnt = Integer.parseInt(data.toString());
-                        //남은 댓글 수가 0개 이하면 '더보기' 안보이게
+                        //남은 글 수가 0개 이하면 '더보기' 안보이게
                         if(boardCnt <= 0){
                             b.linMore.setVisibility(View.GONE);
                         }else{
@@ -169,7 +169,7 @@ public class VideoBoardFragment extends Fragment implements View.OnClickListener
     //리사이클러뷰 갱신
     public void selectList(){
         new CommonMethod().setParams("cnt", cnt)
-                .sendPost("list.bo", (isResult, data) -> {
+                .sendPost("list.vi", (isResult, data) -> {
                     if(isResult){
                         //리사이클러뷰에 들어갈 데이터 List
                         ArrayList<BoardVO> list = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, new TypeToken<ArrayList<BoardVO>>(){}.getType());

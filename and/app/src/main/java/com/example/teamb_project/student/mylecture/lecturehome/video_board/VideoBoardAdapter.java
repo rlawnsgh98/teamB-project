@@ -2,10 +2,11 @@ package com.example.teamb_project.student.mylecture.lecturehome.video_board;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -34,23 +35,20 @@ public class VideoBoardAdapter extends RecyclerView.Adapter<VideoBoardAdapter.Vi
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
-        final int idx = i;
-        //h.tv_title.setText(list.get(idx).getTitle());
 
-        h.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, VideoDetailActivity.class);
-                intent.putExtra("board_code", list.get(idx).getBoard_code());
-                context.startActivity(intent);
-            }
+        //특정 강의영상 클릭
+        h.video.setOnClickListener(v -> {
+            Log.d("log", "강의영상 code : " + list.get(i).getBoard_code());
+            Intent intent = new Intent(context, VideoDetailActivity.class);
+            intent.putExtra("board_code", list.get(i).getBoard_code());
+            context.startActivity(intent);
         });
 
     }
 
     @Override
     public int getItemCount() {
-        return 10;
+        return list.size();
     }
     @Override
     public long getItemId(int i){return i;}
@@ -58,13 +56,11 @@ public class VideoBoardAdapter extends RecyclerView.Adapter<VideoBoardAdapter.Vi
     public int getItemViewType(int i){return i;}
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tv_title, tv_writer, tv_writedate;
+        LinearLayout video;
         public ViewHolder(@NonNull View v) {
             super(v);
-            tv_title = v.findViewById(R.id.tv_title);
-            tv_writer = v.findViewById(R.id.tv_writer);
-            tv_writedate = v.findViewById(R.id.tv_writedate);
-
+            video = v.findViewById(R.id.lin_video);
         }
+
     }
 }

@@ -12,11 +12,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.teamb_project.R;
-import com.example.teamb_project.common.Common;
 import com.example.teamb_project.common.CommonMethod;
-import com.example.teamb_project.databinding.FragmentStuLectureHomeBinding;
 import com.example.teamb_project.vo.LectureBoardVO;
-import com.example.teamb_project.vo.LectureVO;
 import com.example.teamb_project.vo.MemberVO;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -27,7 +24,7 @@ import java.util.List;
 
 
 public class stu_LectureHomeFragment extends Fragment {
-   int lecture_code;
+    int lecture_code;
     public stu_LectureHomeFragment(int lecture_code) {
         this.lecture_code = lecture_code;
     }

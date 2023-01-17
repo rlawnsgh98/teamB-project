@@ -16,11 +16,12 @@ import org.springframework.web.multipart.MultipartRequest;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
 
 import common.CommonService;
+import vo.MemberVO;
 import vo.BoardFileVO;
 import vo.BoardVO;
+import vo.CounselVO;
 import vo.ReplyVO;
 
 @RestController		// 안되면 spring-framework 버전 확인 (낮으면 안됨)
@@ -29,7 +30,72 @@ public class AndController {
 	@Autowired @Qualifier("common") CommonService common;
 	
 	//new TypeToken<ArrayList<String>>(){}.getType()
+	
+	//상담 삭제
+	@RequestMapping(value="/delete.co", produces = "text/html;charset=utf-8")
+	public int delete_counsel(int counsel_code) {
+		int result = sql.delete("and.delete_counsel", counsel_code);
+		return result;
+	}
+	
+	//상담 수정
+	@RequestMapping(value="/update.co", produces = "text/html;charset=utf-8")
+	public int update_counsel(String vo) {
+		CounselVO counsel = new Gson().fromJson(vo, CounselVO.class);
+		int result = sql.update("and.update_counsel", counsel);
+		return result;
+	}
+	
+	//상담 상세 정보 조회
+	@RequestMapping(value="/info.co", produces = "text/html;charset=utf-8")
+	public String counsel_info(int counsel_code) {
+		CounselVO vo = sql.selectOne("and.counsel_info", counsel_code);
+		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(vo);
+	}
+	
+	//답변 등록
+	@RequestMapping(value="/insert_answer", produces = "text/html;charset=utf-8")
+	public int insert_answer(String vo) {
+		CounselVO counsel = new Gson().fromJson(vo, CounselVO.class);
+		int result = sql.update("and.insert_answer", counsel);
+		return result;
+	}
+	
+	//상담 답변 삭제  --> 같은 row에 있는 answer 값만 null로 변경
+	@RequestMapping(value="/delete_answer", produces = "text/html;charset=utf-8")
+	public int delete_answer(int counsel_code) {
+		int result = sql.update("and.delete_answer", counsel_code);
+		return result;
+	}
+	
+	//상담 insert 처리
+	@RequestMapping(value="/insert.co", produces = "text/html;charset=utf-8")
+	public int insert_counsel(String vo) {
+		CounselVO counsel = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(vo, CounselVO.class);
+		int result = sql.insert("and.insert_counsel", counsel);
+		return result;
+	}
+	
+	//상담 강사 목록 조회	==> 수강중인 강의에서만 불러옴
+	@RequestMapping(value="/list.te", produces = "text/html;charset=utf-8")
+	public String counsel_teacher_list(int member_code) {
+		//강사이름 조회
+		List<MemberVO> list = sql.selectList("and.counsel_teacher_list", member_code);
+		
+		return new Gson().toJson(list);
+	}
+	
+	//상담 목록 조회
+	@RequestMapping(value="/list.co", produces = "text/html;charset=utf-8")
+	public String counsel_list(MemberVO vo) {	//loginInfo -> member_code, type 필요함
+		//학생 member_code	=> writer
+		//강사 member_code	=> receiver
 
+		List<CounselVO> list = sql.selectList("and.counsel_list", vo);
+		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(list);
+	}
+	
+	
 	//신규 게시글(+첨부파일) 저장
 	@RequestMapping(value="/insert.fi", produces = "text/html;charset=utf-8")
 	public String insert_file(String param, HttpServletRequest req) {
@@ -109,14 +175,18 @@ public class AndController {
 	public String info_video(int board_code) {
 		//조회수 증가처리
 		sql.update("and.readcnt", board_code);
-		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(sql.selectList("and.video_list", board_code));
+		BoardVO test = sql.selectOne("and.board_info", board_code);
+		//해당 게시판의 파일정보 조회
+		test.setFileList( sql.selectList("and.file_info", board_code) ) ;
+		
+		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(test);
 	}
 	
 	// 강의영상 목록조회 -- 특정 강의 카테고리
 	@RequestMapping(value="/list.vi", produces = "text/html;charset=utf-8")
-	public String videoList(BoardVO vo) {	// cnt, category 묶으려고 BoardVO로 받음 -> 안드에서 담아서 보내기
+	public String videoList(int cnt) {	// cnt, category 묶으려고 BoardVO로 받음 -> 안드에서 담아서 보내기
 		
-		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(sql.selectList("and.video_list", vo));
+		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(sql.selectList("and.video_list", cnt));
 	}
 	
 	// 댓글 삭제
@@ -192,16 +262,18 @@ public class AndController {
 	
 	// 자유게시판 신규 등록
 	@RequestMapping(value="/insert.bo", produces = "text/html;charset=utf-8")
-	public int board_insert(BoardVO vo) {
-		int result = sql.insert("and.board_insert", vo);
+	public int board_insert(String param) {
+		
+		BoardVO board = new Gson().fromJson(param, BoardVO.class);
+		int result = sql.insert("and.board_insert", board);
 		return result;
 	}
 	
 	// 자유게시판 목록 조회
 	@RequestMapping(value="/list.bo", produces = "text/html;charset=utf-8")
 	public String and(int cnt) {
-		
-		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(sql.selectList("and.board_list", cnt));
+		List<BoardVO> list = sql.selectList("and.board_list", cnt);
+		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(list);
 	}
 	
 	// 자유게시판 남은 게시글 수 반환
@@ -230,6 +302,11 @@ public class AndController {
 		
 		return ( boardCount - (cnt*10) ) + "";
 	}
+	
+	
+	
+	
+	
 	
 	
 	

@@ -1,13 +1,13 @@
 package com.example.teamb_project.board;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.conn.ApiClient;
 import com.example.conn.CommonMethod;

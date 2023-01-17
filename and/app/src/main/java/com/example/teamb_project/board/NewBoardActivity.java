@@ -32,6 +32,7 @@ import com.example.teamb_project.common.Common;
 import com.example.teamb_project.databinding.ActivityNewBoardBinding;
 import com.example.teamb_project.vo.BoardFileVO;
 import com.example.teamb_project.vo.BoardVO;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
@@ -43,11 +44,11 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
 
     CommonMethod commonMethod = new CommonMethod();
 
-    ArrayList<String> path_list = null;
-    ArrayList<String> name_list = null;
-    ArrayList<BoardFileVO> file_list = null;
-    NewBoardAdapter adapter = null;
-    BoardFileAdapter file_adapter = null;
+    ArrayList<String> path_list;
+    ArrayList<String> name_list;
+    ArrayList<BoardFileVO> file_list;
+    NewBoardAdapter adapter;
+    BoardFileAdapter file_adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,12 +57,12 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
         setContentView(b.getRoot());
         getSupportActionBar().hide();
 
-        checkDangerousPermissions();
-        Intent intent = new Intent();
-        intent.setAction(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
-        Uri uri = Uri.fromParts("package", this.getPackageName(), null);
-        intent.setData(uri);
-        startActivity(intent);
+//        checkDangerousPermissions();
+//        Intent intent = new Intent();
+//        intent.setAction(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
+//        Uri uri = Uri.fromParts("package", this.getPackageName(), null);
+//        intent.setData(uri);
+//        startActivity(intent);
         Common common = new Common();
         //임시로그인 - user1
         common.setTempLoginInfo();
@@ -101,7 +102,7 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
                 //게시글 insert 처리
                 if(path_list == null){
                     //첨부파일 없는 게시글
-                    commonMethod.setParams("param", vo)
+                    commonMethod.setParams("param", new Gson().toJson(vo))
                             .sendPost("insert.bo", (isResult, data) -> {
                                 if(isResult){
                                     Toast.makeText(this, "글 등록 완료", Toast.LENGTH_SHORT).show();
@@ -151,6 +152,7 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent.setType("*/*");
 //        intent.putExtra(Intent.)
+
         intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
         startActivityForResult(Intent.createChooser(intent, "파일 선택"), FILE_CODE);
     }
@@ -161,12 +163,19 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
+        checkDangerousPermissions();
+        Intent intent = new Intent();
+        intent.setAction(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
+        Uri uri = Uri.fromParts("package", this.getPackageName(), null);
+        intent.setData(uri);
+        startActivity(intent);
+
         if(requestCode == FILE_CODE && resultCode == RESULT_OK){
 
             allMethod(data, FILE_CODE);
 
             //어댑터
-            file_adapter = new BoardFileAdapter(getLayoutInflater(), file_list);
+            file_adapter = new BoardFileAdapter(getLayoutInflater(), file_list, this);
             b.recvFiles.setAdapter(file_adapter);
             b.recvFiles.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
             file_adapter.notifyDataSetChanged();
@@ -186,31 +195,47 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
     //내보낼 파일 정보 담기
     @RequiresApi(api = Build.VERSION_CODES.O)
     public void allMethod(Intent data, int type){
-        Log.d(TAG, "data 확인 : " + data.getClipData().getItemAt(0).getUri());
+//        Log.d(TAG, "data 확인 : " + data.getClipData().getItemAt(0).getUri());
 
         name_list = new ArrayList<>();
         path_list = new ArrayList<>();  //==> String (path)
         file_list = new ArrayList<>();   // ==> BoardFileVO
         String realPath = null;
-        for (int i = 0; i < data.getClipData().getItemCount(); i++){
+        if( data.getClipData() == null ){
+            //한개 선택시 바로 mData 로 접근
             BoardFileVO vo = new BoardFileVO();
-            if(type==GALLERY_CODE){
-                //사진처리
-                String name = getImageNameToUri(data.getClipData().getItemAt(i).getUri());
-                name_list.add( name );
-                vo.setFile_name( name );
-                realPath = commonMethod.getRealPath(data.getClipData().getItemAt(i).getUri(), this, type);
-            }else if(type==FILE_CODE){
+            if(type==FILE_CODE){
                 //파일처리
-                realPath = getFilePath(data.getClipData().getItemAt(i).getUri());
-                String name = getFileNameToUri(data.getClipData().getItemAt(i).getUri());
+                realPath = getFilePath(data.getData());
+                String name = getFileNameToUri(data.getData());
                 name_list.add( name );
                 vo.setFile_name( name );
             }
             path_list.add( realPath );
             vo.setPath( realPath );
-
             file_list.add(vo);
+        }else{
+            //여러개 선택시 clipData 있음
+            for (int i = 0; i < data.getClipData().getItemCount(); i++){
+                BoardFileVO vo = new BoardFileVO();
+                if(type==GALLERY_CODE){
+                    //사진처리
+                    String name = getImageNameToUri(data.getClipData().getItemAt(i).getUri());
+                    name_list.add( name );
+                    vo.setFile_name( name );
+                    realPath = commonMethod.getRealPath(data.getClipData().getItemAt(i).getUri(), this, type);
+                }else if(type==FILE_CODE){
+                    //파일처리
+                    realPath = getFilePath(data.getClipData().getItemAt(i).getUri());
+                    String name = getFileNameToUri(data.getClipData().getItemAt(i).getUri());
+                    name_list.add( name );
+                    vo.setFile_name( name );
+                }
+                path_list.add( realPath );
+                vo.setPath( realPath );
+
+                file_list.add(vo);
+            }
         }
     }
 

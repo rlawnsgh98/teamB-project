@@ -1,10 +1,8 @@
 package com.example.teamb_project.student.mylecture;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,10 +10,7 @@ import android.widget.Button;
 
 import com.example.teamb_project.LoginInfo;
 import com.example.teamb_project.R;
-import com.example.teamb_project.common.Common;
 import com.example.teamb_project.common.CommonMethod;
-import com.example.teamb_project.teacher.mylecture.MyLectureAdapter;
-import com.example.teamb_project.vo.EnrolmentVO;
 import com.example.teamb_project.vo.LectureVO;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

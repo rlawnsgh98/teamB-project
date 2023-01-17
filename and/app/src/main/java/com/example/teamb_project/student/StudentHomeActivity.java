@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.teamb_project.LoginInfo;
 import com.example.teamb_project.R;
+import com.example.teamb_project.counselling.CounselActivity;
 import com.example.teamb_project.databinding.ActivityStudenthomeBinding;
 import com.example.teamb_project.student.mylecture.stu_MyLectureActivity;
 import com.example.teamb_project.teacher.TeacherHomeActivity;
@@ -23,6 +24,7 @@ public class StudentHomeActivity extends AppCompatActivity implements View.OnCli
         super.onCreate(savedInstanceState);
         s= ActivityStudenthomeBinding.inflate(getLayoutInflater());
         setContentView(s.getRoot());
+        getSupportActionBar().hide();
 
         s.logininfo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +63,9 @@ public class StudentHomeActivity extends AppCompatActivity implements View.OnCli
             Intent intent = new Intent(this, BoardActivity.class);
             startActivity(intent);
         }else if(v.getId()==R.id.cv_consult){
-
+            //상담화면 이동
+            Intent intent = new Intent(StudentHomeActivity.this, CounselActivity.class);
+            startActivity(intent);
         }else if(v.getId()==R.id.cv_attendance){
 
         }else if(v.getId()==R.id.cv_schedule){

@@ -91,6 +91,9 @@ public class ReplyAdapter extends RecyclerView.Adapter<ReplyAdapter.ViewHolder> 
                         Log.d("log", "댓글 update 결과 : " + data);
                         //새로고침
 //                        common.refresh(activity);
+                        h.send.setVisibility(View.GONE);
+                        h.lin_modify_delete.setVisibility(View.GONE);
+                        activity.selectList();
                     });
         });
     }

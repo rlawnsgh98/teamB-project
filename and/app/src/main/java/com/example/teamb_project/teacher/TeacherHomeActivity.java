@@ -21,6 +21,7 @@ public class TeacherHomeActivity extends AppCompatActivity implements View.OnCli
         super.onCreate(savedInstanceState);
         t= ActivityTeacherhomeBinding.inflate(getLayoutInflater());
         setContentView(t.getRoot());
+        getSupportActionBar().hide();
 
         t.cvMylecture.setOnClickListener(this);
         t.cvNotice.setOnClickListener(this);
