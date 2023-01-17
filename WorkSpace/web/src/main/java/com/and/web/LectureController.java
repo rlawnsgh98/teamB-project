@@ -1,118 +1,16 @@
 package com.and.web;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.apache.ibatis.session.SqlSession;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
-import Enrolment.EnrolmentVO;
-import attendance.AttendanceVO;
-import homework.HomeworkSubmitVO;
-import homework.HomeworkVO;
-import lecture.LectureBoardVO;
-import lecture.LectureVO;
-import member.MemberVO;
-
-@RestController
+@Controller
 public class LectureController {
-	@Autowired @Qualifier("bteam") private SqlSession sql;
+//	@Autowired private BoardServiceImpl service;
+//	@Autowired private CommonService common;
 	
-	//학생 홈 -> 내강의조회 -> 학생이 수강중인 강의목록 조회
-	@RequestMapping(value = "/stu_lecture_list.le", produces ="text/html;charset=UTF-8")
-	public String stu_list(int id) {
-		List<LectureVO> list = sql.selectList("lecture.stu_list", id);
-	
-		return new Gson().toJson(list);
-	}
-	//강사 홈 -> 내강의조회 -> 강사가 강의중인 강의목록 조회
-	@RequestMapping(value = "/teacher_lecture_list.le", produces ="text/html;charset=UTF-8")
-	public String teach_list(int id) {
-		List<LectureVO> list = sql.selectList("lecture.teach_list", id);
-	
-		return new Gson().toJson(list);
-	}
-	//선택한 강의의 강사 정보 조회
-	@RequestMapping(value = "/teacher_info.le", produces ="text/html;charset=UTF-8")
-	public String teacher_info(int lecture_code) {
-		MemberVO vo = sql.selectOne("lecture.teacher_info", lecture_code);
-	
-		return new Gson().toJson(vo);
-	}
-
-	//선택한 강의의 공지사항 조회
-	@RequestMapping(value = "/lecture_notice.le", produces ="text/html;charset=UTF-8")
-	public String lecture_notice(int lecture_code) {
-		List<LectureBoardVO> list = sql.selectList("lecture.lecture_notice", lecture_code);
-
-		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(list);
-	}
-	//선택한 강의의 학생목록 조회
-	@RequestMapping(value = "/student_list.le", produces ="text/html;charset=UTF-8")
-	public String student_list(int lecture_code) {
+	@RequestMapping("/list.le")
+	public String list() {
 		
-		List<MemberVO> list = sql.selectList("lecture.student_list", lecture_code);
-		return new Gson().toJson(list);
+		return "lecture/list";
 	}
-	
-	//강의 선택 -> 학생선택 -> 출결조회
-	@RequestMapping(value = "/student_attendance.le", produces ="text/html;charset=UTF-8")
-	public String student_addtendance(int lecture_code, int member_code) {
-		
-		HashMap<String, Object> map = new HashMap<String, Object>();
-		map.put("member_code", member_code);
-		map.put("lecture_code", lecture_code);
-		
-		AttendanceVO vo = sql.selectOne("lecture.student_attendance", map);
-		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(vo);
-	}
-	
-	//강의선택 -> 과제
-	@RequestMapping(value = "/lecture_homework.le", produces ="text/html;charset=UTF-8")
-	public String lecture_homework(int lecture_code) {
-			
-		List<HomeworkVO> list = sql.selectList("lecture.lecture_homework", lecture_code);
-		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(list);
-	}
-	
-	@RequestMapping(value = "/homework_subcnt.le", produces ="text/html;charset=UTF-8")
-	public String homework_subcnt(int homework_code) {
-			
-		HomeworkSubmitVO vo = sql.selectOne("lecture.homework_subcnt", homework_code);
-		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(vo);
-	}
-	
-	
-	//강의 선택 -> 학생선택 -> 과제
-		@RequestMapping(value = "/student_homework.le", produces ="text/html;charset=UTF-8")
-		public String student_homework(int lecture_code, int member_code) {
-			
-			HashMap<String, Object> map = new HashMap<String, Object>();
-			map.put("member_code", member_code);
-			map.put("lecture_code", lecture_code);
-			
-			List<HomeworkVO> list = sql.selectList("lecture.student_homework", map);
-			return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(list);
-		}
-		
-		@RequestMapping(value = "/student_attendance_detail.le", produces ="text/html;charset=UTF-8")
-		public String student_attendance_detail(int lecture_code, int member_code, String start, String end) {
-			
-			HashMap<String, Object> map = new HashMap<String, Object>();
-			map.put("member_code", member_code);
-			map.put("lecture_code", lecture_code);
-			map.put("start", start);
-			map.put("end", end);
-			
-			List<AttendanceVO> list = sql.selectList("lecture.student_attendance_detail", map);
-			return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(list);
-		}
-		
 }
