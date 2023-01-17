@@ -57,12 +57,12 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
         setContentView(b.getRoot());
         getSupportActionBar().hide();
 
-        checkDangerousPermissions();
-        Intent intent = new Intent();
-        intent.setAction(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
-        Uri uri = Uri.fromParts("package", this.getPackageName(), null);
-        intent.setData(uri);
-        startActivity(intent);
+//        checkDangerousPermissions();
+//        Intent intent = new Intent();
+//        intent.setAction(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
+//        Uri uri = Uri.fromParts("package", this.getPackageName(), null);
+//        intent.setData(uri);
+//        startActivity(intent);
         Common common = new Common();
         //임시로그인 - user1
         common.setTempLoginInfo();
@@ -162,6 +162,13 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
+        checkDangerousPermissions();
+        Intent intent = new Intent();
+        intent.setAction(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
+        Uri uri = Uri.fromParts("package", this.getPackageName(), null);
+        intent.setData(uri);
+        startActivity(intent);
 
         if(requestCode == FILE_CODE && resultCode == RESULT_OK){
 

@@ -3,9 +3,17 @@ package com.example.teamb_project.vo;
 import java.sql.Date;
 
 public class CounselVO {
-	private int counsel_code, writer, receiver;
+	private int counsel_code, writer, receiver, no;
 	private String title, content, answer, writer_name, receiver_name;
 	private Date write_date, answer_date;
+
+	public void setNo(int no) {
+		this.no = no;
+	}
+
+	public int getNo() {
+		return no;
+	}
 
 	public void setWriter_name(String writer_name) {
 		this.writer_name = writer_name;

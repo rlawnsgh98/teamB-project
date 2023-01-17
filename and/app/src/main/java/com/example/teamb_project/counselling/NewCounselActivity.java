@@ -18,6 +18,7 @@ import com.example.teamb_project.databinding.ActivityNewCounselBinding;
 import com.example.teamb_project.vo.CounselVO;
 import com.example.teamb_project.vo.MemberVO;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
@@ -43,14 +44,23 @@ public class NewCounselActivity extends AppCompatActivity implements View.OnClic
         commonMethod.setParams("member_code", common.getLoginInfo().getMember_code())
                 .sendPost("list.te", (isResult, data) -> {
                     //수강중인 강의의 강사목록 불러오기
-                    counsel_list = new Gson().fromJson(data, new TypeToken<ArrayList<String>>(){}.getType());
-
+                    counsel_list = new Gson().fromJson(data, new TypeToken<ArrayList<MemberVO>>(){}.getType());
+                    ArrayList<String> name_list = new ArrayList<>();
+                    for(int i = 0; i < counsel_list.size(); i++){
+                        name_list.add(counsel_list.get(i).getMember_name());
+                    }
                     //스피너 설정
-                    b.spinner.setAdapter(new ArrayAdapter<>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, counsel_list));
-//        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
-//                this, R.array.spinner_category, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
-//        adapter.setDropDownViewResource(androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
-//        b.spinner.setAdapter(adapter);
+//                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+//                            this, R.array.spinner_category, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
+//                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+//                            this, R.array.spinner_category, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
+//                    adapter.setDropDownViewResource(androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
+
+                    ArrayAdapter mAdapter = new ArrayAdapter<>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, name_list);
+                    mAdapter.setDropDownViewResource(androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
+
+//                    b.spinner.setAdapter(new ArrayAdapter<>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, counsel_list));
+                    b.spinner.setAdapter(mAdapter);
 
                     b.spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         @Override
@@ -91,7 +101,7 @@ public class NewCounselActivity extends AppCompatActivity implements View.OnClic
             startActivity(intent_counsel);
         }else if(v.getId()==R.id.card_insert){
             //상담 등록
-            if(!TextUtils.isEmpty(b.edtTitle.getText().toString()) && !TextUtils.isEmpty(b.edtContent.getText().toString())){
+            if(!b.edtTitle.getText().toString().isEmpty() && !b.edtContent.getText().toString().isEmpty()){
                 //상담 강사 목록이 있을때
                 if(counsel_list != null){
                     //insert 처리
@@ -100,7 +110,7 @@ public class NewCounselActivity extends AppCompatActivity implements View.OnClic
                     vo.setContent(b.edtContent.getText().toString());
                     vo.setWriter(Integer.parseInt(common.getLoginInfo().getMember_code()));
                     vo.setReceiver(teacher_code);
-                    commonMethod.setParams("vo", vo)
+                    commonMethod.setParams("vo", new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(vo))
                             .sendPost("insert.co", (isResult, data) -> {
 
                                 Log.d("log", "상담 등록 결과 : " + data); //0이면 실패
