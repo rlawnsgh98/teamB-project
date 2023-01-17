@@ -33,9 +33,7 @@ public class CounselDetailActivity extends AppCompatActivity implements View.OnC
         setContentView(b.getRoot());
         getSupportActionBar().hide();
 
-        //임시로그인 - 학생
-//        common.setTempLoginInfo();
-        common.setTeacherLoginInfo();
+        //로그인 확인
         MemberVO member = common.getLoginInfo();
 
 

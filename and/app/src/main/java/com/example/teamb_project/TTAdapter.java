@@ -33,8 +33,6 @@ public class TTAdapter extends RecyclerView.Adapter<TTAdapter.ViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.tt_recv_date.setText(aclist.get(position).getWritedate().toString());
-        //holder.tt_recv_date.setText(aclist.get(position).getWritedate());
-        //holder.tt_recv_time.setText(time);
         holder.tt_recv_content.setText(aclist.get(position).getContent());
     }
 
@@ -44,12 +42,11 @@ public class TTAdapter extends RecyclerView.Adapter<TTAdapter.ViewHolder>{
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        TextView tt_recv_date, tt_recv_time, tt_recv_content;
+        TextView tt_recv_date, tt_recv_content;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tt_recv_date = itemView.findViewById(R.id.tt_recv_date);
-            //tt_recv_time = itemView.findViewById(R.id.tt_recv_time);
             tt_recv_content = itemView.findViewById(R.id.tt_recv_content);
         }
     }

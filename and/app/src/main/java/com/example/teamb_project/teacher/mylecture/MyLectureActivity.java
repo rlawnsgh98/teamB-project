@@ -8,6 +8,7 @@ import android.util.Log;
 
 import com.example.teamb_project.LoginInfo;
 import com.example.teamb_project.R;
+import com.example.teamb_project.common.Common;
 import com.example.teamb_project.common.CommonMethod;
 import com.example.teamb_project.student.mylecture.stu_MyLectureActivity;
 import com.example.teamb_project.student.mylecture.stu_MyLectureAdapter;
@@ -35,7 +36,7 @@ public class MyLectureActivity extends AppCompatActivity {
 
     private void selectLectureList(){
         new com.example.conn.CommonMethod()
-                .setParams("id", LoginInfo.member_code)
+                .setParams("id", Common.loginInfo.getMember_code())
                 .sendPost("teacher_lecture_list.le", new com.example.conn.CommonMethod.CallBackResult() {
                     @Override
                     public void result(boolean isResult, String data) {

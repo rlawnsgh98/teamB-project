@@ -65,7 +65,6 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
 //        startActivity(intent);
         Common common = new Common();
         //임시로그인 - user1
-        common.setTempLoginInfo();
 
         //클릭
         b.cardInsert.setOnClickListener(this);

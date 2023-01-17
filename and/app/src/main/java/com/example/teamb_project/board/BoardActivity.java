@@ -43,9 +43,6 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
 
         Log.d(TAG, "onCreate: " + ApiClient.getBASEURL());
 
-        //임시로그인
-        common.setTempLoginInfo();
-
         //'더보기' 클릭시
         b.linMore.setOnClickListener(v -> {
             cnt++;

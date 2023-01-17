@@ -87,10 +87,10 @@ public class JoinActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId == R.id.stud_rd){
-                    type_result = stud_rd.getText().toString();
+                    type_result = "STUD";
                     //type_result = "0";
                 }else if(checkedId == R.id.teach_rd){
-                    type_result = teach_rd.getText().toString();
+                    type_result = "TEACH";
                 }
             }
         });

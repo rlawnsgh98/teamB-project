@@ -28,6 +28,7 @@ public class VideoDetailActivity extends AppCompatActivity implements View.OnCli
         setContentView(b.getRoot());
         getSupportActionBar().hide();
 
+        //강의영상 상세 정보 조회
         commonMethod.setParams("board_code", getIntent().getIntExtra("board_code", -1))
                 .sendPost("info.vi", (isResult, data) -> {
                     Log.d(TAG, "강의영상 data : " + data);
@@ -46,7 +47,6 @@ public class VideoDetailActivity extends AppCompatActivity implements View.OnCli
                     ExoPlayer player = new SimpleExoPlayer.Builder(this).build();
                     player.setMediaItem(new MediaItem.Builder().setUri(uri).build());
                     b.videoView.setPlayer( player);
-
 
                 });
 

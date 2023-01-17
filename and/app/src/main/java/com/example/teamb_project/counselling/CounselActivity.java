@@ -36,10 +36,7 @@ public class CounselActivity extends AppCompatActivity implements View.OnClickLi
         setContentView(b.getRoot());
         getSupportActionBar().hide();
 
-        //임시 로그인 - 학생
-//        common.setTempLoginInfo();
-        common.setTeacherLoginInfo();
-
+        //상담 목록 조회
         commonMethod.setParams("vo", common.getLoginInfo())
 //                .setParams("type", common.getLoginInfo().getType())
                 .sendPost("list.co", (isResult, data) -> {

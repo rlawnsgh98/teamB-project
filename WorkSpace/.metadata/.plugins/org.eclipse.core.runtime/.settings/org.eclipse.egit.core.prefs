@@ -1,4 +1,4 @@
-GitRepositoriesView.GitDirectories=D\:\\_Project\\main\\WorkSpace\\.git;D\:\\teamB-project-backup\\.git;D\:\\teamB-project\\.git;D\:\\teamB-project - \uBCF5\uC0AC\uBCF8\\.git;D\:\\_Project\\main\\.git;
-GitRepositoriesView.GitDirectories.relative=.git;D\:\\teamB-project-backup\\.git;D\:\\teamB-project\\.git;D\:\\teamB-project - \uBCF5\uC0AC\uBCF8\\.git;D\:\\_Project\\main\\.git;
+GitRepositoriesView.GitDirectories=D\:\\teamB-project-backup\\.git;D\:\\teamB-project\\.git;C\:\\_Project\\main\\.git;C\:\\_Project\\main\\WorkSpace\\.git;D\:\\_Project\\main\\.git;D\:\\teamB-project - \uBCF5\uC0AC\uBCF8\\.git;
+GitRepositoriesView.GitDirectories.relative=D\:\\teamB-project-backup\\.git;D\:\\teamB-project\\.git;C\:\\_Project\\main\\.git;.git;D\:\\_Project\\main\\.git;D\:\\teamB-project - \uBCF5\uC0AC\uBCF8\\.git;
 core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1

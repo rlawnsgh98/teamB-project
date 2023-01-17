@@ -36,10 +36,7 @@ public class NewCounselActivity extends AppCompatActivity implements View.OnClic
         setContentView(b.getRoot());
         getSupportActionBar().hide();
 
-        //임시로그인
-        common.setTempLoginInfo();
-
-
+        //스피너에 들어갈 강사이름 목록 조회
         commonMethod.setParams("member_code", common.getLoginInfo().getMember_code())
                 .sendPost("list.te", (isResult, data) -> {
                     //수강중인 강의의 강사목록 불러오기
@@ -48,17 +45,9 @@ public class NewCounselActivity extends AppCompatActivity implements View.OnClic
                     for(int i = 0; i < counsel_list.size(); i++){
                         name_list.add(counsel_list.get(i).getMember_name());
                     }
-                    //스피너 설정
-//                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
-//                            this, R.array.spinner_category, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
-//                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
-//                            this, R.array.spinner_category, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
-//                    adapter.setDropDownViewResource(androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
-
+                    //스피너 어댑터 설정
                     ArrayAdapter mAdapter = new ArrayAdapter<>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, name_list);
                     mAdapter.setDropDownViewResource(androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
-
-//                    b.spinner.setAdapter(new ArrayAdapter<>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, counsel_list));
                     b.spinner.setAdapter(mAdapter);
 
                     b.spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -76,7 +65,6 @@ public class NewCounselActivity extends AppCompatActivity implements View.OnClic
                     });
 
                 });
-
 
 
         //클릭이벤트

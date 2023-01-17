@@ -34,8 +34,6 @@ public class StudentDetailActivity extends AppCompatActivity {
         student_code = getIntent().getStringExtra("student_code");
         lecture_code = getIntent().getIntExtra("lecture_code", -1);
 
-
-
         tv_student_name = findViewById(R.id.tv_student_name);
         tv_student_phone = findViewById(R.id.tv_student_phone);
 
@@ -48,7 +46,6 @@ public class StudentDetailActivity extends AppCompatActivity {
                 tv_student_phone.setText(info.getPhone());
             }
         });
-
 
         /*탭 레이아웃*/
         tab_layout = findViewById(R.id.tab_layout);

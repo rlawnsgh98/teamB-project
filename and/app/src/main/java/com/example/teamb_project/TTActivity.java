@@ -55,7 +55,7 @@ public class TTActivity extends AppCompatActivity {
         linearLayouts.add(findViewById(R.id.ln_layout17));
 
         Common common = new Common();
-        common.setTempLoginInfo();
+
         // 상단바
         tt_toolbar.setTitle(common.getLoginInfo().getMember_name()+"의 시간표");
 

@@ -21,13 +21,13 @@
         <RadioButton
             android:id="@+id/stud_rd"
             android:checked="true"
-            android:text="STUD"
+            android:text="학생"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <RadioButton
             android:id="@+id/teach_rd"
-            android:text="TEACH"
+            android:text="강사"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>

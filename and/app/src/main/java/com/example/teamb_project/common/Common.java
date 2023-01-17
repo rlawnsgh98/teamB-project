@@ -29,35 +29,6 @@ public class Common {
         return loginInfo;
     }
 
-    //임시 로그인 정보 저장
-    public void setTempLoginInfo(){
-        MemberVO temp = new MemberVO();
-        temp.setMember_code("3");
-        temp.setMember_name("테스트유저1");
-        temp.setGender("남");
-        temp.setEmail("user1@gg.com");
-        temp.setPhone("12363121");
-        temp.setType("STUD");
-        temp.setId("user1");
-        temp.setPw("000aA");
-        temp.setBirth("23/01/02");
-        this.loginInfo = temp;
-    }
-    //강사 임시 로그인
-    public void setTeacherLoginInfo(){
-        MemberVO temp = new MemberVO();
-        temp.setMember_code("5");
-        temp.setMember_name("강사1");
-        temp.setGender("남");
-        temp.setEmail("tt1@gg.com");
-        temp.setPhone("010.9875.8041");
-        temp.setType("TEACH");
-        temp.setId("123");
-        temp.setPw("123");
-        temp.setBirth("23/01/02");
-        this.loginInfo = temp;
-    }
-
     //키보드 보이기
     public void showKeyBoard(Activity activity, EditText edt){
         InputMethodManager imm = (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);

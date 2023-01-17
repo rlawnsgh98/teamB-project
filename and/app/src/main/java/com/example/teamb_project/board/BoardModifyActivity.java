@@ -46,9 +46,6 @@ public class BoardModifyActivity extends AppCompatActivity implements View.OnCli
         Intent getIntent = getIntent();
 
         CommonMethod commonMethod = new CommonMethod();
-        Common common = new Common();
-        ApiClient.setBASEURL("http://192.168.0.115/middle/");
-
 
         if(v.getId()== R.id.iv_back){
             onBackPressed();
@@ -57,7 +54,7 @@ public class BoardModifyActivity extends AppCompatActivity implements View.OnCli
         }else if(v.getId()==R.id.card_insert){
             //글 등록처리
             if(!TextUtils.isEmpty(b.edtTitle.getText().toString()) && !TextUtils.isEmpty(b.edtContent.getText().toString())){
-                Log.d(TAG, "빈칸 없음!");
+                //제목, 내용 입력함
                 commonMethod.setParams("board_code", getIntent.getIntExtra("board_code", -1))
                         .setParams("title", b.edtTitle.getText().toString())
                         .setParams("content", b.edtContent.getText().toString())

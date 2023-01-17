@@ -46,9 +46,7 @@ public class CounselAdapter extends RecyclerView.Adapter<CounselAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
-        //학생 로그인
-//        common.setTempLoginInfo();
-        common.setTeacherLoginInfo();
+
         MemberVO vo = common.getLoginInfo();
 
         //기본 정보 출력
@@ -159,26 +157,5 @@ public class CounselAdapter extends RecyclerView.Adapter<CounselAdapter.ViewHold
         }
     }
 
-    //삭제시 한번 묻기
-    public void checkDelete(int id, Context context){    //<= 네를 누르면 바로 삭제처리
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setTitle("삭제")
-                .setMessage("삭제하시겠습니까?")
-                .setIcon(R.drawable.ic_launcher_foreground);
-
-        builder.setPositiveButton("네", (dialog, which) -> {
-            //네 누르면 실행
-            new CommonMethod().setParams("id", id)
-                    .sendPost("delete.cu", (isResult, data) -> {
-                        Log.d("log", "삭제 처리 : " + data);
-                        //삭제 처리 메소드 호출
-                    });
-        });
-        builder.setNegativeButton("아니오", (dialog, which) -> {
-            //아니오 누르면 실행
-
-        });
-        builder.create().show();
-    }
 
 }

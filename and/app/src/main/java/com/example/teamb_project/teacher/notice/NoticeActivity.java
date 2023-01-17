@@ -27,7 +27,6 @@ public class NoticeActivity extends AppCompatActivity implements View.OnClickLis
         setContentView(b.getRoot());
         getSupportActionBar().hide();
 
-        //메소드 재활용
         Common common = new Common();
 
         //클릭이벤트

@@ -10,6 +10,7 @@ import android.widget.Button;
 
 import com.example.teamb_project.LoginInfo;
 import com.example.teamb_project.R;
+import com.example.teamb_project.common.Common;
 import com.example.teamb_project.common.CommonMethod;
 import com.example.teamb_project.vo.LectureVO;
 import com.google.gson.Gson;
@@ -33,7 +34,7 @@ public class stu_MyLectureActivity extends AppCompatActivity {
         logininfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("로그", "onClick: "+ LoginInfo.check_id);
+                Log.d("로그", "onClick: "+ Common.loginInfo);
             }
         });
 
@@ -44,7 +45,7 @@ public class stu_MyLectureActivity extends AppCompatActivity {
 
     private void selectLectureList(){
         new com.example.conn.CommonMethod()
-                .setParams("id", LoginInfo.member_code)
+                .setParams("id", Common.loginInfo.getMember_code())
                 .sendPost("stu_lecture_list.le", new com.example.conn.CommonMethod.CallBackResult() {
             @Override
             public void result(boolean isResult, String data) {

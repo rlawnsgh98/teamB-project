@@ -8,7 +8,9 @@
     tools:context=".TTActivity">
     <!--상단바-->
     <include layout="@layout/tt_toolbar"/>
+
     <TableLayout
+        android:layout_marginTop="100dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -164,6 +166,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"/>
     <LinearLayout
+        android:layout_marginBottom="170dp"
         android:layout_weight="1"
         android:orientation="horizontal"
         android:layout_width="match_parent"
