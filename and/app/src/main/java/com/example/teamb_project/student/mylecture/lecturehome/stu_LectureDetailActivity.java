@@ -3,6 +3,7 @@ package com.example.teamb_project.student.mylecture.lecturehome;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -47,6 +48,11 @@ public class stu_LectureDetailActivity extends AppCompatActivity {
             public void onTabReselected(TabLayout.Tab tab) {
 
             }
+        });
+
+        d.ivBack.setOnClickListener(v -> {
+            //돌아가기
+            onBackPressed();
         });
 
     }

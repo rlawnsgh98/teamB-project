@@ -3,8 +3,10 @@ package com.example.teamb_project.teacher.mylecture;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
 
 import com.example.teamb_project.LoginInfo;
 import com.example.teamb_project.R;
@@ -12,6 +14,7 @@ import com.example.teamb_project.common.Common;
 import com.example.teamb_project.common.CommonMethod;
 import com.example.teamb_project.student.mylecture.stu_MyLectureActivity;
 import com.example.teamb_project.student.mylecture.stu_MyLectureAdapter;
+import com.example.teamb_project.teacher.TeacherHomeActivity;
 import com.example.teamb_project.vo.LectureVO;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -22,6 +25,7 @@ import java.util.List;
 public class MyLectureActivity extends AppCompatActivity {
     RecyclerView recv_mylecture;
     ArrayList<LectureVO> list;
+    ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,10 +33,15 @@ public class MyLectureActivity extends AppCompatActivity {
         setContentView(R.layout.activity_my_lecture);
         getSupportActionBar().hide();
 
+        back = findViewById(R.id.iv_back);
         recv_mylecture = findViewById(R.id.recv_mylecture);
 
         selectLectureList();
-        Log.d("TAG", "onCreate: "+ list);
+
+        back.setOnClickListener(v -> {
+            Intent intent = new Intent(MyLectureActivity.this, TeacherHomeActivity.class);
+            startActivity(intent);
+        });
     }
 
     private void selectLectureList(){

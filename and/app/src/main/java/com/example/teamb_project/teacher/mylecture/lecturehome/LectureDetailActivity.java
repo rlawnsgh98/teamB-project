@@ -2,9 +2,12 @@ package com.example.teamb_project.teacher.mylecture.lecturehome;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
 
 import com.example.teamb_project.R;
+import com.example.teamb_project.teacher.mylecture.MyLectureActivity;
 import com.example.teamb_project.teacher.mylecture.lecturehome.LectureHomeFragment;
 import com.example.teamb_project.teacher.mylecture.lecturehome.LectureHomeworkFragment;
 import com.example.teamb_project.teacher.mylecture.lecturehome.LectureStudentFragment;
@@ -13,7 +16,7 @@ import com.google.android.material.tabs.TabLayout;
 public class LectureDetailActivity extends AppCompatActivity {
     int lecture_code;
     TabLayout tab_layout;
-
+    ImageView back;
 
 
     @Override
@@ -21,6 +24,8 @@ public class LectureDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lecture_detail);
         getSupportActionBar().hide();
+
+        back = findViewById(R.id.iv_back);
 
         lecture_code = getIntent().getIntExtra("lecture_code", 0);
 
@@ -50,6 +55,12 @@ public class LectureDetailActivity extends AppCompatActivity {
             public void onTabReselected(TabLayout.Tab tab) {
 
             }
+        });
+
+        //돌아가기
+        back.setOnClickListener(v -> {
+            Intent intent = new Intent(LectureDetailActivity.this, MyLectureActivity.class);
+            startActivity(intent);
         });
 
     }
