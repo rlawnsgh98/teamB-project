@@ -21,6 +21,7 @@ public class stu_LectureDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         d = ActivityStuLectureDetailBinding.inflate(getLayoutInflater());
         setContentView(d.getRoot());
+        getSupportActionBar().hide();
 
 
         lecture_code = getIntent().getIntExtra("lecture_code", 0);

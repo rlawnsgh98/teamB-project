@@ -471,8 +471,9 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/selector_tv"
             android:gravity="center"
-            android:padding="18dp"
+            android:padding="16dp"
             android:text="수정"
+            android:textSize="18dp"
             android:textColor="@color/white" />
     </LinearLayout>
 

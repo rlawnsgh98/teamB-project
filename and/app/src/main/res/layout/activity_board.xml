@@ -119,7 +119,7 @@
                         android:layout_gravity="center"
                         android:layout_marginRight="10dp"
                         android:layout_marginLeft="10dp"
-                        android:src="@drawable/ic_edit_100"
+                        android:src="@drawable/ic_write_100"
                         />
                 </LinearLayout>
 

@@ -69,34 +69,35 @@ public class TTActivity extends AppCompatActivity {
         // 타입 정보 출력
         Log.d("로그", "GET TYPE: "+common.getLoginInfo().getType());
 
+        for (int i = 0; i < linearLayouts.size(); i++) {
+            linearLayouts.get(i).removeAllViews();
+        }//for()
+
+        if(Common.loginInfo.getType().equals("STUD")){
+            // 회원 중 학생 일주일 시간표 출력
+            new CommonMethod().setParams("member_code",common.getLoginInfo().getMember_code())
+                    .sendPost("st_ttlist.mj", new CommonMethod.CallBackResult() {
+                        @Override
+                        public void result(boolean isResult, String data) {
+                            printTTlist(data);
+                        }
+                    });
+        }else if(Common.loginInfo.getType().equals("TEACH")){
+            // 회원 중 선생 일주일 시간표 출력
+            new CommonMethod().setParams("teacher_code",common.getLoginInfo().getMember_code())
+                    .sendPost("ttlist.mj", new CommonMethod.CallBackResult() {
+                        @Override
+                        public void result(boolean isResult, String data) {
+                            printTTlist(data);
+                        }
+                    });
+        }
+
+
         tt_toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                for (int i = 0; i < linearLayouts.size(); i++) {
-                    linearLayouts.get(i).removeAllViews();
-                }//for()
-                if(item.getItemId() == R.id.tt_toolbar_reloading) {
-                    if(common.getLoginInfo().getType().equals("STUD")){
-                        // 회원 중 학생 일주일 시간표 출력
-                        new CommonMethod().setParams("member_code",common.getLoginInfo().getMember_code())
-                                .sendPost("st_ttlist.mj", new CommonMethod.CallBackResult() {
-                                    @Override
-                                    public void result(boolean isResult, String data) {
-                                        printTTlist(data);
-                                    }
-                                });
-                    }else if(common.getLoginInfo().getType().equals("TEACH")){
-                        // 회원 중 선생 일주일 시간표 출력
-                        new CommonMethod().setParams("teacher_code",common.getLoginInfo().getMember_code())
-                                .sendPost("ttlist.mj", new CommonMethod.CallBackResult() {
-                                    @Override
-                                    public void result(boolean isResult, String data) {
-                                        printTTlist(data);
-                                    }
-                                });
-                    }
-                    return true;
-                }//if()
+
                 return false;
             }
         });

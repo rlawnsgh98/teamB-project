@@ -72,7 +72,7 @@
 	
 	<!-- 강의영상 uri 조회 -->
 	<select id="selectVideo" resultType='String'>
-	select path from board where board_code = #{board_code}
+	select path from board_file where board_code = #{board_code}
 	</select>
 	
 	<!-- 자유게시판 검색 -->
@@ -100,12 +100,14 @@
 	where no between    (select  max(no)-(9*#{cnt})
                             from    (select row_number() over(order by board_code) no 
                             from board
-                            where category = 'vi'))
+                            where category = 'vi'
+                            and lecture_code = #{lecture_code}))
                 and 
                     (select  max(no)
                             from    (select row_number() over(order by board_code) no 
                             from board
-                            where category = 'vi'))
+                            where category = 'vi'
+                            and lecture_code = #{lecture_code}))
 	order by no desc
 	</select>
 	

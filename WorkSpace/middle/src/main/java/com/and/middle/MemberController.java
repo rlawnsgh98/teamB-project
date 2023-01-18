@@ -126,6 +126,13 @@ public class MemberController {
 		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(member);
 	}
 	
+	//내 정보 조회
+	@RequestMapping(value = "/my_info_code", produces ="text/html;charset=utf-8")
+	public String my_info(int member_code) {
+		MemberVO member = session.selectOne("member.my_info_code", member_code);
+		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(member);
+	}
+	
 	//나의 정보 수정
 	@RequestMapping(value = "/modify_my_info.mj", produces ="text/html;charset=utf-8")
 	public String modify_my_info(String param, HttpServletRequest reqest) {

@@ -33,9 +33,8 @@
 	<select id="lecture_notice" resultType="vo.LectureBoardVO">
 		select *
 		from board
-		where lecture_code = (select lecture_code
-		                        from lecture
-		                        where lecture_code = #{lecture_code})
+		where lecture_code = #{lecture_code}
+		and category = 'no'
 	</select>
 	
 	<!-- 선택한 강의의 수강생 리스트 조회 -->

@@ -1,6 +1,7 @@
 package com.example.teamb_project.drawer;
 
 import android.Manifest;
+import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Intent;
@@ -37,6 +38,8 @@ import com.example.conn.CommonMethod;
 import com.example.teamb_project.LoginActivity;
 import com.example.teamb_project.R;
 import com.example.teamb_project.common.Common;
+import com.example.teamb_project.student.StudentHomeActivity;
+import com.example.teamb_project.teacher.TeacherHomeActivity;
 import com.example.teamb_project.vo.MemberVO;
 import com.google.gson.Gson;
 
@@ -142,7 +145,7 @@ public class MyInfoActivity extends AppCompatActivity {
                     MemberVO my_info = new Gson().fromJson(data, MemberVO.class);
 
                     // 저장된 프로필 이미지 붙이기
-                    Glide.with(MyInfoActivity.this).load(my_info.getProfilepath()).into(profile_image_0);
+                    Glide.with(MyInfoActivity.this).load(Common.loginInfo.getProfilepath()).into(profile_image_0);
 
                     member_code_data.setText(my_info.getMember_code());
                     id_data.setText(my_info.getId());
@@ -162,6 +165,7 @@ public class MyInfoActivity extends AppCompatActivity {
                     
                     isNullTextView(my_info.getEmail() , email_data_tv);
                     isNullTextView(my_info.getPhone() , phone_data_tv);
+
                     if(my_info.getBirth()!= null && my_info.getBirth().trim().length() > 1 ){
                         isNullTextView(my_info.getBirth().substring(0,10) , birth_data_tv);
                     }else if(my_info.getBirth()== null){
@@ -325,50 +329,53 @@ public class MyInfoActivity extends AppCompatActivity {
         confirm_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new CommonMethod().sendPostFile("modify_my_info.mj", img_path, new CommonMethod.CallBackResult() {
-                    @Override
-                    public void result(boolean isResult, String data) {
-                        MemberVO vo = new MemberVO();
-                        vo.setId(common.getLoginInfo().getId());
-                        vo.setMember_name(member_name_data_et.getText().toString());
-                        vo.setGender(modify_gender_info);
 
-                        if(email_data_et.getText().toString().equals("정보가 없습니다.")){
-                            vo.setEmail("");
-                        }else{
-                            if(!emailPatttern.matcher(email_data_et.getText().toString()).matches()){
-                                Toast.makeText(MyInfoActivity.this, "이메일형식이 올바르지 않습니다.", Toast.LENGTH_SHORT).show();
-                                return;
-                            }else{
-                                vo.setEmail(email_data_et.getText().toString());
-                            }
-                        }
-                        if(birth_data_et.getText().toString().equals("정보가 없습니다.")){
-                            vo.setBirth("");
-                        }else{
-                            vo.setBirth(birth_data_et.getText().toString());
-                        }
-                        if(phone_data_et.getText().toString().equals("정보가 없습니다.")){
-                            vo.setPhone("");
-                        }else{
-                            vo.setPhone(phone_data_et.getText().toString());
-                        }
+                MemberVO vo = new MemberVO();
+                vo.setId(Common.loginInfo.getId());
+                vo.setMember_name(member_name_data_et.getText().toString());
+                vo.setGender(modify_gender_info);
 
-                        if(img_path == null){
-                            vo.setProfilepath(common.getLoginInfo().getProfilepath());
-                        }else {
-                            vo.setProfilepath(img_path);
-                        };
+                if(email_data_et.getText().toString().equals("정보가 없습니다.")){
+                    vo.setEmail("");
+                }else{
+                    if(!emailPatttern.matcher(email_data_et.getText().toString()).matches()){
+                        Toast.makeText(MyInfoActivity.this, "이메일형식이 올바르지 않습니다.", Toast.LENGTH_SHORT).show();
+                        return;
+                    }else{
+                        vo.setEmail(email_data_et.getText().toString());
+                    }
+                }
+                if(birth_data_et.getText().toString().equals("정보가 없습니다.")){
+                    vo.setBirth("");
+                }else{
+                    vo.setBirth(birth_data_et.getText().toString());
+                }
+                if(phone_data_et.getText().toString().equals("정보가 없습니다.")){
+                    vo.setPhone("");
+                }else{
+                    vo.setPhone(phone_data_et.getText().toString());
+                }
 
-                        new CommonMethod().setParams("param",vo).sendPostFile("modify_my_info.mj",img_path, (isResult1, data1) -> {
-                            if(isResult1) {
-                                Toast.makeText(MyInfoActivity.this, "회원정보수정 완료! 다시 로그인해주세요.", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(MyInfoActivity.this, LoginActivity.class);
-                                startActivity(intent);
-                            }
-                        });
+                if(img_path == null){
+                    vo.setProfilepath(common.getLoginInfo().getProfilepath());
+                }else {
+                    vo.setProfilepath(img_path);
+                };
+
+                new CommonMethod().setParams("param",vo).sendPostFile("modify_my_info.mj", img_path, (isResult, data) -> {
+                    if(isResult) {
+                        Toast.makeText(MyInfoActivity.this, "회원정보수정 완료", Toast.LENGTH_SHORT).show();
+
+                        Activity activity;
+                        if(Common.loginInfo.getType()=="STUD") activity = new StudentHomeActivity();
+                        else activity = new TeacherHomeActivity();
+
+                        Intent intent = new Intent(MyInfoActivity.this, activity.getClass());
+                        intent.putExtra("isUpdated", true);
+                        startActivity(intent);
                     }
                 });
+
             }
         });
     }//onCreate()

@@ -155,12 +155,11 @@ public class AndController {
 	@RequestMapping(value="/selectVideo", produces = "text/html;charset=utf-8")
 	public String selectVideo(int board_code) {
 		
-		return sql.selectOne("and.selectVideo", board_code);
+		return new Gson().toJson(sql.selectList("and.selectVideo", board_code));
 		
 	}
 	
 	// 강의영상 insert	==> 웹
-	
 	// 강의영상 수정 ==> 웹
 	
 	// 강의영상 삭제
@@ -184,9 +183,13 @@ public class AndController {
 	
 	// 강의영상 목록조회 -- 특정 강의 카테고리
 	@RequestMapping(value="/list.vi", produces = "text/html;charset=utf-8")
-	public String videoList(int cnt) {	// cnt, category 묶으려고 BoardVO로 받음 -> 안드에서 담아서 보내기
+	public String videoList(int cnt, int lecture_code) {	// cnt, lecture_code 묶으려고 BoardVO로 받음 -> 안드에서 담아서 보내기
 		
-		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(sql.selectList("and.video_list", cnt));
+		HashMap<String, Integer> map = new HashMap<String, Integer>();
+		map.put("cnt", cnt);
+		map.put("lecture_code", lecture_code);
+		
+		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(sql.selectList("and.video_list", map));
 	}
 	
 	// 댓글 삭제

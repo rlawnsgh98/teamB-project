@@ -2,9 +2,17 @@ package vo;
 
 public class MemberVO {
 	private String id, pw, member_name, gender, email, phone, post, address, type, profilepath, salt;
-	private String member_code, lecture_code;
+	private String member_code, lecture_code, birth;
 	
 	
+	
+	
+	public String getBirth() {
+		return birth;
+	}
+	public void setBirth(String birth) {
+		this.birth = birth;
+	}
 	public String getLecture_code() {
 		return lecture_code;
 	}

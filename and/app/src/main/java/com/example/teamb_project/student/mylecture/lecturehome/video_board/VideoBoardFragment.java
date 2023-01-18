@@ -29,13 +29,15 @@ public class VideoBoardFragment extends Fragment implements View.OnClickListener
     FragmentVideoBoardBinding b;
     VideoBoardAdapter adapter;
     int lecture_code;
+    Common common = new Common();
+    CommonMethod commonMethod = new CommonMethod();
     public VideoBoardFragment(int lecture_code){
         this.lecture_code = lecture_code;
     }
     public VideoBoardFragment(){}
 
     //강의카테고리 - 테스트
-    String category = "test";
+    String category = "vi";
 
     int cnt = 1;
     final String TAG = "log";
@@ -48,24 +50,8 @@ public class VideoBoardFragment extends Fragment implements View.OnClickListener
                              Bundle savedInstanceState) {
         b = FragmentVideoBoardBinding.inflate(inflater);
 
-        Common common = new Common();
-        CommonMethod commonMethod = new CommonMethod();
-
-        //리사이클러뷰에 들어갈 데이터 List
-        ArrayList<BoardVO> tempList = new ArrayList<>();
-        for(int i = 0; i < 20; i++){
-            tempList.add(new BoardVO());
-        }
-        //게시글 11개 이상 DB에 있을때만 '더보기' 버튼 보이기
-        if(tempList.size() < 11){b.linMore.setVisibility(View.GONE);}
-        //어댑터 설정
-
-        adapter = new VideoBoardAdapter(getLayoutInflater(), tempList, getContext());
-        b.recvVideoBoard.setAdapter(adapter);
-        b.recvVideoBoard.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
-
         // 기본 10개 보이기
-        commonMethod.setParams("category", category)
+        commonMethod.setParams("lecture_code", lecture_code)
                 .setParams("cnt", cnt)
                 .sendPost("list.vi", (isResult, data) -> {
                     if(isResult){

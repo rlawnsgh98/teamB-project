@@ -1,5 +1,6 @@
 package com.example.teamb_project.student.mylecture.lecturehome.video_board;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +9,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.conn.CommonMethod;
+import com.example.teamb_project.R;
 import com.example.teamb_project.databinding.ActivityVideoDetailBinding;
 import com.example.teamb_project.vo.BoardVO;
 import com.google.android.exoplayer2.ExoPlayer;
@@ -50,12 +52,17 @@ public class VideoDetailActivity extends AppCompatActivity implements View.OnCli
 
                 });
 
+        //클릭
+        b.ivBack.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View v) {
-
+        if(v.getId()== R.id.iv_back){
+            //뒤로가기
+            onBackPressed();
+        }
     }
 
     @Override

@@ -12,22 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingTop="25dp"
+        >
 
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="120dp"
-            android:layout_marginTop="20dp"
-            app:cardElevation="0dp"
-            app:cardBackgroundColor="#6C6B6B"
-            >
-            <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:padding="15dp"
-                android:src="@drawable/ic_person_gray"/>
-        </com.google.android.material.card.MaterialCardView>
+        <include layout="@layout/profile_default"/>
         <TextView
             android:id="@+id/tv_student_name"
             android:layout_width="wrap_content"

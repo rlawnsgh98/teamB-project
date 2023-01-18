@@ -13,6 +13,7 @@ import com.example.teamb_project.R;
 import com.example.teamb_project.common.Common;
 import com.example.teamb_project.common.CommonMethod;
 import com.example.teamb_project.vo.LectureVO;
+import com.example.teamb_project.vo.MemberVO;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -21,24 +22,18 @@ import java.util.List;
 
 public class stu_MyLectureActivity extends AppCompatActivity {
     RecyclerView recv_mylecture;
-    Button logininfo;
     ArrayList<LectureVO> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stu_my_lecture);
+        getSupportActionBar().hide();
         recv_mylecture = findViewById(R.id.recv_mylecture);
 
-        logininfo = findViewById(R.id.logininfo);
-        logininfo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d("로그", "onClick: "+ Common.loginInfo);
-            }
-        });
-
         //스프링에서 받아온 lecture list
+
+        MemberVO vo = Common.loginInfo;
 
         selectLectureList();
     }

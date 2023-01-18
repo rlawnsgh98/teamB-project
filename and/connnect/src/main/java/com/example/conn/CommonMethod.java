@@ -124,7 +124,7 @@ public class CommonMethod {
 
     public void sendPostFile(String url, String filePath, CallBackResult callback){
         ApiInterface apiInterface = new ApiClient().getApiClient().create(ApiInterface.class);
-        Call<String> apiTest = apiInterface.connFilePost(url, stringToRequest(), pathToPartFile(filePath, "", 1000));
+        Call<String> apiTest = apiInterface.connFilePost(url, stringToRequest(), pathToPartFile(filePath));
 
         apiTest.enqueue(new Callback<String>() {
             @Override
@@ -183,8 +183,19 @@ public class CommonMethod {
 
     }
 
+    //파일이름 고정으로("img.png") 저장
+    public MultipartBody.Part pathToPartFile(String path){
+        if(path != null){
+            RequestBody fileBody = RequestBody.create(MediaType.parse("image/jpeg"), new File(path));
+            MultipartBody.Part filePart = MultipartBody.Part.createFormData("file","img.png", fileBody);
+            return filePart;
+        }
+        return null;
+    }
+
+    //원래 파일 이름 그대로 저장
     public MultipartBody.Part pathToPartFile(String filepath, String filename, int type){
-        String ss = filename.substring(filename.indexOf(".") , filename.length());
+//        String ss = filename.substring(filename.indexOf(".") , filename.length());
         if( filepath != null ){
             RequestBody fileBody = null;
             if(type==1000){
