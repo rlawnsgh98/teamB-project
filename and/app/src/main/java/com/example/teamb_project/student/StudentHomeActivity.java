@@ -114,13 +114,6 @@ public class StudentHomeActivity extends AppCompatActivity implements View.OnCli
             }
         });
 
-        //임시
-        s.btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(v.getContext(), TeacherHomeActivity.class));
-            }
-        });
 
 
     }

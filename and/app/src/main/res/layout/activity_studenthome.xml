@@ -14,12 +14,6 @@
         <!--상단바-->
         <include layout="@layout/top_toolbar"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn"
-            android:text="학생"/>
-
         <GridLayout
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
@@ -31,10 +25,10 @@
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cv_attendance"
                 android:layout_width="150dp"
-                android:layout_height="170dp"
+                android:layout_height="150dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="15dp"
-                android:backgroundTint="#C9C9C9"
+                android:backgroundTint="@color/gray"
                 app:cardCornerRadius="20dp"
                 >
 
@@ -46,7 +40,7 @@
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/ic_check"/>
+                        android:src="@drawable/ic_check_100"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -60,9 +54,9 @@
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cv_schedule"
                 android:layout_width="150dp"
-                android:layout_height="170dp"
+                android:layout_height="150dp"
                 android:layout_marginBottom="15dp"
-                android:backgroundTint="#C9C9C9"
+                android:backgroundTint="@color/gray"
                 app:cardCornerRadius="20dp"
                 >
                 <LinearLayout
@@ -73,7 +67,7 @@
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/ic_calendar"/>
+                        android:src="@drawable/ic_calendar_100"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -86,10 +80,10 @@
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cv_mylecture"
                 android:layout_width="150dp"
-                android:layout_height="170dp"
+                android:layout_height="150dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="15dp"
-                android:backgroundTint="#C9C9C9"
+                android:backgroundTint="@color/gray"
                 app:cardCornerRadius="20dp"
                 >
                 <LinearLayout
@@ -100,7 +94,7 @@
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/ic_book"/>
+                        android:src="@drawable/ic_book_100"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -114,9 +108,9 @@
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cv_consult"
                 android:layout_width="150dp"
-                android:layout_height="170dp"
+                android:layout_height="150dp"
                 android:layout_marginBottom="15dp"
-                android:backgroundTint="#C9C9C9"
+                android:backgroundTint="@color/gray"
                 app:cardCornerRadius="20dp"
                 >
                 <LinearLayout
@@ -125,9 +119,10 @@
                     android:orientation="vertical"
                     android:layout_gravity="center">
                     <ImageView
+                        android:padding="1dp"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/ic_message"/>
+                        android:src="@drawable/ic_chat_100"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -139,9 +134,9 @@
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cv_notice"
                 android:layout_width="150dp"
-                android:layout_height="170dp"
+                android:layout_height="150dp"
                 android:layout_marginRight="15dp"
-                android:backgroundTint="#C9C9C9"
+                android:backgroundTint="@color/gray"
                 app:cardCornerRadius="20dp"
                 >
                 <LinearLayout
@@ -152,7 +147,7 @@
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/ic_campaign"/>
+                        android:src="@drawable/ic_campaign_100"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -166,8 +161,8 @@
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cv_board"
                 android:layout_width="150dp"
-                android:layout_height="170dp"
-                android:backgroundTint="#C9C9C9"
+                android:layout_height="150dp"
+                android:backgroundTint="@color/gray"
                 app:cardCornerRadius="20dp"
                 >
                 <LinearLayout
@@ -178,7 +173,7 @@
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/ic_article"/>
+                        android:src="@drawable/ic_article_100"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

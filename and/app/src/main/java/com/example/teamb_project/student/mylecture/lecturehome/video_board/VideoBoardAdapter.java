@@ -2,10 +2,14 @@ package com.example.teamb_project.student.mylecture.lecturehome.video_board;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.media.ThumbnailUtils;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
@@ -35,6 +39,11 @@ public class VideoBoardAdapter extends RecyclerView.Adapter<VideoBoardAdapter.Vi
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
+        //썸네일
+        String path = list.get(i).getFileList().get(0).getPath();
+        Bitmap bitmap = ThumbnailUtils.createVideoThumbnail(path, MediaStore.Video.Thumbnails.FULL_SCREEN_KIND);
+        Bitmap thumbnail = ThumbnailUtils.extractThumbnail(bitmap, 300, 300);
+        h.thumbnail.setImageBitmap(thumbnail);
 
         //특정 강의영상 클릭
         h.video.setOnClickListener(v -> {
@@ -57,9 +66,11 @@ public class VideoBoardAdapter extends RecyclerView.Adapter<VideoBoardAdapter.Vi
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         LinearLayout video;
+        ImageView thumbnail;
         public ViewHolder(@NonNull View v) {
             super(v);
             video = v.findViewById(R.id.lin_video);
+            thumbnail = v.findViewById(R.id.iv_thumbnail);
         }
 
     }

@@ -33,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
         // IP 설정
-        ApiClient.setBASEURL("http://192.168.1.2/middle/");
+        ApiClient.setBASEURL("http://192.168.0.11/middle/");
         //집
 //        ApiClient.setBASEURL("http://210.123.231.86/middle/");
 
@@ -57,13 +57,9 @@ public class LoginActivity extends AppCompatActivity {
                                     if (vo != null) {
                                         if(vo.getType().equals("STUD")){
                                             Intent intent = new Intent(LoginActivity.this, StudentHomeActivity.class);
-                                            //로그인정보 저장했던거
-//                                            LoginInfo.member_code = vo.getMember_code();
                                             startActivity(intent);
                                         }else if(vo.getType().equals("TEACH")){
                                             Intent intent = new Intent(LoginActivity.this, TeacherHomeActivity.class);
-                                            //로그인정보 저장했던거
-//                                            LoginInfo.member_code = vo.getMember_code();
                                             startActivity(intent);
                                         }
 

@@ -8,8 +8,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <color name="origin_gray">#C9C9C9</color>
+
     <!-- wonhee's colors -->
-    <color name="gray">#EAEAEA</color>
+    <color name="gray">#E4E4E4</color>
     <color name="font_black">#000</color>
     <color name="main_blue">#55CDF2</color>
     <color name="line_gray">#EAEAEA</color>

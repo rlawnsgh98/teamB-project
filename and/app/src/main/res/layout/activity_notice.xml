@@ -6,25 +6,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".notice.NoticeActivity"
     android:orientation="vertical">
-    <!--  -->
+
     <!-- 상단 바 -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/gray"
+        android:background="@color/blue"
         >
         <ImageView
             android:id="@+id/iv_back"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_24_white"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="공지사항"
-            android:textSize="24dp"
-            android:textColor="@color/font_black"
+            android:textSize="18dp"
+            android:textColor="@color/white"
             android:layout_centerInParent="true"
             />
     </RelativeLayout>

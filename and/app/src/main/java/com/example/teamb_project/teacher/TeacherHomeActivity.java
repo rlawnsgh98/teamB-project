@@ -39,6 +39,8 @@ public class TeacherHomeActivity extends AppCompatActivity implements View.OnCli
         setContentView(t.getRoot());
         getSupportActionBar().hide();
 
+        drawerLayout = findViewById(R.id.drawer_layout);
+        drawerView = findViewById(R.id.drawerView);
         top_toolbar = findViewById(R.id.top_toolbar);
         myInfo_tv = findViewById(R.id.myInfo_tv);
         acCalendar_tv = findViewById(R.id.acCalendar_tv);
@@ -63,13 +65,6 @@ public class TeacherHomeActivity extends AppCompatActivity implements View.OnCli
             }
         });
 
-
-        t.btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(v.getContext(), StudentHomeActivity.class));
-            }
-        });
 
         // 서랍
         drawerLayout.setDrawerListener(listener);
