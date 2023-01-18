@@ -1,0 +1,18 @@
+package com.and.middle;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class LectureController {
+	@Autowired @Qualifier("bteam") private SqlSession session;
+	
+	
+	@RequestMapping("/list")
+	public void list() {
+		
+	}
+}
