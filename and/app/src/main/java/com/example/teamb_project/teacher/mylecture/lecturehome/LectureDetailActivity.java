@@ -20,6 +20,7 @@ public class LectureDetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lecture_detail);
+        getSupportActionBar().hide();
 
         lecture_code = getIntent().getIntExtra("lecture_code", 0);
 

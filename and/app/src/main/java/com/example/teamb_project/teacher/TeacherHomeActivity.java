@@ -10,10 +10,14 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.example.conn.CommonMethod;
 import com.example.teamb_project.LoginActivity;
 import com.example.teamb_project.TTActivity;
+import com.example.teamb_project.common.Common;
 import com.example.teamb_project.counselling.CounselActivity;
 import com.example.teamb_project.databinding.ActivityTeacherhomeBinding;
 import com.example.teamb_project.drawer.AcCalendarActivity;
@@ -24,6 +28,8 @@ import com.example.teamb_project.board.BoardActivity;
 import com.example.teamb_project.teacher.mylecture.MyLectureActivity;
 import com.example.teamb_project.R;
 import com.example.teamb_project.notice.NoticeActivity;
+import com.example.teamb_project.vo.MemberVO;
+import com.google.gson.GsonBuilder;
 
 public class TeacherHomeActivity extends AppCompatActivity implements View.OnClickListener{
     ActivityTeacherhomeBinding t;
@@ -31,6 +37,8 @@ public class TeacherHomeActivity extends AppCompatActivity implements View.OnCli
     View drawerView;
     TextView myInfo_tv,acCalendar_tv,acInfo_tv,logout_tv;
     Toolbar top_toolbar;
+
+    CommonMethod commonMethod = new CommonMethod();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +60,15 @@ public class TeacherHomeActivity extends AppCompatActivity implements View.OnCli
         t.cvConsult.setOnClickListener(this);
         t.cvAttendance.setOnClickListener(this);
         t.cvSchedule.setOnClickListener(this);
+
+        //프로필사진 적용
+        ImageView profile = drawerView.findViewById(R.id.iv_profile);
+        commonMethod.setParams("member_code", Common.loginInfo.getMember_code())
+                .sendPost("my_info_code", (isResult, data) -> {
+                    MemberVO vo = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, MemberVO.class);
+                    Common.loginInfo = vo;
+                    Glide.with(this).load(Common.loginInfo.getProfilepath()).into(profile);
+                });
 
         // 상단바
         top_toolbar.setTitle("홈");
