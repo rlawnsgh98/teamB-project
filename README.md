@@ -1,5 +1,5 @@
 # teamB-project
 
-## 메인 병합중인 branch => 123
+## 메인 병합중인 branch -> 123
 
-## LoginActivity ==> IP설정
+## IP설정 --> LoginActivity 
