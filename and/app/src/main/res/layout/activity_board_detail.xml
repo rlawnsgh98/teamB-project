@@ -27,7 +27,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="자유게시판"
+<<<<<<< HEAD
             android:textSize="18dp"
+=======
+            android:textSize="19dp"
+>>>>>>> main
             android:textColor="@color/white"
             android:layout_centerInParent="true"
             />
@@ -69,7 +73,11 @@
                     />
                 <!--수정 삭제-->
                 <RelativeLayout
+<<<<<<< HEAD
                     android:visibility="gone"
+=======
+                    android:visibility="visible"
+>>>>>>> main
                     android:id="@+id/lin_modify"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

@@ -19,7 +19,10 @@
             android:layout_margin="20dp"
             >
             <ImageView
+<<<<<<< HEAD
                 android:id="@+id/iv_profile"
+=======
+>>>>>>> main
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:background="#580"
@@ -64,9 +67,13 @@
                         />
                 </com.google.android.material.card.MaterialCardView>
             </RelativeLayout>
+<<<<<<< HEAD
 
             <TextView
                 android:id="@+id/name"
+=======
+            <TextView
+>>>>>>> main
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="김강사"
@@ -75,11 +82,15 @@
                 android:layout_marginTop="2dp"
                 android:textColor="@color/font_black"
                 />
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
+<<<<<<< HEAD
                 android:layout_marginBottom="1dp">
 
                 <TextView
@@ -119,6 +130,22 @@
                             android:textColor="@color/view_red" />
                     </LinearLayout>
                 </RelativeLayout>
+=======
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2023.01.06"
+                    />
+                <TextView
+                    android:id="@+id/tv_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="삭제"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    />
+>>>>>>> main
             </RelativeLayout>
         </RelativeLayout>
 

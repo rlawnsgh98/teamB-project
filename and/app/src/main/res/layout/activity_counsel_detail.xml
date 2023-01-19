@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+=======
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+>>>>>>> main
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -32,7 +36,11 @@
             android:textSize="18dp" />
     </RelativeLayout>
 
+<<<<<<< HEAD
     <!-- 상담 -->
+=======
+    <!-- 상담 답변 -->
+>>>>>>> main
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -46,6 +54,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             >
+<<<<<<< HEAD
             <!-- 제목 + 더보기 -->
             <LinearLayout
                 android:layout_width="match_parent"
@@ -101,6 +110,15 @@
                 </RelativeLayout>
             </LinearLayout>
 
+=======
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="상담 제목"
+                android:textSize="18dp"
+                android:textColor="@color/font_black"
+                />
+>>>>>>> main
             <!-- 구분선 -->
             <View
                 android:layout_width="match_parent"
@@ -113,7 +131,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
+<<<<<<< HEAD
                     android:id="@+id/tv_writer"
+=======
+>>>>>>> main
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="나학생"
@@ -121,6 +142,7 @@
                     android:textColor="@color/font_black"
                     />
                 <TextView
+<<<<<<< HEAD
                     android:id="@+id/tv_write_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -267,6 +289,8 @@
                     />
                 <TextView
                     android:id="@+id/tv_answer_date"
+=======
+>>>>>>> main
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2023.01.08"
@@ -284,7 +308,76 @@
                 android:background="@color/line_gray"
                 />
             <TextView
+<<<<<<< HEAD
                 android:id="@+id/tv_answer"
+=======
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="상담 내용 상담 내용 내용 내용"
+                android:textSize="18dp"
+                android:textColor="@color/font_black"
+                />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- 답변 -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:contentPadding="25dp"
+        android:layout_margin="15dp"
+        app:cardBackgroundColor="#f4f4f4"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="답변"
+                android:textSize="18dp"
+                android:textColor="@color/font_black"
+                />
+            <!-- 구분선 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/line_gray"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="나강사"
+                    android:textSize="18dp"
+                    android:textColor="@color/font_black"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2023.01.08"
+                    android:textSize="18dp"
+                    android:textColor="@color/font_black"
+                    android:layout_alignParentRight="true"
+                    />
+            </RelativeLayout>
+            <!-- 구분선 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/line_gray"
+                />
+            <TextView
+>>>>>>> main
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="상담 답변 답변 상담 상담 답변 답변 상담 답변 답변 상담 상담 답변 답변"
@@ -292,6 +385,7 @@
                 android:textColor="@color/font_black"
                 />
         </LinearLayout>
+<<<<<<< HEAD
         <!-- 답변 입력 -->
         <RelativeLayout
             android:id="@+id/rel_answer"
@@ -342,6 +436,8 @@
             android:layout_gravity="center"
             android:layout_margin="15dp"
             />
+=======
+>>>>>>> main
     </com.google.android.material.card.MaterialCardView>
 
 </LinearLayout>

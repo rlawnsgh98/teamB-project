@@ -7,13 +7,19 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+<<<<<<< HEAD
 import android.widget.ImageView;
 import android.widget.TextView;
+=======
+>>>>>>> main
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+<<<<<<< HEAD
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+=======
+>>>>>>> main
 
 import com.bumptech.glide.Glide;
 import com.example.conn.CommonMethod;
@@ -24,15 +30,21 @@ import com.example.teamb_project.TTActivity;
 import com.example.teamb_project.common.Common;
 import com.example.teamb_project.counselling.CounselActivity;
 import com.example.teamb_project.databinding.ActivityStudenthomeBinding;
+<<<<<<< HEAD
 import com.example.teamb_project.drawer.AcCalendarActivity;
 import com.example.teamb_project.drawer.AcInfoActivity;
 import com.example.teamb_project.drawer.MyInfoActivity;
+=======
+>>>>>>> main
 import com.example.teamb_project.student.mylecture.stu_MyLectureActivity;
 import com.example.teamb_project.teacher.TeacherHomeActivity;
 import com.example.teamb_project.board.BoardActivity;
 import com.example.teamb_project.notice.NoticeActivity;
+<<<<<<< HEAD
 import com.example.teamb_project.vo.MemberVO;
 import com.google.gson.GsonBuilder;
+=======
+>>>>>>> main
 
 public class StudentHomeActivity extends AppCompatActivity implements View.OnClickListener{
     ActivityStudenthomeBinding s;

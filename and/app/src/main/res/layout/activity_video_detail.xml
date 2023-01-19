@@ -34,7 +34,10 @@
 
     <!-- 글 제목 -->
     <TextView
+<<<<<<< HEAD
         android:id="@+id/tv_title"
+=======
+>>>>>>> main
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="제목제목"
@@ -64,7 +67,10 @@
         >
 
         <TextView
+<<<<<<< HEAD
             android:id="@+id/tv_writer"
+=======
+>>>>>>> main
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -73,7 +79,10 @@
             android:textSize="18dp"
             />
         <TextView
+<<<<<<< HEAD
             android:id="@+id/tv_writedate"
+=======
+>>>>>>> main
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="2023.01.03"
@@ -89,7 +98,10 @@
             android:textSize="16dp"
             />
         <TextView
+<<<<<<< HEAD
             android:id="@+id/tv_readcnt"
+=======
+>>>>>>> main
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="16"
@@ -116,7 +128,10 @@
         android:orientation="vertical"
         >
         <TextView
+<<<<<<< HEAD
             android:id="@+id/tv_content"
+=======
+>>>>>>> main
             android:layout_margin="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

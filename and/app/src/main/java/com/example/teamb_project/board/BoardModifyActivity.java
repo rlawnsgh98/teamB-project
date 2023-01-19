@@ -1,5 +1,10 @@
 package com.example.teamb_project.board;
 
+<<<<<<< HEAD
+=======
+import androidx.appcompat.app.AppCompatActivity;
+
+>>>>>>> main
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -7,8 +12,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+<<<<<<< HEAD
 import androidx.appcompat.app.AppCompatActivity;
 
+=======
+>>>>>>> main
 import com.example.conn.ApiClient;
 import com.example.conn.CommonMethod;
 import com.example.teamb_project.R;
@@ -46,6 +54,12 @@ public class BoardModifyActivity extends AppCompatActivity implements View.OnCli
         Intent getIntent = getIntent();
 
         CommonMethod commonMethod = new CommonMethod();
+<<<<<<< HEAD
+=======
+        Common common = new Common();
+        ApiClient.setBASEURL("http://192.168.0.115/middle/");
+
+>>>>>>> main
 
         if(v.getId()== R.id.iv_back){
             onBackPressed();
@@ -54,7 +68,11 @@ public class BoardModifyActivity extends AppCompatActivity implements View.OnCli
         }else if(v.getId()==R.id.card_insert){
             //글 등록처리
             if(!TextUtils.isEmpty(b.edtTitle.getText().toString()) && !TextUtils.isEmpty(b.edtContent.getText().toString())){
+<<<<<<< HEAD
                 //제목, 내용 입력함
+=======
+                Log.d(TAG, "빈칸 없음!");
+>>>>>>> main
                 commonMethod.setParams("board_code", getIntent.getIntExtra("board_code", -1))
                         .setParams("title", b.edtTitle.getText().toString())
                         .setParams("content", b.edtContent.getText().toString())

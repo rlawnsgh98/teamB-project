@@ -16,12 +16,20 @@ import org.springframework.web.multipart.MultipartRequest;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+<<<<<<< HEAD
 
 import common.CommonService;
 import vo.MemberVO;
 import vo.BoardFileVO;
 import vo.BoardVO;
 import vo.CounselVO;
+=======
+import com.google.gson.reflect.TypeToken;
+
+import common.CommonService;
+import vo.BoardFileVO;
+import vo.BoardVO;
+>>>>>>> main
 import vo.ReplyVO;
 
 @RestController		// 안되면 spring-framework 버전 확인 (낮으면 안됨)
@@ -30,6 +38,7 @@ public class AndController {
 	@Autowired @Qualifier("common") CommonService common;
 	
 	//new TypeToken<ArrayList<String>>(){}.getType()
+<<<<<<< HEAD
 	
 	//상담 삭제
 	@RequestMapping(value="/delete.co", produces = "text/html;charset=utf-8")
@@ -96,6 +105,9 @@ public class AndController {
 	}
 	
 	
+=======
+
+>>>>>>> main
 	//신규 게시글(+첨부파일) 저장
 	@RequestMapping(value="/insert.fi", produces = "text/html;charset=utf-8")
 	public String insert_file(String param, HttpServletRequest req) {
@@ -155,11 +167,19 @@ public class AndController {
 	@RequestMapping(value="/selectVideo", produces = "text/html;charset=utf-8")
 	public String selectVideo(int board_code) {
 		
+<<<<<<< HEAD
 		return new Gson().toJson(sql.selectList("and.selectVideo", board_code));
+=======
+		return sql.selectOne("and.selectVideo", board_code);
+>>>>>>> main
 		
 	}
 	
 	// 강의영상 insert	==> 웹
+<<<<<<< HEAD
+=======
+	
+>>>>>>> main
 	// 강의영상 수정 ==> 웹
 	
 	// 강의영상 삭제
@@ -174,15 +194,20 @@ public class AndController {
 	public String info_video(int board_code) {
 		//조회수 증가처리
 		sql.update("and.readcnt", board_code);
+<<<<<<< HEAD
 		BoardVO test = sql.selectOne("and.board_info", board_code);
 		//해당 게시판의 파일정보 조회
 		test.setFileList( sql.selectList("and.file_info", board_code) ) ;
 		
 		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(test);
+=======
+		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(sql.selectList("and.video_list", board_code));
+>>>>>>> main
 	}
 	
 	// 강의영상 목록조회 -- 특정 강의 카테고리
 	@RequestMapping(value="/list.vi", produces = "text/html;charset=utf-8")
+<<<<<<< HEAD
 	public String videoList(int cnt, int lecture_code) {	// cnt, lecture_code 묶으려고 BoardVO로 받음 -> 안드에서 담아서 보내기
 		
 		HashMap<String, Integer> map = new HashMap<String, Integer>();
@@ -190,6 +215,11 @@ public class AndController {
 		map.put("lecture_code", lecture_code);
 		
 		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(sql.selectList("and.video_list", map));
+=======
+	public String videoList(BoardVO vo) {	// cnt, category 묶으려고 BoardVO로 받음 -> 안드에서 담아서 보내기
+		
+		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(sql.selectList("and.video_list", vo));
+>>>>>>> main
 	}
 	
 	// 댓글 삭제
@@ -265,18 +295,28 @@ public class AndController {
 	
 	// 자유게시판 신규 등록
 	@RequestMapping(value="/insert.bo", produces = "text/html;charset=utf-8")
+<<<<<<< HEAD
 	public int board_insert(String param) {
 		
 		BoardVO board = new Gson().fromJson(param, BoardVO.class);
 		int result = sql.insert("and.board_insert", board);
+=======
+	public int board_insert(BoardVO vo) {
+		int result = sql.insert("and.board_insert", vo);
+>>>>>>> main
 		return result;
 	}
 	
 	// 자유게시판 목록 조회
 	@RequestMapping(value="/list.bo", produces = "text/html;charset=utf-8")
 	public String and(int cnt) {
+<<<<<<< HEAD
 		List<BoardVO> list = sql.selectList("and.board_list", cnt);
 		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(list);
+=======
+		
+		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(sql.selectList("and.board_list", cnt));
+>>>>>>> main
 	}
 	
 	// 자유게시판 남은 게시글 수 반환
@@ -310,11 +350,14 @@ public class AndController {
 	
 	
 	
+<<<<<<< HEAD
 	
 	
 	
 	
 	
+=======
+>>>>>>> main
 	@RequestMapping(value="/andVO", produces = "text/html;charset=utf-8")
 	public String andVo() {
 		System.out.println("ddd");

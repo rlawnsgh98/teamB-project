@@ -1,5 +1,6 @@
 package com.example.teamb_project.counselling;
 
+<<<<<<< HEAD
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -29,6 +30,19 @@ public class NewCounselActivity extends AppCompatActivity implements View.OnClic
     ArrayList<MemberVO> counsel_list;
     int teacher_code;
 
+=======
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
+import com.example.teamb_project.R;
+import com.example.teamb_project.databinding.ActivityNewCounselBinding;
+
+public class NewCounselActivity extends AppCompatActivity implements View.OnClickListener{
+    ActivityNewCounselBinding b;
+>>>>>>> main
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +50,7 @@ public class NewCounselActivity extends AppCompatActivity implements View.OnClic
         setContentView(b.getRoot());
         getSupportActionBar().hide();
 
+<<<<<<< HEAD
         //스피너에 들어갈 강사이름 목록 조회
         commonMethod.setParams("member_code", common.getLoginInfo().getMember_code())
                 .sendPost("list.te", (isResult, data) -> {
@@ -72,6 +87,11 @@ public class NewCounselActivity extends AppCompatActivity implements View.OnClic
         b.ivBack.setOnClickListener(this);
         b.cardInsert.setOnClickListener(this);
 
+=======
+        //클릭이벤트
+        b.cardBack.setOnClickListener(this);
+        b.ivBack.setOnClickListener(this);
+>>>>>>> main
 
     }
 
@@ -86,6 +106,7 @@ public class NewCounselActivity extends AppCompatActivity implements View.OnClic
         }else if(v.getId()==R.id.card_back){
             //취소 클릭시
             startActivity(intent_counsel);
+<<<<<<< HEAD
         }else if(v.getId()==R.id.card_insert){
             //상담 등록
             if(!b.edtTitle.getText().toString().isEmpty() && !b.edtContent.getText().toString().isEmpty()){
@@ -114,6 +135,8 @@ public class NewCounselActivity extends AppCompatActivity implements View.OnClic
                 Log.d("log", "값 입력 필요");
                 Toast.makeText(this, "제목, 내용을 모두 입력하세요", Toast.LENGTH_LONG).show();
             }
+=======
+>>>>>>> main
         }
 
     }

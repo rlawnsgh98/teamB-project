@@ -16,9 +16,12 @@ import org.springframework.web.multipart.MultipartRequest;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+<<<<<<< HEAD
 import common.CommonService;
 import vo.BoardVO;
 import vo.EnrolmentVO;
+=======
+>>>>>>> main
 import vo.MemberVO;
 
 @RestController
@@ -41,6 +44,19 @@ public class MemberController {
 		HashMap<String,String> map = new HashMap<String, String>();
 		map.put("id", id);
 		map.put("pw", pw);
+<<<<<<< HEAD
+=======
+		
+		MemberVO member = sql.selectOne("member.login", map);
+		return new Gson().toJson(member);
+	}
+
+	@RequestMapping(value = "/join.mj", produces ="text/html;charset=utf-8")
+	public String join(String param) {
+		System.out.println(param);
+		MemberVO vo = new Gson().fromJson(param, MemberVO.class);
+		int result = sql.insert("lms.join",vo);
+>>>>>>> main
 		
 		MemberVO member = session.selectOne("member.login", map);
 		if(member != null) {

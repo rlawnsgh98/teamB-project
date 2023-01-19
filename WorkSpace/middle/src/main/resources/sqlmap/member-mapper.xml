@@ -17,9 +17,17 @@ values ( SEQ_MEMBER.nextval,#{id},#{pw},#{member_name}
 ,#{phone, jdbcType=VARCHAR},#{type})	
 </insert>
 
+<<<<<<< HEAD
 <!-- 아이디 중복확인(존재유무) -->
 <select id='idCheck' resultType='integer'>
 select count(*) from member where id = #{id}
+=======
+<!-- 회원 상세정보 조회 -->
+<select id="member_info" resultType="vo.MemberVO">
+	select *
+	from member
+	where member_code = #{member_code}
+>>>>>>> main
 </select>
 
 <!-- ,to_char(birth,'yyyy-MM-dd') -->

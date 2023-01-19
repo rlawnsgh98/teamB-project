@@ -21,7 +21,11 @@ public class CommonService {
 	public String fileUpload(String category, MultipartFile file, HttpServletRequest request) {
 		//업로드할 물리적 위치
 		// 프로젝트 내 위치 말고 지정 위치에 저장하도록 하기
+<<<<<<< HEAD
 		String path = "c://app" + request.getContextPath();
+=======
+		String path = "d://app" + request.getContextPath();
+>>>>>>> main
 //		String path = request.getSession().getServletContext().getRealPath("resources");
 		// upload/myinfo/2022/12/20 폴더 경로
 		String upload = "/upload/" + category

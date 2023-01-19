@@ -1,5 +1,6 @@
 package com.example.teamb_project.counselling;
 
+<<<<<<< HEAD
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,6 +27,19 @@ public class CounselDetailActivity extends AppCompatActivity implements View.OnC
     CommonMethod commonMethod = new CommonMethod();
     final String TAG = "log";
 
+=======
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
+import com.example.teamb_project.R;
+import com.example.teamb_project.databinding.ActivityCounselDetailBinding;
+
+public class CounselDetailActivity extends AppCompatActivity implements View.OnClickListener{
+    ActivityCounselDetailBinding b;
+>>>>>>> main
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +47,7 @@ public class CounselDetailActivity extends AppCompatActivity implements View.OnC
         setContentView(b.getRoot());
         getSupportActionBar().hide();
 
+<<<<<<< HEAD
         //로그인 확인
         MemberVO member = common.getLoginInfo();
 
@@ -97,12 +112,17 @@ public class CounselDetailActivity extends AppCompatActivity implements View.OnC
         b.tvModifyAnswer.setOnClickListener(this);
         b.tvDeleteAnswer.setOnClickListener(this);
         b.ivSendContent.setOnClickListener(this);
+=======
+        //뒤로가기
+        b.ivBack.setOnClickListener(this);
+>>>>>>> main
 
     }
 
 
     @Override
     public void onClick(View v) {
+<<<<<<< HEAD
         //임시로 넣을 오늘날짜
         long now = System.currentTimeMillis();
         Date date = new Date(now);
@@ -200,6 +220,13 @@ public class CounselDetailActivity extends AppCompatActivity implements View.OnC
                         Log.d("log", "상담 답변 삭제 결과 : " + data);
                         common.refresh(this);
                     });
+=======
+
+        if(v.getId()==R.id.iv_back){
+            //뒤로가기 클릭
+            Intent intent = new Intent(CounselDetailActivity.this, CounselActivity.class);
+            startActivity(intent);
+>>>>>>> main
         }
 
     }

@@ -1,6 +1,9 @@
 package com.example.teamb_project.counselling;
 
+<<<<<<< HEAD
 import android.app.Activity;
+=======
+>>>>>>> main
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -8,11 +11,15 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+<<<<<<< HEAD
 import android.widget.ImageView;
+=======
+>>>>>>> main
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+<<<<<<< HEAD
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,11 +28,17 @@ import com.example.teamb_project.R;
 import com.example.teamb_project.common.Common;
 import com.example.teamb_project.vo.CounselVO;
 import com.example.teamb_project.vo.MemberVO;
+=======
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.teamb_project.R;
+>>>>>>> main
 
 import java.util.ArrayList;
 
 public class CounselAdapter extends RecyclerView.Adapter<CounselAdapter.ViewHolder>{
     LayoutInflater inflater;
+<<<<<<< HEAD
     ArrayList<CounselVO> list;
     Activity activity;
     CommonMethod commonMethod = new CommonMethod();
@@ -36,6 +49,15 @@ public class CounselAdapter extends RecyclerView.Adapter<CounselAdapter.ViewHold
         this.list = list;
 
         this.activity = activity;
+=======
+    ArrayList<Object> list;
+    Context context;
+
+    public CounselAdapter(LayoutInflater inflater, ArrayList<Object> list, Context context) {
+        this.inflater = inflater;
+        this.list = list;
+        this.context = context;
+>>>>>>> main
     }
 
     @NonNull
@@ -47,6 +69,7 @@ public class CounselAdapter extends RecyclerView.Adapter<CounselAdapter.ViewHold
     @Override
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
 
+<<<<<<< HEAD
         MemberVO vo = common.getLoginInfo();
 
         //기본 정보 출력
@@ -91,6 +114,16 @@ public class CounselAdapter extends RecyclerView.Adapter<CounselAdapter.ViewHold
 
 
             activity.startActivity(intent);
+=======
+        //특정 상담 클릭
+        h.detail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent  = new Intent(context, CounselDetailActivity.class);
+                intent.putExtra("counsel_id", 1);   //클릭한 상담의 id값 필요!
+                context.startActivity(intent);
+            }
+>>>>>>> main
         });
 
         //상담 삭제
@@ -98,6 +131,7 @@ public class CounselAdapter extends RecyclerView.Adapter<CounselAdapter.ViewHold
             @Override
             public void onClick(View v) {
                 //삭제 알림 띄우기
+<<<<<<< HEAD
             }
         });
 
@@ -125,11 +159,21 @@ public class CounselAdapter extends RecyclerView.Adapter<CounselAdapter.ViewHold
             builder.create().show();
         });
 
+=======
+
+            }
+        });
+
+>>>>>>> main
     }
 
     @Override
     public int getItemCount() {
+<<<<<<< HEAD
         return list.size();
+=======
+        return 10;
+>>>>>>> main
     }
     @Override
     public long getItemId(int i){return i;}
@@ -137,16 +181,23 @@ public class CounselAdapter extends RecyclerView.Adapter<CounselAdapter.ViewHold
     public int getItemViewType(int i){return i;}
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+<<<<<<< HEAD
         LinearLayout detail, lin_more;
         View state;             //답변 상태
         TextView delete, modify, title, name, write_date;
         ImageView iv_more, profile;
+=======
+        LinearLayout detail;
+        View state;
+        TextView delete;
+>>>>>>> main
 
         public ViewHolder(@NonNull View v) {
             super(v);
             detail = v.findViewById(R.id.lin_counsel);
             state = v.findViewById(R.id.v_state);
             delete = v.findViewById(R.id.tv_delete);
+<<<<<<< HEAD
             modify = v.findViewById(R.id.tv_modify);
             title = v.findViewById(R.id.tv_title);
             name = v.findViewById(R.id.name);
@@ -157,5 +208,31 @@ public class CounselAdapter extends RecyclerView.Adapter<CounselAdapter.ViewHold
         }
     }
 
+=======
+        }
+    }
+
+    //삭제시 한번 묻기
+    public void checkDelete(int id, Context context){    //<= 네를 누르면 바로 삭제처리
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setTitle("삭제")
+                .setMessage("삭제하시겠습니까?")
+                .setIcon(R.drawable.ic_launcher_foreground);
+
+        builder.setPositiveButton("네", (dialog, which) -> {
+            //네 누르면 실행
+            new com.example.conn.CommonMethod().setParams("id", id)
+                    .sendPost("delete.cu", (isResult, data) -> {
+                        Log.d("log", "삭제 처리 : " + data);
+                        //삭제 처리 메소드 호출
+                    });
+        });
+        builder.setNegativeButton("아니오", (dialog, which) -> {
+            //아니오 누르면 실행
+
+        });
+        builder.create().show();
+    }
+>>>>>>> main
 
 }

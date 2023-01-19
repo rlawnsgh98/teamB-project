@@ -9,7 +9,11 @@
     <color name="white">#FFFFFFFF</color>
 
     <!-- wonhee's colors -->
+<<<<<<< HEAD
     <color name="gray">#E4E4E4</color>
+=======
+    <color name="gray">#EAEAEA</color>
+>>>>>>> main
     <color name="font_black">#000</color>
     <color name="main_blue">#55CDF2</color>
     <color name="line_gray">#EAEAEA</color>

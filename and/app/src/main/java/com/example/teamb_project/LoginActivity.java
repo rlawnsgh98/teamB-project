@@ -25,6 +25,8 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import retrofit2.http.HEAD;
+
 public class LoginActivity extends AppCompatActivity {
     TextView join_tv,login_tv,find_tv;
     EditText id_et, pw_et;
@@ -37,6 +39,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         getSupportActionBar().hide();
 
+<<<<<<<HEAD
 
 
         new Common().changeStatusBarColor(this);
@@ -44,6 +47,10 @@ public class LoginActivity extends AppCompatActivity {
 
         // IP 설정
         ApiClient.setBASEURL("http://192.168.0.102/middle/");
+=======
+        // IP 설정 // 학교
+        ApiClient.setBASEURL("http://192.168.0.26/middle/");
+>>>>>>> main
         //집
 //        ApiClient.setBASEURL("http://210.123.231.86/middle/");
 

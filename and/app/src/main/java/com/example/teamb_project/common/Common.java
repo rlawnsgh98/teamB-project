@@ -3,13 +3,19 @@ package com.example.teamb_project.common;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+<<<<<<< HEAD
 import android.graphics.Color;
+=======
+>>>>>>> main
 import android.os.Build;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+<<<<<<< HEAD
 import android.view.Window;
 import android.view.WindowManager;
+=======
+>>>>>>> main
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -17,13 +23,20 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
+<<<<<<< HEAD
 import androidx.appcompat.app.AppCompatActivity;
 
+=======
+>>>>>>> main
 import com.example.teamb_project.R;
 import com.example.teamb_project.vo.MemberVO;
 
 public class Common {
+<<<<<<< HEAD
     public static MemberVO loginInfo;
+=======
+    static MemberVO loginInfo;
+>>>>>>> main
 
     //로그인 정보 저장
     public void setLoginInfo(MemberVO vo){
@@ -34,6 +47,24 @@ public class Common {
         return loginInfo;
     }
 
+<<<<<<< HEAD
+=======
+    //임시 로그인 정보 저장
+    public void setTempLoginInfo(){
+        MemberVO temp = new MemberVO();
+        temp.setMember_code("3");
+        temp.setMember_name("테스트유저1");
+        temp.setGender("남");
+        temp.setEmail("user1@gg.com");
+        temp.setPhone("12363121");
+        temp.setType("S");
+        temp.setId("user1");
+        temp.setPw("000aA");
+        temp.setBirth("23/01/02");
+        this.loginInfo = temp;
+    }
+
+>>>>>>> main
     //키보드 보이기
     public void showKeyBoard(Activity activity, EditText edt){
         InputMethodManager imm = (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -144,6 +175,7 @@ public class Common {
         };
         return tw;
     }
+<<<<<<< HEAD
 
     public void changeStatusBarColor(Activity activity) {
 
@@ -166,4 +198,6 @@ public class Common {
 //        activity.overridePendingTransition(0, 0);//인텐트 효과 없애기
 //    }
 
+=======
+>>>>>>> main
 }

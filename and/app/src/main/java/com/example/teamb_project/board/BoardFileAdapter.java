@@ -1,11 +1,14 @@
 package com.example.teamb_project.board;
 
+<<<<<<< HEAD
 import android.app.Activity;
 import android.app.DownloadManager;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
+=======
+>>>>>>> main
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,12 +26,19 @@ import java.util.List;
 public class BoardFileAdapter extends RecyclerView.Adapter<BoardFileAdapter.ViewHolder>{
     LayoutInflater inflater;
     List<BoardFileVO> list;
+<<<<<<< HEAD
     Activity activity;
 
     public BoardFileAdapter(LayoutInflater inflater, List<BoardFileVO> list, Activity activity) {
         this.inflater = inflater;
         this.list = list;
         this.activity = activity;
+=======
+
+    public BoardFileAdapter(LayoutInflater inflater, List<BoardFileVO> list) {
+        this.inflater = inflater;
+        this.list = list;
+>>>>>>> main
     }
 
     @NonNull
@@ -42,6 +52,7 @@ public class BoardFileAdapter extends RecyclerView.Adapter<BoardFileAdapter.View
 
         h.fileName.setText(list.get(i).getFile_name());
 
+<<<<<<< HEAD
         //파일 클릭시 다운로드 처리
         h.fileName.setOnClickListener(v -> {
             Log.d("log", "파일명 클릭 : " + list.get(i).getFile_name());
@@ -61,6 +72,10 @@ public class BoardFileAdapter extends RecyclerView.Adapter<BoardFileAdapter.View
             manager.enqueue(request);
 
         });
+=======
+
+        Log.d("log", "onBindViewHolder: ");
+>>>>>>> main
     }
 
     @Override
@@ -79,5 +94,8 @@ public class BoardFileAdapter extends RecyclerView.Adapter<BoardFileAdapter.View
             fileName = v.findViewById(R.id.tv_file_name);
         }
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 }

@@ -24,6 +24,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
+=======
+            android:text="자유게시판 글쓰기"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+>>>>>>> main
             android:layout_centerInParent="true"
             android:text="자유게시판"
             android:textColor="@color/white"

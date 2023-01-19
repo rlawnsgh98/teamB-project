@@ -1,6 +1,9 @@
 package com.example.teamb_project.board;
 
+<<<<<<< HEAD
 import android.app.Activity;
+=======
+>>>>>>> main
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,8 +21,11 @@ import com.example.conn.CommonMethod;
 import com.example.teamb_project.R;
 import com.example.teamb_project.common.Common;
 import com.example.teamb_project.databinding.ActivityBoardBinding;
+<<<<<<< HEAD
 import com.example.teamb_project.student.StudentHomeActivity;
 import com.example.teamb_project.teacher.TeacherHomeActivity;
+=======
+>>>>>>> main
 import com.example.teamb_project.vo.BoardVO;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
@@ -43,6 +49,12 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
 
         Log.d(TAG, "onCreate: " + ApiClient.getBASEURL());
 
+<<<<<<< HEAD
+=======
+        //임시로그인
+        common.setTempLoginInfo();
+
+>>>>>>> main
         //'더보기' 클릭시
         b.linMore.setOnClickListener(v -> {
             cnt++;
@@ -102,7 +114,10 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 //검색 버튼 눌렀을때
                 b.ivSearch.setOnClickListener(v -> {
+<<<<<<< HEAD
                     Log.d(TAG, "검색 누름");
+=======
+>>>>>>> main
                     searchBoard(position, b.edtSearch.getText().toString());
                 });
             }
@@ -130,11 +145,15 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
                 .sendPost("search.bo", (isResult, data) -> {
                     Log.d(TAG, "검색 결과 : " + isResult);
                     //검색한 결과 보이기
+<<<<<<< HEAD
                     ArrayList<BoardVO> list = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, new TypeToken<ArrayList<BoardVO>>(){}.getType());
                     b.linMore.setVisibility(View.GONE);
                     adapter.list = list;
                     adapter.notifyDataSetChanged();
 //                    selectList();
+=======
+                    selectList();
+>>>>>>> main
                 });
 
     }
@@ -146,9 +165,12 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
                     if(isResult){
                         //리사이클러뷰에 들어갈 데이터 List
                         ArrayList<BoardVO> list = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, new TypeToken<ArrayList<BoardVO>>(){}.getType());
+<<<<<<< HEAD
                         if(list.size()<11){
                             b.linMore.setVisibility(View.GONE);
                         }
+=======
+>>>>>>> main
                         //어댑터 설정
                         adapter.list = list;
                         adapter.notifyDataSetChanged();
@@ -163,18 +185,26 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
         b.edtSearch.clearFocus();
 
         if(v.getId()==R.id.iv_search){
+<<<<<<< HEAD
             //검색처리 --> 위에서 함
+=======
+            //검색처리
+>>>>>>> main
         }else if(v.getId()==R.id.card_go_top){
             //스크롤 최상단으로 이동
             b.scrBoard.fullScroll(ScrollView.FOCUS_UP);
         }else if(v.getId()==R.id.iv_back){
             //돌아가기
+<<<<<<< HEAD
 //            onBackPressed();
             Activity activity;
             if(common.getLoginInfo().getType()=="STUD") activity = new StudentHomeActivity();
             else activity = new TeacherHomeActivity();
             Intent intent = new Intent(BoardActivity.this, activity.getClass());
             startActivity(intent);
+=======
+            onBackPressed();
+>>>>>>> main
         }else if(v.getId()==R.id.iv_write){
             //글 작성
             Intent intent = new Intent(BoardActivity.this, NewBoardActivity.class);

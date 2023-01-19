@@ -86,12 +86,19 @@
         <activity
             android:name=".counselling.CounselDetailActivity"
             android:exported="false">
+<<<<<<< HEAD
 
+=======
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+>>>>>>> main
         </activity>
         <activity
             android:name=".counselling.NewCounselActivity"
             android:exported="false" />
         <activity
+<<<<<<< HEAD
             android:name=".drawer.MyInfoActivity"
             android:exported="false" />
         <activity
@@ -101,6 +108,8 @@
             android:name=".drawer.AcCalendarActivity"
             android:exported="false" />
         <activity
+=======
+>>>>>>> main
             android:name=".counselling.CounselActivity"
             android:exported="false" />
         <activity
@@ -134,12 +143,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
+<<<<<<< HEAD
         </activity>
 
+=======
+>>>>>>> main
 
         <activity
             android:name=".board.BoardDetailActivity"
             android:exported="false">
+<<<<<<< HEAD
 
         </activity>
 
@@ -151,6 +164,21 @@
             android:name=".notice.NoticeActivity"
             android:exported="false" />
         <activity
+=======
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+
+        <activity
+            android:name=".board.NewBoardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".notice.NoticeActivity"
+            android:exported="false" />
+        <activity
+>>>>>>> main
             android:name=".board.BoardActivity"
             android:exported="false" />
 
@@ -162,14 +190,33 @@
 
         <activity
             android:name=".teacher.TeacherHomeActivity"
+<<<<<<< HEAD
             android:exported="false">
+=======
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+>>>>>>> main
         </activity>
 
 
         <activity
             android:name=".student.StudentHomeActivity"
+<<<<<<< HEAD
             android:exported="false" />
 
+=======
+            android:exported="true" />
+
+
+>>>>>>> main
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.fileprovider"
