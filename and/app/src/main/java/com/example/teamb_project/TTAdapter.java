@@ -25,7 +25,9 @@ public class TTAdapter extends RecyclerView.Adapter<TTAdapter.ViewHolder>{
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = inflater.inflate(R.layout.item_tt_recv, parent, false);
-        return new ViewHolder(v);
+        ViewHolder viewHolder = new ViewHolder(v);
+
+        return viewHolder;
     }
 
     @Override

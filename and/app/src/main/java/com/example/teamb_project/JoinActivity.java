@@ -12,12 +12,15 @@ import android.util.Patterns;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.conn.CommonMethod;
+import com.example.teamb_project.common.Common;
 import com.example.teamb_project.vo.MemberVO;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.gson.Gson;
@@ -38,36 +41,30 @@ public class JoinActivity extends AppCompatActivity {
             updateDate();
         }
     };
-    TextInputEditText id_et, pw_et, pw_ck_et, name_et, email_et, birth_et, phone_et;
+    EditText id_et, pw_et, pw_ck_et, name_et, email_et,  phone_et;
+
     Toolbar top_toolbar;
-    RadioGroup radioGroup1,radioGroup2;
-    TextView cancel_btn, confirm_btn, id_ck_tv;
-    RadioButton stud_rd, teach_rd, male_rd, female_rd;
+    RadioGroup radioGroup2;
+    TextView cancel_btn, confirm_btn, id_ck_tv , stud_tv ,teach_tv ,birth_tv;
+    RadioButton  male_rd, female_rd;
     String type_result ="STUD", gender_result="남";
     int id_ck_cnt = 0;
     Pattern emailPatttern = Patterns.EMAIL_ADDRESS;
+    ImageView imgv_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_join);
 
-        // 상단바
-        top_toolbar = findViewById(R.id.top_toolbar);
-        top_toolbar.setTitle("회원가입");
+        getSupportActionBar().hide();
+        new Common().changeStatusBarColor(this);
 
-        // 상단바 뒤로가기 버튼
-        top_toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
 
         // 회원 정보
-        radioGroup1 = findViewById(R.id.radioGroup1);
-        stud_rd = findViewById(R.id.stud_rd);
-        teach_rd = findViewById(R.id.teach_rd);
+//        radioGroup1 = findViewById(R.id.radioGroup1);
+//        stud_rd = findViewById(R.id.stud_rd);
+//        teach_rd = findViewById(R.id.teach_rd);
         id_et = findViewById(R.id.id_et);
         pw_et = findViewById(R.id.pw_et);
         pw_ck_et = findViewById(R.id.pw_ck_et);
@@ -76,23 +73,27 @@ public class JoinActivity extends AppCompatActivity {
         male_rd = findViewById(R.id.male_rd);
         female_rd = findViewById(R.id.female_rd);
         email_et = findViewById(R.id.email_et);
-        birth_et = findViewById(R.id.birth_et);
+        birth_tv = findViewById(R.id.birth_tv);
+        stud_tv = findViewById(R.id.stud_tv);
+        teach_tv = findViewById(R.id.teach_tv);
         phone_et = findViewById(R.id.phone_et);
+        imgv_back = findViewById(R.id.imgv_back);
 
         // 취소/확인 버튼
         cancel_btn = findViewById(R.id.cancel_btn);
         confirm_btn = findViewById(R.id.confirm_btn);
-
-        radioGroup1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if(checkedId == R.id.stud_rd){
-                    type_result = "STUD";
-                    //type_result = "0";
-                }else if(checkedId == R.id.teach_rd){
-                    type_result = "TEACH";
-                }
-            }
+        stud_tv.setOnClickListener(v->{
+            stud_tv.setTextColor(getResources().getColor(R.color.blue));
+            teach_tv.setTextColor(getResources().getColor(R.color.grey));
+            type_result = "STUD";
+        });
+        teach_tv.setOnClickListener(v->{
+            teach_tv.setTextColor(getResources().getColor(R.color.blue));
+            stud_tv.setTextColor(getResources().getColor(R.color.grey));
+            type_result = "TEACH";
+        });
+        imgv_back.setOnClickListener(v->{
+            finish();
         });
 
         radioGroup2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -106,7 +107,7 @@ public class JoinActivity extends AppCompatActivity {
             }
         });
 
-        birth_et.setOnClickListener(new View.OnClickListener() {
+        birth_tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 new DatePickerDialog(JoinActivity.this,
@@ -169,7 +170,7 @@ public class JoinActivity extends AppCompatActivity {
                     vo.setMember_name(name_et.getText().toString());
                     vo.setGender(gender_result);
                     vo.setEmail(email_et.getText().toString());
-                    vo.setBirth(birth_et.getText().toString());
+                    vo.setBirth(birth_tv.getText().toString());
                     vo.setPhone(phone_et.getText().toString());
 
 
@@ -232,6 +233,6 @@ public class JoinActivity extends AppCompatActivity {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
             simpleDateFormat = new SimpleDateFormat(format, Locale.KOREA);
         }
-        birth_et.setText(simpleDateFormat.format(myCalendar.getTime()));
+        birth_tv.setText(simpleDateFormat.format(myCalendar.getTime()));
     }//updateDate(
 }

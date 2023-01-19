@@ -13,7 +13,6 @@ import android.util.TypedValue;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -26,8 +25,8 @@ import com.google.gson.reflect.TypeToken;
 import java.util.ArrayList;
 
 public class TTActivity extends AppCompatActivity {
+    Toolbar tt_toolbar;
     ArrayList<LinearLayout> linearLayouts = new ArrayList<>();
-    ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +34,7 @@ public class TTActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tt);
         getSupportActionBar().hide();
 
-        back = findViewById(R.id.iv_back);
+        tt_toolbar = findViewById(R.id.tt_toolbar);
         linearLayouts.add(findViewById(R.id.ln_layout0));
         linearLayouts.add(findViewById(R.id.ln_layout1));
         linearLayouts.add(findViewById(R.id.ln_layout2));
@@ -57,7 +56,16 @@ public class TTActivity extends AppCompatActivity {
 
         Common common = new Common();
 
+        // 상단바
+        tt_toolbar.setTitle(common.getLoginInfo().getMember_name()+"의 시간표");
 
+        // 상단바 뒤로가기 버튼
+        tt_toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
         // 타입 정보 출력
         Log.d("로그", "GET TYPE: "+common.getLoginInfo().getType());
 
@@ -85,12 +93,14 @@ public class TTActivity extends AppCompatActivity {
                     });
         }
 
-        //뒤로가기
-        back.setOnClickListener(v -> {
-            onBackPressed();
+
+        tt_toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+
+                return false;
+            }
         });
-
-
     }//onCreate()
 
     TextView getTextView(String data){
@@ -105,7 +115,7 @@ public class TTActivity extends AppCompatActivity {
     void printTTlist(String data){
         ArrayList<EnrolmentVO> list = new Gson().fromJson(data, new TypeToken<ArrayList<EnrolmentVO>>() {}.getType());
         for(int k = 0; k < 3;k++) {
-//            linearLayouts.get((6*k)).addView(getTextView((k+1) + "교시"));
+            linearLayouts.get((6*k)).addView(getTextView((k+1) + "교시"));
             for (int i = 0 ; i < list.size() ; i++){
                 int index = 0+(6*k);
                 if (list.get(i).getvDay().equals("월") && Integer.parseInt(list.get(i).getTimetable_code()) == k+1) {

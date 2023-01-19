@@ -4,9 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,7 +27,7 @@ import com.google.gson.GsonBuilder;
 
 public class LoginActivity extends AppCompatActivity {
     TextView join_tv,login_tv,find_tv;
-    TextInputEditText id_et, pw_et;
+    EditText id_et, pw_et;
 
     Common common = new Common();
 
@@ -32,13 +37,18 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         getSupportActionBar().hide();
 
+
+
+        new Common().changeStatusBarColor(this);
+
+
         // IP 설정
-        ApiClient.setBASEURL("http://192.168.0.30/middle/");
+        ApiClient.setBASEURL("http://192.168.0.102/middle/");
         //집
 //        ApiClient.setBASEURL("http://210.123.231.86/middle/");
 
         id_et = findViewById(R.id.id_et);
-        pw_et = findViewById(R.id.id_pw);
+        pw_et = findViewById(R.id.et_pw);
 
         // 로그인 버튼
         login_tv = findViewById(R.id.login_tv);
@@ -83,14 +93,14 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         // 비밀번호 찾기 버튼
-        find_tv = findViewById(R.id.find_tv);
-        find_tv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, FindActivity.class);
-                startActivity(intent);
-            }
-        });
+//        find_tv = findViewById(R.id.find_tv);
+//        find_tv.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(LoginActivity.this, FindActivity.class);
+//                startActivity(intent);
+//            }
+//        });
     }//onCreate()
 
     // 앱 종료 : 뒤로가기 버튼 연속 2번 누르면
@@ -105,4 +115,6 @@ public class LoginActivity extends AppCompatActivity {
             System.exit(0);
         }
     }
+
+
 }
