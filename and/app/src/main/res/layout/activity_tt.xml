@@ -116,31 +116,166 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="vertical" />
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <LinearLayout
+                android:id="@+id/f1_data1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고1수학"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(101호)"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
         <LinearLayout
             android:id="@+id/ln_layout2"
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="vertical" />
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <LinearLayout
+                android:id="@+id/f1_data2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고1수학"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(101호)"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
         <LinearLayout
             android:id="@+id/ln_layout3"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="vertical" />
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/f1_data3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:gravity="center"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고1수학"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(101호)"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+        </LinearLayout>
         <LinearLayout
             android:id="@+id/ln_layout4"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="vertical" />
+            android:orientation="vertical"
+            android:gravity="center">
+            <LinearLayout
+                android:id="@+id/f1_data4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고1수학"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(101호)"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+        </LinearLayout>
         <LinearLayout
             android:id="@+id/ln_layout5"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="vertical" />
+            android:orientation="vertical"
+            android:gravity="center">
+            <LinearLayout
+                android:id="@+id/f1_data5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고1수학"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(101호)"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 
 
@@ -179,31 +314,166 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="vertical" />
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <LinearLayout
+                android:id="@+id/f2_data1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고1수학"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(101호)"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+        </LinearLayout>
         <LinearLayout
             android:id="@+id/ln_layout8"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="vertical" />
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <LinearLayout
+                android:id="@+id/f2_data2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고1수학"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(101호)"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+        </LinearLayout>
         <LinearLayout
             android:id="@+id/ln_layout9"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="vertical" />
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <LinearLayout
+                android:id="@+id/f2_data3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고1수학"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(101호)"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+        </LinearLayout>
         <LinearLayout
             android:id="@+id/ln_layout10"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="vertical" />
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <LinearLayout
+                android:id="@+id/f2_data4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고1수학"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(101호)"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+        </LinearLayout>
         <LinearLayout
             android:id="@+id/ln_layout11"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="vertical" />
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <LinearLayout
+                android:id="@+id/f2_data5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고1수학"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(101호)"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
     <View
         android:background="@color/light_gray"
@@ -240,31 +510,164 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="vertical" />
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <LinearLayout
+                android:id="@+id/f3_data1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고1수학"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(101호)"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+        </LinearLayout>
         <LinearLayout
             android:id="@+id/ln_layout14"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="vertical" />
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <LinearLayout
+                android:id="@+id/f3_data2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고1수학"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(101호)"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+        </LinearLayout>
         <LinearLayout
             android:id="@+id/ln_layout15"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="vertical" />
+            android:orientation="vertical"
+            android:gravity="center">
+            <LinearLayout
+                android:id="@+id/f3_data3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고1수학"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(101호)"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+        </LinearLayout>
         <LinearLayout
             android:id="@+id/ln_layout16"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="vertical" />
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <LinearLayout
+                android:id="@+id/f3_data4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고1수학"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(101호)"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+        </LinearLayout>
         <LinearLayout
             android:id="@+id/ln_layout17"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="vertical" />
+            android:orientation="vertical"
+            android:gravity="center">
+            <LinearLayout
+                android:id="@+id/f3_data5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고1수학"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(101호)"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 
     <View
@@ -303,31 +706,161 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="vertical" />
+            android:orientation="vertical"
+            android:gravity="center">
+            <LinearLayout
+                android:id="@+id/f4_data1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고1수학"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(101호)"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+        </LinearLayout>
         <LinearLayout
             android:id="@+id/ln_layout20"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="vertical" />
+            android:orientation="vertical"
+            android:gravity="center">
+            <LinearLayout
+                android:id="@+id/f4_data2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고1수학"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(101호)"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+        </LinearLayout>
         <LinearLayout
             android:id="@+id/ln_layout21"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="vertical" />
+            android:orientation="vertical"
+            android:gravity="center">
+            <LinearLayout
+                android:id="@+id/f4_data3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고1수학"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(101호)"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+        </LinearLayout>
         <LinearLayout
             android:id="@+id/ln_layout22"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="vertical" />
+            android:orientation="vertical"
+            android:gravity="center">
+            <LinearLayout
+                android:id="@+id/f4_data4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고1수학"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(101호)"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+        </LinearLayout>
         <LinearLayout
             android:id="@+id/ln_layout23"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="vertical" />
+            android:orientation="vertical"
+            android:gravity="center">
+            <LinearLayout
+                android:id="@+id/f4_data5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고1수학"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(101호)"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 
     <View

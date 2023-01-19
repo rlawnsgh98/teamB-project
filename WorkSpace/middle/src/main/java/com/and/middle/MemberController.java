@@ -94,7 +94,7 @@ public class MemberController {
 	// 특정 학생인 회원의 일주일 시간표
 	@RequestMapping(value = "/st_ttlist.mj", produces ="text/html;charset=utf-8")
 	public String st_ttlist(int member_code) {
-		List<EnrolmentVO> st_ttlist = session.selectList("lecture.st_list",member_code);
+		List<EnrolmentVO> st_ttlist = session.selectList("lecture.st_list", member_code);
 		
 		return new Gson().toJson(st_ttlist);
 	}

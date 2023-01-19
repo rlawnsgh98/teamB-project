@@ -33,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
         // IP 설정
-        ApiClient.setBASEURL("http://192.168.0.11/middle/");
+        ApiClient.setBASEURL("http://192.168.0.30/middle/");
         //집
 //        ApiClient.setBASEURL("http://210.123.231.86/middle/");
 

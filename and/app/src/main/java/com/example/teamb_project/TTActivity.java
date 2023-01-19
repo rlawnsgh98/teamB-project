@@ -105,7 +105,7 @@ public class TTActivity extends AppCompatActivity {
     void printTTlist(String data){
         ArrayList<EnrolmentVO> list = new Gson().fromJson(data, new TypeToken<ArrayList<EnrolmentVO>>() {}.getType());
         for(int k = 0; k < 3;k++) {
-            linearLayouts.get((6*k)).addView(getTextView((k+1) + "교시"));
+//            linearLayouts.get((6*k)).addView(getTextView((k+1) + "교시"));
             for (int i = 0 ; i < list.size() ; i++){
                 int index = 0+(6*k);
                 if (list.get(i).getvDay().equals("월") && Integer.parseInt(list.get(i).getTimetable_code()) == k+1) {
