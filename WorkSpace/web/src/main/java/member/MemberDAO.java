@@ -8,8 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
-import vo.MemberVO;
-
 @Repository
 public class MemberDAO implements MemberService{
 	@Autowired @Qualifier("bteam") private SqlSession sql;
