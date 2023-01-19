@@ -1,8 +1,6 @@
-<<<<<<<< HEAD:WorkSpace/web/src/main/java/vo/EnrolmentVO.java
+
 package vo;
-========
-package Enrolment;
->>>>>>>> kmj:WorkSpace/web/src/main/java/Enrolment/EnrolmentVO.java
+
 
 public class EnrolmentVO {
 

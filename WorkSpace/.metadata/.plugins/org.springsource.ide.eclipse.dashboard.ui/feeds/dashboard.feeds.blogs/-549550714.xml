@@ -5,7 +5,136 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2023-01-17T11:00:00Z</updated>
+  <updated>2023-01-18T17:00:00Z</updated>
+  <entry>
+    <title>Interesting new filters on Spring Cloud Gateway 4.0</title>
+    <link rel="alternate" href="https://spring.io/blog/2023/01/18/interesting-new-filters-on-spring-cloud-gateway-4-0" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Marta Medio</name>
+    </author>
+    <id>tag:spring.io,2023-01-17:5059</id>
+    <updated>2023-01-18T17:00:00Z</updated>
+    <content type="html">&lt;p&gt;&lt;a href="https://spring.io/projects/spring-cloud-gateway"&gt;Spring Cloud Gateway 4.0&lt;/a&gt; is finally here! Thanks to our community contributions we have introduced new features and interesting filters.&lt;/p&gt;
+&lt;p&gt;This blog post details new noteworthy and explains some of the new filters included, how they work and how you can use it to provide more insights into your applications.&lt;/p&gt;
+&lt;p&gt;First of all, let&amp;rsquo;s talk about cache! Cache is a complicated issue and that&amp;rsquo;s why we have introduced two new filters related to it, but take into account that these filters can make the gateway memory constrained so use them carefully.&lt;/p&gt;&lt;h4&gt;&lt;a href="#cacherequestbody" class="anchor" name="cacherequestbody"&gt;&lt;/a&gt;CacheRequestBody&lt;/h4&gt;
+&lt;p&gt;Manipulating the request body can cause issues if not done properly, so we made it easy for you; with this filter we offer the possibility to cache the request body before it to the downstream and get that body from an exchange attribute.&lt;br/&gt;It will be available in the &lt;code&gt;ServerWebExchange.getAttributes()&lt;/code&gt; under a key defined in &lt;code&gt;ServerWebExchangeUtils.CACHED_REQUEST_BODY_ATTR&lt;/code&gt; to use it in a later filter. &lt;/p&gt;
+&lt;p&gt;To configure it, it&amp;rsquo;s simply necessary to indicate the type of body class to convert it to:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint"&gt;spring:&#xD;
+  cloud:&#xD;
+    gateway:&#xD;
+      routes:&#xD;
+      - id: cache_request_body_route&#xD;
+        uri: http://downstream&#xD;
+        predicates:&#xD;
+        - Path=/get/**&#xD;
+        filters:&#xD;
+        - name: CacheRequestBody&#xD;
+          args:&#xD;
+            bodyClass: java.lang.String
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This filter only works with HTTP requests (including HTTPS).&lt;/p&gt;&lt;h4&gt;&lt;a href="#localcacheresponsebody" class="anchor" name="localcacheresponsebody"&gt;&lt;/a&gt;LocalCacheResponseBody&lt;/h4&gt;
+&lt;p&gt;Sometimes your gateway consumes services that you know do not have a change in their response over time. To improve performance and avoid going to the downstream to get the same response on every hit we added a new filter that allows local caching on response body and headers.&lt;/p&gt;
+&lt;p&gt;This new functionality is implemented at global level but is also available an override of the global configuration at route level to set an specific behavior for those routes that you know need an special treatment.&lt;/p&gt;
+&lt;p&gt;There are some conditions that must be taken into account:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;It will only cache bodyless GET requests.&lt;/li&gt;
+  &lt;li&gt;It will only cache responses with the following status codes: HTTP 200 (OK), HTTP 206 (Partial Content) and HTTP 301 (Moved Permanently).&lt;/li&gt;
+  &lt;li&gt;We&amp;rsquo;re following HTTP Cache-Control specification so it will only cache if the &lt;code&gt;Cache-Control&lt;/code&gt; header allows it. That means it doesn&amp;rsquo;t have any of the following values: &lt;code&gt;no-store&lt;/code&gt; present in the request, &lt;code&gt;no-store&lt;/code&gt; or &lt;code&gt;private&lt;/code&gt; present in the response. Additionally, if the response is already cached and a new request is performed with &lt;code&gt;no-cache&lt;/code&gt; value at &lt;code&gt;Cache-Control&lt;/code&gt; header, it will return a bodyless response with status code HTTP 304 (Not Modified).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To activate this global cache filter, just set to &lt;code&gt;true&lt;/code&gt; the following property: &lt;code&gt;spring.cloud.gateway.filter.local-response-cache.enabled&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;We make available a couple of configuration properties to manage how cache on the responses should work, with &lt;code&gt;spring.cloud.gateway.filter.local-response-cache.size&lt;/code&gt; you can set the maximum size of the cache to evict entries, it takes size format in &lt;code&gt;KB&lt;/code&gt;, &lt;code&gt;MB&lt;/code&gt; and &lt;code&gt;GB&lt;/code&gt;; and &lt;code&gt;spring.cloud.gateway.filter.local-response-cache.timeToLive&lt;/code&gt; property sets time to expire a cache entry expressed in &lt;code&gt;s&lt;/code&gt; for seconds, &lt;code&gt;m&lt;/code&gt; for minutes and &lt;code&gt;h&lt;/code&gt; for hours.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint yaml"&gt;spring:&#xD;
+  cloud:&#xD;
+    gateway:&#xD;
+      filter:&#xD;
+	  local-response-cache:&#xD;
+	    enabled: true&#xD;
+	    timeToLive: 20m&#xD;
+	    size: 6MB
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If none of these parameters are configured but the property to activate the global filter is enabled, Gateway configures by default 5 minutes of time to live for the cached response without any size limit.&lt;/p&gt;
+&lt;p&gt;As mentioned earlier, we offer the possibility of overriding the global configuration implementing the filter per route. Just take into account that it&amp;rsquo;s mandatory to have the global filter enabled to set up a configuration per route!&lt;br/&gt;The route configuration accepts a first parameter to override the maximum size of the cache to evict entries for this route (size format in &lt;code&gt;KB&lt;/code&gt;, &lt;code&gt;MB&lt;/code&gt; and &lt;code&gt;GB&lt;/code&gt;) and a second parameter to override the time to expire a cache entry (expressed in &lt;code&gt;s&lt;/code&gt; for seconds, &lt;code&gt;m&lt;/code&gt; for minutes and &lt;code&gt;h&lt;/code&gt; for hours):&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint yaml"&gt;spring:&#xD;
+ cloud:&#xD;
+   gateway:&#xD;
+     routes:&#xD;
+     - id: local_response_cache_get_route&#xD;
+       uri: http://downstream&#xD;
+       predicates:&#xD;
+       - Path=/get/data&#xD;
+       filters:&#xD;
+       - LocalResponseCache=10s,10MB
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;An interesting thing behind this functionality is that it also implements the calculation of the &lt;code&gt;max-age&lt;/code&gt; value in the HTTP &lt;code&gt;Cache-Control&lt;/code&gt; header. So if &lt;code&gt;max-age&lt;/code&gt; is present on the original response the value will be rewritten with the number of seconds set in the &lt;code&gt;timeToLive&lt;/code&gt; configuration parameter, and in consecutive calls this value will be recalculated with the number of seconds left until the response expires.&lt;/p&gt;&lt;h4&gt;&lt;a href="#addrequestheadersifnotpresent" class="anchor" name="addrequestheadersifnotpresent"&gt;&lt;/a&gt;AddRequestHeadersIfNotPresent&lt;/h4&gt;
+&lt;p&gt;The name of the filter almost explains itself, is quite similar to how &lt;code&gt;AddRequestHeader&lt;/code&gt; works, but unlike &lt;code&gt;AddRequestHeader&lt;/code&gt; it will only add the header when it&amp;rsquo;s not already present in the request. Otherwise, the original value in the client request is sent.&lt;/p&gt;
+&lt;p&gt;It takes a collection of name and value pairs separated by colon:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint yaml"&gt;spring:&#xD;
+ cloud:&#xD;
+   gateway:&#xD;
+     routes:&#xD;
+     - id: add_request_header_route&#xD;
+       uri: http://downstream&#xD;
+       predicates:&#xD;
+       - Path=/colors&#xD;
+       filters:&#xD;
+       - AddRequestHeadersIfNotPresent=X-Request-Color:blue,X-Header-Color:red
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It also supports URI variables used to match a path or host:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint yaml"&gt;spring:&#xD;
+ cloud:&#xD;
+   gateway:&#xD;
+     routes:&#xD;
+     - id: add_request_header_route&#xD;
+       uri: http://downstream&#xD;
+       predicates:&#xD;
+       - Path=/colors/{segment}&#xD;
+       filters:&#xD;
+       - AddRequestHeadersIfNotPresent=X-Request-Red:blue-{segment}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And you also can set a multi-valued header! Just add the header name/value multiple times:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint yaml"&gt;spring:&#xD;
+ cloud:&#xD;
+   gateway:&#xD;
+     routes:&#xD;
+     - id: add_request_header_route&#xD;
+       uri: http://downstream&#xD;
+       predicates:&#xD;
+       - Path=/colors/&#xD;
+       filters:&#xD;
+       - AddRequestHeadersIfNotPresent=X-Request-Color:blue,X-Request-Color:green
+&lt;/code&gt;&lt;/pre&gt;&lt;h4&gt;&lt;a href="#removejsonattributesresponsebody" class="anchor" name="removejsonattributesresponsebody"&gt;&lt;/a&gt;RemoveJsonAttributesResponseBody&lt;/h4&gt;
+&lt;p&gt;JSON is one of the most used formats to represent data, that&amp;rsquo;s why we want to add more specific features to work with responses in this format.&lt;br/&gt;This filter provides a convenient method to apply a transformation to JSON body content by deleting attributes from it.&lt;/p&gt;
+&lt;p&gt;It takes a collection of attribute names to search for, an optional last parameter from the list can be a boolean to remove the attributes just at root level (that&amp;rsquo;s the default value, &lt;code&gt;false&lt;/code&gt;, if not present at the end of the parameter configuration) or recursively (&lt;code&gt;true&lt;/code&gt;).&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint yaml"&gt;spring:&#xD;
+ cloud:&#xD;
+   gateway:&#xD;
+     routes:&#xD;
+     - id: remove_json_attributes_route&#xD;
+       uri: https://downstream&#xD;
+ 	 predicates:&#xD;
+       - Path=/json/&#xD;
+       filters:&#xD;
+       - RemoveJsonAttributesResponseBody=created_date,color
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The above configuration will remove attributes from the JSON content body but only at root level.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint yaml"&gt;spring:&#xD;
+ cloud:&#xD;
+   gateway:&#xD;
+     routes:&#xD;
+     - id: remove_json_attributes_route&#xD;
+       uri: https://downstream&#xD;
+ 	 predicates:&#xD;
+       - Path=/json/&#xD;
+       filters:&#xD;
+       - RemoveJsonAttributesResponseBody=created_date,color,true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Adding that true attribute at the end will remove attributes from the JSON content body at any level of the JSON structure.&lt;/p&gt;
+&lt;p&gt;These filters add powerful new capabilities. We&amp;rsquo;d like to hear from you how they support your use case and how we can improve your productivity.&lt;br/&gt;You can find more about this new filter and other functionalities in &lt;a href="https://docs.spring.io/spring-cloud-gateway/docs/current/reference/html/#gatewayfilter-factories"&gt;its reference documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Thanks to all those who have contributed with reports and pull requests!&lt;/p&gt;&lt;h3&gt;&lt;a href="#additional-resources" class="anchor" name="additional-resources"&gt;&lt;/a&gt;Additional Resources&lt;/h3&gt;
+&lt;p&gt;Want to learn more about Spring Cloud? Join us virtually at &lt;a href="https://springone.io/"&gt;SpringOne&lt;/a&gt;!&lt;br/&gt;Want to know more about Spring Cloud Gateway offer? Take a look at &lt;a href="https://docs.vmware.com/en/VMware-Spring-Cloud-Gateway-for-Kubernetes/index.html"&gt;our commercial platform with Kubernetes support&lt;/a&gt;.&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>The new Spring Boot version validation and upgrade support in Spring Tools</title>
     <link rel="alternate" href="https://spring.io/blog/2023/01/17/the-new-spring-boot-version-validation-and-upgrade-support-in-spring-tools" />
@@ -426,27 +555,6 @@
 &lt;p&gt;This first maintenance release in the 1.1.x generation includes &lt;a href="https://github.com/spring-projects/spring-graphql/releases/tag/v1.1.1"&gt;19 fixes and documentation improvements&lt;/a&gt;. This version will be shipped with Spring Boot 3.0.1, &lt;a href="https://calendar.spring.io/"&gt;to be released later this week&lt;/a&gt;.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
 &lt;p&gt;If you have general questions, please ask on &lt;a href="https://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="https://stackoverflow.com/tags/spring-graphql"&gt;&lt;code&gt;spring-graphql&lt;/code&gt; tag&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://spring.io/projects/spring-graphql/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-graphql"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-graphql/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-graphql/docs/1.1.1/reference/html"&gt;Documentation&lt;/a&gt; | &lt;a href="https://stackoverflow.com/questions/tagged/spring-graphql"&gt;Stack Overflow&lt;/a&gt;&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Security 6.0.1, 5.8.1, 5.7.6 and 5.6.10 available now</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/12/19/spring-security-6-0-1-5-8-1-5-7-6-and-5-6-10-available-now" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Marcus Hert Da Coregio</name>
-    </author>
-    <id>tag:spring.io,2022-12-19:5040</id>
-    <updated>2022-12-19T18:00:00Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;On behalf of the team and everyone who has contributed, I am pleased to announce that Spring Security 6.0.1, 5.8.1, 5.7.6 and 5.6.10 are available now. In all cases, the releases are mostly composed of bug fixes and documentation improvements.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;To learn more, please visit the &lt;a href="https://github.com/spring-projects/spring-security/releases/tag/6.0.1"&gt;6.0.1&lt;/a&gt;, &lt;a href="https://github.com/spring-projects/spring-security/releases/tag/5.8.1"&gt;5.8.1&lt;/a&gt;, &lt;a href="https://github.com/spring-projects/spring-security/releases/tag/5.7.6"&gt;5.7.6&lt;/a&gt; and
- &lt;a href="https://github.com/spring-projects/spring-security/releases/tag/5.6.10"&gt;5.6.10&lt;/a&gt; release summaries.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="http://projects.spring.io/spring-security/"&gt;Project Site&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-security/reference/"&gt;Reference&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-security"&gt;Help&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>
