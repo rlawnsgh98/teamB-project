@@ -6,9 +6,17 @@ public class ExamVO {
 	//exam 테이블
 	private int exam_code, lecture_code, exam_type;
 	//exam_take 테이블
-	private int answer_code, member_code, total_score, state;
+	private int answer_code, member_code, total_score, state, rownum;
 	private String subject, exam_title;
-	private Date exam_date;
+	private Date startdate, duedate;
+	
+	
+	public int getRownum() {
+		return rownum;
+	}
+	public void setRownum(int rownum) {
+		this.rownum = rownum;
+	}
 	public int getExam_code() {
 		return exam_code;
 	}
@@ -63,14 +71,17 @@ public class ExamVO {
 	public void setExam_title(String exam_title) {
 		this.exam_title = exam_title;
 	}
-	public Date getExam_date() {
-		return exam_date;
+	public Date getStartdate() {
+		return startdate;
 	}
-	public void setExam_date(Date exam_date) {
-		this.exam_date = exam_date;
+	public void setStartdate(Date startdate) {
+		this.startdate = startdate;
 	}
-	
-	
-	
-	
+	public Date getDuedate() {
+		return duedate;
+	}
+	public void setDuedate(Date duedate) {
+		this.duedate = duedate;
+	}
+
 }

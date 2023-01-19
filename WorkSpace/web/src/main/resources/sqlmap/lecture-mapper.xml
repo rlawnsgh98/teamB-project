@@ -10,4 +10,69 @@
 		                        from enrolment
 		                        where member_code = #{member_code})
 	</select>
+	
+	<!-- 선택한 강의의 강의정보, 강사정보 -->
+	<select id="info" resultType="vo.MemberVO">
+		select  l.* ,m.*
+		from member m left outer join lecture l
+		on m.member_code = l.teacher_code
+		where lecture_code = #{lecture_code} 
+	</select>
+	
+	<!-- 선택한 강의의 공지사항 리스트 -->
+	<select id="notice_list" resultType="vo.BoardVO">
+		select rownum, b.*
+		from (select b.*, m.member_name
+		        from board b left outer join member m
+		        on b.writer = m.member_code
+				where lecture_code = #{lecture_code}  and category = 'no' 
+				order by writedate  desc) b
+	</select>
+	
+	<!-- 강의 공지사항 정보 -->
+	<select id="notice_info" resultType="vo.BoardVO">
+		select b.*, m.member_name
+		from board b left outer join member m
+		on b.writer = m.member_code
+		where board_code = #{board_code}
+	</select>
+	
+	<select id="homework_list" resultType="vo.HomeworkVO">
+		select rownum, h.*
+		from(select h.homework_code, title, content, writedate, duedate, filename, filepath, lecture_code, h.member_code teacher_code, s.member_code , s.state 
+		    from homework h left outer join homework_submit s
+		    on h.homework_code = s.homework_code
+		    where s.member_code = #{member_code}
+		    and lecture_code = #{lecture_code}
+		    order by writedate desc) h
+	</select>
+	
+	<select id="homework_info" resultType="vo.HomeworkVO">
+		select h.homework_code, title, content, writedate, duedate, filename, filepath, lecture_code, h.member_code teacher_code, s.member_code , s.state ,submitdate, member_name
+	    from homework h left outer join homework_submit s
+	    on h.homework_code = s.homework_code
+	    left outer join member m
+   		on s.member_code = m.member_code
+	    where s.member_code = #{member_code}
+	    and h.homework_code=#{homework_code}
+	</select>
+	
+	<select id="video_list" resultType="vo.BoardVO">
+	select rownum, vi.*
+    from(select *
+		    from board
+		    where category = 'vi'
+		    and lecture_code= #{lecture_code}
+		    order by writedate desc) vi
+	</select>
+	
+	<select id="exam_list" resultType="vo.ExamVO" parameterType="map">
+		select rownum, e.*
+		from(select *
+		    from exam  left outer join exam_take 
+		    using (exam_code)
+		    where lecture_code = #{lecture_code}
+		    and member_code = #{member_code}
+		    order by startdate desc) e
+	</select>
 </mapper>

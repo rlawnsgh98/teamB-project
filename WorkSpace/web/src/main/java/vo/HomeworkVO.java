@@ -4,9 +4,30 @@ import java.sql.Date;
 
 
 public class HomeworkVO {
-	private String title, content, filename, filepath;
-	private int homework_code, state, lecture_code, member_code, student_code;
-	private Date writedate, duedate;
+	private String title, content, filename, filepath, member_name;
+	private int homework_code, state, lecture_code, member_code, student_code, rownum;
+	private Date writedate, duedate, submitdate;
+	
+	
+	
+	public String getMember_name() {
+		return member_name;
+	}
+	public void setMember_name(String member_name) {
+		this.member_name = member_name;
+	}
+	public Date getSubmitdate() {
+		return submitdate;
+	}
+	public void setSubmitdate(Date submitdate) {
+		this.submitdate = submitdate;
+	}
+	public int getRownum() {
+		return rownum;
+	}
+	public void setRownum(int rownum) {
+		this.rownum = rownum;
+	}
 	public String getTitle() {
 		return title;
 	}

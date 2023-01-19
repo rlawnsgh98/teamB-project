@@ -3,14 +3,14 @@
 
 <mapper namespace="member">	
 	<!-- 로그인조회 -->
-	<select id="login" resultType="member.MemberVO">
+	<select id="login" resultType="vo.MemberVO">
 		select *
 		from member 
 		where id = #{id} and pw = #{pw}
 	</select>
 	
 	<!-- 목록조회 -->
-	<select id="list" resultType="member.MemberVO">
+	<select id="list" resultType="vo.MemberVO">
 		select* from member
 	</select>
 	

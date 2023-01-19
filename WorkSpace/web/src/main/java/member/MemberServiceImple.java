@@ -6,6 +6,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import vo.MemberVO;
+
 @Service
 public class MemberServiceImple implements MemberService{
 	@Autowired private MemberDAO dao;

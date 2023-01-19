@@ -17,7 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import common.CommonService;
 import member.MemberServiceImple;
-import member.MemberVO;
+import vo.MemberVO;
 
 @Controller
 public class MemberController {
