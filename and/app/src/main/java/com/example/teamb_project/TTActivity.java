@@ -13,6 +13,7 @@ import android.util.TypedValue;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -25,8 +26,8 @@ import com.google.gson.reflect.TypeToken;
 import java.util.ArrayList;
 
 public class TTActivity extends AppCompatActivity {
-    Toolbar tt_toolbar;
     ArrayList<LinearLayout> linearLayouts = new ArrayList<>();
+    ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +35,7 @@ public class TTActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tt);
         getSupportActionBar().hide();
 
-        tt_toolbar = findViewById(R.id.tt_toolbar);
+        back = findViewById(R.id.iv_back);
         linearLayouts.add(findViewById(R.id.ln_layout0));
         linearLayouts.add(findViewById(R.id.ln_layout1));
         linearLayouts.add(findViewById(R.id.ln_layout2));
@@ -56,16 +57,7 @@ public class TTActivity extends AppCompatActivity {
 
         Common common = new Common();
 
-        // 상단바
-        tt_toolbar.setTitle(common.getLoginInfo().getMember_name()+"의 시간표");
 
-        // 상단바 뒤로가기 버튼
-        tt_toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
         // 타입 정보 출력
         Log.d("로그", "GET TYPE: "+common.getLoginInfo().getType());
 
@@ -93,14 +85,12 @@ public class TTActivity extends AppCompatActivity {
                     });
         }
 
-
-        tt_toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-
-                return false;
-            }
+        //뒤로가기
+        back.setOnClickListener(v -> {
+            onBackPressed();
         });
+
+
     }//onCreate()
 
     TextView getTextView(String data){
