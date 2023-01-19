@@ -23,6 +23,7 @@ on L.room_code = R.room_code
 where teacher_code = #{id} 
 order by dates, timetable_code asc
 </select>
+
 <select id="st_list" resultType="vo.EnrolmentVO">
 select to_char(dates,'dy') vDay, L.teacher_code,
 L.lecture_name,R.room_name,

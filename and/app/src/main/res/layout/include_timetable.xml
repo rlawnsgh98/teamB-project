@@ -10,6 +10,7 @@
         android:orientation="vertical"
         >
         <TextView
+            android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="고1수학"
@@ -18,6 +19,7 @@
             android:layout_gravity="center"
             />
         <TextView
+            android:id="@+id/room"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="(101호)"

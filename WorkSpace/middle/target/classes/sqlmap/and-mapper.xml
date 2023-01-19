@@ -2,6 +2,21 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="and">
 	
+	<select id="student_timetable" resultType='vo.LectureVO'>
+	select  *
+	from    lecture
+	where   timetable_code = (select  	lecture_code 
+	                            from    enrolment
+	                            where   member_code = #{member_code}
+	                            and     status = 1)
+	</select>
+	
+	<select id="teacher_timetable" resultType='vo.LectureVO'>
+	select  l.* 
+	from    lecture l left outer join member m   
+	on      m.member_code = l.teacher_code
+	and		l.teacher_code = #{member_code}
+	</select>
 	
 	<!-- 상담 삭제 -->
 	<delete id="delete_counsel">

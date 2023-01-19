@@ -1,11 +1,17 @@
 package com.example.teamb_project.vo;
 
 import java.io.Serializable;
+import java.sql.Date;
 
 public class LectureVO implements Serializable {
     private int lecture_code;
     private int teacher_code;
     private int timetable_code;
+    private int student_cnt;
+    private String lecture_name, room_code, subject_code;
+    private Date startdate, enddate;
+    //timetable 조인
+    private String timetable_name;
 
     public int getStudent_cnt() {
         return student_cnt;
@@ -15,9 +21,6 @@ public class LectureVO implements Serializable {
         this.student_cnt = student_cnt;
     }
 
-    private int student_cnt;
-    private String lecture_name, room_code, subject_code,startdate, enddate;
-
     public String getTimetable_name() {
         return timetable_name;
     }
@@ -25,9 +28,6 @@ public class LectureVO implements Serializable {
     public void setTimetable_name(String timetable_name) {
         this.timetable_name = timetable_name;
     }
-
-    //timetable 조인
-    private String timetable_name;
 
     public String getLecture_name() {
         return lecture_name;
@@ -67,16 +67,16 @@ public class LectureVO implements Serializable {
     public void setSubject_code(String subject_code) {
         this.subject_code = subject_code;
     }
-    public String getStartdate() {
+    public Date getStartdate() {
         return startdate;
     }
-    public void setStartdate(String startdate) {
+    public void setStartdate(Date startdate) {
         this.startdate = startdate;
     }
-    public String getEnddate() {
+    public Date getEnddate() {
         return enddate;
     }
-    public void setEnddate(String enddate) {
+    public void setEnddate(Date enddate) {
         this.enddate = enddate;
     }
 }

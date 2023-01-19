@@ -1,8 +1,8 @@
 package com.and.middle;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,6 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import vo.AttendanceVO;
-import vo.EnrolmentVO;
 import vo.ExamVO;
 import vo.HomeworkSubmitVO;
 import vo.HomeworkVO;
@@ -25,6 +24,22 @@ import vo.MemberVO;
 @RestController
 public class LectureController {
 	@Autowired @Qualifier("bteam") private SqlSession sql;
+	
+	//학생이 시간표 조회
+	@RequestMapping(value = "/student_timetable", produces ="text/html;charset=UTF-8")
+	public String student_timetable(String vo) {
+		MemberVO member = new Gson().fromJson(vo, MemberVO.class);
+		List<LectureVO> list = sql.selectList("and.student_timetable", member);
+		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(list);
+	}
+	
+	//선생이 시간표 조회
+	@RequestMapping(value = "/teacher_timetable", produces ="text/html;charset=UTF-8")
+	public String teacher_timetable(String vo) {
+		MemberVO member = new Gson().fromJson(vo, MemberVO.class);
+		List<LectureVO> list = sql.selectList("and.teacher_timetable", member);
+		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(list);
+	}
 	
 	//학생 홈 -> 내강의조회 -> 학생이 수강중인 강의목록 조회
 	@RequestMapping(value = "/stu_lecture_list.le", produces ="text/html;charset=UTF-8")
