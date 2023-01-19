@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="counsel_teacher">
+        <item>김강사</item>
+        <item>나강사</item>
+        <item>박강사</item>
+        <item>최강사</item>
+    </string-array>
+    <string-array name="date_month">
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="date_year">
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+        <item>2022</item>
+        <item>2023</item>
+    </string-array>
+    <string-array name="edit_delete">
+        <item>수정</item>
+        <item>삭제</item>
+    </string-array>
+    <string-array name="spinner_category">
+        <item>제목</item>
+        <item>내용</item>
+        <item>작성자</item>
+    </string-array>
+    <color name="black">#FF000000</color>
+    <color name="blue">#47628D</color>
+    <color name="colorText">#504F60</color>
+    <color name="dark_gray">#4D4D4D</color>
+    <color name="font_black">#000</color>
+    <color name="font_blue">#3D88D3</color>
+    <color name="gray">#E4E4E4</color>
+    <color name="grey">#E9EAEE</color>
+    <color name="light_blue">#96A6BF</color>
+    <color name="light_gray">#D9D9D9</color>
+    <color name="line_gray">#EAEAEA</color>
+    <color name="main_blue">#55CDF2</color>
+    <color name="orange">#FB9B58</color>
+    <color name="origin_gray">#C9C9C9</color>
+    <color name="pink">#FF5D82</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="textcolor">#1A1A1A</color>
+    <color name="view_green">#5EE97D</color>
+    <color name="view_red">#E95E5E</color>
+    <color name="white">#FFFFFFFF</color>
+    <dimen name="fab_margin">16dp</dimen>
+    <string name="app_name">TeamB-Project</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="title_activity_stu_my_lecture">Stu_MyLectureActivity</string>
+    <style name="SpinnerTheme" parent="android:Widget.Spinner">
+        <item name="android:background">@drawable/ic_more_24</item>
+    </style>
+    <style name="TEXT_STYLE_1">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TEXT_STYLE_2">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColorHint">@color/dark_gray</item>
+    </style>
+    <style name="TEXT_STYLE_3">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">5dp</item>
+    </style>
+    <style name="TEXT_STYLE_4">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="Theme.TeamBProject" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        
+
+    </style>
+    <style name="Theme.TeamBProject.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="Theme.TeamBProject.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.TeamBProject.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+</resources>

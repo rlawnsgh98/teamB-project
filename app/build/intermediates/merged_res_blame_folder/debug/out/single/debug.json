@@ -1,0 +1,714 @@
+[
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_circularborderbtn.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\circularborderbtn.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_close_white.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_close_white.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_fragment_stu__lecture_home.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\fragment_stu__lecture_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable-v24_academy.JPG.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable-v24\\academy.JPG"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_write_black.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_write_black.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_more_100.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_more_100.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_fragment_lecture_student.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\fragment_lecture_student.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_selector_tv.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\selector_tv.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_plus_circle.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\plus_circle.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_tt_toolbar.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\tt_toolbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_baseline_calendar_month_24.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_baseline_calendar_month_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_baseline_perm_identity_24.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_baseline_perm_identity_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_activity_studenthome.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\activity_studenthome.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_popup_dialog.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\popup_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_activity_teacherhome.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\activity_teacherhome.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_activity_new_notice.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\activity_new_notice.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_search.png.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\search.png"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_activity_new_counsel.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\activity_new_counsel.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-pngs-39:\\drawable-mdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_edit_100.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_edit_100.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_item_lecture_homework_check.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\item_lecture_homework_check.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_arrow_up_blue.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_arrow_up_blue.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_chat_100.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_chat_100.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_campaign_100.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_campaign_100.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable-v24_make_round_box_light_gray.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable-v24\\make_round_box_light_gray.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_search.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_activity_board_modify.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\activity_board_modify.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_arrow_up.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_arrow_up.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_item_notice.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\item_notice.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_item_student_attendance.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\item_student_attendance.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_activity_ac_info.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\activity_ac_info.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable-ldpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-pngs-39:\\drawable-ldpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_item_student.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\item_student.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_arrow_up_white.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_arrow_up_white.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-pngs-39:\\drawable-xxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_write_100.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_write_100.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_kakao_logo.png.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\kakao_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable-v24_naverblogicon.png.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable-v24\\naverblogicon.png"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_circular_grey_bordersolid.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\circular_grey_bordersolid.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_empty_profile.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_empty_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_facebook_logo.png.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\facebook_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_baseline_contact_emergency_24.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_baseline_contact_emergency_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_activity_new_board.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\activity_new_board.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_campaign.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_campaign.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_round_btn_custom_none.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\round_btn_custom_none.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable-v24_ic_baseline_key_24_dark_gray.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable-v24\\ic_baseline_key_24_dark_gray.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_lms_logo.png.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\lms_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_illustration_login.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_illustration_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_white_circularborderbtn.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\white_circularborderbtn.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_location_24dp.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_location_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_profile_default.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\profile_default.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_calendar_100.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_calendar_100.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_notifications_white_24dp.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_notifications_white_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable-v24_backgroundimg.png.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable-v24\\backgroundimg.png"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_person_gray.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_person_gray.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_edittext_none.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\edittext_none.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_activity_student_detail.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\activity_student_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_item_video_board.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\item_video_board.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_article_100.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_article_100.xml"
+    },
+    {
+        "merged": "com.example.teamb_project.app-merged_res-44:/drawable_round_btn_custom_clicked.xml.flat",
+        "source": "com.example.teamb_project.app-main-46:/drawable/round_btn_custom_clicked.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_activity_find.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\activity_find.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_fragment_video_board.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\fragment_video_board.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_round_delete.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_round_delete.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\menu_tt_menu_toolbar.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\menu\\tt_menu_toolbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_check.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_check.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_zz.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\zz.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_item_student_testresult.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\item_student_testresult.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_bg.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_activity_video_detail.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\activity_video_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable-v24_ac1.jpg.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable-v24\\ac1.jpg"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_top_toolbar.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\top_toolbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_activity_my_lecture.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\activity_my_lecture.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_fragment_student_test.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\fragment_student_test.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_bottom_welcome.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_bottom_welcome.xml"
+    },
+    {
+        "merged": "com.example.teamb_project.app-merged_res-44:/layout_activity_join.xml.flat",
+        "source": "com.example.teamb_project.app-main-46:/layout/activity_join.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\navigation_nav_graph.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\navigation\\nav_graph.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_baseline_info_24.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_baseline_info_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable-v24_google_logo.png.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable-v24\\google_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_item_board_img.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\item_board_img.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_article.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_article.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_baseline_local_phone_24.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_baseline_local_phone_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable-v24_edittext_rounded_corner_rectangle.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable-v24\\edittext_rounded_corner_rectangle.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_activity_ac_calendar.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\activity_ac_calendar.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable-v24_make_round_box_white.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable-v24\\make_round_box_white.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_right_arrowhead.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_right_arrowhead.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_activity_join.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\activity_join.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_round_btn_custom_clicked.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\round_btn_custom_clicked.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_activity_notice.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\activity_notice.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_bg_btn_welcome.png.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\bg_btn_welcome.png"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_close_blue.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_close_blue.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-pngs-39:\\drawable-xhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_fragment_lecture_homework.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\fragment_lecture_homework.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_item_board.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\item_board.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_bg_btn_login.png.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\bg_btn_login.png"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_item_lecture_notice.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\item_lecture_notice.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_fragment_student_attendance.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\fragment_student_attendance.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\menu_top_menu_toolbar.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\menu\\top_menu_toolbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_item_tt_recv.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\item_tt_recv.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_naver_logo.png.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\naver_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_item_attached_file.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\item_attached_file.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_call_24dp.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_call_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_item_student_homework.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\item_student_homework.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable-v24_ic_baseline_person_24_dark_gray.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable-v24\\ic_baseline_person_24_dark_gray.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_item_counsel.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\item_counsel.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_item_my_lecture.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\item_my_lecture.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_circularbordersolid.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\circularbordersolid.xml"
+    },
+    {
+        "merged": "com.example.teamb_project.app-merged_res-44:/drawable_round_btn_custom_none.xml.flat",
+        "source": "com.example.teamb_project.app-main-46:/drawable/round_btn_custom_none.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_drawer.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\drawer.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-pngs-39:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_person_light_gray.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_person_light_gray.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_activity_tt.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\activity_tt.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_arrow_back_24dp.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_arrow_back_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_email_24dp.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_email_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\font_font.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\font\\font.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_item_reply.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\item_reply.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_more_24.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_more_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_book_100.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_book_100.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_more_white.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_more_white.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_activity_stu_my_lecture.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\activity_stu_my_lecture.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_drop_down_100.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_drop_down_100.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_arrow_down_gray.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_arrow_down_gray.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_book.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_book.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_activity_stu_lecture_detail.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\activity_stu_lecture_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_activity_counsel_detail.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\activity_counsel_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_back.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_back.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_fragment_lecture_home.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\fragment_lecture_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-pngs-39:\\drawable-xxxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_illustration_welcome.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_illustration_welcome.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-pngs-39:\\drawable-hdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_card_banner.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\card_banner.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_calendar.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_calendar.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_baseline_menu_24_white.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_baseline_menu_24_white.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_fb_circularborderbtn.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\fb_circularborderbtn.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_baseline_female_24.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_baseline_female_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable-v24_ic_baseline_rotate_left_24_white.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable-v24\\ic_baseline_rotate_left_24_white.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_baseline_male_24.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_baseline_male_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable-v24_ac2.jpg.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable-v24\\ac2.jpg"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_activity_board.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\activity_board.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_bg_txt_username.png.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\bg_txt_username.png"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_send_blue.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_send_blue.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_activity_counsel.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\activity_counsel.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable-v24_make_box_white.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable-v24\\make_box_white.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_activity_lecture_detail.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\activity_lecture_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_bg_txt_password.png.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\bg_txt_password.png"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_baseline_arrow_back_24_white.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_baseline_arrow_back_24_white.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_check_100.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_check_100.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_add_photo.png.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\add_photo.png"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable-v24_timetable.png.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable-v24\\timetable.png"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_activity_board_detail.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\activity_board_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_send_24.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_send_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable-v24_instaricon.png.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable-v24\\instaricon.png"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_baseline_password_24.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_baseline_password_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_edit_blue.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_edit_blue.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\xml_file_path.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\xml\\file_path.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_fragment_student_homework.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\fragment_student_homework.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_kk_circularborderbtn.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\kk_circularborderbtn.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_attach_file.png.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\attach_file.png"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_ic_message.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\ic_message.xml"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\font_ralewayregular.ttf.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\font\\ralewayregular.ttf"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\drawable_loginbg.png.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\drawable\\loginbg.png"
+    },
+    {
+        "merged": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-merged_res-44:\\layout_activity_my_info.xml.flat",
+        "source": "C:\\Users\\ym\\.gradle\\daemon\\7.4\\com.example.teamb_project.app-main-46:\\layout\\activity_my_info.xml"
+    }
+]

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.teamb_project"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="32" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
+    <uses-permission android:name="android.permission.MANAGE_MEDIA" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="true" /> <!-- API30이상에서는 queries 사용해서 권한부여를 한번 더 해야함. -->
+    <queries>
+
+        <!-- WebView -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+
+            <category android:name="android.intent.category.BROWSABLE" />
+
+            <data android:scheme="http" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+
+            <category android:name="android.intent.category.BROWSABLE" />
+
+            <data android:scheme="https" />
+        </intent>
+        <!-- Camera -->
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+        <!-- Gallery -->
+        <intent>
+            <action android:name="android.intent.action.GET_CONTENT" />
+        </intent>
+        <!-- Youtube -->
+        <intent>
+            <action android:name="android.media.browse.MediaBrowserService" />
+        </intent>
+    </queries>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:debuggable="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/Theme.TeamBProject"
+        android:usesCleartextTraffic="true" >
+        <activity
+            android:name="com.example.teamb_project.student.mylecture.lecturehome.stu_LectureDetailActivity"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.example.teamb_project.student.mylecture.stu_MyLectureActivity"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.example.teamb_project.board.BoardModifyActivity"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.example.teamb_project.counselling.CounselDetailActivity"
+            android:exported="false" >
+        </activity>
+        <activity
+            android:name="com.example.teamb_project.counselling.NewCounselActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.teamb_project.drawer.MyInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.teamb_project.drawer.AcInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.teamb_project.drawer.AcCalendarActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.teamb_project.counselling.CounselActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.teamb_project.notice.NewNoticeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.teamb_project.student.mylecture.lecturehome.video_board.VideoDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.teamb_project.teacher.mylecture.lecturehome.studentinfo.StudentDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.teamb_project.teacher.mylecture.lecturehome.LectureDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.teamb_project.TTActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.teamb_project.JoinActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.teamb_project.FindActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.teamb_project.LoginActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.teamb_project.board.BoardDetailActivity"
+            android:exported="false" >
+        </activity>
+        <activity
+            android:name="com.example.teamb_project.board.NewBoardActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.teamb_project.notice.NoticeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.teamb_project.board.BoardActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.teamb_project.teacher.mylecture.MyLectureActivity"
+            android:exported="false" >
+        </activity>
+        <activity
+            android:name="com.example.teamb_project.teacher.TeacherHomeActivity"
+            android:exported="false" >
+        </activity>
+        <activity
+            android:name="com.example.teamb_project.student.StudentHomeActivity"
+            android:exported="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.teamb_project.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path" />
+        </provider>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.example.teamb_project.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+        </provider>
+
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
+    </application>
+
+</manifest>
