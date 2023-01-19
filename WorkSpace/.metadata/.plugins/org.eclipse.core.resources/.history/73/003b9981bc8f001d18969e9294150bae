@@ -1,0 +1,13 @@
+oracleDriver = oracle.jdbc.driver.OracleDriver
+url202 = jdbc:oracle:thin:@localhost:1521:xe
+home = jdbc:oracle:thin:@211.223.59.99:1521:xe
+
+hanul.username = hanul
+hanul.password = 0000
+hr.username = hr
+hr.password = 0000
+smart01.username = smart01
+smart01.password = 0000
+
+bteam.username = bteam
+bteam.password = bteam

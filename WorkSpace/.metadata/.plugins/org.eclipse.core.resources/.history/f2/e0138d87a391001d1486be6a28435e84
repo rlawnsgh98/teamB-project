@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lecture">
+
+	<!-- 학생이 수강중인 강의 리스트 조회 -->
+	<select id="stu_list" resultType="lecture.LectureVO">
+		select l.*, t.timetable_name
+		from lecture l left outer join timetable t                       
+		on l.timetable_code = t.timetable_code
+		where lecture_code in(select lecture_code 
+		                        from enrolment
+		                        where member_code = #{member_code})
+	</select>
+	
+	<!-- 강사가 교육중인 강의 리스트 조회 -->
+	<select id="teach_list" resultType="lecture.LectureVO">
+		select l.* ,t.timetable_name, (select count(*)from enrolment e where e.lecture_code= l.lecture_code) student_cnt
+		from lecture l left outer join timetable t
+		on l.timetable_code = t.timetable_code
+		where teacher_code = #{teacher_code}
+	</select>
+	
+	<!-- 선택한 강의의 선생 정보 -->
+	<select id="teacher_info" resultType="member.MemberVO">
+		select *
+		from member
+		where member_code = (select teacher_code
+		                    from lecture
+		                    where lecture_code = #{lecture_code})
+	</select>
+	
+	<!-- 선택한 강의의 공지사항 조회 -->
+	<select id="lecture_notice" resultType="lecture.LectureBoardVO">
+		select *
+		from board
+		where lecture_code = (select lecture_code
+		                        from lecture
+		                        where lecture_code = #{lecture_code})
+	</select>
+	
+	<!-- 선택한 강의의 수강생 리스트 조회 -->
+	<select id="student_list" resultType="member.MemberVO">
+		select m.*, lecture_code
+		from member m left outer join enrolment e on m.member_code=e.member_code
+		where e.lecture_code = #{lecture_code}
+	</select>
+	
+	<!-- 수강생 -> 선택한 학생의 출결 -->
+	<select id="student_addtendance" resultType="attendance.AttendanceVO" parameterType="Map">
+		select 
+			count(*) as total,
+		    count(case when state='OK' then 1 end) as ok,
+		    count(case when state='NO' then 1 end) as no,
+		    count(case when state='HF' then 1 end) as hf
+		from attendance
+		where lecture_code = #{lecture_code}
+		and member_code = #{member_code}
+	</select>
+</mapper>

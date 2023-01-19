@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lecture">
+
+	<!-- 학생이 수강중인 강의 리스트 조회 -->
+	<select id="stu_list" resultType="lecture.LectureVO">
+		select l.*, t.timetable_name
+		from lecture l left outer join timetable t                       
+		on l.timetable_code = t.timetable_code
+		where lecture_code in(select lecture_code 
+		                        from enrolment
+		                        where member_code = #{member_code})
+	</select>
+	
+	<!-- 강사가 교육중인 강의 리스트 조회 -->
+	<select id="teach_list" resultType="lecture.LectureVO">
+		select l.* ,t.timetable_name, (select count(*)from enrolment e where e.lecture_code= l.lecture_code)
+		from lecture l left outer join timetable t
+		on l.timetable_code = t.timetable_code
+		where teacher_code=#{teacher_code}
+	</select>
+	
+	<!-- 선택한 강의의 선생 정보 -->
+	<select id="teacher_info" resultType="member.MemberVO">
+		select *
+		from member
+		where member_code = (select teacher_code
+		                    from lecture
+		                    where lecture_code = #{lecture_code})
+	</select>
+	
+	<!-- 선택한 강의의 공지사항 조회 -->
+	<select id="lecture_notice" resultType="lecture.LectureBoardVO">
+		select *
+		from board
+		where lecture_code = (select lecture_code
+		                        from lecture
+		                        where lecture_code = #{lecture_code})
+	</select>
+	
+	<!-- 선택한 강의의 수강생 리스트 조회 -->
+	<select id="student_list" resultType="member.MemberVO">
+		select * 
+		from member
+		where member_code in (select member_code
+		                    from enrolment
+		                    where lecture_code = #{lecture_code})
+	</select>
+	
+</mapper>
