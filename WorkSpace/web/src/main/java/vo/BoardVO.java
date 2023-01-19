@@ -4,22 +4,13 @@ import java.sql.Date;
 import java.util.List;
 
 public class BoardVO {
-    private int board_code, writer, readcnt, root, indent, step, lecture_code, no, rownum;
+    private int board_code, writer, readcnt, root, indent, step, lecture_code, no;
     private String title, content, category, member_name;
     private Date writedate;
     private List<BoardFileVO> fileList;
     
     
-    
-    public int getRownum() {
-		return rownum;
-	}
-
-	public void setRownum(int rownum) {
-		this.rownum = rownum;
-	}
-
-	public List<BoardFileVO> getFileList() {
+    public List<BoardFileVO> getFileList() {
 		return fileList;
 	}
 
