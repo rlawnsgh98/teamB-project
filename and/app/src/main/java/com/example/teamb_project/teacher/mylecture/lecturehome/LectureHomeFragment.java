@@ -5,7 +5,6 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +12,6 @@ import android.widget.TextView;
 
 import com.example.teamb_project.R;
 import com.example.teamb_project.common.CommonMethod;
-import com.example.teamb_project.student.mylecture.lecturehome.stu_LectureHomeAdapter;
 import com.example.teamb_project.vo.LectureBoardVO;
 import com.example.teamb_project.vo.MemberVO;
 import com.google.gson.Gson;

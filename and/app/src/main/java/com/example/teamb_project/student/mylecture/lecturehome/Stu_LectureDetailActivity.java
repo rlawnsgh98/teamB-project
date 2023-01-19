@@ -28,7 +28,7 @@ public class Stu_LectureDetailActivity extends AppCompatActivity {
         d.tabLayout.addTab(d.tabLayout.newTab().setText("강의홈"));
         d.tabLayout.addTab(d.tabLayout.newTab().setText("강의영상"));
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.container, new stu_LectureHomeFragment(lecture_code)).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, new Stu_LectureHomeFragment(lecture_code)).commit();
         d.tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -56,7 +56,7 @@ public class Stu_LectureDetailActivity extends AppCompatActivity {
     private void changeView(int index) {
         switch (index) {
             case 0 :
-                getSupportFragmentManager().beginTransaction().replace(R.id.container, new stu_LectureHomeFragment(lecture_code)).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, new Stu_LectureHomeFragment(lecture_code)).commit();
                 break ;
             case 1 :
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, new VideoBoardFragment(lecture_code)).commit();

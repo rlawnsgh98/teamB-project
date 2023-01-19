@@ -1,7 +1,6 @@
 package com.example.teamb_project.student;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -18,7 +17,6 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.bumptech.glide.Glide;
 import com.example.conn.CommonMethod;
 import com.example.teamb_project.LoginActivity;
-import com.example.teamb_project.LoginInfo;
 import com.example.teamb_project.R;
 import com.example.teamb_project.TTActivity;
 import com.example.teamb_project.common.Common;
@@ -27,8 +25,7 @@ import com.example.teamb_project.databinding.ActivityStudenthomeBinding;
 import com.example.teamb_project.drawer.AcCalendarActivity;
 import com.example.teamb_project.drawer.AcInfoActivity;
 import com.example.teamb_project.drawer.MyInfoActivity;
-import com.example.teamb_project.student.mylecture.stu_MyLectureActivity;
-import com.example.teamb_project.teacher.TeacherHomeActivity;
+import com.example.teamb_project.student.mylecture.Stu_MyLectureActivity;
 import com.example.teamb_project.board.BoardActivity;
 import com.example.teamb_project.notice.NoticeActivity;
 import com.example.teamb_project.vo.MemberVO;
@@ -138,7 +135,7 @@ public class StudentHomeActivity extends AppCompatActivity implements View.OnCli
     @Override
     public void onClick(View v) {
         if(v.getId()==R.id.cv_mylecture){
-            Intent intent = new Intent(this, stu_MyLectureActivity.class);
+            Intent intent = new Intent(this, Stu_MyLectureActivity.class);
             startActivity(intent);
         }else if(v.getId()==R.id.cv_notice){
             Intent intent = new Intent(this, NoticeActivity.class);

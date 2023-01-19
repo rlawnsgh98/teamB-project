@@ -63,23 +63,16 @@
 
         <activity
             android:name=".student.mylecture.lecturehome.Stu_LectureDetailActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+            android:exported="false"/>
+        <activity
+            android:name=".student.mylecture.Stu_MyLectureActivity"
+            android:exported="false"/>
         <activity
             android:name=".board.BoardModifyActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+            android:exported="false"/>
         <activity
             android:name=".counselling.CounselDetailActivity"
-            android:exported="false">
-
-        </activity>
+            android:exported="false"/>
         <activity
             android:name=".counselling.NewCounselActivity"
             android:exported="false" />

@@ -53,7 +53,7 @@ public class LectureController {
 	public String stu_list(int id) {
 		List<LectureVO> list = sql.selectList("lecture.stu_list", id);
 	
-		return new Gson().toJson(list);
+		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(list);
 	}
 	//강사 홈 -> 내강의조회 -> 강사가 강의중인 강의목록 조회
 	@RequestMapping(value = "/teacher_lecture_list.le", produces ="text/html;charset=UTF-8")

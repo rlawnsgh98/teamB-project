@@ -16,13 +16,13 @@ import com.example.teamb_project.vo.LectureVO;
 
 import java.util.ArrayList;
 
-public class stu_MyLectureAdapter extends RecyclerView.Adapter<stu_MyLectureAdapter.ViewHolder> {
+public class Stu_MyLectureAdapter extends RecyclerView.Adapter<Stu_MyLectureAdapter.ViewHolder> {
 
     LayoutInflater inflater;
     Context context;
     ArrayList<LectureVO> list;
 
-    public stu_MyLectureAdapter(LayoutInflater inflater, Context context, ArrayList<LectureVO> list) {
+    public Stu_MyLectureAdapter(LayoutInflater inflater, Context context, ArrayList<LectureVO> list) {
         this.inflater = inflater;
         this.context = context;
         this.list = list;

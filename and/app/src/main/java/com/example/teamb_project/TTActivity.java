@@ -164,16 +164,20 @@ public class TTActivity extends AppCompatActivity implements View.OnClickListene
 
     //강의 정보 조회
     public void selectOne(int lecture_code){
-        commonMethod.setParams("lecture_code", lecture_code)
-                .sendPost("lecture_info", (isResult, data) -> {
-                    LectureVO vo = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, LectureVO.class);
-                    b.tvLectureName.setText(vo.getLecture_name());
-                    b.tvRoomName.setText(vo.getRoom_code().substring(1)+"호");
-                    b.tvTeacherName.setText(vo.getTeacher_name());
-                    b.tvStartDate.setText(vo.getStartdate().toString());
-                    b.tvCode.setText(vo.getLecture_code()+"");
-                    b.cardDetail.setVisibility(View.VISIBLE);
-                });
+        if(lecture_code != 0){
+            commonMethod.setParams("lecture_code", lecture_code)
+                    .sendPost("lecture_info", (isResult, data) -> {
+                        LectureVO vo = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, LectureVO.class);
+                        b.tvLectureName.setText(vo.getLecture_name());
+                        b.tvRoomName.setText(vo.getRoom_code().substring(1)+"호");
+                        b.tvTeacherName.setText(vo.getTeacher_name());
+                        b.tvStartDate.setText(vo.getStartdate().toString());
+                        b.tvCode.setText(vo.getLecture_code()+"");
+                        b.cardDetail.setVisibility(View.VISIBLE);
+                    });
+        }else{
+            b.cardDetail.setVisibility(View.GONE);
+        }
     }
 
 
@@ -245,7 +249,7 @@ public class TTActivity extends AppCompatActivity implements View.OnClickListene
         v.setBackgroundColor(gray);
     }
 
-    //과목, 교실 입력
+    //과목, 강의코드 입력
     public void setName(View v, String input_name, int lecture_code){
         name = v.findViewById(R.id.name);
         code = v.findViewById(R.id.code);

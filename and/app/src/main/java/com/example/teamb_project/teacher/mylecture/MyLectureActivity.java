@@ -5,15 +5,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.ImageView;
 
-import com.example.teamb_project.LoginInfo;
 import com.example.teamb_project.R;
 import com.example.teamb_project.common.Common;
 import com.example.teamb_project.common.CommonMethod;
-import com.example.teamb_project.student.mylecture.stu_MyLectureActivity;
-import com.example.teamb_project.student.mylecture.stu_MyLectureAdapter;
 import com.example.teamb_project.teacher.TeacherHomeActivity;
 import com.example.teamb_project.vo.LectureVO;
 import com.google.gson.Gson;

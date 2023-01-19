@@ -23,9 +23,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class stu_LectureHomeFragment extends Fragment {
+public class Stu_LectureHomeFragment extends Fragment {
     int lecture_code;
-    public stu_LectureHomeFragment(int lecture_code) {
+    public Stu_LectureHomeFragment(int lecture_code) {
         this.lecture_code = lecture_code;
     }
 
@@ -56,7 +56,7 @@ public class stu_LectureHomeFragment extends Fragment {
                     public void result(boolean isResult, String data) {
                         list = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, new TypeToken<List<LectureBoardVO>>(){}.getType());
 
-                        recv_lecture_notice.setAdapter(new stu_LectureHomeAdapter(getLayoutInflater(), getContext(), list));
+                        recv_lecture_notice.setAdapter(new Stu_LectureHomeAdapter(getLayoutInflater(), getContext(), list));
                         recv_lecture_notice.setLayoutManager(CommonMethod.getManager(getContext()));
                     }
                 });
