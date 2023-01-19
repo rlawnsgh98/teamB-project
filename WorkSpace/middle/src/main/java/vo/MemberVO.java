@@ -3,6 +3,7 @@ package vo;
 public class MemberVO {
 	private String id, pw, member_name, gender, email, phone, post, address, type, profilepath, salt;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	private String member_code, lecture_code, birth;
 	
 	
@@ -14,6 +15,11 @@ public class MemberVO {
 	public void setBirth(String birth) {
 		this.birth = birth;
 	}
+=======
+	private String member_code, lecture_code;
+	
+	
+>>>>>>> main
 =======
 	private String member_code, lecture_code;
 	

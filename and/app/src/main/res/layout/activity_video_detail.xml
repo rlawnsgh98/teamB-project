@@ -35,7 +35,10 @@
     <!-- 글 제목 -->
     <TextView
 <<<<<<< HEAD
+<<<<<<< HEAD
         android:id="@+id/tv_title"
+=======
+>>>>>>> main
 =======
 >>>>>>> main
         android:layout_width="wrap_content"
@@ -68,7 +71,10 @@
 
         <TextView
 <<<<<<< HEAD
+<<<<<<< HEAD
             android:id="@+id/tv_writer"
+=======
+>>>>>>> main
 =======
 >>>>>>> main
             android:layout_weight="1"
@@ -80,7 +86,10 @@
             />
         <TextView
 <<<<<<< HEAD
+<<<<<<< HEAD
             android:id="@+id/tv_writedate"
+=======
+>>>>>>> main
 =======
 >>>>>>> main
             android:layout_width="wrap_content"
@@ -99,7 +108,10 @@
             />
         <TextView
 <<<<<<< HEAD
+<<<<<<< HEAD
             android:id="@+id/tv_readcnt"
+=======
+>>>>>>> main
 =======
 >>>>>>> main
             android:layout_width="wrap_content"
@@ -129,7 +141,10 @@
         >
         <TextView
 <<<<<<< HEAD
+<<<<<<< HEAD
             android:id="@+id/tv_content"
+=======
+>>>>>>> main
 =======
 >>>>>>> main
             android:layout_margin="15dp"

@@ -4,9 +4,13 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
 <<<<<<< HEAD
+<<<<<<< HEAD
     android:orientation="vertical"
     android:id="@+id/lin_video"
     >
+=======
+    android:orientation="vertical">
+>>>>>>> main
 =======
     android:orientation="vertical">
 >>>>>>> main
@@ -23,7 +27,11 @@
             android:layout_width="110dp"
             android:layout_height="110dp"
 <<<<<<< HEAD
+<<<<<<< HEAD
             app:cardCornerRadius="10dp"
+=======
+            app:cardCornerRadius="2dp"
+>>>>>>> main
 =======
             app:cardCornerRadius="2dp"
 >>>>>>> main
@@ -35,7 +43,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
 <<<<<<< HEAD
+<<<<<<< HEAD
                 android:background="#333"
+=======
+                android:background="#5656AC"
+>>>>>>> main
 =======
                 android:background="#5656AC"
 >>>>>>> main
@@ -58,7 +70,11 @@
                 />
             <TextView
 <<<<<<< HEAD
+<<<<<<< HEAD
                 android:id="@+id/tv_name"
+=======
+                android:id="@+id/tv_writer"
+>>>>>>> main
 =======
                 android:id="@+id/tv_writer"
 >>>>>>> main
@@ -72,6 +88,7 @@
                 />
             <RelativeLayout
 <<<<<<< HEAD
+<<<<<<< HEAD
                 android:layout_below="@+id/tv_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -80,12 +97,17 @@
                 <TextView
                     android:id="@+id/tv_date"
 =======
+=======
+>>>>>>> main
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 >
                 <TextView
                     android:id="@+id/tv_writedate"
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -93,6 +115,10 @@
                     android:textSize="15dp"
                     android:textColor="@color/font_black"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                    android:layout_alignParentRight="true"
+>>>>>>> main
 =======
                     android:layout_alignParentRight="true"
 >>>>>>> main

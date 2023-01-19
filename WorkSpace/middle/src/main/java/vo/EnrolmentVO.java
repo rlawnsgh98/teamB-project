@@ -3,6 +3,7 @@ package vo;
 public class EnrolmentVO {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //	private int enrolment_code, lecture_code, member_code, status;
 //	private String startdate, enddate, vDay, room_name, lecture_name, room_code;
 //	
@@ -106,6 +107,8 @@ public class EnrolmentVO {
 
    
 =======
+=======
+>>>>>>> main
 	private int enrolment_code, lecture_code, member_code, status;
 
     public int getEnrolment_code() {
@@ -139,5 +142,8 @@ public class EnrolmentVO {
     public void setStatus(int status) {
         this.status = status;
     }
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
 }

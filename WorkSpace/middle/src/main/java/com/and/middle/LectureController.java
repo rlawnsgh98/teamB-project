@@ -130,6 +130,7 @@ public class LectureController {
 		}
 		
 <<<<<<< HEAD
+<<<<<<< HEAD
 		//회원 상세정보
 	    @RequestMapping(value = "/member_info", produces ="text/html;charset=UTF-8")
 	    public String student_info(int member_code) {
@@ -140,6 +141,8 @@ public class LectureController {
 	    
 	    
 		
+=======
+>>>>>>> main
 =======
 >>>>>>> main
 }

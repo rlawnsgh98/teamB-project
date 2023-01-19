@@ -92,9 +92,12 @@ public class ReplyAdapter extends RecyclerView.Adapter<ReplyAdapter.ViewHolder> 
                         //새로고침
 //                        common.refresh(activity);
 <<<<<<< HEAD
+<<<<<<< HEAD
                         h.send.setVisibility(View.GONE);
                         h.lin_modify_delete.setVisibility(View.GONE);
                         activity.selectList();
+=======
+>>>>>>> main
 =======
 >>>>>>> main
                     });

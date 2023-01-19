@@ -1,12 +1,15 @@
 package com.example.teamb_project.board;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import android.app.Activity;
 import android.app.DownloadManager;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
+=======
+>>>>>>> main
 =======
 >>>>>>> main
 import android.util.Log;
@@ -27,6 +30,7 @@ public class BoardFileAdapter extends RecyclerView.Adapter<BoardFileAdapter.View
     LayoutInflater inflater;
     List<BoardFileVO> list;
 <<<<<<< HEAD
+<<<<<<< HEAD
     Activity activity;
 
     public BoardFileAdapter(LayoutInflater inflater, List<BoardFileVO> list, Activity activity) {
@@ -34,10 +38,15 @@ public class BoardFileAdapter extends RecyclerView.Adapter<BoardFileAdapter.View
         this.list = list;
         this.activity = activity;
 =======
+=======
+>>>>>>> main
 
     public BoardFileAdapter(LayoutInflater inflater, List<BoardFileVO> list) {
         this.inflater = inflater;
         this.list = list;
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
     }
 
@@ -52,6 +61,7 @@ public class BoardFileAdapter extends RecyclerView.Adapter<BoardFileAdapter.View
 
         h.fileName.setText(list.get(i).getFile_name());
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         //파일 클릭시 다운로드 처리
         h.fileName.setOnClickListener(v -> {
@@ -76,6 +86,10 @@ public class BoardFileAdapter extends RecyclerView.Adapter<BoardFileAdapter.View
 
         Log.d("log", "onBindViewHolder: ");
 >>>>>>> main
+=======
+
+        Log.d("log", "onBindViewHolder: ");
+>>>>>>> main
     }
 
     @Override
@@ -95,7 +109,10 @@ public class BoardFileAdapter extends RecyclerView.Adapter<BoardFileAdapter.View
         }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 =======
 >>>>>>> main
 }

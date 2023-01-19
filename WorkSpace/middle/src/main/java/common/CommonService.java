@@ -22,7 +22,11 @@ public class CommonService {
 		//업로드할 물리적 위치
 		// 프로젝트 내 위치 말고 지정 위치에 저장하도록 하기
 <<<<<<< HEAD
+<<<<<<< HEAD
 		String path = "c://app" + request.getContextPath();
+=======
+		String path = "d://app" + request.getContextPath();
+>>>>>>> main
 =======
 		String path = "d://app" + request.getContextPath();
 >>>>>>> main

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <<<<<<< HEAD
+<<<<<<< HEAD
  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+=======
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+>>>>>>> main
 =======
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 >>>>>>> main
@@ -37,7 +41,11 @@
     </RelativeLayout>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     <!-- 상담 -->
+=======
+    <!-- 상담 답변 -->
+>>>>>>> main
 =======
     <!-- 상담 답변 -->
 >>>>>>> main
@@ -54,6 +62,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
             <!-- 제목 + 더보기 -->
             <LinearLayout
@@ -111,6 +120,8 @@
             </LinearLayout>
 
 =======
+=======
+>>>>>>> main
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -118,6 +129,9 @@
                 android:textSize="18dp"
                 android:textColor="@color/font_black"
                 />
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
             <!-- 구분선 -->
             <View
@@ -132,7 +146,10 @@
                 android:layout_height="wrap_content">
                 <TextView
 <<<<<<< HEAD
+<<<<<<< HEAD
                     android:id="@+id/tv_writer"
+=======
+>>>>>>> main
 =======
 >>>>>>> main
                     android:layout_width="wrap_content"
@@ -142,6 +159,7 @@
                     android:textColor="@color/font_black"
                     />
                 <TextView
+<<<<<<< HEAD
 <<<<<<< HEAD
                     android:id="@+id/tv_write_date"
                     android:layout_width="wrap_content"
@@ -291,6 +309,8 @@
                     android:id="@+id/tv_answer_date"
 =======
 >>>>>>> main
+=======
+>>>>>>> main
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2023.01.08"
@@ -309,8 +329,11 @@
                 />
             <TextView
 <<<<<<< HEAD
+<<<<<<< HEAD
                 android:id="@+id/tv_answer"
 =======
+=======
+>>>>>>> main
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="상담 내용 상담 내용 내용 내용"
@@ -377,6 +400,9 @@
                 android:background="@color/line_gray"
                 />
             <TextView
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -385,6 +411,7 @@
                 android:textColor="@color/font_black"
                 />
         </LinearLayout>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <!-- 답변 입력 -->
         <RelativeLayout
@@ -436,6 +463,8 @@
             android:layout_gravity="center"
             android:layout_margin="15dp"
             />
+=======
+>>>>>>> main
 =======
 >>>>>>> main
     </com.google.android.material.card.MaterialCardView>

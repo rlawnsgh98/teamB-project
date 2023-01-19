@@ -50,6 +50,7 @@
             android:layout_marginLeft="5dp"
             />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <TextView
             android:id="@+id/tv_teacher_name"
             android:layout_weight="1"
@@ -60,6 +61,8 @@
             android:textSize="18dp"
             android:layout_gravity="center"
 =======
+=======
+>>>>>>> main
         <EditText
             android:id="@+id/edt_search"
             android:layout_weight="1"
@@ -70,6 +73,9 @@
             android:background="@drawable/edittext_none"
             android:hint="상담 강사"
 
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
             />
     </LinearLayout>
@@ -86,7 +92,10 @@
     <!-- 제목 입력 -->
     <EditText
 <<<<<<< HEAD
+<<<<<<< HEAD
         android:id="@+id/edt_title"
+=======
+>>>>>>> main
 =======
 >>>>>>> main
         android:layout_width="match_parent"
@@ -118,7 +127,10 @@
         <!-- 글 내용 입력 -->
         <EditText
 <<<<<<< HEAD
+<<<<<<< HEAD
             android:id="@+id/edt_content"
+=======
+>>>>>>> main
 =======
 >>>>>>> main
             android:layout_width="match_parent"

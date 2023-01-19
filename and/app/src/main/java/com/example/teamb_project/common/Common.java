@@ -4,7 +4,10 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import android.graphics.Color;
+=======
+>>>>>>> main
 =======
 >>>>>>> main
 import android.os.Build;
@@ -12,8 +15,11 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import android.view.Window;
 import android.view.WindowManager;
+=======
+>>>>>>> main
 =======
 >>>>>>> main
 import android.view.inputmethod.InputMethodManager;
@@ -24,8 +30,11 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import androidx.appcompat.app.AppCompatActivity;
 
+=======
+>>>>>>> main
 =======
 >>>>>>> main
 import com.example.teamb_project.R;
@@ -33,7 +42,11 @@ import com.example.teamb_project.vo.MemberVO;
 
 public class Common {
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static MemberVO loginInfo;
+=======
+    static MemberVO loginInfo;
+>>>>>>> main
 =======
     static MemberVO loginInfo;
 >>>>>>> main
@@ -48,7 +61,10 @@ public class Common {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> main
     //임시 로그인 정보 저장
     public void setTempLoginInfo(){
         MemberVO temp = new MemberVO();
@@ -64,6 +80,9 @@ public class Common {
         this.loginInfo = temp;
     }
 
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
     //키보드 보이기
     public void showKeyBoard(Activity activity, EditText edt){
@@ -176,6 +195,7 @@ public class Common {
         return tw;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public void changeStatusBarColor(Activity activity) {
 
@@ -198,6 +218,8 @@ public class Common {
 //        activity.overridePendingTransition(0, 0);//인텐트 효과 없애기
 //    }
 
+=======
+>>>>>>> main
 =======
 >>>>>>> main
 }

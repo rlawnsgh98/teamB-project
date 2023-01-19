@@ -1,6 +1,7 @@
 package com.example.teamb_project.counselling;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -31,6 +32,8 @@ public class NewCounselActivity extends AppCompatActivity implements View.OnClic
     int teacher_code;
 
 =======
+=======
+>>>>>>> main
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -42,6 +45,9 @@ import com.example.teamb_project.databinding.ActivityNewCounselBinding;
 
 public class NewCounselActivity extends AppCompatActivity implements View.OnClickListener{
     ActivityNewCounselBinding b;
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +56,7 @@ public class NewCounselActivity extends AppCompatActivity implements View.OnClic
         setContentView(b.getRoot());
         getSupportActionBar().hide();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         //스피너에 들어갈 강사이름 목록 조회
         commonMethod.setParams("member_code", common.getLoginInfo().getMember_code())
@@ -92,6 +99,11 @@ public class NewCounselActivity extends AppCompatActivity implements View.OnClic
         b.cardBack.setOnClickListener(this);
         b.ivBack.setOnClickListener(this);
 >>>>>>> main
+=======
+        //클릭이벤트
+        b.cardBack.setOnClickListener(this);
+        b.ivBack.setOnClickListener(this);
+>>>>>>> main
 
     }
 
@@ -106,6 +118,7 @@ public class NewCounselActivity extends AppCompatActivity implements View.OnClic
         }else if(v.getId()==R.id.card_back){
             //취소 클릭시
             startActivity(intent_counsel);
+<<<<<<< HEAD
 <<<<<<< HEAD
         }else if(v.getId()==R.id.card_insert){
             //상담 등록
@@ -135,6 +148,8 @@ public class NewCounselActivity extends AppCompatActivity implements View.OnClic
                 Log.d("log", "값 입력 필요");
                 Toast.makeText(this, "제목, 내용을 모두 입력하세요", Toast.LENGTH_LONG).show();
             }
+=======
+>>>>>>> main
 =======
 >>>>>>> main
         }

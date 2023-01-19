@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.iml
 .gradle
 /local.properties
@@ -18,6 +19,8 @@ local.properties
 <<<<<<<< HEAD:WorkSpace/.gitignore
 /.metadata/
 ========
+=======
+>>>>>>> main
 # Created by https://www.toptal.com/developers/gitignore/api/windows,androidstudio,java
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,androidstudio,java
 
@@ -207,5 +210,16 @@ WorkSpace/.metadata/
 WorkSpace/middle/target/m2e-wtp/
 middle/target/
 
+<<<<<<< HEAD
+>>>>>>>> main:.gitignore
+>>>>>>> main
+=======
+<<<<<<<< HEAD:gitignore
+# End of https://www.toptal.com/developers/gitignore/api/windows,androidstudio,java
+WorkSpace/middle/target/
+WorkSpace/.metadata/
+WorkSpace/middle/target/m2e-wtp/
+middle/target/
+========
 >>>>>>>> main:.gitignore
 >>>>>>> main

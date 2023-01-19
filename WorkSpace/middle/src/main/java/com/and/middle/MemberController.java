@@ -17,9 +17,12 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import common.CommonService;
 import vo.BoardVO;
 import vo.EnrolmentVO;
+=======
+>>>>>>> main
 =======
 >>>>>>> main
 import vo.MemberVO;
@@ -45,7 +48,10 @@ public class MemberController {
 		map.put("id", id);
 		map.put("pw", pw);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> main
 		
 		MemberVO member = sql.selectOne("member.login", map);
 		return new Gson().toJson(member);

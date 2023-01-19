@@ -3,8 +3,11 @@ package com.example.teamb_project.teacher;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+=======
+>>>>>>> main
 =======
 >>>>>>> main
 
@@ -17,12 +20,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import com.bumptech.glide.Glide;
 import com.example.conn.CommonMethod;
 import com.example.teamb_project.LoginActivity;
 import com.example.teamb_project.TTActivity;
 import com.example.teamb_project.common.Common;
 import com.example.teamb_project.counselling.CounselActivity;
+=======
+>>>>>>> main
 =======
 >>>>>>> main
 import com.example.teamb_project.databinding.ActivityTeacherhomeBinding;
@@ -35,8 +41,11 @@ import com.example.teamb_project.teacher.mylecture.MyLectureActivity;
 import com.example.teamb_project.R;
 import com.example.teamb_project.notice.NoticeActivity;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import com.example.teamb_project.vo.MemberVO;
 import com.google.gson.GsonBuilder;
+=======
+>>>>>>> main
 =======
 >>>>>>> main
 

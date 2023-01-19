@@ -28,7 +28,11 @@
             android:layout_height="wrap_content"
             android:text="자유게시판"
 <<<<<<< HEAD
+<<<<<<< HEAD
             android:textSize="18dp"
+=======
+            android:textSize="19dp"
+>>>>>>> main
 =======
             android:textSize="19dp"
 >>>>>>> main
@@ -74,7 +78,11 @@
                 <!--수정 삭제-->
                 <RelativeLayout
 <<<<<<< HEAD
+<<<<<<< HEAD
                     android:visibility="gone"
+=======
+                    android:visibility="visible"
+>>>>>>> main
 =======
                     android:visibility="visible"
 >>>>>>> main

@@ -1,18 +1,12 @@
 <resources>
     <string name="app_name">TeamB-Project</string>
-    <!-- TODO: Remove or change this placeholder text -->
-<<<<<<< HEAD
-=======
     <string name="hello_blank_fragment">Hello blank fragment</string>
->>>>>>> main
-
     <!-- 게시판 검색필터 -->
     <string-array name="spinner_category">
         <item>제목</item>
         <item>내용</item>
         <item>작성자</item>
     </string-array>
-<<<<<<< HEAD
 
     <!-- Strings used for fragments for navigation -->
 
@@ -20,7 +14,6 @@
     <!-- 상담 강사목록 -->
 
     <!-- 수정/삭제 -->
-=======
 
     <string name="title_activity_stu_my_lecture">Stu_MyLectureActivity</string>
     <!-- Strings used for fragments for navigation -->
@@ -46,6 +39,5 @@
         <item>수정</item>
         <item>삭제</item>
     </string-array>
->>>>>>> main
 
 </resources>

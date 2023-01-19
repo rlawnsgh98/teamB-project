@@ -19,7 +19,10 @@ import java.util.ArrayList;
 
 public class CommonMethod {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> main
 
 
 
@@ -39,6 +42,9 @@ public class CommonMethod {
 //    }
 
 
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
 
     //레이아웃 매니저

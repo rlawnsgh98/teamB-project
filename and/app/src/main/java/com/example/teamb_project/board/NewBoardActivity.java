@@ -33,7 +33,10 @@ import com.example.teamb_project.databinding.ActivityNewBoardBinding;
 import com.example.teamb_project.vo.BoardFileVO;
 import com.example.teamb_project.vo.BoardVO;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import com.google.gson.Gson;
+=======
+>>>>>>> main
 =======
 >>>>>>> main
 
@@ -48,17 +51,23 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
     CommonMethod commonMethod = new CommonMethod();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     ArrayList<String> path_list;
     ArrayList<String> name_list;
     ArrayList<BoardFileVO> file_list;
     NewBoardAdapter adapter;
     BoardFileAdapter file_adapter;
 =======
+=======
+>>>>>>> main
     ArrayList<String> path_list = null;
     ArrayList<String> name_list = null;
     ArrayList<BoardFileVO> file_list = null;
     NewBoardAdapter adapter = null;
     BoardFileAdapter file_adapter = null;
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
 
     @Override
@@ -69,6 +78,7 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
         getSupportActionBar().hide();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //        checkDangerousPermissions();
 //        Intent intent = new Intent();
 //        intent.setAction(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
@@ -78,6 +88,8 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
         Common common = new Common();
         //임시로그인 - user1
 =======
+=======
+>>>>>>> main
         checkDangerousPermissions();
         Intent intent = new Intent();
         intent.setAction(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
@@ -87,6 +99,9 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
         Common common = new Common();
         //임시로그인 - user1
         common.setTempLoginInfo();
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
 
         //클릭
@@ -125,7 +140,11 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
                 if(path_list == null){
                     //첨부파일 없는 게시글
 <<<<<<< HEAD
+<<<<<<< HEAD
                     commonMethod.setParams("param", new Gson().toJson(vo))
+=======
+                    commonMethod.setParams("param", vo)
+>>>>>>> main
 =======
                     commonMethod.setParams("param", vo)
 >>>>>>> main
@@ -179,7 +198,10 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
         intent.setType("*/*");
 //        intent.putExtra(Intent.)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 =======
 >>>>>>> main
         intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
@@ -193,6 +215,7 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
         super.onActivityResult(requestCode, resultCode, data);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         checkDangerousPermissions();
         Intent intent = new Intent();
         intent.setAction(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
@@ -202,13 +225,19 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
 
 =======
 >>>>>>> main
+=======
+>>>>>>> main
         if(requestCode == FILE_CODE && resultCode == RESULT_OK){
 
             allMethod(data, FILE_CODE);
 
             //어댑터
 <<<<<<< HEAD
+<<<<<<< HEAD
             file_adapter = new BoardFileAdapter(getLayoutInflater(), file_list, this);
+=======
+            file_adapter = new BoardFileAdapter(getLayoutInflater(), file_list);
+>>>>>>> main
 =======
             file_adapter = new BoardFileAdapter(getLayoutInflater(), file_list);
 >>>>>>> main
@@ -232,7 +261,11 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
     @RequiresApi(api = Build.VERSION_CODES.O)
     public void allMethod(Intent data, int type){
 <<<<<<< HEAD
+<<<<<<< HEAD
 //        Log.d(TAG, "data 확인 : " + data.getClipData().getItemAt(0).getUri());
+=======
+        Log.d(TAG, "data 확인 : " + data.getClipData().getItemAt(0).getUri());
+>>>>>>> main
 =======
         Log.d(TAG, "data 확인 : " + data.getClipData().getItemAt(0).getUri());
 >>>>>>> main
@@ -242,6 +275,7 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
         file_list = new ArrayList<>();   // ==> BoardFileVO
         String realPath = null;
 <<<<<<< HEAD
+<<<<<<< HEAD
         if( data.getClipData() == null ){
             //한개 선택시 바로 mData 로 접근
             BoardFileVO vo = new BoardFileVO();
@@ -250,6 +284,8 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
                 realPath = getFilePath(data.getData());
                 String name = getFileNameToUri(data.getData());
 =======
+=======
+>>>>>>> main
         for (int i = 0; i < data.getClipData().getItemCount(); i++){
             BoardFileVO vo = new BoardFileVO();
             if(type==GALLERY_CODE){
@@ -262,12 +298,16 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
                 //파일처리
                 realPath = getFilePath(data.getClipData().getItemAt(i).getUri());
                 String name = getFileNameToUri(data.getClipData().getItemAt(i).getUri());
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
                 name_list.add( name );
                 vo.setFile_name( name );
             }
             path_list.add( realPath );
             vo.setPath( realPath );
+<<<<<<< HEAD
 <<<<<<< HEAD
             file_list.add(vo);
         }else{
@@ -292,6 +332,10 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
 
                 file_list.add(vo);
             }
+=======
+
+            file_list.add(vo);
+>>>>>>> main
 =======
 
             file_list.add(vo);

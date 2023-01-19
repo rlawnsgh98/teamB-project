@@ -123,6 +123,7 @@ public class CommonMethod {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public void sendPostFile(String url, String filePath, CallBackResult callback){
         ApiInterface apiInterface = new ApiClient().getApiClient().create(ApiInterface.class);
         Call<String> apiTest = apiInterface.connFilePost(url, stringToRequest(), pathToPartFile(filePath));
@@ -144,6 +145,11 @@ public class CommonMethod {
     public void sendPostFile(String url, String filepath, String filename, int type, CallBackResult callback){
 
         ApiInterface apiInterface = new ApiClient().getApiClient().create(ApiInterface.class);
+=======
+    public void sendPostFile(String url, String filepath, String filename, int type, CallBackResult callback){
+
+        ApiInterface apiInterface = new ApiClient().getApiClient().create(ApiInterface.class);
+>>>>>>> main
 =======
     public void sendPostFile(String url, String filepath, String filename, int type, CallBackResult callback){
 
@@ -190,6 +196,7 @@ public class CommonMethod {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     //파일이름 고정으로("img.png") 저장
     public MultipartBody.Part pathToPartFile(String path){
         if(path != null){
@@ -203,6 +210,10 @@ public class CommonMethod {
     //원래 파일 이름 그대로 저장
     public MultipartBody.Part pathToPartFile(String filepath, String filename, int type){
 //        String ss = filename.substring(filename.indexOf(".") , filename.length());
+=======
+    public MultipartBody.Part pathToPartFile(String filepath, String filename, int type){
+        String ss = filename.substring(filename.indexOf(".") , filename.length());
+>>>>>>> main
 =======
     public MultipartBody.Part pathToPartFile(String filepath, String filename, int type){
         String ss = filename.substring(filename.indexOf(".") , filename.length());

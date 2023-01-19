@@ -17,6 +17,7 @@ import org.springframework.web.multipart.MultipartRequest;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import common.CommonService;
 import vo.MemberVO;
@@ -24,11 +25,16 @@ import vo.BoardFileVO;
 import vo.BoardVO;
 import vo.CounselVO;
 =======
+=======
+>>>>>>> main
 import com.google.gson.reflect.TypeToken;
 
 import common.CommonService;
 import vo.BoardFileVO;
 import vo.BoardVO;
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
 import vo.ReplyVO;
 
@@ -38,6 +44,7 @@ public class AndController {
 	@Autowired @Qualifier("common") CommonService common;
 	
 	//new TypeToken<ArrayList<String>>(){}.getType()
+<<<<<<< HEAD
 <<<<<<< HEAD
 	
 	//상담 삭제
@@ -108,6 +115,9 @@ public class AndController {
 =======
 
 >>>>>>> main
+=======
+
+>>>>>>> main
 	//신규 게시글(+첨부파일) 저장
 	@RequestMapping(value="/insert.fi", produces = "text/html;charset=utf-8")
 	public String insert_file(String param, HttpServletRequest req) {
@@ -168,7 +178,11 @@ public class AndController {
 	public String selectVideo(int board_code) {
 		
 <<<<<<< HEAD
+<<<<<<< HEAD
 		return new Gson().toJson(sql.selectList("and.selectVideo", board_code));
+=======
+		return sql.selectOne("and.selectVideo", board_code);
+>>>>>>> main
 =======
 		return sql.selectOne("and.selectVideo", board_code);
 >>>>>>> main
@@ -177,6 +191,10 @@ public class AndController {
 	
 	// 강의영상 insert	==> 웹
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+	
+>>>>>>> main
 =======
 	
 >>>>>>> main
@@ -195,6 +213,7 @@ public class AndController {
 		//조회수 증가처리
 		sql.update("and.readcnt", board_code);
 <<<<<<< HEAD
+<<<<<<< HEAD
 		BoardVO test = sql.selectOne("and.board_info", board_code);
 		//해당 게시판의 파일정보 조회
 		test.setFileList( sql.selectList("and.file_info", board_code) ) ;
@@ -203,10 +222,14 @@ public class AndController {
 =======
 		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(sql.selectList("and.video_list", board_code));
 >>>>>>> main
+=======
+		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(sql.selectList("and.video_list", board_code));
+>>>>>>> main
 	}
 	
 	// 강의영상 목록조회 -- 특정 강의 카테고리
 	@RequestMapping(value="/list.vi", produces = "text/html;charset=utf-8")
+<<<<<<< HEAD
 <<<<<<< HEAD
 	public String videoList(int cnt, int lecture_code) {	// cnt, lecture_code 묶으려고 BoardVO로 받음 -> 안드에서 담아서 보내기
 		
@@ -215,6 +238,11 @@ public class AndController {
 		map.put("lecture_code", lecture_code);
 		
 		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(sql.selectList("and.video_list", map));
+=======
+	public String videoList(BoardVO vo) {	// cnt, category 묶으려고 BoardVO로 받음 -> 안드에서 담아서 보내기
+		
+		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(sql.selectList("and.video_list", vo));
+>>>>>>> main
 =======
 	public String videoList(BoardVO vo) {	// cnt, category 묶으려고 BoardVO로 받음 -> 안드에서 담아서 보내기
 		
@@ -296,10 +324,15 @@ public class AndController {
 	// 자유게시판 신규 등록
 	@RequestMapping(value="/insert.bo", produces = "text/html;charset=utf-8")
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public int board_insert(String param) {
 		
 		BoardVO board = new Gson().fromJson(param, BoardVO.class);
 		int result = sql.insert("and.board_insert", board);
+=======
+	public int board_insert(BoardVO vo) {
+		int result = sql.insert("and.board_insert", vo);
+>>>>>>> main
 =======
 	public int board_insert(BoardVO vo) {
 		int result = sql.insert("and.board_insert", vo);
@@ -311,8 +344,13 @@ public class AndController {
 	@RequestMapping(value="/list.bo", produces = "text/html;charset=utf-8")
 	public String and(int cnt) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 		List<BoardVO> list = sql.selectList("and.board_list", cnt);
 		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(list);
+=======
+		
+		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(sql.selectList("and.board_list", cnt));
+>>>>>>> main
 =======
 		
 		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(sql.selectList("and.board_list", cnt));
@@ -351,11 +389,14 @@ public class AndController {
 	
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 	
 	
 	
 	
 	
+=======
+>>>>>>> main
 =======
 >>>>>>> main
 	@RequestMapping(value="/andVO", produces = "text/html;charset=utf-8")

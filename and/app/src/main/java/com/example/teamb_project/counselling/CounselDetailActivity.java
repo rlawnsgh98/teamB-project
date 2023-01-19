@@ -1,6 +1,7 @@
 package com.example.teamb_project.counselling;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -28,6 +29,8 @@ public class CounselDetailActivity extends AppCompatActivity implements View.OnC
     final String TAG = "log";
 
 =======
+=======
+>>>>>>> main
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -39,6 +42,9 @@ import com.example.teamb_project.databinding.ActivityCounselDetailBinding;
 
 public class CounselDetailActivity extends AppCompatActivity implements View.OnClickListener{
     ActivityCounselDetailBinding b;
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +53,7 @@ public class CounselDetailActivity extends AppCompatActivity implements View.OnC
         setContentView(b.getRoot());
         getSupportActionBar().hide();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         //로그인 확인
         MemberVO member = common.getLoginInfo();
@@ -116,12 +123,17 @@ public class CounselDetailActivity extends AppCompatActivity implements View.OnC
         //뒤로가기
         b.ivBack.setOnClickListener(this);
 >>>>>>> main
+=======
+        //뒤로가기
+        b.ivBack.setOnClickListener(this);
+>>>>>>> main
 
     }
 
 
     @Override
     public void onClick(View v) {
+<<<<<<< HEAD
 <<<<<<< HEAD
         //임시로 넣을 오늘날짜
         long now = System.currentTimeMillis();
@@ -221,11 +233,16 @@ public class CounselDetailActivity extends AppCompatActivity implements View.OnC
                         common.refresh(this);
                     });
 =======
+=======
+>>>>>>> main
 
         if(v.getId()==R.id.iv_back){
             //뒤로가기 클릭
             Intent intent = new Intent(CounselDetailActivity.this, CounselActivity.class);
             startActivity(intent);
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
         }
 

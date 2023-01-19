@@ -20,7 +20,10 @@
             >
             <ImageView
 <<<<<<< HEAD
+<<<<<<< HEAD
                 android:id="@+id/iv_profile"
+=======
+>>>>>>> main
 =======
 >>>>>>> main
                 android:layout_width="80dp"
@@ -68,9 +71,13 @@
                 </com.google.android.material.card.MaterialCardView>
             </RelativeLayout>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             <TextView
                 android:id="@+id/name"
+=======
+            <TextView
+>>>>>>> main
 =======
             <TextView
 >>>>>>> main
@@ -83,13 +90,17 @@
                 android:textColor="@color/font_black"
                 />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 =======
 >>>>>>> main
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
+<<<<<<< HEAD
 <<<<<<< HEAD
                 android:layout_marginBottom="1dp">
 
@@ -131,6 +142,8 @@
                     </LinearLayout>
                 </RelativeLayout>
 =======
+=======
+>>>>>>> main
                 >
                 <TextView
                     android:layout_width="wrap_content"
@@ -145,6 +158,9 @@
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="20dp"
                     />
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
             </RelativeLayout>
         </RelativeLayout>

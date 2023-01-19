@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
 <<<<<<< HEAD
+<<<<<<< HEAD
                     	
     
     
@@ -16,13 +17,25 @@
     <wb-module deploy-name="middle-1.0.0-BUILD-SNAPSHOT">
                                         
 >>>>>>> main
+=======
+                	
+    
+    
+    
+    <wb-module deploy-name="middle-1.0.0-BUILD-SNAPSHOT">
+                                        
+>>>>>>> main
         
         
         
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                         		
         
+=======
+                                		
+>>>>>>> main
 =======
                                 		
 >>>>>>> main
@@ -31,8 +44,12 @@
         
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                         		
         
+=======
+                                		
+>>>>>>> main
 =======
                                 		
 >>>>>>> main
@@ -41,8 +58,12 @@
         
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                         		
         
+=======
+                                		
+>>>>>>> main
 =======
                                 		
 >>>>>>> main
@@ -50,6 +71,7 @@
         
         
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+<<<<<<< HEAD
 <<<<<<< HEAD
                                         
         
@@ -67,13 +89,24 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/target/generated-sources/annotations"/>
                                 		
 >>>>>>> main
+=======
+                                
+        
+        
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/target/generated-sources/annotations"/>
+                                		
+>>>>>>> main
         
         
         
         <property name="java-output-path" value="target/classes"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                 
         
+=======
+                                        
+>>>>>>> main
 =======
                                         
 >>>>>>> main
@@ -82,8 +115,12 @@
         
         <property name="context-root" value="middle"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                         	
     
+=======
+                                	
+>>>>>>> main
 =======
                                 	
 >>>>>>> main
@@ -92,8 +129,12 @@
     
     </wb-module>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     
 
+=======
+                
+>>>>>>> main
 =======
                 
 >>>>>>> main

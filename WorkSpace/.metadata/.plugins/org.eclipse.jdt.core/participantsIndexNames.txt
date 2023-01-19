@@ -1,5 +1,6 @@
 INDEX VERSION 1.131
 <<<<<<< HEAD
+<<<<<<< HEAD
 C:\_Project\main\WorkSpace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2862305764.index
 \middle\src\main\java
 C:\_Project\main\WorkSpace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\390785669.index
@@ -13,6 +14,16 @@ D:\teamB-project-backup\WorkSpace\.metadata\.plugins\org.eclipse.jst.jsp.core\js
 D:\teamB-project-backup\WorkSpace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\390785669.index
 >>>>>>> main
 \middle\src\main\java
+=======
+D:\teamB-project-backup\WorkSpace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1369228649.index
+\web\src\main\java
+D:\teamB-project-backup\WorkSpace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2862305764.index
+\middle\src\main\java
+D:\teamB-project-backup\WorkSpace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3023876586.index
+\web\src\main\java
+D:\teamB-project-backup\WorkSpace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\390785669.index
+\middle\src\main\java
+>>>>>>> main
 D:\teamB-project-backup\WorkSpace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\953672939.index
 \web\src\main\java
 D:\teamB-project-backup\WorkSpace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2220833067.index

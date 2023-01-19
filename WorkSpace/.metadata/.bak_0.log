@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 !SESSION 2023-01-17 12:48:01.705 -----------------------------------------------
+=======
+!SESSION 2023-01-10 22:23:25.220 -----------------------------------------------
+>>>>>>> main
 =======
 !SESSION 2023-01-10 22:23:25.220 -----------------------------------------------
 >>>>>>> main
@@ -8,6 +12,7 @@ java.version=11.0.16.1
 java.vendor=Oracle Corporation
 BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
 Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+<<<<<<< HEAD
 <<<<<<< HEAD
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -clean -product org.springframework.boot.ide.branding.sts4
 
@@ -9876,6 +9881,13 @@ Command-line arguments:  -data D:\teamB-project-backup\WorkSpace -os win32 -ws w
 This is a continuation of log file D:\teamB-project-backup\WorkSpace\.metadata\.bak_1.log
 Created Time: 2023-01-10 22:31:05.099
 
+=======
+Command-line arguments:  -data D:\teamB-project-backup\WorkSpace -os win32 -ws win32 -arch x86_64 -clean -product org.springframework.boot.ide.branding.sts4
+
+This is a continuation of log file D:\teamB-project-backup\WorkSpace\.metadata\.bak_1.log
+Created Time: 2023-01-10 22:31:05.099
+
+>>>>>>> main
 !ENTRY org.eclipse.lsp4e 4 0 2023-01-10 22:31:05.099
 !MESSAGE Exception occurred while fetching the content type from the buffer
 !STACK 1
@@ -10776,12 +10788,16 @@ java.util.concurrent.ExecutionException: org.eclipse.lsp4j.jsonrpc.JsonRpcExcept
 	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$13(LanguageServerWrapper.java:425)
 	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1736)
 	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1728)
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
 	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
 	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
 	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
 	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
 	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 !ENTRY org.eclipse.egit.ui 2 0 2023-01-17 16:02:29.858
@@ -10886,6 +10902,24 @@ Caused by: java.io.IOException: 파이프가 닫히는 중입니다
 	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:69)
 	... 12 more
 
+=======
+Caused by: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$4(LanguageServerWrapper.java:260)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.request(RemoteEndpoint.java:161)
+	at org.eclipse.lsp4j.jsonrpc.services.EndpointProxy.invoke(EndpointProxy.java:91)
+	at com.sun.proxy.$Proxy61.shutdown(Unknown Source)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$13(LanguageServerWrapper.java:423)
+	... 7 more
+Caused by: java.io.IOException: 파이프가 닫히는 중입니다
+	at java.base/java.io.FileOutputStream.writeBytes(Native Method)
+	at java.base/java.io.FileOutputStream.write(FileOutputStream.java:354)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:69)
+	... 12 more
+
+>>>>>>> main
 !ENTRY org.eclipse.ui 4 0 2023-01-10 23:23:19.156
 !MESSAGE Unhandled event loop exception
 !STACK 0
@@ -10957,6 +10991,9 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
 !SESSION 2023-01-11 00:47:39.682 -----------------------------------------------
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
 eclipse.buildId=4.14.0.202203131612
 java.version=11.0.16.1
@@ -10966,9 +11003,18 @@ Framework arguments:  -product org.springframework.boot.ide.branding.sts4
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -clean -product org.springframework.boot.ide.branding.sts4
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 !ENTRY org.eclipse.jface 2 0 2023-01-17 20:05:22.410
 !MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
 !SUBENTRY 1 org.eclipse.jface 2 0 2023-01-17 20:05:22.410
+=======
+!ENTRY org.eclipse.core.resources 2 10035 2023-01-11 00:48:14.472
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2023-01-11 00:48:16.812
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-01-11 00:48:16.812
+>>>>>>> main
 =======
 !ENTRY org.eclipse.core.resources 2 10035 2023-01-11 00:48:14.472
 !MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
@@ -10983,7 +11029,11 @@ Binding(CTRL+SHIFT+T,
 		Open a type in a Java editor,
 		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
 <<<<<<< HEAD
+<<<<<<< HEAD
 		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1a916120,
+=======
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@30dd23e2,
+>>>>>>> main
 =======
 		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@30dd23e2,
 >>>>>>> main
@@ -10994,6 +11044,7 @@ Binding(CTRL+SHIFT+T,
 	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
 		,
 		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+<<<<<<< HEAD
 <<<<<<< HEAD
 		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2d732cda,
 		,,true),null),
@@ -11007,13 +11058,24 @@ Binding(CTRL+SHIFT+T,
 	org.eclipse.ui.contexts.window,,,system)
 !SUBENTRY 1 org.eclipse.jface 2 0 2023-01-11 00:48:16.812
 >>>>>>> main
+=======
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@88fc9cb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-01-11 00:48:16.812
+>>>>>>> main
 !MESSAGE A conflict occurred for ALT+SHIFT+R:
 Binding(ALT+SHIFT+R,
 	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
 		Rename the selected element,
 		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
 <<<<<<< HEAD
+<<<<<<< HEAD
 		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@755fdfad,
+=======
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@75693526,
+>>>>>>> main
 =======
 		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@75693526,
 >>>>>>> main
@@ -11025,7 +11087,11 @@ Binding(ALT+SHIFT+R,
 		Rename the selected item,
 		Category(org.eclipse.ui.category.file,File,null,true),
 <<<<<<< HEAD
+<<<<<<< HEAD
 		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3c98eaa9,
+=======
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@39a1c200,
+>>>>>>> main
 =======
 		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@39a1c200,
 >>>>>>> main
@@ -11033,6 +11099,7 @@ Binding(ALT+SHIFT+R,
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 !ENTRY org.eclipse.mylyn.tasks.core 4 0 2023-01-17 20:05:23.124
 !MESSAGE Unexpected error while loading repository template extensions
@@ -11046,6 +11113,13 @@ Binding(ALT+SHIFT+R,
 !SUBENTRY 1 org.eclipse.mylyn.tasks.core 4 0 2023-01-11 00:48:17.881
 !MESSAGE Could not load repository template extension contributed by 'org.eclipse.mylyn.bugzilla.ide' with connectorKind 'bugzilla'
 
+=======
+!ENTRY org.eclipse.mylyn.tasks.core 4 0 2023-01-11 00:48:17.881
+!MESSAGE Unexpected error while loading repository template extensions
+!SUBENTRY 1 org.eclipse.mylyn.tasks.core 4 0 2023-01-11 00:48:17.881
+!MESSAGE Could not load repository template extension contributed by 'org.eclipse.mylyn.bugzilla.ide' with connectorKind 'bugzilla'
+
+>>>>>>> main
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-11 00:48:23.367
 !MESSAGE Entering DelegatingStreamConnectionProvider()
 
@@ -13204,6 +13278,9 @@ Binding(ALT+SHIFT+R,
 !MESSAGE Could not load repository template extension contributed by 'org.eclipse.mylyn.bugzilla.ide' with connectorKind 'bugzilla'
 
 !ENTRY org.eclipse.ui 4 4 2023-01-16 02:03:24.867
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
 !MESSAGE Unable to create part
 !STACK 1
@@ -13342,9 +13419,12 @@ Caused by: org.eclipse.core.runtime.CoreException: Cannot determine URI for '/mi
 	at org.eclipse.ui.texteditor.AbstractTextEditor.internalInit(AbstractTextEditor.java:3178)
 	... 115 more
 <<<<<<< HEAD
+<<<<<<< HEAD
 !SUBENTRY 1 org.eclipse.core.filebuffers 4 0 2023-01-17 20:05:24.882
 !MESSAGE Cannot determine URI for '/middle/src/main/java/com/and/middle/MemberController.java'.
 =======
+=======
+>>>>>>> main
 !SUBENTRY 1 org.eclipse.core.filebuffers 4 0 2023-01-16 02:03:24.868
 !MESSAGE Cannot determine URI for '/middle/src/main/java/com/and/middle/LectureController.java'.
 >>>>>>> main
@@ -13481,15 +13561,21 @@ org.eclipse.core.runtime.CoreException: Cannot determine URI for '/middle/src/ma
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
 <<<<<<< HEAD
+<<<<<<< HEAD
 !SUBENTRY 2 org.eclipse.core.filebuffers 4 0 2023-01-17 20:05:24.883
 !MESSAGE Cannot determine URI for '/middle/src/main/java/com/and/middle/MemberController.java'.
 
 !ENTRY org.eclipse.egit.ui 2 0 2023-01-17 20:05:25.731
 =======
+=======
+>>>>>>> main
 !SUBENTRY 2 org.eclipse.core.filebuffers 4 0 2023-01-16 02:03:24.869
 !MESSAGE Cannot determine URI for '/middle/src/main/java/com/and/middle/LectureController.java'.
 
 !ENTRY org.eclipse.egit.ui 2 0 2023-01-16 02:03:25.746
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
 !MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
 user global configuration and to define the default location to store repositories: 'C:\Users\asdkc'. If this is
@@ -13497,6 +13583,7 @@ not correct please set the HOME environment variable and restart Eclipse. Otherw
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 !ENTRY org.eclipse.jst.jsp.core 4 4 2023-01-17 20:05:50.316
 !MESSAGE A workspace crash was detected. The previous session did not exit normally. Not using saved taglib indexes.
@@ -13575,6 +13662,8 @@ org.eclipse.core.internal.resources.ResourceException: Problems encountered whil
 	at org.eclipse.core.internal.resources.Project.build(Project.java:116)
 	at org.springframework.ide.eclipse.core.SpringCoreUtils$1.run(SpringCoreUtils.java:760)
 =======
+=======
+>>>>>>> main
 !ENTRY org.eclipse.jdt.core 4 4 2023-01-16 02:03:43.688
 !MESSAGE Failed to index C:/Users/admin/.m2/repository/com/oracle/database/jdbc/ojdbc8/21.5.0.0/ojdbc8-21.5.0.0.jar
 !STACK 0
@@ -20578,6 +20667,7 @@ java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\com\oracle\database
 !MESSAGE Publishing failed with multiple errors
 !SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.373
 !MESSAGE Error reading file C:\Users\hoho0\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.5.0.0\ojdbc8-21.5.0.0.jar
+<<<<<<< HEAD
 !STACK 0
 java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.5.0.0\ojdbc8-21.5.0.0.jar (지정된 경로를 찾을 수 없습니다)
 	at java.base/java.io.FileInputStream.open0(Native Method)
@@ -20601,6 +20691,31 @@ java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\com\oracle\database
 !SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.373
 !MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\apache\commons\commons-dbcp2\2.9.0\commons-dbcp2-2.9.0.jar
 !STACK 0
+=======
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.5.0.0\ojdbc8-21.5.0.0.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:579)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.373
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\apache\commons\commons-dbcp2\2.9.0\commons-dbcp2-2.9.0.jar
+!STACK 0
+>>>>>>> main
 java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\apache\commons\commons-dbcp2\2.9.0\commons-dbcp2-2.9.0.jar (지정된 경로를 찾을 수 없습니다)
 	at java.base/java.io.FileInputStream.open0(Native Method)
 	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
@@ -20619,6 +20734,13 @@ java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\apache\commons\
 	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
 	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
 	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+<<<<<<< HEAD
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.373
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\apache\commons\commons-pool2\2.10.0\commons-pool2-2.10.0.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\apache\commons\commons-pool2\2.10.0\commons-pool2-2.10.0.jar (지정된 경로를 찾을 수 없습니다)
+=======
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 !SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.373
 !MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\apache\commons\commons-pool2\2.10.0\commons-pool2-2.10.0.jar
@@ -20664,6 +20786,1079 @@ java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\commons-logging\com
 	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
 	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.373
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\springframework\spring-jdbc\5.3.18\spring-jdbc-5.3.18.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\springframework\spring-jdbc\5.3.18\spring-jdbc-5.3.18.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.374
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\springframework\spring-beans\5.3.18\spring-beans-5.3.18.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\springframework\spring-beans\5.3.18\spring-beans-5.3.18.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.374
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\springframework\spring-core\5.3.18\spring-core-5.3.18.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\springframework\spring-core\5.3.18\spring-core-5.3.18.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.374
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\springframework\spring-jcl\5.3.18\spring-jcl-5.3.18.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\springframework\spring-jcl\5.3.18\spring-jcl-5.3.18.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.374
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\springframework\spring-tx\5.3.18\spring-tx-5.3.18.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\springframework\spring-tx\5.3.18\spring-tx-5.3.18.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.374
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\mybatis\mybatis\3.5.10\mybatis-3.5.10.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\mybatis\mybatis\3.5.10\mybatis-3.5.10.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.375
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\mybatis\mybatis-spring\2.0.7\mybatis-spring-2.0.7.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\mybatis\mybatis-spring\2.0.7\mybatis-spring-2.0.7.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.375
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-jsp\3.0.8\tiles-jsp-3.0.8.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-jsp\3.0.8\tiles-jsp-3.0.8.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.375
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-servlet\3.0.8\tiles-servlet-3.0.8.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-servlet\3.0.8\tiles-servlet-3.0.8.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.375
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-core\3.0.8\tiles-core-3.0.8.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-core\3.0.8\tiles-core-3.0.8.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.375
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\commons-digester\commons-digester\2.0\commons-digester-2.0.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\commons-digester\commons-digester\2.0\commons-digester-2.0.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.375
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\commons-beanutils\commons-beanutils\1.8.0\commons-beanutils-1.8.0.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\commons-beanutils\commons-beanutils\1.8.0\commons-beanutils-1.8.0.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.375
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-request-servlet\1.0.7\tiles-request-servlet-1.0.7.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-request-servlet\1.0.7\tiles-request-servlet-1.0.7.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.375
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-template\3.0.8\tiles-template-3.0.8.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-template\3.0.8\tiles-template-3.0.8.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.375
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-api\3.0.8\tiles-api-3.0.8.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-api\3.0.8\tiles-api-3.0.8.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.375
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-autotag-core-runtime\1.2\tiles-autotag-core-runtime-1.2.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-autotag-core-runtime\1.2\tiles-autotag-core-runtime-1.2.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.375
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-request-jsp\1.0.7\tiles-request-jsp-1.0.7.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-request-jsp\1.0.7\tiles-request-jsp-1.0.7.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.375
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-request-api\1.0.7\tiles-request-api-1.0.7.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-request-api\1.0.7\tiles-request-api-1.0.7.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.375
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\bgee\log4jdbc-log4j2\log4jdbc-log4j2-jdbc4.1\1.16\log4jdbc-log4j2-jdbc4.1-1.16.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\bgee\log4jdbc-log4j2\log4jdbc-log4j2-jdbc4.1\1.16\log4jdbc-log4j2-jdbc4.1-1.16.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.376
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.14.0\jackson-databind-2.14.0.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.14.0\jackson-databind-2.14.0.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.376
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.14.0\jackson-annotations-2.14.0.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.14.0\jackson-annotations-2.14.0.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.376
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.14.0\jackson-core-2.14.0.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.14.0\jackson-core-2.14.0.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.376
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\apache\commons\commons-email\1.5\commons-email-1.5.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\apache\commons\commons-email\1.5\commons-email-1.5.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.376
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\com\sun\mail\javax.mail\1.5.6\javax.mail-1.5.6.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\com\sun\mail\javax.mail\1.5.6\javax.mail-1.5.6.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.376
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.376
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\json\json\20220924\json-20220924.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\json\json\20220924\json-20220924.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.376
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\commons-fileupload\commons-fileupload\1.4\commons-fileupload-1.4.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\commons-fileupload\commons-fileupload\1.4\commons-fileupload-1.4.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.376
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\commons-io\commons-io\2.2\commons-io-2.2.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\commons-io\commons-io\2.2\commons-io-2.2.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.377
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\com\google\code\gson\gson\2.8.9\gson-2.8.9.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\com\google\code\gson\gson\2.8.9\gson-2.8.9.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.377
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\springframework\spring-context\5.3.18\spring-context-5.3.18.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\springframework\spring-context\5.3.18\spring-context-5.3.18.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.377
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\springframework\spring-aop\5.3.18\spring-aop-5.3.18.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\springframework\spring-aop\5.3.18\spring-aop-5.3.18.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.377
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\springframework\spring-expression\5.3.18\spring-expression-5.3.18.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\springframework\spring-expression\5.3.18\spring-expression-5.3.18.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.377
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\springframework\spring-webmvc\5.3.18\spring-webmvc-5.3.18.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\springframework\spring-webmvc\5.3.18\spring-webmvc-5.3.18.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.377
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\springframework\spring-web\5.3.18\spring-web-5.3.18.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\springframework\spring-web\5.3.18\spring-web-5.3.18.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.377
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\aspectj\aspectjrt\1.6.10\aspectjrt-1.6.10.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\aspectj\aspectjrt\1.6.10\aspectjrt-1.6.10.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.377
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\slf4j\slf4j-api\1.6.6\slf4j-api-1.6.6.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\slf4j\slf4j-api\1.6.6\slf4j-api-1.6.6.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.378
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\slf4j\jcl-over-slf4j\1.6.6\jcl-over-slf4j-1.6.6.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\slf4j\jcl-over-slf4j\1.6.6\jcl-over-slf4j-1.6.6.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.378
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\slf4j\slf4j-log4j12\1.6.6\slf4j-log4j12-1.6.6.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\slf4j\slf4j-log4j12\1.6.6\slf4j-log4j12-1.6.6.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.378
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\log4j\log4j\1.2.15\log4j-1.2.15.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\log4j\log4j\1.2.15\log4j-1.2.15.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.378
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.378
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\javax\servlet\jstl\1.2\jstl-1.2.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\javax\servlet\jstl\1.2\jstl-1.2.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.378
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\com\oracle\database\security\oraclepki\19.13.0.0\oraclepki-19.13.0.0.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\com\oracle\database\security\oraclepki\19.13.0.0\oraclepki-19.13.0.0.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.378
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\com\oracle\database\security\osdt_core\19.13.0.0\osdt_core-19.13.0.0.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\com\oracle\database\security\osdt_core\19.13.0.0\osdt_core-19.13.0.0.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.378
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\com\oracle\database\security\osdt_cert\19.7.0.0\osdt_cert-19.7.0.0.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\com\oracle\database\security\osdt_cert\19.7.0.0\osdt_cert-19.7.0.0.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2023-01-16 11:11:17.578
+!MESSAGE Publishing failed with multiple errors
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:17.578
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.5.0.0\ojdbc8-21.5.0.0.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.5.0.0\ojdbc8-21.5.0.0.jar (지정된 경로를 찾을 수 없습니다)
+>>>>>>> main
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+<<<<<<< HEAD
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+=======
+	at org.eclipse.wst.server.core.util.PublishHelper.publishDelta(PublishHelper.java:437)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishDelta(PublishHelper.java:461)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishDelta(PublishHelper.java:461)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:143)
+>>>>>>> main
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+<<<<<<< HEAD
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.373
+=======
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:17.578
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\apache\commons\commons-dbcp2\2.9.0\commons-dbcp2-2.9.0.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\apache\commons\commons-dbcp2\2.9.0\commons-dbcp2-2.9.0.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishDelta(PublishHelper.java:437)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishDelta(PublishHelper.java:461)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishDelta(PublishHelper.java:461)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:143)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:17.578
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\apache\commons\commons-pool2\2.10.0\commons-pool2-2.10.0.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\apache\commons\commons-pool2\2.10.0\commons-pool2-2.10.0.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishDelta(PublishHelper.java:437)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishDelta(PublishHelper.java:461)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishDelta(PublishHelper.java:461)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:143)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:17.579
+>>>>>>> main
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+<<<<<<< HEAD
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:571)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.wst.server.core.util.PublishHelper.copy(PublishHelper.java:563)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishFull(PublishHelper.java:539)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:134)
+=======
+	at org.eclipse.wst.server.core.util.PublishHelper.publishDelta(PublishHelper.java:437)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishDelta(PublishHelper.java:461)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishDelta(PublishHelper.java:461)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:143)
+>>>>>>> main
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+<<<<<<< HEAD
 !SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:15.373
 !MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\springframework\spring-jdbc\5.3.18\spring-jdbc-5.3.18.jar
 !STACK 0
@@ -22753,6 +23948,106 @@ java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\springframework
 !SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:17.580
 !MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\mybatis\mybatis\3.5.10\mybatis-3.5.10.jar
 !STACK 0
+=======
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:17.579
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\springframework\spring-jdbc\5.3.18\spring-jdbc-5.3.18.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\springframework\spring-jdbc\5.3.18\spring-jdbc-5.3.18.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishDelta(PublishHelper.java:437)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishDelta(PublishHelper.java:461)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishDelta(PublishHelper.java:461)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:143)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:17.579
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\springframework\spring-beans\5.3.18\spring-beans-5.3.18.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\springframework\spring-beans\5.3.18\spring-beans-5.3.18.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishDelta(PublishHelper.java:437)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishDelta(PublishHelper.java:461)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishDelta(PublishHelper.java:461)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:143)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:17.579
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\springframework\spring-core\5.3.18\spring-core-5.3.18.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\springframework\spring-core\5.3.18\spring-core-5.3.18.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishDelta(PublishHelper.java:437)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishDelta(PublishHelper.java:461)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishDelta(PublishHelper.java:461)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:143)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:17.579
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\springframework\spring-jcl\5.3.18\spring-jcl-5.3.18.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\springframework\spring-jcl\5.3.18\spring-jcl-5.3.18.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishDelta(PublishHelper.java:437)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishDelta(PublishHelper.java:461)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishDelta(PublishHelper.java:461)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:143)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:17.580
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\springframework\spring-tx\5.3.18\spring-tx-5.3.18.jar
+!STACK 0
+java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\springframework\spring-tx\5.3.18\spring-tx-5.3.18.jar (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:503)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishDelta(PublishHelper.java:437)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishDelta(PublishHelper.java:461)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishDelta(PublishHelper.java:461)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.publishDir(PublishOperation2.java:143)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:84)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:1337)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:956)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2023-01-16 11:11:17.580
+!MESSAGE Error reading file C:\Users\hoho0\.m2\repository\org\mybatis\mybatis\3.5.10\mybatis-3.5.10.jar
+!STACK 0
+>>>>>>> main
 java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\org\mybatis\mybatis\3.5.10\mybatis-3.5.10.jar (지정된 경로를 찾을 수 없습니다)
 	at java.base/java.io.FileInputStream.open0(Native Method)
 	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
@@ -23491,4 +24786,7 @@ java.io.FileNotFoundException: C:\Users\hoho0\.m2\repository\com\oracle\database
 	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
 	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main

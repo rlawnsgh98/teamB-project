@@ -1,6 +1,7 @@
 package com.example.teamb_project.counselling;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,10 +10,13 @@ import android.view.View;
 
 =======
 >>>>>>> main
+=======
+>>>>>>> main
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import com.example.conn.CommonMethod;
 import com.example.teamb_project.R;
@@ -25,12 +29,17 @@ import com.example.teamb_project.vo.CounselVO;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 =======
+=======
+>>>>>>> main
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import com.example.teamb_project.R;
 import com.example.teamb_project.databinding.ActivityCounselBinding;
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
 
 import java.util.ArrayList;
@@ -38,9 +47,12 @@ import java.util.ArrayList;
 public class CounselActivity extends AppCompatActivity implements View.OnClickListener{
     ActivityCounselBinding b;
 <<<<<<< HEAD
+<<<<<<< HEAD
     CommonMethod commonMethod = new CommonMethod();
     Common common = new Common();
     CounselAdapter adapter;
+=======
+>>>>>>> main
 =======
 >>>>>>> main
 
@@ -51,6 +63,7 @@ public class CounselActivity extends AppCompatActivity implements View.OnClickLi
         setContentView(b.getRoot());
         getSupportActionBar().hide();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         //상담 목록 조회
         commonMethod.setParams("vo", common.getLoginInfo())
@@ -69,6 +82,8 @@ public class CounselActivity extends AppCompatActivity implements View.OnClickLi
         b.ivPlus.setOnClickListener(this);
         b.ivBack.setOnClickListener(this);
 =======
+=======
+>>>>>>> main
         //어댑터로 보내줄 ArrayList
         ArrayList<Object> list = new ArrayList<>();
 
@@ -79,12 +94,16 @@ public class CounselActivity extends AppCompatActivity implements View.OnClickLi
         //클릭 이벤트
         b.ivPlus.setOnClickListener(this);
 
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
 
     }
 
     @Override
     public void onClick(View v) {
+<<<<<<< HEAD
 <<<<<<< HEAD
         if(v.getId()==R.id.iv_plus){
             Intent intent = new Intent(CounselActivity.this, NewCounselActivity.class);
@@ -97,10 +116,15 @@ public class CounselActivity extends AppCompatActivity implements View.OnClickLi
             Intent intent = new Intent(CounselActivity.this, activity.getClass());
             startActivity(intent);
 =======
+=======
+>>>>>>> main
 
         if(v.getId()==R.id.iv_plus){
             Intent intent = new Intent(CounselActivity.this, NewCounselActivity.class);
             startActivity(intent);
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
         }
 

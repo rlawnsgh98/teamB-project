@@ -1,7 +1,10 @@
 package com.example.teamb_project.student.mylecture.lecturehome.video_board;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import android.app.Activity;
+=======
+>>>>>>> main
 =======
 >>>>>>> main
 import android.os.Bundle;
@@ -32,6 +35,7 @@ public class VideoBoardFragment extends Fragment implements View.OnClickListener
     FragmentVideoBoardBinding b;
     VideoBoardAdapter adapter;
 <<<<<<< HEAD
+<<<<<<< HEAD
     int lecture_code;
     Common common = new Common();
     CommonMethod commonMethod = new CommonMethod();
@@ -45,6 +49,8 @@ public class VideoBoardFragment extends Fragment implements View.OnClickListener
 
     int cnt = 1;
 =======
+=======
+>>>>>>> main
 
     //강의카테고리 - 테스트
     String category = "test";
@@ -56,6 +62,9 @@ public class VideoBoardFragment extends Fragment implements View.OnClickListener
     }
 
     int lecture_code;
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
     final String TAG = "log";
 
@@ -68,9 +77,12 @@ public class VideoBoardFragment extends Fragment implements View.OnClickListener
         b = FragmentVideoBoardBinding.inflate(inflater);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         // 기본 10개 보이기
         commonMethod.setParams("lecture_code", lecture_code)
 =======
+=======
+>>>>>>> main
         Common common = new Common();
         CommonMethod commonMethod = new CommonMethod();
 
@@ -89,6 +101,9 @@ public class VideoBoardFragment extends Fragment implements View.OnClickListener
 
         // 기본 10개 보이기
         commonMethod.setParams("category", category)
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
                 .setParams("cnt", cnt)
                 .sendPost("list.vi", (isResult, data) -> {
@@ -156,9 +171,15 @@ public class VideoBoardFragment extends Fragment implements View.OnClickListener
                         //댓글 조회
                         selectList();
 <<<<<<< HEAD
+<<<<<<< HEAD
                         //남은 글 수
                         int boardCnt = Integer.parseInt(data.toString());
                         //남은 글 수가 0개 이하면 '더보기' 안보이게
+=======
+                        //남은 댓글 수
+                        int boardCnt = Integer.parseInt(data.toString());
+                        //남은 댓글 수가 0개 이하면 '더보기' 안보이게
+>>>>>>> main
 =======
                         //남은 댓글 수
                         int boardCnt = Integer.parseInt(data.toString());
@@ -200,7 +221,11 @@ public class VideoBoardFragment extends Fragment implements View.OnClickListener
     public void selectList(){
         new CommonMethod().setParams("cnt", cnt)
 <<<<<<< HEAD
+<<<<<<< HEAD
                 .sendPost("list.vi", (isResult, data) -> {
+=======
+                .sendPost("list.bo", (isResult, data) -> {
+>>>>>>> main
 =======
                 .sendPost("list.bo", (isResult, data) -> {
 >>>>>>> main

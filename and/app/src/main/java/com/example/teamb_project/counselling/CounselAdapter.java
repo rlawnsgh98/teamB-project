@@ -1,7 +1,10 @@
 package com.example.teamb_project.counselling;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import android.app.Activity;
+=======
+>>>>>>> main
 =======
 >>>>>>> main
 import android.app.AlertDialog;
@@ -12,13 +15,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import android.widget.ImageView;
+=======
+>>>>>>> main
 =======
 >>>>>>> main
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
@@ -33,11 +40,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.teamb_project.R;
 >>>>>>> main
+=======
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.teamb_project.R;
+>>>>>>> main
 
 import java.util.ArrayList;
 
 public class CounselAdapter extends RecyclerView.Adapter<CounselAdapter.ViewHolder>{
     LayoutInflater inflater;
+<<<<<<< HEAD
 <<<<<<< HEAD
     ArrayList<CounselVO> list;
     Activity activity;
@@ -50,6 +63,8 @@ public class CounselAdapter extends RecyclerView.Adapter<CounselAdapter.ViewHold
 
         this.activity = activity;
 =======
+=======
+>>>>>>> main
     ArrayList<Object> list;
     Context context;
 
@@ -57,6 +72,9 @@ public class CounselAdapter extends RecyclerView.Adapter<CounselAdapter.ViewHold
         this.inflater = inflater;
         this.list = list;
         this.context = context;
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
     }
 
@@ -69,6 +87,7 @@ public class CounselAdapter extends RecyclerView.Adapter<CounselAdapter.ViewHold
     @Override
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         MemberVO vo = common.getLoginInfo();
 
@@ -115,6 +134,8 @@ public class CounselAdapter extends RecyclerView.Adapter<CounselAdapter.ViewHold
 
             activity.startActivity(intent);
 =======
+=======
+>>>>>>> main
         //특정 상담 클릭
         h.detail.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,6 +144,9 @@ public class CounselAdapter extends RecyclerView.Adapter<CounselAdapter.ViewHold
                 intent.putExtra("counsel_id", 1);   //클릭한 상담의 id값 필요!
                 context.startActivity(intent);
             }
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
         });
 
@@ -131,6 +155,7 @@ public class CounselAdapter extends RecyclerView.Adapter<CounselAdapter.ViewHold
             @Override
             public void onClick(View v) {
                 //삭제 알림 띄우기
+<<<<<<< HEAD
 <<<<<<< HEAD
             }
         });
@@ -160,17 +185,26 @@ public class CounselAdapter extends RecyclerView.Adapter<CounselAdapter.ViewHold
         });
 
 =======
+=======
+>>>>>>> main
 
             }
         });
 
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
     }
 
     @Override
     public int getItemCount() {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return list.size();
+=======
+        return 10;
+>>>>>>> main
 =======
         return 10;
 >>>>>>> main
@@ -182,10 +216,16 @@ public class CounselAdapter extends RecyclerView.Adapter<CounselAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 <<<<<<< HEAD
+<<<<<<< HEAD
         LinearLayout detail, lin_more;
         View state;             //답변 상태
         TextView delete, modify, title, name, write_date;
         ImageView iv_more, profile;
+=======
+        LinearLayout detail;
+        View state;
+        TextView delete;
+>>>>>>> main
 =======
         LinearLayout detail;
         View state;
@@ -198,6 +238,7 @@ public class CounselAdapter extends RecyclerView.Adapter<CounselAdapter.ViewHold
             state = v.findViewById(R.id.v_state);
             delete = v.findViewById(R.id.tv_delete);
 <<<<<<< HEAD
+<<<<<<< HEAD
             modify = v.findViewById(R.id.tv_modify);
             title = v.findViewById(R.id.tv_title);
             name = v.findViewById(R.id.name);
@@ -209,6 +250,8 @@ public class CounselAdapter extends RecyclerView.Adapter<CounselAdapter.ViewHold
     }
 
 =======
+=======
+>>>>>>> main
         }
     }
 
@@ -233,6 +276,9 @@ public class CounselAdapter extends RecyclerView.Adapter<CounselAdapter.ViewHold
         });
         builder.create().show();
     }
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
 
 }

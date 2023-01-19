@@ -1,7 +1,10 @@
 package com.example.teamb_project.student.mylecture.lecturehome.video_board;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import android.content.Intent;
+=======
+>>>>>>> main
 =======
 >>>>>>> main
 import android.net.Uri;
@@ -13,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.conn.CommonMethod;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import com.example.teamb_project.R;
 import com.example.teamb_project.databinding.ActivityVideoDetailBinding;
 import com.example.teamb_project.vo.BoardVO;
@@ -21,11 +25,16 @@ import com.google.android.exoplayer2.MediaItem;
 import com.google.android.exoplayer2.SimpleExoPlayer;
 import com.google.gson.GsonBuilder;
 =======
+=======
+>>>>>>> main
 import com.example.teamb_project.databinding.ActivityVideoDetailBinding;
 import com.google.android.exoplayer2.ExoPlayer;
 import com.google.android.exoplayer2.MediaItem;
 import com.google.android.exoplayer2.SimpleExoPlayer;
 
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
 
 public class VideoDetailActivity extends AppCompatActivity implements View.OnClickListener {
@@ -33,6 +42,12 @@ public class VideoDetailActivity extends AppCompatActivity implements View.OnCli
     final String TAG = "log";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+//    String API_KEY = "AIzaSyARwP_xzcQggI8KGVkocJdk5W0TdDdk0M8";
+//    String videoId = "ViuzCw1nGvE";
+
+>>>>>>> main
 =======
 //    String API_KEY = "AIzaSyARwP_xzcQggI8KGVkocJdk5W0TdDdk0M8";
 //    String videoId = "ViuzCw1nGvE";
@@ -45,6 +60,7 @@ public class VideoDetailActivity extends AppCompatActivity implements View.OnCli
         super.onCreate(savedInstanceState);
         b = ActivityVideoDetailBinding.inflate(getLayoutInflater());
         setContentView(b.getRoot());
+<<<<<<< HEAD
 <<<<<<< HEAD
         getSupportActionBar().hide();
 
@@ -74,6 +90,8 @@ public class VideoDetailActivity extends AppCompatActivity implements View.OnCli
         b.ivBack.setOnClickListener(this);
 
 =======
+=======
+>>>>>>> main
 //        getSupportActionBar().hide();
 
 
@@ -91,16 +109,23 @@ public class VideoDetailActivity extends AppCompatActivity implements View.OnCli
                     //exoPlayer 에 setUri
                 });
 
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
     }
 
     @Override
     public void onClick(View v) {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if(v.getId()== R.id.iv_back){
             //뒤로가기
             onBackPressed();
         }
+=======
+
+>>>>>>> main
 =======
 
 >>>>>>> main

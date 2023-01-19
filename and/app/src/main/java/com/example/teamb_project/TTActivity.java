@@ -34,6 +34,7 @@ public class TTActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tt);
         getSupportActionBar().hide();
 
+<<<<<<< HEAD
         tt_toolbar = findViewById(R.id.tt_toolbar);
         linearLayouts.add(findViewById(R.id.ln_layout0));
         linearLayouts.add(findViewById(R.id.ln_layout1));
@@ -139,6 +140,8 @@ public class TTActivity extends AppCompatActivity {
         }//for()
     }//printTTlist()
 =======
+=======
+>>>>>>> main
 //        // 상단바
 //        top_toolbar = findViewById(R.id.top_toolbar);
 //        top_toolbar.setTitle("시간표");

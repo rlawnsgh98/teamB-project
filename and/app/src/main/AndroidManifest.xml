@@ -87,7 +87,13 @@
             android:name=".counselling.CounselDetailActivity"
             android:exported="false">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+>>>>>>> main
 =======
             <meta-data
                 android:name="android.app.lib_name"
@@ -99,6 +105,7 @@
             android:exported="false" />
         <activity
 <<<<<<< HEAD
+<<<<<<< HEAD
             android:name=".drawer.MyInfoActivity"
             android:exported="false" />
         <activity
@@ -108,6 +115,8 @@
             android:name=".drawer.AcCalendarActivity"
             android:exported="false" />
         <activity
+=======
+>>>>>>> main
 =======
 >>>>>>> main
             android:name=".counselling.CounselActivity"
@@ -146,6 +155,9 @@
 <<<<<<< HEAD
         </activity>
 
+<<<<<<< HEAD
+=======
+>>>>>>> main
 =======
 >>>>>>> main
 
@@ -178,6 +190,9 @@
             android:name=".notice.NoticeActivity"
             android:exported="false" />
         <activity
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
             android:name=".board.BoardActivity"
             android:exported="false" />
@@ -210,8 +225,14 @@
         <activity
             android:name=".student.StudentHomeActivity"
 <<<<<<< HEAD
+<<<<<<< HEAD
             android:exported="false" />
 
+=======
+            android:exported="true" />
+
+
+>>>>>>> main
 =======
             android:exported="true" />
 

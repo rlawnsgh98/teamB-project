@@ -57,7 +57,10 @@
     <fullyQualifiedTypeName name="lombok.Setter"/>
     <fullyQualifiedTypeName name="java.sql.Date"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <fullyQualifiedTypeName name="java.util.HashMap"/>
+=======
+>>>>>>> main
 =======
 >>>>>>> main
 </qualifiedTypeNameHistroy>

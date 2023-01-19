@@ -50,6 +50,9 @@ public class LoginActivity extends AppCompatActivity {
 =======
         // IP 설정 // 학교
         ApiClient.setBASEURL("http://192.168.0.26/middle/");
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
         //집
 //        ApiClient.setBASEURL("http://210.123.231.86/middle/");

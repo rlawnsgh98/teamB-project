@@ -3,6 +3,7 @@ package com.example.teamb_project.student.mylecture.lecturehome.video_board;
 import android.content.Context;
 import android.content.Intent;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import android.graphics.Bitmap;
 import android.media.ThumbnailUtils;
 import android.provider.MediaStore;
@@ -17,17 +18,27 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 >>>>>>> main
+=======
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+>>>>>>> main
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import com.example.conn.CommonMethod;
 import com.example.teamb_project.R;
 import com.example.teamb_project.vo.BoardVO;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+=======
+import com.example.teamb_project.R;
+import com.example.teamb_project.vo.BoardVO;
+>>>>>>> main
 =======
 import com.example.teamb_project.R;
 import com.example.teamb_project.vo.BoardVO;
@@ -40,7 +51,10 @@ public class VideoBoardAdapter extends RecyclerView.Adapter<VideoBoardAdapter.Vi
     ArrayList<BoardVO> list;
     Context context;
 <<<<<<< HEAD
+<<<<<<< HEAD
     CommonMethod commonMethod = new CommonMethod();
+=======
+>>>>>>> main
 =======
 >>>>>>> main
 
@@ -58,6 +72,7 @@ public class VideoBoardAdapter extends RecyclerView.Adapter<VideoBoardAdapter.Vi
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
+<<<<<<< HEAD
 <<<<<<< HEAD
         //기본정보
         h.tv_date.setText(list.get(i).getWritedate().toString());
@@ -81,6 +96,8 @@ public class VideoBoardAdapter extends RecyclerView.Adapter<VideoBoardAdapter.Vi
             intent.putExtra("board_code", list.get(i).getBoard_code());
             context.startActivity(intent);
 =======
+=======
+>>>>>>> main
         final int idx = i;
         //h.tv_title.setText(list.get(idx).getTitle());
 
@@ -91,6 +108,9 @@ public class VideoBoardAdapter extends RecyclerView.Adapter<VideoBoardAdapter.Vi
                 intent.putExtra("board_code", list.get(idx).getBoard_code());
                 context.startActivity(intent);
             }
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
         });
 
@@ -99,7 +119,11 @@ public class VideoBoardAdapter extends RecyclerView.Adapter<VideoBoardAdapter.Vi
     @Override
     public int getItemCount() {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return list.size();
+=======
+        return 10;
+>>>>>>> main
 =======
         return 10;
 >>>>>>> main
@@ -110,6 +134,7 @@ public class VideoBoardAdapter extends RecyclerView.Adapter<VideoBoardAdapter.Vi
     public int getItemViewType(int i){return i;}
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+<<<<<<< HEAD
 <<<<<<< HEAD
         LinearLayout video;
         ImageView thumbnail;
@@ -124,6 +149,8 @@ public class VideoBoardAdapter extends RecyclerView.Adapter<VideoBoardAdapter.Vi
         }
 
 =======
+=======
+>>>>>>> main
         TextView tv_title, tv_writer, tv_writedate;
         public ViewHolder(@NonNull View v) {
             super(v);
@@ -132,6 +159,9 @@ public class VideoBoardAdapter extends RecyclerView.Adapter<VideoBoardAdapter.Vi
             tv_writedate = v.findViewById(R.id.tv_writedate);
 
         }
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
     }
 }
