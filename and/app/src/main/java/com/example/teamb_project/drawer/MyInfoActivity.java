@@ -50,8 +50,7 @@ import java.util.Locale;
 import java.util.regex.Pattern;
 
 public class MyInfoActivity extends AppCompatActivity {
-    Toolbar top_toolbar;
-    TextView member_code_data,id_data,pw_data
+    TextView id_data,pw_data
             ,member_name_data_tv,email_data_tv,birth_data_tv,phone_data_tv
             ,type_data,modify_btn,cancel_btn,confirm_btn;
     EditText member_name_data_et,email_data_et,birth_data_et,phone_data_et;
@@ -60,7 +59,7 @@ public class MyInfoActivity extends AppCompatActivity {
     RadioButton male_rd, female_rd;
     String modify_gender_info ="남";
 
-    ImageView profile_image_0, profile_image_1;
+    ImageView profile_image_0, profile_image_1, back;
     Dialog popup_dialog;
     String img_path;
     public final int GALLERY_CODE = 1000;
@@ -87,8 +86,7 @@ public class MyInfoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_my_info);
         getSupportActionBar().hide();
 
-        top_toolbar = findViewById(R.id.top_toolbar);
-        member_code_data = findViewById(R.id.member_code_data);
+        back = findViewById(R.id.imgv_back);
         id_data = findViewById(R.id.id_data);
         pw_data = findViewById(R.id.pw_data);
 
@@ -125,16 +123,6 @@ public class MyInfoActivity extends AppCompatActivity {
         popup_dialog = new Dialog(MyInfoActivity.this);
         popup_dialog.setContentView(R.layout.popup_dialog);
 
-        // 상단바
-        top_toolbar.setTitle("나의 정보");
-
-        // 상단바 뒤로가기 버튼
-        top_toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
 
 
         // 회원 정보 불러오기
@@ -147,7 +135,6 @@ public class MyInfoActivity extends AppCompatActivity {
                     // 저장된 프로필 이미지 붙이기
                     Glide.with(MyInfoActivity.this).load(Common.loginInfo.getProfilepath()).into(profile_image_0);
 
-                    member_code_data.setText(my_info.getMember_code());
                     id_data.setText(my_info.getId());
                     pw_data.setText(my_info.getPw());
 
@@ -175,6 +162,11 @@ public class MyInfoActivity extends AppCompatActivity {
                     type_data.setText(my_info.getType());
                 }
             });
+
+        //뒤로가기
+        back.setOnClickListener(v -> {
+            onBackPressed();
+        });
 
         // 수정 버튼
         modify_btn.setOnClickListener(new View.OnClickListener() {
