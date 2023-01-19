@@ -10,8 +10,17 @@ public class LectureVO implements Serializable {
     private int student_cnt;
     private String lecture_name, room_code, subject_code;
     private Date startdate, enddate;
-    //timetable 조인
+    // 조인
     private String timetable_name;
+    private String teacher_name;
+
+    public void setTeacher_name(String teacher_name) {
+        this.teacher_name = teacher_name;
+    }
+
+    public String getTeacher_name() {
+        return teacher_name;
+    }
 
     public int getStudent_cnt() {
         return student_cnt;

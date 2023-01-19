@@ -41,6 +41,13 @@ public class LectureController {
 		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(list);
 	}
 	
+	//특정 강의 정보 조회
+	@RequestMapping(value = "/lecture_info", produces ="text/html;charset=UTF-8")
+	public String lecture_info(int lecture_code) {
+		LectureVO vo = sql.selectOne("lecture.lecture_info", lecture_code);
+		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(vo);
+	}
+	
 	//학생 홈 -> 내강의조회 -> 학생이 수강중인 강의목록 조회
 	@RequestMapping(value = "/stu_lecture_list.le", produces ="text/html;charset=UTF-8")
 	public String stu_list(int id) {

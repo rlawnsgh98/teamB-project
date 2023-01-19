@@ -16,6 +16,7 @@
     <color name="view_red">#E95E5E</color>
     <color name="view_green">#5EE97D</color>
     <color name="white_gray">#efefef</color>
+    <color name="white2">#F8F7F7</color>
 
     <!-- 댓글 수정,삭제 font blue -->
     <color name="font_blue">#3D88D3</color>

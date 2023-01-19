@@ -3,8 +3,9 @@
 <mapper namespace="and">
 	
 	<select id="student_timetable" resultType='vo.LectureVO'>
-	select  *
-	from    lecture
+	select  l.*, m.member_name teacher_name
+	from    lecture l inner join member m
+	on      l.teacher_code = m.member_code
 	where   timetable_code = (select  	lecture_code 
 	                            from    enrolment
 	                            where   member_code = #{member_code}

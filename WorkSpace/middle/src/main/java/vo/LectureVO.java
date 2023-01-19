@@ -8,8 +8,18 @@ public class LectureVO {
 	private String lecture_name, room_code, subject_code;
 	private Date startdate, enddate;
 
-	//timetable 조인
-	private String timetable_name;
+	//조인
+	private String timetable_name, teacher_name;
+	
+	
+
+	public String getTeacher_name() {
+		return teacher_name;
+	}
+
+	public void setTeacher_name(String teacher_name) {
+		this.teacher_name = teacher_name;
+	}
 
 	public int getLecture_code() {
 		return lecture_code;

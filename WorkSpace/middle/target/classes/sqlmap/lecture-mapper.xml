@@ -2,6 +2,14 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="lecture">
 
+	<!-- 특정 강의 정보 조회 -->
+	<select id="lecture_info" resultType='vo.LectureVO'>
+	select l.*, member_name teacher_name 
+	from lecture l inner join member m
+	on  l.teacher_code = m.member_code
+	where lecture_code = #{lecture_code}
+	</select>
+
 	<!-- 학생이 수강중인 강의 리스트 조회 -->
 	<select id="stu_list" resultType="vo.LectureVO">
 		select l.*, t.timetable_name

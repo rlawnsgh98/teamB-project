@@ -2,7 +2,6 @@ package com.example.teamb_project.student.mylecture;
 
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,8 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.teamb_project.R;
-import com.example.teamb_project.student.mylecture.lecturehome.stu_LectureDetailActivity;
-import com.example.teamb_project.teacher.mylecture.lecturehome.LectureDetailActivity;
+import com.example.teamb_project.student.mylecture.lecturehome.Stu_LectureDetailActivity;
 import com.example.teamb_project.vo.LectureVO;
 
 import java.util.ArrayList;
@@ -48,7 +46,7 @@ public class stu_MyLectureAdapter extends RecyclerView.Adapter<stu_MyLectureAdap
         h.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, stu_LectureDetailActivity.class);
+                Intent intent = new Intent(context, Stu_LectureDetailActivity.class);
                 intent.putExtra("lecture_code", list.get(idx).getLecture_code());
                 context.startActivity(intent);
 

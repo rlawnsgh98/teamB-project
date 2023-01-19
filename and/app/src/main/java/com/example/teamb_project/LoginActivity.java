@@ -43,7 +43,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
         // IP 설정
-        ApiClient.setBASEURL("http://192.168.0.30/middle/");
+        ApiClient.setBASEURL("http://192.168.1.2/middle/");
         //집
 //        ApiClient.setBASEURL("http://210.123.231.86/middle/");
 
