@@ -1,0 +1,465 @@
+@charset "UTF-8";
+/* ======================================== */
+/*   로그인/회원가입                             */
+/* ======================================== */
+a{ text-decoration: none; color: #000; }
+p,h3,h4,h5,h6{ margin:0; padding: 0; }
+body{
+	font-family: "Noto Sans KR";
+	color: #000;
+	overflow-y: scroll;
+}
+ol,ul,li{
+	list-style: none;
+}
+form{
+	padding: 0;
+	margin: 0;
+}
+input[type=text], input[type=password],select{
+	height: 30px;
+	line-height: 30px;
+	box-sizing: border-box;
+	border: 1px solid #cccccc;
+}
+tbody th.tb_th{
+	background-color: #f8f8f8;
+	color: #474747;
+	padding-left: 10px;
+	text-align: left;
+	border-bottom: 1px solid #d1d1d1;
+}
+tbody td{
+	height: 22px;
+	line-height: 22px;
+	border-bottom: 1px solid #d1d1d1;
+	padding: 10px;
+}
+table{
+	border-spacing: 0;
+	border-collapse: collapse;
+	width: 100%;
+	table-layout: fixed;	
+	box-sizing: border-box;
+	text-indent: inherit;
+}
+/* ======================================== */
+.d-none{ display: none; }
+/* ======================================== */
+#container.ct_top{
+	padding-top: 80px;
+}
+#container{
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	text-align: left; 
+}
+#contet_area{
+	float: none;
+	width: 1200px;
+	min-height: 750px;
+}
+#id_ck, #post{
+	width: 100px;
+	padding: 5px;
+	font-size: 13px;
+}
+/* ======================================== */
+.main_wrap{
+	width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.content_body{
+	overflow: hidden;
+	padding: 15px 0 0;
+}
+.join-normal{
+	margin-bottom: 30px;
+}
+.box_title{
+	color: #2d2d2d;
+	font-size: 16px;
+	font-weight: 700;
+	margin: 25px 0 5px 0;
+}
+.box_tx{
+	margin: 0 0 15px 0;
+}
+.gray_box{
+	border: 1px solid #dcdcdc;
+	background-color: #fafafa;
+	padding: 13px 15px;
+	margin-bottom: 20px;
+}
+.gray_box.top{
+	border-top: 1px solid #676767;
+}
+.gray_box .box_stitle{
+	font-weight: 700;
+	font-size: 13px;
+	color: #464646;
+	margin-bottom: 8px;
+}
+.g_box_in{
+	border: 1px solid #dbdbdb;
+	background-color: #fff;
+	height: 100px;
+	overflow: auto;
+	padding: 14px 10px;
+	margin-bottom: 10px;
+}
+.textin{
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 25px;
+}
+.textin > .clause{
+	margin-top: -20px;
+}
+.textin > .clause h3{
+	font-size: 14px;
+	font-weight: normal;
+	color: #666666;
+	line-height: 25px;
+	padding: 0;
+	margin: 10px 0 0 0;
+}
+.path{
+	width: 100%;
+	display: block;
+	overflow: hidden;
+	margin: 0 auto;
+	font-size: 15px;
+	text-align: center;
+	box-sizing: border-box;
+	position: absolute;
+	top: 40px;
+}
+.lnb_title{
+	display: block;
+    font-weight: bold;
+    font-size: 35px;
+    color: #000;
+    background: none;
+    height: 35px;
+    margin-bottom: 40px;
+    line-height: 100%;
+    text-align: center;
+    border: none;
+    letter-spacing: -0.07em;
+}
+.lnb_list {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    background: none;
+    border: none;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.lnb_list li{
+	border: 1px solid #000;
+	border-radius: 50px;
+	padding: 10px 30px 10px;
+	margin-right: 10px; 
+}
+.on{
+	background: #000;
+}
+.on a{
+	color: #fff;
+}
+.content_title{
+	/* display: block; */
+	display: none;
+	text-align: center;
+	font-family: "noto_sans",sans-serif;
+	color: #000;
+	font-size: 30px;
+	line-height: 35px;
+	padding: 0;
+	margin: 0 0 20px;
+	letter-spacing: -0.07em;
+	font-weight: bold;
+}
+.path_list li.last {
+    color: #222;
+}
+.path_list:before {
+    content: '홈';
+}
+.path_list li:before {
+    content: '-';
+}
+.path_list {
+    float: none;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    max-width: 1200px;
+    background: none;
+    padding-left: 0px;
+    box-sizing: border-box;
+}
+.board.btn {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 10px 40px 10px;
+}
+.board.btn > a{
+	margin: 10px;
+}
+.button{
+	padding: 10px 40px 10px;
+	width: 200px;
+}
+.button.gray {
+    background: #333;
+    color: #fff;
+    border: 1px #333 solid;
+}
+.button.white {
+    background: #fff;
+    color: #333;
+    border: 1px #333 solid;
+    padding: 10px 50px 10px;
+}
+.depth1{
+	margin: 0px;
+}
+.depth2{
+	margin: 0px;
+}
+.login_box{
+	border: none;
+	width: 100%;
+	max-width: 450px;
+	margin: 50px auto;
+	padding: 0;
+	overflow: hidden;
+}
+.log_form{
+	float: none;
+	padding-right: 0;
+	width: 100%;
+	padding-bottom: 10px;
+}
+.log_tt{
+	margin: 0px 0 30px 0px;
+	font-size: 15px;
+}
+.log_area{
+	overflow: hidden;
+}
+.log_in{
+	width: 100%;
+	float: none;
+}
+.log_in div{
+	height: 40px;
+	margin-bottom: 7px;
+}
+.log_in div input{
+	vertical-align: middle;
+	height: 40px;
+	width: 100%;
+	line-height: 40px;
+	padding: 2px 0 1px 6px;
+}
+.button.login{
+	width: 100%;
+	padding: 0;
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+	font-weight: 700;
+	text-align: center;
+}
+.log_find{
+	float: none;
+	padding: 22px 0 0 0;
+	width: 100%;
+}
+.log_find p{
+	float: left;
+	width: 55%;
+	font-weight: 500;
+	letter-spacing: -0.03em;
+	font-size: 15px;
+	margin: 0 0 20px 0;
+}
+.log_find input{
+	float: left;
+	width: 45%;
+	margin: 0 0 20px 0;
+}
+.tb_box{
+	border-top: 1px solid #727272;
+}
+.must{
+	font-weight: bold;
+	color: #ff0000;
+	content: " *";
+}
+.hasDatepicker{ cursor: pointer; }
+.ui-datepicker { 
+	width: 17em; 
+	padding: .2em .2em 0; 
+	display: none;
+	 font-size: 20px;
+	 background-color: #fff;
+}
+/* ======================================== */
+.w200{
+	width: 208px;
+}
+.w100{
+	width: 108px;
+}
+.w50{
+	width: 50px;
+}
+/* ======================================== */
+/*   마이 페이지                               */
+/* ======================================== */
+.my_box {
+	height: 200px;
+	box-sizing: border-box;
+	border: 1px solid #d7d7d7;
+	overflow: hidden;
+	position: relative;
+}
+.my_box > .my_info {
+	box-sizing: border-box;
+	padding-left: 30px;
+	padding-top: 30px;
+	padding-right: 30px;
+	border-left: 1px solid #d7d7d7;
+	position: absolute;
+	width: 50%;
+}
+.my_box > .my_note {
+	box-sizing: border-box;
+	padding-left: 30px;
+	padding-top: 30px;
+	padding-right: 30px;
+	border-left: 1px solid #d7d7d7;
+	margin-left: 50%;
+}
+.my_box > .my_info > h6 , .my_box > .my_note > h6 {
+	color: #2d2d2d;
+	font-size: 20px;
+	padding: 3px 0 12px 0;
+}
+.h6_sub {
+	color: #757575;
+	font-size: 14px;
+	padding-left: 21px;
+}
+.my_box > .my_info > .my_info_in , .my_box > .my_note > .my_info_in {
+	border-top: 1px solid #d7d7d7;
+	padding: 30px 0 0 100px;
+	min-height: 80px;
+}
+.my_box > .my_info > .my_info_in{
+	margin-top: 0px;
+	background: url('https://www.moneydoclass.co.kr/common/images_skin2/common/myinfo_img.jpg') no-repeat 0 20px;
+}
+.my_box > .my_info > li {
+	overflow: hidden;
+	height: 20px;
+	line-height: 20px;
+	margin-bottom: 5px;
+}
+.my_box > .my_info > li > strong {
+	display: block;
+	float: left;
+	width: 70px;
+}
+.my_box > .my_info > li > span {
+	display: block;
+	float: left;
+	width: 190px;
+}
+.my_box > .my_info > li > span.name {
+	font-weight: 700;
+	color: #3c3c3c;
+}
+.my_box > .my_info > .btn_more {
+	position: absolute;
+	right: 30px;
+	top: 30px;
+}
+.button.small {
+	padding: 0 10px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 13px;
+}
+.list_top > li {
+	padding-left: 0px;
+	background: none;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;	
+}
+.list_top > li > a{
+	line-height: 24px;
+	border-bottom: none;
+	font-size: 15px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+a:visited{
+	text-decoration: none;
+}
+.tb_title {
+	color: #333;
+	padding: 35px 0 15px 0;
+	font-size: 18px;
+	line-height: 22px;	
+}
+.my_info_in > li > strong { 
+	color: #000;
+	display: block;
+	float: left;
+	width: 80px;
+}
+.modify_myinfo_btn {
+	background-color: #fff;
+	color: #333;
+	border: 1px solid #666;
+	text-shadow: none;
+	background-image: none;
+	padding: 10px;
+	line-height: 30px;
+	font-size: 13px;
+	border-radius: 10px;
+}
+.more_enrolment_btn {
+	background-color: #fff;
+	color: #333;
+	border: 1px solid #666;
+	text-shadow: none;
+	background-image: none;
+	padding: 5px 10px;
+	line-height: 30px;
+	font-size: 13px;
+	border-radius: 10px;
+}
+.my_notice_in {
+	border-top: 1px solid #d7d7d7;
+}
+.tac {
+	text-align: center;
+}
+
+
+
+
+
+
+

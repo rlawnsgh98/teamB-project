@@ -20,7 +20,7 @@
 	<c:when test="${category eq 'login' }"><c:set var="title" value="로그인"/></c:when>
 </c:choose>
 
-<title>스마트 웹&amp;앱 ${title }</title>
+<title>YH-Academy ${title }</title>
 <link rel='icon' type="image/x-icon" href="images/hanul.ico">
 <link href="css/common.css?<%=new java.util.Date() %>" rel="stylesheet" type="text/css">
 
