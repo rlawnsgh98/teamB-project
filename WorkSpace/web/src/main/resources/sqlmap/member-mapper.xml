@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="member">	
+	<!-- 로그인조회 -->
+	<select id="login" resultType="vo.MemberVO">
+		select *
+		from member 
+		where id = #{id} and pw = #{pw}
+	</select>
+	
+	<!-- 목록조회 -->
+	<select id="list" resultType="vo.MemberVO">
+		select* from member
+	</select>
+	
+	<!-- 회원정보저장 : 회원가입, 소셜로그인신규 -->
+	<insert id="join">
+		insert into member(userid, userpw, name, gender, email, phone, post, address,  social, profile, birth, salt)
+		values(#{userid}, #{userpw, jdbcType=VARCHAR}, #{name}, #{gender}, #{email, jdbcType=VARCHAR}, #{phone, jdbcType=VARCHAR}, #{post, jdbcType=VARCHAR}, #{address, jdbcType=VARCHAR},  #{social, jdbcType=VARCHAR}, #{profile, jdbcType=VARCHAR},#{birth, jdbcType=VARCHAR},#{salt, jdbcType=VARCHAR})
+	</insert>
+	
+	<!-- 회원아이디 중복확인(존재여부) -->
+	<select id="idCheck" resultType="integer">
+		select count(*) from member where userid=#{userid}
+	</select>
+	
+	<!-- 회원정보변경 : 내정보수정 -->
+	<update id="myInfo_update">
+		update member 
+		set userpw = #{userpw, jdbcType=VARCHAR}, salt = #{salt, jdbcType=VARCHAR}, name=#{name, jdbcType=VARCHAR}, email=#{email, jdbcType=VARCHAR}, gender=#{gender}, 
+			profile=#{profile, jdbcType=VARCHAR}, phone=#{phone, jdbcType=VARCHAR}, social=#{social, jdbcType=VARCHAR}
+		where userid = #{userid} 
+	</update>
+	
+	<!-- 비밀번호 변경 : 임시비번 발급시, 비밀번호 변경시 -->
+	<update id="password_update">
+		update member 
+		set userpw = #{userpw}, salt = #{salt}
+		where userid = #{userid} 
+	</update>
+	
+	<!-- 아이디.이메일 일치하는 회원명 조회 -->
+	<select id="userid_email" resultType="string">
+		select name from member where userid=#{userid} and email=#{email}
+	</select>
+	
+	<!-- salt 조회 -->
+	<select id="salt" resultType="string">
+		select salt from member where userid = #{userid}
+	</select>
+</mapper>
