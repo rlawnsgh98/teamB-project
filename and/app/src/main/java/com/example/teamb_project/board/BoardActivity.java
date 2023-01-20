@@ -39,7 +39,6 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         b = ActivityBoardBinding.inflate(getLayoutInflater());
         setContentView(b.getRoot());
-        getSupportActionBar().hide();
 
         Log.d(TAG, "onCreate: " + ApiClient.getBASEURL());
 

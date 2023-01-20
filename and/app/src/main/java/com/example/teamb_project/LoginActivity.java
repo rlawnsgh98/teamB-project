@@ -60,16 +60,16 @@ public class LoginActivity extends AppCompatActivity {
                                     common.loginInfo = vo;
                                     if (vo != null) {
 
-                                        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                                           startActivity(intent);
+//                                        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+//                                           startActivity(intent);
                                            //20230120 같은 액티비티인데 두개로 분기되어있어서 없앰.
-//                                        if(vo.getType().equals("STUD")){
-//                                            Intent intent = new Intent(LoginActivity.this, StudentHomeActivity.class);
-//                                            startActivity(intent);
-//                                        }else if(vo.getType().equals("TEACH")){
-//                                            Intent intent = new Intent(LoginActivity.this, TeacherHomeActivity.class);
-//                                            startActivity(intent);
-//                                        }
+                                        if(vo.getType().equals("STUD")){
+                                            Intent intent = new Intent(LoginActivity.this, StudentHomeActivity.class);
+                                            startActivity(intent);
+                                        }else if(vo.getType().equals("TEACH")){
+                                            Intent intent = new Intent(LoginActivity.this, TeacherHomeActivity.class);
+                                            startActivity(intent);
+                                        }
 
                                     } else {
                                         Toast.makeText(LoginActivity.this, "아이디 또는 비밀번호가 틀립니다", Toast.LENGTH_SHORT).show();

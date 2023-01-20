@@ -34,7 +34,6 @@ public class CounselActivity extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         b = ActivityCounselBinding.inflate(getLayoutInflater());
         setContentView(b.getRoot());
-        getSupportActionBar().hide();
 
         //상담 목록 조회
         commonMethod.setParams("vo", common.getLoginInfo())

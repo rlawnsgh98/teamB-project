@@ -43,7 +43,6 @@ public class TTActivity extends AppCompatActivity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         b = ActivityTtBinding.inflate(getLayoutInflater());
         setContentView(b.getRoot());
-//        getSupportActionBar().hide();
 
         //상세정보 카드뷰
         b.cardDetail.setVisibility(View.GONE);

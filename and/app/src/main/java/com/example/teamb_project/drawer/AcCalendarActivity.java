@@ -30,7 +30,6 @@ public class AcCalendarActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ac_calendar);
-        getSupportActionBar().hide();
 
         top_toolbar = findViewById(R.id.top_toolbar);
         tt_recv_list = findViewById(R.id.tt_recv_list);

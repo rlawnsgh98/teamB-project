@@ -29,7 +29,6 @@ public class StudentDetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_detail);
-        getSupportActionBar().hide();
 
         //선택한 학생의 멤버코드
         student_code = getIntent().getStringExtra("student_code");

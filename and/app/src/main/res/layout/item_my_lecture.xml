@@ -6,9 +6,10 @@
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:backgroundTint="@color/white"
+        app:cardBackgroundColor="#123"
         app:cardCornerRadius="20dp"
         android:layout_marginBottom="20dp"
         >
@@ -25,7 +26,7 @@
                 android:textSize="24dp"
                 android:layout_marginBottom="2dp"
                 android:layout_gravity="center"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textStyle="bold"/>
 
             <LinearLayout
@@ -38,6 +39,7 @@
                     android:id="@+id/tv_room"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/white"
                     android:textSize="20dp"
                     android:text="202호"
                     />
@@ -45,6 +47,7 @@
                     android:id="@+id/tv_cnt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/white"
                     android:textSize="20dp"
                     android:text=" / 20명"/>
             </LinearLayout>
@@ -55,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
                 android:layout_gravity="center"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:text="강사이름"/>
 
 

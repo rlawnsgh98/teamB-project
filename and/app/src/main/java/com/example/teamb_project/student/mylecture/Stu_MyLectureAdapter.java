@@ -8,11 +8,13 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.teamb_project.R;
 import com.example.teamb_project.student.mylecture.lecturehome.Stu_LectureDetailActivity;
 import com.example.teamb_project.vo.LectureVO;
+import com.google.android.material.card.MaterialCardView;
 
 import java.util.ArrayList;
 
@@ -44,6 +46,15 @@ public class Stu_MyLectureAdapter extends RecyclerView.Adapter<Stu_MyLectureAdap
         h.tv_teacher_name.setText(list.get(idx).getTeacher_name());
         h.tv_cnt.setVisibility(View.GONE);
 
+        //카드뷰 색 지정
+        int card_color = 0;
+        if(list.get(i).getSubject_code().equals("ENG")) card_color = context.getResources().getColor(R.color.card_eng);
+        else if(list.get(i).getSubject_code().equals("MATH")) card_color = context.getResources().getColor(R.color.card_math);
+        else if(list.get(i).getSubject_code().equals("KOR")) card_color = context.getResources().getColor(R.color.card_kor);
+        h.card.setCardBackgroundColor(card_color);
+
+
+
         h.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,12 +73,14 @@ public class Stu_MyLectureAdapter extends RecyclerView.Adapter<Stu_MyLectureAdap
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView tv_lecture_title, tv_cnt, tv_room, tv_teacher_name;
+        CardView card;
         public ViewHolder(@NonNull View v) {
             super(v);
             tv_lecture_title = v.findViewById(R.id.tv_lecture_title);
             tv_room = v.findViewById(R.id.tv_room);
             tv_teacher_name = v.findViewById(R.id.tv_teacher_name);
             tv_cnt = v.findViewById(R.id.tv_cnt);
+            card = v.findViewById(R.id.card);
         }
     }
 }

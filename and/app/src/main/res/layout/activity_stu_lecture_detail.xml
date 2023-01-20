@@ -6,13 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".student.mylecture.lecturehome.Stu_LectureDetailActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    >
 
     <!-- 상단 바 -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/blue"
+        android:background="@color/main_dark"
         >
         <ImageView
             android:id="@+id/iv_back"
@@ -35,6 +36,7 @@
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        app:tabBackground="@color/main_dark"
         app:tabSelectedTextColor="@color/black"
         app:tabIndicatorColor="@color/black"
         app:tabIndicatorHeight="2dp"

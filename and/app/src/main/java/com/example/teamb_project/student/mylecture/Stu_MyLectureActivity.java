@@ -29,7 +29,6 @@ public class Stu_MyLectureActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stu_my_lecture);
-        getSupportActionBar().hide();
         recv_mylecture = findViewById(R.id.recv_mylecture);
         back = findViewById(R.id.iv_back);
 
@@ -45,7 +44,7 @@ public class Stu_MyLectureActivity extends AppCompatActivity {
 
     private void selectLectureList(){
         new com.example.conn.CommonMethod()
-                .setParams("id", Integer.parseInt(Common.loginInfo.getMember_code()))
+                .setParams("id", Common.loginInfo.getMember_code())
                 .sendPost("stu_lecture_list.le", (isResult, data) -> {
                 list = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, new TypeToken<List<LectureVO>>(){}.getType());
 

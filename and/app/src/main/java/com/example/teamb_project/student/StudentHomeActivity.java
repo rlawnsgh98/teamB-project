@@ -61,7 +61,9 @@ public class StudentHomeActivity extends AppCompatActivity implements View.OnCli
 
         ImageView profile = drawerView.findViewById(R.id.iv_profile);
 
-        Glide.with(this).load(Common.loginInfo.getProfilepath()).into(profile);
+        if(Common.loginInfo.getProfilepath()!=null){
+            Glide.with(this).load(Common.loginInfo.getProfilepath()).into(profile);
+        }
 
         // 회원정보 수정해서 들어오면 Common.loginInfo 갱신
         if(getIntent().getBooleanExtra("isUpdated", false)){

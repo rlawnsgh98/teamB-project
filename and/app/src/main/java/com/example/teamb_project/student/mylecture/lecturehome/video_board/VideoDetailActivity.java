@@ -28,7 +28,6 @@ public class VideoDetailActivity extends AppCompatActivity implements View.OnCli
         super.onCreate(savedInstanceState);
         b = ActivityVideoDetailBinding.inflate(getLayoutInflater());
         setContentView(b.getRoot());
-        getSupportActionBar().hide();
 
         //강의영상 상세 정보 조회
         commonMethod.setParams("board_code", getIntent().getIntExtra("board_code", -1))

@@ -31,7 +31,6 @@ public class CounselDetailActivity extends AppCompatActivity implements View.OnC
         super.onCreate(savedInstanceState);
         b = ActivityCounselDetailBinding.inflate(getLayoutInflater());
         setContentView(b.getRoot());
-        getSupportActionBar().hide();
 
         //로그인 확인
         MemberVO member = common.getLoginInfo();

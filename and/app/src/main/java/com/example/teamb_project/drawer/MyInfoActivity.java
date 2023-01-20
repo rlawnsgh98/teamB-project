@@ -84,7 +84,6 @@ public class MyInfoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_info);
-        getSupportActionBar().hide();
 
         back = findViewById(R.id.imgv_back);
         id_data = findViewById(R.id.id_data);

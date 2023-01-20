@@ -19,7 +19,6 @@ public class Stu_LectureDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         d = ActivityStuLectureDetailBinding.inflate(getLayoutInflater());
         setContentView(d.getRoot());
-        getSupportActionBar().hide();
 
 
         lecture_code = getIntent().getIntExtra("lecture_code", 0);
@@ -47,10 +46,10 @@ public class Stu_LectureDetailActivity extends AppCompatActivity {
             }
         });
 
-        d.ivBack.setOnClickListener(v -> {
-            //돌아가기
-            onBackPressed();
-        });
+//        d.ivBack.setOnClickListener(v -> {
+//            //돌아가기
+//            onBackPressed();
+//        });
 
     }
     private void changeView(int index) {
