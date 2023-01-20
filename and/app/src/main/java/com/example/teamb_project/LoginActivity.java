@@ -59,7 +59,7 @@ public class LoginActivity extends AppCompatActivity {
                                     //로그인 정보 저장
                                     common.loginInfo = vo;
                                     if (vo != null) {
-
+                                        //2023/01/21 다른 메뉴 확인하기위해 임시로 기존메뉴 사용
 //                                        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
 //                                           startActivity(intent);
                                            //20230120 같은 액티비티인데 두개로 분기되어있어서 없앰.
