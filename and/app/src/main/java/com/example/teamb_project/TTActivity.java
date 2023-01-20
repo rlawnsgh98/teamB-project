@@ -56,6 +56,7 @@ public class TTActivity extends AppCompatActivity implements View.OnClickListene
                         setView(list);
                     });
         }else if(Common.loginInfo.getType().equals("TEACH")){
+            //선생 조회
             commonMethod.setParams("vo", new Gson().toJson(Common.loginInfo))
                     .sendPost("teacher_timetable", (isResult, data) -> {
                         list = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, new TypeToken<ArrayList<LectureVO>>(){}.getType());

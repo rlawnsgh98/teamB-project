@@ -25,7 +25,7 @@ public class LectureDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_lecture_detail);
         getSupportActionBar().hide();
 
-        back = findViewById(R.id.iv_back);
+        back = findViewById(R.id.imgv_back);
 
         lecture_code = getIntent().getIntExtra("lecture_code", 0);
 
