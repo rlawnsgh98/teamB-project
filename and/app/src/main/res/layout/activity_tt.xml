@@ -8,10 +8,11 @@
     android:background="@color/gray"
     tools:context=".TTActivity">
 
-    <LinearLayout
+    <View
         android:layout_width="match_parent"
-        android:layout_height="240dp"
-        android:background="#293859" />
+        android:layout_height="220dp"
+        android:background="@drawable/background_blue"
+        />
 
     <!--Top Header Layout-->
     <LinearLayout

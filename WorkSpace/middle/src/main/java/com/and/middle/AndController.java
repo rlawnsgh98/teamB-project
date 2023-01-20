@@ -31,6 +31,13 @@ public class AndController {
 	
 	//new TypeToken<ArrayList<String>>(){}.getType()
 	
+	//프로필 이미지 불러오기
+	@RequestMapping(value="/profile", produces = "text/html;charset=utf-8")
+	public String profile(int member_code) {
+		String path = sql.selectOne("and.profile");
+		return path;
+	}
+	
 	//상담 삭제
 	@RequestMapping(value="/delete.co", produces = "text/html;charset=utf-8")
 	public int delete_counsel(int counsel_code) {

@@ -45,7 +45,7 @@ public class Stu_MyLectureActivity extends AppCompatActivity {
 
     private void selectLectureList(){
         new com.example.conn.CommonMethod()
-                .setParams("id", Common.loginInfo.getMember_code())
+                .setParams("id", Integer.parseInt(Common.loginInfo.getMember_code()))
                 .sendPost("stu_lecture_list.le", (isResult, data) -> {
                 list = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, new TypeToken<List<LectureVO>>(){}.getType());
 

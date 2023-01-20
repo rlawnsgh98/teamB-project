@@ -16,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.conn.CommonMethod;
 import com.example.teamb_project.R;
 import com.example.teamb_project.common.Common;
@@ -34,7 +35,6 @@ public class CounselAdapter extends RecyclerView.Adapter<CounselAdapter.ViewHold
     public CounselAdapter(LayoutInflater inflater, ArrayList<CounselVO> list, Activity activity) {
         this.inflater = inflater;
         this.list = list;
-
         this.activity = activity;
     }
 
@@ -68,15 +68,21 @@ public class CounselAdapter extends RecyclerView.Adapter<CounselAdapter.ViewHold
         if(common.getLoginInfo().getType().equals("STUD")){
             //학생
             h.name.setText(list.get(i).getReceiver_name());
-            //프로필 이미지 가져오기 => 병합 후 MemberVO 참조!!
-//            commonMethod.setParams("member_code", list.get(i).getReceiver())
-//                            .sendPost("info.mb", (isResult, data) -> {
-//                                MemberVO vo = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, MemberVO.class);
-//                                Glide.with(context).load(vo.getProfilepath()).into(h.profile);
-//                            });
+            //상담 강사 프로필 이미지 불러오기
+            commonMethod.setParams("member_code", list.get(i).getReceiver())
+                    .sendPost("profile", (isResult, data) -> {
+                        String path = data;
+                        Glide.with(activity).load(data).into(h.profile);
+                    });
         }else{
             //강사
             h.name.setText(list.get(i).getWriter_name());
+            //상담 학생 프로필 이미지 불러오기
+            commonMethod.setParams("member_code", list.get(i).getWriter())
+                    .sendPost("profile", (isResult, data) -> {
+                        String path = data;
+                        Glide.with(activity).load(data).into(h.profile);
+                    });
         }
 
         //특정 item 클릭
