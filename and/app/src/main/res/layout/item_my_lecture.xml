@@ -8,10 +8,9 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:backgroundTint="@color/light_gray"
+        android:backgroundTint="@color/white"
         app:cardCornerRadius="20dp"
-        android:layout_marginBottom="15dp"
-        app:cardElevation="0dp"
+        android:layout_marginBottom="20dp"
         >
         <LinearLayout
             android:layout_width="wrap_content"
@@ -23,8 +22,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="고등 수학 A반"
-                android:textSize="32dp"
-                android:layout_marginBottom="20dp"
+                android:textSize="24dp"
+                android:layout_marginBottom="2dp"
                 android:layout_gravity="center"
                 android:textColor="@color/black"
                 android:textStyle="bold"/>
@@ -32,27 +31,34 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:layout_gravity="center"
-                android:orientation="horizontal">
-
+                >
                 <TextView
-                    android:id="@+id/lecture_student_cnt"
+                    android:id="@+id/tv_room"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
-                    android:layout_marginRight="15dp"
-
-                    android:text="36명"/>
-
+                    android:text="202호"
+                    />
                 <TextView
-                    android:id="@+id/tv_lecture_time"
+                    android:id="@+id/tv_cnt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
-                    android:text="3교시"/>
-
-
+                    android:text=" / 20명"/>
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_teacher_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:text="강사이름"/>
+
+
 
 
         </LinearLayout>

@@ -60,7 +60,7 @@ public class LectureController {
 	public String teach_list(String id) {
 		List<LectureVO> list = sql.selectList("lecture.teach_list", id);
 	
-		return new Gson().toJson(list);
+		return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(list);
 	}
 	//선택한 강의의 강사 정보 조회
 	@RequestMapping(value = "/teacher_info.le", produces ="text/html;charset=UTF-8")

@@ -40,8 +40,9 @@ public class Stu_MyLectureAdapter extends RecyclerView.Adapter<Stu_MyLectureAdap
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
         final int idx = i;
         h.tv_lecture_title.setText(list.get(idx).getLecture_name());
-        h.tv_lecture_time.setText(list.get(idx).getTimetable_name());
-        h.lecture_student_cnt.setVisibility(View.GONE);
+        h.tv_room.setText(list.get(idx).getRoom_code().substring(1)+"호");
+        h.tv_teacher_name.setText(list.get(idx).getTeacher_name());
+        h.tv_cnt.setVisibility(View.GONE);
 
         h.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,12 +61,13 @@ public class Stu_MyLectureAdapter extends RecyclerView.Adapter<Stu_MyLectureAdap
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tv_lecture_title, tv_lecture_time, lecture_student_cnt;
+        TextView tv_lecture_title, tv_cnt, tv_room, tv_teacher_name;
         public ViewHolder(@NonNull View v) {
             super(v);
             tv_lecture_title = v.findViewById(R.id.tv_lecture_title);
-            tv_lecture_time= v.findViewById(R.id.tv_lecture_time);
-            lecture_student_cnt = v.findViewById(R.id.lecture_student_cnt);
+            tv_room = v.findViewById(R.id.tv_room);
+            tv_teacher_name = v.findViewById(R.id.tv_teacher_name);
+            tv_cnt = v.findViewById(R.id.tv_cnt);
         }
     }
 }
