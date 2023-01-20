@@ -44,7 +44,6 @@ public class StudentHomeActivity extends AppCompatActivity implements View.OnCli
         super.onCreate(savedInstanceState);
         s= ActivityStudenthomeBinding.inflate(getLayoutInflater());
         setContentView(s.getRoot());
-        getSupportActionBar().hide();
 
         top_toolbar = findViewById(R.id.top_toolbar);
         drawerLayout = findViewById(R.id.drawer_layout);

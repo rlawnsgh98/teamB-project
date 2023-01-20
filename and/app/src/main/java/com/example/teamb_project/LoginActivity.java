@@ -35,18 +35,12 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        getSupportActionBar().hide();
-
-
-
+      
         new Common().changeStatusBarColor(this);
 
 
         // IP 설정
         ApiClient.setBASEURL("http://192.168.1.2/middle/");
-        //집
-//        ApiClient.setBASEURL("http://210.123.231.86/middle/");
-
         id_et = findViewById(R.id.id_et);
         pw_et = findViewById(R.id.et_pw);
 
@@ -65,13 +59,17 @@ public class LoginActivity extends AppCompatActivity {
                                     //로그인 정보 저장
                                     common.loginInfo = vo;
                                     if (vo != null) {
-                                        if(vo.getType().equals("STUD")){
-                                            Intent intent = new Intent(LoginActivity.this, StudentHomeActivity.class);
-                                            startActivity(intent);
-                                        }else if(vo.getType().equals("TEACH")){
-                                            Intent intent = new Intent(LoginActivity.this, TeacherHomeActivity.class);
-                                            startActivity(intent);
-                                        }
+
+                                        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                                           startActivity(intent);
+                                           //20230120 같은 액티비티인데 두개로 분기되어있어서 없앰.
+//                                        if(vo.getType().equals("STUD")){
+//                                            Intent intent = new Intent(LoginActivity.this, StudentHomeActivity.class);
+//                                            startActivity(intent);
+//                                        }else if(vo.getType().equals("TEACH")){
+//                                            Intent intent = new Intent(LoginActivity.this, TeacherHomeActivity.class);
+//                                            startActivity(intent);
+//                                        }
 
                                     } else {
                                         Toast.makeText(LoginActivity.this, "아이디 또는 비밀번호가 틀립니다", Toast.LENGTH_SHORT).show();
