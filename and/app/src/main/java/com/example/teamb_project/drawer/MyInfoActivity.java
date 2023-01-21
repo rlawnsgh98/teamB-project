@@ -124,43 +124,41 @@ public class MyInfoActivity extends AppCompatActivity {
 
 
 
-        // 회원 정보 불러오기
-        new CommonMethod().setParams("id",common.getLoginInfo().getId())
-            .sendPost("my_info.mj", new CommonMethod.CallBackResult() {
-                @Override
-                public void result(boolean isResult, String data) {
-                    MemberVO my_info = new Gson().fromJson(data, MemberVO.class);
+        //로그인 정보 가져오기
+        MemberVO my_info = Common.loginInfo;
 
-                    // 저장된 프로필 이미지 붙이기
-                    Glide.with(MyInfoActivity.this).load(Common.loginInfo.getProfilepath()).into(profile_image_0);
+        // 저장된 프로필 이미지 붙이기
+        if(my_info.getProfilepath()==null){
+            Glide.with(MyInfoActivity.this).load(MyInfoActivity.this.getResources().getDrawable(R.drawable.user3)).into(profile_image_0);
+        }else{
+            Glide.with(MyInfoActivity.this).load(Common.loginInfo.getProfilepath()).into(profile_image_0);
+        }
 
-                    id_data.setText(my_info.getId());
-                    pw_data.setText(my_info.getPw());
+        id_data.setText(my_info.getId());
+        pw_data.setText(my_info.getPw());
 
-                    member_name_data_tv.setText(my_info.getMember_name());
+        member_name_data_tv.setText(my_info.getMember_name());
 
-                    if(my_info.getGender().equals("남")){
-                        male_rd.setChecked(true);
-                        male_rd.setTextColor(Color.parseColor("#000000"));
-                        male_rd.setButtonTintList(ColorStateList.valueOf(Color.parseColor("#47628D")));
-                    }else{
-                        female_rd.setChecked(true);
-                        female_rd.setTextColor(Color.parseColor("#000000"));
-                        female_rd.setButtonTintList(ColorStateList.valueOf(Color.parseColor("#FF5D82")));
-                    }
-                    
-                    isNullTextView(my_info.getEmail() , email_data_tv);
-                    isNullTextView(my_info.getPhone() , phone_data_tv);
+        if(my_info.getGender().equals("남")){
+            male_rd.setChecked(true);
+            male_rd.setTextColor(Color.parseColor("#000000"));
+            male_rd.setButtonTintList(ColorStateList.valueOf(Color.parseColor("#47628D")));
+        }else{
+            female_rd.setChecked(true);
+            female_rd.setTextColor(Color.parseColor("#000000"));
+            female_rd.setButtonTintList(ColorStateList.valueOf(Color.parseColor("#FF5D82")));
+        }
 
-                    if(my_info.getBirth()!= null && my_info.getBirth().trim().length() > 1 ){
-                        isNullTextView(my_info.getBirth().substring(0,10) , birth_data_tv);
-                    }else if(my_info.getBirth()== null){
-                        birth_data_tv.setText("정보가 없습니다.");
-                    }
+        isNullTextView(my_info.getEmail() , email_data_tv);
+        isNullTextView(my_info.getPhone() , phone_data_tv);
 
-                    type_data.setText(my_info.getType());
-                }
-            });
+        if(my_info.getBirth()!= null && my_info.getBirth().trim().length() > 1 ){
+            isNullTextView(my_info.getBirth().substring(0,10) , birth_data_tv);
+        }else if(my_info.getBirth()== null){
+            birth_data_tv.setText("정보가 없습니다.");
+        }
+        type_data.setText(my_info.getType());
+
 
         //뒤로가기
         back.setOnClickListener(v -> {

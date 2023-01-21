@@ -44,6 +44,7 @@ public class Stu_MyLectureAdapter extends RecyclerView.Adapter<Stu_MyLectureAdap
     @Override
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
         final int idx = i;
+
         h.tv_lecture_title.setText(list.get(idx).getLecture_name());
         h.tv_room.setText(list.get(idx).getRoom_code().substring(1)+"호");
         h.tv_teacher_name.setText(list.get(idx).getTeacher_name());

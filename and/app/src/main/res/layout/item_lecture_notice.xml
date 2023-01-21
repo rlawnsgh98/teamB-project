@@ -30,9 +30,9 @@
                     android:id="@+id/tv_notice_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="[공지사항] 제목"
+                    android:text="[공지사항] 6월 모의고사"
                     android:textColor="@color/black"
-                    android:textSize="20dp"
+                    android:textSize="19dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="15dp"
                     />

@@ -46,6 +46,8 @@ public class ReplyAdapter extends RecyclerView.Adapter<ReplyAdapter.ViewHolder> 
         h.content.setText(list.get(i).getContent());
         h.writedate.setText(list.get(i).getWritedate().toString());
         h.lin_modify_delete.setVisibility(View.GONE);
+        //임시 프로필 이미지
+        h.profile.setImageDrawable(activity.getResources().getDrawable(R.drawable.user3));
 
         Log.d("log", "로그인 정보 member code : "+common.getLoginInfo().getMember_code());
         h.writer.setOnClickListener(v -> {
@@ -111,7 +113,7 @@ public class ReplyAdapter extends RecyclerView.Adapter<ReplyAdapter.ViewHolder> 
         TextView writer, writedate, content, modify, delete;
         LinearLayout item, lin_modify_delete;
         EditText edt_content;
-        ImageView send;
+        ImageView send, profile;
 
         public ViewHolder(@NonNull View v) {
             super(v);
@@ -124,6 +126,7 @@ public class ReplyAdapter extends RecyclerView.Adapter<ReplyAdapter.ViewHolder> 
             edt_content = v.findViewById(R.id.edt_content);
             send = v.findViewById(R.id.iv_send);
             lin_modify_delete = v.findViewById(R.id.lin_modify_delete);
+            profile = v.findViewById(R.id.iv_profile);
         }
     }
 }

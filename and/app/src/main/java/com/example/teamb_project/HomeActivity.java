@@ -41,9 +41,9 @@ public class HomeActivity extends AppCompatActivity {
         List<MenuItem> menuItems = new ArrayList<>();
         //서랍 목록 - 내 정보, 학원 일정, 학원 소개, 로그아웃=> 메인화면에서 쓸만한것만 정리 작업해야될듯.ㅡ
         menuItems.add(new MenuItem("LMS 홈", R.drawable.main_cahr));
-        menuItems.add(new MenuItem("메뉴1", R.drawable.main_cahr));
-        menuItems.add(new MenuItem("메뉴2", R.drawable.main_cahr));
-        menuItems.add(new MenuItem("메뉴3", R.drawable.main_cahr));
+        menuItems.add(new MenuItem("내 정보", R.drawable.main_cahr));
+        menuItems.add(new MenuItem("내 강의", R.drawable.main_cahr));
+        menuItems.add(new MenuItem("시간표", R.drawable.main_cahr));
         menuItems.add(new MenuItem("로그아웃", R.drawable.main_cahr));
         b.navigationDrawer.setMenuItemList(menuItems);
 

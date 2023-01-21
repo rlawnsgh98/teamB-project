@@ -34,7 +34,6 @@ public class BoardDetailActivity extends AppCompatActivity implements View.OnCli
         super.onCreate(savedInstanceState);
         b = ActivityBoardDetailBinding.inflate(getLayoutInflater());
         setContentView(b.getRoot());
-        getSupportActionBar().hide();
 
         b.linModify.setVisibility(View.GONE);   //수정,삭제 가리기
         Common common = new Common();

@@ -55,7 +55,6 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         b = ActivityNewBoardBinding.inflate(getLayoutInflater());
         setContentView(b.getRoot());
-        getSupportActionBar().hide();
 
         Common common = new Common();
         //임시로그인 - user1
