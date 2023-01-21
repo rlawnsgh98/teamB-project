@@ -41,7 +41,6 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
     final String TAG = "log";
     public final int GALLERY_CODE = 1000;
     public final int FILE_CODE = 1001;
-
     CommonMethod commonMethod = new CommonMethod();
 
     ArrayList<String> path_list;

@@ -54,6 +54,8 @@
                                     android:layout_gravity="center"
                                     android:paddingLeft="2dp"
                                     android:background="@drawable/edittext_none"
+                                    android:hint="제목으로 검색"
+                                    android:paddingStart="12dp"
                                     />
                                 <ImageView
                                     android:id="@+id/iv_search"

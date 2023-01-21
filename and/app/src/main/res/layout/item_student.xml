@@ -4,13 +4,9 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#7F7F7F"/>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingVertical="15dp"
         android:orientation="horizontal">
@@ -34,12 +30,33 @@
 
         <TextView
             android:id="@+id/tv_student_name"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:text="학생1"
+            />
+        <TextView
+            android:id="@+id/tv_student_attendance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textSize="20dp"
+            android:textSize="16dp"
             android:textColor="@color/black"
-            android:text="학생1"/>
-
+            android:text="입실전"
+            android:layout_marginRight="20dp"
+            />
     </LinearLayout>
+
+    <!--구분선-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gray"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        />
+
 </LinearLayout>

@@ -70,6 +70,7 @@ public class MyLectureAdapter extends RecyclerView.Adapter<MyLectureAdapter.View
             public void onClick(View v) {
                 Intent intent = new Intent(context, LectureDetailActivity.class);
                 intent.putExtra("lecture_code", list.get(idx).getLecture_code());
+                intent.putExtra("lecture_name", list.get(idx).getLecture_name());
                 context.startActivity(intent);
             }
         });

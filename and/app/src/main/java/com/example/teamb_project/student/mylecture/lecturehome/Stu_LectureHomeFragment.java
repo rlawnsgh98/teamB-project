@@ -39,7 +39,7 @@ public class Stu_LectureHomeFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.fragment_stu__lecture_home, container, false);
-        tv_lecture_teacher = v.findViewById(R.id.tv_lecture_teacher);
+//        tv_lecture_teacher = v.findViewById(R.id.tv_lecture_teacher);
         recv_lecture_notice = v.findViewById(R.id.recv_lecture_notice);
 
         selectTeacher(lecture_code);
@@ -69,7 +69,7 @@ public class Stu_LectureHomeFragment extends Fragment {
                     public void result(boolean isResult, String data) {
                         info = new Gson().fromJson(data, MemberVO.class);
                         Log.d("로그", "result: "+info.getMember_name());
-                        tv_lecture_teacher.setText(info.getMember_name());
+//                        tv_lecture_teacher.setText(info.getMember_name());
                     }
                 });
     }

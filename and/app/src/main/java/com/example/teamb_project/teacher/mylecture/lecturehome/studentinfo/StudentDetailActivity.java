@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.conn.CommonMethod;
@@ -24,6 +25,7 @@ public class StudentDetailActivity extends AppCompatActivity {
     TabLayout tab_layout;
     TextView tv_student_name, tv_student_phone;
     MemberVO info;
+    ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,12 @@ public class StudentDetailActivity extends AppCompatActivity {
 
         tv_student_name = findViewById(R.id.tv_student_name);
         tv_student_phone = findViewById(R.id.tv_student_phone);
+        back = findViewById(R.id.iv_back);
+
+        //뒤로가기
+        back.setOnClickListener(v -> {
+            onBackPressed();    //여기서 더 들어갈 Activity 가 없으니까 꼬일일 없을듯
+        });
 
         new CommonMethod().setParams("member_code", student_code).sendPost("member_info", new CommonMethod.CallBackResult() {
             @Override

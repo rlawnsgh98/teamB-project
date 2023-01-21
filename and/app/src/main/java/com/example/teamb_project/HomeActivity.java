@@ -49,7 +49,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
         b.navigationDrawer.setOnMenuItemClickListener(position -> {
-           // Intent intent = null ;
+            // Intent intent = null ;
             b.tvMenu.setText(menuItems.get(position).getTitle());
             //Fragment로 바꿀 필요가 있을거같음.
 

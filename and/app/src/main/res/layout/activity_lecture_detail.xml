@@ -11,15 +11,15 @@
     <LinearLayout
         android:id="@+id/topnav"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="#293859"
+        android:layout_height="60dp"
+        android:background="@color/deep_dark"
         android:orientation="vertical"
         />
     <!--Top Header Layout-->
     <LinearLayout
         android:id="@+id/topbar"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="60dp"
         android:layout_alignParentTop="true"
         android:gravity="center_vertical"
         android:layout_below="@+id/topnav"
@@ -38,11 +38,12 @@
             android:layout_weight="1" />
 
         <TextView
+            android:id="@+id/tv_lecture_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="강의"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="19dp"
             android:textStyle="bold" />
 
         <Space
