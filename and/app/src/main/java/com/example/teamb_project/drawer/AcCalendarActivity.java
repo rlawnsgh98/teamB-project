@@ -72,6 +72,7 @@ public class AcCalendarActivity extends AppCompatActivity {
                                 ConnectedDays connectedDays = new ConnectedDays(days, textColor, selectedTextColor, disabledTextColor);
                                 b.calendarView.addConnectedDays(connectedDays);
                                 b.calendarView.setConnectedDayIconRes(R.drawable.selection_date);
+                                b.calendarView.setConnectedDaySelectedIconRes(R.drawable.selection_date);
                                 b.calendarView.setConnectedDayIconPosition(ConnectedDayIconPosition.TOP);
 
                                 b.calendarView.setCalendarOrientation(ConstraintLayout.LayoutParams.HORIZONTAL);
