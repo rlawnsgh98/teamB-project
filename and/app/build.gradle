@@ -86,6 +86,7 @@ dependencies {
     // 네비게이션
     implementation 'com.github.shrikanth7698:Custom-Navigation-Drawer:v0.0.1'
 
+    implementation 'com.github.applikeysolutions:cosmocalendar:1.0.4'
 }
 //김준호 빌드 오류 나서 넣음
 tasks.register("prepareKotlinBuildScriptModel"){
