@@ -13,58 +13,83 @@
         app:cardCornerRadius="20dp"
         android:layout_marginBottom="20dp"
         >
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center">
-            <TextView
-                android:id="@+id/tv_lecture_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="고등 수학 A반"
-                android:textSize="24dp"
-                android:layout_marginBottom="2dp"
-                android:layout_gravity="center"
-                android:textColor="@color/white"
-                android:textStyle="bold"/>
+        <RelativeLayout
+            android:id="@+id/rel_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_green_blue"
+            >
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="35dp"
                 >
-                <TextView
-                    android:id="@+id/tv_room"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:textSize="20dp"
-                    android:text="202호"
+                <ImageView
+                    android:id="@+id/iv_subject"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:padding="5dp"
+                    android:src="@drawable/math"
                     />
-                <TextView
-                    android:id="@+id/tv_cnt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:textSize="20dp"
-                    android:text=" / 20명"/>
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/tv_teacher_name"
+            <!-- 강의정보 -->
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20dp"
+                android:orientation="vertical"
                 android:layout_gravity="center"
-                android:textColor="@color/white"
-                android:text="강사이름"/>
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="75dp"
+                android:layout_centerVertical="true"
+                >
+                <TextView
+                    android:id="@+id/tv_lecture_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고등 수학 A반"
+                    android:textSize="21dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
 
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    >
+                    <TextView
+                        android:id="@+id/tv_room"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="18dp"
+                        android:text="202호"
+                        />
+                    <TextView
+                        android:id="@+id/tv_cnt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="18dp"
+                        android:text=" / 20명"/>
+                </LinearLayout>
 
+                <TextView
+                    android:id="@+id/tv_teacher_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:text="강사이름"/>
+            </LinearLayout>
+        </RelativeLayout>
 
-
-        </LinearLayout>
 
 
 

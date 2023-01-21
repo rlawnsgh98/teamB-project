@@ -2,12 +2,16 @@ package com.example.teamb_project.teacher.mylecture;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.teamb_project.R;
@@ -44,6 +48,23 @@ public class MyLectureAdapter extends RecyclerView.Adapter<MyLectureAdapter.View
         h.tv_room.setText(list.get(idx).getRoom_code().substring(1)+"호");
         h.tv_cnt.setText(" / "+list.get(idx).getStudent_cnt() + "명");
 
+        //카드뷰 색 지정
+        Drawable card_color = null;
+        Drawable img = null;
+        //해당 강의 과목별 CardView 변경
+        if(list.get(i).getSubject_code().equals("ENG")) {
+            card_color = context.getResources().getDrawable(R.drawable.card_blue);
+            img = context.getResources().getDrawable(R.drawable.eng);
+        } else if(list.get(i).getSubject_code().equals("MATH")) {
+            card_color = context.getResources().getDrawable(R.drawable.card_green_blue);
+            img = context.getResources().getDrawable(R.drawable.math);
+        } else if(list.get(i).getSubject_code().equals("KOR")) {
+            card_color = context.getResources().getDrawable(R.drawable.card_green);
+            img = context.getResources().getDrawable(R.drawable.kor);
+        }
+        h.background.setBackground(card_color);
+        h.subject.setImageDrawable(img);
+
         h.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,6 +82,9 @@ public class MyLectureAdapter extends RecyclerView.Adapter<MyLectureAdapter.View
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView tv_lecture_title, tv_room, tv_teacher_name, tv_cnt;
+        CardView card;
+        RelativeLayout background;
+        ImageView subject;
 
         public ViewHolder(@NonNull View v) {
             super(v);
@@ -68,6 +92,8 @@ public class MyLectureAdapter extends RecyclerView.Adapter<MyLectureAdapter.View
             tv_room = v.findViewById(R.id.tv_room);
             tv_teacher_name = v.findViewById(R.id.tv_teacher_name);
             tv_cnt = v.findViewById(R.id.tv_cnt);
+            background = v.findViewById(R.id.rel_background);
+            subject = v.findViewById(R.id.iv_subject);
         }
     }
 }

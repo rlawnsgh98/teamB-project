@@ -2,9 +2,12 @@ package com.example.teamb_project.student.mylecture;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -47,14 +50,24 @@ public class Stu_MyLectureAdapter extends RecyclerView.Adapter<Stu_MyLectureAdap
         h.tv_cnt.setVisibility(View.GONE);
 
         //카드뷰 색 지정
-        int card_color = 0;
-        if(list.get(i).getSubject_code().equals("ENG")) card_color = context.getResources().getColor(R.color.card_eng);
-        else if(list.get(i).getSubject_code().equals("MATH")) card_color = context.getResources().getColor(R.color.card_math);
-        else if(list.get(i).getSubject_code().equals("KOR")) card_color = context.getResources().getColor(R.color.card_kor);
-        h.card.setCardBackgroundColor(card_color);
+        Drawable card_color = null;
+        Drawable img = null;
+        //해당 강의 과목별 CardView 변경
+        if(list.get(i).getSubject_code().equals("ENG")) {
+            card_color = context.getResources().getDrawable(R.drawable.card_blue);
+            img = context.getResources().getDrawable(R.drawable.eng);
+        } else if(list.get(i).getSubject_code().equals("MATH")) {
+            card_color = context.getResources().getDrawable(R.drawable.card_green_blue);
+            img = context.getResources().getDrawable(R.drawable.math);
+        } else if(list.get(i).getSubject_code().equals("KOR")) {
+            card_color = context.getResources().getDrawable(R.drawable.card_green);
+            img = context.getResources().getDrawable(R.drawable.kor);
+        }
+        h.background.setBackground(card_color);
+        h.subject.setImageDrawable(img);
 
 
-
+        //각 과목 item 클릭시 이동
         h.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,6 +87,9 @@ public class Stu_MyLectureAdapter extends RecyclerView.Adapter<Stu_MyLectureAdap
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView tv_lecture_title, tv_cnt, tv_room, tv_teacher_name;
         CardView card;
+        RelativeLayout background;
+        ImageView subject;
+
         public ViewHolder(@NonNull View v) {
             super(v);
             tv_lecture_title = v.findViewById(R.id.tv_lecture_title);
@@ -81,6 +97,8 @@ public class Stu_MyLectureAdapter extends RecyclerView.Adapter<Stu_MyLectureAdap
             tv_teacher_name = v.findViewById(R.id.tv_teacher_name);
             tv_cnt = v.findViewById(R.id.tv_cnt);
             card = v.findViewById(R.id.card);
+            background = v.findViewById(R.id.rel_background);
+            subject = v.findViewById(R.id.iv_subject);
         }
     }
 }
