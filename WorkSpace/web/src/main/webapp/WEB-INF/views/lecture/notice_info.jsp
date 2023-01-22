@@ -17,15 +17,15 @@
 				<table class="table">
 					<tr>
 						<th class="col-3">제목</th>
-						<td class="col-3" colspan='3'>${notice_info.title }</td>
+						<td class="col-3 text-left" colspan='3'>${notice_info.title }</td>
 					</tr>
 					<tr>
-						<th class="col-3">작성자</th><td class="col-3">${notice_info.member_name }</td>
-						<th class="col-3">작성일자</th><td class="col-3">${notice_info.writedate }</td>
+						<th class="col-3">작성자</th><td class="col-3 text-left">${notice_info.member_name }</td>
+						<th class="col-3">작성일자</th><td class="col-3 text-left">${notice_info.writedate }</td>
 					</tr>
 					<tr>
-						<th class="col-3">내용</th>
-						<td class="col-3 " colspan='5'>${notice_info.content }</td>
+						<th class="col-3 align-middle">내용</th>
+						<td class="col-3 text-left" style='height: 300px' colspan='5'>${notice_info.content }</td>
 					</tr>
 				</table>
 			</div>

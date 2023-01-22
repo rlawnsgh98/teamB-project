@@ -140,5 +140,44 @@ public class LectureController {
 		return "lecture/exam_take";
 	}
 	
+	//과제 제출
+		@RequestMapping("/homework_submit.le")
+		public String homework_submit() {
+				
+
+				
+			return "lecture/homework_submit";
+		}
+		
+	//과제 수정
+	@RequestMapping("/homework_modify.le")
+	public String homework_modify() {
+				
+
+				
+		return "lecture/homework_modify";
+	}	
+	
+	
+	
+	//////////////////////////////선생//////////////////////////
+	
+	//공지작성
+	@RequestMapping("/notice_write.le")
+	public String notice_write() {
+				
+
+				
+		return "lecture/notice_write";
+	}
+	
+	//영상 등록
+	@RequestMapping("/video_new.le")
+	public String video_new() {
+				
+
+				
+		return "lecture/video_new";
+	}	
 		
 }

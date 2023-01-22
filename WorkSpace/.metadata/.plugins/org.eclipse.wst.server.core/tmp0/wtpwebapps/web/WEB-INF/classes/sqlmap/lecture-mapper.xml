@@ -41,7 +41,7 @@
 	
 	<select id="homework_list" resultType="vo.HomeworkVO">
 		select rownum, h.*
-		from(select h.homework_code, title, content, writedate, duedate, filename, filepath, lecture_code, h.member_code teacher_code, s.member_code , s.state 
+		from(select h.homework_code, title, h.content, writedate, duedate, h.filename, h.filepath, lecture_code, h.member_code teacher_code, s.member_code , s.state 
 		    from homework h left outer join homework_submit s
 		    on h.homework_code = s.homework_code
 		    where s.member_code = #{member_code}
@@ -50,7 +50,7 @@
 	</select>
 	
 	<select id="homework_info" resultType="vo.HomeworkVO">
-		select h.homework_code, title, content, writedate, duedate, filename, filepath, lecture_code, h.member_code teacher_code, s.member_code , s.state ,submitdate, member_name
+		select h.homework_code, h.title, h.content, h.writedate, h.duedate, h.filename, h.filepath, h.lecture_code, h.member_code teacher_code, s.member_code , s.state ,s.submitdate, m.member_name
 	    from homework h left outer join homework_submit s
 	    on h.homework_code = s.homework_code
 	    left outer join member m

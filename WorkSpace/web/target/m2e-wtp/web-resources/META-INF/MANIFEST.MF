@@ -1,9 +1,5 @@
 Manifest-Version: 1.0
-<<<<<<< HEAD
 Built-By: hoho0
-=======
-Built-By: my
->>>>>>> kmj
 Build-Jdk: 11.0.16.1
 Created-By: Maven Integration for Eclipse
 

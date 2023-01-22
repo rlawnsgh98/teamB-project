@@ -19,7 +19,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"> -->
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -40,7 +40,7 @@
                 <a href="<c:url value="/"/>" class="nav-item nav-link active">홈</a>
                 <a href="list.le?member_code=${loginInfo.member_code }" class="nav-item nav-link">강의</a>
                 <a href="#" class="nav-item nav-link">게시판</a>
-                <a href="mypage" class="nav-item nav-link">마이페이지</a>
+                <a href="mypage.me" class="nav-item nav-link">마이페이지</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu m-0">
@@ -53,8 +53,8 @@
 					<div class="loginfo">
 						<ul>
 							<!-- 로그인 하지 않은 경우 -->
-							<li class="nav-link"><a class='btn-fill' href='login'>로그인</a></li>
-							<li class="nav-link"><a class='btn-fill' href='member'>회원가입</a></li>
+							<li class="nav-link"><a class='btn-fill' href='login.me'>로그인</a></li>
+							<li class="nav-link"><a class='btn-fill' href='member.me'>회원가입</a></li>
 						</ul>
 					</div>
 				</c:if>
@@ -65,7 +65,7 @@
 							<li><img class='profile' src="${loginInfo.profilepath}">
 							<li><strong> ${loginInfo.member_name }</strong></li>
 							<li class="nav-link"><a class='btn-fill' href="changePW">비밀번호변경</a></li>
-							<li class="nav-link"><a class='btn-fill' href="logout">로그아웃</a></li>
+							<li class="nav-link"><a class='btn-fill' href="logout.me">로그아웃</a></li>
 						</ul>
 					</div>
 				</c:if>

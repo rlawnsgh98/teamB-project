@@ -20,18 +20,18 @@
 			<div class=''>
 				<table class="table ">
 					<tr>
-						<th>과제명</th>
-						<td>${info.title }</td>
+						<th class='col-3'>과제명</th>
+						<td class='text-left'>${info.title }</td>
 					</tr>
 					<tr>
-						<th>제출기한</th><td>${info.writedate } ~ ${info.duedate }</td>
+						<th class='col-3'>제출기한</th><td class='text-left'>${info.writedate } ~ ${info.duedate }</td>
 					</tr>
 					<tr>
-						<th>과제내용</th><td>${info.content }</td>
+						<th class='col-3'>과제내용</th><td class='text-left'>${info.content }</td>
 					</tr>
 					<tr>
-						<th>참고자료</th>
-						<td></td>
+						<th class='col-3'>참고자료</th>
+						<td class='text-left'></td>
 					</tr>
 				</table>
 			</div>
@@ -41,14 +41,14 @@
 		<div class="col-lg-7 mx-auto bg-white rounded shadow">
 				<table class="table">
 					<tr>
-						<th>제출자</th><td>${info.member_name }</td>
+						<th class='col-3'>제출자</th><td class='text-left'>${info.member_name }</td>
 					</tr>
 					<tr>
-						<th>첨부파일</th><td></td>
+						<th class='col-3'>첨부파일</th><td></td>
 					</tr>
 					<tr>
-						<th>제출상태</th>
-						<td>
+						<th class='col-3'>제출상태</th>
+						<td class='text-left'>
 							<c:choose>
 								<c:when test="${info.state eq 0}">미제출</c:when>
 								<c:when test="${info.state eq 1}">제출완료</c:when>
@@ -57,7 +57,7 @@
 					</tr>
 					
 					<tr>
-						<th>제출일자</th><td>${info.submitdate }</td>
+						<th class='col-3'>제출일자</th><td class='text-left'>${info.submitdate }</td>
 					</tr>
 				</table>
 		</div>
@@ -69,10 +69,10 @@
 		<c:if test="${info.duedate >= date }">
 			<div class='btnSet'>
 				<c:if test="${info.state eq 0}">
-					<a class='btn-fill' href=''>제출</a>
+					<a class='btn-fill' href='homework_submit.le'>제출</a>
 				</c:if>	
 				<c:if test="${info.state eq 1}">
-					<a class='btn-fill' href=''>수정</a>
+					<a class='btn-fill' href='homework_modify.le'>수정</a>
 				</c:if>
 			</div>
 		</c:if>		
