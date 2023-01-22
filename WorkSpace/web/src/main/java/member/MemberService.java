@@ -3,6 +3,8 @@ package member;
 import java.util.HashMap;
 import java.util.List;
 
+import vo.MemberVO;
+
 public interface MemberService {
 	int member_join(MemberVO vo); 						//회원가입시 회원정보 저장
 	MemberVO member_login(HashMap<String, String> map); //로그인처리
