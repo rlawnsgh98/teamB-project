@@ -1,6 +1,5 @@
-package com.example.teamb_project;
+package com.example.teamb_project.member;
 
-import androidx.annotation.IdRes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -9,7 +8,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.Patterns;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -20,9 +18,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.conn.CommonMethod;
+import com.example.teamb_project.R;
 import com.example.teamb_project.common.Common;
 import com.example.teamb_project.vo.MemberVO;
-import com.google.android.material.textfield.TextInputEditText;
 import com.google.gson.Gson;
 
 import java.text.SimpleDateFormat;

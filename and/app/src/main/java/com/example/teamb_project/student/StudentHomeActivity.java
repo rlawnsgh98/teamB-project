@@ -16,18 +16,17 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.bumptech.glide.Glide;
 import com.example.conn.CommonMethod;
-import com.example.teamb_project.LoginActivity;
+import com.example.teamb_project.member.LoginActivity;
 import com.example.teamb_project.R;
-import com.example.teamb_project.TTActivity;
+import com.example.teamb_project.teacher.notice.NoticeActivity;
+import com.example.teamb_project.timetable.TTActivity;
 import com.example.teamb_project.common.Common;
 import com.example.teamb_project.counselling.CounselActivity;
 import com.example.teamb_project.databinding.ActivityStudenthomeBinding;
 import com.example.teamb_project.drawer.AcCalendarActivity;
 import com.example.teamb_project.drawer.AcInfoActivity;
-import com.example.teamb_project.drawer.MyInfoActivity;
 import com.example.teamb_project.student.mylecture.Stu_MyLectureActivity;
 import com.example.teamb_project.board.BoardActivity;
-import com.example.teamb_project.notice.NoticeActivity;
 import com.example.teamb_project.vo.MemberVO;
 import com.google.gson.GsonBuilder;
 
@@ -101,8 +100,6 @@ public class StudentHomeActivity extends AppCompatActivity implements View.OnCli
         myInfo_tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(StudentHomeActivity.this, MyInfoActivity.class);
-                startActivity(intent);
             }
         });
         acCalendar_tv.setOnClickListener(new View.OnClickListener() {

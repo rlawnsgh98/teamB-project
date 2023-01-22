@@ -81,10 +81,10 @@ public class NewCounselActivity extends AppCompatActivity implements View.OnClic
 
         if(v.getId()== R.id.iv_back){
             //뒤로가기 클릭시
-            startActivity(intent_counsel);
+            finish();
         }else if(v.getId()==R.id.card_back){
             //취소 클릭시
-            startActivity(intent_counsel);
+            finish();
         }else if(v.getId()==R.id.card_insert){
             //상담 등록
             if(!b.edtTitle.getText().toString().isEmpty() && !b.edtContent.getText().toString().isEmpty()){
@@ -102,8 +102,7 @@ public class NewCounselActivity extends AppCompatActivity implements View.OnClic
                                 Log.d("log", "상담 등록 결과 : " + data); //0이면 실패
                                 Toast.makeText(this, "상담 등록 완료", Toast.LENGTH_SHORT).show();
                                 //상담 목록으로 이동
-                                Intent intent = new Intent(NewCounselActivity.this, CounselActivity.class);
-                                startActivity(intent);
+                                finish();
                             });
                 }else{
                     Toast.makeText(this, "수강중인 강의가 없습니다", Toast.LENGTH_LONG).show();

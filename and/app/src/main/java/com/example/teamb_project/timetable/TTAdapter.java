@@ -1,4 +1,4 @@
-package com.example.teamb_project;
+package com.example.teamb_project.timetable;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +8,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.teamb_project.R;
 import com.example.teamb_project.vo.BoardVO;
 
 import java.util.ArrayList;

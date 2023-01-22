@@ -15,19 +15,17 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.conn.CommonMethod;
-import com.example.teamb_project.LoginActivity;
-import com.example.teamb_project.TTActivity;
+import com.example.teamb_project.member.LoginActivity;
+import com.example.teamb_project.teacher.notice.NoticeActivity;
+import com.example.teamb_project.timetable.TTActivity;
 import com.example.teamb_project.common.Common;
 import com.example.teamb_project.counselling.CounselActivity;
 import com.example.teamb_project.databinding.ActivityTeacherhomeBinding;
 import com.example.teamb_project.drawer.AcCalendarActivity;
 import com.example.teamb_project.drawer.AcInfoActivity;
-import com.example.teamb_project.drawer.MyInfoActivity;
-import com.example.teamb_project.student.StudentHomeActivity;
 import com.example.teamb_project.board.BoardActivity;
 import com.example.teamb_project.teacher.mylecture.MyLectureActivity;
 import com.example.teamb_project.R;
-import com.example.teamb_project.notice.NoticeActivity;
 import com.example.teamb_project.vo.MemberVO;
 import com.google.gson.GsonBuilder;
 
@@ -94,8 +92,7 @@ public class TeacherHomeActivity extends AppCompatActivity implements View.OnCli
         myInfo_tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(TeacherHomeActivity.this, MyInfoActivity.class);
-                startActivity(intent);
+
             }
         });
         acCalendar_tv.setOnClickListener(new View.OnClickListener() {
@@ -127,16 +124,13 @@ public class TeacherHomeActivity extends AppCompatActivity implements View.OnCli
     public void onClick(View v) {
         //내강의 조회
         if(v.getId()==R.id.cv_mylecture){
-            Intent intent = new Intent(this, MyLectureActivity.class);
-            startActivity(intent);
+
             //학원공지사항
         }else if(v.getId()==R.id.cv_notice){
-            Intent intent = new Intent(this, NoticeActivity.class);
-            startActivity(intent);
+
             //자유게시판
         }else if(v.getId()==R.id.cv_board){
-            Intent intent = new Intent(this, BoardActivity.class);
-            startActivity(intent);
+
         }else if(v.getId()==R.id.cv_consult){
             //상담화면 이동
             Intent intent = new Intent(TeacherHomeActivity.this, CounselActivity.class);

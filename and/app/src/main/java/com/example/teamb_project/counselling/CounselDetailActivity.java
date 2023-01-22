@@ -111,8 +111,7 @@ public class CounselDetailActivity extends AppCompatActivity implements View.OnC
 
         if (v.getId() == R.id.iv_back) {
             //뒤로가기 클릭
-            Intent intent = new Intent(CounselDetailActivity.this, CounselActivity.class);
-            startActivity(intent);
+            finish();
         } else if (v.getId() == R.id.iv_more) {
             //더보기(수정/삭제) 클릭
             b.ivMore.setVisibility(View.GONE);

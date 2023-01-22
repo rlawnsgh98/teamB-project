@@ -1,32 +1,22 @@
-package com.example.teamb_project;
+package com.example.teamb_project.member;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.conn.ApiClient;
 import com.example.conn.CommonMethod;
+import com.example.teamb_project.home.HomeActivity;
+import com.example.teamb_project.R;
 import com.example.teamb_project.common.Common;
-import com.example.teamb_project.student.StudentHomeActivity;
-import com.example.teamb_project.teacher.TeacherHomeActivity;
 import com.example.teamb_project.vo.MemberVO;
-import com.google.android.material.textfield.TextInputEditText;
-import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
-import java.util.Random;
 
 public class LoginActivity extends AppCompatActivity {
     TextView join_tv,login_tv,find_tv;
@@ -63,16 +53,16 @@ public class LoginActivity extends AppCompatActivity {
 
                                     if (vo != null) {
                                         //2023/01/21 다른 메뉴 확인하기위해 임시로 기존메뉴 사용
-//                                        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-//                                           startActivity(intent);
+                                        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                                           startActivity(intent);
                                            //20230120 같은 액티비티인데 두개로 분기되어있어서 없앰.
-                                        if(vo.getType().equals("STUD")){
-                                            Intent intent = new Intent(LoginActivity.this, StudentHomeActivity.class);
-                                            startActivity(intent);
-                                        }else if(vo.getType().equals("TEACH")){
-                                            Intent intent = new Intent(LoginActivity.this, TeacherHomeActivity.class);
-                                            startActivity(intent);
-                                        }
+//                                        if(vo.getType().equals("STUD")){
+//                                            Intent intent = new Intent(LoginActivity.this, StudentHomeActivity.class);
+//                                            startActivity(intent);
+//                                        }else if(vo.getType().equals("TEACH")){
+//                                            Intent intent = new Intent(LoginActivity.this, TeacherHomeActivity.class);
+//                                            startActivity(intent);
+//                                        }
 
                                     } else {
                                         Toast.makeText(LoginActivity.this, "아이디 또는 비밀번호가 틀립니다", Toast.LENGTH_SHORT).show();

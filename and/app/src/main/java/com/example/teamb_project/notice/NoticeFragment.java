@@ -1,36 +1,39 @@
 package com.example.teamb_project.notice;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ScrollView;
 
 import com.example.conn.CommonMethod;
 import com.example.teamb_project.R;
 import com.example.teamb_project.common.Common;
 import com.example.teamb_project.databinding.ActivityNoticeBinding;
+import com.example.teamb_project.databinding.FragmentNoticeBinding;
 import com.example.teamb_project.vo.BoardVO;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
 
-public class NoticeActivity extends AppCompatActivity implements View.OnClickListener{
-    ActivityNoticeBinding b;
+
+public class NoticeFragment extends Fragment implements View.OnClickListener{
+
+    FragmentNoticeBinding b;
     ArrayList<BoardVO> list;
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        b = ActivityNoticeBinding.inflate(getLayoutInflater());
-        setContentView(b.getRoot());
-
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        b = FragmentNoticeBinding.inflate(inflater,container,false);
         //메소드 재활용
         Common common = new Common();
 
         //클릭이벤트
-        b.ivBack.setOnClickListener(this);
         b.cardGoTop.setOnClickListener(this);
 
         //스크롤 내리면 최상단 이동 버튼 보이기
@@ -38,14 +41,12 @@ public class NoticeActivity extends AppCompatActivity implements View.OnClickLis
 
         selectNotice();
 
+        return b.getRoot();
     }
 
     @Override
     public void onClick(View v) {
-        if(v.getId()== R.id.iv_back){
-            //뒤로가기 클릭시
-            onBackPressed();
-        }else if(v.getId()==R.id.card_go_top){
+       if(v.getId()==R.id.card_go_top){
             //스크롤 최상단으로 이동
             b.scrNotice.fullScroll(ScrollView.FOCUS_UP);
         }
@@ -62,5 +63,4 @@ public class NoticeActivity extends AppCompatActivity implements View.OnClickLis
             }
         });
     }
-
 }

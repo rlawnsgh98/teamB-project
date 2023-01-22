@@ -58,8 +58,7 @@ public class LectureDetailActivity extends AppCompatActivity {
 
         //돌아가기
         back.setOnClickListener(v -> {
-            Intent intent = new Intent(LectureDetailActivity.this, MyLectureActivity.class);
-            startActivity(intent);
+            finish();
         });
 
     }

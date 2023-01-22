@@ -1,4 +1,4 @@
-package com.example.teamb_project.drawer;
+package com.example.teamb_project.member;
 
 import android.Manifest;
 import android.app.Activity;
@@ -6,43 +6,38 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.content.res.ColorStateList;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.MediaStore;
-import android.util.Log;
-import android.util.Patterns;
-import android.view.View;
-import android.widget.DatePicker;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
+import androidx.fragment.app.Fragment;
+
+import android.provider.MediaStore;
+import android.util.Log;
+import android.util.Patterns;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.DatePicker;
+import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.conn.CommonMethod;
-import com.example.teamb_project.LoginActivity;
 import com.example.teamb_project.R;
 import com.example.teamb_project.common.Common;
-import com.example.teamb_project.databinding.ActivityMyInfoBinding;
+import com.example.teamb_project.databinding.FragmentMyInfoBinding;
 import com.example.teamb_project.student.StudentHomeActivity;
 import com.example.teamb_project.teacher.TeacherHomeActivity;
 import com.example.teamb_project.vo.MemberVO;
-import com.google.gson.Gson;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -50,9 +45,8 @@ import java.util.Calendar;
 import java.util.Locale;
 import java.util.regex.Pattern;
 
-public class MyInfoActivity extends AppCompatActivity  implements  View.OnFocusChangeListener{
-
-    ActivityMyInfoBinding b;
+public class MyInfoFragment extends Fragment implements  View.OnFocusChangeListener{
+    FragmentMyInfoBinding b;
 
     Dialog popup_dialog;
     String img_path;
@@ -61,6 +55,7 @@ public class MyInfoActivity extends AppCompatActivity  implements  View.OnFocusC
     MemberVO my_info;
     MemberVO vo = new MemberVO();
     Calendar myCalendar = Calendar.getInstance();
+
     DatePickerDialog.OnDateSetListener setDate = new DatePickerDialog.OnDateSetListener() {
         @Override
         public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
@@ -72,14 +67,12 @@ public class MyInfoActivity extends AppCompatActivity  implements  View.OnFocusC
     };
     Pattern emailPatttern = Patterns.EMAIL_ADDRESS;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        b = ActivityMyInfoBinding.inflate(getLayoutInflater());
-        setContentView(b.getRoot());
 
-        // 다이얼로그 생성
-        popup_dialog = new Dialog(MyInfoActivity.this);
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        b = FragmentMyInfoBinding.inflate(inflater, container, false);
+        popup_dialog = new Dialog(getContext());
         popup_dialog.setContentView(R.layout.popup_dialog);
 
         checkDangerousPermissions();
@@ -89,14 +82,14 @@ public class MyInfoActivity extends AppCompatActivity  implements  View.OnFocusC
 
         // 저장된 프로필 이미지 붙이기
         if(my_info.getProfilepath()==null){
-            Glide.with(MyInfoActivity.this).load(R.drawable.user3).into(b.imgvProfile);
+            Glide.with(getContext()).load(R.drawable.user3).into(b.imgvProfile);
         }else{
-            Glide.with(MyInfoActivity.this).load(Common.loginInfo.getProfilepath()).into(b.imgvProfile);
+            Glide.with(getContext()).load(Common.loginInfo.getProfilepath()).into(b.imgvProfile);
         }
         //뒤로가기
-        b.imgvBack.setOnClickListener(v -> {
-            onBackPressed();
-        });
+//        b.imgvBack.setOnClickListener(v -> {
+//            onBackPressed();
+//        });
 
         setMemberInfo();
 
@@ -114,37 +107,37 @@ public class MyInfoActivity extends AppCompatActivity  implements  View.OnFocusC
 
 
         b.imgvProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popup_dialog.show();
+                popup_dialog.findViewById(R.id.camera).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        popup_dialog.show();
-                        popup_dialog.findViewById(R.id.camera).setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                cameraMethod();
-                                popup_dialog.dismiss();
-                            }
-                        });
-                        popup_dialog.findViewById(R.id.gallery).setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                galleryMethod();
-                                popup_dialog.dismiss();
-                            }
-                        });
-                        popup_dialog.findViewById(R.id.cancel_btn).setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                popup_dialog.dismiss();
-                            }
-                        });
+                        cameraMethod();
+                        popup_dialog.dismiss();
                     }
                 });
+                popup_dialog.findViewById(R.id.gallery).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        galleryMethod();
+                        popup_dialog.dismiss();
+                    }
+                });
+                popup_dialog.findViewById(R.id.cancel_btn).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        popup_dialog.dismiss();
+                    }
+                });
+            }
+        });
 
 
         b.tvBirth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new DatePickerDialog(MyInfoActivity.this,
+                new DatePickerDialog(getContext(),
                         setDate, myCalendar.get(Calendar.YEAR), myCalendar.get(Calendar.MONTH), myCalendar.get(Calendar.DAY_OF_MONTH)).show();
             }
         });
@@ -152,35 +145,43 @@ public class MyInfoActivity extends AppCompatActivity  implements  View.OnFocusC
         // 저장 버튼
         b.confirmBtn.setOnClickListener(v->{
 
-                vo.setId(Common.loginInfo.getId());
+            vo.setId(Common.loginInfo.getId());
 
-                vo.setMember_name(isNullVoValue(b.edtName.getText().toString() , Common.loginInfo.getMember_name() ));
-                vo.setEmail(isNullVoValue(b.edtEmail.getText().toString() , Common.loginInfo.getEmail() ));
-                vo.setBirth(isNullVoValue(b.tvBirth.getText().toString()  , Common.loginInfo.getBirth() ));
-                vo.setPhone(isNullVoValue(b.edtPhone.getText().toString() , Common.loginInfo.getPhone() ));
-                vo.setGender(isNullVoValue(vo.getGender() , Common.loginInfo.getGender() ));
-                vo.setProfilepath(img_path);
+            vo.setMember_name(isNullVoValue(b.edtName.getText().toString() , Common.loginInfo.getMember_name() ));
+            vo.setEmail(isNullVoValue(b.edtEmail.getText().toString() , Common.loginInfo.getEmail() ));
+            vo.setBirth(isNullVoValue(b.tvBirth.getText().toString()  , Common.loginInfo.getBirth() ));
+            vo.setPhone(isNullVoValue(b.edtPhone.getText().toString() , Common.loginInfo.getPhone() ));
+            vo.setGender(isNullVoValue(vo.getGender() , Common.loginInfo.getGender() ));
+            vo.setProfilepath(img_path);
 
-                new CommonMethod().setParams("param",vo).sendPostFile("modify_my_info.mj", img_path, (isResult, data) -> {
-                    if(isResult) {
-                        Toast.makeText(MyInfoActivity.this, "회원정보수정 완료", Toast.LENGTH_SHORT).show();
+            new CommonMethod().setParams("param",vo).sendPostFile("modify_my_info.mj", img_path, (isResult, data) -> {
+                if(isResult) {
+                    Toast.makeText(getContext(), "회원정보수정 완료", Toast.LENGTH_SHORT).show();
 
-                        Activity activity;
-                        if(Common.loginInfo.getType()=="STUD") activity = new StudentHomeActivity();
-                        else activity = new TeacherHomeActivity();
+                    Activity activity;
+                    if(Common.loginInfo.getType()=="STUD") activity = new StudentHomeActivity();
+                    else activity = new TeacherHomeActivity();
 
-                        Intent intent = new Intent(MyInfoActivity.this, activity.getClass());
-                        intent.putExtra("isUpdated", true);
-                        startActivity(intent);
-                    }
-                });
-
+                    Intent intent = new Intent(getContext(), activity.getClass());
+                    intent.putExtra("isUpdated", true);
+                    startActivity(intent);
+                }
             });
 
-        b.cancelBtn.setOnClickListener(v->{
-            finish();
         });
-    }//onCreate()
+
+        b.cancelBtn.setOnClickListener(v->{
+            //finish();
+        });
+        return b.getRoot();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        b= null ;
+    }
+
 
     private void setMemberInfo() {
 
@@ -217,20 +218,20 @@ public class MyInfoActivity extends AppCompatActivity  implements  View.OnFocusC
 
         int permissionCheck = PackageManager.PERMISSION_GRANTED;
         for (int i = 0; i < permissions.length; i++) {
-            permissionCheck = ContextCompat.checkSelfPermission(this, permissions[i]);
+            permissionCheck = ContextCompat.checkSelfPermission(getContext(), permissions[i]);
             if (permissionCheck == PackageManager.PERMISSION_DENIED) {
                 break;
             }
         }
 
         if (permissionCheck == PackageManager.PERMISSION_GRANTED) {
-            Toast.makeText(this, "권한 있음", Toast.LENGTH_LONG).show();
+            Toast.makeText(getContext(), "권한 있음", Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(this, "권한 없음", Toast.LENGTH_LONG).show();
-            if (ActivityCompat.shouldShowRequestPermissionRationale(this, permissions[0])) {
-                Toast.makeText(this, "권한 설명 필요함.", Toast.LENGTH_LONG).show();
+            Toast.makeText(getContext(), "권한 없음", Toast.LENGTH_LONG).show();
+            if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(), permissions[0])) {
+                Toast.makeText(getContext(), "권한 설명 필요함.", Toast.LENGTH_LONG).show();
             } else {
-                ActivityCompat.requestPermissions(this, permissions, 1);
+                ActivityCompat.requestPermissions(getActivity(), permissions, 1);
             }
         }
     }//checkDangerousPermissions()
@@ -245,11 +246,11 @@ public class MyInfoActivity extends AppCompatActivity  implements  View.OnFocusC
     public void cameraMethod(){
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
-        File file = new CommonMethod().createFile(this);
+        File file = new CommonMethod().createFile(getContext());
         img_path = file.getAbsolutePath();
 
         if(file != null){
-            Uri imgUri = FileProvider.getUriForFile(this,getPackageName()+".fileprovider",file);
+            Uri imgUri = FileProvider.getUriForFile(getContext(),getActivity().getPackageName()+".fileprovider",file);
             if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.N){
                 intent.putExtra(MediaStore.EXTRA_OUTPUT, imgUri);
             }else{
@@ -258,6 +259,18 @@ public class MyInfoActivity extends AppCompatActivity  implements  View.OnFocusC
         }
         startActivityForResult(intent,CAMERA_CODE);
     }//cameraMethod()
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == CAMERA_CODE && resultCode == getActivity().RESULT_OK){
+            Glide.with(getContext()).load(img_path).into(b.imgvProfile);
+            b.imgvProfile.setScaleType(ImageView.ScaleType.FIT_XY);
+        }else if(requestCode == GALLERY_CODE && resultCode == getActivity().RESULT_OK){
+            img_path = new CommonMethod().getRealPath(data.getData(),getContext(), 1000);
+            Glide.with(getContext()).load(img_path).into(b.imgvProfile);
+        }
+    }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -273,18 +286,8 @@ public class MyInfoActivity extends AppCompatActivity  implements  View.OnFocusC
         }
     }//onRequestPermissionsResult()
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == CAMERA_CODE && resultCode == RESULT_OK){
-            Glide.with(this).load(img_path).into(b.imgvProfile);
-            b.imgvProfile.setScaleType(ImageView.ScaleType.FIT_XY);
-        }else if(requestCode == GALLERY_CODE && resultCode == RESULT_OK){
-            img_path = new CommonMethod().getRealPath(data.getData(),this, 1000);
-            Glide.with(this).load(img_path).into(b.imgvProfile);
-        }
-    }//onActivityResult()
+
+
     public void updateDate(){
         String format = "yyyy-MM-dd";
         SimpleDateFormat simpleDateFormat = null;
@@ -304,7 +307,7 @@ public class MyInfoActivity extends AppCompatActivity  implements  View.OnFocusC
 
     public String isNullVoValue(String value , String rtnValue){
         if(value == null || value.trim().length() < 1){
-           return rtnValue;
+            return rtnValue;
         }else{
             return value;
         }
@@ -322,7 +325,7 @@ public class MyInfoActivity extends AppCompatActivity  implements  View.OnFocusC
                     b.edtEmail.setText("");
                     b.edtEmail.setHint(b.edtEmail.getText());
                     if(!emailPatttern.matcher(b.edtEmail.getText().toString()).matches()){
-                        Toast.makeText(MyInfoActivity.this, "이메일형식이 올바르지 않습니다.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), "이메일형식이 올바르지 않습니다.", Toast.LENGTH_SHORT).show();
                     }
                 }
             }

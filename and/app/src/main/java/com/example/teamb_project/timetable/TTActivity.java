@@ -1,34 +1,27 @@
-package com.example.teamb_project;
+package com.example.teamb_project.timetable;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.util.TypedValue;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.conn.CommonMethod;
+import com.example.teamb_project.R;
 import com.example.teamb_project.common.Common;
 import com.example.teamb_project.databinding.ActivityTtBinding;
 import com.example.teamb_project.student.mylecture.lecturehome.Stu_LectureDetailActivity;
-import com.example.teamb_project.vo.EnrolmentVO;
 import com.example.teamb_project.vo.LectureVO;
-import com.example.teamb_project.vo.MemberVO;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class TTActivity extends AppCompatActivity implements View.OnClickListener{
     ActivityTtBinding b;
@@ -91,7 +84,7 @@ public class TTActivity extends AppCompatActivity implements View.OnClickListene
 
     @Override
     public void onClick(View v) {
-        if(v.getId()==R.id.imgv_back){
+        if(v.getId()== R.id.imgv_back){
             //뒤로가기
             onBackPressed();
         }else if(v.getId()==R.id.tv_link){
