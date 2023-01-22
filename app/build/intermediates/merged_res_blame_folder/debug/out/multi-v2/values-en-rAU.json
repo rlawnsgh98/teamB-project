@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.teamb_project.app-mergeDebugResources-42:/values-en-rAU/values-en-rAU.xml",
+            "outputFile": "com.example.teamb_project.app-mergeDebugResources-44:/values-en-rAU/values-en-rAU.xml",
             "map": [
                 {
                     "source": "C:\\Users\\ym\\.gradle\\caches\\transforms-3\\87a796fe63836d99a2198ac6a6284cb3\\transformed\\core-1.8.0\\res\\values-en-rAU\\values-en-rAU.xml",

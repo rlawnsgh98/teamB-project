@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
@@ -18,7 +19,7 @@ import java.lang.String;
 
 public final class ActivityCounselBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final RelativeLayout rootView;
 
   @NonNull
   public final ImageView ivBack;
@@ -29,17 +30,21 @@ public final class ActivityCounselBinding implements ViewBinding {
   @NonNull
   public final RecyclerView recvCounsel;
 
-  private ActivityCounselBinding(@NonNull LinearLayout rootView, @NonNull ImageView ivBack,
-      @NonNull ImageView ivPlus, @NonNull RecyclerView recvCounsel) {
+  @NonNull
+  public final LinearLayout topbar;
+
+  private ActivityCounselBinding(@NonNull RelativeLayout rootView, @NonNull ImageView ivBack,
+      @NonNull ImageView ivPlus, @NonNull RecyclerView recvCounsel, @NonNull LinearLayout topbar) {
     this.rootView = rootView;
     this.ivBack = ivBack;
     this.ivPlus = ivPlus;
     this.recvCounsel = recvCounsel;
+    this.topbar = topbar;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -82,7 +87,14 @@ public final class ActivityCounselBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityCounselBinding((LinearLayout) rootView, ivBack, ivPlus, recvCounsel);
+      id = R.id.topbar;
+      LinearLayout topbar = ViewBindings.findChildViewById(rootView, id);
+      if (topbar == null) {
+        break missingId;
+      }
+
+      return new ActivityCounselBinding((RelativeLayout) rootView, ivBack, ivPlus, recvCounsel,
+          topbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -1,13 +1,13 @@
 package com.example.teamb_project.vo;
 
+import android.graphics.drawable.Drawable;
+
 public class MemberVO {
     private String id, pw, member_name, gender, member_code
             , email, birth, phone, post, address
             , type, profilepath, salt;
 
     private int lecture_code;
-
-
 
 
     public int getLecture_code() {

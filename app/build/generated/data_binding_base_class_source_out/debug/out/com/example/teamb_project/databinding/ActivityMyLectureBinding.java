@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
+import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,7 +19,7 @@ import java.lang.String;
 
 public final class ActivityMyLectureBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final RelativeLayout rootView;
 
   @NonNull
   public final ImageView ivBack;
@@ -28,19 +28,19 @@ public final class ActivityMyLectureBinding implements ViewBinding {
   public final RecyclerView recvMylecture;
 
   @NonNull
-  public final TextView tvLectureCount;
+  public final LinearLayout topbar;
 
-  private ActivityMyLectureBinding(@NonNull LinearLayout rootView, @NonNull ImageView ivBack,
-      @NonNull RecyclerView recvMylecture, @NonNull TextView tvLectureCount) {
+  private ActivityMyLectureBinding(@NonNull RelativeLayout rootView, @NonNull ImageView ivBack,
+      @NonNull RecyclerView recvMylecture, @NonNull LinearLayout topbar) {
     this.rootView = rootView;
     this.ivBack = ivBack;
     this.recvMylecture = recvMylecture;
-    this.tvLectureCount = tvLectureCount;
+    this.topbar = topbar;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -77,14 +77,13 @@ public final class ActivityMyLectureBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.tv_lecture_count;
-      TextView tvLectureCount = ViewBindings.findChildViewById(rootView, id);
-      if (tvLectureCount == null) {
+      id = R.id.topbar;
+      LinearLayout topbar = ViewBindings.findChildViewById(rootView, id);
+      if (topbar == null) {
         break missingId;
       }
 
-      return new ActivityMyLectureBinding((LinearLayout) rootView, ivBack, recvMylecture,
-          tvLectureCount);
+      return new ActivityMyLectureBinding((RelativeLayout) rootView, ivBack, recvMylecture, topbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

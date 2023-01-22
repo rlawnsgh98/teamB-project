@@ -4,19 +4,153 @@ package com.example.teamb_project.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TableLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.teamb_project.R;
+import com.google.android.material.card.MaterialCardView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class ActivityTtBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final RelativeLayout rootView;
+
+  @NonNull
+  public final MaterialCardView cardDetail;
+
+  @NonNull
+  public final MaterialCardView cardSchedule;
+
+  @NonNull
+  public final LinearLayout f1Data1;
+
+  @NonNull
+  public final LinearLayout f1Data2;
+
+  @NonNull
+  public final LinearLayout f1Data3;
+
+  @NonNull
+  public final LinearLayout f1Data4;
+
+  @NonNull
+  public final LinearLayout f1Data5;
+
+  @NonNull
+  public final LinearLayout f2Data1;
+
+  @NonNull
+  public final LinearLayout f2Data2;
+
+  @NonNull
+  public final LinearLayout f2Data3;
+
+  @NonNull
+  public final LinearLayout f2Data4;
+
+  @NonNull
+  public final LinearLayout f2Data5;
+
+  @NonNull
+  public final LinearLayout f3Data1;
+
+  @NonNull
+  public final LinearLayout f3Data2;
+
+  @NonNull
+  public final LinearLayout f3Data3;
+
+  @NonNull
+  public final LinearLayout f3Data4;
+
+  @NonNull
+  public final LinearLayout f3Data5;
+
+  @NonNull
+  public final LinearLayout f4Data1;
+
+  @NonNull
+  public final LinearLayout f4Data2;
+
+  @NonNull
+  public final LinearLayout f4Data3;
+
+  @NonNull
+  public final LinearLayout f4Data4;
+
+  @NonNull
+  public final LinearLayout f4Data5;
+
+  @NonNull
+  public final ImageView imgvBack;
+
+  @NonNull
+  public final IncludeTimetableBinding include1;
+
+  @NonNull
+  public final IncludeTimetableBinding include10;
+
+  @NonNull
+  public final IncludeTimetableBinding include11;
+
+  @NonNull
+  public final IncludeTimetableBinding include12;
+
+  @NonNull
+  public final IncludeTimetableBinding include13;
+
+  @NonNull
+  public final IncludeTimetableBinding include14;
+
+  @NonNull
+  public final IncludeTimetableBinding include15;
+
+  @NonNull
+  public final IncludeTimetableBinding include16;
+
+  @NonNull
+  public final IncludeTimetableBinding include17;
+
+  @NonNull
+  public final IncludeTimetableBinding include18;
+
+  @NonNull
+  public final IncludeTimetableBinding include19;
+
+  @NonNull
+  public final IncludeTimetableBinding include2;
+
+  @NonNull
+  public final IncludeTimetableBinding include20;
+
+  @NonNull
+  public final IncludeTimetableBinding include3;
+
+  @NonNull
+  public final IncludeTimetableBinding include4;
+
+  @NonNull
+  public final IncludeTimetableBinding include5;
+
+  @NonNull
+  public final IncludeTimetableBinding include6;
+
+  @NonNull
+  public final IncludeTimetableBinding include7;
+
+  @NonNull
+  public final IncludeTimetableBinding include8;
+
+  @NonNull
+  public final IncludeTimetableBinding include9;
 
   @NonNull
   public final LinearLayout lnLayout0;
@@ -49,7 +183,25 @@ public final class ActivityTtBinding implements ViewBinding {
   public final LinearLayout lnLayout17;
 
   @NonNull
+  public final LinearLayout lnLayout18;
+
+  @NonNull
+  public final LinearLayout lnLayout19;
+
+  @NonNull
   public final LinearLayout lnLayout2;
+
+  @NonNull
+  public final LinearLayout lnLayout20;
+
+  @NonNull
+  public final LinearLayout lnLayout21;
+
+  @NonNull
+  public final LinearLayout lnLayout22;
+
+  @NonNull
+  public final LinearLayout lnLayout23;
 
   @NonNull
   public final LinearLayout lnLayout3;
@@ -72,17 +224,108 @@ public final class ActivityTtBinding implements ViewBinding {
   @NonNull
   public final LinearLayout lnLayout9;
 
-  private ActivityTtBinding(@NonNull LinearLayout rootView, @NonNull LinearLayout lnLayout0,
-      @NonNull LinearLayout lnLayout1, @NonNull LinearLayout lnLayout10,
-      @NonNull LinearLayout lnLayout11, @NonNull LinearLayout lnLayout12,
-      @NonNull LinearLayout lnLayout13, @NonNull LinearLayout lnLayout14,
-      @NonNull LinearLayout lnLayout15, @NonNull LinearLayout lnLayout16,
-      @NonNull LinearLayout lnLayout17, @NonNull LinearLayout lnLayout2,
-      @NonNull LinearLayout lnLayout3, @NonNull LinearLayout lnLayout4,
-      @NonNull LinearLayout lnLayout5, @NonNull LinearLayout lnLayout6,
-      @NonNull LinearLayout lnLayout7, @NonNull LinearLayout lnLayout8,
-      @NonNull LinearLayout lnLayout9) {
+  @NonNull
+  public final TableLayout table;
+
+  @NonNull
+  public final LinearLayout topbar;
+
+  @NonNull
+  public final TextView tvCode;
+
+  @NonNull
+  public final TextView tvLectureName;
+
+  @NonNull
+  public final TextView tvLink;
+
+  @NonNull
+  public final TextView tvRoomName;
+
+  @NonNull
+  public final TextView tvStartDate;
+
+  @NonNull
+  public final TextView tvTeacherName;
+
+  private ActivityTtBinding(@NonNull RelativeLayout rootView, @NonNull MaterialCardView cardDetail,
+      @NonNull MaterialCardView cardSchedule, @NonNull LinearLayout f1Data1,
+      @NonNull LinearLayout f1Data2, @NonNull LinearLayout f1Data3, @NonNull LinearLayout f1Data4,
+      @NonNull LinearLayout f1Data5, @NonNull LinearLayout f2Data1, @NonNull LinearLayout f2Data2,
+      @NonNull LinearLayout f2Data3, @NonNull LinearLayout f2Data4, @NonNull LinearLayout f2Data5,
+      @NonNull LinearLayout f3Data1, @NonNull LinearLayout f3Data2, @NonNull LinearLayout f3Data3,
+      @NonNull LinearLayout f3Data4, @NonNull LinearLayout f3Data5, @NonNull LinearLayout f4Data1,
+      @NonNull LinearLayout f4Data2, @NonNull LinearLayout f4Data3, @NonNull LinearLayout f4Data4,
+      @NonNull LinearLayout f4Data5, @NonNull ImageView imgvBack,
+      @NonNull IncludeTimetableBinding include1, @NonNull IncludeTimetableBinding include10,
+      @NonNull IncludeTimetableBinding include11, @NonNull IncludeTimetableBinding include12,
+      @NonNull IncludeTimetableBinding include13, @NonNull IncludeTimetableBinding include14,
+      @NonNull IncludeTimetableBinding include15, @NonNull IncludeTimetableBinding include16,
+      @NonNull IncludeTimetableBinding include17, @NonNull IncludeTimetableBinding include18,
+      @NonNull IncludeTimetableBinding include19, @NonNull IncludeTimetableBinding include2,
+      @NonNull IncludeTimetableBinding include20, @NonNull IncludeTimetableBinding include3,
+      @NonNull IncludeTimetableBinding include4, @NonNull IncludeTimetableBinding include5,
+      @NonNull IncludeTimetableBinding include6, @NonNull IncludeTimetableBinding include7,
+      @NonNull IncludeTimetableBinding include8, @NonNull IncludeTimetableBinding include9,
+      @NonNull LinearLayout lnLayout0, @NonNull LinearLayout lnLayout1,
+      @NonNull LinearLayout lnLayout10, @NonNull LinearLayout lnLayout11,
+      @NonNull LinearLayout lnLayout12, @NonNull LinearLayout lnLayout13,
+      @NonNull LinearLayout lnLayout14, @NonNull LinearLayout lnLayout15,
+      @NonNull LinearLayout lnLayout16, @NonNull LinearLayout lnLayout17,
+      @NonNull LinearLayout lnLayout18, @NonNull LinearLayout lnLayout19,
+      @NonNull LinearLayout lnLayout2, @NonNull LinearLayout lnLayout20,
+      @NonNull LinearLayout lnLayout21, @NonNull LinearLayout lnLayout22,
+      @NonNull LinearLayout lnLayout23, @NonNull LinearLayout lnLayout3,
+      @NonNull LinearLayout lnLayout4, @NonNull LinearLayout lnLayout5,
+      @NonNull LinearLayout lnLayout6, @NonNull LinearLayout lnLayout7,
+      @NonNull LinearLayout lnLayout8, @NonNull LinearLayout lnLayout9, @NonNull TableLayout table,
+      @NonNull LinearLayout topbar, @NonNull TextView tvCode, @NonNull TextView tvLectureName,
+      @NonNull TextView tvLink, @NonNull TextView tvRoomName, @NonNull TextView tvStartDate,
+      @NonNull TextView tvTeacherName) {
     this.rootView = rootView;
+    this.cardDetail = cardDetail;
+    this.cardSchedule = cardSchedule;
+    this.f1Data1 = f1Data1;
+    this.f1Data2 = f1Data2;
+    this.f1Data3 = f1Data3;
+    this.f1Data4 = f1Data4;
+    this.f1Data5 = f1Data5;
+    this.f2Data1 = f2Data1;
+    this.f2Data2 = f2Data2;
+    this.f2Data3 = f2Data3;
+    this.f2Data4 = f2Data4;
+    this.f2Data5 = f2Data5;
+    this.f3Data1 = f3Data1;
+    this.f3Data2 = f3Data2;
+    this.f3Data3 = f3Data3;
+    this.f3Data4 = f3Data4;
+    this.f3Data5 = f3Data5;
+    this.f4Data1 = f4Data1;
+    this.f4Data2 = f4Data2;
+    this.f4Data3 = f4Data3;
+    this.f4Data4 = f4Data4;
+    this.f4Data5 = f4Data5;
+    this.imgvBack = imgvBack;
+    this.include1 = include1;
+    this.include10 = include10;
+    this.include11 = include11;
+    this.include12 = include12;
+    this.include13 = include13;
+    this.include14 = include14;
+    this.include15 = include15;
+    this.include16 = include16;
+    this.include17 = include17;
+    this.include18 = include18;
+    this.include19 = include19;
+    this.include2 = include2;
+    this.include20 = include20;
+    this.include3 = include3;
+    this.include4 = include4;
+    this.include5 = include5;
+    this.include6 = include6;
+    this.include7 = include7;
+    this.include8 = include8;
+    this.include9 = include9;
     this.lnLayout0 = lnLayout0;
     this.lnLayout1 = lnLayout1;
     this.lnLayout10 = lnLayout10;
@@ -93,7 +336,13 @@ public final class ActivityTtBinding implements ViewBinding {
     this.lnLayout15 = lnLayout15;
     this.lnLayout16 = lnLayout16;
     this.lnLayout17 = lnLayout17;
+    this.lnLayout18 = lnLayout18;
+    this.lnLayout19 = lnLayout19;
     this.lnLayout2 = lnLayout2;
+    this.lnLayout20 = lnLayout20;
+    this.lnLayout21 = lnLayout21;
+    this.lnLayout22 = lnLayout22;
+    this.lnLayout23 = lnLayout23;
     this.lnLayout3 = lnLayout3;
     this.lnLayout4 = lnLayout4;
     this.lnLayout5 = lnLayout5;
@@ -101,11 +350,19 @@ public final class ActivityTtBinding implements ViewBinding {
     this.lnLayout7 = lnLayout7;
     this.lnLayout8 = lnLayout8;
     this.lnLayout9 = lnLayout9;
+    this.table = table;
+    this.topbar = topbar;
+    this.tvCode = tvCode;
+    this.tvLectureName = tvLectureName;
+    this.tvLink = tvLink;
+    this.tvRoomName = tvRoomName;
+    this.tvStartDate = tvStartDate;
+    this.tvTeacherName = tvTeacherName;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -130,6 +387,284 @@ public final class ActivityTtBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.card_detail;
+      MaterialCardView cardDetail = ViewBindings.findChildViewById(rootView, id);
+      if (cardDetail == null) {
+        break missingId;
+      }
+
+      id = R.id.card_schedule;
+      MaterialCardView cardSchedule = ViewBindings.findChildViewById(rootView, id);
+      if (cardSchedule == null) {
+        break missingId;
+      }
+
+      id = R.id.f1_data1;
+      LinearLayout f1Data1 = ViewBindings.findChildViewById(rootView, id);
+      if (f1Data1 == null) {
+        break missingId;
+      }
+
+      id = R.id.f1_data2;
+      LinearLayout f1Data2 = ViewBindings.findChildViewById(rootView, id);
+      if (f1Data2 == null) {
+        break missingId;
+      }
+
+      id = R.id.f1_data3;
+      LinearLayout f1Data3 = ViewBindings.findChildViewById(rootView, id);
+      if (f1Data3 == null) {
+        break missingId;
+      }
+
+      id = R.id.f1_data4;
+      LinearLayout f1Data4 = ViewBindings.findChildViewById(rootView, id);
+      if (f1Data4 == null) {
+        break missingId;
+      }
+
+      id = R.id.f1_data5;
+      LinearLayout f1Data5 = ViewBindings.findChildViewById(rootView, id);
+      if (f1Data5 == null) {
+        break missingId;
+      }
+
+      id = R.id.f2_data1;
+      LinearLayout f2Data1 = ViewBindings.findChildViewById(rootView, id);
+      if (f2Data1 == null) {
+        break missingId;
+      }
+
+      id = R.id.f2_data2;
+      LinearLayout f2Data2 = ViewBindings.findChildViewById(rootView, id);
+      if (f2Data2 == null) {
+        break missingId;
+      }
+
+      id = R.id.f2_data3;
+      LinearLayout f2Data3 = ViewBindings.findChildViewById(rootView, id);
+      if (f2Data3 == null) {
+        break missingId;
+      }
+
+      id = R.id.f2_data4;
+      LinearLayout f2Data4 = ViewBindings.findChildViewById(rootView, id);
+      if (f2Data4 == null) {
+        break missingId;
+      }
+
+      id = R.id.f2_data5;
+      LinearLayout f2Data5 = ViewBindings.findChildViewById(rootView, id);
+      if (f2Data5 == null) {
+        break missingId;
+      }
+
+      id = R.id.f3_data1;
+      LinearLayout f3Data1 = ViewBindings.findChildViewById(rootView, id);
+      if (f3Data1 == null) {
+        break missingId;
+      }
+
+      id = R.id.f3_data2;
+      LinearLayout f3Data2 = ViewBindings.findChildViewById(rootView, id);
+      if (f3Data2 == null) {
+        break missingId;
+      }
+
+      id = R.id.f3_data3;
+      LinearLayout f3Data3 = ViewBindings.findChildViewById(rootView, id);
+      if (f3Data3 == null) {
+        break missingId;
+      }
+
+      id = R.id.f3_data4;
+      LinearLayout f3Data4 = ViewBindings.findChildViewById(rootView, id);
+      if (f3Data4 == null) {
+        break missingId;
+      }
+
+      id = R.id.f3_data5;
+      LinearLayout f3Data5 = ViewBindings.findChildViewById(rootView, id);
+      if (f3Data5 == null) {
+        break missingId;
+      }
+
+      id = R.id.f4_data1;
+      LinearLayout f4Data1 = ViewBindings.findChildViewById(rootView, id);
+      if (f4Data1 == null) {
+        break missingId;
+      }
+
+      id = R.id.f4_data2;
+      LinearLayout f4Data2 = ViewBindings.findChildViewById(rootView, id);
+      if (f4Data2 == null) {
+        break missingId;
+      }
+
+      id = R.id.f4_data3;
+      LinearLayout f4Data3 = ViewBindings.findChildViewById(rootView, id);
+      if (f4Data3 == null) {
+        break missingId;
+      }
+
+      id = R.id.f4_data4;
+      LinearLayout f4Data4 = ViewBindings.findChildViewById(rootView, id);
+      if (f4Data4 == null) {
+        break missingId;
+      }
+
+      id = R.id.f4_data5;
+      LinearLayout f4Data5 = ViewBindings.findChildViewById(rootView, id);
+      if (f4Data5 == null) {
+        break missingId;
+      }
+
+      id = R.id.imgv_back;
+      ImageView imgvBack = ViewBindings.findChildViewById(rootView, id);
+      if (imgvBack == null) {
+        break missingId;
+      }
+
+      id = R.id.include1;
+      View include1 = ViewBindings.findChildViewById(rootView, id);
+      if (include1 == null) {
+        break missingId;
+      }
+      IncludeTimetableBinding binding_include1 = IncludeTimetableBinding.bind(include1);
+
+      id = R.id.include10;
+      View include10 = ViewBindings.findChildViewById(rootView, id);
+      if (include10 == null) {
+        break missingId;
+      }
+      IncludeTimetableBinding binding_include10 = IncludeTimetableBinding.bind(include10);
+
+      id = R.id.include11;
+      View include11 = ViewBindings.findChildViewById(rootView, id);
+      if (include11 == null) {
+        break missingId;
+      }
+      IncludeTimetableBinding binding_include11 = IncludeTimetableBinding.bind(include11);
+
+      id = R.id.include12;
+      View include12 = ViewBindings.findChildViewById(rootView, id);
+      if (include12 == null) {
+        break missingId;
+      }
+      IncludeTimetableBinding binding_include12 = IncludeTimetableBinding.bind(include12);
+
+      id = R.id.include13;
+      View include13 = ViewBindings.findChildViewById(rootView, id);
+      if (include13 == null) {
+        break missingId;
+      }
+      IncludeTimetableBinding binding_include13 = IncludeTimetableBinding.bind(include13);
+
+      id = R.id.include14;
+      View include14 = ViewBindings.findChildViewById(rootView, id);
+      if (include14 == null) {
+        break missingId;
+      }
+      IncludeTimetableBinding binding_include14 = IncludeTimetableBinding.bind(include14);
+
+      id = R.id.include15;
+      View include15 = ViewBindings.findChildViewById(rootView, id);
+      if (include15 == null) {
+        break missingId;
+      }
+      IncludeTimetableBinding binding_include15 = IncludeTimetableBinding.bind(include15);
+
+      id = R.id.include16;
+      View include16 = ViewBindings.findChildViewById(rootView, id);
+      if (include16 == null) {
+        break missingId;
+      }
+      IncludeTimetableBinding binding_include16 = IncludeTimetableBinding.bind(include16);
+
+      id = R.id.include17;
+      View include17 = ViewBindings.findChildViewById(rootView, id);
+      if (include17 == null) {
+        break missingId;
+      }
+      IncludeTimetableBinding binding_include17 = IncludeTimetableBinding.bind(include17);
+
+      id = R.id.include18;
+      View include18 = ViewBindings.findChildViewById(rootView, id);
+      if (include18 == null) {
+        break missingId;
+      }
+      IncludeTimetableBinding binding_include18 = IncludeTimetableBinding.bind(include18);
+
+      id = R.id.include19;
+      View include19 = ViewBindings.findChildViewById(rootView, id);
+      if (include19 == null) {
+        break missingId;
+      }
+      IncludeTimetableBinding binding_include19 = IncludeTimetableBinding.bind(include19);
+
+      id = R.id.include2;
+      View include2 = ViewBindings.findChildViewById(rootView, id);
+      if (include2 == null) {
+        break missingId;
+      }
+      IncludeTimetableBinding binding_include2 = IncludeTimetableBinding.bind(include2);
+
+      id = R.id.include20;
+      View include20 = ViewBindings.findChildViewById(rootView, id);
+      if (include20 == null) {
+        break missingId;
+      }
+      IncludeTimetableBinding binding_include20 = IncludeTimetableBinding.bind(include20);
+
+      id = R.id.include3;
+      View include3 = ViewBindings.findChildViewById(rootView, id);
+      if (include3 == null) {
+        break missingId;
+      }
+      IncludeTimetableBinding binding_include3 = IncludeTimetableBinding.bind(include3);
+
+      id = R.id.include4;
+      View include4 = ViewBindings.findChildViewById(rootView, id);
+      if (include4 == null) {
+        break missingId;
+      }
+      IncludeTimetableBinding binding_include4 = IncludeTimetableBinding.bind(include4);
+
+      id = R.id.include5;
+      View include5 = ViewBindings.findChildViewById(rootView, id);
+      if (include5 == null) {
+        break missingId;
+      }
+      IncludeTimetableBinding binding_include5 = IncludeTimetableBinding.bind(include5);
+
+      id = R.id.include6;
+      View include6 = ViewBindings.findChildViewById(rootView, id);
+      if (include6 == null) {
+        break missingId;
+      }
+      IncludeTimetableBinding binding_include6 = IncludeTimetableBinding.bind(include6);
+
+      id = R.id.include7;
+      View include7 = ViewBindings.findChildViewById(rootView, id);
+      if (include7 == null) {
+        break missingId;
+      }
+      IncludeTimetableBinding binding_include7 = IncludeTimetableBinding.bind(include7);
+
+      id = R.id.include8;
+      View include8 = ViewBindings.findChildViewById(rootView, id);
+      if (include8 == null) {
+        break missingId;
+      }
+      IncludeTimetableBinding binding_include8 = IncludeTimetableBinding.bind(include8);
+
+      id = R.id.include9;
+      View include9 = ViewBindings.findChildViewById(rootView, id);
+      if (include9 == null) {
+        break missingId;
+      }
+      IncludeTimetableBinding binding_include9 = IncludeTimetableBinding.bind(include9);
+
       id = R.id.ln_layout0;
       LinearLayout lnLayout0 = ViewBindings.findChildViewById(rootView, id);
       if (lnLayout0 == null) {
@@ -190,9 +725,45 @@ public final class ActivityTtBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.ln_layout18;
+      LinearLayout lnLayout18 = ViewBindings.findChildViewById(rootView, id);
+      if (lnLayout18 == null) {
+        break missingId;
+      }
+
+      id = R.id.ln_layout19;
+      LinearLayout lnLayout19 = ViewBindings.findChildViewById(rootView, id);
+      if (lnLayout19 == null) {
+        break missingId;
+      }
+
       id = R.id.ln_layout2;
       LinearLayout lnLayout2 = ViewBindings.findChildViewById(rootView, id);
       if (lnLayout2 == null) {
+        break missingId;
+      }
+
+      id = R.id.ln_layout20;
+      LinearLayout lnLayout20 = ViewBindings.findChildViewById(rootView, id);
+      if (lnLayout20 == null) {
+        break missingId;
+      }
+
+      id = R.id.ln_layout21;
+      LinearLayout lnLayout21 = ViewBindings.findChildViewById(rootView, id);
+      if (lnLayout21 == null) {
+        break missingId;
+      }
+
+      id = R.id.ln_layout22;
+      LinearLayout lnLayout22 = ViewBindings.findChildViewById(rootView, id);
+      if (lnLayout22 == null) {
+        break missingId;
+      }
+
+      id = R.id.ln_layout23;
+      LinearLayout lnLayout23 = ViewBindings.findChildViewById(rootView, id);
+      if (lnLayout23 == null) {
         break missingId;
       }
 
@@ -238,9 +809,66 @@ public final class ActivityTtBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityTtBinding((LinearLayout) rootView, lnLayout0, lnLayout1, lnLayout10,
+      id = R.id.table;
+      TableLayout table = ViewBindings.findChildViewById(rootView, id);
+      if (table == null) {
+        break missingId;
+      }
+
+      id = R.id.topbar;
+      LinearLayout topbar = ViewBindings.findChildViewById(rootView, id);
+      if (topbar == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_code;
+      TextView tvCode = ViewBindings.findChildViewById(rootView, id);
+      if (tvCode == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_lecture_name;
+      TextView tvLectureName = ViewBindings.findChildViewById(rootView, id);
+      if (tvLectureName == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_link;
+      TextView tvLink = ViewBindings.findChildViewById(rootView, id);
+      if (tvLink == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_room_name;
+      TextView tvRoomName = ViewBindings.findChildViewById(rootView, id);
+      if (tvRoomName == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_start_date;
+      TextView tvStartDate = ViewBindings.findChildViewById(rootView, id);
+      if (tvStartDate == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_teacher_name;
+      TextView tvTeacherName = ViewBindings.findChildViewById(rootView, id);
+      if (tvTeacherName == null) {
+        break missingId;
+      }
+
+      return new ActivityTtBinding((RelativeLayout) rootView, cardDetail, cardSchedule, f1Data1,
+          f1Data2, f1Data3, f1Data4, f1Data5, f2Data1, f2Data2, f2Data3, f2Data4, f2Data5, f3Data1,
+          f3Data2, f3Data3, f3Data4, f3Data5, f4Data1, f4Data2, f4Data3, f4Data4, f4Data5, imgvBack,
+          binding_include1, binding_include10, binding_include11, binding_include12,
+          binding_include13, binding_include14, binding_include15, binding_include16,
+          binding_include17, binding_include18, binding_include19, binding_include2,
+          binding_include20, binding_include3, binding_include4, binding_include5, binding_include6,
+          binding_include7, binding_include8, binding_include9, lnLayout0, lnLayout1, lnLayout10,
           lnLayout11, lnLayout12, lnLayout13, lnLayout14, lnLayout15, lnLayout16, lnLayout17,
-          lnLayout2, lnLayout3, lnLayout4, lnLayout5, lnLayout6, lnLayout7, lnLayout8, lnLayout9);
+          lnLayout18, lnLayout19, lnLayout2, lnLayout20, lnLayout21, lnLayout22, lnLayout23,
+          lnLayout3, lnLayout4, lnLayout5, lnLayout6, lnLayout7, lnLayout8, lnLayout9, table,
+          topbar, tvCode, tvLectureName, tvLink, tvRoomName, tvStartDate, tvTeacherName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

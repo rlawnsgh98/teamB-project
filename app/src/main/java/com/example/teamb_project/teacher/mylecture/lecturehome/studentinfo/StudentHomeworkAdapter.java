@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -43,10 +44,11 @@ public class StudentHomeworkAdapter extends RecyclerView.Adapter<StudentHomework
         h.tv_homework_duedate.setText(list.get(idx).getDuedate().toString());
         if(list.get(idx).getState()==1){
             h.tv_state.setText("제출");
-            h.tv_state.setTextColor(Color.parseColor("#FF1AFF00"));
+            h.tv_state.setTextColor(Color.parseColor("#0D2135"));
         }else if(list.get(idx).getState()==0){
             h.tv_state.setText("미제출");
             h.tv_state.setTextColor(Color.parseColor("#ff0000"));
+
         }
 
     }

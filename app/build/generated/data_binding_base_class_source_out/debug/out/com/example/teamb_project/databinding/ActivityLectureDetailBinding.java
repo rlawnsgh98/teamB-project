@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
@@ -19,28 +20,37 @@ import java.lang.String;
 
 public final class ActivityLectureDetailBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final RelativeLayout rootView;
 
   @NonNull
   public final FrameLayout container;
 
   @NonNull
-  public final ImageView ivBack;
+  public final ImageView imgvBack;
 
   @NonNull
   public final TabLayout tabLayout;
 
-  private ActivityLectureDetailBinding(@NonNull LinearLayout rootView,
-      @NonNull FrameLayout container, @NonNull ImageView ivBack, @NonNull TabLayout tabLayout) {
+  @NonNull
+  public final LinearLayout topbar;
+
+  @NonNull
+  public final LinearLayout topnav;
+
+  private ActivityLectureDetailBinding(@NonNull RelativeLayout rootView,
+      @NonNull FrameLayout container, @NonNull ImageView imgvBack, @NonNull TabLayout tabLayout,
+      @NonNull LinearLayout topbar, @NonNull LinearLayout topnav) {
     this.rootView = rootView;
     this.container = container;
-    this.ivBack = ivBack;
+    this.imgvBack = imgvBack;
     this.tabLayout = tabLayout;
+    this.topbar = topbar;
+    this.topnav = topnav;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -71,9 +81,9 @@ public final class ActivityLectureDetailBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.iv_back;
-      ImageView ivBack = ViewBindings.findChildViewById(rootView, id);
-      if (ivBack == null) {
+      id = R.id.imgv_back;
+      ImageView imgvBack = ViewBindings.findChildViewById(rootView, id);
+      if (imgvBack == null) {
         break missingId;
       }
 
@@ -83,8 +93,20 @@ public final class ActivityLectureDetailBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityLectureDetailBinding((LinearLayout) rootView, container, ivBack,
-          tabLayout);
+      id = R.id.topbar;
+      LinearLayout topbar = ViewBindings.findChildViewById(rootView, id);
+      if (topbar == null) {
+        break missingId;
+      }
+
+      id = R.id.topnav;
+      LinearLayout topnav = ViewBindings.findChildViewById(rootView, id);
+      if (topnav == null) {
+        break missingId;
+      }
+
+      return new ActivityLectureDetailBinding((RelativeLayout) rootView, container, imgvBack,
+          tabLayout, topbar, topnav);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

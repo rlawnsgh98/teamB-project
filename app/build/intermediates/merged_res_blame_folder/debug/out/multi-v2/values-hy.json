@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.teamb_project.app-mergeDebugResources-42:/values-hy/values-hy.xml",
+            "outputFile": "com.example.teamb_project.app-mergeDebugResources-44:/values-hy/values-hy.xml",
             "map": [
                 {
                     "source": "C:\\Users\\ym\\.gradle\\caches\\transforms-3\\e745cae1e9acd85313cc72fb91c236e7\\transformed\\jetified-exoplayer-ui-2.15.0\\res\\values-hy\\values-hy.xml",

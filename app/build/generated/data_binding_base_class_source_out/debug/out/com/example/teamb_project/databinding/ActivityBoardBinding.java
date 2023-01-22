@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -22,7 +23,7 @@ import java.lang.String;
 
 public final class ActivityBoardBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final RelativeLayout rootView;
 
   @NonNull
   public final MaterialCardView cardGoTop;
@@ -51,10 +52,14 @@ public final class ActivityBoardBinding implements ViewBinding {
   @NonNull
   public final Spinner spinner;
 
-  private ActivityBoardBinding(@NonNull LinearLayout rootView, @NonNull MaterialCardView cardGoTop,
-      @NonNull EditText edtSearch, @NonNull ImageView ivBack, @NonNull ImageView ivSearch,
-      @NonNull ImageView ivWrite, @NonNull LinearLayout linMore, @NonNull RecyclerView recvBoard,
-      @NonNull NestedScrollView scrBoard, @NonNull Spinner spinner) {
+  @NonNull
+  public final LinearLayout topbar;
+
+  private ActivityBoardBinding(@NonNull RelativeLayout rootView,
+      @NonNull MaterialCardView cardGoTop, @NonNull EditText edtSearch, @NonNull ImageView ivBack,
+      @NonNull ImageView ivSearch, @NonNull ImageView ivWrite, @NonNull LinearLayout linMore,
+      @NonNull RecyclerView recvBoard, @NonNull NestedScrollView scrBoard, @NonNull Spinner spinner,
+      @NonNull LinearLayout topbar) {
     this.rootView = rootView;
     this.cardGoTop = cardGoTop;
     this.edtSearch = edtSearch;
@@ -65,11 +70,12 @@ public final class ActivityBoardBinding implements ViewBinding {
     this.recvBoard = recvBoard;
     this.scrBoard = scrBoard;
     this.spinner = spinner;
+    this.topbar = topbar;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -148,8 +154,14 @@ public final class ActivityBoardBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityBoardBinding((LinearLayout) rootView, cardGoTop, edtSearch, ivBack,
-          ivSearch, ivWrite, linMore, recvBoard, scrBoard, spinner);
+      id = R.id.topbar;
+      LinearLayout topbar = ViewBindings.findChildViewById(rootView, id);
+      if (topbar == null) {
+        break missingId;
+      }
+
+      return new ActivityBoardBinding((RelativeLayout) rootView, cardGoTop, edtSearch, ivBack,
+          ivSearch, ivWrite, linMore, recvBoard, scrBoard, spinner, topbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

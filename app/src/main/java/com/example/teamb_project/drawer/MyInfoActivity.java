@@ -38,6 +38,7 @@ import com.example.conn.CommonMethod;
 import com.example.teamb_project.LoginActivity;
 import com.example.teamb_project.R;
 import com.example.teamb_project.common.Common;
+import com.example.teamb_project.databinding.ActivityMyInfoBinding;
 import com.example.teamb_project.student.StudentHomeActivity;
 import com.example.teamb_project.teacher.TeacherHomeActivity;
 import com.example.teamb_project.vo.MemberVO;
@@ -49,24 +50,16 @@ import java.util.Calendar;
 import java.util.Locale;
 import java.util.regex.Pattern;
 
-public class MyInfoActivity extends AppCompatActivity {
-    Toolbar top_toolbar;
-    TextView member_code_data,id_data,pw_data
-            ,member_name_data_tv,email_data_tv,birth_data_tv,phone_data_tv
-            ,type_data,modify_btn,cancel_btn,confirm_btn;
-    EditText member_name_data_et,email_data_et,birth_data_et,phone_data_et;
-    LinearLayout modify_ln1,modify_ln2,modify_ln3,modify_ln4;
-    RadioGroup radioGroup;
-    RadioButton male_rd, female_rd;
-    String modify_gender_info ="남";
+public class MyInfoActivity extends AppCompatActivity  implements  View.OnFocusChangeListener{
 
-    ImageView profile_image_0, profile_image_1;
+    ActivityMyInfoBinding b;
+
     Dialog popup_dialog;
     String img_path;
     public final int GALLERY_CODE = 1000;
-    //FILE_CODE = 1001
     public final int CAMERA_CODE = 1002;
-
+    MemberVO my_info;
+    MemberVO vo = new MemberVO();
     Calendar myCalendar = Calendar.getInstance();
     DatePickerDialog.OnDateSetListener setDate = new DatePickerDialog.OnDateSetListener() {
         @Override
@@ -77,197 +70,50 @@ public class MyInfoActivity extends AppCompatActivity {
             updateDate();
         }
     };
-    Common common = new Common();
-
     Pattern emailPatttern = Patterns.EMAIL_ADDRESS;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_info);
-        getSupportActionBar().hide();
-
-        top_toolbar = findViewById(R.id.top_toolbar);
-        member_code_data = findViewById(R.id.member_code_data);
-        id_data = findViewById(R.id.id_data);
-        pw_data = findViewById(R.id.pw_data);
-
-        member_name_data_tv = findViewById(R.id.member_name_data_tv);
-        member_name_data_et = findViewById(R.id.member_name_data_et);
-
-        radioGroup = findViewById(R.id.radioGroup);
-        male_rd = findViewById(R.id.male_rd);
-        female_rd = findViewById(R.id.female_rd);
-
-        email_data_tv = findViewById(R.id.email_data_tv);
-        email_data_et = findViewById(R.id.email_data_et);
-
-        birth_data_tv = findViewById(R.id.birth_data_tv);
-        birth_data_et = findViewById(R.id.birth_data_et);
-
-        phone_data_tv = findViewById(R.id.phone_data_tv);
-        phone_data_et = findViewById(R.id.phone_data_et);
-
-        type_data = findViewById(R.id.type_data);
-        modify_btn = findViewById(R.id.modify_btn);
-        cancel_btn = findViewById(R.id.cancel_btn);
-        confirm_btn = findViewById(R.id.confirm_btn);
-
-        modify_ln1 = findViewById(R.id.modify_ln1);
-        modify_ln2 = findViewById(R.id.modify_ln2);
-        modify_ln3 = findViewById(R.id.modify_ln3);
-        modify_ln4 = findViewById(R.id.modify_ln4);
-
-        profile_image_0 = findViewById(R.id.profile_image_0);
-        profile_image_1 = findViewById(R.id.profile_image_1);
+        b = ActivityMyInfoBinding.inflate(getLayoutInflater());
+        setContentView(b.getRoot());
 
         // 다이얼로그 생성
         popup_dialog = new Dialog(MyInfoActivity.this);
         popup_dialog.setContentView(R.layout.popup_dialog);
 
-        // 상단바
-        top_toolbar.setTitle("나의 정보");
+        checkDangerousPermissions();
 
-        // 상단바 뒤로가기 버튼
-        top_toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
+        //로그인 정보 가져오기
+        my_info = Common.loginInfo;
+
+        // 저장된 프로필 이미지 붙이기
+        if(my_info.getProfilepath()==null){
+            Glide.with(MyInfoActivity.this).load(R.drawable.user3).into(b.imgvProfile);
+        }else{
+            Glide.with(MyInfoActivity.this).load(Common.loginInfo.getProfilepath()).into(b.imgvProfile);
+        }
+        //뒤로가기
+        b.imgvBack.setOnClickListener(v -> {
+            onBackPressed();
+        });
+
+        setMemberInfo();
+
+
+
+
+
+        b.rdoGender.setOnCheckedChangeListener((group, checkedId) -> {
+            if(checkedId==R.id.male_rd){
+                vo.setGender("남");
+            }else{
+                vo.setGender("여");
             }
         });
 
 
-        // 회원 정보 불러오기
-        new CommonMethod().setParams("id",common.getLoginInfo().getId())
-            .sendPost("my_info.mj", new CommonMethod.CallBackResult() {
-                @Override
-                public void result(boolean isResult, String data) {
-                    MemberVO my_info = new Gson().fromJson(data, MemberVO.class);
-
-                    // 저장된 프로필 이미지 붙이기
-                    Glide.with(MyInfoActivity.this).load(Common.loginInfo.getProfilepath()).into(profile_image_0);
-
-                    member_code_data.setText(my_info.getMember_code());
-                    id_data.setText(my_info.getId());
-                    pw_data.setText(my_info.getPw());
-
-                    member_name_data_tv.setText(my_info.getMember_name());
-
-                    if(my_info.getGender().equals("남")){
-                        male_rd.setChecked(true);
-                        male_rd.setTextColor(Color.parseColor("#000000"));
-                        male_rd.setButtonTintList(ColorStateList.valueOf(Color.parseColor("#47628D")));
-                    }else{
-                        female_rd.setChecked(true);
-                        female_rd.setTextColor(Color.parseColor("#000000"));
-                        female_rd.setButtonTintList(ColorStateList.valueOf(Color.parseColor("#FF5D82")));
-                    }
-                    
-                    isNullTextView(my_info.getEmail() , email_data_tv);
-                    isNullTextView(my_info.getPhone() , phone_data_tv);
-
-                    if(my_info.getBirth()!= null && my_info.getBirth().trim().length() > 1 ){
-                        isNullTextView(my_info.getBirth().substring(0,10) , birth_data_tv);
-                    }else if(my_info.getBirth()== null){
-                        birth_data_tv.setText("정보가 없습니다.");
-                    }
-
-                    type_data.setText(my_info.getType());
-                }
-            });
-
-        // 수정 버튼
-        modify_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                modify_ln1.setVisibility(View.GONE);
-                modify_ln2.setVisibility(View.VISIBLE);
-
-                // 회원 이름 정보 텍스트 뷰를 에디트 뷰로 교체
-                member_name_data_tv.setVisibility(View.GONE);
-                member_name_data_et.setVisibility(View.VISIBLE);
-                member_name_data_et.setText(member_name_data_tv.getText());
-                member_name_data_et.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-                    @Override
-                    public void onFocusChange(View v, boolean hasFocus) {
-                        if(hasFocus){
-                            member_name_data_et.setText("");
-                            member_name_data_et.setHint(member_name_data_tv.getText());
-                        }
-                    }
-                });
-
-                // 회원 성별 정보 텍스트 뷰를 에디트 뷰로 교체
-                male_rd.setEnabled(true);
-                female_rd.setEnabled(true);
-                radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-                    @Override
-                    public void onCheckedChanged(RadioGroup group, int checkedId) {
-                        if(checkedId == R.id.male_rd){
-                            modify_gender_info = male_rd.getText().toString();
-                        }else if(checkedId == R.id.female_rd){
-                            modify_gender_info = female_rd.getText().toString();
-                        }
-                    }
-                });
-
-                // 회원 이메일 정보 텍스트 뷰를 에디트 뷰로 교체
-                email_data_tv.setVisibility(View.GONE);
-                email_data_et.setVisibility(View.VISIBLE);
-                email_data_et.setText(email_data_tv.getText());
-                email_data_et.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-                    @Override
-                    public void onFocusChange(View v, boolean hasFocus) {
-                        if(hasFocus){
-                            if(! email_data_et.getText().toString().isEmpty()){
-                                email_data_et.setText("");
-                                email_data_et.setHint(email_data_tv.getText());
-                                if(!emailPatttern.matcher(email_data_et.getText().toString()).matches()){
-                                    Toast.makeText(MyInfoActivity.this, "이메일형식이 올바르지 않습니다.", Toast.LENGTH_SHORT).show();
-                                    return;
-                                }
-                            }
-                        }
-                    }
-                });
-
-                // 회원 생일 정보 텍스트 뷰를 DatePickerDialog 로 교체
-                birth_data_tv.setVisibility(View.GONE);
-                birth_data_et.setVisibility(View.VISIBLE);
-                if(birth_data_et.getText() == null){
-                    birth_data_et.setHint("yyyy-MM-dd");
-                }else{
-                    birth_data_et.setText(birth_data_tv.getText());
-                }
-
-                birth_data_et.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        new DatePickerDialog(MyInfoActivity.this,
-                                setDate, myCalendar.get(Calendar.YEAR), myCalendar.get(Calendar.MONTH), myCalendar.get(Calendar.DAY_OF_MONTH)).show();
-                    }
-                });
-
-                // 회원 전화번호 정보 텍스트 뷰를 에디트 뷰로 교체
-                phone_data_tv.setVisibility(View.GONE);
-                phone_data_et.setVisibility(View.VISIBLE);
-                phone_data_et.setText(phone_data_tv.getText());
-                phone_data_et.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-                    @Override
-                    public void onFocusChange(View v, boolean hasFocus) {
-                        if(hasFocus){
-                            phone_data_et.setText("");
-                            phone_data_et.setHint(phone_data_tv.getText());
-                        }
-                    }
-                });
-
-                // 프로필 이미지 정보 레이아웃 교체
-                modify_ln3.setVisibility(View.GONE);
-                modify_ln4.setVisibility(View.VISIBLE);
-
-                // 프로필 이미지 클릭 시 이미지 변경 가능하게
-                profile_image_1.setOnClickListener(new View.OnClickListener() {
+        b.imgvProfile.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         popup_dialog.show();
@@ -293,74 +139,27 @@ public class MyInfoActivity extends AppCompatActivity {
                         });
                     }
                 });
-                checkDangerousPermissions();
-            }
-        });
 
-        // 취소 버튼
-        cancel_btn.setOnClickListener(new View.OnClickListener() {
+
+        b.tvBirth.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                // 레이아웃 교체 : 버튼, 프로필 이미지
-                modify_ln1.setVisibility(View.VISIBLE);
-                modify_ln2.setVisibility(View.GONE);
-                modify_ln3.setVisibility(View.VISIBLE);
-                modify_ln4.setVisibility(View.GONE);
-
-                // 회원 이름 정보
-                member_name_data_tv.setVisibility(View.VISIBLE);
-                member_name_data_et.setVisibility(View.GONE);
-
-                // 회원 이메일 정보
-                email_data_tv.setVisibility(View.VISIBLE);
-                email_data_et.setVisibility(View.GONE);
-
-                // 회원 생일 정보
-                birth_data_tv.setVisibility(View.VISIBLE);
-                birth_data_et.setVisibility(View.GONE);
-
-                // 회원 전화번호 정보
-                phone_data_tv.setVisibility(View.VISIBLE);
-                phone_data_et.setVisibility(View.GONE);
+            public void onClick(View view) {
+                new DatePickerDialog(MyInfoActivity.this,
+                        setDate, myCalendar.get(Calendar.YEAR), myCalendar.get(Calendar.MONTH), myCalendar.get(Calendar.DAY_OF_MONTH)).show();
             }
         });
 
         // 저장 버튼
-        confirm_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        b.confirmBtn.setOnClickListener(v->{
 
-                MemberVO vo = new MemberVO();
                 vo.setId(Common.loginInfo.getId());
-                vo.setMember_name(member_name_data_et.getText().toString());
-                vo.setGender(modify_gender_info);
 
-                if(email_data_et.getText().toString().equals("정보가 없습니다.")){
-                    vo.setEmail("");
-                }else{
-                    if(!emailPatttern.matcher(email_data_et.getText().toString()).matches()){
-                        Toast.makeText(MyInfoActivity.this, "이메일형식이 올바르지 않습니다.", Toast.LENGTH_SHORT).show();
-                        return;
-                    }else{
-                        vo.setEmail(email_data_et.getText().toString());
-                    }
-                }
-                if(birth_data_et.getText().toString().equals("정보가 없습니다.")){
-                    vo.setBirth("");
-                }else{
-                    vo.setBirth(birth_data_et.getText().toString());
-                }
-                if(phone_data_et.getText().toString().equals("정보가 없습니다.")){
-                    vo.setPhone("");
-                }else{
-                    vo.setPhone(phone_data_et.getText().toString());
-                }
-
-                if(img_path == null){
-                    vo.setProfilepath(common.getLoginInfo().getProfilepath());
-                }else {
-                    vo.setProfilepath(img_path);
-                };
+                vo.setMember_name(isNullVoValue(b.edtName.getText().toString() , Common.loginInfo.getMember_name() ));
+                vo.setEmail(isNullVoValue(b.edtEmail.getText().toString() , Common.loginInfo.getEmail() ));
+                vo.setBirth(isNullVoValue(b.tvBirth.getText().toString()  , Common.loginInfo.getBirth() ));
+                vo.setPhone(isNullVoValue(b.edtPhone.getText().toString() , Common.loginInfo.getPhone() ));
+                vo.setGender(isNullVoValue(vo.getGender() , Common.loginInfo.getGender() ));
+                vo.setProfilepath(img_path);
 
                 new CommonMethod().setParams("param",vo).sendPostFile("modify_my_info.mj", img_path, (isResult, data) -> {
                     if(isResult) {
@@ -376,9 +175,37 @@ public class MyInfoActivity extends AppCompatActivity {
                     }
                 });
 
-            }
+            });
+
+        b.cancelBtn.setOnClickListener(v->{
+            finish();
         });
     }//onCreate()
+
+    private void setMemberInfo() {
+
+        b.tvId.setText(my_info.getId());
+        b.edtName.setText(my_info.getMember_name());
+
+        if(my_info.getGender().equals("남")){
+            RadioButton btn1 = (RadioButton) b.rdoGender.getChildAt(0);
+            btn1.setChecked(true);
+        }else{
+            RadioButton btn2 = (RadioButton) b.rdoGender.getChildAt(1);
+            btn2.setChecked(true);
+        }
+
+        isNullTextView(my_info.getEmail() , b.edtEmail);
+        isNullTextView(my_info.getPhone() , b.edtPhone);
+        isNullTextView(my_info.getBirth().substring(0,10) , b.tvBirth);
+        if(my_info.getType().equals("STUD")){
+            b.tvType.setText("학생");
+        }else{
+            b.tvType.setText("강사");
+        }
+
+
+    }
 
     private void checkDangerousPermissions() {
         String[] permissions = {
@@ -451,11 +278,11 @@ public class MyInfoActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == CAMERA_CODE && resultCode == RESULT_OK){
-            Glide.with(this).load(img_path).into(profile_image_1);
-            profile_image_1.setScaleType(ImageView.ScaleType.FIT_XY);
+            Glide.with(this).load(img_path).into(b.imgvProfile);
+            b.imgvProfile.setScaleType(ImageView.ScaleType.FIT_XY);
         }else if(requestCode == GALLERY_CODE && resultCode == RESULT_OK){
             img_path = new CommonMethod().getRealPath(data.getData(),this, 1000);
-            Glide.with(this).load(img_path).into(profile_image_1);
+            Glide.with(this).load(img_path).into(b.imgvProfile);
         }
     }//onActivityResult()
     public void updateDate(){
@@ -464,7 +291,7 @@ public class MyInfoActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             simpleDateFormat = new SimpleDateFormat(format, Locale.KOREA);
         }
-        birth_data_et.setText(simpleDateFormat.format(myCalendar.getTime()));
+        b.tvBirth.setText(simpleDateFormat.format(myCalendar.getTime()));
     }//updateDate()
 
     public void isNullTextView(String value , TextView textView){
@@ -473,8 +300,38 @@ public class MyInfoActivity extends AppCompatActivity {
         }else{
             textView.setText(value);
         }
+    }
 
+    public String isNullVoValue(String value , String rtnValue){
+        if(value == null || value.trim().length() < 1){
+           return rtnValue;
+        }else{
+            return value;
+        }
     }
 
 
+    @Override
+    public void onFocusChange(View v, boolean hasFocus) {
+
+
+
+        if(v.getId() == R.id.email_et){
+            if(hasFocus){
+                if(!b.edtEmail.getText().toString().isEmpty()){
+                    b.edtEmail.setText("");
+                    b.edtEmail.setHint(b.edtEmail.getText());
+                    if(!emailPatttern.matcher(b.edtEmail.getText().toString()).matches()){
+                        Toast.makeText(MyInfoActivity.this, "이메일형식이 올바르지 않습니다.", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+        }// ??
+//        else if(v.getId() == R.id.edt_name){
+//            if(hasFocus){
+//                b.edtName.setText("");
+//                b.edtName.setHint(b.edtName.getText());
+//            }
+//        }
+    }
 }

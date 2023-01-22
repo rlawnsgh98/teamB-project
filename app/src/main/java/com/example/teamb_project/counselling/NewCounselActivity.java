@@ -34,7 +34,6 @@ public class NewCounselActivity extends AppCompatActivity implements View.OnClic
         super.onCreate(savedInstanceState);
         b = ActivityNewCounselBinding.inflate(getLayoutInflater());
         setContentView(b.getRoot());
-        getSupportActionBar().hide();
 
         //스피너에 들어갈 강사이름 목록 조회
         commonMethod.setParams("member_code", common.getLoginInfo().getMember_code())

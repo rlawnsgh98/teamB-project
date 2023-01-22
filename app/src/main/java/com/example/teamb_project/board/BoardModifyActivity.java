@@ -24,7 +24,6 @@ public class BoardModifyActivity extends AppCompatActivity implements View.OnCli
         super.onCreate(savedInstanceState);
         b = ActivityBoardModifyBinding.inflate(getLayoutInflater());
         setContentView(b.getRoot());
-        getSupportActionBar().hide();
 
         Intent getIntent = getIntent();
         //원글 정보 저장

@@ -45,7 +45,6 @@ public class TeacherHomeActivity extends AppCompatActivity implements View.OnCli
         super.onCreate(savedInstanceState);
         t= ActivityTeacherhomeBinding.inflate(getLayoutInflater());
         setContentView(t.getRoot());
-        getSupportActionBar().hide();
 
         drawerLayout = findViewById(R.id.drawer_layout);
         drawerView = findViewById(R.id.drawerView);

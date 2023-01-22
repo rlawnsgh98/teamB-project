@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.teamb_project.R;
 import com.example.teamb_project.teacher.mylecture.MyLectureActivity;
@@ -17,21 +18,22 @@ public class LectureDetailActivity extends AppCompatActivity {
     int lecture_code;
     TabLayout tab_layout;
     ImageView back;
-
+    TextView lecture_name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lecture_detail);
-        getSupportActionBar().hide();
 
-        back = findViewById(R.id.iv_back);
+        back = findViewById(R.id.imgv_back);
+        lecture_name = findViewById(R.id.tv_lecture_name);
+        lecture_name.setText(getIntent().getStringExtra("lecture_name"));
 
         lecture_code = getIntent().getIntExtra("lecture_code", 0);
 
         /*탭 레이아웃*/
         tab_layout = findViewById(R.id.tab_layout);
-        tab_layout.addTab(tab_layout.newTab().setText("강의홈"));
+        tab_layout.addTab(tab_layout.newTab().setText("공지사항"));
         tab_layout.addTab(tab_layout.newTab().setText("수강생목록"));
         tab_layout.addTab(tab_layout.newTab().setText("과제관리"));
 

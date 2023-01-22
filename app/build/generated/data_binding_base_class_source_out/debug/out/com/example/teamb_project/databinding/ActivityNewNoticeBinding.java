@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
@@ -29,13 +30,17 @@ public final class ActivityNewNoticeBinding implements ViewBinding {
   @NonNull
   public final ImageView ivBack;
 
+  @NonNull
+  public final RelativeLayout relBar;
+
   private ActivityNewNoticeBinding(@NonNull LinearLayout rootView,
       @NonNull MaterialCardView cardBack, @NonNull MaterialCardView cardInsert,
-      @NonNull ImageView ivBack) {
+      @NonNull ImageView ivBack, @NonNull RelativeLayout relBar) {
     this.rootView = rootView;
     this.cardBack = cardBack;
     this.cardInsert = cardInsert;
     this.ivBack = ivBack;
+    this.relBar = relBar;
   }
 
   @Override
@@ -83,7 +88,14 @@ public final class ActivityNewNoticeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityNewNoticeBinding((LinearLayout) rootView, cardBack, cardInsert, ivBack);
+      id = R.id.rel_bar;
+      RelativeLayout relBar = ViewBindings.findChildViewById(rootView, id);
+      if (relBar == null) {
+        break missingId;
+      }
+
+      return new ActivityNewNoticeBinding((LinearLayout) rootView, cardBack, cardInsert, ivBack,
+          relBar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

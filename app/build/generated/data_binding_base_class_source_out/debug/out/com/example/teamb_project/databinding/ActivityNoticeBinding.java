@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.widget.NestedScrollView;
@@ -32,15 +33,19 @@ public final class ActivityNoticeBinding implements ViewBinding {
   public final RecyclerView recvNotice;
 
   @NonNull
+  public final RelativeLayout relBar;
+
+  @NonNull
   public final NestedScrollView scrNotice;
 
   private ActivityNoticeBinding(@NonNull LinearLayout rootView, @NonNull MaterialCardView cardGoTop,
-      @NonNull ImageView ivBack, @NonNull RecyclerView recvNotice,
+      @NonNull ImageView ivBack, @NonNull RecyclerView recvNotice, @NonNull RelativeLayout relBar,
       @NonNull NestedScrollView scrNotice) {
     this.rootView = rootView;
     this.cardGoTop = cardGoTop;
     this.ivBack = ivBack;
     this.recvNotice = recvNotice;
+    this.relBar = relBar;
     this.scrNotice = scrNotice;
   }
 
@@ -89,6 +94,12 @@ public final class ActivityNoticeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.rel_bar;
+      RelativeLayout relBar = ViewBindings.findChildViewById(rootView, id);
+      if (relBar == null) {
+        break missingId;
+      }
+
       id = R.id.scr_notice;
       NestedScrollView scrNotice = ViewBindings.findChildViewById(rootView, id);
       if (scrNotice == null) {
@@ -96,7 +107,7 @@ public final class ActivityNoticeBinding implements ViewBinding {
       }
 
       return new ActivityNoticeBinding((LinearLayout) rootView, cardGoTop, ivBack, recvNotice,
-          scrNotice);
+          relBar, scrNotice);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.teamb_project.app-mergeDebugResources-42:/values-v22/values-v22.xml",
+            "outputFile": "com.example.teamb_project.app-mergeDebugResources-44:/values-v22/values-v22.xml",
             "map": [
                 {
                     "source": "C:\\Users\\ym\\.gradle\\caches\\transforms-3\\034f511a629c0fda711794a09fef4382\\transformed\\appcompat-1.5.1\\res\\values-v22\\values-v22.xml",

@@ -5,10 +5,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#7F7F7F"/>
+
 
     <LinearLayout
         android:layout_marginLeft="20dp"
@@ -16,14 +13,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingVertical="10dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        >
 
         <TextView
             android:id="@+id/tv_attendance_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:textSize="20dp"
+            android:textSize="19dp"
             android:layout_marginRight="5dp"
             android:text="23/01/11"/>
 
@@ -31,7 +31,7 @@
             android:id="@+id/tv_week"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:textSize="19dp"
             android:textColor="@color/black"
             android:text="수요일"/>
         <View
@@ -44,9 +44,16 @@
             android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:textSize="19dp"
             android:text="출석"/>
 
-
     </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gray"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        />
 </LinearLayout>

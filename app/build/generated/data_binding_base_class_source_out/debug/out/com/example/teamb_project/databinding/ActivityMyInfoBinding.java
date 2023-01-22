@@ -4,11 +4,13 @@ package com.example.teamb_project.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,120 +23,81 @@ import java.lang.String;
 
 public final class ActivityMyInfoBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final RelativeLayout rootView;
 
   @NonNull
-  public final EditText birthDataEt;
+  public final Button cancelBtn;
 
   @NonNull
-  public final TextView birthDataTv;
+  public final Button confirmBtn;
 
   @NonNull
-  public final TextView cancelBtn;
+  public final EditText edtEmail;
 
   @NonNull
-  public final TextView confirmBtn;
+  public final EditText edtName;
 
   @NonNull
-  public final EditText emailDataEt;
-
-  @NonNull
-  public final TextView emailDataTv;
+  public final EditText edtPhone;
 
   @NonNull
   public final RadioButton femaleRd;
 
   @NonNull
-  public final TextView idData;
+  public final ImageView imgvBack;
+
+  @NonNull
+  public final ImageView imgvProfile;
 
   @NonNull
   public final RadioButton maleRd;
 
   @NonNull
-  public final TextView memberCodeData;
+  public final LinearLayout personalinfo;
 
   @NonNull
-  public final EditText memberNameDataEt;
+  public final RadioGroup rdoGender;
 
   @NonNull
-  public final TextView memberNameDataTv;
+  public final LinearLayout topbar;
 
   @NonNull
-  public final TextView modifyBtn;
+  public final TextView tvBirth;
 
   @NonNull
-  public final LinearLayout modifyLn1;
+  public final TextView tvId;
 
   @NonNull
-  public final LinearLayout modifyLn2;
+  public final TextView tvType;
 
-  @NonNull
-  public final LinearLayout modifyLn3;
-
-  @NonNull
-  public final LinearLayout modifyLn4;
-
-  @NonNull
-  public final EditText phoneDataEt;
-
-  @NonNull
-  public final TextView phoneDataTv;
-
-  @NonNull
-  public final ImageView profileImage0;
-
-  @NonNull
-  public final ImageView profileImage1;
-
-  @NonNull
-  public final TextView pwData;
-
-  @NonNull
-  public final RadioGroup radioGroup;
-
-  @NonNull
-  public final TextView typeData;
-
-  private ActivityMyInfoBinding(@NonNull LinearLayout rootView, @NonNull EditText birthDataEt,
-      @NonNull TextView birthDataTv, @NonNull TextView cancelBtn, @NonNull TextView confirmBtn,
-      @NonNull EditText emailDataEt, @NonNull TextView emailDataTv, @NonNull RadioButton femaleRd,
-      @NonNull TextView idData, @NonNull RadioButton maleRd, @NonNull TextView memberCodeData,
-      @NonNull EditText memberNameDataEt, @NonNull TextView memberNameDataTv,
-      @NonNull TextView modifyBtn, @NonNull LinearLayout modifyLn1, @NonNull LinearLayout modifyLn2,
-      @NonNull LinearLayout modifyLn3, @NonNull LinearLayout modifyLn4,
-      @NonNull EditText phoneDataEt, @NonNull TextView phoneDataTv,
-      @NonNull ImageView profileImage0, @NonNull ImageView profileImage1, @NonNull TextView pwData,
-      @NonNull RadioGroup radioGroup, @NonNull TextView typeData) {
+  private ActivityMyInfoBinding(@NonNull RelativeLayout rootView, @NonNull Button cancelBtn,
+      @NonNull Button confirmBtn, @NonNull EditText edtEmail, @NonNull EditText edtName,
+      @NonNull EditText edtPhone, @NonNull RadioButton femaleRd, @NonNull ImageView imgvBack,
+      @NonNull ImageView imgvProfile, @NonNull RadioButton maleRd,
+      @NonNull LinearLayout personalinfo, @NonNull RadioGroup rdoGender,
+      @NonNull LinearLayout topbar, @NonNull TextView tvBirth, @NonNull TextView tvId,
+      @NonNull TextView tvType) {
     this.rootView = rootView;
-    this.birthDataEt = birthDataEt;
-    this.birthDataTv = birthDataTv;
     this.cancelBtn = cancelBtn;
     this.confirmBtn = confirmBtn;
-    this.emailDataEt = emailDataEt;
-    this.emailDataTv = emailDataTv;
+    this.edtEmail = edtEmail;
+    this.edtName = edtName;
+    this.edtPhone = edtPhone;
     this.femaleRd = femaleRd;
-    this.idData = idData;
+    this.imgvBack = imgvBack;
+    this.imgvProfile = imgvProfile;
     this.maleRd = maleRd;
-    this.memberCodeData = memberCodeData;
-    this.memberNameDataEt = memberNameDataEt;
-    this.memberNameDataTv = memberNameDataTv;
-    this.modifyBtn = modifyBtn;
-    this.modifyLn1 = modifyLn1;
-    this.modifyLn2 = modifyLn2;
-    this.modifyLn3 = modifyLn3;
-    this.modifyLn4 = modifyLn4;
-    this.phoneDataEt = phoneDataEt;
-    this.phoneDataTv = phoneDataTv;
-    this.profileImage0 = profileImage0;
-    this.profileImage1 = profileImage1;
-    this.pwData = pwData;
-    this.radioGroup = radioGroup;
-    this.typeData = typeData;
+    this.personalinfo = personalinfo;
+    this.rdoGender = rdoGender;
+    this.topbar = topbar;
+    this.tvBirth = tvBirth;
+    this.tvId = tvId;
+    this.tvType = tvType;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -159,39 +122,33 @@ public final class ActivityMyInfoBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.birth_data_et;
-      EditText birthDataEt = ViewBindings.findChildViewById(rootView, id);
-      if (birthDataEt == null) {
-        break missingId;
-      }
-
-      id = R.id.birth_data_tv;
-      TextView birthDataTv = ViewBindings.findChildViewById(rootView, id);
-      if (birthDataTv == null) {
-        break missingId;
-      }
-
       id = R.id.cancel_btn;
-      TextView cancelBtn = ViewBindings.findChildViewById(rootView, id);
+      Button cancelBtn = ViewBindings.findChildViewById(rootView, id);
       if (cancelBtn == null) {
         break missingId;
       }
 
       id = R.id.confirm_btn;
-      TextView confirmBtn = ViewBindings.findChildViewById(rootView, id);
+      Button confirmBtn = ViewBindings.findChildViewById(rootView, id);
       if (confirmBtn == null) {
         break missingId;
       }
 
-      id = R.id.email_data_et;
-      EditText emailDataEt = ViewBindings.findChildViewById(rootView, id);
-      if (emailDataEt == null) {
+      id = R.id.edt_email;
+      EditText edtEmail = ViewBindings.findChildViewById(rootView, id);
+      if (edtEmail == null) {
         break missingId;
       }
 
-      id = R.id.email_data_tv;
-      TextView emailDataTv = ViewBindings.findChildViewById(rootView, id);
-      if (emailDataTv == null) {
+      id = R.id.edt_name;
+      EditText edtName = ViewBindings.findChildViewById(rootView, id);
+      if (edtName == null) {
+        break missingId;
+      }
+
+      id = R.id.edt_phone;
+      EditText edtPhone = ViewBindings.findChildViewById(rootView, id);
+      if (edtPhone == null) {
         break missingId;
       }
 
@@ -201,9 +158,15 @@ public final class ActivityMyInfoBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.id_data;
-      TextView idData = ViewBindings.findChildViewById(rootView, id);
-      if (idData == null) {
+      id = R.id.imgv_back;
+      ImageView imgvBack = ViewBindings.findChildViewById(rootView, id);
+      if (imgvBack == null) {
+        break missingId;
+      }
+
+      id = R.id.imgv_profile;
+      ImageView imgvProfile = ViewBindings.findChildViewById(rootView, id);
+      if (imgvProfile == null) {
         break missingId;
       }
 
@@ -213,100 +176,45 @@ public final class ActivityMyInfoBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.member_code_data;
-      TextView memberCodeData = ViewBindings.findChildViewById(rootView, id);
-      if (memberCodeData == null) {
+      id = R.id.personalinfo;
+      LinearLayout personalinfo = ViewBindings.findChildViewById(rootView, id);
+      if (personalinfo == null) {
         break missingId;
       }
 
-      id = R.id.member_name_data_et;
-      EditText memberNameDataEt = ViewBindings.findChildViewById(rootView, id);
-      if (memberNameDataEt == null) {
+      id = R.id.rdo_gender;
+      RadioGroup rdoGender = ViewBindings.findChildViewById(rootView, id);
+      if (rdoGender == null) {
         break missingId;
       }
 
-      id = R.id.member_name_data_tv;
-      TextView memberNameDataTv = ViewBindings.findChildViewById(rootView, id);
-      if (memberNameDataTv == null) {
+      id = R.id.topbar;
+      LinearLayout topbar = ViewBindings.findChildViewById(rootView, id);
+      if (topbar == null) {
         break missingId;
       }
 
-      id = R.id.modify_btn;
-      TextView modifyBtn = ViewBindings.findChildViewById(rootView, id);
-      if (modifyBtn == null) {
+      id = R.id.tv_birth;
+      TextView tvBirth = ViewBindings.findChildViewById(rootView, id);
+      if (tvBirth == null) {
         break missingId;
       }
 
-      id = R.id.modify_ln1;
-      LinearLayout modifyLn1 = ViewBindings.findChildViewById(rootView, id);
-      if (modifyLn1 == null) {
+      id = R.id.tv_id;
+      TextView tvId = ViewBindings.findChildViewById(rootView, id);
+      if (tvId == null) {
         break missingId;
       }
 
-      id = R.id.modify_ln2;
-      LinearLayout modifyLn2 = ViewBindings.findChildViewById(rootView, id);
-      if (modifyLn2 == null) {
+      id = R.id.tv_type;
+      TextView tvType = ViewBindings.findChildViewById(rootView, id);
+      if (tvType == null) {
         break missingId;
       }
 
-      id = R.id.modify_ln3;
-      LinearLayout modifyLn3 = ViewBindings.findChildViewById(rootView, id);
-      if (modifyLn3 == null) {
-        break missingId;
-      }
-
-      id = R.id.modify_ln4;
-      LinearLayout modifyLn4 = ViewBindings.findChildViewById(rootView, id);
-      if (modifyLn4 == null) {
-        break missingId;
-      }
-
-      id = R.id.phone_data_et;
-      EditText phoneDataEt = ViewBindings.findChildViewById(rootView, id);
-      if (phoneDataEt == null) {
-        break missingId;
-      }
-
-      id = R.id.phone_data_tv;
-      TextView phoneDataTv = ViewBindings.findChildViewById(rootView, id);
-      if (phoneDataTv == null) {
-        break missingId;
-      }
-
-      id = R.id.profile_image_0;
-      ImageView profileImage0 = ViewBindings.findChildViewById(rootView, id);
-      if (profileImage0 == null) {
-        break missingId;
-      }
-
-      id = R.id.profile_image_1;
-      ImageView profileImage1 = ViewBindings.findChildViewById(rootView, id);
-      if (profileImage1 == null) {
-        break missingId;
-      }
-
-      id = R.id.pw_data;
-      TextView pwData = ViewBindings.findChildViewById(rootView, id);
-      if (pwData == null) {
-        break missingId;
-      }
-
-      id = R.id.radioGroup;
-      RadioGroup radioGroup = ViewBindings.findChildViewById(rootView, id);
-      if (radioGroup == null) {
-        break missingId;
-      }
-
-      id = R.id.type_data;
-      TextView typeData = ViewBindings.findChildViewById(rootView, id);
-      if (typeData == null) {
-        break missingId;
-      }
-
-      return new ActivityMyInfoBinding((LinearLayout) rootView, birthDataEt, birthDataTv, cancelBtn,
-          confirmBtn, emailDataEt, emailDataTv, femaleRd, idData, maleRd, memberCodeData,
-          memberNameDataEt, memberNameDataTv, modifyBtn, modifyLn1, modifyLn2, modifyLn3, modifyLn4,
-          phoneDataEt, phoneDataTv, profileImage0, profileImage1, pwData, radioGroup, typeData);
+      return new ActivityMyInfoBinding((RelativeLayout) rootView, cancelBtn, confirmBtn, edtEmail,
+          edtName, edtPhone, femaleRd, imgvBack, imgvProfile, maleRd, personalinfo, rdoGender,
+          topbar, tvBirth, tvId, tvType);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

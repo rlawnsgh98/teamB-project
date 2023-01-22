@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.teamb_project.app-mergeDebugResources-42:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.example.teamb_project.app-mergeDebugResources-44:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
                     "source": "C:\\Users\\ym\\.gradle\\caches\\transforms-3\\459731560744495d36c7572f4eaf1462\\transformed\\material-1.7.0\\res\\values-night-v8\\values-night-v8.xml",
@@ -21,25 +21,6 @@
                     }
                 },
                 {
-                    "source": "D:\\07.ING\\2023011\\teamB-project-123\\teamB-project-123\\and\\app\\src\\main\\res\\values-night\\themes.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "100",
-                        "endLines": "14",
-                        "endColumns": "12",
-                        "endOffsets": "801"
-                    },
-                    "to": {
-                        "startLines": "33",
-                        "startColumns": "4",
-                        "startOffsets": "3341",
-                        "endLines": "45",
-                        "endColumns": "12",
-                        "endOffsets": "3921"
-                    }
-                },
-                {
                     "source": "C:\\Users\\ym\\.gradle\\caches\\transforms-3\\034f511a629c0fda711794a09fef4382\\transformed\\appcompat-1.5.1\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
@@ -54,6 +35,25 @@
                         "startOffsets": "55,125,209,293,389,491,593,3926",
                         "endColumns": "69,83,83,95,101,101,93,88",
                         "endOffsets": "120,204,288,384,486,588,682,4010"
+                    }
+                },
+                {
+                    "source": "D:\\07.ING\\2023011\\teamB-project-temp\\teamB-project\\and\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "102",
+                        "endLines": "14",
+                        "endColumns": "12",
+                        "endOffsets": "815"
+                    },
+                    "to": {
+                        "startLines": "33",
+                        "startColumns": "4",
+                        "startOffsets": "3341",
+                        "endLines": "45",
+                        "endColumns": "12",
+                        "endOffsets": "3921"
                     }
                 }
             ]

@@ -12,18 +12,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.teamb_project.R;
-import com.example.teamb_project.teacher.mylecture.lecturehome.LectureHomeAdapter;
 import com.example.teamb_project.vo.LectureBoardVO;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
-public class stu_LectureHomeAdapter extends RecyclerView.Adapter<stu_LectureHomeAdapter.ViewHolder> {
+public class Stu_LectureHomeAdapter extends RecyclerView.Adapter<Stu_LectureHomeAdapter.ViewHolder> {
     LayoutInflater inflater;
     Context context;
     ArrayList<LectureBoardVO> list;
 
-    public stu_LectureHomeAdapter(LayoutInflater inflater, Context context, ArrayList<LectureBoardVO> list) {
+    public Stu_LectureHomeAdapter(LayoutInflater inflater, Context context, ArrayList<LectureBoardVO> list) {
         this.inflater = inflater;
         this.context = context;
         this.list = list;
@@ -32,7 +30,7 @@ public class stu_LectureHomeAdapter extends RecyclerView.Adapter<stu_LectureHome
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = inflater.inflate(R.layout.item_lecture_notice, parent, false);
+        View v = inflater.inflate(R.layout.item_notice, parent, false);
         ViewHolder viewHolder = new ViewHolder(v);
 
         return viewHolder;

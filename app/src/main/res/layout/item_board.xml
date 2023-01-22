@@ -15,12 +15,14 @@
 
         <TextView
             android:id="@+id/tv_id"
-            android:layout_width="65dp"
-            android:layout_height="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
             android:text="1"
             android:gravity="center"
             android:textColor="@color/font_black"
-            android:textSize="20dp"
+            android:textSize="17sp"
             />
 
         <TextView
@@ -30,7 +32,8 @@
             android:layout_height="wrap_content"
             android:text="게시판 제목"
             android:textColor="@color/font_black"
-            android:textSize="20dp"
+            android:textSize="18dp"
+            android:layout_marginRight="15dp"
             />
 
         <LinearLayout
@@ -38,7 +41,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginRight="15dp"
+            android:layout_marginRight="10dp"
             >
             <TextView
                 android:id="@+id/tv_writer"
@@ -52,6 +55,7 @@
                 android:id="@+id/tv_writedate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:text="2023.01.03"
                 />
         </LinearLayout>

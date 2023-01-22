@@ -21,7 +21,7 @@ import java.lang.String;
 
 public final class ActivityCounselDetailBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final RelativeLayout rootView;
 
   @NonNull
   public final MaterialCardView cardAnswer;
@@ -69,6 +69,9 @@ public final class ActivityCounselDetailBinding implements ViewBinding {
   public final RelativeLayout relMoreAnswer;
 
   @NonNull
+  public final LinearLayout topbar;
+
+  @NonNull
   public final TextView tvAnswer;
 
   @NonNull
@@ -101,16 +104,16 @@ public final class ActivityCounselDetailBinding implements ViewBinding {
   @NonNull
   public final TextView tvWriter;
 
-  private ActivityCounselDetailBinding(@NonNull LinearLayout rootView,
+  private ActivityCounselDetailBinding(@NonNull RelativeLayout rootView,
       @NonNull MaterialCardView cardAnswer, @NonNull MaterialCardView cardAnswerBtn,
       @NonNull EditText edtAnswer, @NonNull EditText edtContent, @NonNull ImageView ivBack,
       @NonNull ImageView ivMore, @NonNull ImageView ivMoreAnswer, @NonNull ImageView ivSend,
       @NonNull ImageView ivSendContent, @NonNull LinearLayout linAnswer,
       @NonNull LinearLayout linMore, @NonNull LinearLayout linMoreAnswer,
       @NonNull RelativeLayout relAnswer, @NonNull RelativeLayout relMore,
-      @NonNull RelativeLayout relMoreAnswer, @NonNull TextView tvAnswer,
-      @NonNull TextView tvAnswerDate, @NonNull TextView tvContent, @NonNull TextView tvDelete,
-      @NonNull TextView tvDeleteAnswer, @NonNull TextView tvModify,
+      @NonNull RelativeLayout relMoreAnswer, @NonNull LinearLayout topbar,
+      @NonNull TextView tvAnswer, @NonNull TextView tvAnswerDate, @NonNull TextView tvContent,
+      @NonNull TextView tvDelete, @NonNull TextView tvDeleteAnswer, @NonNull TextView tvModify,
       @NonNull TextView tvModifyAnswer, @NonNull TextView tvReceiver, @NonNull TextView tvTitle,
       @NonNull TextView tvWriteDate, @NonNull TextView tvWriter) {
     this.rootView = rootView;
@@ -129,6 +132,7 @@ public final class ActivityCounselDetailBinding implements ViewBinding {
     this.relAnswer = relAnswer;
     this.relMore = relMore;
     this.relMoreAnswer = relMoreAnswer;
+    this.topbar = topbar;
     this.tvAnswer = tvAnswer;
     this.tvAnswerDate = tvAnswerDate;
     this.tvContent = tvContent;
@@ -144,7 +148,7 @@ public final class ActivityCounselDetailBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -259,6 +263,12 @@ public final class ActivityCounselDetailBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.topbar;
+      LinearLayout topbar = ViewBindings.findChildViewById(rootView, id);
+      if (topbar == null) {
+        break missingId;
+      }
+
       id = R.id.tv_answer;
       TextView tvAnswer = ViewBindings.findChildViewById(rootView, id);
       if (tvAnswer == null) {
@@ -325,9 +335,9 @@ public final class ActivityCounselDetailBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityCounselDetailBinding((LinearLayout) rootView, cardAnswer, cardAnswerBtn,
+      return new ActivityCounselDetailBinding((RelativeLayout) rootView, cardAnswer, cardAnswerBtn,
           edtAnswer, edtContent, ivBack, ivMore, ivMoreAnswer, ivSend, ivSendContent, linAnswer,
-          linMore, linMoreAnswer, relAnswer, relMore, relMoreAnswer, tvAnswer, tvAnswerDate,
+          linMore, linMoreAnswer, relAnswer, relMore, relMoreAnswer, topbar, tvAnswer, tvAnswerDate,
           tvContent, tvDelete, tvDeleteAnswer, tvModify, tvModifyAnswer, tvReceiver, tvTitle,
           tvWriteDate, tvWriter);
     }

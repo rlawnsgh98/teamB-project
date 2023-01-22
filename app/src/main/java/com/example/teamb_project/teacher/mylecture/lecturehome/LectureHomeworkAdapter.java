@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -55,6 +56,7 @@ public class LectureHomeworkAdapter extends RecyclerView.Adapter<LectureHomework
             public void onClick(View v) {
                 if(h.lin_detail.getVisibility() == View.GONE){
                     //닫혀있는 상태
+                    h.arrow.setRotationX(180);
                     h.lin_detail.setVisibility(View.VISIBLE);
                     new CommonMethod().setParams("homework_code", list.get(idx).getHomework_code())
                             .sendPost("homework_subcnt.le", new CommonMethod.CallBackResult() {
@@ -69,24 +71,25 @@ public class LectureHomeworkAdapter extends RecyclerView.Adapter<LectureHomework
 
                 }else{
                     //열려있던 상태
+                    h.arrow.setRotationX(0);
                     h.lin_detail.setVisibility(View.GONE);
                 }
             }
         });
-        //선택하면 제출자 명단
-        h.lin_homework_sub.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context, "제출", Toast.LENGTH_SHORT).show();
-            }
-        });
-        //선택하면 미제출자 명단
-        h.lin_homework_nosub.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context, "미제출", Toast.LENGTH_SHORT).show();
-            }
-        });
+//        //선택하면 제출자 명단
+//        h.lin_homework_sub.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(context, "제출", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//        //선택하면 미제출자 명단
+//        h.lin_homework_nosub.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(context, "미제출", Toast.LENGTH_SHORT).show();
+//            }
+//        });
     }
 
     @Override
@@ -97,6 +100,7 @@ public class LectureHomeworkAdapter extends RecyclerView.Adapter<LectureHomework
     public class ViewHolder extends RecyclerView.ViewHolder {
         LinearLayout lin_detail, lin_view_detail, lin_homework_sub, lin_homework_nosub;
         TextView tv_title, tv_writedate, tv_duedate, tv_subcnt, tv_notcnt;
+        ImageView arrow;
 
         public ViewHolder(@NonNull View v) {
             super(v);
@@ -111,6 +115,8 @@ public class LectureHomeworkAdapter extends RecyclerView.Adapter<LectureHomework
             lin_view_detail = v.findViewById(R.id.lin_view_detail);
             lin_homework_sub = v.findViewById(R.id.lin_homework_sub);
             lin_homework_nosub = v.findViewById(R.id.lin_homework_nosub);
+
+            arrow = v.findViewById(R.id.iv_drop_down);
         }
     }
 

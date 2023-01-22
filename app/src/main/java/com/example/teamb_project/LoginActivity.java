@@ -5,6 +5,7 @@ import androidx.core.app.ActivityCompat;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,6 +26,8 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.util.Random;
+
 public class LoginActivity extends AppCompatActivity {
     TextView join_tv,login_tv,find_tv;
     EditText id_et, pw_et;
@@ -35,18 +38,11 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        getSupportActionBar().hide();
-
-
-
+      
         new Common().changeStatusBarColor(this);
 
-
         // IP 설정
-        ApiClient.setBASEURL("http://192.168.0.102/middle/");
-        //집
-//        ApiClient.setBASEURL("http://210.123.231.86/middle/");
-
+        ApiClient.setBASEURL("http://192.168.1.2/middle/");
         id_et = findViewById(R.id.id_et);
         pw_et = findViewById(R.id.et_pw);
 
@@ -64,7 +60,12 @@ public class LoginActivity extends AppCompatActivity {
                                     MemberVO vo = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, MemberVO.class);
                                     //로그인 정보 저장
                                     common.loginInfo = vo;
+
                                     if (vo != null) {
+                                        //2023/01/21 다른 메뉴 확인하기위해 임시로 기존메뉴 사용
+//                                        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+//                                           startActivity(intent);
+                                           //20230120 같은 액티비티인데 두개로 분기되어있어서 없앰.
                                         if(vo.getType().equals("STUD")){
                                             Intent intent = new Intent(LoginActivity.this, StudentHomeActivity.class);
                                             startActivity(intent);

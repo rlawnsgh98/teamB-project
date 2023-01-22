@@ -4,10 +4,13 @@ package com.example.teamb_project.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.teamb_project.R;
@@ -20,20 +23,37 @@ public final class ItemMyLectureBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final TextView lectureStudentCnt;
+  public final CardView card;
 
   @NonNull
-  public final TextView tvLectureTime;
+  public final ImageView ivSubject;
+
+  @NonNull
+  public final RelativeLayout relBackground;
+
+  @NonNull
+  public final TextView tvCnt;
 
   @NonNull
   public final TextView tvLectureTitle;
 
-  private ItemMyLectureBinding(@NonNull LinearLayout rootView, @NonNull TextView lectureStudentCnt,
-      @NonNull TextView tvLectureTime, @NonNull TextView tvLectureTitle) {
+  @NonNull
+  public final TextView tvRoom;
+
+  @NonNull
+  public final TextView tvTeacherName;
+
+  private ItemMyLectureBinding(@NonNull LinearLayout rootView, @NonNull CardView card,
+      @NonNull ImageView ivSubject, @NonNull RelativeLayout relBackground, @NonNull TextView tvCnt,
+      @NonNull TextView tvLectureTitle, @NonNull TextView tvRoom, @NonNull TextView tvTeacherName) {
     this.rootView = rootView;
-    this.lectureStudentCnt = lectureStudentCnt;
-    this.tvLectureTime = tvLectureTime;
+    this.card = card;
+    this.ivSubject = ivSubject;
+    this.relBackground = relBackground;
+    this.tvCnt = tvCnt;
     this.tvLectureTitle = tvLectureTitle;
+    this.tvRoom = tvRoom;
+    this.tvTeacherName = tvTeacherName;
   }
 
   @Override
@@ -63,15 +83,27 @@ public final class ItemMyLectureBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.lecture_student_cnt;
-      TextView lectureStudentCnt = ViewBindings.findChildViewById(rootView, id);
-      if (lectureStudentCnt == null) {
+      id = R.id.card;
+      CardView card = ViewBindings.findChildViewById(rootView, id);
+      if (card == null) {
         break missingId;
       }
 
-      id = R.id.tv_lecture_time;
-      TextView tvLectureTime = ViewBindings.findChildViewById(rootView, id);
-      if (tvLectureTime == null) {
+      id = R.id.iv_subject;
+      ImageView ivSubject = ViewBindings.findChildViewById(rootView, id);
+      if (ivSubject == null) {
+        break missingId;
+      }
+
+      id = R.id.rel_background;
+      RelativeLayout relBackground = ViewBindings.findChildViewById(rootView, id);
+      if (relBackground == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_cnt;
+      TextView tvCnt = ViewBindings.findChildViewById(rootView, id);
+      if (tvCnt == null) {
         break missingId;
       }
 
@@ -81,8 +113,20 @@ public final class ItemMyLectureBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ItemMyLectureBinding((LinearLayout) rootView, lectureStudentCnt, tvLectureTime,
-          tvLectureTitle);
+      id = R.id.tv_room;
+      TextView tvRoom = ViewBindings.findChildViewById(rootView, id);
+      if (tvRoom == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_teacher_name;
+      TextView tvTeacherName = ViewBindings.findChildViewById(rootView, id);
+      if (tvTeacherName == null) {
+        break missingId;
+      }
+
+      return new ItemMyLectureBinding((LinearLayout) rootView, card, ivSubject, relBackground,
+          tvCnt, tvLectureTitle, tvRoom, tvTeacherName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

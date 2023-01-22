@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
@@ -36,15 +37,20 @@ public final class ActivityBoardModifyBinding implements ViewBinding {
   @NonNull
   public final ImageView ivBack;
 
+  @NonNull
+  public final RelativeLayout relBar;
+
   private ActivityBoardModifyBinding(@NonNull LinearLayout rootView,
       @NonNull MaterialCardView cardBack, @NonNull MaterialCardView cardInsert,
-      @NonNull EditText edtContent, @NonNull EditText edtTitle, @NonNull ImageView ivBack) {
+      @NonNull EditText edtContent, @NonNull EditText edtTitle, @NonNull ImageView ivBack,
+      @NonNull RelativeLayout relBar) {
     this.rootView = rootView;
     this.cardBack = cardBack;
     this.cardInsert = cardInsert;
     this.edtContent = edtContent;
     this.edtTitle = edtTitle;
     this.ivBack = ivBack;
+    this.relBar = relBar;
   }
 
   @Override
@@ -104,8 +110,14 @@ public final class ActivityBoardModifyBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.rel_bar;
+      RelativeLayout relBar = ViewBindings.findChildViewById(rootView, id);
+      if (relBar == null) {
+        break missingId;
+      }
+
       return new ActivityBoardModifyBinding((LinearLayout) rootView, cardBack, cardInsert,
-          edtContent, edtTitle, ivBack);
+          edtContent, edtTitle, ivBack, relBar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

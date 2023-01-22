@@ -25,7 +25,6 @@ public class NoticeActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         b = ActivityNoticeBinding.inflate(getLayoutInflater());
         setContentView(b.getRoot());
-        getSupportActionBar().hide();
 
         //메소드 재활용
         Common common = new Common();

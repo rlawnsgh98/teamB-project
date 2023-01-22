@@ -41,7 +41,6 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
     final String TAG = "log";
     public final int GALLERY_CODE = 1000;
     public final int FILE_CODE = 1001;
-
     CommonMethod commonMethod = new CommonMethod();
 
     ArrayList<String> path_list;
@@ -55,14 +54,7 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         b = ActivityNewBoardBinding.inflate(getLayoutInflater());
         setContentView(b.getRoot());
-        getSupportActionBar().hide();
 
-//        checkDangerousPermissions();
-//        Intent intent = new Intent();
-//        intent.setAction(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
-//        Uri uri = Uri.fromParts("package", this.getPackageName(), null);
-//        intent.setData(uri);
-//        startActivity(intent);
         Common common = new Common();
         //임시로그인 - user1
 

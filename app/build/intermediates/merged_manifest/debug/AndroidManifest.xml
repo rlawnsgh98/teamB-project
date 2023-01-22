@@ -68,14 +68,17 @@
         android:theme="@style/Theme.TeamBProject"
         android:usesCleartextTraffic="true" >
         <activity
-            android:name="com.example.teamb_project.student.mylecture.lecturehome.stu_LectureDetailActivity"
+            android:name="com.example.teamb_project.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.teamb_project.student.mylecture.lecturehome.Stu_LectureDetailActivity"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="com.example.teamb_project.student.mylecture.stu_MyLectureActivity"
+            android:name="com.example.teamb_project.student.mylecture.Stu_MyLectureActivity"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
@@ -90,8 +93,7 @@
         </activity>
         <activity
             android:name="com.example.teamb_project.counselling.CounselDetailActivity"
-            android:exported="false" >
-        </activity>
+            android:exported="false" />
         <activity
             android:name="com.example.teamb_project.counselling.NewCounselActivity"
             android:exported="false" />
@@ -139,8 +141,7 @@
         </activity>
         <activity
             android:name="com.example.teamb_project.board.BoardDetailActivity"
-            android:exported="false" >
-        </activity>
+            android:exported="false" />
         <activity
             android:name="com.example.teamb_project.board.NewBoardActivity"
             android:exported="false" />
@@ -152,12 +153,10 @@
             android:exported="false" />
         <activity
             android:name="com.example.teamb_project.teacher.mylecture.MyLectureActivity"
-            android:exported="false" >
-        </activity>
+            android:exported="false" />
         <activity
             android:name="com.example.teamb_project.teacher.TeacherHomeActivity"
-            android:exported="false" >
-        </activity>
+            android:exported="false" />
         <activity
             android:name="com.example.teamb_project.student.StudentHomeActivity"
             android:exported="false" />

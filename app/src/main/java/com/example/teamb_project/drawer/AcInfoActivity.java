@@ -20,7 +20,6 @@ public class AcInfoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ac_info);
-        getSupportActionBar().hide();
 
         top_toolbar = findViewById(R.id.top_toolbar);
         link_btn1 = findViewById(R.id.link_btn1);

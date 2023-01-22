@@ -6,8 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -18,7 +21,10 @@ import java.lang.String;
 
 public final class ActivityStuMyLectureBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final RelativeLayout rootView;
+
+  @NonNull
+  public final CardView card;
 
   @NonNull
   public final ImageView ivBack;
@@ -26,16 +32,31 @@ public final class ActivityStuMyLectureBinding implements ViewBinding {
   @NonNull
   public final RecyclerView recvMylecture;
 
-  private ActivityStuMyLectureBinding(@NonNull LinearLayout rootView, @NonNull ImageView ivBack,
-      @NonNull RecyclerView recvMylecture) {
+  @NonNull
+  public final RelativeLayout relBackground;
+
+  @NonNull
+  public final LinearLayout topbar;
+
+  @NonNull
+  public final TextView tvLectureTitle;
+
+  private ActivityStuMyLectureBinding(@NonNull RelativeLayout rootView, @NonNull CardView card,
+      @NonNull ImageView ivBack, @NonNull RecyclerView recvMylecture,
+      @NonNull RelativeLayout relBackground, @NonNull LinearLayout topbar,
+      @NonNull TextView tvLectureTitle) {
     this.rootView = rootView;
+    this.card = card;
     this.ivBack = ivBack;
     this.recvMylecture = recvMylecture;
+    this.relBackground = relBackground;
+    this.topbar = topbar;
+    this.tvLectureTitle = tvLectureTitle;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -60,6 +81,12 @@ public final class ActivityStuMyLectureBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.card;
+      CardView card = ViewBindings.findChildViewById(rootView, id);
+      if (card == null) {
+        break missingId;
+      }
+
       id = R.id.iv_back;
       ImageView ivBack = ViewBindings.findChildViewById(rootView, id);
       if (ivBack == null) {
@@ -72,7 +99,26 @@ public final class ActivityStuMyLectureBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityStuMyLectureBinding((LinearLayout) rootView, ivBack, recvMylecture);
+      id = R.id.rel_background;
+      RelativeLayout relBackground = ViewBindings.findChildViewById(rootView, id);
+      if (relBackground == null) {
+        break missingId;
+      }
+
+      id = R.id.topbar;
+      LinearLayout topbar = ViewBindings.findChildViewById(rootView, id);
+      if (topbar == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_lecture_title;
+      TextView tvLectureTitle = ViewBindings.findChildViewById(rootView, id);
+      if (tvLectureTitle == null) {
+        break missingId;
+      }
+
+      return new ActivityStuMyLectureBinding((RelativeLayout) rootView, card, ivBack, recvMylecture,
+          relBackground, topbar, tvLectureTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

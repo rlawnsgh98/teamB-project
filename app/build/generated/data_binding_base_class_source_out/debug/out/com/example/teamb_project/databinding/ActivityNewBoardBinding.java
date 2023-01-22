@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
@@ -49,11 +50,14 @@ public final class ActivityNewBoardBinding implements ViewBinding {
   @NonNull
   public final RecyclerView recvImgs;
 
+  @NonNull
+  public final RelativeLayout relBar;
+
   private ActivityNewBoardBinding(@NonNull LinearLayout rootView,
       @NonNull MaterialCardView cardBack, @NonNull MaterialCardView cardInsert,
       @NonNull EditText edtContent, @NonNull EditText edtTitle, @NonNull ImageView ivBack,
       @NonNull ImageView ivFile, @NonNull ImageView ivPicture, @NonNull RecyclerView recvFiles,
-      @NonNull RecyclerView recvImgs) {
+      @NonNull RecyclerView recvImgs, @NonNull RelativeLayout relBar) {
     this.rootView = rootView;
     this.cardBack = cardBack;
     this.cardInsert = cardInsert;
@@ -64,6 +68,7 @@ public final class ActivityNewBoardBinding implements ViewBinding {
     this.ivPicture = ivPicture;
     this.recvFiles = recvFiles;
     this.recvImgs = recvImgs;
+    this.relBar = relBar;
   }
 
   @Override
@@ -147,8 +152,14 @@ public final class ActivityNewBoardBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.rel_bar;
+      RelativeLayout relBar = ViewBindings.findChildViewById(rootView, id);
+      if (relBar == null) {
+        break missingId;
+      }
+
       return new ActivityNewBoardBinding((LinearLayout) rootView, cardBack, cardInsert, edtContent,
-          edtTitle, ivBack, ivFile, ivPicture, recvFiles, recvImgs);
+          edtTitle, ivBack, ivFile, ivPicture, recvFiles, recvImgs, relBar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

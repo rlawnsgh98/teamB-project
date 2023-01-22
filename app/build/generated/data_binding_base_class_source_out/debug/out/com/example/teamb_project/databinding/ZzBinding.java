@@ -4,7 +4,9 @@ package com.example.teamb_project.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -24,76 +26,73 @@ public final class ZzBinding implements ViewBinding {
   private final RelativeLayout rootView;
 
   @NonNull
-  public final TextView birthEt;
+  public final Button cancelBtn;
 
   @NonNull
-  public final TextView cancelBtn;
+  public final Button confirmBtn;
 
   @NonNull
-  public final TextView confirmBtn;
+  public final EditText edtEmail;
 
   @NonNull
-  public final EditText emailEt;
+  public final EditText edtName;
 
   @NonNull
-  public final TextView experiencebtn;
+  public final EditText edtPhone;
 
   @NonNull
   public final RadioButton femaleRd;
 
   @NonNull
-  public final EditText idEt;
+  public final ImageView imgvBack;
+
+  @NonNull
+  public final ImageView imgvProfile;
 
   @NonNull
   public final RadioButton maleRd;
 
   @NonNull
-  public final EditText nameEt;
-
-  @NonNull
   public final LinearLayout personalinfo;
 
   @NonNull
-  public final TextView personalinfobtn;
-
-  @NonNull
-  public final EditText phoneEt;
-
-  @NonNull
-  public final EditText pwCkEt;
-
-  @NonNull
-  public final EditText pwEt;
-
-  @NonNull
-  public final RadioGroup radioGroup2;
+  public final RadioGroup rdoGender;
 
   @NonNull
   public final LinearLayout topbar;
 
-  private ZzBinding(@NonNull RelativeLayout rootView, @NonNull TextView birthEt,
-      @NonNull TextView cancelBtn, @NonNull TextView confirmBtn, @NonNull EditText emailEt,
-      @NonNull TextView experiencebtn, @NonNull RadioButton femaleRd, @NonNull EditText idEt,
-      @NonNull RadioButton maleRd, @NonNull EditText nameEt, @NonNull LinearLayout personalinfo,
-      @NonNull TextView personalinfobtn, @NonNull EditText phoneEt, @NonNull EditText pwCkEt,
-      @NonNull EditText pwEt, @NonNull RadioGroup radioGroup2, @NonNull LinearLayout topbar) {
+  @NonNull
+  public final TextView tvBirth;
+
+  @NonNull
+  public final TextView tvId;
+
+  @NonNull
+  public final TextView tvType;
+
+  private ZzBinding(@NonNull RelativeLayout rootView, @NonNull Button cancelBtn,
+      @NonNull Button confirmBtn, @NonNull EditText edtEmail, @NonNull EditText edtName,
+      @NonNull EditText edtPhone, @NonNull RadioButton femaleRd, @NonNull ImageView imgvBack,
+      @NonNull ImageView imgvProfile, @NonNull RadioButton maleRd,
+      @NonNull LinearLayout personalinfo, @NonNull RadioGroup rdoGender,
+      @NonNull LinearLayout topbar, @NonNull TextView tvBirth, @NonNull TextView tvId,
+      @NonNull TextView tvType) {
     this.rootView = rootView;
-    this.birthEt = birthEt;
     this.cancelBtn = cancelBtn;
     this.confirmBtn = confirmBtn;
-    this.emailEt = emailEt;
-    this.experiencebtn = experiencebtn;
+    this.edtEmail = edtEmail;
+    this.edtName = edtName;
+    this.edtPhone = edtPhone;
     this.femaleRd = femaleRd;
-    this.idEt = idEt;
+    this.imgvBack = imgvBack;
+    this.imgvProfile = imgvProfile;
     this.maleRd = maleRd;
-    this.nameEt = nameEt;
     this.personalinfo = personalinfo;
-    this.personalinfobtn = personalinfobtn;
-    this.phoneEt = phoneEt;
-    this.pwCkEt = pwCkEt;
-    this.pwEt = pwEt;
-    this.radioGroup2 = radioGroup2;
+    this.rdoGender = rdoGender;
     this.topbar = topbar;
+    this.tvBirth = tvBirth;
+    this.tvId = tvId;
+    this.tvType = tvType;
   }
 
   @Override
@@ -123,33 +122,33 @@ public final class ZzBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.birth_et;
-      TextView birthEt = ViewBindings.findChildViewById(rootView, id);
-      if (birthEt == null) {
-        break missingId;
-      }
-
       id = R.id.cancel_btn;
-      TextView cancelBtn = ViewBindings.findChildViewById(rootView, id);
+      Button cancelBtn = ViewBindings.findChildViewById(rootView, id);
       if (cancelBtn == null) {
         break missingId;
       }
 
       id = R.id.confirm_btn;
-      TextView confirmBtn = ViewBindings.findChildViewById(rootView, id);
+      Button confirmBtn = ViewBindings.findChildViewById(rootView, id);
       if (confirmBtn == null) {
         break missingId;
       }
 
-      id = R.id.email_et;
-      EditText emailEt = ViewBindings.findChildViewById(rootView, id);
-      if (emailEt == null) {
+      id = R.id.edt_email;
+      EditText edtEmail = ViewBindings.findChildViewById(rootView, id);
+      if (edtEmail == null) {
         break missingId;
       }
 
-      id = R.id.experiencebtn;
-      TextView experiencebtn = ViewBindings.findChildViewById(rootView, id);
-      if (experiencebtn == null) {
+      id = R.id.edt_name;
+      EditText edtName = ViewBindings.findChildViewById(rootView, id);
+      if (edtName == null) {
+        break missingId;
+      }
+
+      id = R.id.edt_phone;
+      EditText edtPhone = ViewBindings.findChildViewById(rootView, id);
+      if (edtPhone == null) {
         break missingId;
       }
 
@@ -159,9 +158,15 @@ public final class ZzBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.id_et;
-      EditText idEt = ViewBindings.findChildViewById(rootView, id);
-      if (idEt == null) {
+      id = R.id.imgv_back;
+      ImageView imgvBack = ViewBindings.findChildViewById(rootView, id);
+      if (imgvBack == null) {
+        break missingId;
+      }
+
+      id = R.id.imgv_profile;
+      ImageView imgvProfile = ViewBindings.findChildViewById(rootView, id);
+      if (imgvProfile == null) {
         break missingId;
       }
 
@@ -171,45 +176,15 @@ public final class ZzBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.name_et;
-      EditText nameEt = ViewBindings.findChildViewById(rootView, id);
-      if (nameEt == null) {
-        break missingId;
-      }
-
       id = R.id.personalinfo;
       LinearLayout personalinfo = ViewBindings.findChildViewById(rootView, id);
       if (personalinfo == null) {
         break missingId;
       }
 
-      id = R.id.personalinfobtn;
-      TextView personalinfobtn = ViewBindings.findChildViewById(rootView, id);
-      if (personalinfobtn == null) {
-        break missingId;
-      }
-
-      id = R.id.phone_et;
-      EditText phoneEt = ViewBindings.findChildViewById(rootView, id);
-      if (phoneEt == null) {
-        break missingId;
-      }
-
-      id = R.id.pw_ck_et;
-      EditText pwCkEt = ViewBindings.findChildViewById(rootView, id);
-      if (pwCkEt == null) {
-        break missingId;
-      }
-
-      id = R.id.pw_et;
-      EditText pwEt = ViewBindings.findChildViewById(rootView, id);
-      if (pwEt == null) {
-        break missingId;
-      }
-
-      id = R.id.radioGroup2;
-      RadioGroup radioGroup2 = ViewBindings.findChildViewById(rootView, id);
-      if (radioGroup2 == null) {
+      id = R.id.rdo_gender;
+      RadioGroup rdoGender = ViewBindings.findChildViewById(rootView, id);
+      if (rdoGender == null) {
         break missingId;
       }
 
@@ -219,9 +194,27 @@ public final class ZzBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ZzBinding((RelativeLayout) rootView, birthEt, cancelBtn, confirmBtn, emailEt,
-          experiencebtn, femaleRd, idEt, maleRd, nameEt, personalinfo, personalinfobtn, phoneEt,
-          pwCkEt, pwEt, radioGroup2, topbar);
+      id = R.id.tv_birth;
+      TextView tvBirth = ViewBindings.findChildViewById(rootView, id);
+      if (tvBirth == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_id;
+      TextView tvId = ViewBindings.findChildViewById(rootView, id);
+      if (tvId == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_type;
+      TextView tvType = ViewBindings.findChildViewById(rootView, id);
+      if (tvType == null) {
+        break missingId;
+      }
+
+      return new ZzBinding((RelativeLayout) rootView, cancelBtn, confirmBtn, edtEmail, edtName,
+          edtPhone, femaleRd, imgvBack, imgvProfile, maleRd, personalinfo, rdoGender, topbar,
+          tvBirth, tvId, tvType);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
