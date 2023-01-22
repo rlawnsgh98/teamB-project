@@ -21,8 +21,6 @@ import com.example.conn.CommonMethod;
 import com.example.teamb_project.R;
 import com.example.teamb_project.common.Common;
 import com.example.teamb_project.databinding.FragmentBoardBinding;
-import com.example.teamb_project.student.StudentHomeActivity;
-import com.example.teamb_project.teacher.TeacherHomeActivity;
 import com.example.teamb_project.vo.BoardVO;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
@@ -167,13 +165,6 @@ public class BoardFragment extends Fragment implements View.OnClickListener{
         }else if(v.getId()==R.id.card_go_top){
             //스크롤 최상단으로 이동
             b.scrBoard.fullScroll(ScrollView.FOCUS_UP);
-        }else if(v.getId()==R.id.iv_back){
-            //돌아가기
-            Activity activity;
-            if(common.getLoginInfo().getType()=="STUD") activity = new StudentHomeActivity();
-            else activity = new TeacherHomeActivity();
-            Intent intent = new Intent(getContext(), activity.getClass());
-            startActivity(intent);
         }else if(v.getId()==R.id.iv_write){
             //글 작성
             Intent intent = new Intent(getContext(), NewBoardActivity.class);

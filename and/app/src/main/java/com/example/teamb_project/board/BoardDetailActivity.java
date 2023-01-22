@@ -160,7 +160,6 @@ public class BoardDetailActivity extends AppCompatActivity implements View.OnCli
         CommonMethod commonMethod = new CommonMethod();
         Common common = new Common();
         Intent intent = getIntent();    //BoardActivity 에서 받은 intent
-        Intent board_intent = new Intent(BoardDetailActivity.this, BoardActivity.class);
         b.linModify.setVisibility(View.GONE);
 
         if(v.getId()== R.id.iv_back){

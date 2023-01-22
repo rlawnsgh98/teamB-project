@@ -73,7 +73,6 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View v) {
         //자유게시판으로 이동하는 Intent
-        Intent board_intent = new Intent(NewBoardActivity.this, BoardActivity.class);
         CommonMethod commonMethod = new CommonMethod();
         Common common = new Common();
 
@@ -98,7 +97,7 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
                             .sendPost("insert.bo", (isResult, data) -> {
                                 if(isResult){
                                     Toast.makeText(this, "글 등록 완료", Toast.LENGTH_SHORT).show();
-                                    startActivity(board_intent);
+                                    finish();
                                 }else{
                                     Log.d(TAG, " insert 실패 ");
                                 }
@@ -108,8 +107,7 @@ public class NewBoardActivity extends AppCompatActivity implements View.OnClickL
                     commonMethod.setParams("param", vo)
                             .sendPostFiles("insert.fi", path_list, name_list, FILE_CODE, (isResult, data) -> {
                                 if(isResult){
-                                    Toast.makeText(this, "글 등록 완료", Toast.LENGTH_SHORT).show();
-                                    startActivity(board_intent);
+                                    finish();
                                 }else{
                                     Log.d(TAG, " insert 실패 ");
                                 }

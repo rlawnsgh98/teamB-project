@@ -72,13 +72,6 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".student.mylecture.Stu_MyLectureActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".board.BoardModifyActivity"
             android:exported="false">
             <meta-data
@@ -95,15 +88,6 @@
             android:name=".drawer.AcInfoActivity"
             android:exported="false" />
         <activity
-            android:name=".drawer.AcCalendarActivity"
-            android:exported="false" />
-        <activity
-            android:name=".counselling.CounselActivity"
-            android:exported="false" />
-        <activity
-            android:name=".notice.NewNoticeActivity"
-            android:exported="false" />
-        <activity
             android:name=".student.mylecture.lecturehome.video_board.VideoDetailActivity"
             android:exported="false" />
         <activity
@@ -111,9 +95,6 @@
             android:exported="false" />
         <activity
             android:name=".teacher.mylecture.lecturehome.LectureDetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".timetable.TTActivity"
             android:exported="false" />
         <activity
             android:name=".member.JoinActivity"
@@ -134,17 +115,8 @@
             android:name=".board.NewBoardActivity"
             android:exported="false" />
         <activity
-            android:name=".board.BoardActivity"
-            android:exported="false" />
-        <activity
             android:name=".teacher.mylecture.MyLectureActivity"
             android:exported="false"></activity>
-        <activity
-            android:name=".teacher.TeacherHomeActivity"
-            android:exported="false"></activity>
-        <activity
-            android:name=".student.StudentHomeActivity"
-            android:exported="false" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

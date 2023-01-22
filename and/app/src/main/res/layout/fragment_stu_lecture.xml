@@ -14,47 +14,6 @@
         android:background="@drawable/background_blue"
         />
 
-    <!--Top Header Layout-->
-    <LinearLayout
-        android:id="@+id/topbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:gravity="center_vertical"
-        android:padding="16dp">
-
-        <ImageView
-            android:id="@+id/iv_back"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:padding="10dp"
-            android:src="@drawable/ic_arrow_back_24dp" />
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="강의"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <Space
-            android:layout_width="50dp"
-            android:layout_height="50dp">
-
-        </Space>
-
-    </LinearLayout>
 
     <!-- 스크롤 뷰 -->
     <androidx.core.widget.NestedScrollView
@@ -88,7 +47,6 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
-        android:layout_below="@+id/topbar"
         >
         <RelativeLayout
             android:id="@+id/rel_background"

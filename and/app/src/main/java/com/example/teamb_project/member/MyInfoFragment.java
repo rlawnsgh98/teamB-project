@@ -12,7 +12,6 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
@@ -35,8 +34,6 @@ import com.example.conn.CommonMethod;
 import com.example.teamb_project.R;
 import com.example.teamb_project.common.Common;
 import com.example.teamb_project.databinding.FragmentMyInfoBinding;
-import com.example.teamb_project.student.StudentHomeActivity;
-import com.example.teamb_project.teacher.TeacherHomeActivity;
 import com.example.teamb_project.vo.MemberVO;
 
 import java.io.File;
@@ -157,14 +154,6 @@ public class MyInfoFragment extends Fragment implements  View.OnFocusChangeListe
             new CommonMethod().setParams("param",vo).sendPostFile("modify_my_info.mj", img_path, (isResult, data) -> {
                 if(isResult) {
                     Toast.makeText(getContext(), "회원정보수정 완료", Toast.LENGTH_SHORT).show();
-
-                    Activity activity;
-                    if(Common.loginInfo.getType()=="STUD") activity = new StudentHomeActivity();
-                    else activity = new TeacherHomeActivity();
-
-                    Intent intent = new Intent(getContext(), activity.getClass());
-                    intent.putExtra("isUpdated", true);
-                    startActivity(intent);
                 }
             });
 

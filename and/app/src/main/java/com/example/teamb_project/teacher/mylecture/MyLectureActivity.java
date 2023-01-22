@@ -10,9 +10,7 @@ import android.widget.ImageView;
 import com.example.teamb_project.R;
 import com.example.teamb_project.common.Common;
 import com.example.teamb_project.common.CommonMethod;
-import com.example.teamb_project.teacher.TeacherHomeActivity;
 import com.example.teamb_project.vo.LectureVO;
-import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
@@ -34,10 +32,7 @@ public class MyLectureActivity extends AppCompatActivity {
 
         selectLectureList();
 
-        back.setOnClickListener(v -> {
-            Intent intent = new Intent(MyLectureActivity.this, TeacherHomeActivity.class);
-            startActivity(intent);
-        });
+
     }
 
     private void selectLectureList(){

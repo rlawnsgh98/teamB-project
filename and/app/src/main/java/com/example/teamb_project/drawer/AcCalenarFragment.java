@@ -49,6 +49,36 @@ public class AcCalenarFragment extends Fragment {
         }});
         b.calendarView.setWeekendDayTextColor(Color.parseColor("#FF0000"));
 
+        select();
+        b.calendarView.setSelectionManager(new SingleSelectionManager(new OnDaySelectedListener() {
+            @Override
+            public void onDaySelected() {
+                Log.d("로그", "onDaySelected: " + b.calendarView.getSelectedDates());
+                Log.d("로그", "onDaySelected: " + new SimpleDateFormat("yyyy-MM-dd").format(b.calendarView.getSelectedDays().get(0).getCalendar().getTime()) );
+                Date date = b.calendarView.getSelectedDays().get(0).getCalendar().getTime() ;
+
+                new CommonMethod().setParams("writedate",new SimpleDateFormat("yyyy-MM-dd").format(b.calendarView.getSelectedDays().get(0).getCalendar().getTime()))
+                        .sendPost("aclist.mj", new CommonMethod.CallBackResult() {
+                            @Override
+                            public void result(boolean isResult, String data) {
+                                ArrayList<BoardVO> aclist = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, new TypeToken<ArrayList<BoardVO>>(){}.getType());
+
+
+                                if(aclist != null) {
+                                    b.ttRecvList.setAdapter(new TTAdapter(getLayoutInflater(), aclist));
+                                    b.ttRecvList.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
+                                }
+                            }
+                        });
+            }
+        }));
+
+
+        b.calendarView.setSelected(true);
+        b.calendarView.getSelectionManager().toggleDay(new Day(Calendar.getInstance().getTime()));
+        return b.getRoot();
+    }
+    public void select(){
         new CommonMethod().sendPost("dates.mj", new CommonMethod.CallBackResult() {
 
             @Override
@@ -79,33 +109,14 @@ public class AcCalenarFragment extends Fragment {
                 b.calendarView.getSelectionManager().toggleDay(new Day(Calendar.getInstance().getTime()));
             }
         });
-        b.calendarView.setSelectionManager(new SingleSelectionManager(new OnDaySelectedListener() {
-            @Override
-            public void onDaySelected() {
-                Log.d("로그", "onDaySelected: " + b.calendarView.getSelectedDates());
-                Log.d("로그", "onDaySelected: " + new SimpleDateFormat("yyyy-MM-dd").format(b.calendarView.getSelectedDays().get(0).getCalendar().getTime()) );
-                Date date = b.calendarView.getSelectedDays().get(0).getCalendar().getTime() ;
-
-                new CommonMethod().setParams("writedate",new SimpleDateFormat("yyyy-MM-dd").format(b.calendarView.getSelectedDays().get(0).getCalendar().getTime()))
-                        .sendPost("aclist.mj", new CommonMethod.CallBackResult() {
-                            @Override
-                            public void result(boolean isResult, String data) {
-                                ArrayList<BoardVO> aclist = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, new TypeToken<ArrayList<BoardVO>>(){}.getType());
 
 
-                                if(aclist != null) {
-                                    b.ttRecvList.setAdapter(new TTAdapter(getLayoutInflater(), aclist));
-                                    b.ttRecvList.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
-                                }
-                            }
-                        });
-            }
-        }));
+    }
 
-
-        b.calendarView.setSelected(true);
-        b.calendarView.getSelectionManager().toggleDay(new Day(Calendar.getInstance().getTime()));
-        return b.getRoot();
+    @Override
+    public void onResume() {
+        super.onResume();
+        select();
     }
 
     @Override

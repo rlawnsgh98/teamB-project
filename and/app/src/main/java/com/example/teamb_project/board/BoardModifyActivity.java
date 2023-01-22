@@ -42,7 +42,6 @@ public class BoardModifyActivity extends AppCompatActivity implements View.OnCli
     @Override
     public void onClick(View v) {
         //자유게시판으로 이동하는 Intent
-        Intent board_intent = new Intent(BoardModifyActivity.this, BoardActivity.class);
         Intent getIntent = getIntent();
 
         CommonMethod commonMethod = new CommonMethod();
@@ -61,7 +60,7 @@ public class BoardModifyActivity extends AppCompatActivity implements View.OnCli
                         .sendPost("update.bo", (isResult, data) -> {
                             if(isResult){
                                 Toast.makeText(this, "수정 완료", Toast.LENGTH_SHORT).show();
-                                startActivity(board_intent);
+                                finish();
                             }else{
                                 Log.d(TAG, " update 실패 ");
                             }

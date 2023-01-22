@@ -77,7 +77,6 @@ public class NewCounselActivity extends AppCompatActivity implements View.OnClic
     @Override
     public void onClick(View v) {
         //상담목록으로
-        Intent intent_counsel = new Intent(NewCounselActivity.this, CounselActivity.class);
 
         if(v.getId()== R.id.iv_back){
             //뒤로가기 클릭시

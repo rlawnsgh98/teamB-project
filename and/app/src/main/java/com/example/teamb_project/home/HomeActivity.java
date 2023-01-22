@@ -16,6 +16,7 @@ import com.example.teamb_project.databinding.ActivityHomeBinding;
 import com.example.teamb_project.drawer.AcCalenarFragment;
 import com.example.teamb_project.member.LoginActivity;
 import com.example.teamb_project.member.MyInfoFragment;
+import com.example.teamb_project.student.mylecture.StuLectureFragment;
 import com.example.teamb_project.teacher.MyLectureFragment;
 import com.example.teamb_project.timetable.TimeTableFragment;
 import com.shrikanthravi.customnavigationdrawer2.data.MenuItem;
@@ -114,6 +115,7 @@ public class HomeActivity extends AppCompatActivity {
         menuItems.add(new MenuItem("내 정보", R.drawable.main_cahr));
         menuItems.add(new MenuItem("학원 일정", R.drawable.main_cahr));
         menuItems.add(new MenuItem("시간표", R.drawable.main_cahr));
+        menuItems.add(new MenuItem("내 강의", R.drawable.main_cahr));
         menuItems.add(new MenuItem("로그아웃", R.drawable.main_cahr));
 
         return menuItems;
@@ -157,6 +159,8 @@ public class HomeActivity extends AppCompatActivity {
         }else if (position == 3){
             changeFragment(  new TimeTableFragment(), title);
         }else if (position == 4){
+            changeFragment(  new StuLectureFragment(), title);
+        }else if (position == 5){
             intent = new Intent(this, LoginActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);

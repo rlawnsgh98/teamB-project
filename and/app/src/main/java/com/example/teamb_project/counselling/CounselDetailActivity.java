@@ -149,8 +149,7 @@ public class CounselDetailActivity extends AppCompatActivity implements View.OnC
                 commonMethod.setParams("counsel_code", getIntent().getIntExtra("counsel_code", -1))
                         .sendPost("delete.co", (isResult, data) -> {
                             Log.d(TAG, "상담 삭제 처리 : " + data);
-                            Intent intent = new Intent(CounselDetailActivity.this, CounselActivity.class);
-                            startActivity(intent);
+                            finish();
                         });
             });
             builder.setNegativeButton("아니오", (dialog, which) -> {});

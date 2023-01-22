@@ -123,8 +123,7 @@ public class CounselAdapter extends RecyclerView.Adapter<CounselAdapter.ViewHold
                 commonMethod.setParams("counsel_code", list.get(i).getCounsel_code())
                         .sendPost("delete.co", (isResult, data) -> {
                             Log.d("log", "상담 삭제 처리 : " + data);
-                            Intent intent = new Intent(activity, CounselActivity.class);
-                            activity.startActivity(intent);
+
                         });
             });
             builder.setNegativeButton("아니오", (dialog, which) -> {});
