@@ -124,7 +124,7 @@
 
             <!--Option Bar-->
 
-            <!--Bootom Cards with sections-->
+           <!--Bootom Cards with sections-->
             <LinearLayout
                 android:id="@+id/personalinfo"
                 android:layout_width="match_parent"
