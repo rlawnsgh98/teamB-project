@@ -11,11 +11,18 @@
 </head>
 <body>
 	<div id="container py-5">
+<<<<<<< HEAD
 		
         <div class="row">
             <div class="col-lg-7 mx-auto bg-white rounded shadow">
             <h1>공지 목록</h1>
 				<table class="table table-fixed table-hover"> 
+=======
+		<h1>공지 목록</h1>
+        <div class="row">
+            <div class="col-lg-7 mx-auto bg-white rounded shadow">
+				<table class="table table-fixed"> 
+>>>>>>> kmj
 					<thead>
 						<tr>
 							<th scope="col" class="col-3">번호</th>

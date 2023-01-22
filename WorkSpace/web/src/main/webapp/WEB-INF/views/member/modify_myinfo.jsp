@@ -16,10 +16,10 @@
 				<h3 class="lnb_title">마이페이지</h3>
 				<ul id="lnb" class="lnb_list" data-code="member">
 					<li id="lnb_enrolment_log">
-						<a href="enrolment_log" target="_self">수강현황</a>
+						<a href="enrolment_log.me" target="_self">수강현황</a>
 					</li>
 					<li id="lnb_modify_myinfo" class="on">
-						<a href="modify_myinfo" target="_self">회원정보수정</a>
+						<a href="modify_myinfo.me" target="_self">회원정보수정</a>
 					</li>
 				</ul>
 			</div>
