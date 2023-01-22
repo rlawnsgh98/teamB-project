@@ -31,10 +31,18 @@ public class AndController {
 	
 	//new TypeToken<ArrayList<String>>(){}.getType()
 	
+	//학원 일정
+	@RequestMapping(value = "/dates.mj", produces ="text/html;charset=utf-8")
+    public String dates() {
+        List<BoardVO> aclist = sql.selectList("board.dates");
+      
+        return new GsonBuilder().setDateFormat("yyyy-MM-dd").create().toJson(aclist);
+    }
+	
 	//프로필 이미지 불러오기
 	@RequestMapping(value="/profile", produces = "text/html;charset=utf-8")
 	public String profile(int member_code) {
-		String path = sql.selectOne("and.profile");
+		String path = sql.selectOne("and.profile", member_code);
 		return path;
 	}
 	
