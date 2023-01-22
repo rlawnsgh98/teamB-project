@@ -11,17 +11,19 @@
 <body>
 	<div id='container py-5'>
 	<form>
-		<table class="table">
+	<div class="col-lg-7 mx-auto bg-white rounded shadow">
+		<table class="table table-fixed">
+		
 				<tr>
-					<td>rownum + 시험문제 제목 + 문제점수</td>
+					<td class='px-4 py-3'><h1>rownum + 시험문제 제목 + 문제점수</h1></td>
 				</tr>
 				<tr>
-					<td>문제 지문 문제 지문문제 지문문제 지문문제 지문문제 지문문제 지문문제 지문문제 지문문제 지문문제 지문문제 지문문제 지문문제 지문문제 지문문제 지문</td>
+					<td class='px-4 py-3'><h5>문제 지문 문제 지문문제 지문문제 지문문제 지문문제 지문문제 지문문제 지문문제 지문문제 지문문제 지문문제 지문문제 지문문제 지문문제 지문문제 지문</h5></td>
 				</tr>
 					
 				<tr>
 					<td>
-						 <div class="select">
+						 <div class="select ">
 						 	객관식 일 떄
 					     	<input type="radio" id="select1" name="question" value=1><label for="select1">1번지문</label>
 					     	<input type="radio" id="select2" name="question" value=2><label for="select2">2번지문</label>
@@ -33,12 +35,13 @@
 				
 				<tr>
 					<td>
-					주관식 일 때
-						<input type="text" name="essay">
-						
+						주관식 일 때
+						  <textarea class="form-control px-4 py-3" placeholder="답안작성"></textarea>
 					</td>
 				</tr>
 		</table>
+		
+		</div>
 	</form>
 	</div>
 </body>

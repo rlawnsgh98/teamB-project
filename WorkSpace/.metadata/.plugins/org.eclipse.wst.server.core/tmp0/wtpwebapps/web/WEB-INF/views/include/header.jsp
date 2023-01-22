@@ -40,7 +40,7 @@
                 <a href="<c:url value="/"/>" class="nav-item nav-link active">홈</a>
                 <a href="list.le?member_code=${loginInfo.member_code }" class="nav-item nav-link">강의</a>
                 <a href="#" class="nav-item nav-link">게시판</a>
-                <a href="#" class="nav-item nav-link">마이페이지</a>
+                <a href="mypage" class="nav-item nav-link">마이페이지</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu m-0">
@@ -48,7 +48,28 @@
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                     </div>
                 </div>
-                <a href="webLogin" class="nav-item nav-link">로그인</a>
+                <div class="right-items">
+				<c:if test="${empty loginInfo }">
+					<div class="loginfo">
+						<ul>
+							<!-- 로그인 하지 않은 경우 -->
+							<li class="nav-link"><a class='btn-fill' href='login'>로그인</a></li>
+							<li class="nav-link"><a class='btn-fill' href='member'>회원가입</a></li>
+						</ul>
+					</div>
+				</c:if>
+				<c:if test="${not empty loginInfo }">
+					<div class="loginfo">
+						<ul>
+							<!-- 로그인 한 경우 -->
+							<li><img class='profile' src="${loginInfo.profilepath}">
+							<li><strong> ${loginInfo.member_name }</strong></li>
+							<li class="nav-link"><a class='btn-fill' href="changePW">비밀번호변경</a></li>
+							<li class="nav-link"><a class='btn-fill' href="logout">로그아웃</a></li>
+						</ul>
+					</div>
+				</c:if>
+			</div>
             </div>
         </div>
     </nav>

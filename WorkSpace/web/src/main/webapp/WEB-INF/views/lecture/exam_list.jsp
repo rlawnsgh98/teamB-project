@@ -11,7 +11,7 @@
 <body>
 
 	<div id="container py-5">
-		<h1>공지 시험목록</h1>
+		<h1>시험목록</h1>
         <div class="row">
             <div class="col-lg-7 mx-auto bg-white rounded shadow">
 				<table class="table table-fixed"> 

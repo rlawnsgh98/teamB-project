@@ -5,7 +5,95 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2023-01-18T17:00:00Z</updated>
+  <updated>2023-01-20T10:51:00Z</updated>
+  <entry>
+    <title>Spring Modulith 0.3 released</title>
+    <link rel="alternate" href="https://spring.io/blog/2023/01/20/spring-modulith-0-3-released" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Oliver Drotbohm</name>
+    </author>
+    <id>tag:spring.io,2023-01-20:5064</id>
+    <updated>2023-01-20T10:51:00Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;Hot on the heels of Spring Boot 3.0.2, I am excited to announce the 0.3 release of Spring Modulith.
+The release is packed with improvements.
+We have tweaked a couple of things that might require your attention and a couple of adapting changes to your code.
+The most notable changes are:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://github.com/spring-projects-experimental/spring-modulith/issues/114"&gt;GH-114&lt;/a&gt; ? We renamed the &lt;code&gt;・.modulith.model&lt;/code&gt; package to &lt;code&gt;・.modulith.core&lt;/code&gt;. This primarily affects &lt;code&gt;ApplicationModules&lt;/code&gt;. Please adapt your imports accordingly.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://github.com/spring-projects-experimental/spring-modulith/issues/120"&gt;GH-120&lt;/a&gt; ? The documentation support now generates diagram files using the &lt;code&gt;*.puml&lt;/code&gt; file extension, as suggested by &lt;a href="https://plantuml.com/sources"&gt;PlantUML&lt;/a&gt;. Please adapt your imports accordingly.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://github.com/spring-projects-experimental/spring-modulith/issues/103"&gt;GH-103&lt;/a&gt; ? &lt;a href="https://docs.spring.io/spring-modulith/docs/0.3.0/api/org/springframework/modulith/ApplicationModuleInitializer.html"&gt;&lt;code&gt;ApplicationModuleInitializer&lt;/code&gt;&lt;/a&gt; implementations will be triggered upon application startup, in the order following the application module dependency structure (more core ones are invoked first). Also, &lt;code&gt;ApplicationModules&lt;/code&gt; exposes a &lt;a href="https://docs.spring.io/spring-modulith/docs/0.3.0/api/org/springframework/modulith/core/ApplicationModules.html#getComparator()"&gt;&lt;code&gt;・.getComparator()&lt;/code&gt;&lt;/a&gt; to order Spring beans that way. Note, that this requires the &lt;a href="https://jgrapht.org/"&gt;JGraphT&lt;/a&gt; library to be on the classpath (automatically pulled in via the &lt;code&gt;spring-modulith-runtime&lt;/code&gt; artifact). See the &lt;a href="https://docs.spring.io/spring-modulith/docs/0.3.0/reference/html/#runtime.application-module-initializer"&gt;reference documentation&lt;/a&gt; for details.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://github.com/spring-projects-experimental/spring-modulith/issues/116"&gt;GH-116&lt;/a&gt; ? &lt;code&gt;PublishedEvents&lt;/code&gt; now sees events published from asynchronous event listeners, too.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://github.com/spring-projects-experimental/spring-modulith/issues/100"&gt;GH-100&lt;/a&gt; ? If you&amp;#8217;re using AssertJ in your tests, you can now use &lt;a href="https://docs.spring.io/spring-modulith/docs/0.3.0/api/org/springframework/modulith/test/AssertablePublishedEvents.html"&gt;&lt;code&gt;AssertablePublishedEvents&lt;/code&gt;&lt;/a&gt; for a more streamlined integration  (for example, &lt;code&gt;assertThat(events).contains(MyEvent.class).matching(・)&lt;/code&gt;).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://github.com/spring-projects-experimental/spring-modulith/issues/117"&gt;GH-117&lt;/a&gt; ? As we incentivize event-based, asynchronous application module integration, the test starter now also pulls in &lt;a href="http://www.awaitility.org/"&gt;Awaitility&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://github.com/spring-projects-experimental/spring-modulith/issues/111"&gt;GH-111&lt;/a&gt; ? We now publish aggregated &lt;a href="https://docs.spring.io/spring-modulith/docs/0.3.0/api/"&gt;Javdoc&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Find a complete change log in the &lt;a href="https://github.com/spring-projects-experimental/spring-modulith/releases/tag/0.3.0"&gt;GitHub release page&lt;/a&gt;. We are looking forward to your feedback in the &lt;a href="https://github.com/spring-projects-experimental/spring-modulith/discussions"&gt;GitHub discussions&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Boot 3.0.2 available now</title>
+    <link rel="alternate" href="https://spring.io/blog/2023/01/19/spring-boot-3-0-2-available-now" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Phil Webb</name>
+    </author>
+    <id>tag:spring.io,2023-01-20:5063</id>
+    <updated>2023-01-20T04:00:00Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I&amp;rsquo;m happy to announce that Spring Boot &lt;code&gt;3.0.2&lt;/code&gt; has been released and is now available from Maven Central.&lt;/p&gt;
+&lt;p&gt;This release includes &lt;a href="https://github.com/spring-projects/spring-boot/releases/tag/v3.0.2"&gt;66 bug fixes, documentation improvements, and dependency upgrades&lt;/a&gt;. Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
+&lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask on &lt;a href="https://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="https://stackoverflow.com/tags/spring-boot"&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community on &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://spring.io/projects/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-boot/docs/3.0.2/reference/html"&gt;Documentation&lt;/a&gt; | &lt;a href="https://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>A Bootiful Podcast: Dr. Amanda Martin, Gradle developer advocate</title>
+    <link rel="alternate" href="https://spring.io/blog/2023/01/19/a-bootiful-podcast-dr-amanda-martin-gradle-developer-advocate" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2023-01-19:5062</id>
+    <updated>2023-01-19T18:00:00Z</updated>
+    <content type="html">&lt;p&gt;Hi, Spring fans! In this installment, &lt;a href="https://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; talks with Gradle developer advocate &lt;a href="https://twitter.com/drAmandaLMartin"&gt;Dr. Amanda Martin (@DrAmandaLMartin)&lt;/a&gt;&lt;/p&gt;
+&lt;iframe title="Dr. Amanda Martin, Gradle developer advocate " allowtransparency="true" height="150" width="100%" style="border: none; min-width: min(100%, 430px);" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=nqsqm-136a0a7-pb&amp;from=pb6admin&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Arial&amp;skin=1&amp;font-color=&amp;logo_link=episode_page&amp;btn-skin=7"&gt;&lt;/iframe&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Boot 2.7.8 available now</title>
+    <link rel="alternate" href="https://spring.io/blog/2023/01/19/spring-boot-2-7-8-available-now" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Andy Wilkinson</name>
+    </author>
+    <id>tag:spring.io,2023-01-19:5061</id>
+    <updated>2023-01-19T17:16:23Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I&amp;rsquo;m happy to announce that Spring Boot &lt;code&gt;2.7.8&lt;/code&gt; has been released and is now available from Maven Central.&lt;/p&gt;
+&lt;p&gt;This release includes &lt;a href="https://github.com/spring-projects/spring-boot/releases/tag/v2.7.8"&gt;40 bug fixes, documentation improvements, and dependency upgrades&lt;/a&gt;. Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
+&lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask on &lt;a href="https://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="https://stackoverflow.com/tags/spring-boot"&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community on &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://spring.io/projects/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-boot/docs/2.7.8/reference/html"&gt;Documentation&lt;/a&gt; | &lt;a href="https://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>Interesting new filters on Spring Cloud Gateway 4.0</title>
     <link rel="alternate" href="https://spring.io/blog/2023/01/18/interesting-new-filters-on-spring-cloud-gateway-4-0" />
@@ -479,82 +567,6 @@
 &lt;p&gt;This release includes &lt;a href="https://github.com/spring-projects/spring-boot/releases/tag/v3.0.1"&gt;54 bug fixes, documentation improvements, and dependency upgrades&lt;/a&gt;. Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
 &lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask on &lt;a href="https://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="https://stackoverflow.com/tags/spring-boot"&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community on &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://spring.io/projects/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-boot/docs/3.0.1/reference/html"&gt;Documentation&lt;/a&gt; | &lt;a href="https://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>A Bootiful Podcast: Field CTO and Chief Evangelist at Gradle Justin Reock</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/12/22/a-bootiful-podcast-field-cto-and-chief-evangelist-at-gradle-justin-reock" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2022-12-22:5044</id>
-    <updated>2022-12-22T19:00:00Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans and happy holidays!! In this installment, Josh Long talks to Field CTO and Chief Evangelist at Gradle Justin Reock. &lt;/p&gt;
-&lt;iframe title="Field CTO and Chief Evangelist at Gradle Justin Reock" allowtransparency="true" height="150" width="100%" style="border: none; min-width: min(100%, 430px);" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=2u8rh-1345c58-pb&amp;from=pb6admin&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Arial&amp;skin=1&amp;font-color=&amp;logo_link=episode_page&amp;btn-skin=7"&gt;&lt;/iframe&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Boot 2.7.7 available now</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/12/22/spring-boot-2-7-7-available-now" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Scott Frederick</name>
-    </author>
-    <id>tag:spring.io,2022-12-22:5043</id>
-    <updated>2022-12-22T18:40:50Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I&amp;rsquo;m happy to announce that Spring Boot &lt;code&gt;2.7.7&lt;/code&gt; has been released and is now available from Maven Central.&lt;/p&gt;
-&lt;p&gt;This release includes &lt;a href="https://github.com/spring-projects/spring-boot/releases/tag/v2.7.7"&gt;24 bug fixes, documentation improvements, and dependency upgrades&lt;/a&gt;. Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
-&lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask on &lt;a href="https://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="https://stackoverflow.com/tags/spring-boot"&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community on &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://spring.io/projects/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-boot/docs/2.7.7/reference/html"&gt;Documentation&lt;/a&gt; | &lt;a href="https://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring - December 20th, 2022</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/12/20/this-week-in-spring-december-20th-2022" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2022-12-20:5042</id>
-    <updated>2022-12-20T13:00:00Z</updated>
-    <content type="html">&lt;br/&gt;
-&lt;img src ="https://github.com/joshlong/blog-images/raw/master/happy-holidays/happy-holidays-2022-small.png"/&gt;
-&lt;p&gt;Hi, Spring fans! It&amp;rsquo;s the 20th of December, 2022 as I write this, which means that by the time we meet again, here on this humble blog, Tuesday next week, Christmas will already have come and gone. Chanukah is already here! Time is sure flying! So, to those of you who celebrate: Happy Chanukah, Merry Christmas, and happy holidays! &lt;/p&gt;
-&lt;p&gt;There&amp;rsquo;s arguably nothing better than the gift of knowledge, so let&amp;rsquo;s dive right into this week&amp;rsquo;s roundup:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/12/15/a-bootiful-podcast-microsoft-s-brian-benz-on-the-state-of-java-microsoft-azure-and-so-much-more"&gt;A Bootiful Podcast: Microsoft&amp;rsquo;s Brian Benz on the state of Java, Microsoft, Azure, and so much more&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/12/15/spring-framework-6-0-3-available-now"&gt;Spring Framework 6.0.3 available now&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/12/19/spring-security-6-0-1-5-8-1-5-7-6-and-5-6-10-available-now"&gt;Spring Security 6.0.1, 5.8.1, 5.7.6 and 5.6.10 available now&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/12/15/spring-for-apache-pulsar-0-1-0-available-now"&gt;Spring for Apache Pulsar 0.1.0 available now&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/12/20/spring-for-graphql-1-1-1-released"&gt;Spring for GraphQL 1.1.1 released&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/722463398/0/baeldung~Fixing-the-No-Main-Manifest-Attribute-in-Spring-Boot"&gt;Fixing the No Main Manifest Attribute in Spring Boot&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Oracle has a nice post: &lt;a href="https://orasites-prodapp.cec.ocp.oraclecloud.com/site/java/post/go-native-with-spring-boot-3-and-graalvm"&gt;Go Native with Spring Boot 3 and GraalVM&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Baeldung has an interesting tutorial on &lt;a href="https://feeds.feedblitz.com/~/722577704/0/baeldung~Introduction-to-Pinpoint"&gt;Pinpoint&lt;/a&gt;, which looks to be a large APM suite with some interesting capabilities.&lt;/li&gt;
-  &lt;li&gt;[Stream Large Byte[] to File With WebClient](&lt;a href="https://feeds.feedblitz.com/~/722459996/0/baeldung~Stream-Large-Byte-to-File-With-WebClient"&gt;https://feeds.feedblitz.com/~/722459996/0/baeldung~Stream-Large-Byte-to-File-With-WebClient&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://kubernetes.io/blog/2022/12/15/dynamic-resource-allocation/"&gt;Blog: Kubernetes 1.26: Alpha API For Dynamic Resource Allocation&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://kubernetes.io/blog/2022/12/19/devicemanager-ga/"&gt;Blog: Kubernetes 1.26: Device Manager graduates to GA&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://kubernetes.io/blog/2022/12/20/validating-admission-policies-alpha/"&gt;Blog: Kubernetes 1.26: Introducing Validating Admission Policies&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://kubernetes.io/blog/2022/12/16/kubernetes-1-26-non-graceful-node-shutdown-beta/"&gt;Blog: Kubernetes 1.26: Non-Graceful Node Shutdown Moves to Beta&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/722080302/0/baeldung~Running-Multiple-Thread-Groups-in-JMeter"&gt;Running Multiple Thread Groups in JMeter&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/722459994/0/baeldung~Extract-Values-using-AssertJ-in-Java"&gt;Extract Values using AssertJ in Java&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Interesting, and well worth bookmarking: how to &lt;a href="https://www.graalvm.org/latest/reference-manual/native-image/guides/build-static-executables/"&gt;build a statically linked or mostly-statically linked native executable with GraalVM&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring for GraphQL 1.1.1 released</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/12/20/spring-for-graphql-1-1-1-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Brian Clozel</name>
-    </author>
-    <id>tag:spring.io,2022-12-20:5041</id>
-    <updated>2022-12-20T10:34:00Z</updated>
-    <content type="html">&lt;p&gt;I&amp;rsquo;m pleased to announce that Spring for GraphQL 1.1.1 is now available on Maven Central.&lt;/p&gt;
-&lt;p&gt;This first maintenance release in the 1.1.x generation includes &lt;a href="https://github.com/spring-projects/spring-graphql/releases/tag/v1.1.1"&gt;19 fixes and documentation improvements&lt;/a&gt;. This version will be shipped with Spring Boot 3.0.1, &lt;a href="https://calendar.spring.io/"&gt;to be released later this week&lt;/a&gt;.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
-&lt;p&gt;If you have general questions, please ask on &lt;a href="https://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="https://stackoverflow.com/tags/spring-graphql"&gt;&lt;code&gt;spring-graphql&lt;/code&gt; tag&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://spring.io/projects/spring-graphql/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-graphql"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-graphql/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-graphql/docs/1.1.1/reference/html"&gt;Documentation&lt;/a&gt; | &lt;a href="https://stackoverflow.com/questions/tagged/spring-graphql"&gt;Stack Overflow&lt;/a&gt;&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>

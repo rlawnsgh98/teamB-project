@@ -189,13 +189,14 @@ ul.grid li{width : 230px; height:150px; border:1px solid #000; box-sizing: borde
 .select input[type=radio]+label{
     display: inline-block;
     cursor: pointer;
-    height: 70px;
-    width: 800px;
+    height: 100px;
+    width: 100%;
     border: 1px solid #333;
     line-height: 24px;
     text-align: center;
     font-weight:bold;
     font-size:13px;
+    margin : 0 0 20px 0;
 }
 .select input[type=radio]+label{
     background-color: #fff;

@@ -2,6 +2,8 @@
     pageEncoding="UTF-8"%>
     
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -60,14 +62,20 @@
 				</table>
 		</div>
 		
-		<div class='btnSet'>
-			<c:if test="${info.state eq 0}">
-				<a class='btn-fill' href=''>제출</a>
-			</c:if>	
-			<c:if test="${info.state eq 1}">
-				<a class='btn-fill' href=''>수정</a>
-			</c:if>
-		</div>		
+		
+		<c:set var="now" value="<%=new java.util.Date()%>" />
+		<c:set var="date"><fmt:formatDate value="${now}" pattern="yyyy-MM-dd" /></c:set> 
+		
+		<c:if test="${info.duedate >= date }">
+			<div class='btnSet'>
+				<c:if test="${info.state eq 0}">
+					<a class='btn-fill' href=''>제출</a>
+				</c:if>	
+				<c:if test="${info.state eq 1}">
+					<a class='btn-fill' href=''>수정</a>
+				</c:if>
+			</div>
+		</c:if>		
 	</div>
 	
 

@@ -13,9 +13,11 @@
 	
 	<!-- 선택한 강의의 강의정보, 강사정보 -->
 	<select id="info" resultType="vo.MemberVO">
-		select  l.* ,m.*
+		select  l.* ,m.*, t.timetable_name
 		from member m left outer join lecture l
 		on m.member_code = l.teacher_code
+        left outer join timetable t
+        on l.timetable_code = t.timetable_code
 		where lecture_code = #{lecture_code} 
 	</select>
 	
