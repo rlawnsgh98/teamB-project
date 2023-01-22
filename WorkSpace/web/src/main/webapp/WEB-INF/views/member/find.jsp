@@ -38,37 +38,26 @@
 				</div>
 				<div class="content_body">
 					<div class="find_box1">
-						<div class="find_title">
-							아이디 찾기
-						</div>
+						<div class="find_title">아이디 찾기</div>
 						<div class="find_content">
 							<ul class="tab_tt">
-								<li class="tab_title1">
-									<a>이메일 인증</a>
-								</li>
-								<li class="tab_title2">
-									<a>SMS 인증</a>
-								</li>
+								<li class="tab_title1"><a>이메일 인증</a></li>
+								<li class="tab_title2"><a>SMS 인증</a></li>
 							</ul>
 							<div class="tab_con_wrap">
 								<div class="tab_con">
 									<div class="find_box">
 										<ul class="find_id">
-											<li>
-												<strong>이름</strong>
+											<li><strong>이름</strong>
 												<div class="input_size">
 													<input type="text">
-												</div>
-											</li>
-											<li>
-												<strong>이메일</strong>
+												</div></li>
+											<li><strong>이메일</strong>
 												<div class="input_size">
 													<input type="text">
-												</div>
-											</li>
-											<li class="find_btn">
-												<a href="#" class="btn btn-dark text-white">아이디 찾기</a>
-											</li>
+												</div></li>
+											<li class="find_btn"><a href="#"
+												class="btn btn-dark text-white">아이디 찾기</a></li>
 										</ul>
 									</div>
 								</div>
@@ -76,37 +65,26 @@
 						</div>
 					</div>
 					<div class="find_box1">
-						<div class="find_title">
-							비밀번호 찾기
-						</div>
+						<div class="find_title">비밀번호 찾기</div>
 						<div class="find_content">
 							<ul class="tab_tt">
-								<li class="tab_title1">
-									<a>이메일 인증</a>
-								</li>
-								<li class="tab_title2">
-									<a>SMS 인증</a>
-								</li>
+								<li class="tab_title1"><a>이메일 인증</a></li>
+								<li class="tab_title2"><a>SMS 인증</a></li>
 							</ul>
 							<div class="tab_con_wrap">
 								<div class="tab_con">
 									<div class="find_box">
 										<ul class="find_id">
-											<li>
-												<strong>아이디</strong>
+											<li><strong>아이디</strong>
 												<div class="input_size">
 													<input type="text">
-												</div>
-											</li>
-											<li>
-												<strong>이메일</strong>
+												</div></li>
+											<li><strong>이메일</strong>
 												<div class="input_size">
 													<input type="text">
-												</div>
-											</li>
-											<li class="find_btn">
-												<a href="#" class="btn btn-dark text-white">비밀번호 찾기</a>
-											</li>
+												</div></li>
+											<li class="find_btn"><a href="#"
+												class="btn btn-dark text-white">비밀번호 찾기</a></li>
 										</ul>
 									</div>
 								</div>

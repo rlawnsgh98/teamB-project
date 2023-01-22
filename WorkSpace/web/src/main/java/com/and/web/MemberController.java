@@ -99,7 +99,21 @@ public class MemberController {
 		return "member/mypage";
 	}
 
-	// 회원 정보 수정 화면 요청
+	// 회원 정보 수정 화면 요청 - 개인정보수정
+	@RequestMapping("/modify_verify.me")
+	public String modify_verify(HttpSession session) {
+		// 응답화면연결
+		return "member/modify_verify";
+	}
+
+	// 회원 정보 수정 화면 요청 - 비밀번호변경
+	@RequestMapping("/modify_pw.me")
+	public String modify_pw(HttpSession session) {
+		// 응답화면연결
+		return "member/modify_pw";
+	}
+
+	// 회원 정보 수정 화면 요청 - 수정 양식 작성창
 	@RequestMapping("/modify_myinfo.me")
 	public String modify_myinfo(HttpSession session) {
 		// 응답화면연결
@@ -112,7 +126,7 @@ public class MemberController {
 		// 응답화면연결
 		return "member/enrolment_log";
 	}
-	
+
 	// 회원 아이디/비밀번호 찾기 화면 요청
 	@RequestMapping("/find.me")
 	public String find(HttpSession session) {

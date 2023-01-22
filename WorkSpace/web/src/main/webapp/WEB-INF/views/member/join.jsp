@@ -131,8 +131,9 @@
 												class="join_required">프로필 이미지</label></th>
 											<td>
 												<div class='align'>
-													<label> <input type='file' id='attach-file' style="border:none; padding: 0"
-														accept="image/*" name='profilepath' class="w200">
+													<label> <input type='file' id='attach-file'
+														style="border: none; padding: 0" accept="image/*"
+														name='profilepath' class="w200">
 													</label> <span id='preview'></span> <a id='delete-file'><i
 														class="font-r fa-solid fa-trash-can"></i></a>
 												</div>
@@ -148,8 +149,6 @@
 							</form>
 						</div>
 					</div>
-
-
 				</div>
 			</div>
 		</div>

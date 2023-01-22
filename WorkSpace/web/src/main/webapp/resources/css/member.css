@@ -28,6 +28,10 @@ input[type="text"], input[type=password] {
 	margin-top: 30px;
 }
 
+#contet_area2 {
+	position: static;
+}
+
 #login_btn {
 	width: 100%;
 	height: 50px;
@@ -151,12 +155,12 @@ input[type="text"], input[type=password] {
 	overflow: hidden;
 }
 
-.join_table {
+.join_table, .modify_table {
 	border-top: 1px solid #000;
 	width: 1200px;
 }
 
-.join_table>tbody>tr {
+.join_table>tbody>tr, .modify_table>tbody>tr {
 	border-bottom: 1px solid #d1d1d1;
 }
 
@@ -166,7 +170,7 @@ input[type="text"], input[type=password] {
 	background-color: #f8f8f8;
 }
 
-.join_table>tbody>tr>td {
+.join_table>tbody>tr>td, .modify_table>tbody>tr>td {
 	padding: 10px;
 	text-align: left;
 }
@@ -177,10 +181,12 @@ input[type="text"], input[type=password] {
 
 .board_btn {
 	margin: 10px;
+	text-align: center;
 }
 
 .board_btn>a {
 	padding: 10px 80px;
+	margin: 10px 20px;
 }
 
 .join_box_title>h5 {
@@ -215,11 +221,11 @@ input[type="text"], input[type=password] {
 	background: #f9f9f9;
 }
 
-/* =================================== */
 .find_content {
 	width: 100%;
 	padding: 30px;
 }
+
 .tab_wrap {
 	position: relative;
 	margin: 10px 20px;
@@ -230,16 +236,16 @@ input[type="text"], input[type=password] {
 	display: inline-block;
 	height: 36px;
 	box-sizing: border-box;
-	border-bottom: 1px solid #dedede;	
+	border-bottom: 1px solid #dedede;
 }
 
-.tab_tt > li {
+.tab_tt>li {
 	float: left;
 	position: relative;
 	padding: 5px 10px;
 }
 
-.tab_title > a {
+.tab_title>a {
 	font-size: 20px;
 	color: #000;
 }
@@ -253,7 +259,7 @@ input[type="text"], input[type=password] {
 	margin: 0 auto;
 }
 
-.find_id > li {
+.find_id>li {
 	overflow: hidden;
 	position: relative;
 	padding-left: 90px;
@@ -261,7 +267,7 @@ input[type="text"], input[type=password] {
 	line-height: 40px;
 }
 
-.find_id > li > strong {
+.find_id>li>strong {
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -273,19 +279,19 @@ input[type="text"], input[type=password] {
 	text-align: left;
 }
 
-.find_id > li > div {
+.find_id>li>div {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 }
 
-.find_id > li > input[type=text] {
+.find_id>li>input[type=text] {
 	margin-top: 1px;
 	height: 40px;
 	line-height: 40px;
 }
 
-.input_size > input[type="text"] {
+.input_size>input[type="text"] {
 	width: 100%;
 	height: auto;
 	margin: 10px 0;
@@ -295,11 +301,295 @@ input[type="text"], input[type=password] {
 .find_id li.find_btn {
 	padding: 0;
 }
-.find_btn > a {
+
+.find_btn>a {
 	width: 100%;
 	padding: 15px 10px;
 }
 
 .tab_title1 {
 	border-bottom: 3px solid #000;
+}
+
+.my_box {
+	box-sizing: border-box;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	max-width: 1200px;
+	height: 220px;
+	margin: 0 auto;
+	border: 1px solid #d7d7d7;
+}
+
+.my_box>.my_info {
+	box-sizing: border-box;
+	padding: 30px;
+	position: absolute;
+	width: 50%;
+	height: 220px;
+}
+
+.my_box>.my_note {
+	box-sizing: border-box;
+	padding: 30px;
+	margin-left: 50%;
+	border-left: 1px solid #d7d7d7;
+	height: 220px;
+}
+
+.my_box>.my_info>h6, .my_box>.my_note>h6 {
+	color: #2d2d2d;
+	font-size: 20px;
+	text-align: left;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #cccccc;
+}
+
+.h6_sub {
+	color: #757575;
+	font-size: 14px;
+	padding-left: 21px;
+}
+
+.my_box>.my_info>.my_info_in, .my_box>.my_note>.my_info_in {
+	padding: 20px 0 0 100px;
+	min-height: 80px;
+	text-align: left;
+}
+
+.my_box>.my_info>.my_info_in {
+	background:
+		url('https://www.moneydoclass.co.kr/common/images_skin2/common/myinfo_img.jpg')
+		no-repeat 0 20px;
+}
+
+.my_box>.my_info>li {
+	overflow: hidden;
+	height: 20px;
+	line-height: 20px;
+	margin-bottom: 5px;
+}
+
+.my_box>.my_info>li>strong {
+	display: block;
+	float: left;
+	width: 70px;
+}
+
+.my_box>.my_info>li>span {
+	display: block;
+	float: left;
+	width: 190px;
+}
+
+.my_box>.my_info>li>span.name {
+	font-weight: 700;
+	color: #3c3c3c;
+}
+
+.my_box>.my_info>.btn_more {
+	position: absolute;
+	right: 30px;
+	top: 30px;
+}
+
+.my_box>.my_info>.btn_more>a {
+	font-size: 10px;
+}
+
+.list_top {
+	text-align: left;
+	margin: 26px 0;
+}
+
+.enrolmented_log_box {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	text-align: left;
+	position: relative;
+}
+
+.enrolment_log_box, .consulting_box {
+	width: 100%;
+	max-width: 1200px;
+	margin: 30px auto;
+	text-align: left;
+	position: relative;
+}
+
+.mypage_course_user_list>table {
+	width: 100%;
+	max-width: 1200px;
+}
+
+.mypage_course_user_list>table>thead>tr>th {
+	text-align: center;
+}
+
+.tb_title {
+	margin-bottom: 10px;
+}
+
+.tb_box>table>thead>tr {
+	border-bottom: 1px solid #727272;
+}
+
+.tb_box>table>thead>tr>th {
+	border-top: 1px solid #727272;
+	padding: 10px;
+}
+
+.tac {
+	text-align: center;
+	padding: 10px;
+	border-bottom: 1px solid #cccccc;
+}
+
+.tb_title>span {
+	font-size: 0.6em;
+}
+
+.my_info_in>li>strong {
+	float: left;
+	width: 80px;
+	padding-right: 10px;
+}
+
+.grayline_tab {
+	width: 100%;
+	display: inline-block;
+	height: 68px;
+}
+
+.grayline_tab2 {
+	width: 100%;
+	height: 68px;
+}
+
+.tab_tt {
+	width: 100%;
+	box-sizing: border-box;
+	height: 50px;
+	background: none;
+	padding: 1px 0 0 1px;
+	margin-bottom: 30px;
+}
+
+.tab_tt>li {
+	float: left;
+	position: relative;
+	width: auto;
+	padding: 0;
+	height: 50px;
+}
+
+.tab_tt>li.on {
+	border-bottom: 3px solid #000; /* 수강 중인 과정 / 종료된 과정 - 밑줄 이동 이벤트 */
+}
+
+.tab_tt>li.on a {
+	position: relative;
+	width: auto;
+	line-height: 50px;
+	padding: 0px 10px;
+	color: #000;
+	background: none;
+}
+
+.course_tab li {
+	margin-right: 10px;
+	box-sizing: border-box;
+}
+
+.tab_tt>li>a {
+	display: block;
+	font-size: 1.1em;
+	line-height: 50px;
+	margin-right: 10px;
+	padding: 0 10px;
+	color: #333;
+	border: none;
+	background: none;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+.search_form_wrap4 {
+	display: block;
+	float: right;
+	margin: 10px 0;
+	padding: 0;
+	text-align: right;
+}
+
+.search_form_wrap4 .search_form {
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+
+.btn_sort {
+	float: right;
+	text-align: right;
+}
+
+.modify_myinfo_box {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	text-align: left;
+	position: relative;
+}
+
+.passwd_box {
+	padding: 50px 0;
+	text-align: center;
+	font-size: 20px;
+	border: 1px solid #d2d2d2;
+}
+
+.box_sub>p {
+	margin: 20px 0;
+}
+
+.box_pw {
+	margin-top: 30px;
+}
+
+.box_pw>input[type=password] {
+	width: 300px;
+	height: 40px;
+	margin: 0;
+	vertical-align: bottom;
+}
+
+.box_pw>a {
+	height: 40px;
+}
+
+.modify_myinfo {
+	margin-bottom: 20px;
+}
+
+.modify_pw_box {
+	border-top: 1px solid #727272;
+}
+
+.modify_pw_box>table {
+	width: 100%;
+}
+
+.modify_pw_box>table>tbody>tr {
+	border-bottom: 1px solid #cccccc;
+}
+
+.modify_btn {
+	margin: 20px;
+	text-align: center;
+}
+
+.modify_btn>a {
+	margin: 0 10px;
+	padding: 5px 40px;
 }
