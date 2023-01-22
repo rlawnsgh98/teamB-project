@@ -42,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
         new Common().changeStatusBarColor(this);
 
         // IP 설정
-        ApiClient.setBASEURL("http://192.168.219.102/middle/");
+        ApiClient.setBASEURL("http://192.168.1.2/middle/");
         id_et = findViewById(R.id.id_et);
         pw_et = findViewById(R.id.et_pw);
 

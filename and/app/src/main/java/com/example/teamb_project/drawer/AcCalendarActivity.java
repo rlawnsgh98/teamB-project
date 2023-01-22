@@ -55,31 +55,31 @@ public class AcCalendarActivity extends AppCompatActivity {
 
         new CommonMethod().sendPost("dates.mj", new CommonMethod.CallBackResult() {
 
-                            @Override
-                            public void result(boolean isResult, String data) {
-                                ArrayList<BoardVO> aclist = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, new TypeToken<ArrayList<BoardVO>>(){}.getType());
-                                Set<Long> days = new TreeSet<>();
-                                for(int i = 0 ; i < aclist.size() ; i ++){
+            @Override
+            public void result(boolean isResult, String data) {
+                ArrayList<BoardVO> aclist = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, new TypeToken<ArrayList<BoardVO>>(){}.getType());
+                Set<Long> days = new TreeSet<>();
+                for(int i = 0 ; i < aclist.size() ; i ++){
 
-                                    Log.d("로그", "onDaySelected: " + new SimpleDateFormat("yyyy-MM-dd").format( aclist.get(i).getWritedate().getTime()));
-                                    days.add(aclist.get(i).getWritedate().getTime()  );
-                                }
+                    Log.d("로그", "onDaySelected: " + new SimpleDateFormat("yyyy-MM-dd").format( aclist.get(i).getWritedate().getTime()));
+                    days.add(aclist.get(i).getWritedate().getTime()  );
+                }
 
 
-                                int textColor = Color.parseColor("#0040FF");
-                                int selectedTextColor = Color.parseColor("#0040FF");
-                                int disabledTextColor = Color.parseColor("#0040FF");
-                                ConnectedDays connectedDays = new ConnectedDays(days, textColor, selectedTextColor, disabledTextColor);
-                                b.calendarView.addConnectedDays(connectedDays);
-                                b.calendarView.setConnectedDayIconRes(R.drawable.selection_date);
-                                b.calendarView.setConnectedDaySelectedIconRes(R.drawable.selection_date);
-                                b.calendarView.setConnectedDayIconPosition(ConnectedDayIconPosition.TOP);
+                int textColor = Color.parseColor("#0040FF");
+                int selectedTextColor = Color.parseColor("#0040FF");
+                int disabledTextColor = Color.parseColor("#0040FF");
+                ConnectedDays connectedDays = new ConnectedDays(days, textColor, selectedTextColor, disabledTextColor);
+                b.calendarView.addConnectedDays(connectedDays);
+                b.calendarView.setConnectedDayIconRes(R.drawable.selection_date);
+                b.calendarView.setConnectedDaySelectedIconRes(R.drawable.selection_date);
+                b.calendarView.setConnectedDayIconPosition(ConnectedDayIconPosition.TOP);
 
-                                b.calendarView.setCalendarOrientation(ConstraintLayout.LayoutParams.HORIZONTAL);
-                                b.calendarView.setFirstDayOfWeek(Calendar.SUNDAY);
-                                b.calendarView.update();
-                            }
-                        });
+                b.calendarView.setCalendarOrientation(ConstraintLayout.LayoutParams.HORIZONTAL);
+                b.calendarView.setFirstDayOfWeek(Calendar.SUNDAY);
+                b.calendarView.update();
+            }
+        });
         b.calendarView.setSelectionManager(new SingleSelectionManager(new OnDaySelectedListener() {
             @Override
             public void onDaySelected() {
