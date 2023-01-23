@@ -180,7 +180,6 @@ public class CommonMethod {
                 t.printStackTrace(); // 어떤 오류인지 로그에 찍히게 처리
             }
         });
-
     }
 
     //파일이름 고정으로("img.png") 저장
@@ -195,7 +194,6 @@ public class CommonMethod {
 
     //원래 파일 이름 그대로 저장
     public MultipartBody.Part pathToPartFile(String filepath, String filename, int type){
-//        String ss = filename.substring(filename.indexOf(".") , filename.length());
         if( filepath != null ){
             RequestBody fileBody = null;
             if(type==1000){

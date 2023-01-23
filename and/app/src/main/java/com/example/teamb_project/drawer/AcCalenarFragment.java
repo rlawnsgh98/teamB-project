@@ -86,7 +86,6 @@ public class AcCalenarFragment extends Fragment {
                 ArrayList<BoardVO> aclist = new GsonBuilder().setDateFormat("yyyy-MM-dd").create().fromJson(data, new TypeToken<ArrayList<BoardVO>>(){}.getType());
                 Set<Long> days = new TreeSet<>();
                 for(int i = 0 ; i < aclist.size() ; i ++){
-
                     Log.d("로그", "onDaySelected: " + new SimpleDateFormat("yyyy-MM-dd").format( aclist.get(i).getWritedate().getTime()));
                     days.add(aclist.get(i).getWritedate().getTime()  );
                 }
