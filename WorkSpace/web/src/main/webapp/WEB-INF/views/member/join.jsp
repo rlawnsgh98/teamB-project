@@ -154,6 +154,7 @@
 		</div>
 	</div>
 	<script src='js/member.js?<%=new java.util.Date()%>'></script>
+	<script src='js/common.js?<%=new java.util.Date() %>'></script>
 	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 	<script
 		src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>

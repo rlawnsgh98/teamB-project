@@ -149,14 +149,14 @@ public class MemberController {
 		return "member/lec_list_test2";
 	}
 	
-	// 수강신청 - 강의 상세 화면
+	// 수강신청 - 강의 상세 화면 - no
 	@RequestMapping("/en_lec_detail.le")
 	public String en_lec_detai(HttpSession session) {
 		// 응답화면연결
 		return "member/enrolment_lecture_detail2";
 	}
 	
-	// 수강신청 - 강의 상세 화면
+	// 수강신청 - 강의 상세 화면 - no
 	@RequestMapping("/terms.me")
 	public String terms(HttpSession session) {
 		// 응답화면연결

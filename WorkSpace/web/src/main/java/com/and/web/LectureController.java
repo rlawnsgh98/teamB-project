@@ -140,5 +140,12 @@ public class LectureController {
 		return "lecture/exam_take";
 	}
 	
+	// 강의 개설 화면
+	@RequestMapping("/open_lecture.le")
+	public String open_lecture(HttpSession session) {
+		// 응답화면연결
+		return "lecture/open_lecture";
+	}
+	
 		
 }
