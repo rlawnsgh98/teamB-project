@@ -400,7 +400,6 @@ input[type="text"], input[type=password] {
 
 .list_top {
 	text-align: left;
-	margin: 26px 0;
 }
 
 .enrolmented_log_box {
@@ -531,7 +530,12 @@ input[type="text"], input[type=password] {
 
 .btn_sort {
 	float: right;
+	margin-right: 5px;
 	text-align: right;
+	line-height: 50px;
+}
+.btn_sort2 span {
+	margin-right: 10px;
 }
 
 .modify_myinfo_box {

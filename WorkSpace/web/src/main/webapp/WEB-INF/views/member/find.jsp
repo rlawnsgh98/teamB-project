@@ -12,7 +12,7 @@
 	href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 </head>
 <body>
-	<h1 class="d-none">홈-회원서비스-아이디/비밀번호 찾기</h1>
+	<h1 class="d-none">홈-회원서비스-비밀번호 찾기</h1>
 	<div id="container" class="ct_top">
 		<div class="main_wrap">
 			<h2 class="lnb_title text-center text-dark">회원 서비스</h2>
@@ -33,7 +33,7 @@
 				<div class="path">
 					<ol class='path_list'>
 						<li>회원 서비스</li>
-						<li class="last">아이디/비밀번호 찾기</li>
+						<li class="last">비밀번호 찾기</li>
 					</ol>
 				</div>
 				<div class="content_body">

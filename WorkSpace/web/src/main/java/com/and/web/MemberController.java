@@ -133,4 +133,33 @@ public class MemberController {
 		// 응답화면연결
 		return "member/find";
 	}
+	
+	// 수강신청 - 강의 목록 화면 - 겔러리형
+	@RequestMapping("/privacy.me")
+	public String lec_list_test(HttpSession session) {
+		// 응답화면연결
+		/* return "member/enrolment_lecture"; */
+		return "member/lec_list_test";
+	}
+	
+	// 수강신청 - 강의 목록 화면 - 리스트형
+	@RequestMapping("/justlist.le")
+	public String lec_list_test2(HttpSession session) {
+		// 응답화면연결
+		return "member/lec_list_test2";
+	}
+	
+	// 수강신청 - 강의 상세 화면
+	@RequestMapping("/en_lec_detail.le")
+	public String en_lec_detai(HttpSession session) {
+		// 응답화면연결
+		return "member/enrolment_lecture_detail2";
+	}
+	
+	// 수강신청 - 강의 상세 화면
+	@RequestMapping("/terms.me")
+	public String terms(HttpSession session) {
+		// 응답화면연결
+		return "member/enrolment_lecture_detail";
+	}
 }

@@ -34,7 +34,7 @@
 				<div class="path">
 					<ol class='path_list'>
 						<li>회원 서비스</li>
-						<li class="last">로그인</li>
+						<li class="last">회원가입</li>
 					</ol>
 				</div>
 				<div class="content_body">
