@@ -13,7 +13,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@color/main_dark"
+        android:background="@color/deep_dark"
         >
         <ImageView
             android:id="@+id/iv_back"

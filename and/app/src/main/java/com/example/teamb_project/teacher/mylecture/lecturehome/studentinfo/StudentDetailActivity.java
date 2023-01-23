@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.conn.CommonMethod;
@@ -24,11 +25,17 @@ public class StudentDetailActivity extends AppCompatActivity {
     TabLayout tab_layout;
     TextView tv_student_name, tv_student_phone;
     MemberVO info;
+    ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_detail);
+
+        back = findViewById(R.id.iv_back);
+        back.setOnClickListener( v -> {
+            onBackPressed();
+        });
 
         //선택한 학생의 멤버코드
         student_code = getIntent().getStringExtra("student_code");

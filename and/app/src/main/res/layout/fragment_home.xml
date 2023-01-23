@@ -190,7 +190,7 @@
                                 style="@style/viewParent.headerText"
                                 android:layout_alignParentLeft="true"
                                 android:layout_alignParentTop="true"
-                                android:text="수강 신청" />
+                                android:text="내 강의" />
 
                             <TextView
                                 android:id="@+id/tv_lecture"
@@ -216,11 +216,11 @@
                                 android:layout_height="match_parent"
                                 android:orientation="horizontal">
 
-                                <include layout="@layout/item_popular_courses" />
-
-                                <include layout="@layout/item_popular_courses" />
-
-                                <include layout="@layout/item_popular_courses" />
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/recv_lecture"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    />
 
                             </LinearLayout>
                         </HorizontalScrollView>
@@ -250,25 +250,46 @@
 
                         <!--remove the below layout with recycler view, use card poplar courses as model for design-->
 
-
-                        <HorizontalScrollView
+<!--303D59-->
+                        <!-- 자유게시판 글 목록 5개만 -->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_board"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:scrollbars="none">
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:minHeight="200dp"
+                            app:cardBackgroundColor="#303D59"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="@dimen/card_maincourse_elevation"
+                            app:cardPreventCornerOverlap="false">
 
-                            <LinearLayout
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:layout_margin="10dp"
+                                android:id="@+id/recv_board"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="20dp"
-                                android:orientation="horizontal">
+                                />
 
-                                <include layout="@layout/item_popular_courses" />
-                                <include layout="@layout/item_popular_courses" />
+                        </androidx.cardview.widget.CardView>
 
-                                <include layout="@layout/item_popular_courses" />
+<!--                        <HorizontalScrollView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:scrollbars="none">-->
 
-                            </LinearLayout>
-                        </HorizontalScrollView>
+<!--                            <LinearLayout-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_marginTop="20dp"-->
+<!--                                android:orientation="horizontal">-->
+
+<!--                                <include layout="@layout/item_popular_courses" />-->
+<!--                                <include layout="@layout/item_popular_courses" />-->
+<!--                                <include layout="@layout/item_popular_courses" />-->
+
+<!--                            </LinearLayout>-->
+<!--                        </HorizontalScrollView>-->
                     </LinearLayout>
                 </androidx.core.widget.NestedScrollView>
 

@@ -2,6 +2,20 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="and">
 	
+	<!-- 자유게시판 5개 조회 -->
+	<select id="board_num" resultType='vo.BoardVO'>
+	<![CDATA[
+	select  *
+	from    (select b.*, member_name, row_number() over(order by board_code) no
+	        from board b inner join member m 
+	        on b.writer = m.member_code 
+	        where category = 'bo'
+	        order by no desc
+	        )
+	where   rownum < 6
+	]]>
+	</select>
+	
 	<!-- 프로필 경로 조회 -->
 	<select id="profile" resultType='string'>
 	select profilepath from member where member_code = #{member_code}

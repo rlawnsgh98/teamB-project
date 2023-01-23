@@ -31,6 +31,12 @@ public class AndController {
 	
 	//new TypeToken<ArrayList<String>>(){}.getType()
 	
+	//자유게시판 5개 조회 - 홈화면에 쓸것
+	@RequestMapping(value = "/board_num.bo", produces ="text/html;charset=utf-8")
+	public String lectures() {
+		return new GsonBuilder().setDateFormat("yyyy.MM.dd").create().toJson(sql.selectList("and.board_num"));
+	}
+	
 	//학원 일정
 	@RequestMapping(value = "/dates.mj", produces ="text/html;charset=utf-8")
     public String dates() {

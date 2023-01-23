@@ -29,7 +29,7 @@ public class LectureHomeFragment extends Fragment {
         this.lecture_code = lecture_code;
     }
 
-    TextView tv_lecture_teacher;
+//    TextView tv_lecture_teacher;
     MemberVO info;
     ArrayList<LectureBoardVO> list;
     RecyclerView recv_lecture_notice;
@@ -39,7 +39,6 @@ public class LectureHomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_lecture_home, container, false);
 
-        tv_lecture_teacher = v.findViewById(R.id.tv_lecture_teacher);
         recv_lecture_notice = v.findViewById(R.id.recv_lecture_notice);
         selectTeacher(lecture_code);
         selectNotice();
@@ -68,7 +67,7 @@ public class LectureHomeFragment extends Fragment {
                     @Override
                     public void result(boolean isResult, String data) {
                         info = new Gson().fromJson(data, MemberVO.class);
-                        tv_lecture_teacher.setText(info.getMember_name());
+//                        tv_lecture_teacher.setText(info.getMember_name());
                     }
                 });
     }
