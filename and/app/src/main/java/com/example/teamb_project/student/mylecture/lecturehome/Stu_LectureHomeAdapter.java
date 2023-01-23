@@ -30,7 +30,7 @@ public class Stu_LectureHomeAdapter extends RecyclerView.Adapter<Stu_LectureHome
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = inflater.inflate(R.layout.item_lecture_notice, parent, false);
+        View v = inflater.inflate(R.layout.item_notice, parent, false);
         ViewHolder viewHolder = new ViewHolder(v);
 
         return viewHolder;
