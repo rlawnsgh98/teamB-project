@@ -14,7 +14,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h3>공지 작성</h3>
+	<h3>영상강의 등록</h3>
 	
 	<div id="container py-5">
 		<div class="col-lg-7 mx-auto bg-white rounded shadow">

@@ -5,7 +5,32 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2023-01-20T10:51:00Z</updated>
+  <updated>2023-01-24T09:00:00Z</updated>
+  <entry>
+    <title>This Week in Spring - SpringOne Essentials 2023 edition - January 24th, 2023</title>
+    <link rel="alternate" href="https://spring.io/blog/2023/01/24/this-week-in-spring-springone-essentials-2023-edition-january-24th-2023" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2023-01-24:5065</id>
+    <updated>2023-01-24T09:00:00Z</updated>
+    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! Today is a very day for you see, today we kick off SpringOne Essentials, the online incarnation of SpringOne, online. &lt;a href="https://springone.io/livestream"&gt;We&amp;rsquo;ll see you live, on stream, in just a few hours!&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;SpringOne Essentials is going to be amazing, but before we get there, and learn about all the big things in the Spring ecosystem for the last year, let&amp;rsquo;s look at all the big things in the last week, with this week&amp;rsquo;s recap! &lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2023/01/19/spring-boot-2-7-8-available-now"&gt;Spring Boot 2.7.8 available now&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2023/01/19/spring-boot-3-0-2-available-now"&gt;Spring Boot 3.0.2 available now&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2023/01/20/spring-modulith-0-3-released"&gt;Spring Modulith 0.3 released&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2023/01/19/a-bootiful-podcast-dr-amanda-martin-gradle-developer-advocate"&gt;A Bootiful Podcast: Dr. Amanda Martin, Gradle developer advocate&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://joshlong.com/jl/blogpost/check-your-maven-builds-parent.html"&gt;Adventures in Maven Dependency Conflict Resolution&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://gorkemgok.medium.com/enable-annotations-for-better-spring-libraries-5a467a028e06"&gt;Create better Spring libraries with @Enable¡¦ Annotations&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/724983404/0/baeldung~Differences-Between-Spring-Data-JPA-findFirst-and-findTop"&gt;Differences Between Spring Data JPA &lt;code&gt;findFirst()&lt;/code&gt; and &lt;code&gt;findTop()&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/725041262/0/baeldung~Extracting-a-Custom-Header-From-the-Request"&gt;Extracting a Custom Header From the Request in Spring MVC&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2023/01/18/interesting-new-filters-on-spring-cloud-gateway-4-0"&gt;Interesting new filters on Spring Cloud Gateway 4.0&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://grafana.com/blog/2022/04/26/set-up-and-observe-a-spring-boot-application-with-grafana-cloud-prometheus-and-opentelemetry/"&gt;Set up and observe a Spring Boot application with Grafana Cloud, Prometheus, and OpenTelemetry&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>Spring Modulith 0.3 released</title>
     <link rel="alternate" href="https://spring.io/blog/2023/01/20/spring-modulith-0-3-released" />
@@ -552,21 +577,6 @@ The most notable changes are:&lt;/p&gt;
   &lt;li&gt;The Postgres event publication registry schema now follows Postgres best practices. (&lt;a href="https://github.com/spring-projects-experimental/spring-modulith/issues/81"&gt;#81&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The release also contains the obligatory upgrade to Spring Boot 3.0.1. Find more information on the &lt;a href="https://github.com/spring-projects-experimental/spring-modulith/releases/tag/0.2.0"&gt;release page&lt;/a&gt;.&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Boot 3.0.1 available now</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/12/22/spring-boot-3-0-1-available-now" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Phil Webb</name>
-    </author>
-    <id>tag:spring.io,2022-12-23:5045</id>
-    <updated>2022-12-23T00:00:00Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I&amp;rsquo;m happy to announce that Spring Boot &lt;code&gt;3.0.1&lt;/code&gt; has been released and is now available from Maven Central.&lt;/p&gt;
-&lt;p&gt;This release includes &lt;a href="https://github.com/spring-projects/spring-boot/releases/tag/v3.0.1"&gt;54 bug fixes, documentation improvements, and dependency upgrades&lt;/a&gt;. Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
-&lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask on &lt;a href="https://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="https://stackoverflow.com/tags/spring-boot"&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community on &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://spring.io/projects/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-boot/docs/3.0.1/reference/html"&gt;Documentation&lt;/a&gt; | &lt;a href="https://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>

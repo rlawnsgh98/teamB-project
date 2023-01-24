@@ -179,5 +179,23 @@ public class LectureController {
 				
 		return "lecture/video_new";
 	}	
+	//과제 등록
+	@RequestMapping("/homework_new.le")
+	public String homework_new() {
+		
+		
+		
+		return "lecture/homework_new";
+	}	
+	
+	//학생리스트 조회
+	@RequestMapping("/student_list.le")
+	public String student_list(Model model, int lecture_code) {
+		
+		List<MemberVO> list = service.student_list(lecture_code);
+		model.addAttribute("student_list", list);
+		
+		return "lecture/student_list";
+	}	
 		
 }

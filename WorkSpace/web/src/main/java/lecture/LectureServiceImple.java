@@ -58,4 +58,9 @@ public class LectureServiceImple  implements LectureService {
 		return dao.exam_list(map);
 	}
 
+	@Override
+	public List<MemberVO> student_list(int lecture_code) {
+		return dao.student_list(lecture_code);
+	}
+
 }

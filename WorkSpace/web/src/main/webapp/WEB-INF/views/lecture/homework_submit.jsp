@@ -10,6 +10,7 @@
 	
 <link rel="stylesheet"
 	href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+	
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
@@ -24,7 +25,7 @@
 						<th class="col-3 align-middle">
 							<label>과제 설명</label>
 						</th>
-						<td><textarea  name='id' class='form-control'></textarea></td>
+						<td><textarea  name='content' class='form-control'></textarea></td>
 					</tr>
 					<tr>
 						<th class="col-3">

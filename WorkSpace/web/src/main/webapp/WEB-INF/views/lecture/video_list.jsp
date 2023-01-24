@@ -13,7 +13,7 @@
 		<h1>영상강의 목록</h1>
 			<!-- 선생일때 보여줌 -->
 			<div class='btnSet'>
-					<a class='btn-fill' href='video_new.le'>영상등록</a>
+				<a class='btn-fill' href='video_new.le'>영상등록</a>
 			</div>
 
         <div class="row">

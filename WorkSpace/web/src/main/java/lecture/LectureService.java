@@ -20,4 +20,5 @@ public interface LectureService {
 	HomeworkVO homework_info(HashMap<String, Object> map);
 	List<BoardVO> video_list(int lecture_code); //강의영상 리스트 조회
 	List<ExamVO> exam_list(HashMap<String, Object> map); //시험목록 조회
+	List<MemberVO> student_list(int lecture_code); //수강생 리스트 조회
 }

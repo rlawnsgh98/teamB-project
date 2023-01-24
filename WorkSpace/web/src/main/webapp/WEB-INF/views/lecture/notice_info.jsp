@@ -25,7 +25,7 @@
 					</tr>
 					<tr>
 						<th class="col-3 align-middle">내용</th>
-						<td class="col-3 text-left" style='height: 300px' colspan='5'>${notice_info.content }</td>
+						<td class="col-3 text-left"  style='height: 300px' colspan='5'>${notice_info.content }</td>
 					</tr>
 				</table>
 			</div>

@@ -21,6 +21,9 @@
         <li>
             <a class="scroll-link" href="/web/exam_list.le?lecture_code=${lecture_info.lecture_code }&member_code=${loginInfo.member_code }">시험</a>
         </li>
+        <li>
+            <a class="scroll-link" href="/web/student_list.le?lecture_code=${lecture_info.lecture_code }">학생목록</a>
+        </li>
     </ul>
  
 </nav>

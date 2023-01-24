@@ -6,6 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <link href="css/table.css" rel="stylesheet">
 <meta charset="UTF-8">
 <title>Insert title here</title>
@@ -13,6 +14,10 @@
 <body>
 	<div id='container py-5'>
 		<h3>과제목록</h3>
+		<!-- 선생일때 보여줌 -->
+		<div class='btnSet'>
+			<a class='btn-fill' href='homework_new.le'>과제등록</a>
+		</div>		
 		<div class="row">
 			<div class="col-lg-7 mx-auto bg-white rounded shadow">
 

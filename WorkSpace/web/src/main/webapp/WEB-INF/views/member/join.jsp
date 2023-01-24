@@ -7,8 +7,10 @@
 <meta charset="UTF-8">
 <title>join</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
+
 <link rel="stylesheet" type="text/css"
 	href="css/member.css?<%=new java.util.Date()%>">
+	
 <link rel="stylesheet"
 	href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 </head>
@@ -155,11 +157,15 @@
 		</div>
 	</div>
 	<script src='js/member.js?<%=new java.util.Date()%>'></script>
+	
 	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+	
 	<script
 		src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+		
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+		
 	<script>
 		$('.join').click(function() {
 			if ($.trim($('[name=member_name]').val()) == '') {

@@ -67,6 +67,7 @@
 		<c:set var="date"><fmt:formatDate value="${now}" pattern="yyyy-MM-dd" /></c:set> 
 		
 		<c:if test="${info.duedate >= date }">
+			<!-- 학생 -->
 			<div class='btnSet'>
 				<c:if test="${info.state eq 0}">
 					<a class='btn-fill' href='homework_submit.le'>제출</a>
@@ -75,7 +76,9 @@
 					<a class='btn-fill' href='homework_modify.le'>수정</a>
 				</c:if>
 			</div>
-		</c:if>		
+		</c:if>
+		
+				
 	</div>
 	
 
