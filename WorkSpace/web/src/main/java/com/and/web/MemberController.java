@@ -156,10 +156,11 @@ public class MemberController {
 		return "member/enrolment_lecture_detail2";
 	}
 	
-	// 수강신청 - 강의 상세 화면 - no
+	// 디자인 테스트
 	@RequestMapping("/terms.me")
 	public String terms(HttpSession session) {
 		// 응답화면연결
-		return "member/enrolment_lecture_detail";
+		/* return "member/design_test_ver3"; */
+		return "member/design_test_ver4";
 	}
 }
