@@ -5,8 +5,9 @@ body {
 	min-width: 1280px;
 }
 ul { list-style-type: none; align-items: center; padding: 0 }
-a { cursor: pointer; }
-a:link, a:visited { text-decoration: none; color: inherit; }
+a { cursor: pointer }
+a:link, a:visited { text-decoration: none; color: inherit }
+.pointer{ cursor: pointer }
 /* table { 
 	border-collapse: collapse;
 	margin: 0 auto;
@@ -57,7 +58,7 @@ div.btnSet { margin: 20px auto; }
 
 a.btn-fill, a.btn-empty {
 	display: inline-block;
-	height: 24px;
+/* 	height: 24px; */
 	padding: 3px 10px;
 	border: 1px solid #3367d6;
 	border-radius: 3px;
@@ -246,6 +247,45 @@ ul.grid li{width : 230px; height:150px; border:1px solid #000; box-sizing: borde
   margin-left: -2px;
 }
 
+/* 게시판 custom style */
+.board-title{
+	font-size: 30px;
+	font-style: bold;
+	margin-top:50px;
+	color:#000 !important;
+}
+.board-table{
+	width:1000px !important;
+	margin:30px auto;	
+	padding:0 50px;
+}
+.board-detail:hover{
+	text-decoration:underline
+}
+.board-search{
+	margin:0 auto;
+	display:flex; justify-content: space-between;
+}
+
+
+/* 페이지 */
+.page-list{
+	display:flex; justify-content: center; line-height:36px;
+	margin:30px auto;
+}
+.page-list a, .page-list span{
+	width:36px; height:36px;
+	margin:1px;
+	border:1px solid transparent;
+	color:#000 !important;	/* 부트스트랩 a에 기본 주황색 들어가있음 */
+}
+.page-list span{
+	background-color: rgba(20, 20, 20, 0.1);
+	font-weight: bold;
+}
+.page-list a:hover{
+	background-color: rgba(20, 20, 20, 0.1);
+}
 
 .w-pct80 { width:80% }
 .w-pct60 { width:60% }

@@ -39,7 +39,7 @@
             <div class="navbar-nav ms-auto mx-lg-auto py-0">
                 <a href="<c:url value="/"/>" class="nav-item nav-link active">홈</a>
                 <a href="list.le?member_code=${loginInfo.member_code }" class="nav-item nav-link">강의</a>
-                <a href="#" class="nav-item nav-link">게시판</a>
+                <a href="list.bo" class="nav-item nav-link">게시판</a>
                 <a href="mypage.me" class="nav-item nav-link">마이페이지</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
