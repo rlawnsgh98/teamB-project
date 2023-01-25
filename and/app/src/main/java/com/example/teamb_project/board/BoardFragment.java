@@ -132,9 +132,7 @@ public class BoardFragment extends Fragment implements View.OnClickListener{
                     b.linMore.setVisibility(View.GONE);
                     adapter.list = list;
                     adapter.notifyDataSetChanged();
-//                    selectList();
                 });
-
     }
 
     //게시글 목록 불러오기

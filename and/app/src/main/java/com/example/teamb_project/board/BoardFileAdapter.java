@@ -44,8 +44,6 @@ public class BoardFileAdapter extends RecyclerView.Adapter<BoardFileAdapter.View
 
         //파일 클릭시 다운로드 처리
         h.fileName.setOnClickListener(v -> {
-            Log.d("log", "파일명 클릭 : " + list.get(i).getFile_name());
-            Log.d("log", "파일 path : " + list.get(i).getPath());
 
             //다운로드 처리
             DownloadManager.Request request = new DownloadManager.Request(Uri.parse(list.get(i).getPath()));

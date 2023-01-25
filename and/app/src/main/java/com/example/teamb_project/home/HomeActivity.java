@@ -102,8 +102,9 @@ public class HomeActivity extends AppCompatActivity {
         menuItems.add(new MenuItem("LMS 홈", R.drawable.main_cahr));
         menuItems.add(new MenuItem("내 정보", R.drawable.main_cahr));
         menuItems.add(new MenuItem("학원 일정", R.drawable.main_cahr));
-        menuItems.add(new MenuItem("내 강의 조회", R.drawable.main_cahr));
-        menuItems.add(new MenuItem("내 상담", R.drawable.main_cahr));
+        menuItems.add(new MenuItem("내 강의", R.drawable.main_cahr));
+        menuItems.add(new MenuItem("시간표", R.drawable.main_cahr));
+//        menuItems.add(new MenuItem("내 상담", R.drawable.main_cahr));
         menuItems.add(new MenuItem("로그아웃", R.drawable.main_cahr));
 
         return menuItems;
@@ -134,7 +135,8 @@ public class HomeActivity extends AppCompatActivity {
         }else if (position == 3){
             changeFragment(  new MyLectureFragment(), title);
         }else if (position == 4){
-            changeFragment(  new CounselFragment(), title);
+//            changeFragment(  new CounselFragment(), title);
+            changeFragment( new TimeTableFragment(), title );
         }else if (position == 5){
             intent = new Intent(this, LoginActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);

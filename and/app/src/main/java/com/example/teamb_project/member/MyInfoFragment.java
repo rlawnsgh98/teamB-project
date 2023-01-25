@@ -12,6 +12,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
@@ -83,10 +84,6 @@ public class MyInfoFragment extends Fragment implements  View.OnFocusChangeListe
         }else{
             Glide.with(getContext()).load(Common.loginInfo.getProfilepath()).into(b.imgvProfile);
         }
-        //뒤로가기
-//        b.imgvBack.setOnClickListener(v -> {
-//            onBackPressed();
-//        });
 
         setMemberInfo();
 
@@ -249,6 +246,7 @@ public class MyInfoFragment extends Fragment implements  View.OnFocusChangeListe
         startActivityForResult(intent,CAMERA_CODE);
     }//cameraMethod()
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
