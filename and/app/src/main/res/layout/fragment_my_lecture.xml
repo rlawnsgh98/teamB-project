@@ -28,9 +28,9 @@
             android:orientation="vertical"
             >
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recv_mylecture"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:id="@+id/recv_mylecture"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
         </LinearLayout>

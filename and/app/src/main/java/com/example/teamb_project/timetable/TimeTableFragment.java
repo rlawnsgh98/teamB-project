@@ -25,7 +25,6 @@ import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
 
-
 public class TimeTableFragment extends Fragment implements View.OnClickListener {
     FragmentTimeTableBinding b;
     final String TAG = "log";
@@ -79,7 +78,6 @@ public class TimeTableFragment extends Fragment implements View.OnClickListener 
         b.lnLayout21.setOnClickListener(this);
         b.lnLayout22.setOnClickListener(this);
         b.lnLayout23.setOnClickListener(this);
-
 
         return b.getRoot();
     }//onCreate()
@@ -171,7 +169,6 @@ public class TimeTableFragment extends Fragment implements View.OnClickListener 
             b.cardDetail.setVisibility(View.GONE);
         }
     }
-
 
     //리스트 화면에 뿌리기
     public void setView(ArrayList<LectureVO> list){
