@@ -7,6 +7,7 @@
 <head>
 <link rel="stylesheet" type="text/css" href="css/member.css?<%=new java.util.Date()%>">
 <link rel="stylesheet"	href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<link href="css/table.css" rel="stylesheet">
 
 <meta charset="UTF-8">
 <title>Insert title here</title>
@@ -34,12 +35,11 @@
 						<tbody>
 							<c:forEach items="${student_list}" var="vo">
 								<tr>
-									<th scope="col" class="col-3"> <img src="${vo.profilepath }"></th>
-									<td scope="col" class="col-3">${vo.member_name }</td>
+									<th scope="col" class="col-3 align-middle"><img src="${vo.profilepath }"></th>
+									<td scope="col" class="col-3 align-middle">${vo.member_name }</td>
 									<td scope="col" class="col-2"><input type="radio" class="btn-check" name='attendance' id='attendance'> <label class="btn btn-outline-success" for="attendance">출석</label></td>
 									<td scope="col" class="col-2"><input type="radio" class="btn-check" name='attendance' id='absent'>  <label class="btn btn-outline-danger" for="absent">결석</label></td>
 									<td scope="col" class="col-2"><input type="radio" class="btn-check" name='attendance' id='leave'> <label class="btn btn-outline-primary" for="leave">조퇴</label> </td>
-									
 								</tr>
 							</c:forEach>
 						</tbody>

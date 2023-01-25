@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
@@ -17,12 +18,13 @@
 		</div>
         <div class="row">
             <div class="col-lg-7 mx-auto bg-white rounded shadow">
-				<table class="table table-fixed"> 
+				<table class="table table-fixed" style="height:300px; overflow-y: auto;"> 
 					<thead>
 						<tr>
 							<th scope="col" class="col-1">번호</th>
 							<th scope="col" class="col-3">시험구분</th>
 							<th scope="col" class="col-3">시험기간</th>
+							<!-- 수강생 -->
 							<th scope="col" class="col-3">점수</th>
 							<!-- 수강생 -->
 							<th scope="col" class="col-3">시험보기</th>
@@ -34,7 +36,7 @@
 					<tbody>
 						<c:forEach items="${exam_list}" var="list">
 							<tr>
-								<th scope="row" class="col-1">${list.rownum }</th>
+								<td scope="row" class="col-1 px-4 py-3">${list.rownum }</th>
 								<td scope="col" class="col-3">${list.exam_title }</td>
 								<td scope="col" class="col-3">	
 									<c:set var="now" value="<%=new java.util.Date()%>" />

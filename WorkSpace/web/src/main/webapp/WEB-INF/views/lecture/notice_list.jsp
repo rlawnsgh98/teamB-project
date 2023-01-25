@@ -11,10 +11,10 @@
 </head>
 <body>
 	<div id="container py-5">
-		
-	<%@include file="../include/sidebar.jsp" %>
+	
         <div class="row">
-        
+	
+        <%@include file="../include/sidebar.jsp" %>
             <div class="col-lg-7 mx-auto bg-white rounded shadow">
             <h1>공지 목록</h1>
             <div class='btnSet'>
