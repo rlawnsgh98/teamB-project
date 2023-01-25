@@ -57,7 +57,6 @@ div.btnSet { margin: 20px auto; }
 
 a.btn-fill, a.btn-empty {
 	display: inline-block;
-	height: 24px;
 	padding: 3px 10px;
 	border: 1px solid #3367d6;
 	border-radius: 3px;

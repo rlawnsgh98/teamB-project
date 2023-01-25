@@ -12,6 +12,9 @@
 
 	<div id="container py-5">
 		<h1>시험목록</h1>
+		<div class='btnSet'>
+			<a class='btn-fill' href='exam_new.le'>시험등록</a>
+		</div>
         <div class="row">
             <div class="col-lg-7 mx-auto bg-white rounded shadow">
 				<table class="table table-fixed"> 
@@ -21,7 +24,10 @@
 							<th scope="col" class="col-3">시험구분</th>
 							<th scope="col" class="col-3">시험기간</th>
 							<th scope="col" class="col-3">점수</th>
+							<!-- 수강생 -->
 							<th scope="col" class="col-3">시험보기</th>
+							<!-- 강사 -->
+							<th scope="col" class="col-3">시험등록</th>
 						</tr>
 					</thead>
 			
@@ -40,6 +46,9 @@
 								<td scope="col" class="col-3">${list.total_score }</td>
 								<td scope="col" class="col-3">
 									<a class="btn-fill" href='exam_take.le'>시험보기</a>
+								</td>
+								<td scope="col" class="col-3">
+									<a class="btn-fill" href='exam_question_new.le'>문제추가</a>
 								</td>
 							</tr>
 						</c:forEach>

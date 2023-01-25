@@ -187,6 +187,23 @@ public class LectureController {
 		
 		return "lecture/homework_new";
 	}	
+	//시험 등록
+	@RequestMapping("/exam_new.le")
+	public String exam_new() {
+		
+		
+		
+		return "lecture/exam_new";
+	}	
+	
+	//시험문제 추가
+	@RequestMapping("/exam_question_new.le")
+	public String exam_question_new() {
+		
+		
+		
+		return "lecture/exam_question_new";
+	}	
 	
 	//학생리스트 조회
 	@RequestMapping("/student_list.le")
@@ -197,6 +214,23 @@ public class LectureController {
 		
 		return "lecture/student_list";
 	}	
+	
+	//수강생 출결 관리
+	@RequestMapping("/attendance_manage.le")
+	public String attendance_manage(Model model, int lecture_code) {
+		
+		List<MemberVO> list = service.student_list(lecture_code);
+		model.addAttribute("student_list", list);
+		
+		return "lecture/attendance_manage";
+	}
+	
+	
+	
+	
+	
+	
+	
 	// 강의 개설 화면
 	@RequestMapping("/open_lecture.le")
 	public String open_lecture(HttpSession session) {

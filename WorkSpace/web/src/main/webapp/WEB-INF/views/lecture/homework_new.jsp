@@ -25,7 +25,7 @@ href="css/member.css?<%=new java.util.Date()%>">
 					<tr>
 						<th class="col-3 align-middle px-4 py-3">과제 제목</th>
 						<td class="align-middle " colspan='3'>
-							<input class='form-control' style = "width:100%" type="text"  name='title'>
+							<input class='form-control' style = "width:100%; height:30px" type="text"  name='title'>
 						</td>
 					</tr>
 					
@@ -68,22 +68,9 @@ href="css/member.css?<%=new java.util.Date()%>">
 
 	<script>
 
-
-		//날짜변경시 날짜삭제 버튼 나오게
-		$('.date').change(function() {
-			$(this).next().css('display', 'inline');
-		});
-		//날짜삭제 버튼 클릭시 날짜없애고, 날짜삭제 버튼도 안나오게
-		$('#delete').click(function() {
-			$(this).css('display', 'none');
-			$(this).siblings('.date').val('');
-		});
-
-		//생년월일 특정날짜(만8세)까지만 선택가능하도록 제한
 		var today = new Date();
-		var endDay = new Date(today.getFullYear() - 8, today.getMonth(), today
-				.getDate() - 1);
-		var range = today.getFullYear() - 80 + ':' + endDay.getFullYear();
+		var endDay = new Date(today.getFullYear(), today.getMonth()+12, today.getDate());
+		var range = today.getFullYear() + ':' + endDay.getFullYear();
 		
 		$('.date').datepicker({
 			yearRange : range,

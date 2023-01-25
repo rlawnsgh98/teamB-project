@@ -13,6 +13,7 @@
 
 <body>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+<%@include file="../include/sidebar.jsp" %>
 <main>
 <div class="container">
 <div class="row">
@@ -449,6 +450,6 @@ a {
 <script type="text/javascript">
 
 </script>
-<%@include file="../include/sidebar.jsp" %>
+
 </body>
 </html>
