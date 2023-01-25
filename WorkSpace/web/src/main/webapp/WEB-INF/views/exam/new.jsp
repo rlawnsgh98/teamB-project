@@ -42,7 +42,7 @@
 				<option value='0'>모의고사</option>
 				<option value='1'>쪽지시험</option>
 				<option value='2'>중간평가</option>
-				<option value='3'>최종평가</option>
+				<option value='3'>기말평가</option>
 			</select></th>
 			<th>2023.01.26</th>
 		</tr>

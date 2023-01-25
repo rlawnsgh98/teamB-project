@@ -6764,3 +6764,9 @@ org.eclipse.core.internal.resources.ResourceException: Marker id 1621 not found.
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-26 03:20:24.054
 !MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-26 03:22:05.874
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-26 03:22:05.875
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
