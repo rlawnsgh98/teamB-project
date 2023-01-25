@@ -5,7 +5,22 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2023-01-24T09:00:00Z</updated>
+  <updated>2023-01-25T15:20:31Z</updated>
+  <entry>
+    <title>Spring Shell 2.1.6 and 3.0.0 are now available</title>
+    <link rel="alternate" href="https://spring.io/blog/2023/01/25/spring-shell-2-1-6-and-3-0-0-are-now-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Janne Valkealahti</name>
+    </author>
+    <id>tag:spring.io,2023-01-25:5066</id>
+    <updated>2023-01-25T15:20:31Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I&amp;rsquo;m happy to announce that Spring Shell &lt;code&gt;2.1.6&lt;/code&gt; and &lt;code&gt;3.0.0&lt;/code&gt; has been released and is now available from Maven Central.&lt;/p&gt;
+&lt;p&gt;Please see the &lt;a href="https://github.com/spring-projects/spring-shell/releases/tag/v2.1.6"&gt;release notes 2.1.6&lt;/a&gt; and &lt;a href="https://github.com/spring-projects/spring-shell/releases/tag/v3.0.0"&gt;release notes 3.0.0&lt;/a&gt; for more details.&lt;/p&gt;
+&lt;p&gt;Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://spring.io/projects/spring-shell/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-shell"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-shell/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-shell/docs/3.0.0/docs/index.html"&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>This Week in Spring - SpringOne Essentials 2023 edition - January 24th, 2023</title>
     <link rel="alternate" href="https://spring.io/blog/2023/01/24/this-week-in-spring-springone-essentials-2023-edition-january-24th-2023" />
@@ -559,24 +574,6 @@ The most notable changes are:&lt;/p&gt;
   &lt;li&gt;&lt;a href="https://kubernetes.io/blog/2022/12/27/cpumanager-ga/"&gt;Blog: Kubernetes v1.26: CPUManager goes GA&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://kubernetes.io/blog/2022/12/22/kubelet-credential-providers/"&gt;Blog: Kubernetes v1.26: GA Support for Kubelet Credential Providers&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Modulith 0.2 released</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/12/23/spring-modulith-0-2-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Oliver Drotbohm</name>
-    </author>
-    <id>tag:spring.io,2022-12-23:5046</id>
-    <updated>2022-12-23T16:00:00Z</updated>
-    <content type="html">&lt;p&gt;I am pleased to announce the availability of Spring Modulith 0.2. The release adds the following features:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;We introduced &lt;code&gt;@ApplicationModuleListener&lt;/code&gt; to ease the declaration of asynchronous, transactional event listeners that run in a transaction themselves. A model that we recommend as default to integration application modules. (&lt;a href="https://github.com/spring-projects-experimental/spring-modulith/issues/80"&gt;#80&lt;/a&gt;, &lt;a href="https://docs.spring.io/spring-modulith/docs/0.2.0/reference/html/#events.amil"&gt;reference documentation&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;The application module dependency structure is now also exposed as Spring Boot actuator. This allows operating infrastructure to visualize insights it provides to operations teams to be aligned with the application module structure (HTTP traces by module etc.) (&lt;a href="https://github.com/spring-projects-experimental/spring-modulith/issues/87"&gt;#87&lt;/a&gt;, &lt;a href="https://docs.spring.io/spring-modulith/docs/0.2.0/reference/html/#observability"&gt;reference documentation&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;The Postgres event publication registry schema now follows Postgres best practices. (&lt;a href="https://github.com/spring-projects-experimental/spring-modulith/issues/81"&gt;#81&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The release also contains the obligatory upgrade to Spring Boot 3.0.1. Find more information on the &lt;a href="https://github.com/spring-projects-experimental/spring-modulith/releases/tag/0.2.0"&gt;release page&lt;/a&gt;.&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>

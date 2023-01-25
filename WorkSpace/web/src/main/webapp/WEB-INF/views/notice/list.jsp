@@ -10,11 +10,11 @@
 </head>
 <body>
 
-<h3 class='container text-center board-title text-dark'>자유게시판</h3>
+<h3 class='container text-center board-title text-dark'>공지사항</h3>
 	
-<div class='btn-board-empty pointer'><a href='list.no'>공지사항</a></div>
+<div class='btn-board-empty pointer'><a href='list.bo'>자유게시판</a></div>
 	
-<form method='post' action='list.bo' autocomplete="off">
+<form method='post' action='list.no' autocomplete="off">
 
 <!-- 검색, 글쓰기 -->	
 <div class='w-px1000 board-search'>
@@ -24,13 +24,12 @@
 			<option value='all'>전체</option>
 			<option value='title'>제목</option>
 			<option value='content'>내용</option>
-			<option value='writer'>작성자</option>
 		</select>
 		<input type='text' name='keyword' class='w-300' value='${page.keyword}'>
 		<a class='btn-board-black'>검색</a>
 	</div>
 	<!-- 글쓰기 버튼 -->
-	<a href='new.bo' class='btn-board-black w-px120'>글쓰기</a>
+	<a href='new.no' class='btn-board-black w-px120'>공지등록</a>
 </div>
 
 <!-- 게시글 목록 -->
@@ -100,7 +99,7 @@ function fn_submit( board_code ){
 	
 	$('[name=curPage]').val( ${page.curPage} );
 	$('[name=board_code]').val( board_code );
-	$('form').attr('action', 'info.bo');
+	$('form').attr('action', 'info.no');
 	$('form').submit();
 	
 }

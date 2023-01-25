@@ -33,4 +33,14 @@ public class BoardServiceImpl implements BoardService {
 		return dao.board_reply(board_code);
 	}
 
+	@Override
+	public BoardPageVO notice_list(BoardPageVO page) {
+		return dao.notice_list(page);
+	}
+
+	@Override
+	public BoardVO notice_info(int board_code) {
+		return dao.notice_info(board_code);
+	}
+
 }

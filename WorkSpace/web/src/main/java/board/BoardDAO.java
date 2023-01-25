@@ -21,12 +21,22 @@ public class BoardDAO implements BoardService {
 		page.setList(sql.selectList("board.board_list", page));
 		return page;
 	}
+	@Override
+	public BoardPageVO notice_list(BoardPageVO page) {
+		page.setTotalList(sql.selectOne("board.total_notice", page));
+		page.setList(sql.selectList("board.notice_list", page));
+		return page;
+	}
 
 	@Override
 	public BoardVO board_info(int board_code) {
 		BoardVO vo = sql.selectOne("board.board_info", board_code);
 		vo.setFileList(sql.selectList("board.file_list", board_code));
 		return vo;
+	}
+	@Override
+	public BoardVO notice_info(int board_code) {
+		return sql.selectOne("board.board_info", board_code);
 	}
 
 	@Override
@@ -38,5 +48,8 @@ public class BoardDAO implements BoardService {
 	public List<ReplyVO> board_reply(int board_code) {
 		return sql.selectList("board.board_reply", board_code);
 	}
+	
+
+	
 
 }

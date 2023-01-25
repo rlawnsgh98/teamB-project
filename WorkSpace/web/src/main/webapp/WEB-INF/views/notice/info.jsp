@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<h3 class='container text-center board-title text-dark'>자유게시판</h3>
+<h3 class='container text-center board-title text-dark'>공지사항</h3>
 
 <!-- 수정, 삭제 -->	
 <div class='w-px1000 board-modify'>	
