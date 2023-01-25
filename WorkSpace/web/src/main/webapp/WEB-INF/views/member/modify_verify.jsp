@@ -11,7 +11,6 @@
 	href="css/member.css?<%=new java.util.Date()%>">
 </head>
 <body>
-	<h1 class="d-none">홈-마이페이지-회원정보수정</h1>
 	<div id="container" class="ct_top">
 		<div class="main_wrap">
 			<h2 class="lnb_title text-center text-dark">마이페이지</h2>
@@ -22,12 +21,6 @@
 					class="btn btn-dark rounded-pill text-white"> 회원정보수정 </a></li>
 			</ul>
 			<div id="contet_area2">
-				<div class="path">
-					<ol class='path_list'>
-						<li>마이페이지</li>
-						<li class="last">회원정보수정</li>
-					</ol>
-				</div>
 				<div class="content_body">
 					<div class="modify_myinfo_box">
 						<div class="tb_top tb_top_large">

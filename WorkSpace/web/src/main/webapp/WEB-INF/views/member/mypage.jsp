@@ -10,8 +10,12 @@
 <link rel="stylesheet" type="text/css"
 	href="css/member.css?<%=new java.util.Date()%>">
 </head>
+<style>
+.my_info_in li strong, .my_info_in li span {
+	color: #000;
+}
+</style>
 <body>
-	<h1 class="d-none">홈-마이페이지-메인</h1>
 	<div id="container" class="ct_top">
 		<div class="main_wrap">
 			<h2 class="lnb_title text-center text-dark">마이페이지</h2>
@@ -22,12 +26,6 @@
 					class="btn btn-outline-dark rounded-pill text-dark"> 회원정보수정 </a></li>
 			</ul>
 			<div id="contet_area">
-				<div class="path">
-					<ol class='path_list'>
-						<li>마이페이지</li>
-						<li class="last">메인</li>
-					</ol>
-				</div>
 				<div class="content_body">
 					<div class="my_box">
 						<div class="my_info">
