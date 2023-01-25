@@ -10,13 +10,25 @@
 </head>
 <body>
 
-<div class='container text-center board-title'>자유게시판</div>
+<h2 class='container text-center board-title text-dark'>자유게시판</h2>
 	
+<form method='post' action='list.bo' autocomplete="off">
+
 <!-- 검색, 글쓰기 -->	
 <div class='w-px1000 board-search'>
-
+	<!-- 검색 -->
+	<div class='search'>
+		<select name='search' class='w-px100'>
+			<option value='all'>전체</option>
+			<option value='title'>제목</option>
+			<option value='content'>내용</option>
+			<option value='writer'>작성자</option>
+		</select>
+		<input type='text' name='keyword' class='w-300' value='${page.keyword}'>
+		<a class='btn-board-black'>검색</a>
+	</div>
 	<!-- 글쓰기 버튼 -->
-	<a href='#' class='btn-fill w-px120'>글쓰기</a>
+	<a href='#' class='btn-board-black w-px120'>글쓰기</a>
 </div>
 
 <!-- 게시글 목록 -->
@@ -39,7 +51,7 @@
 <c:forEach items="${page.list}" var="vo">
 	<tr>
 		<td>${vo.no}</td>
-		<td class='text-left pointer board-detail'>${vo.title}</td>
+		<td class='text-left pointer board-detail'><a onclick="fn_submit( ${vo.board_code} )">${vo.title}</a></td>
 		<td>${vo.member_name}</td>
 		<td>${vo.writedate}</td>
 		<td>${vo.readcnt}</td>
@@ -47,6 +59,10 @@
 </c:forEach>
 
 </table>
+
+<input name='curPage' value='1' type='hidden'>
+<input name='board_code' type='hidden'>
+</form>
 
 <!-- 페이지 -->
 <div class='page-list'>
@@ -70,12 +86,21 @@
 
 </div>
 
-
 <script>
 
 function toPage(no){
 	$('[name=curPage]').val( no );
 	$('form').submit();
+}
+
+//상세 화면
+function fn_submit( board_code ){
+	
+	$('[name=curPage]').val( ${page.curPage} );
+	$('[name=board_code]').val( board_code );
+	$('form').attr('action', 'info.bo');
+	$('form').submit();
+	
 }
 
 </script>

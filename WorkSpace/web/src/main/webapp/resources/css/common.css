@@ -4,7 +4,7 @@ body {
 	text-align: center;
 	min-width: 1280px;
 }
-ul { list-style-type: none; align-items: center; padding: 0 }
+ul { list-style-type: none; align-items: center; padding: 0; margin: 0 !important }
 a { cursor: pointer }
 a:link, a:visited { text-decoration: none; color: inherit }
 .pointer{ cursor: pointer }
@@ -34,8 +34,6 @@ ul.grid li div:nth-child(1){ overflow:hidden; -webkit-line-clamp:3; display: -we
 div.align{display:flex; align-items: center;}
 div.align > * {margin-right : 5px;}
 
-
-
 #delete, #attach-file, #delete-file { display: none; }
 .attach-file, .delete-file{ display: none; }
 .date + #delete { position: relative; right: 40px; }
@@ -53,12 +51,18 @@ select {
 	padding-left: 10px;
 	font-size: 16px; 	
 }
+select[name=search]{
+	height:34px;
+}
+input[name=keyword]{
+	height:34px;
+}
 
 div.btnSet { margin: 20px auto; }
 
 a.btn-fill, a.btn-empty {
 	display: inline-block;
-/* 	height: 24px; */
+	height: 34px;
 	padding: 3px 10px;
 	border: 1px solid #3367d6;
 	border-radius: 3px;
@@ -74,7 +78,7 @@ a.btn-empty {
 }
 
 input {
-	height: 30px;
+/* 	height: 30px; */
 	padding: 0 10px;
 	font-size: 16px; 
 	border: 1px solid #b0b0b0;
@@ -178,10 +182,10 @@ ul.grid li{width : 230px; height:150px; border:1px solid #000; box-sizing: borde
 
 
 .select {
-    padding: 15px 10px;
+    padding: 12px 10px;
     display: flex;
     flex-direction: column;
-        align-items: center;
+    align-items: center;
     
 }
 .select input[type=radio]{
@@ -247,24 +251,120 @@ ul.grid li{width : 230px; height:150px; border:1px solid #000; box-sizing: borde
   margin-left: -2px;
 }
 
+/* 게시판 버튼 */
+.btn-board-black{
+	color:#fff !important;
+	text-align:center;
+	background-color: #2B2825;
+	display: inline-block;
+	height: 34px;
+	padding: 3px 10px;
+	border: 1px solid #2B2825;
+	border-radius: 3px;
+}
+.btn-board-black:hover{
+	color:#ba7222 !important;
+}
+
+/* 	primary-color:#ba7222; */
+
+
 /* 게시판 custom style */
 .board-title{
-	font-size: 30px;
-	font-style: bold;
-	margin-top:50px;
-	color:#000 !important;
+	margin-top:60px;
+	margin-bottom:50px;
+	letter-spacing: -0.07em;
 }
 .board-table{
 	width:1000px !important;
-	margin:30px auto;	
+	margin:0 auto 30px auto;	
 	padding:0 50px;
+	border-top:1px solid #999 !important;
+}
+.board-table tr:last-child{
+	border-bottom:1px solid #666;
 }
 .board-detail:hover{
 	text-decoration:underline
 }
 .board-search{
-	margin:0 auto;
+	margin:20px auto;
 	display:flex; justify-content: space-between;
+	align-items:center;
+}
+.board-info-content{
+	padding:40px 35px !important;
+}
+.board-files{	
+	display:flex;
+	flex-direction: column;
+	align-items:flex-start;
+	gap:5px;
+	color:dodgerblue;
+}
+/* 댓글 */
+.reply_input{
+	margin:20px auto 30px auto;
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	gap:15px;
+/* 	border-bottom:1px solid #999; */
+}
+.reply_input ul{
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+.reply_input>ul{
+	margin-top:12px;
+	flex:1;
+}
+.profile{
+	width:50px;
+	height:50px;
+	border-radius:50%;
+	background:#999;
+}
+#my_reply{
+	width:770px;
+	padding:5px 10px;
+	border-top:none;
+	border-left:none;
+	border-right:none;
+}
+.reply-controll{
+	cursor:pointer;
+	width:70px;
+	line-height:34px;
+	padding:0 5px;
+	border-radius:20px;
+}
+.reply-cancel{
+	color:#222;
+}
+.reply-send{
+	background-color:#F2F2F2;
+	color:#909090;
+}
+.reply-cancel:hover{
+	background-color:#E5E5E5;
+}
+.replies{
+	display:flex;
+	gap:15px;
+	margin:10px auto 20px auto;
+	border-top:1px solid #F2F2F2;
+	padding-top: 20px;
+}
+
+.reply_inside{
+	flex:1;
+}
+.reply_inside>ul{
+	display:flex;
+	gap:15px;
 }
 
 
