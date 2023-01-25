@@ -36,7 +36,7 @@
 				<div class="path">
 					<ol class='path_list'>
 						<li>회원 서비스</li>
-						<li class="last">로그인</li>
+						<li class="last">회원가입</li>
 					</ol>
 				</div>
 				<div class="content_body">
@@ -133,8 +133,9 @@
 												class="join_required">프로필 이미지</label></th>
 											<td>
 												<div class='align'>
-													<label> <input type='file' id='attach-file' style="border:none; padding: 0"
-														accept="image/*" name='profilepath' class="w200">
+													<label> <input type='file' id='attach-file'
+														style="border: none; padding: 0" accept="image/*"
+														name='profilepath' class="w200">
 													</label> <span id='preview'></span> <a id='delete-file'><i
 														class="font-r fa-solid fa-trash-can"></i></a>
 												</div>
@@ -150,14 +151,12 @@
 							</form>
 						</div>
 					</div>
-
-
 				</div>
 			</div>
 		</div>
 	</div>
 	<script src='js/member.js?<%=new java.util.Date()%>'></script>
-	
+	<script src='js/common.js?<%=new java.util.Date() %>'></script>
 	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 	
 	<script

@@ -99,7 +99,21 @@ public class MemberController {
 		return "member/mypage";
 	}
 
-	// 회원 정보 수정 화면 요청
+	// 회원 정보 수정 화면 요청 - 개인정보수정
+	@RequestMapping("/modify_verify.me")
+	public String modify_verify(HttpSession session) {
+		// 응답화면연결
+		return "member/modify_verify";
+	}
+
+	// 회원 정보 수정 화면 요청 - 비밀번호변경
+	@RequestMapping("/modify_pw.me")
+	public String modify_pw(HttpSession session) {
+		// 응답화면연결
+		return "member/modify_pw";
+	}
+
+	// 회원 정보 수정 화면 요청 - 수정 양식 작성창
 	@RequestMapping("/modify_myinfo.me")
 	public String modify_myinfo(HttpSession session) {
 		// 응답화면연결
@@ -112,11 +126,41 @@ public class MemberController {
 		// 응답화면연결
 		return "member/enrolment_log";
 	}
-	
+
 	// 회원 아이디/비밀번호 찾기 화면 요청
 	@RequestMapping("/find.me")
 	public String find(HttpSession session) {
 		// 응답화면연결
 		return "member/find";
+	}
+	
+	// 수강신청 - 강의 목록 화면 - 겔러리형
+	@RequestMapping("/privacy.me")
+	public String lec_list_test(HttpSession session) {
+		// 응답화면연결
+		/* return "member/enrolment_lecture"; */
+		return "member/lec_list_test";
+	}
+	
+	// 수강신청 - 강의 목록 화면 - 리스트형
+	@RequestMapping("/justlist.le")
+	public String lec_list_test2(HttpSession session) {
+		// 응답화면연결
+		return "member/lec_list_test2";
+	}
+	
+	// 수강신청 - 강의 상세 화면 - no
+	@RequestMapping("/en_lec_detail.le")
+	public String en_lec_detai(HttpSession session) {
+		// 응답화면연결
+		return "member/enrolment_lecture_detail2";
+	}
+	
+	// 디자인 테스트
+	@RequestMapping("/terms.me")
+	public String terms(HttpSession session) {
+		// 응답화면연결
+		/* return "member/design_test_ver3"; */
+		return "member/design_test_ver4";
 	}
 }
