@@ -2,6 +2,29 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="lecture">
 
+	<!-- 특정 강의조회 -->
+	<select id="lecture_info" resultType='vo.LectureVO'>
+	select l.*, member_name teacher_name 
+	from lecture l inner join member m
+	on l.teacher_code = m.member_code
+	where lecture_code = #{lecture_code}
+	</select>
+
+	<!-- 시험 등록처리 -->
+	<insert id="insert_exam">
+	
+	</insert>
+
+	<!-- 강의 목록 조회 - 강사 -->
+	<select id="lecture_list_teacher" resultType='vo.LectureVO'>
+	select l.* ,t.timetable_name, (select count(*)
+									from enrolment e 
+									where e.lecture_code= l.lecture_code) student_cnt
+	from lecture l left outer join timetable t
+	on l.timetable_code = t.timetable_code
+	where teacher_code = #{member_code}
+	</select>
+
 	<select id="list" resultType="vo.LectureVO">
 		select l.*, member_name teacher_name
 		from lecture l left outer join member m 

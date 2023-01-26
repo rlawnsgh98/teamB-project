@@ -443,7 +443,7 @@ ul.grid li{width : 230px; height:150px; border:1px solid #000; box-sizing: borde
 	border:1px solid #CDCDCD;
 	background-color: #FFFEFE;
 	min-height:500px;
-	
+	width:1000px !important;
 }
 .test-container header{
 	display:flex;
@@ -480,6 +480,9 @@ ul.grid li{width : 230px; height:150px; border:1px solid #000; box-sizing: borde
 	display:flex;
 	align-items: center;
 	gap:10px;
+}
+.exam_score span{
+	color:#666;
 }
 .exam_answer{
 	margin:10px auto;
@@ -525,6 +528,9 @@ ul.grid li{width : 230px; height:150px; border:1px solid #000; box-sizing: borde
 	font-size:18px;
 	gap:10px;
 }
+.exam_question span{
+	color:#666;
+}
 .btn-remove-save{
 	margin-bottom: 40px;
 }
@@ -537,6 +543,10 @@ ul.grid li{width : 230px; height:150px; border:1px solid #000; box-sizing: borde
 	align-items: center;
 	margin:20px auto !important;
 	font-size:18px;
+	
+}
+.exam-move span{
+	color:#555;
 }
 .exam-footer{
 	position:relative;
@@ -558,6 +568,7 @@ ul.grid li{width : 230px; height:150px; border:1px solid #000; box-sizing: borde
 	font-size:18px;
 }
 /* 시험 제출 버튼 */
+/* 메인컬러 : #293859 */
 .btn-exam-black, .btn-exam-empty{
 	box-sizing:border-box;
 	text-align:center;
@@ -595,6 +606,11 @@ input[name="answer"]{
 	height:17px;
 	margin:2px 6px 2px 0 !important;
 	vertical-align: sub;
+}
+
+/* 시험 등록 */
+.exam-new-container{
+	padding-bottom:10px;
 }
 
 .ml-10{ margin-left:10px }

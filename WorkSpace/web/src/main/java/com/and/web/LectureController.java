@@ -23,11 +23,21 @@ public class LectureController {
 	private LectureServiceImple service;
 //	@Autowired private CommonService common;
 
+	// 강의 목록 조회 - 강사 (주소창으로만 접근)
+	@RequestMapping("/list.teacher")
+	public String lecture_list_teacher(Model model, int member_code, HttpSession session) {
+		
+		List<LectureVO> list = service.lecture_list_teacher(member_code);
+		model.addAttribute("list", list);
+
+		return "lecture/list_teacher";
+	}
+	
 	// 학생이 수강중인 강의 리스트 조회
 	@RequestMapping("/list.le")
-	public String list(Model model, int member_code) {
+	public String list(Model model, int member_code, HttpSession session) {
+		
 		List<LectureVO> list = service.lecture_list(member_code);
-
 		model.addAttribute("list", list);
 
 		return "lecture/list";
@@ -36,10 +46,13 @@ public class LectureController {
 	// 학생이 수강중인 강의 정보
 	@RequestMapping("/lecture_home.le")
 	public String lecture_home(HttpSession session, int lecture_code) {
+		session.removeAttribute("lecture");
 		session.removeAttribute("lecture_info");
 		// 강사 정보
 		MemberVO lecture_info = service.info(lecture_code);
+		LectureVO lecture = service.lecture_info(lecture_code);
 		session.setAttribute("lecture_info", lecture_info);
+		session.setAttribute("lecture", lecture);
 
 		return "lecture/lecture_home";
 	}
@@ -114,11 +127,13 @@ public class LectureController {
 
 	// 시험목록 조회
 	@RequestMapping("/exam_list.le")
-	public String exam_list(Model model, int lecture_code, int member_code) {
+	public String exam_list(Model model, HttpSession session) {
 
 		HashMap<String, Object> map = new HashMap<String, Object>();
-		map.put("member_code", member_code);
-		map.put("lecture_code", lecture_code);
+		MemberVO member = (MemberVO) session.getAttribute("loginInfo");
+		LectureVO lecture = (LectureVO) session.getAttribute("lecture");
+		map.put("member_code", member.getMember_code());
+		map.put("lecture_code", lecture.getLecture_code());
 
 		List<ExamVO> list = service.exam_list(map);
 		model.addAttribute("exam_list", list);
@@ -186,14 +201,18 @@ public class LectureController {
 		
 		return "lecture/homework_new";
 	}	
-	//시험 등록
+	
+	//시험 등록화면 요청
 	@RequestMapping("/exam_new.le")
 	public String exam_new() {
-		
-		
-		
 		return "lecture/exam_new";
 	}	
+	//시험 등록화면 요청
+	@RequestMapping("/exam_insert.le")
+	public String exam_insert(ExamVO vo) {
+		
+		return "redirect:exam_list.le";
+	}
 	
 	//시험문제 추가
 	@RequestMapping("/exam_question_new.le")

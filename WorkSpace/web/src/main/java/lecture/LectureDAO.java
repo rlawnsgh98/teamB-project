@@ -61,7 +61,23 @@ public class LectureDAO implements LectureService {
 
 	@Override
 	public List<MemberVO> student_list(int lecture_code) {
-		return sql.selectList("student_list", lecture_code);
+		return sql.selectList("student_list", lecture_code);	//mapper name 넣어야할듯
+	}
+
+	@Override
+	public List<LectureVO> lecture_list_teacher(int member_code) {
+		return sql.selectList("lecture.lecture_list_teacher", member_code);
+	}
+
+	@Override
+	public int insert_exam(ExamVO vo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public LectureVO lecture_info(int lecture_code) {
+		return sql.selectOne("lecture.lecture_info", lecture_code);
 	}
 
 }

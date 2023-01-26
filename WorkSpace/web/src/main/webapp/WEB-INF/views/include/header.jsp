@@ -243,7 +243,7 @@ span {
 					<ul>
 						<li><a href="open_lecture.le">강의<br>개설</a></li>
 					</ul></li>
-				<li><a href="list.le?member_code=${loginInfo.member_code }" class="nav-item nav-link">내 강의실</a></li>	
+				<li><a href="list.le?member_code=${loginInfo.member_code}" class="nav-item nav-link">내 강의실</a></li>	
 				<li><a href="#">게시판</a>
 					<ul>
 						<li><a href="list.no">공통</a></li>

@@ -13,6 +13,7 @@ import vo.MemberVO;
 
 public interface LectureService {
 	List<LectureVO> lecture_list(int member_code); //학생이 수강중인 강의 리스트 조회
+	List<LectureVO> lecture_list_teacher(int member_code); //학생이 수강중인 강의 리스트 조회
 	MemberVO info(int lecture_code); //강의홈 화면에서 강의하는 강사정보 조회
 	List<BoardVO> notice_list(int lecture_code);//강의 공지사항 리스트
 	BoardVO notice_info(int board_code); //강의 공지사항 정보
@@ -21,4 +22,9 @@ public interface LectureService {
 	List<BoardVO> video_list(int lecture_code); //강의영상 리스트 조회
 	List<ExamVO> exam_list(HashMap<String, Object> map); //시험목록 조회
 	List<MemberVO> student_list(int lecture_code); //수강생 리스트 조회
+	
+	//시험등록
+	int insert_exam(ExamVO vo);
+	//특정 강의정보 조회
+	LectureVO lecture_info(int lecture_code);
 }

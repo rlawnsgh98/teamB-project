@@ -18,14 +18,16 @@ href="css/member.css?<%=new java.util.Date()%>">
 <h3>시험 등록</h3>
 	
 	<div id="container py-5">
-		<div class="col-lg-7 mx-auto bg-white rounded shadow">
+		<div class="col-lg-7 mx-auto bg-white rounded shadow exam-new-container">
 		
-			<form method='post' action='homework_new' enctype='multipart/form-data'>
+			<form method='post' action='exam_insert.le' enctype='multipart/form-data'>
+			<input type='hidden' value='${lecture.lecture_code}' name='lecture_code'/>
+			<input type='hidden' value='${lecture.subject_code}' name='subject'/>
 				<table class="table">
 					<tr>
 						<th class="col-3 align-middle px-4 py-3">시험 제목</th>
 						<td class="align-middle " colspan='3'>
-							<input class='form-control' style = "width:100%" type="text"  name='title'>
+							<input class='form-control' style = "width:100%" type="text"  name='exam_title'>
 						</td>
 					</tr>
 					
@@ -33,17 +35,18 @@ href="css/member.css?<%=new java.util.Date()%>">
 						<th class="col-3 align-middle px-4 py-3">시험구분</th>
 				
 						<td class='align-middle'>
-							<select class='form-select'>
-								<option>중간고사</option>
-								<option>기말고사</option>
-								<option>쪽지시험</option>
+							<select class='form-select' name='exam_type'>
+								<option value='1'>모의고사</option>
+								<option value='2'>쪽지시험</option>
+								<option value='3'>중간평가</option>
+								<option value='4'>기말평가</option>
 							</select>
 						</td>
 						
-						<th class="col-3 align-middle px-4 py-3">과목</th>
-						<td>
-							<input type='text' readonly>
-						</td>
+<!-- 						<th class="col-3 align-middle px-4 py-3">과목</th> -->
+<!-- 						<td> -->
+<%-- 							<input type='text' readonly value='${lecture.subject}'> --%>
+<!-- 						</td> -->
 					</tr>
 					<tr>
 						<th class='col-3 align-middle'>시작 일시</th>
@@ -63,6 +66,11 @@ href="css/member.css?<%=new java.util.Date()%>">
 				
 				</table>
 			</form>
+			
+			<div style='margin-bottom:20px;'>
+				<a href='' class='btn-exam-empty mr-20 w-px120'>돌아가기</a>
+				<a onClick='$("form").submit()' class='btn-exam-black w-px120'>등록하기</a>
+			</div>
 		</div>
 	</div>
 	
