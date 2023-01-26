@@ -2,23 +2,28 @@
     pageEncoding="UTF-8"%>
     
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html>
 <head>
+<link href="css/table.css" rel="stylesheet">
+
+
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
 	<div id="container py-5">
 		<h1>영상강의 목록</h1>
+		
 			<!-- 선생일때 보여줌 -->
 			<div class='btnSet'>
 				<a class='btn-fill' href='video_new.le'>영상등록</a>
 			</div>
-
+			
         <div class="row">
             <div class="col-lg-7 mx-auto bg-white rounded shadow">
-				<table class="table table-fixed"> 
+				<table class="table table-fixed table-hover"> 
 					<thead>
 						<tr>
 							<th scope="col" class="col-3">번호</th>
@@ -31,7 +36,7 @@
 					<tbody>
 						<c:forEach items="${video_list}" var="list">
 							<tr>
-								<th scope="row" class="col-3">${list.rownum }</th>
+								<td scope="row" class="col-3">${list.rownum }</td>
 								<td scope="col" class="col-3">${list.title }</td>
 								<td scope="col" class="col-3">${list.writedate }</td>
 								<td scope="col" class="col-3"><a class="btn-fill" href="video_watch.le?board_code=${list.board_code }">시청하기</a></td>

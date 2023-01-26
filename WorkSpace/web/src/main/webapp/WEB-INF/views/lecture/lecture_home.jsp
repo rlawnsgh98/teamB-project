@@ -6,14 +6,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
 <link href="css/table.css" rel="stylesheet">
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 
 <body>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
 <main>
+
 <div class="container">
 <div class="row">
 <div class="col-md-12">
@@ -60,6 +61,7 @@
 </div>
 </div>
 </div>
+<%@include file="../include/sidebar.jsp" %>
 </div>
 
 </main>
@@ -449,6 +451,6 @@ a {
 <script type="text/javascript">
 
 </script>
-<%@include file="../include/sidebar.jsp" %>
+
 </body>
 </html>

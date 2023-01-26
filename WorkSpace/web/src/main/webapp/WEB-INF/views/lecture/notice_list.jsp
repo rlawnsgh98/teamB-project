@@ -10,13 +10,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div id="container py-5">
-        <div class="row">
-            <div class="col-lg-7 mx-auto bg-white rounded shadow">
-            <h1>공지 목록</h1>
+<h1>공지 목록</h1>
             <div class='btnSet'>
 				<a class='btn-fill' href='notice_write.le'>공지작성</a>
 			</div>
+	<div id="container py-5">
+        <div class="row">
+			<%@include file="../include/sidebar.jsp" %>
+
+            <div class="col-lg-7 mx-5 bg-white rounded">
+            
 				<table class="table table-fixed table-hover"> 
 
 					<thead>
@@ -42,7 +45,6 @@
 			</div>
 		</div>
 	</div>
-	
-	<%@include file="../include/sidebar.jsp" %>
+
 </body>
 </html>

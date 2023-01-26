@@ -150,7 +150,7 @@ public class MemberController {
 	}
 	
 	// 수강신청 - 강의 상세 화면 - no
-	@RequestMapping("/en_lec_detail.le")
+	@RequestMapping("/en_lec_detail2.le")
 	public String en_lec_detai(HttpSession session) {
 		// 응답화면연결
 		return "member/enrolment_lecture_detail2";

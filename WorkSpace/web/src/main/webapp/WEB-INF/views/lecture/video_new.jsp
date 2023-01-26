@@ -20,7 +20,7 @@
 		<div class="col-lg-7 mx-auto bg-white rounded shadow">
 		
 			<form method='post' action='notice_write' enctype='multipart/form-data'>
-				<table class="table">
+				<table class="table ">
 					<tr>
 						<th class="col-3 align-middle px-4 py-3">영상제목</th>
 						<td class="align-middle">

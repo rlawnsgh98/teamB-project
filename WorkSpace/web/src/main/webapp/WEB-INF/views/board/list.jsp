@@ -12,7 +12,7 @@
 
 <h3 class='container text-center board-title text-dark'>자유게시판</h3>
 	
-<div class='btn-board-empty pointer'><a href='list.no'>공지사항</a></div>
+<!-- <div class='btn-board-empty pointer'><a href='list.no'>공지사항</a></div> -->
 	
 <form method='post' action='list.bo' autocomplete="off">
 
