@@ -5,7 +5,76 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2023-01-24T09:00:00Z</updated>
+  <updated>2023-01-25T21:08:02Z</updated>
+  <entry>
+    <title>Introducing Microservices Patterns with Spring Integration</title>
+    <link rel="alternate" href="https://spring.io/blog/2023/01/25/introducing-microservices-patterns-with-spring-integration" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Artem Bilan</name>
+    </author>
+    <id>tag:spring.io,2023-01-25:5067</id>
+    <updated>2023-01-25T21:08:02Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;Hey Spring Community!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;I hope you are enjoying &lt;a href="https://springone.io/"&gt;Spring One Essentials&lt;/a&gt; these days. The most exciting feature for me is an &lt;a href="https://springone.io/sessions/observability-of-your-application"&gt;Observability&lt;/a&gt; which is spread throughout the Spring portfolio from now on.
+Nevertheless, today I&amp;#8217;d like to share with a project I&amp;#8217;m working on since holidays, where the mentioned observability makes a perfect sense, too.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;I&amp;#8217;ll start from the far.
+Let&amp;#8217;s imagine we are learning a new programming language! I do learn &lt;a href="https://go.dev/tour/welcome/1"&gt;Go&lt;/a&gt; to better understand Kubernetes, for example.
+Of course, we deal with some primitives and basic structures, first of all.
+Then we implement some well-known algorithms like bubble sort, Fibonacci number or sqrt function to get used to the language style and expectations.
+And now what?
+We have some real use-cases where this or that functionality can be covered by some patterns.
+So, we go and learn those patterns(or we know them already) and trying to implement them ourselves to meet our project requirements.
+But mostly (like me) we search for already existing solutions for the frameworks and tools we are using all the time to minimize our own code base and maintenance burden.
+Plus such a catalog (or library) of ready to use pattern implementations helps developers to communicate each other in the same concise language.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Now to the ground.
+The tool and framework for me which I use and develop on daily basis, of course, is &lt;a href="https://spring.io/projects/spring-integration"&gt;Spring Integration&lt;/a&gt; which is already a reference implementation of well-know &lt;a href="https://www.enterpriseintegrationpatterns.com"&gt;Enterprise Integration Patterns&lt;/a&gt;.
+At the same time a messaging model as a core feature of this project allows to implement easily scaled loosely-coupled architecture not only between services, but even within one application context.
+In addition, it comes with many ready-to-use components and utilities, such as retry advice, SpEL evaluation and scripting languages support.
+Or distributed locks and leader election.
+Of course, I can go on and go on talking about various channel adapters, DSLs or even Reactive Streams support.
+But the goal of this blog post is to share with you something which would make your experience with modern cloud and microservices applications development easier when you are already familiar with Spring Integration.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;So, please, meet a &lt;a href="https://github.com/artembilan/microservices-patterns-spring-integration"&gt;Microservices Patterns with Spring Integration&lt;/a&gt; project which, essentially, is a set (catalog) of working samples for Microservices Patterns described on &lt;a href="https://microservices.io/index.html"&gt;Microservice Architecture&lt;/a&gt;.
+In addition, since Spring Integration is fully based on messaging, which can be distributed, we also include some &lt;a href="https://iwringer.wordpress.com/2015/08/03/patterns-for-streaming-realtime-analytics"&gt;Event Streaming Patterns&lt;/a&gt; implementations.
+Every module of this project is a self-containing Spring Boot application, which in most cases should be verified through provided tests because some features may require a real environment.
+The solutions presented in this project cannot be moved as out-of-the-box components to any framework(Spring Integration, Spring Cloud Stream etc.) because they require some code adjustments according to the target project you develop.
+For example the current &lt;code&gt;Normalizer&lt;/code&gt; pattern has only HTTP and directory poller as entry points, and can convert from limited number of types; the &lt;code&gt;Outbox&lt;/code&gt; pattern deals with JDBC and Apache Kafka, and so on.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The project is on its early stage, and I&amp;#8217;m going to come back to it when I read &lt;a href="https://microservices.io/book"&gt;Microservices patterns&lt;/a&gt; and &lt;a href="https://www.oreilly.com/library/view/streaming-systems/9781491983867/"&gt;Streaming Systems&lt;/a&gt; books.
+Please, reach us out with any feedback and if you have some use-case (&lt;a href="https://vldb.org/pvldb/vol14/p3135-begoli.pdf"&gt;Watermarks?&lt;/a&gt;) which fits to Microservices or Streaming Systems architecture, don&amp;#8217;t hesitate to share your thoughts and possible solution with Spring Integration!
+And right: the next pattern I&amp;#8217;m looking at to add is a &lt;a href="https://microservices.io/patterns/observability/distributed-tracing.html"&gt;Distributed Tracing&lt;/a&gt; based on a &lt;a href="https://micrometer.io/docs/observation"&gt;Micrometer Observation&lt;/a&gt; mentioned before.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Cheers,&amp;#160;&lt;br&gt;
+Artem&lt;/p&gt;
+&lt;/div&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Shell 2.1.6 and 3.0.0 are now available</title>
+    <link rel="alternate" href="https://spring.io/blog/2023/01/25/spring-shell-2-1-6-and-3-0-0-are-now-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Janne Valkealahti</name>
+    </author>
+    <id>tag:spring.io,2023-01-25:5066</id>
+    <updated>2023-01-25T15:20:31Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I&amp;rsquo;m happy to announce that Spring Shell &lt;code&gt;2.1.6&lt;/code&gt; and &lt;code&gt;3.0.0&lt;/code&gt; has been released and is now available from Maven Central.&lt;/p&gt;
+&lt;p&gt;Please see the &lt;a href="https://github.com/spring-projects/spring-shell/releases/tag/v2.1.6"&gt;release notes 2.1.6&lt;/a&gt; and &lt;a href="https://github.com/spring-projects/spring-shell/releases/tag/v3.0.0"&gt;release notes 3.0.0&lt;/a&gt; for more details.&lt;/p&gt;
+&lt;p&gt;Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://spring.io/projects/spring-shell/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-shell"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-shell/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-shell/docs/3.0.0/docs/index.html"&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>This Week in Spring - SpringOne Essentials 2023 edition - January 24th, 2023</title>
     <link rel="alternate" href="https://spring.io/blog/2023/01/24/this-week-in-spring-springone-essentials-2023-edition-january-24th-2023" />
@@ -527,56 +596,6 @@ The most notable changes are:&lt;/p&gt;
     <content type="html">&lt;p&gt;Hi, Spring fans! this episode, we turn it to 11 and ring in the new year with a fantastic human being, father, friend, engineer, and fellow Spring Developer Advocate: DaShaun Carter (&lt;a href="https://twitter.com/DaShaun"&gt;@dashaun&lt;/a&gt;). &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Happy new year!&lt;/strong&gt;&lt;/p&gt;
 &lt;iframe title="DaShaun Carter: amazing human being, father, friend, engineer, and fellow Spring Developer Advocate" allowtransparency="true" height="150" width="100%" style="border: none; min-width: min(100%, 430px);" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=en3wm-134cd7b-pb&amp;from=pb6admin&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Arial&amp;skin=1&amp;font-color=&amp;logo_link=episode_page&amp;btn-skin=7"&gt;&lt;/iframe&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring  - Happy New Year 2023 edition - December 27th, 2022</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/12/27/this-week-in-spring-happy-new-year-2023-edition-december-27th-2022" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2022-12-27:5047</id>
-    <updated>2022-12-27T08:00:00Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! It&amp;rsquo;s 27 December as I write this and - being honest - I couldn&amp;rsquo;t be happier. It&amp;rsquo;s raining outside. I&amp;rsquo;m in a warm cozy office. Good music is playing. People are asleep in my home. I can hear the raindrops and wind outside the window. I&amp;rsquo;m at peace as I code. And code I have. I&amp;rsquo;ve been updating my blog, and a half dozen little side projects, to the new Spring Boot 3. This has given me a chance to do a little, shall we say, &lt;em&gt;Spring cleaning&lt;/em&gt;, and also update my Github Actions to the latest and greatest. I&amp;rsquo;m pleasantly surprised by how many builds I&amp;rsquo;ve switched over to 3.0 and then used the AOT engine to build a GraalVM native image and it &lt;em&gt;just worked&lt;/em&gt;! &lt;/p&gt;
-&lt;p&gt;How were or are your holidays going? My family and I had a lovely Christmas, which we don&amp;rsquo;t take for granted how hard the world seems to be these days. We&amp;rsquo;re all making our new years resolutions and preparing for the exciting new year ahead, too. When next we talk, it&amp;rsquo;ll be 202*3*! So, let me say in advance: happy new year!! Today&amp;rsquo;s the 27th, but by the 30th here in California it&amp;rsquo;ll start being 2023 for some people in other parts of the world. It&amp;rsquo;s crazy how fast time flies! And that&amp;rsquo;s also true with roundups! I just wrote last week&amp;rsquo;s, and here we are writing another! There&amp;rsquo;s always a lot to cover so let&amp;rsquo;s dive right into it!&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/12/22/spring-boot-2-7-7-available-now"&gt;Spring Boot 2.7.7 available now&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/12/22/spring-boot-3-0-1-available-now"&gt;Spring Boot 3.0.1 available now&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://medium.com/@ranawaka.y/spring-boot-integration-tests-for-rest-apis-with-testcontainers-webflux-and-monogodb-a47c0edb5de9"&gt;Spring Boot: Integration Tests For REST APIs with Testcontainers, WebFlux and MonogoDb&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/12/23/spring-modulith-0-2-released"&gt;Spring Modulith 0.2 released&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/12/22/a-bootiful-podcast-field-cto-and-chief-evangelist-at-gradle-justin-reock"&gt;A Bootiful Podcast: Field CTO and Chief Evangelist at Gradle Justin Reock&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;I built a &lt;a href="https://joshlong.com/jl/blogpost/github-action-export-java-version.html"&gt;A Github Action to export your project&amp;rsquo;s Java version as a variable&lt;/a&gt;. Just use it from your Github Actions (Maven only, at the moment) project and it&amp;rsquo;ll export the version of Java as an environment variable or as a step output, either of which you can then use in the &lt;code&gt;setup-java&lt;/code&gt; Github Action.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://springbootlearning.medium.com/using-micrometer-to-trace-your-spring-boot-app-1fe6ff9982ae"&gt;Using Micrometer to trace your Spring Boot app&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;This is an absolutely brilliant blog using Spring Integration and JDBC to &lt;a href="https://www.javaadvent.com/2022/12/using-postgres-as-a-message-queue.html"&gt;use PostgresQL as a message bus&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://medium.com/javarevisited/what-are-the-new-features-of-springboot3-6ddba9af664"&gt;What Are the New Features of Spring Boot 3?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;I also wrote down the steps I follow to build a &lt;a href="https://joshlong.com/jl/blogpost/a-bootiful-spring-boot-3-github-action.html"&gt;modern Github Actions in the world of Spring Boot 3&lt;/a&gt;, since I was doing so many upgrades and needed a standardized recipe. While this works just fine with Apache Maven, I&amp;rsquo;m starting to think it might be time for me to learn Gradle, so that I can have an easier time doing things consistently across a project. Stay tuned.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/722698246/0/baeldung~Run-Multiple-Commands-in-Docker-Run"&gt;Run Multiple Commands in Docker Run&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://twitter.com/fniephaus/status/1606035104525979648?s=12&amp;t=10xxqn4LGIkv50DCH8shQg"&gt;The GraalVM github action is now verified! Are you using it?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://blog.picnic.nl/why-picnic-picked-java-e53fafe0df1b"&gt;Why Picnic picked Java. Picking a tech stack for your startup¡¦ | by Sander Mak | Dec, 2022 | Picnic Engineering&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://kubernetes.io/blog/2022/12/26/pod-scheduling-readiness-alpha/"&gt;Blog: Kubernetes 1.26: Pod Scheduling Readiness&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://kubernetes.io/blog/2022/12/23/kubernetes-12-06-fsgroup-on-mount/"&gt;Blog: Kubernetes 1.26: Support for Passing Pod fsGroup to CSI Drivers At Mount Time&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://kubernetes.io/blog/2022/12/27/cpumanager-ga/"&gt;Blog: Kubernetes v1.26: CPUManager goes GA&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://kubernetes.io/blog/2022/12/22/kubelet-credential-providers/"&gt;Blog: Kubernetes v1.26: GA Support for Kubelet Credential Providers&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Modulith 0.2 released</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/12/23/spring-modulith-0-2-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Oliver Drotbohm</name>
-    </author>
-    <id>tag:spring.io,2022-12-23:5046</id>
-    <updated>2022-12-23T16:00:00Z</updated>
-    <content type="html">&lt;p&gt;I am pleased to announce the availability of Spring Modulith 0.2. The release adds the following features:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;We introduced &lt;code&gt;@ApplicationModuleListener&lt;/code&gt; to ease the declaration of asynchronous, transactional event listeners that run in a transaction themselves. A model that we recommend as default to integration application modules. (&lt;a href="https://github.com/spring-projects-experimental/spring-modulith/issues/80"&gt;#80&lt;/a&gt;, &lt;a href="https://docs.spring.io/spring-modulith/docs/0.2.0/reference/html/#events.amil"&gt;reference documentation&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;The application module dependency structure is now also exposed as Spring Boot actuator. This allows operating infrastructure to visualize insights it provides to operations teams to be aligned with the application module structure (HTTP traces by module etc.) (&lt;a href="https://github.com/spring-projects-experimental/spring-modulith/issues/87"&gt;#87&lt;/a&gt;, &lt;a href="https://docs.spring.io/spring-modulith/docs/0.2.0/reference/html/#observability"&gt;reference documentation&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;The Postgres event publication registry schema now follows Postgres best practices. (&lt;a href="https://github.com/spring-projects-experimental/spring-modulith/issues/81"&gt;#81&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The release also contains the obligatory upgrade to Spring Boot 3.0.1. Find more information on the &lt;a href="https://github.com/spring-projects-experimental/spring-modulith/releases/tag/0.2.0"&gt;release page&lt;/a&gt;.&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>

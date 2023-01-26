@@ -8,13 +8,18 @@
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="300px"/>
+		<item key="selection" value="bootstrap"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="bootstrap"/>
+			<item value="loat"/>
+			<item value="set"/>
+			<item value="btn"/>
+			<item value="boot"/>
 			<item value="300px"/>
 			<item value="text"/>
 			<item value=".img"/>
@@ -25,11 +30,6 @@
 			<item value="body"/>
 			<item value="    /* background-color: #f0f6ff;"/>
 			<item value="back"/>
-			<item value="about me"/>
-			<item value="about"/>
-			<item value="member_info"/>
-			<item value="attend"/>
-			<item value="lecture_home"/>
 		</list>
 		<list key="replacehistory">
 		</list>
