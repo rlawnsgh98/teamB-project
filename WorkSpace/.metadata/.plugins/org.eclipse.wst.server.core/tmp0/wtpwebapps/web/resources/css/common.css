@@ -492,7 +492,7 @@ ul.grid li{width : 230px; height:150px; border:1px solid #000; box-sizing: borde
 	font-size:18px;
 	color:#111;
 }
-.exam_content{
+.exam_title, .exam_content{
 	width:700px;
 	resize:vertical;
 	height:auto;

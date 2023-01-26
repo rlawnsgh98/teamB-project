@@ -65,10 +65,15 @@
 </ul>
 </div>
 
-<!-- 문제 -->
+<!-- 문제 title -->
 <div class='exam_answer'>
 	<div>2.</div>
-	<textarea name='exam_content' class='exam_content input-bottom' rows="1" placeholder="문제를 입력하세요"></textarea>
+	<textarea name='exam_title' class='exam_title input-bottom' rows="1" placeholder="문제를 입력하세요"></textarea>
+</div>
+<!-- 문제 content -->
+<div class='exam_answer'>
+	<div>2.</div>
+	<textarea name='exam_content' class='exam_content input-bottom' rows="1" placeholder="내용을 입력하세요(선택)"></textarea>
 </div>
 <!-- 객관식 답 -->			
 <ul class='exam_question'>
@@ -117,15 +122,16 @@ function answer_clear(){
 	$('input:radio[name="answer"]').prop('checked', false);
 	$('#score').val("");
 	$('input:text[placeholder="번 답안"]').val("");
+	$('.exam_title').val("");
 	$('.exam_content').val("");
 }
 
 /* textarea 자동 높이 조절 */
 function adjustHeight(type) {
 	if(type == 0){
+		var textEle = $('.exam_title');
+	}else if(type == 1){
 		var textEle = $('.exam_content');
-	}else{
-		//주관식 답안 textarea
 	}
 	textEle.css('height', 'auto');
 	var textEleHeight = textEle.prop('scrollHeight');
@@ -133,7 +139,7 @@ function adjustHeight(type) {
 };
 
 /* textarea 키 입력 */
-$('.exam_content').on('keyup', function() {
+$('.exam_title').on('keyup', function() {
 	adjustHeight(0);
 	console.log("key up")
 });
