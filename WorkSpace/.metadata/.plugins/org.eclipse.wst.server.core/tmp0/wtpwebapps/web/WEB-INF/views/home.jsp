@@ -10,7 +10,6 @@
 	pageEncoding="UTF-8"%>
 <meta charset="utf-8">
 </head>
-<<<<<<< HEAD
 <style>
 #container {
 	width: 100%;
@@ -18,12 +17,6 @@
 	position: relative;
 	min-height: 820px;
 }
-=======
-<body>
-<h1>
-	wonhee_web 
-</h1>
->>>>>>> origin/wonhee_web
 
 .main_wrap {
 	min-width: 1200px;

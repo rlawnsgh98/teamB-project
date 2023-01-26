@@ -8,5 +8,5 @@
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<import resource="classpath:dbconn/conn.xml"/>
 	<!-- 패키지 등록 -->
-	<context:component-scan base-package="common, lecture, member, board"/>
+	<context:component-scan base-package="common, lecture, member"/>
 </beans>

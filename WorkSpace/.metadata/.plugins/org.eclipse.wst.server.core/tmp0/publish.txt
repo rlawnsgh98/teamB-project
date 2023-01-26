@@ -1,9 +1,8 @@
 #Tomcat publish data
-<<<<<<< HEAD
-#Thu Jan 26 10:59:54 KST 2023
+#Thu Jan 26 11:05:11 KST 2023
+=\=\=\=\=\=\=
 org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\admin\\.m2\\repository\\org\\springframework\\spring-web\\5.3.18\\spring-web-5.3.18.jar=WEB-INF/lib/spring-web-5.3.18.jar
-org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\hoho0\\.m2\\repository\\org\\springframework\\spring-web\\5.3.18\\spring-web-5.3.18.jar=WEB-INF/lib/spring-web-5.3.18.jar
-=======
-#Thu Jan 26 03:22:06 KST 2023
 org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\asdkc\\.m2\\repository\\org\\springframework\\spring-web\\5.3.18\\spring-web-5.3.18.jar=WEB-INF/lib/spring-web-5.3.18.jar
->>>>>>> origin/wonhee_web
+>>>>>>>=origin/wonhee_web
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\hoho0\\.m2\\repository\\org\\springframework\\spring-web\\5.3.18\\spring-web-5.3.18.jar=WEB-INF/lib/spring-web-5.3.18.jar
+<<<<<<<=HEAD
