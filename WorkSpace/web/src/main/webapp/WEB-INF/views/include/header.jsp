@@ -26,8 +26,13 @@
 	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
 	rel="stylesheet">
 
+<<<<<<< HEAD
 <!-- Customized Bootstrap Stylesheet -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
+=======
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css?<%=new java.util.Date() %>" rel="stylesheet">
+>>>>>>> origin/wonhee_web
 
 <!-- Template Stylesheet -->
 <link href="css/style.css" rel="stylesheet">
@@ -201,6 +206,7 @@ span {
 }
 </style>
 </head>
+<<<<<<< HEAD
 <div class="container-fluid px-0">
 	<div class="row">
 		<div class="col-lg-4 text-center bg_sub py-3">
@@ -211,6 +217,50 @@ span {
 					<h6 class="text-uppercase mb-1">Email Us</h6>
 					<span>YH2023@naver.com</span>
 				</div>
+=======
+
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark shadow-sm py-3 py-lg-0 px-3 px-lg-0">
+        <a href="index.html" class="navbar-brand d-block d-lg-none">
+            <h1 class="m-0 text-uppercase text-white"><i class="fa fa-birthday-cake fs-1 text-primary me-3"></i>CakeZone</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto mx-lg-auto py-0">
+                <a href="<c:url value="/"/>" class="nav-item nav-link active">홈</a>
+                <a href="list.le?member_code=${loginInfo.member_code }" class="nav-item nav-link">강의</a>
+                <a href="list.bo" class="nav-item nav-link">게시판</a>
+                <a href="mypage.me" class="nav-item nav-link">마이페이지</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="service.html" class="dropdown-item">Our Service</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                    </div>
+                </div>
+                <div class="right-items">
+				<c:if test="${empty loginInfo }">
+					<div class="loginfo">
+						<ul>
+							<!-- 로그인 하지 않은 경우 -->
+							<li class="nav-link"><a class='btn-fill' href='login.me'>로그인</a></li>
+							<li class="nav-link"><a class='btn-fill' href='member.me'>회원가입</a></li>
+						</ul>
+					</div>
+				</c:if>
+				<c:if test="${not empty loginInfo }">
+					<div class="loginfo">
+						<ul>
+							<!-- 로그인 한 경우 -->
+							<li><img class='profile' src="${loginInfo.profilepath}">
+							<li><strong> ${loginInfo.member_name }</strong></li>
+							<li class="nav-link"><a class='btn-fill' href="changePW">비밀번호변경</a></li>
+							<li class="nav-link"><a class='btn-fill' href="logout.me">로그아웃</a></li>
+						</ul>
+					</div>
+				</c:if>
+>>>>>>> origin/wonhee_web
 			</div>
 		</div>
 		<div class="col-lg-4 text-center bg_main border-inner py-3">

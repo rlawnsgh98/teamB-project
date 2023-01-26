@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 INDEX VERSION 1.4+D:\teamB-project\WorkSpace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
 1243057733.index
 100049961.index
@@ -10,3 +11,22 @@ INDEX VERSION 1.4+D:\teamB-project\WorkSpace\.metadata\.plugins\org.eclipse.wst.
 3760658675.index
 2155029377.index
 1369228649.index
+=======
+INDEX VERSION 1.4+C:\_Project\spring_web\WorkSpace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+100049961.index
+3722597010.index
+1088574030.index
+2947640232.index
+957696860.index
+3714321348.index
+1369228649.index
+3097140283.index
+3223099095.index
+3023876586.index
+3223099095.index
+3023876586.index
+1243057733.index
+2686880388.index
+2220833067.index
+3013228386.index
+>>>>>>> origin/wonhee_web

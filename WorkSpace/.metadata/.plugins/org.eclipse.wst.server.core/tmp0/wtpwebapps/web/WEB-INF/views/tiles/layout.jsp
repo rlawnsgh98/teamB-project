@@ -26,6 +26,11 @@
 <script type='text/javascript' src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src='js/common.js?<%=new java.util.Date() %>'></script>
 
+<!-- 2023.01.25 폰트어썸 기본 타일에 추가 (김원희) -->
+<link rel="stylesheet" 
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"  />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+
 </head>
 
 

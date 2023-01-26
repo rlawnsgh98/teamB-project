@@ -9120,23 +9120,41 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 02:09:07.375
 !MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+<<<<<<< HEAD
 !SESSION 2023-01-25 10:05:32.892 -----------------------------------------------
+=======
+!SESSION 2023-01-25 10:14:49.336 -----------------------------------------------
+>>>>>>> origin/wonhee_web
 eclipse.buildId=4.14.0.202203131612
 java.version=11.0.16.1
 java.vendor=Oracle Corporation
 BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+<<<<<<< HEAD
 Framework arguments:  -product org.springframework.boot.ide.branding.sts4
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -clean -product org.springframework.boot.ide.branding.sts4
 
 !ENTRY org.eclipse.jface 2 0 2023-01-25 10:08:54.494
 !MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
 !SUBENTRY 1 org.eclipse.jface 2 0 2023-01-25 10:08:54.494
+=======
+
+!ENTRY org.eclipse.osgi 4 0 2023-01-25 10:14:50.029
+!MESSAGE The -clean (osgi.clean) option was not successful. Unable to clean the storage area: C:\DevProgram\sts-4.14.0.RELEASE\configuration\org.eclipse.osgi
+
+!ENTRY org.eclipse.jface 2 0 2023-01-25 10:16:08.135
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-01-25 10:16:08.136
+>>>>>>> origin/wonhee_web
 !MESSAGE A conflict occurred for CTRL+SHIFT+T:
 Binding(CTRL+SHIFT+T,
 	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
 		Open a type in a Java editor,
 		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+<<<<<<< HEAD
 		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3feb93a,
+=======
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3f7f9d3f,
+>>>>>>> origin/wonhee_web
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
@@ -9144,17 +9162,29 @@ Binding(CTRL+SHIFT+T,
 	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
 		,
 		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+<<<<<<< HEAD
 		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4ae435a3,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
 !SUBENTRY 1 org.eclipse.jface 2 0 2023-01-25 10:08:54.494
+=======
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@62966c9f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-01-25 10:16:08.136
+>>>>>>> origin/wonhee_web
 !MESSAGE A conflict occurred for ALT+SHIFT+R:
 Binding(ALT+SHIFT+R,
 	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
 		Rename the selected element,
 		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+<<<<<<< HEAD
 		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7f69c4c0,
+=======
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4193da4d,
+>>>>>>> origin/wonhee_web
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
@@ -9162,17 +9192,30 @@ Binding(ALT+SHIFT+R,
 	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
 		Rename the selected item,
 		Category(org.eclipse.ui.category.file,File,null,true),
+<<<<<<< HEAD
 		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6a9a6a0c,
+=======
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6915351c,
+>>>>>>> origin/wonhee_web
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.mylyn.tasks.core 4 0 2023-01-25 10:08:56.075
 !MESSAGE Unexpected error while loading repository template extensions
 !SUBENTRY 1 org.eclipse.mylyn.tasks.core 4 0 2023-01-25 10:08:56.075
 !MESSAGE Could not load repository template extension contributed by 'org.eclipse.mylyn.bugzilla.ide' with connectorKind 'bugzilla'
 
 !ENTRY org.eclipse.ui 4 4 2023-01-25 10:09:02.554
+=======
+!ENTRY org.eclipse.mylyn.tasks.core 4 0 2023-01-25 10:16:08.988
+!MESSAGE Unexpected error while loading repository template extensions
+!SUBENTRY 1 org.eclipse.mylyn.tasks.core 4 0 2023-01-25 10:16:08.988
+!MESSAGE Could not load repository template extension contributed by 'org.eclipse.mylyn.bugzilla.ide' with connectorKind 'bugzilla'
+
+!ENTRY org.eclipse.ui 4 4 2023-01-25 10:16:11.795
+>>>>>>> origin/wonhee_web
 !MESSAGE Unable to create part
 !STACK 1
 org.eclipse.ui.PartInitException: Cannot determine URI for '/web/src/main/webapp/WEB-INF/views/lecture/homework_info.jsp'.
@@ -9307,7 +9350,11 @@ Caused by: org.eclipse.core.runtime.CoreException: Cannot determine URI for '/we
 	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2290)
 	at org.eclipse.ui.texteditor.AbstractTextEditor.internalInit(AbstractTextEditor.java:3178)
 	... 116 more
+<<<<<<< HEAD
 !SUBENTRY 1 org.eclipse.core.filebuffers 4 0 2023-01-25 10:09:02.556
+=======
+!SUBENTRY 1 org.eclipse.core.filebuffers 4 0 2023-01-25 10:16:11.797
+>>>>>>> origin/wonhee_web
 !MESSAGE Cannot determine URI for '/web/src/main/webapp/WEB-INF/views/lecture/homework_info.jsp'.
 !STACK 1
 org.eclipse.core.runtime.CoreException: Cannot determine URI for '/web/src/main/webapp/WEB-INF/views/lecture/homework_info.jsp'.
@@ -9439,16 +9486,26 @@ org.eclipse.core.runtime.CoreException: Cannot determine URI for '/web/src/main/
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+<<<<<<< HEAD
 !SUBENTRY 2 org.eclipse.core.filebuffers 4 0 2023-01-25 10:09:02.556
 !MESSAGE Cannot determine URI for '/web/src/main/webapp/WEB-INF/views/lecture/homework_info.jsp'.
 
 !ENTRY org.eclipse.egit.ui 2 0 2023-01-25 10:09:04.118
 !MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
 user global configuration and to define the default location to store repositories: 'C:\Users\admin'. If this is
+=======
+!SUBENTRY 2 org.eclipse.core.filebuffers 4 0 2023-01-25 10:16:11.798
+!MESSAGE Cannot determine URI for '/web/src/main/webapp/WEB-INF/views/lecture/homework_info.jsp'.
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-01-25 10:16:12.825
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\asdkc'. If this is
+>>>>>>> origin/wonhee_web
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 10:09:33.689
 !MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
 
@@ -9468,6 +9525,9 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 !MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
 
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.399
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.168
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.5.0.0\ojdbc8-21.5.0.0.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.5.0.0\ojdbc8-21.5.0.0.jar
@@ -9517,7 +9577,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\com\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 23 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.400
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.174
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\org\apache\commons\commons-dbcp2\2.9.0\commons-dbcp2-2.9.0.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\org\apache\commons\commons-dbcp2\2.9.0\commons-dbcp2-2.9.0.jar
@@ -9575,7 +9639,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\org\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 31 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.402
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.177
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\org\apache\commons\commons-pool2\2.10.0\commons-pool2-2.10.0.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\org\apache\commons\commons-pool2\2.10.0\commons-pool2-2.10.0.jar
@@ -9625,7 +9693,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\org\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 23 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.402
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.179
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar
@@ -9683,7 +9755,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\comm
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 31 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.403
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.181
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\org\springframework\spring-jdbc\5.3.18\spring-jdbc-5.3.18.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\org\springframework\spring-jdbc\5.3.18\spring-jdbc-5.3.18.jar
@@ -9733,7 +9809,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\org\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 23 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.404
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.183
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\org\springframework\spring-beans\5.3.18\spring-beans-5.3.18.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\org\springframework\spring-beans\5.3.18\spring-beans-5.3.18.jar
@@ -9791,7 +9871,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\org\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 31 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.405
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.185
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\org\springframework\spring-core\5.3.18\spring-core-5.3.18.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\org\springframework\spring-core\5.3.18\spring-core-5.3.18.jar
@@ -9841,7 +9925,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\org\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 23 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.406
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.187
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\org\springframework\spring-jcl\5.3.18\spring-jcl-5.3.18.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\org\springframework\spring-jcl\5.3.18\spring-jcl-5.3.18.jar
@@ -9899,7 +9987,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\org\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 31 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.407
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.189
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\org\springframework\spring-tx\5.3.18\spring-tx-5.3.18.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\org\springframework\spring-tx\5.3.18\spring-tx-5.3.18.jar
@@ -9949,7 +10041,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\org\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 23 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.408
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.191
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\org\mybatis\mybatis\3.5.10\mybatis-3.5.10.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\org\mybatis\mybatis\3.5.10\mybatis-3.5.10.jar
@@ -10007,7 +10103,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\org\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 31 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.409
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.194
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\org\mybatis\mybatis-spring\2.0.7\mybatis-spring-2.0.7.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\org\mybatis\mybatis-spring\2.0.7\mybatis-spring-2.0.7.jar
@@ -10057,7 +10157,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\org\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 23 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.410
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.196
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-jsp\3.0.8\tiles-jsp-3.0.8.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-jsp\3.0.8\tiles-jsp-3.0.8.jar
@@ -10115,7 +10219,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\org\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 31 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.413
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.198
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-servlet\3.0.8\tiles-servlet-3.0.8.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-servlet\3.0.8\tiles-servlet-3.0.8.jar
@@ -10165,7 +10273,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\org\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 23 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.414
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.200
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-core\3.0.8\tiles-core-3.0.8.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-core\3.0.8\tiles-core-3.0.8.jar
@@ -10215,7 +10327,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\org\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 23 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.415
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.202
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\commons-digester\commons-digester\2.0\commons-digester-2.0.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\commons-digester\commons-digester\2.0\commons-digester-2.0.jar
@@ -10273,7 +10389,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\comm
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 31 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.416
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.203
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\commons-beanutils\commons-beanutils\1.8.0\commons-beanutils-1.8.0.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\commons-beanutils\commons-beanutils\1.8.0\commons-beanutils-1.8.0.jar
@@ -10323,7 +10443,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\comm
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 23 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.416
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.205
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-request-servlet\1.0.7\tiles-request-servlet-1.0.7.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-request-servlet\1.0.7\tiles-request-servlet-1.0.7.jar
@@ -10381,7 +10505,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\org\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 31 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.417
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.207
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-template\3.0.8\tiles-template-3.0.8.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-template\3.0.8\tiles-template-3.0.8.jar
@@ -10431,7 +10559,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\org\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 23 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.418
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.208
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-api\3.0.8\tiles-api-3.0.8.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-api\3.0.8\tiles-api-3.0.8.jar
@@ -10489,7 +10621,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\org\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 31 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.418
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.210
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-autotag-core-runtime\1.2\tiles-autotag-core-runtime-1.2.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-autotag-core-runtime\1.2\tiles-autotag-core-runtime-1.2.jar
@@ -10539,7 +10675,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\org\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 23 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.420
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.214
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-request-jsp\1.0.7\tiles-request-jsp-1.0.7.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-request-jsp\1.0.7\tiles-request-jsp-1.0.7.jar
@@ -10597,7 +10737,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\org\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 31 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.421
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.216
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-request-api\1.0.7\tiles-request-api-1.0.7.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\org\apache\tiles\tiles-request-api\1.0.7\tiles-request-api-1.0.7.jar
@@ -10647,7 +10791,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\org\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 23 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.422
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.218
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\org\bgee\log4jdbc-log4j2\log4jdbc-log4j2-jdbc4.1\1.16\log4jdbc-log4j2-jdbc4.1-1.16.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\org\bgee\log4jdbc-log4j2\log4jdbc-log4j2-jdbc4.1\1.16\log4jdbc-log4j2-jdbc4.1-1.16.jar
@@ -10705,7 +10853,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\org\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 31 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.423
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.220
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.14.0\jackson-databind-2.14.0.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.14.0\jackson-databind-2.14.0.jar
@@ -10755,7 +10907,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\com\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 23 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.423
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.222
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.14.0\jackson-annotations-2.14.0.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.14.0\jackson-annotations-2.14.0.jar
@@ -10813,7 +10969,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\com\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 31 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.424
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.225
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.14.0\jackson-core-2.14.0.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.14.0\jackson-core-2.14.0.jar
@@ -10863,7 +11023,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\com\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 23 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.425
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.227
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\org\apache\commons\commons-email\1.5\commons-email-1.5.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\org\apache\commons\commons-email\1.5\commons-email-1.5.jar
@@ -10921,7 +11085,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\org\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 31 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.425
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.229
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\com\sun\mail\javax.mail\1.5.6\javax.mail-1.5.6.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\com\sun\mail\javax.mail\1.5.6\javax.mail-1.5.6.jar
@@ -10971,7 +11139,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\com\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 23 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.426
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.231
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar
@@ -11029,7 +11201,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\java
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 31 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.426
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.236
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\org\json\json\20220924\json-20220924.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\org\json\json\20220924\json-20220924.jar
@@ -11079,7 +11255,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\org\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 23 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.427
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.239
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\commons-fileupload\commons-fileupload\1.4\commons-fileupload-1.4.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\commons-fileupload\commons-fileupload\1.4\commons-fileupload-1.4.jar
@@ -11137,7 +11317,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\comm
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 31 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.428
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.242
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\commons-io\commons-io\2.2\commons-io-2.2.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\commons-io\commons-io\2.2\commons-io-2.2.jar
@@ -11187,7 +11371,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\comm
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 23 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.429
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.245
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\com\google\code\gson\gson\2.8.9\gson-2.8.9.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\com\google\code\gson\gson\2.8.9\gson-2.8.9.jar
@@ -11245,7 +11433,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\com\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 31 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.429
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.247
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\org\springframework\spring-context\5.3.18\spring-context-5.3.18.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\org\springframework\spring-context\5.3.18\spring-context-5.3.18.jar
@@ -11295,7 +11487,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\org\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 23 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.430
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.249
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\org\springframework\spring-aop\5.3.18\spring-aop-5.3.18.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\org\springframework\spring-aop\5.3.18\spring-aop-5.3.18.jar
@@ -11353,7 +11549,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\org\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 31 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.431
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.252
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\org\springframework\spring-expression\5.3.18\spring-expression-5.3.18.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\org\springframework\spring-expression\5.3.18\spring-expression-5.3.18.jar
@@ -11403,7 +11603,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\org\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 23 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.431
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.256
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\org\springframework\spring-webmvc\5.3.18\spring-webmvc-5.3.18.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\org\springframework\spring-webmvc\5.3.18\spring-webmvc-5.3.18.jar
@@ -11461,7 +11665,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\org\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 31 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.432
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.258
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\org\springframework\spring-web\5.3.18\spring-web-5.3.18.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\org\springframework\spring-web\5.3.18\spring-web-5.3.18.jar
@@ -11511,7 +11719,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\org\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 23 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.433
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.260
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\org\aspectj\aspectjrt\1.6.10\aspectjrt-1.6.10.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\org\aspectj\aspectjrt\1.6.10\aspectjrt-1.6.10.jar
@@ -11569,7 +11781,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\org\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 31 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.434
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.263
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\org\slf4j\slf4j-api\1.6.6\slf4j-api-1.6.6.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\org\slf4j\slf4j-api\1.6.6\slf4j-api-1.6.6.jar
@@ -11619,7 +11835,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\org\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 23 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.437
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.266
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\org\slf4j\jcl-over-slf4j\1.6.6\jcl-over-slf4j-1.6.6.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\org\slf4j\jcl-over-slf4j\1.6.6\jcl-over-slf4j-1.6.6.jar
@@ -11677,7 +11897,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\org\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 31 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.439
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.267
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\org\slf4j\slf4j-log4j12\1.6.6\slf4j-log4j12-1.6.6.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\org\slf4j\slf4j-log4j12\1.6.6\slf4j-log4j12-1.6.6.jar
@@ -11727,7 +11951,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\org\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 23 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.439
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.270
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\log4j\log4j\1.2.15\log4j-1.2.15.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\log4j\log4j\1.2.15\log4j-1.2.15.jar
@@ -11785,7 +12013,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\log4
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 31 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.440
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.272
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar
@@ -11835,7 +12067,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\java
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 23 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.440
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.274
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\javax\servlet\jstl\1.2\jstl-1.2.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\javax\servlet\jstl\1.2\jstl-1.2.jar
@@ -11893,7 +12129,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\java
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 31 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.441
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.276
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\com\oracle\database\security\oraclepki\19.13.0.0\oraclepki-19.13.0.0.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\com\oracle\database\security\oraclepki\19.13.0.0\oraclepki-19.13.0.0.jar
@@ -11943,7 +12183,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\com\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 23 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.442
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.278
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\com\oracle\database\security\osdt_core\19.13.0.0\osdt_core-19.13.0.0.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\com\oracle\database\security\osdt_core\19.13.0.0\osdt_core-19.13.0.0.jar
@@ -12001,7 +12245,11 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\com\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 31 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:09:37.442
+=======
+!ENTRY org.eclipse.jst.j2ee 4 0 2023-01-25 10:17:32.280
+>>>>>>> origin/wonhee_web
 !MESSAGE C:\Users\hoho0\.m2\repository\com\oracle\database\security\osdt_cert\19.7.0.0\osdt_cert-19.7.0.0.jar
 !STACK 0
 org.eclipse.jst.jee.archive.ArchiveOpenFailureException: C:\Users\hoho0\.m2\repository\com\oracle\database\security\osdt_cert\19.7.0.0\osdt_cert-19.7.0.0.jar
@@ -12051,6 +12299,7 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\hoho0\.m2\repository\com\
 	at org.eclipse.jst.j2ee.internal.componentcore.JavaEEBinaryComponentLoadAdapter.<init>(JavaEEBinaryComponentLoadAdapter.java:51)
 	... 23 more
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 10:09:38.219
 !MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
 
@@ -13061,11 +13310,211 @@ java.util.concurrent.ExecutionException: org.eclipse.lsp4j.jsonrpc.ResponseError
 	at org.eclipse.lsp4e.operations.hover.LSPTextHover.lambda$11(LSPTextHover.java:208)
 	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
 	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
+=======
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 10:17:38.679
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 10:17:38.694
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 10:17:40.546
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 10:17:40.568
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 10:17:40.923
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 10:17:40.942
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 10:17:41.229
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 10:17:41.242
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 10:17:41.530
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 10:17:41.544
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 10:17:42.635
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 10:17:42.655
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 10:17:53.843
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 10:17:53.847
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2023-01-25 10:18:23.500
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Artifact not found: http://downloads.sourceforge.net/project/sapnweclipse/updates/features/com.sap.netweaver.porta.ide.eclipse.feature_0.4.2.200908121739.jar.
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.parseFeature(UpdateSite.java:303)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.loadFeaturesFromSite(UpdateSite.java:601)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.loadFeatures(UpdateSite.java:496)
+	at org.eclipse.equinox.internal.p2.updatesite.RemoteFeaturesAction.perform(RemoteFeaturesAction.java:45)
+	at org.eclipse.equinox.internal.p2.updatesite.RemoteUpdateSiteAction.perform(RemoteUpdateSiteAction.java:54)
+	at org.eclipse.equinox.p2.publisher.Publisher$ArtifactProcess.run(Publisher.java:288)
+	at org.eclipse.equinox.p2.publisher.Publisher.publish(Publisher.java:318)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.generateMetadata(UpdateSiteMetadataRepositoryFactory.java:129)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.initializeRepository(UpdateSiteMetadataRepositoryFactory.java:114)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.load(UpdateSiteMetadataRepositoryFactory.java:62)
+	at org.eclipse.wst.server.discovery.internal.model.ExtensionUpdateSite.getExtensions(ExtensionUpdateSite.java:111)
+	at org.eclipse.wst.server.discovery.internal.ExtensionUtility$1.run(ExtensionUtility.java:509)
+Caused by: java.io.FileNotFoundException: http://downloads.sourceforge.net/project/sapnweclipse/updates/features/com.sap.netweaver.porta.ide.eclipse.feature_0.4.2.200908121739.jar
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryStatusHelper.checkFileNotFound(RepositoryStatusHelper.java:298)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.checkException(FileReader.java:512)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:466)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:387)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:107)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:166)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.parseFeature(UpdateSite.java:287)
+	... 11 more
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1200 2023-01-25 10:18:23.500
+!MESSAGE Artifact not found: http://downloads.sourceforge.net/project/sapnweclipse/updates/features/com.sap.netweaver.porta.ide.eclipse.feature_0.4.2.200908121739.jar.
+!STACK 0
+java.io.FileNotFoundException: http://downloads.sourceforge.net/project/sapnweclipse/updates/features/com.sap.netweaver.porta.ide.eclipse.feature_0.4.2.200908121739.jar
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryStatusHelper.checkFileNotFound(RepositoryStatusHelper.java:298)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.checkException(FileReader.java:512)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:466)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:387)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:107)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:166)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.parseFeature(UpdateSite.java:287)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.loadFeaturesFromSite(UpdateSite.java:601)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.loadFeatures(UpdateSite.java:496)
+	at org.eclipse.equinox.internal.p2.updatesite.RemoteFeaturesAction.perform(RemoteFeaturesAction.java:45)
+	at org.eclipse.equinox.internal.p2.updatesite.RemoteUpdateSiteAction.perform(RemoteUpdateSiteAction.java:54)
+	at org.eclipse.equinox.p2.publisher.Publisher$ArtifactProcess.run(Publisher.java:288)
+	at org.eclipse.equinox.p2.publisher.Publisher.publish(Publisher.java:318)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.generateMetadata(UpdateSiteMetadataRepositoryFactory.java:129)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.initializeRepository(UpdateSiteMetadataRepositoryFactory.java:114)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.load(UpdateSiteMetadataRepositoryFactory.java:62)
+	at org.eclipse.wst.server.discovery.internal.model.ExtensionUpdateSite.getExtensions(ExtensionUpdateSite.java:111)
+	at org.eclipse.wst.server.discovery.internal.ExtensionUtility$1.run(ExtensionUtility.java:509)
+
+!ENTRY org.eclipse.equinox.p2.updatesite 4 0 2023-01-25 10:18:23.501
+!MESSAGE Error reading feature http://downloads.sourceforge.net/project/sapnweclipse/updates/features/com.sap.netweaver.porta.ide.eclipse.feature_0.4.2.200908121739.jar.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2023-01-25 10:18:24.193
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Artifact not found: http://downloads.sourceforge.net/project/sapnweclipse/updates/features/com.sap.netweaver.porta.ide.eclipse.feature_0.5.0.200909151631.jar.
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.parseFeature(UpdateSite.java:303)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.loadFeaturesFromSite(UpdateSite.java:601)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.loadFeatures(UpdateSite.java:496)
+	at org.eclipse.equinox.internal.p2.updatesite.RemoteFeaturesAction.perform(RemoteFeaturesAction.java:45)
+	at org.eclipse.equinox.internal.p2.updatesite.RemoteUpdateSiteAction.perform(RemoteUpdateSiteAction.java:54)
+	at org.eclipse.equinox.p2.publisher.Publisher$ArtifactProcess.run(Publisher.java:288)
+	at org.eclipse.equinox.p2.publisher.Publisher.publish(Publisher.java:318)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.generateMetadata(UpdateSiteMetadataRepositoryFactory.java:129)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.initializeRepository(UpdateSiteMetadataRepositoryFactory.java:114)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.load(UpdateSiteMetadataRepositoryFactory.java:62)
+	at org.eclipse.wst.server.discovery.internal.model.ExtensionUpdateSite.getExtensions(ExtensionUpdateSite.java:111)
+	at org.eclipse.wst.server.discovery.internal.ExtensionUtility$1.run(ExtensionUtility.java:509)
+Caused by: java.io.FileNotFoundException: http://downloads.sourceforge.net/project/sapnweclipse/updates/features/com.sap.netweaver.porta.ide.eclipse.feature_0.5.0.200909151631.jar
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryStatusHelper.checkFileNotFound(RepositoryStatusHelper.java:298)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.checkException(FileReader.java:512)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:466)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:387)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:107)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:166)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.parseFeature(UpdateSite.java:287)
+	... 11 more
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1200 2023-01-25 10:18:24.193
+!MESSAGE Artifact not found: http://downloads.sourceforge.net/project/sapnweclipse/updates/features/com.sap.netweaver.porta.ide.eclipse.feature_0.5.0.200909151631.jar.
+!STACK 0
+java.io.FileNotFoundException: http://downloads.sourceforge.net/project/sapnweclipse/updates/features/com.sap.netweaver.porta.ide.eclipse.feature_0.5.0.200909151631.jar
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryStatusHelper.checkFileNotFound(RepositoryStatusHelper.java:298)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.checkException(FileReader.java:512)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:466)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:387)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:107)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:166)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.parseFeature(UpdateSite.java:287)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.loadFeaturesFromSite(UpdateSite.java:601)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.loadFeatures(UpdateSite.java:496)
+	at org.eclipse.equinox.internal.p2.updatesite.RemoteFeaturesAction.perform(RemoteFeaturesAction.java:45)
+	at org.eclipse.equinox.internal.p2.updatesite.RemoteUpdateSiteAction.perform(RemoteUpdateSiteAction.java:54)
+	at org.eclipse.equinox.p2.publisher.Publisher$ArtifactProcess.run(Publisher.java:288)
+	at org.eclipse.equinox.p2.publisher.Publisher.publish(Publisher.java:318)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.generateMetadata(UpdateSiteMetadataRepositoryFactory.java:129)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.initializeRepository(UpdateSiteMetadataRepositoryFactory.java:114)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.load(UpdateSiteMetadataRepositoryFactory.java:62)
+	at org.eclipse.wst.server.discovery.internal.model.ExtensionUpdateSite.getExtensions(ExtensionUpdateSite.java:111)
+	at org.eclipse.wst.server.discovery.internal.ExtensionUtility$1.run(ExtensionUtility.java:509)
+
+!ENTRY org.eclipse.equinox.p2.updatesite 4 0 2023-01-25 10:18:24.195
+!MESSAGE Error reading feature http://downloads.sourceforge.net/project/sapnweclipse/updates/features/com.sap.netweaver.porta.ide.eclipse.feature_0.5.0.200909151631.jar.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 10:19:28.343
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 10:19:28.346
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-25 10:22:01.618
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-25 10:22:01.619
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@6a06a94c[org.springframework.tooling.boot.ls:1.32.0.202203131529(id=801)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-25 10:22:01.621
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-25 10:22:01.802
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 4 0 2023-01-25 10:22:02.218
+!MESSAGE /org/springframework/beans/factory/xml/spring-beans.dtd
+!STACK 0
+java.io.FileNotFoundException: /org/springframework/beans/factory/xml/spring-beans.dtd
+	at org.eclipse.osgi.storage.url.bundleentry.Handler.findBundleEntry(Handler.java:55)
+	at org.eclipse.osgi.storage.url.BundleResourceHandler.openConnection(BundleResourceHandler.java:182)
+	at java.base/java.net.URL.openConnection(URL.java:1099)
+	at org.eclipse.core.internal.boot.PlatformURLConnection.connect(PlatformURLConnection.java:115)
+	at org.eclipse.core.internal.boot.PlatformURLConnection.getURLAsLocal(PlatformURLConnection.java:240)
+	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:37)
+	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:263)
+	at org.eclipse.wildwebdeveloper.xml.internal.ui.preferences.XMLCatalogs.createURI(XMLCatalogs.java:139)
+	at org.eclipse.wildwebdeveloper.xml.internal.ui.preferences.XMLCatalogs.lambda$3(XMLCatalogs.java:69)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:274)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at org.eclipse.wildwebdeveloper.xml.internal.ui.preferences.XMLCatalogs.getWTPExtensionCatalog(XMLCatalogs.java:65)
+	at org.eclipse.wildwebdeveloper.xml.internal.ui.preferences.XMLCatalogs.getAllCatalogs(XMLCatalogs.java:52)
+	at org.eclipse.wildwebdeveloper.xml.internal.ui.preferences.XMLPreferenceConstants.storePreferencesToLemminxOptions(XMLPreferenceConstants.java:90)
+	at org.eclipse.wildwebdeveloper.xml.internal.XMLLanguageServer.mergeCustomInitializationOptions(XMLLanguageServer.java:163)
+	at org.eclipse.wildwebdeveloper.xml.internal.XMLLanguageServer.getInitializationOptions(XMLLanguageServer.java:158)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$8(LanguageServerWrapper.java:353)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1072)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1705)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1692)
+>>>>>>> origin/wonhee_web
 	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
 	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
 	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
 	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
 	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+<<<<<<< HEAD
 Caused by: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
 	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:209)
 	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:193)
@@ -13243,3 +13692,902 @@ Caused by: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:38:43.029
 !MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+=======
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-25 10:22:04.237
+!MESSAGE Boot LS startup time from start to initialized: 2608ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-25 10:22:04.339
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.WwrZgbkkisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-25 10:22:04.343
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-25 10:22:04.346
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-25 10:22:04.346
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-25 10:22:04.347
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-25 10:22:04.347
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.WwrZgbkk => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-25 10:22:04.354
+!MESSAGE classpath=59 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-25 10:22:04.357
+!MESSAGE buffering callback sts4.classpath.WwrZgbkk web false 59
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-25 10:22:04.357
+!MESSAGE executing callback sts4.classpath.WwrZgbkk 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-25 10:22:04.638
+!MESSAGE executing callback sts4.classpath.WwrZgbkk SUCCESS [done]
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 10:22:08.199
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 10:22:08.204
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:05:22.338
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:05:22.340
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:05:49.567
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:05:49.569
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:10:13.634
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:10:13.636
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:10:49.361
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:10:49.368
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:12:50.254
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:12:50.258
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:14:19.962
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:14:19.965
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:14:57.894
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:14:57.897
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:15:07.143
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:15:07.147
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:15:14.005
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:15:14.007
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:16:33.564
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:16:33.568
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:16:41.311
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:16:41.314
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:16:46.405
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:16:46.408
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:17:03.140
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:17:03.144
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:17:08.396
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:17:08.400
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:17:20.301
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:17:20.304
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:17:25.701
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:17:25.705
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:17:38.810
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:17:38.812
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:17:43.998
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:17:44.000
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:18:32.394
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:18:32.398
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:18:47.563
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:18:47.566
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:18:53.906
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:18:53.909
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:19:04.477
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:19:04.480
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:21:19.278
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:21:19.282
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:21:41.483
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:21:41.486
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:21:50.712
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:21:50.723
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:22:02.357
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:22:02.359
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:22:36.281
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:22:36.285
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:22:42.593
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:22:42.596
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:24:06.299
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:24:06.302
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:24:08.420
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:24:08.423
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:24:42.304
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:24:42.307
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:24:48.521
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:24:48.524
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:25:41.200
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:25:41.204
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:25:59.261
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:25:59.263
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:26:05.116
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:26:05.119
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:26:08.701
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:26:08.704
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:26:12.037
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:26:12.039
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:26:52.761
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:26:52.764
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 4 0 2023-01-25 11:26:52.818
+!MESSAGE /org/springframework/beans/factory/xml/spring-beans.dtd
+!STACK 0
+java.io.FileNotFoundException: /org/springframework/beans/factory/xml/spring-beans.dtd
+	at org.eclipse.osgi.storage.url.bundleentry.Handler.findBundleEntry(Handler.java:55)
+	at org.eclipse.osgi.storage.url.BundleResourceHandler.openConnection(BundleResourceHandler.java:182)
+	at java.base/java.net.URL.openConnection(URL.java:1099)
+	at org.eclipse.core.internal.boot.PlatformURLConnection.connect(PlatformURLConnection.java:115)
+	at org.eclipse.core.internal.boot.PlatformURLConnection.getURLAsLocal(PlatformURLConnection.java:240)
+	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:37)
+	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:263)
+	at org.eclipse.wildwebdeveloper.xml.internal.ui.preferences.XMLCatalogs.createURI(XMLCatalogs.java:139)
+	at org.eclipse.wildwebdeveloper.xml.internal.ui.preferences.XMLCatalogs.lambda$3(XMLCatalogs.java:69)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:274)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at org.eclipse.wildwebdeveloper.xml.internal.ui.preferences.XMLCatalogs.getWTPExtensionCatalog(XMLCatalogs.java:65)
+	at org.eclipse.wildwebdeveloper.xml.internal.ui.preferences.XMLCatalogs.getAllCatalogs(XMLCatalogs.java:52)
+	at org.eclipse.wildwebdeveloper.xml.internal.ui.preferences.XMLPreferenceConstants.storePreferencesToLemminxOptions(XMLPreferenceConstants.java:90)
+	at org.eclipse.wildwebdeveloper.xml.internal.XMLLanguageServer.mergeCustomInitializationOptions(XMLLanguageServer.java:163)
+	at org.eclipse.wildwebdeveloper.xml.internal.XMLLanguageServer.getInitializationOptions(XMLLanguageServer.java:158)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$8(LanguageServerWrapper.java:353)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1072)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1705)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1692)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:26:59.438
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:26:59.441
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:27:33.847
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:27:33.850
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:30:06.504
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:30:06.507
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:31:07.414
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:31:07.416
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:31:12.052
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:31:12.054
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:31:14.164
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:31:14.167
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:31:21.740
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:31:21.742
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:31:33.361
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:31:33.365
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:33:13.011
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:33:13.014
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:33:22.566
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:33:22.568
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:33:38.214
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:33:38.216
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:34:58.057
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-25 11:34:58.059
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.ui 4 0 2023-01-25 11:36:12.330
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: begin 132176, end 164176, length 164165
+	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:3319)
+	at java.base/java.lang.String.getChars(String.java:854)
+	at org.eclipse.swt.graphics.TextLayout.breakRun(TextLayout.java:250)
+	at org.eclipse.swt.graphics.TextLayout.splitLongRun(TextLayout.java:2915)
+	at org.eclipse.swt.graphics.TextLayout.merge(TextLayout.java:2892)
+	at org.eclipse.swt.graphics.TextLayout.itemize(TextLayout.java:2789)
+	at org.eclipse.swt.graphics.TextLayout.computeRuns(TextLayout.java:270)
+	at org.eclipse.swt.graphics.TextLayout.getLineCount(TextLayout.java:1918)
+	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:1270)
+	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:908)
+	at org.eclipse.swt.custom.StyledTextRenderer.calculate(StyledTextRenderer.java:298)
+	at org.eclipse.swt.custom.StyledTextRenderer.calculateClientArea(StyledTextRenderer.java:328)
+	at org.eclipse.swt.custom.StyledText.handleResize(StyledText.java:6519)
+	at org.eclipse.swt.custom.StyledText.lambda$28(StyledText.java:5939)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1068)
+	at org.eclipse.swt.widgets.Control.WM_SIZE(Control.java:5448)
+	at org.eclipse.swt.widgets.Scrollable.WM_SIZE(Scrollable.java:360)
+	at org.eclipse.swt.widgets.Composite.WM_SIZE(Composite.java:1725)
+	at org.eclipse.swt.widgets.Canvas.WM_SIZE(Canvas.java:444)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4823)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
+	at org.eclipse.swt.widgets.Control.WM_WINDOWPOSCHANGED(Control.java:5678)
+	at org.eclipse.swt.widgets.Canvas.WM_WINDOWPOSCHANGED(Canvas.java:451)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4836)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.SetWindowPos(Native Method)
+	at org.eclipse.swt.widgets.Control.forceResize(Control.java:1106)
+	at org.eclipse.swt.widgets.ScrollBar.getThumbTrackBoundsInPixels(ScrollBar.java:469)
+	at org.eclipse.swt.widgets.ScrollBar.getThumbTrackBounds(ScrollBar.java:465)
+	at org.eclipse.jface.text.source.SourceViewer$RulerLayout.computeScrollArrowHeights(SourceViewer.java:243)
+	at org.eclipse.jface.text.source.SourceViewer$RulerLayout.getVerticalScrollArrowHeights(SourceViewer.java:210)
+	at org.eclipse.jface.text.source.SourceViewer$RulerLayout.layout(SourceViewer.java:170)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1335)
+	at org.eclipse.swt.widgets.Composite.WM_SIZE(Composite.java:1736)
+	at org.eclipse.swt.widgets.Canvas.WM_SIZE(Canvas.java:444)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4823)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
+	at org.eclipse.swt.widgets.Control.WM_WINDOWPOSCHANGED(Control.java:5678)
+	at org.eclipse.swt.widgets.Canvas.WM_WINDOWPOSCHANGED(Canvas.java:451)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4836)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.SetWindowPos(Native Method)
+	at org.eclipse.swt.widgets.Control.setBoundsInPixels(Control.java:3258)
+	at org.eclipse.swt.widgets.Composite.setBoundsInPixels(Composite.java:1061)
+	at org.eclipse.swt.widgets.Control.setBoundsInPixels(Control.java:3219)
+	at org.eclipse.swt.widgets.Control.setBoundsInPixels(Control.java:3215)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:3210)
+	at org.eclipse.swt.layout.FillLayout.layout(FillLayout.java:216)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1335)
+	at org.eclipse.swt.widgets.Composite.WM_SIZE(Composite.java:1736)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4823)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
+	at org.eclipse.swt.widgets.Control.WM_WINDOWPOSCHANGED(Control.java:5678)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4836)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.SetWindowPos(Native Method)
+	at org.eclipse.swt.widgets.Control.setBoundsInPixels(Control.java:3258)
+	at org.eclipse.swt.widgets.Composite.setBoundsInPixels(Composite.java:1061)
+	at org.eclipse.swt.widgets.Control.setBoundsInPixels(Control.java:3219)
+	at org.eclipse.swt.widgets.Control.setBoundsInPixels(Control.java:3215)
+	at org.eclipse.swt.widgets.Control.setBoundsInPixels(Control.java:3291)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:3287)
+	at org.eclipse.swt.custom.StackLayout.layout(StackLayout.java:124)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1335)
+	at org.eclipse.swt.widgets.Composite.WM_SIZE(Composite.java:1736)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4823)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
+	at org.eclipse.swt.widgets.Control.WM_WINDOWPOSCHANGED(Control.java:5678)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4836)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.SetWindowPos(Native Method)
+	at org.eclipse.swt.widgets.Control.setBoundsInPixels(Control.java:3258)
+	at org.eclipse.swt.widgets.Composite.setBoundsInPixels(Composite.java:1061)
+	at org.eclipse.swt.widgets.Control.setBoundsInPixels(Control.java:3219)
+	at org.eclipse.swt.widgets.Control.setBoundsInPixels(Control.java:3215)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:3210)
+	at org.eclipse.swt.layout.FillLayout.layout(FillLayout.java:216)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1335)
+	at org.eclipse.swt.widgets.Composite.WM_SIZE(Composite.java:1736)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4823)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
+	at org.eclipse.swt.widgets.Control.WM_WINDOWPOSCHANGED(Control.java:5678)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4836)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.SetWindowPos(Native Method)
+	at org.eclipse.swt.widgets.Control.setBoundsInPixels(Control.java:3258)
+	at org.eclipse.swt.widgets.Composite.setBoundsInPixels(Composite.java:1061)
+	at org.eclipse.swt.widgets.Control.setBoundsInPixels(Control.java:3219)
+	at org.eclipse.swt.widgets.Control.setBoundsInPixels(Control.java:3215)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:3210)
+	at org.eclipse.swt.layout.FillLayout.layout(FillLayout.java:231)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1335)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1341)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1341)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1341)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1341)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1341)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1341)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1341)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1341)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1341)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1320)
+	at org.eclipse.swt.widgets.Composite.setLayoutDeferred(Composite.java:1127)
+	at org.eclipse.swt.widgets.Display.runDeferredLayouts(Display.java:4084)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3625)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+
+!ENTRY org.eclipse.ui 4 0 2023-01-25 11:36:24.130
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: begin 132176, end 164176, length 164165
+	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:3319)
+	at java.base/java.lang.String.getChars(String.java:854)
+	at org.eclipse.swt.graphics.TextLayout.breakRun(TextLayout.java:250)
+	at org.eclipse.swt.graphics.TextLayout.splitLongRun(TextLayout.java:2915)
+	at org.eclipse.swt.graphics.TextLayout.merge(TextLayout.java:2892)
+	at org.eclipse.swt.graphics.TextLayout.itemize(TextLayout.java:2789)
+	at org.eclipse.swt.graphics.TextLayout.computeRuns(TextLayout.java:270)
+	at org.eclipse.swt.graphics.TextLayout.getLineCount(TextLayout.java:1918)
+	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:1270)
+	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:908)
+	at org.eclipse.swt.custom.StyledTextRenderer.drawLine(StyledTextRenderer.java:453)
+	at org.eclipse.swt.custom.StyledText.handlePaint(StyledText.java:6445)
+	at org.eclipse.swt.custom.StyledText.lambda$28(StyledText.java:5938)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1536)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4803)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+
+!ENTRY org.eclipse.ui 4 0 2023-01-25 11:36:35.927
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: begin 132176, end 164176, length 164165
+	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:3319)
+	at java.base/java.lang.String.getChars(String.java:854)
+	at org.eclipse.swt.graphics.TextLayout.breakRun(TextLayout.java:250)
+	at org.eclipse.swt.graphics.TextLayout.splitLongRun(TextLayout.java:2915)
+	at org.eclipse.swt.graphics.TextLayout.merge(TextLayout.java:2892)
+	at org.eclipse.swt.graphics.TextLayout.itemize(TextLayout.java:2789)
+	at org.eclipse.swt.graphics.TextLayout.computeRuns(TextLayout.java:270)
+	at org.eclipse.swt.graphics.TextLayout.getLineCount(TextLayout.java:1918)
+	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:1270)
+	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:908)
+	at org.eclipse.swt.custom.StyledTextRenderer.calculate(StyledTextRenderer.java:298)
+	at org.eclipse.swt.custom.StyledTextRenderer.calculateClientArea(StyledTextRenderer.java:328)
+	at org.eclipse.swt.custom.StyledText.resetCache(StyledText.java:8326)
+	at org.eclipse.swt.custom.StyledText.setStyleRanges(StyledText.java:10694)
+	at org.eclipse.swt.custom.StyledText.replaceStyleRanges(StyledText.java:8239)
+	at org.eclipse.jface.text.TextViewer.addPresentation(TextViewer.java:4773)
+	at org.eclipse.jface.text.TextViewer.changeTextPresentation(TextViewer.java:4850)
+	at org.eclipse.wst.sse.ui.internal.provisional.style.StructuredPresentationReconciler.applyTextRegionCollection(StructuredPresentationReconciler.java:903)
+	at org.eclipse.wst.sse.ui.internal.provisional.style.StructuredPresentationReconciler.processDamage(StructuredPresentationReconciler.java:878)
+	at org.eclipse.wst.sse.ui.internal.provisional.style.StructuredPresentationReconciler$InternalListener.textChanged(StructuredPresentationReconciler.java:422)
+	at org.eclipse.jface.text.TextViewer.updateTextListeners(TextViewer.java:2785)
+	at org.eclipse.jface.text.TextViewer.invalidateTextPresentation(TextViewer.java:3405)
+	at org.eclipse.jface.text.TextViewer.initializeWidgetContents(TextViewer.java:3453)
+	at org.eclipse.jface.text.TextViewer.setVisibleDocument(TextViewer.java:3492)
+	at org.eclipse.jface.text.source.projection.ProjectionViewer.setVisibleDocument(ProjectionViewer.java:700)
+	at org.eclipse.jface.text.source.projection.ProjectionViewer.executeReplaceVisibleDocument(ProjectionViewer.java:755)
+	at org.eclipse.jface.text.source.projection.ProjectionViewer.replaceVisibleDocument(ProjectionViewer.java:743)
+	at org.eclipse.jface.text.source.projection.ProjectionViewer.reinitializeProjection(ProjectionViewer.java:1219)
+	at org.eclipse.jface.text.source.projection.ProjectionViewer.catchupWithProjectionAnnotationModel(ProjectionViewer.java:937)
+	at org.eclipse.jface.text.source.projection.ProjectionViewer.lambda$0(ProjectionViewer.java:891)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+
+!ENTRY org.eclipse.ui 4 0 2023-01-25 11:36:47.765
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: begin 132176, end 164176, length 164165
+	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:3319)
+	at java.base/java.lang.String.getChars(String.java:854)
+	at org.eclipse.swt.graphics.TextLayout.breakRun(TextLayout.java:250)
+	at org.eclipse.swt.graphics.TextLayout.splitLongRun(TextLayout.java:2915)
+	at org.eclipse.swt.graphics.TextLayout.merge(TextLayout.java:2892)
+	at org.eclipse.swt.graphics.TextLayout.itemize(TextLayout.java:2789)
+	at org.eclipse.swt.graphics.TextLayout.computeRuns(TextLayout.java:270)
+	at org.eclipse.swt.graphics.TextLayout.getLineCount(TextLayout.java:1918)
+	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:1270)
+	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:908)
+	at org.eclipse.swt.custom.StyledTextRenderer.drawLine(StyledTextRenderer.java:453)
+	at org.eclipse.swt.custom.StyledText.handlePaint(StyledText.java:6445)
+	at org.eclipse.swt.custom.StyledText.lambda$28(StyledText.java:5938)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1536)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4803)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+
+!ENTRY org.eclipse.ui 4 0 2023-01-25 11:37:21.614
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: begin 132176, end 164176, length 164165
+	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:3319)
+	at java.base/java.lang.String.getChars(String.java:854)
+	at org.eclipse.swt.graphics.TextLayout.breakRun(TextLayout.java:250)
+	at org.eclipse.swt.graphics.TextLayout.splitLongRun(TextLayout.java:2915)
+	at org.eclipse.swt.graphics.TextLayout.merge(TextLayout.java:2892)
+	at org.eclipse.swt.graphics.TextLayout.itemize(TextLayout.java:2789)
+	at org.eclipse.swt.graphics.TextLayout.computeRuns(TextLayout.java:270)
+	at org.eclipse.swt.graphics.TextLayout.getLineCount(TextLayout.java:1918)
+	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:1270)
+	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:908)
+	at org.eclipse.swt.custom.StyledTextRenderer.calculate(StyledTextRenderer.java:298)
+	at org.eclipse.swt.custom.StyledText.redraw(StyledText.java:7846)
+	at org.eclipse.swt.custom.StyledText.updateCaretVisibility(StyledText.java:11278)
+	at org.eclipse.swt.custom.StyledText.setCaretLocations(StyledText.java:9055)
+	at org.eclipse.swt.custom.StyledText.setCaretLocations(StyledText.java:8949)
+	at org.eclipse.swt.custom.StyledText.showCaret(StyledText.java:11209)
+	at org.eclipse.swt.custom.StyledText.doMouseLocationChange(StyledText.java:2928)
+	at org.eclipse.swt.custom.StyledText.handleMouseDown(StyledText.java:6338)
+	at org.eclipse.swt.custom.StyledText.lambda$28(StyledText.java:5935)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4060)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3632)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+
+!ENTRY org.eclipse.ui 4 0 2023-01-25 11:37:33.563
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: begin 132176, end 164176, length 164165
+	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:3319)
+	at java.base/java.lang.String.getChars(String.java:854)
+	at org.eclipse.swt.graphics.TextLayout.breakRun(TextLayout.java:250)
+	at org.eclipse.swt.graphics.TextLayout.splitLongRun(TextLayout.java:2915)
+	at org.eclipse.swt.graphics.TextLayout.merge(TextLayout.java:2892)
+	at org.eclipse.swt.graphics.TextLayout.itemize(TextLayout.java:2789)
+	at org.eclipse.swt.graphics.TextLayout.computeRuns(TextLayout.java:270)
+	at org.eclipse.swt.graphics.TextLayout.getLineCount(TextLayout.java:1918)
+	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:1270)
+	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:908)
+	at org.eclipse.swt.custom.StyledTextRenderer.calculate(StyledTextRenderer.java:298)
+	at org.eclipse.swt.custom.StyledTextRenderer.calculateClientArea(StyledTextRenderer.java:328)
+	at org.eclipse.swt.custom.StyledText.resetCache(StyledText.java:8341)
+	at org.eclipse.swt.custom.StyledText.redraw(StyledText.java:7886)
+	at org.eclipse.jface.text.CursorLinePainter.drawHighlightLine(CursorLinePainter.java:196)
+	at org.eclipse.jface.text.CursorLinePainter.paint(CursorLinePainter.java:250)
+	at org.eclipse.jface.text.PaintManager.paint(PaintManager.java:305)
+	at org.eclipse.jface.text.PaintManager.mouseDown(PaintManager.java:323)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:196)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4060)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3632)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+
+!ENTRY org.eclipse.ui 4 0 2023-01-25 11:37:45.544
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: begin 132176, end 164176, length 164165
+	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:3319)
+	at java.base/java.lang.String.getChars(String.java:854)
+	at org.eclipse.swt.graphics.TextLayout.breakRun(TextLayout.java:250)
+	at org.eclipse.swt.graphics.TextLayout.splitLongRun(TextLayout.java:2915)
+	at org.eclipse.swt.graphics.TextLayout.merge(TextLayout.java:2892)
+	at org.eclipse.swt.graphics.TextLayout.itemize(TextLayout.java:2789)
+	at org.eclipse.swt.graphics.TextLayout.computeRuns(TextLayout.java:270)
+	at org.eclipse.swt.graphics.TextLayout.getLineCount(TextLayout.java:1918)
+	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:1270)
+	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:908)
+	at org.eclipse.swt.custom.StyledTextRenderer.calculate(StyledTextRenderer.java:298)
+	at org.eclipse.swt.custom.StyledText.redraw(StyledText.java:7846)
+	at org.eclipse.swt.custom.StyledText.updateCaretVisibility(StyledText.java:11278)
+	at org.eclipse.swt.custom.StyledText.setCaretLocations(StyledText.java:9055)
+	at org.eclipse.swt.custom.StyledText.setCaretLocations(StyledText.java:8949)
+	at org.eclipse.swt.custom.StyledText.showCaret(StyledText.java:11209)
+	at org.eclipse.swt.custom.StyledText.doMouseLocationChange(StyledText.java:2928)
+	at org.eclipse.swt.custom.StyledText.handleMouseDown(StyledText.java:6338)
+	at org.eclipse.swt.custom.StyledText.lambda$28(StyledText.java:5935)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4060)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3632)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+
+!ENTRY org.eclipse.ui 4 0 2023-01-25 11:37:58.544
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: begin 132176, end 164176, length 164165
+	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:3319)
+	at java.base/java.lang.String.getChars(String.java:854)
+	at org.eclipse.swt.graphics.TextLayout.breakRun(TextLayout.java:250)
+	at org.eclipse.swt.graphics.TextLayout.splitLongRun(TextLayout.java:2915)
+	at org.eclipse.swt.graphics.TextLayout.merge(TextLayout.java:2892)
+	at org.eclipse.swt.graphics.TextLayout.itemize(TextLayout.java:2789)
+	at org.eclipse.swt.graphics.TextLayout.computeRuns(TextLayout.java:270)
+	at org.eclipse.swt.graphics.TextLayout.getLineCount(TextLayout.java:1918)
+	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:1270)
+	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:908)
+	at org.eclipse.swt.custom.StyledTextRenderer.calculate(StyledTextRenderer.java:298)
+	at org.eclipse.swt.custom.StyledTextRenderer.calculateClientArea(StyledTextRenderer.java:328)
+	at org.eclipse.swt.custom.StyledText.resetCache(StyledText.java:8341)
+	at org.eclipse.swt.custom.StyledText.redraw(StyledText.java:7886)
+	at org.eclipse.jface.text.CursorLinePainter.drawHighlightLine(CursorLinePainter.java:196)
+	at org.eclipse.jface.text.CursorLinePainter.paint(CursorLinePainter.java:250)
+	at org.eclipse.jface.text.PaintManager.paint(PaintManager.java:305)
+	at org.eclipse.jface.text.PaintManager.mouseDown(PaintManager.java:323)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:196)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4060)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3632)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+>>>>>>> origin/wonhee_web
