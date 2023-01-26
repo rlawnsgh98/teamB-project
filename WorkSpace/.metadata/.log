@@ -8815,3 +8815,21 @@ Caused by: java.lang.OutOfMemoryError: Java heap space
 
 !ENTRY org.eclipse.wst.server.core 4 0 2023-01-26 11:20:41.448
 !MESSAGE Could not delete D:/teamB-project/WorkSpace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/web/WEB-INF/classes/board. May be locked by another process.
+
+!ENTRY org.eclipse.wst.server.core 4 0 2023-01-26 11:20:55.651
+!MESSAGE Could not delete D:/teamB-project/WorkSpace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/web/WEB-INF/classes/board. May be locked by another process.
+
+!ENTRY org.eclipse.wst.server.core 4 0 2023-01-26 11:21:15.629
+!MESSAGE Could not delete D:/teamB-project/WorkSpace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/web/WEB-INF/classes/board. May be locked by another process.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-26 11:21:35.769
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-26 11:21:35.777
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-26 11:21:35.783
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.wst.server.core 4 0 2023-01-26 11:21:38.058
+!MESSAGE Could not delete D:/teamB-project/WorkSpace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/web/WEB-INF/classes/board. May be locked by another process.
