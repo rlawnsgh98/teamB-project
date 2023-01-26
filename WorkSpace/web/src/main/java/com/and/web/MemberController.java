@@ -32,7 +32,7 @@ public class MemberController {
 
 	// 회원 가입 처리 요청
 	@ResponseBody
-	@RequestMapping(value = "/join.me")
+	@RequestMapping(value = "/join")
 	public String join(MemberVO vo, MultipartFile profile_image, HttpServletRequest request) {
 		// 첨부된 프로필 파일이 있는 경우
 		if (!profile_image.isEmpty()) {
@@ -86,7 +86,7 @@ public class MemberController {
 
 	// 아이디 중복확인 요청
 	@ResponseBody
-	@RequestMapping("/idCheck.me")
+	@RequestMapping("/idCheck")
 	public boolean idcheck(String id) {
 		// 비지니스로직-화면에서 입력한 아이디가 DB에 존재하는지 확인: 0 아이디 존재X, 1 아이디 존재
 		return member.member_idCheck(id) == 0 ? false : true;

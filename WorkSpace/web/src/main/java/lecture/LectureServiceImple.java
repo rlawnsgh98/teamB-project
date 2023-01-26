@@ -58,4 +58,14 @@ public class LectureServiceImple  implements LectureService {
 		return dao.exam_list(map);
 	}
 
+	@Override
+	public List<LectureVO> te_lec_list(HashMap<String, String> tempMap) {
+		return dao.te_lec_list(tempMap);
+	}
+
+	@Override
+	public int open_new_lecture(LectureVO lecturevo) {
+		return dao.open_new_lecture(lecturevo);
+	}
+
 }

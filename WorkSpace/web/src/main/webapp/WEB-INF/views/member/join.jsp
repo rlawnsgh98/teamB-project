@@ -23,7 +23,8 @@
 						<span class="must">*필수 항목입니다.</span>
 					</div>
 					<div class="tb_box">
-						<form method='post' action='join' enctype='multipart/form-data'>
+						<form id="join_form" method='post' action='join'
+							enctype='multipart/form-data'>
 							<table class="join_table">
 								<colgroup>
 									<col style="width: 14%">
@@ -119,12 +120,12 @@
 									</tr>
 								</tbody>
 							</table>
-							<div class="board_btn">
-								<a href="<c:url value="/"/>"
-									class="btn btn-white text-dark border-dark">취소</a> <a
-									href="join.me" class="btn btn-dark text-white">확인</a>
-							</div>
 						</form>
+						<div class="board_btn">
+							<a href="<c:url value="/"/>"
+								class="btn btn-white text-dark border-dark">취소</a>
+							<a class="btn btn-dark text-white join">확인</a>
+						</div>
 					</div>
 				</div>
 			</div>

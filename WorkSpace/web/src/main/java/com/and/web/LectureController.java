@@ -9,8 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import lecture.LectureServiceImple;
+import member.MemberServiceImpl;
 import vo.BoardVO;
 import vo.ExamVO;
 import vo.HomeworkVO;
@@ -139,28 +141,44 @@ public class LectureController {
 		return "lecture/exam_take";
 	}
 
-	// 강의 개설 화면
+	// 로그인한 강사 개설 강의 목록 조회-kmj
 	@RequestMapping("/open_lecture.le")
-	public String open_lecture(HttpSession session) {
+	public String open_lecture(HttpSession session, Model model, String member_code, String select_subject, String select_year) {
+		HashMap<String, String> tempMap = new HashMap<String, String>();
+		tempMap.put("member_code", member_code);
+		tempMap.put("select_year", select_year);
+		tempMap.put("select_subject", select_subject);
+		
+		session.setAttribute("select_year", select_year);
+		session.setAttribute("select_subject", select_subject);
+		
+		List<LectureVO> te_lec_list = service.te_lec_list(tempMap);
+		model.addAttribute("te_lec_list", te_lec_list);
+		
 		// 응답화면연결
 		return "lecture/open_lecture";
 	}
+	
+	@ResponseBody @RequestMapping("/open_new_lecture")
+	public boolean open_new_lecture(LectureVO lecturevo) {
+		return service.open_new_lecture(lecturevo) == 1 ? true : false;
+	}
 
-	// 수강 - 강의 목록 화면 - 갤러리형
+	// 수강 - 강의 목록 화면 - 갤러리형 - kmj
 	@RequestMapping("/gallery_list.le")
 	public String lec_list_test(HttpSession session) {
 		// 응답화면연결
 		return "lecture/gallery_list";
 	}
 
-	// 수강 - 강의 목록 화면 - 리스트형
+	// 수강 - 강의 목록 화면 - 리스트형 - kmj
 	@RequestMapping("/just_list.le")
 	public String lec_list_test2(HttpSession session) {
 		// 응답화면연결
 		return "lecture/just_list";
 	}
 
-	// 수강 신청 버튼 클릭 시 
+	// 수강 신청 버튼 클릭 시 - kmj
 	@RequestMapping("/en_lec_detail.le")
 	public String en_lec_detail(HttpSession session) {
 		// 응답화면연결

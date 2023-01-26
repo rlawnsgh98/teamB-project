@@ -75,4 +75,30 @@
 		    and member_code = #{member_code}
 		    order by startdate desc) e
 	</select>
+	
+<!-- 로그인한 강사의 개설 강의 목록 조회 -->
+<select id="te_lec_list" resultType="vo.LectureVO">
+select l.lecture_code, l.lecture_name
+, l.startdate, l.enddate, l.room_code, m.member_name teacher_name
+, l.subject_code, l.timetable_code
+from lecture l, member m
+where l.teacher_code = m.member_code
+and teacher_code = (select member_code 
+from member 
+where type='TEACH'
+and member_code = #{member_code})
+<if test='select_subject!=null'>
+and subject_code like '%'|| #{select_subject, jdbcType=VARCHAR}||'%'
+</if>
+<if test='select_year!=null'>
+and  to_char(startdate,'yyyy') like '%'|| #{select_year, jdbcType=VARCHAR} ||'%'   
+</if>
+order by 1
+</select>
+
+<!-- 로그인한 강사가 강의 개설 -->
+<insert id="open_new_lecture">
+insert into lecture(lecture_code, lecture_name, teacher_code, startdate, enddate, room_code, subject_code, timetable_code)
+values(SEQ_LECTURE.nextval, #{lecture_name}, #{teacher_name}, #{startdate}, #{enddate}, #{select_room},#{select_tt})
+</insert>
 </mapper>
