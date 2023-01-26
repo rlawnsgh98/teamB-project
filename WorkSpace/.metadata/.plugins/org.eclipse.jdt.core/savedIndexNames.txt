@@ -41,7 +41,6 @@ INDEX VERSION 1.131+D:\teamB-project\WorkSpace\.metadata\.plugins\org.eclipse.jd
 3689361107.index
 749635706.index
 171081449.index
-1243057733.index
 1542246171.index
 1469479328.index
 3145148301.index
