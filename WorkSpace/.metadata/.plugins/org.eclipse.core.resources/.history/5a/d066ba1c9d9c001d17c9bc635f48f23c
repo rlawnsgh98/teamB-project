@@ -1,0 +1,56 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+
+
+<html>
+<head>
+	<style>
+    /* 사이드바 */
+    .sidenav {
+      position: fixed;
+      width: 200px;
+      height: 100%;
+      margin-left: 55px;
+      margin-top:50px
+    }
+
+	</style>
+</head>
+<body>
+
+<div class="blok-body">
+<div class="row">
+  <!-- Nav tabs -->
+  <ul class="nav tab-menu nav-pills col-sm-4 nav-stacked pr15">
+    <li class="active"  data-toggle="tab"><a href="#home">Statistics</a></li>
+    <li><a href="#profile"  data-toggle="tab">Prezentation</a></li>
+    <li><a href="#messages"  data-toggle="tab">Student life</a></li>
+    <li><a href="#settings"  data-toggle="tab">Something new</a></li>
+  </ul>
+  <!-- Tab panes -->
+  <div class="tab-content col-sm-8">
+    <div class="tab-pane well active in active" id="home"> 
+1 ... STATISTICS Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat.
+  </div>
+    <div class="tab-pane well fade" id="profile"> 
+2 ... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat. </div>
+    <div class="tab-pane well fade" id="messages">
+3 ... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat. </div>
+    <div class="tab-pane well fade" id="settings">
+4 .. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat.  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat. </div>
+  </div>
+</div><!-- //row -->
+</div>
+<nav class="col-sm-3 sidenav">
+      <ul class="nav nav-pills nav-stacked">
+        <li><a class="scroll-link" href="/web/notice_list.le?lecture_code=${lecture_info.lecture_code }">공지사항</a></li>
+        <li><a class="scroll-link" href="/web/homework_list.le?lecture_code=${lecture_info.lecture_code }&member_code=${loginInfo.member_code }">과제</a></li>
+        <li><a class="scroll-link" href="/web/video_list.le?lecture_code=${lecture_info.lecture_code }">영상강의</a></li>
+        <li><a class="scroll-link" href="/web/exam_list.le?lecture_code=${lecture_info.lecture_code }&member_code=${loginInfo.member_code }">시험</a></li>
+        <li><a class="scroll-link" href="/web/student_list.le?lecture_code=${lecture_info.lecture_code }">학생목록</a></li>
+        <li><a class="scroll-link" href="/web/attendance_manage.le?lecture_code=${lecture_info.lecture_code }">출결관리</a></li>
+      </ul>
+    </nav>
+</body>
+</html>
