@@ -39,10 +39,10 @@
 		<tr>
 			<th>20</th>
 			<th><select name='exam-type'>			<!-- 시험 구분 value => DB에 맞춰 변경 -->
-				<option value='0'>모의고사</option>
-				<option value='1'>쪽지시험</option>
-				<option value='2'>중간평가</option>
-				<option value='3'>기말평가</option>
+				<option value='1'>모의고사</option>
+				<option value='2'>쪽지시험</option>
+				<option value='3'>중간평가</option>
+				<option value='4'>기말평가</option>
 			</select></th>
 			<th>2023.01.26</th>
 		</tr>
@@ -66,14 +66,13 @@
 </div>
 
 <!-- 문제 title -->
-<div class='exam_answer'>
+<div class='exam_answer mt-90'>
 	<div>2.</div>
-	<textarea name='exam_title' class='exam_title input-bottom' rows="1" placeholder="문제를 입력하세요"></textarea>
+	<textarea name='exam_title' class='exam_title input-bottom' rows="1" placeholder="문제 입력"></textarea>
 </div>
 <!-- 문제 content -->
-<div class='exam_answer'>
-	<div>2.</div>
-	<textarea name='exam_content' class='exam_content input-bottom' rows="1" placeholder="내용을 입력하세요(선택)"></textarea>
+<div class='exam_answer' style='margin-left:25px'>
+	<textarea name='exam_content' class='exam_content input-bottom' rows="1" placeholder="내용 입력(선택)"></textarea>
 </div>
 <!-- 객관식 답 -->			
 <ul class='exam_question'>
@@ -82,8 +81,13 @@
 	<li><label><input type="radio" name="answer" value="3"><span>3&nbsp;</span></label><input type="text" name="question3" class='input-bottom' placeholder="번 답안"/></li>
 	<li><label><input type="radio" name="answer" value="4"><span>4&nbsp;</span></label><input type="text" name="question4" class='input-bottom' placeholder="번 답안"/></li>
 </ul>
-<!-- 문제 확인 -->
-<div>
+<!-- 주관식 답 -->
+<div class='exam_question_textarea' style='margin-left:25px'>
+	<textarea name='exam_answer_area' class='exam_answer_area input-bottom' rows="1" placeholder="답안 입력"></textarea>
+</div>
+
+<!-- 지우기, 저장 -->
+<div class='btn-remove-save'>
 	<a class="btn-exam-empty w-px100 question-save mr-20" onClick="answer_clear()">지우기</a>
 	<a href="#" class="btn-exam-black w-px100 question-save">저장</a>
 </div>
@@ -117,6 +121,23 @@
 
 <script>
 
+/* 객관식,주관식 선택시 */
+$('select[name="answer_type"]').on('change', function(){
+	var type = $('select[name="answer_type"]').val();
+	if(type == 1){
+		//객관식
+		console.log("객관식");
+		$('.exam_question').css('display', 'flex');
+		$('.exam_question_textarea').css('display', 'none');
+	}else{
+		//주관식
+		console.log("주관식");
+		$('.exam_question').css('display', 'none');
+		$('.exam_question_textarea').css('display', 'block');
+	}
+})
+
+
 /* 라디오 체크해제 */
 function answer_clear(){
 	$('input:radio[name="answer"]').prop('checked', false);
@@ -127,11 +148,14 @@ function answer_clear(){
 }
 
 /* textarea 자동 높이 조절 */
-function adjustHeight(type) {
+function adjustHeight( type ) {
+	var textEle = null;
 	if(type == 0){
-		var textEle = $('.exam_title');
+		textEle = $('.exam_title');
 	}else if(type == 1){
-		var textEle = $('.exam_content');
+		textEle = $('.exam_content');
+	}else if(type == 2){
+		textEle = $('.exam_answer_area');
 	}
 	textEle.css('height', 'auto');
 	var textEleHeight = textEle.prop('scrollHeight');
@@ -143,6 +167,12 @@ $('.exam_title').on('keyup', function() {
 	adjustHeight(0);
 	console.log("key up")
 });
+$('.exam_content').on('keyup', function(){
+	adjustHeight(1);
+});
+$('.exam_answer_area').on('keyup', function(){
+	adjustHeight(2);
+})
 
 </script>
 	
