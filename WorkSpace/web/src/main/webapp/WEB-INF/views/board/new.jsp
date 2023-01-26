@@ -38,7 +38,7 @@
 	</td>
 </tr>
 </table>
-<input type='hidden' name='writer' value='${loginInfo.userid}'>
+<input type='hidden' name='writer' value='${loginInfo.id}'>
 
 </form>
 

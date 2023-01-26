@@ -61,12 +61,13 @@
 <!-- 댓글 작성칸 -->
 <form>
 <div class='reply_input w-px1000'>
-	<c:if test="${! empty loginInfo}">
-		<img class='profile' src='${loginInfo.profile}'>
-	</c:if>
-	<c:if test="${empty loginInfo}">
-		<img class='profile' src='img/member/user1.png'>
-	</c:if>
+<%-- 	<c:if test="${! empty loginInfo}"> --%>
+<%-- 		<img class='profile' src='${loginInfo.profilepath}'> --%>
+<%-- 	</c:if> --%>
+<%-- 	<c:if test="${empty loginInfo}"> --%>
+<!-- 		<img class='profile' src='img/member/user1.png'> -->
+<%-- 	</c:if> --%>
+	<img class='profile' src='img/common/profile.png'>
 	<ul>
 		<li><input type='text' name='reply_content' placeholder='댓글 추가...' id='my_reply'/></li>
 		<li>
@@ -84,12 +85,13 @@
 <c:forEach items='${reply}' var='vo'>
 <div class='replies w-px1000'>
 	<!-- 댓글 작성자 프로필 사진 -->
-	<c:if test="${! empty loginInfo}">
-		<img class='profile' src='${loginInfo.profile}'>
-	</c:if>
-	<c:if test="${empty loginInfo}">
-		<img class='profile' src='img/member/user1.png'>
-	</c:if>
+<%-- 	<c:if test="${! empty loginInfo}"> --%>
+<%-- 		<img class='profile' src='${loginInfo.profilepath}'> --%>
+<%-- 	</c:if> --%>
+<%-- 	<c:if test="${empty loginInfo}"> --%>
+<!-- 		<img class='profile' src='img/member/user1.png'> -->
+<%-- 	</c:if> --%>
+	<img class='profile' src='img/member/user1.png'>
 	<!-- 댓글 내용 -->
 	<div class='reply_inside'>
 		<ul>
