@@ -1,4 +1,4 @@
-spackage com.and.web;
+package com.and.web;
 
 import java.util.HashMap;
 import java.util.List;

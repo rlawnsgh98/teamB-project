@@ -152,11 +152,7 @@ span {
 	border-radius: 70%;
 }
 
-.container {
-	display: flex;
-	height: 80px;
-	align-items: center;
-}
+
 
 .left-items {
 	width: 60%;
@@ -236,7 +232,9 @@ span {
 	</div>
 </div>
 <nav>
-	<div class="container">
+	<div class="container" style="display: flex;
+											height: 80px;
+											align-items: center;">
 		<div class="left-items">
 			<ul>
 				<li><a href='<c:url value="/"/>' style="a: hover{ color:#FFF">홈</a></li>
@@ -245,6 +243,7 @@ span {
 					<ul>
 						<li><a href="open_lecture.le">강의<br>개설</a></li>
 					</ul></li>
+				<li><a href="list.le?member_code=${loginInfo.member_code }" class="nav-item nav-link">내 강의실</a></li>	
 				<li><a href="#">게시판</a>
 					<ul>
 						<li><a href="#">공통</a></li>

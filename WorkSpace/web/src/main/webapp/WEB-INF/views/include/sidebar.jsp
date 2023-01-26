@@ -7,7 +7,6 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 	<style>
 		.profile-card{
-  background: linear-gradient(to bottom, rgba(39,170,225,.8), rgba(28,117,188,.8));
   background-size: cover;
   width: 100%;
   min-height: 90px;
@@ -169,15 +168,15 @@ ul.online-users {
 	</style>
 </head>
 <body>
-        <div class="col-md-4 static">
+        <div class="col-md-2 static">
             <div class="profile-card">
-    <ul class="nav-news-feed">
-              <li><i class="fa fa-list-alt icon1"></i><div><a href="#">My Newsfeed</a></div></li>
-              <li><i class="fa fa-users icon2"></i><div><a href="#">People Nearby</a></div></li>
-              <li><i class="fa fa-user icon3"></i><div><a href="#">Friends</a></div></li>
-              <li><i class="fa fa-comments icon4"></i><div><a href="#">Messages</a></div></li>
-              <li><i class="fa fa-picture-o icon5"></i><div><a href="#">Images</a></div></li>
-              <li><i class="fa fa-video-camera icon6"></i><div><a href="#">Videos</a></div></li>
+    		<ul class="nav-news-feed">
+              <li><i class="fa fa-list-alt icon1"></i><div><a href="/web/notice_list.le?lecture_code=${lecture_info.lecture_code }"">공지사항</a></div></li>
+              <li><i class="fa fa-users icon2"></i><div><a href="/web/homework_list.le?lecture_code=${lecture_info.lecture_code }&member_code=${loginInfo.member_code }">과제</a></div></li>
+              <li><i class="fa fa-user icon3"></i><div><a href="/web/video_list.le?lecture_code=${lecture_info.lecture_code }">영상강의</a></div></li>
+              <li><i class="fa fa-comments icon4"></i><div><a href="/web/exam_list.le?lecture_code=${lecture_info.lecture_code }&member_code=${loginInfo.member_code }">시험</a></div></li>
+              <li><i class="fa fa-picture-o icon5"></i><div><a href="/web/student_list.le?lecture_code=${lecture_info.lecture_code }">학생목록</a></div></li>
+              <li><i class="fa fa-video-camera icon6"></i><div><a href="/web/attendance_manage.le?lecture_code=${lecture_info.lecture_code }">출결관리</a></div></li>
             </ul>
 </div>
 </div>
