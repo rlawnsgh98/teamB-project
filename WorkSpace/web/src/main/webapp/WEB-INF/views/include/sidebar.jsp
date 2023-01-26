@@ -169,7 +169,7 @@ ul.online-users {
     										position: absolute; left:200px;">
             <div class="profile-card">
     		<ul class="nav-news-feed">
-              <li><i class="fa fa-list-alt icon1"></i><div><a href="/web/notice_list.le?lecture_code=${lecture_info.lecture_code }"">공지사항</a></div></li>
+              <li><i class="fa fa-list-alt icon1"></i><div><a href="/web/notice_list.le?lecture_code=${lecture_info.lecture_code }">강의 공지사항</a></div></li>
               <li><i class="fa fa-users icon2"></i><div><a href="/web/homework_list.le?lecture_code=${lecture_info.lecture_code }&member_code=${loginInfo.member_code }">과제</a></div></li>
               <li><i class="fa fa-user icon3"></i><div><a href="/web/video_list.le?lecture_code=${lecture_info.lecture_code }">영상강의</a></div></li>
               <li><i class="fa fa-comments icon4"></i><div><a href="/web/exam_list.le?lecture_code=${lecture_info.lecture_code }&member_code=${loginInfo.member_code }">시험</a></div></li>
