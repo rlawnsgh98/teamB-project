@@ -11,7 +11,6 @@
 	href="css/member.css?<%=new java.util.Date()%>">
 </head>
 <body>
-	<h1 class="d-none">홈-마이페이지-회원정보수정</h1>
 	<div id="container" class="ct_top">
 		<div class="main_wrap">
 			<h2 class="lnb_title text-center text-dark">마이페이지</h2>
@@ -22,12 +21,6 @@
 					class="btn btn-dark rounded-pill text-white"> 회원정보수정 </a></li>
 			</ul>
 			<div id="contet_area2">
-				<div class="path">
-					<ol class='path_list'>
-						<li>마이페이지</li>
-						<li class="last">회원정보수정</li>
-					</ol>
-				</div>
 				<div class="content_body">
 					<div class="modify_myinfo_box">
 						<div class="tb_top tb_top_large">
@@ -56,8 +49,9 @@
 												<tr>
 													<th class="tb_th"><label for="login_id"
 														class="join_required">아이디</label></th>
-													<td><input type='text' name='id' class='chk w200' placeholder="hana">
-														<a class="btn btn-dark text-white" id="id_ck">중복확인</a>
+													<td><input type='text' name='id' class='chk w200'
+														placeholder="${loginInfo.id}"> <a
+														class="btn btn-dark text-white" id="id_ck">중복확인</a>
 														<div class='valid'>아이디를 입력하세요(영문소문자,숫자만)</div></td>
 												</tr>
 												<tr>
@@ -77,8 +71,8 @@
 												<tr>
 													<th class="tb_th"><label for="member_name"
 														class="join_required">이름</label></th>
-													<td><input type="text" name="member_name" class="w200" placeholder="hana">
-													</td>
+													<td><input type="text" name="member_name" class="w200"
+														placeholder="${loginInfo.member_name}"></td>
 												</tr>
 												<tr>
 													<th class="tb_th"><label for="gender"
@@ -91,7 +85,8 @@
 													<th class="tb_th"><label for="email"
 														class="join_required chk">이메일</label></th>
 													<td><div style="float: left;">
-															<input type='text' name='email' class='chk w200' placeholder="hana@naver.com">
+															<input type='text' name='email' class='chk w200'
+																placeholder="${loginInfo.email}">
 															<div class='valid'>이메일을 입력하세요</div>
 														</div></td>
 												</tr>
@@ -105,8 +100,8 @@
 												<tr>
 													<th class="tb_th"><label for="phone"
 														class="join_required">전화번호</label></th>
-													<td><input type='text' name='phone' maxlength="13" placeholder="01080808080">
-													</td>
+													<td><input type='text' name='phone' maxlength="13"
+														placeholder="01080808080"></td>
 												</tr>
 												<tr>
 													<th class="tb_th"><label for="post"

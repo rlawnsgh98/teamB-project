@@ -25,39 +25,34 @@
 	margin: 0 auto;
 }
 
-.sub_nav, .sub_nav>ul {
-	width: 100%;
-	height: 50px;
-	line-height: 50px;
-	border-bottom: 1px solid #cccccc;
-}
-
-.sub_nav>ul>li {
-	float: left;
-	padding: 0 20px;
-}
-
-.sub_nav>ul>li.on {
-	background-color: #124567;
-	color: #fff;
-	border-radius: 25px;
-	border-bottom-right-radius: 0;
-}
-
 .sub_nav_wrap {
 	display: flex;
 	border-bottom: 1px solid #cccccc;
+	padding: 10px 0;
 }
 
-.sub_nav1, .sub_nav2 {
-	width: 50%;
+.sub_nav1 {
+	width: 60%;
 	height: 50px;
 	line-height: 50px;
+	background-color: #fff;
+}
+
+.sub_nav2 {
+	width: 40%;
+	height: 50px;
+	line-height: 50px;
+	background-color: #fff;
+}
+
+.sub_nav1>ul>li>span {
+	color: #000;
+	padding-right: 10px;
 }
 
 .sub_nav1>ul>li {
 	float: left;
-	padding: 0 20px;/*수정*/
+	padding: 0 20px; /*수정*/
 }
 
 .sub_nav2>ul>li {
@@ -101,9 +96,13 @@
 }
 
 .portlet-body>.table>thead {
-	background-color: #124567;
+	background-color: #506eaf;
 	border-radius: 10px;
 	color: #fff;
+}
+
+.portlet-body>.table>thead>tr>th {
+	padding: 20px 10px;
 }
 
 .table tr:last-child th, .table tr:last-child td {
@@ -143,9 +142,9 @@
 }
 
 .open_lecture_table>tbody>tr>th {
-	background-color: #124567;
+	background-color: #293859;
 	color: #fff;
-	padding: 10px;
+	padding: 20px;
 }
 
 .open_lecture_table>tbody>tr>td {
@@ -159,41 +158,61 @@
 
 .btn_cs {
 	float: left;
-	width: 50px;
-	height: 135px;
+	height: 200px;
+}
+
+.btn_cs>a:first-child {
+	margin-left: 10px;
+	margin-top: 30px;
+}
+
+.btn_cs>a:last-child {
+	margin-left: 10px;
+	margin-top: 120px;
 }
 
 .btn_cs>a {
 	position: absolute;
-	transition: all .3s ease-in; border-radius : 30px;
+	transition: all .3s ease-in;
+	border-radius: 30px;
 	padding: 10px;
-	background: #124567;
+	background: #293859;
 	color: #fff !important;
 	border-radius: 30px;
+	border: 1px solid #293859;
 }
 
 .btn_cs>a:hover {
 	background: transparent;
 	color: #124567 !important;
-	border: 2px solid #124567;
+	border: 1px solid #124567;
+}
+
+/* .btn_cs>a:first-child {
+	bottom: 28.5%;
 }
 
 .btn_cs>a:last-child {
-	bottom: 17%;
+	bottom: 12%;
+}
+ */
+.sub_nav2_btns {
+	height: 50px;
 }
 
 .sub_nav2_btns>li>a {
 	transition: all .3s ease-in;
 	border-radius: 30px;
-	padding: 10px;
-	background: #124567;
+	border: 1px solid #506eaf;
+	padding: 0 10px;
+	background: #506eaf;
 	color: #fff !important;
 }
 
 .sub_nav2_btns>li>a:hover {
 	background: transparent;
 	color: #124567 !important;
-	border: 2px solid #124567;
+	border: 1px solid #124567;
 }
 </style>
 </head>
@@ -201,12 +220,6 @@
 	<h1 class="d-none">홈-강의관리-개설강의정보</h1>
 	<div id="container">
 		<div class="main_wrap">
-			<nav class="sub_nav">
-				<ul>
-					<li class="on">강의관리</li>
-					<li>성적관리</li>
-				</ul>
-			</nav>
 			<div class="sub_nav_wrap">
 				<nav class="sub_nav1">
 					<ul>
@@ -235,6 +248,7 @@
 					<ul class="sub_nav2_btns">
 						<li><a>삭제</a></li>
 						<li><a>수정</a></li>
+						<li><a>등록</a></li>
 						<li><a>조회</a></li>
 					</ul>
 				</nav>

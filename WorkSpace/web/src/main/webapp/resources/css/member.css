@@ -45,7 +45,7 @@ input[type="text"], input[type=password] {
 .main_wrap {
 	margin: 0 auto;
 	overflow: hidden;
-	min-height: 620px;
+	min-height: 820px;
 }
 
 .lnb_title {
@@ -97,8 +97,8 @@ input[type="text"], input[type=password] {
 .login_box {
 	width: 100%;
 	max-width: 550px;
-	margin: 0 auto;
 	overflow: hidden;
+	margin: 30px 0;
 }
 
 .log_title {
