@@ -5,7 +5,6 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-<<<<<<< HEAD
   <updated>2023-01-25T21:08:02Z</updated>
   <entry>
     <title>Introducing Microservices Patterns with Spring Integration</title>
@@ -61,9 +60,6 @@ Artem&lt;/p&gt;
 &lt;/div&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
-=======
-  <updated>2023-01-25T15:20:31Z</updated>
->>>>>>> origin/wonhee_web
   <entry>
     <title>Spring Shell 2.1.6 and 3.0.0 are now available</title>
     <link rel="alternate" href="https://spring.io/blog/2023/01/25/spring-shell-2-1-6-and-3-0-0-are-now-available" />
@@ -602,39 +598,4 @@ The most notable changes are:&lt;/p&gt;
 &lt;iframe title="DaShaun Carter: amazing human being, father, friend, engineer, and fellow Spring Developer Advocate" allowtransparency="true" height="150" width="100%" style="border: none; min-width: min(100%, 430px);" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=en3wm-134cd7b-pb&amp;from=pb6admin&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Arial&amp;skin=1&amp;font-color=&amp;logo_link=episode_page&amp;btn-skin=7"&gt;&lt;/iframe&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
-<<<<<<< HEAD
-=======
-  <entry>
-    <title>This Week in Spring  - Happy New Year 2023 edition - December 27th, 2022</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/12/27/this-week-in-spring-happy-new-year-2023-edition-december-27th-2022" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2022-12-27:5047</id>
-    <updated>2022-12-27T08:00:00Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! It&amp;rsquo;s 27 December as I write this and - being honest - I couldn&amp;rsquo;t be happier. It&amp;rsquo;s raining outside. I&amp;rsquo;m in a warm cozy office. Good music is playing. People are asleep in my home. I can hear the raindrops and wind outside the window. I&amp;rsquo;m at peace as I code. And code I have. I&amp;rsquo;ve been updating my blog, and a half dozen little side projects, to the new Spring Boot 3. This has given me a chance to do a little, shall we say, &lt;em&gt;Spring cleaning&lt;/em&gt;, and also update my Github Actions to the latest and greatest. I&amp;rsquo;m pleasantly surprised by how many builds I&amp;rsquo;ve switched over to 3.0 and then used the AOT engine to build a GraalVM native image and it &lt;em&gt;just worked&lt;/em&gt;! &lt;/p&gt;
-&lt;p&gt;How were or are your holidays going? My family and I had a lovely Christmas, which we don&amp;rsquo;t take for granted how hard the world seems to be these days. We&amp;rsquo;re all making our new years resolutions and preparing for the exciting new year ahead, too. When next we talk, it&amp;rsquo;ll be 202*3*! So, let me say in advance: happy new year!! Today&amp;rsquo;s the 27th, but by the 30th here in California it&amp;rsquo;ll start being 2023 for some people in other parts of the world. It&amp;rsquo;s crazy how fast time flies! And that&amp;rsquo;s also true with roundups! I just wrote last week&amp;rsquo;s, and here we are writing another! There&amp;rsquo;s always a lot to cover so let&amp;rsquo;s dive right into it!&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/12/22/spring-boot-2-7-7-available-now"&gt;Spring Boot 2.7.7 available now&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/12/22/spring-boot-3-0-1-available-now"&gt;Spring Boot 3.0.1 available now&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://medium.com/@ranawaka.y/spring-boot-integration-tests-for-rest-apis-with-testcontainers-webflux-and-monogodb-a47c0edb5de9"&gt;Spring Boot: Integration Tests For REST APIs with Testcontainers, WebFlux and MonogoDb&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/12/23/spring-modulith-0-2-released"&gt;Spring Modulith 0.2 released&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/12/22/a-bootiful-podcast-field-cto-and-chief-evangelist-at-gradle-justin-reock"&gt;A Bootiful Podcast: Field CTO and Chief Evangelist at Gradle Justin Reock&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;I built a &lt;a href="https://joshlong.com/jl/blogpost/github-action-export-java-version.html"&gt;A Github Action to export your project&amp;rsquo;s Java version as a variable&lt;/a&gt;. Just use it from your Github Actions (Maven only, at the moment) project and it&amp;rsquo;ll export the version of Java as an environment variable or as a step output, either of which you can then use in the &lt;code&gt;setup-java&lt;/code&gt; Github Action.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://springbootlearning.medium.com/using-micrometer-to-trace-your-spring-boot-app-1fe6ff9982ae"&gt;Using Micrometer to trace your Spring Boot app&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;This is an absolutely brilliant blog using Spring Integration and JDBC to &lt;a href="https://www.javaadvent.com/2022/12/using-postgres-as-a-message-queue.html"&gt;use PostgresQL as a message bus&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://medium.com/javarevisited/what-are-the-new-features-of-springboot3-6ddba9af664"&gt;What Are the New Features of Spring Boot 3?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;I also wrote down the steps I follow to build a &lt;a href="https://joshlong.com/jl/blogpost/a-bootiful-spring-boot-3-github-action.html"&gt;modern Github Actions in the world of Spring Boot 3&lt;/a&gt;, since I was doing so many upgrades and needed a standardized recipe. While this works just fine with Apache Maven, I&amp;rsquo;m starting to think it might be time for me to learn Gradle, so that I can have an easier time doing things consistently across a project. Stay tuned.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/722698246/0/baeldung~Run-Multiple-Commands-in-Docker-Run"&gt;Run Multiple Commands in Docker Run&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://twitter.com/fniephaus/status/1606035104525979648?s=12&amp;t=10xxqn4LGIkv50DCH8shQg"&gt;The GraalVM github action is now verified! Are you using it?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://blog.picnic.nl/why-picnic-picked-java-e53fafe0df1b"&gt;Why Picnic picked Java. Picking a tech stack for your startup¡¦ | by Sander Mak | Dec, 2022 | Picnic Engineering&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://kubernetes.io/blog/2022/12/26/pod-scheduling-readiness-alpha/"&gt;Blog: Kubernetes 1.26: Pod Scheduling Readiness&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://kubernetes.io/blog/2022/12/23/kubernetes-12-06-fsgroup-on-mount/"&gt;Blog: Kubernetes 1.26: Support for Passing Pod fsGroup to CSI Drivers At Mount Time&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://kubernetes.io/blog/2022/12/27/cpumanager-ga/"&gt;Blog: Kubernetes v1.26: CPUManager goes GA&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://kubernetes.io/blog/2022/12/22/kubelet-credential-providers/"&gt;Blog: Kubernetes v1.26: GA Support for Kubelet Credential Providers&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
->>>>>>> origin/wonhee_web
 </feed>

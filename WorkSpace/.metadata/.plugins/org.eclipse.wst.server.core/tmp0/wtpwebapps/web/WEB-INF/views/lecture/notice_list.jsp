@@ -14,11 +14,11 @@
             <div class='btnSet'>
 				<a class='btn-fill' href='notice_write.le'>공지작성</a>
 			</div>
-	<div id="container py-5">
-        <div class="row">
+	<div id="container" style="height: 1000px;">
+        <div class="row" style="position: relative;">
 			<%@include file="../include/sidebar.jsp" %>
 
-            <div class="col-lg-7 mx-5 bg-white rounded">
+            <div class="col-lg-7 mx-auto bg-white rounded shadow">
             
 				<table class="table table-fixed table-hover"> 
 

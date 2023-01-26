@@ -5,26 +5,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="css/member.css?<%=new java.util.Date()%>">
+<%-- <link rel="stylesheet" type="text/css" href="css/member.css?<%=new java.util.Date()%>"> --%>
 <link rel="stylesheet"	href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-<link href="css/table.css" rel="stylesheet">
+<!-- <link href="css/table.css" rel="stylesheet"> -->
 
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-	<div id="container py-5">
+	<div id="container" style="height: 1000px;">
         <div class="row">
-            <div class="col-lg-7 mx-auto bg-white rounded shadow">
-	            <h1>출결관리</h1>
+
 	            
+            <div class="col-lg-7 mx-auto bg-white rounded shadow">
 	            <form>
-	            	<input type='text' name="startdate" class='date' readonly>
+		            <div class='my-3'>
+		            	날짜 선택 <input type='text' name="startdate" class='date' readonly>
+		            </div>
 	            
 					<table class="table table-fixed table-hover"> 
 						<thead>
 							<tr>
-								<th scope="col" class="col-3">사진</th>
+								<th scope="col" class="col-1">사진</th>
 								<th scope="col" class="col-3">이름</th>
 								<th scope="col" class="col-2">출석</th>
 								<th scope="col" class="col-2">결석</th>
@@ -35,7 +37,7 @@
 						<tbody>
 							<c:forEach items="${student_list}" var="vo">
 								<tr>
-									<th scope="col" class="col-3 align-middle"><img src="${vo.profilepath }"></th>
+									<th scope="col" class="col-1 align-middle"><img src="img/common/default_profile_img.png" style="width:50px; height:50px;"></th>
 									<td scope="col" class="col-3 align-middle">${vo.member_name }</td>
 									<td scope="col" class="col-2"><input type="radio" class="btn-check" name='attendance' id='attendance'> <label class="btn btn-outline-success" for="attendance">출석</label></td>
 									<td scope="col" class="col-2"><input type="radio" class="btn-check" name='attendance' id='absent'>  <label class="btn btn-outline-danger" for="absent">결석</label></td>

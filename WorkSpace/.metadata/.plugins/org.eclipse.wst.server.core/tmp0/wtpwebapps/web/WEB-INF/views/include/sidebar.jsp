@@ -11,9 +11,7 @@
   width: 100%;
   min-height: 90px;
   border-radius: 4px;
-  padding: 10px 20px;
   color: #fff;
-  margin-bottom: 40px;
 }
 
 .profile-card img.profile-photo{
@@ -42,7 +40,6 @@ ul.nav-news-feed{
   padding-right: 20px;
   margin: 0 0 40px 0;
     background:#fff;
-  padding-top:20px;
 }
 
 ul.nav-news-feed li{
@@ -168,7 +165,8 @@ ul.online-users {
 	</style>
 </head>
 <body>
-        <div class="col-md-2 static">
+        <div class="col-1 border rounded" style="
+    										position: absolute; left:200px;">
             <div class="profile-card">
     		<ul class="nav-news-feed">
               <li><i class="fa fa-list-alt icon1"></i><div><a href="/web/notice_list.le?lecture_code=${lecture_info.lecture_code }"">공지사항</a></div></li>
