@@ -95,4 +95,9 @@ public class LectureDAO implements LectureService {
 		return sql.selectList("lecture.question_list", exam_code);
 	}
 
+	@Override
+	public ExamVO exam_info(int exam_code) {
+		return sql.selectOne("lecture.exam_info", exam_code);
+	}
+
 }

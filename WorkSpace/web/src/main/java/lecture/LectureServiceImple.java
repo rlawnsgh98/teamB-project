@@ -89,4 +89,9 @@ public class LectureServiceImple  implements LectureService {
 		return dao.question_list(exam_code);
 	}
 
+	@Override
+	public ExamVO exam_info(int exam_code) {
+		return dao.exam_info(exam_code);
+	}
+
 }

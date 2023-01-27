@@ -136,6 +136,10 @@
 	<select id="question_list" resultType='vo.QuestionVO'>
 	select * from exam_question where exam_code = #{exam_code}
 	</select>
+	<!-- 특정 시험 정보 조회 -->
+	<select id="exam_info" resultType='vo.ExamVO'>
+	select * from exam where exam_code = #{exam_code}
+	</select>
 	
 	<!-- 특정 시험 총 인원수 조회 -->
 	<select id="exam_total_num" resultType='integer'>

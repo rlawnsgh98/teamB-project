@@ -1,25 +1,34 @@
 package vo;
 
 import java.sql.Date;
-import java.util.ArrayList;
+import java.util.List;
 
-public class ExamVO {
+public class ExamVO{
 	//exam 테이블
-	private int exam_code, lecture_code, exam_type, num;
+	private int exam_code, lecture_code, exam_type, num, total_question;
 	//exam_take 테이블
 	private int answer_code, member_code, total_score, state, rownum;
 	private String subject, exam_title;
 	private Date startdate, duedate;
 	
 	//해당 시험의 문제 목록
-	private ArrayList<QuestionVO> list;
+	private List<QuestionVO> list;
 	
 	
-	
-	public ArrayList<QuestionVO> getList() {
+	public int getTotal_question() {
+		int result = 0;
+		if(list != null) {
+			result = list.size();
+		}
+		return result;
+	}
+	public void setTotal_question(int total_question) {
+		this.total_question = total_question;
+	}
+	public List<QuestionVO> getList() {
 		return list;
 	}
-	public void setList(ArrayList<QuestionVO> list) {
+	public void setList(List<QuestionVO> list) {
 		this.list = list;
 	}
 	public int getNum() {

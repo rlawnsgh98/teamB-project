@@ -1,5 +1,6 @@
 package com.and.web;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -16,6 +17,7 @@ import vo.ExamVO;
 import vo.HomeworkVO;
 import vo.LectureVO;
 import vo.MemberVO;
+import vo.QuestionVO;
 
 @Controller
 public class LectureController {
@@ -219,6 +221,25 @@ public class LectureController {
 		System.out.println("시험등록 처리결과 : "+result);
 		
 		return "redirect:exam_list.le";
+	}
+	
+	//시험문제 상세화면 연결 - 없으면 만드는 페이지
+	@RequestMapping("/question.le")
+	public String question_list(HttpSession session, Model model, int exam_code) {
+			
+		session.removeAttribute("exam_info");	// 필요없으면 삭제할거
+		
+		ExamVO vo = service.exam_info(exam_code);
+		List<QuestionVO> list = service.question_list(exam_code);
+		vo.setList(list);
+		
+		session.setAttribute("exam_info", vo);
+		if(list != null) {
+			model.addAttribute("no", 1);
+			model.addAttribute("question_info", list.get(0));
+			return "exam/info";
+		}
+		return "exam/new";
 	}
 	
 	//시험문제 추가

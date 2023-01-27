@@ -71,7 +71,7 @@
 						${list.num} / ${exam_total_num}
 					</td>
 					<td>
-						<a class="btn-fill" href='exam_take.le'>${list.list eq null ? '문제제출' : '문제수정'}</a>
+						<a class="btn-fill" href='question.le?exam_code=${list.exam_code}'>${list.list eq null ? '문제제출' : '문제수정'}</a>
 					</td>
 				</tr>
 			</c:forEach>
