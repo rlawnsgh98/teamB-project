@@ -11627,3 +11627,24 @@ java.lang.InterruptedException
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-27 17:42:07.866
 !MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-27 17:46:46.373
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-27 17:46:46.382
+!MESSAGE classpath=59 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-27 17:46:46.385
+!MESSAGE buffering callback sts4.classpath.tGPQMfBr web false 59
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-27 17:46:46.385
+!MESSAGE executing callback sts4.classpath.tGPQMfBr 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-01-27 17:46:46.402
+!MESSAGE executing callback sts4.classpath.tGPQMfBr SUCCESS [done]
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-27 17:46:46.616
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-01-27 17:46:46.617
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
