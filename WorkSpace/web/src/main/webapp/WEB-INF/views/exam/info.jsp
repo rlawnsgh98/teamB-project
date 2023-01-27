@@ -63,27 +63,27 @@
 </div>
 
 <!-- 문제 title -->
-<div class='exam_answer mt-90'>
+<div class='exam-info-title'>
 	<div>${no}.</div>
 	<div>${question_info.exam_title}</div>
 </div>
 <!-- 문제 content -->
-<div class='exam_answer' style='margin-left:25px'>
-	${question_info.exam_content}
+<div class='exam-info-content'>
+	<div>${question_info.exam_content}</div>
 </div>
 
 <!-- 객관식 -->			
 <c:if test="${question_info.answer_type eq 1}">
-	<ul class='exam_question'>
-		<li><label><input type="radio" name="answer" value="1"><span>1&nbsp;</span></label><span>${question_info.question1}</span></li>
-		<li><label><input type="radio" name="answer" value="2"><span>2&nbsp;</span></label><span>${question_info.question2}</span></li>
-		<li><label><input type="radio" name="answer" value="3"><span>3&nbsp;</span></label><span>${question_info.question3}</span></li>
-		<li><label><input type="radio" name="answer" value="4"><span>4&nbsp;</span></label><span>${question_info.question4}</span></li>
+	<ul class='exam-question-info'>
+		<li><label><input type="radio" name="answer" value="1" class='vertical-middle'><span>1&nbsp;</span></label><span>${question_info.question1}</span></li>
+		<li><label><input type="radio" name="answer" value="2" class='vertical-middle'><span>2&nbsp;</span></label><span>${question_info.question2}</span></li>
+		<li><label><input type="radio" name="answer" value="3" class='vertical-middle'><span>3&nbsp;</span></label><span>${question_info.question3}</span></li>
+		<li><label><input type="radio" name="answer" value="4" class='vertical-middle'><span>4&nbsp;</span></label><span>${question_info.question4}</span></li>
 	</ul>
 </c:if>
 <!-- 주관식 -->
 <c:if test="${question_info.answer_type eq 2}">
-	<div class='exam_question_textarea' style='margin-left:25px'>
+	<div class='exam-question_textarea' style='margin-left:25px'>
 		<textarea name='exam_answer_area' class='exam_answer_area input-bottom' rows="1" placeholder="답안 입력"></textarea>
 	</div>
 </c:if>

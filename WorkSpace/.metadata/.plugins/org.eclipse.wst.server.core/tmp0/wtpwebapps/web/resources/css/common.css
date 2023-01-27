@@ -450,7 +450,7 @@ ul.grid li{width : 230px; height:150px; border:1px solid #000; box-sizing: borde
 	justify-content: space-between;
 	align-items: center;
 	padding:20px 0;
-	margin-bottom:50px;
+	margin-bottom:40px;
 	border-bottom:1px solid #E6E6E6;
 }
 .test-container header>div{ 
@@ -473,7 +473,7 @@ ul.grid li{width : 230px; height:150px; border:1px solid #000; box-sizing: borde
 }
 .exam_score{
 	position:absolute;
-	top:130px;
+	top:135px;
 	right:50px;
 }
 .exam_score ul{
@@ -484,12 +484,22 @@ ul.grid li{width : 230px; height:150px; border:1px solid #000; box-sizing: borde
 .exam_score span{
 	color:#666;
 }
-.exam_answer{
+.exam-info-title{
 	margin:10px auto;
+	width:700px;
 	display:flex;
-	align-items: flex-start;
-	justify-content: center;
+	align-items:center;
+	justify-content: flex-start;
 	gap:10px;
+	color:#111;
+	font-size:18px;
+}
+.exam-info-content{
+	width:650px;
+	margin:20px auto;
+	text-align:left;
+	color:#111;
+	font-size:18px;
 }
 .exam_content, .exam_answer_area{
 	margin:20px auto;
@@ -519,7 +529,7 @@ ul.grid li{width : 230px; height:150px; border:1px solid #000; box-sizing: borde
 	border-right:none;
 	border-bottom:1px solid dodgerblue;
 }
-.exam_question{
+.exam-question{
 	width:725px;
 	margin:20px auto !important;
 	display:flex;
@@ -528,8 +538,24 @@ ul.grid li{width : 230px; height:150px; border:1px solid #000; box-sizing: borde
 	font-size:18px;
 	gap:10px;
 }
-.exam_question span{
-	color:#666;
+.exam-question span{
+	color:#222;
+}
+.exam-question-info{
+	width:700px;
+	margin:20px auto !important;
+	display:flex;
+	flex-direction:column;
+	align-items:flex-start;
+	justify-content:center;
+	font-size:18px;
+	gap:10px;
+}
+.vertical-middle{
+	vertical-align: middle !important;
+}
+.exam-question-info span{
+	color:#222;
 }
 .btn-remove-save{
 	margin-bottom: 40px;
@@ -624,6 +650,10 @@ input[name="answer"]{
 .exam-table td{
 	height: 70px;
 	vertical-align:middle;
+}
+.exam-info{
+	width:700px;
+	text-align:left;
 }
 
 
