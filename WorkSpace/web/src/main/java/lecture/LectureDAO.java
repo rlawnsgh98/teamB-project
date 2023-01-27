@@ -68,4 +68,9 @@ public class LectureDAO implements LectureService {
 	public int open_new_lecture(LectureVO lecturevo) {
 		return sql.insert("lecture.open_new_lecture", lecturevo);
 	}
+
+	@Override
+	public int modify_lecture(LectureVO lecturevo) {
+		return sql.update("lecture.modify_lecture", lecturevo);
+	}
 }

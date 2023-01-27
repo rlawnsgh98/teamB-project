@@ -141,7 +141,7 @@ public class LectureController {
 		return "lecture/exam_take";
 	}
 
-	// 로그인한 강사 개설 강의 목록 조회-kmj
+	// 로그인한 강사 개설 강의 목록 조회 - kmj
 	@RequestMapping("/open_lecture.le")
 	public String open_lecture(HttpSession session, Model model, String member_code, String select_subject, String select_year) {
 		HashMap<String, String> tempMap = new HashMap<String, String>();
@@ -159,9 +159,28 @@ public class LectureController {
 		return "lecture/open_lecture";
 	}
 	
-	@ResponseBody @RequestMapping("/open_new_lecture")
-	public boolean open_new_lecture(LectureVO lecturevo) {
-		return service.open_new_lecture(lecturevo) == 1 ? true : false;
+	// 로그인한 강사가 강의 개설 버튼 클릭 시 - kmj
+	@RequestMapping("/open_new_lecture")
+	public String open_new_lecture(LectureVO lecturevo, HttpSession session) {
+		service.open_new_lecture(lecturevo);
+		
+		MemberVO vo = (MemberVO) session.getAttribute("loginInfo");
+		int mem_code = vo.getMember_code();
+		
+		// 응답화면연결
+		return "redirect:/open_lecture.le?member_code="+mem_code;
+	}
+	
+	// 로그인한 강사가 개설 강의 수정 버튼 클릭 시 - kmj
+	@RequestMapping("/modify_lecture")
+	public String modify_lecture(LectureVO lecturevo, HttpSession session) {
+		service.modify_lecture(lecturevo);
+		
+		MemberVO vo = (MemberVO) session.getAttribute("loginInfo");
+		int mem_code = vo.getMember_code();
+		
+		// 응답화면연결
+		return "redirect:/open_lecture.le?member_code="+mem_code;
 	}
 
 	// 수강 - 강의 목록 화면 - 갤러리형 - kmj

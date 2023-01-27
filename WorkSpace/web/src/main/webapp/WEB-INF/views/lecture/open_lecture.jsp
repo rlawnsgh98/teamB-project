@@ -11,11 +11,18 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+<!-- datepicker start -->
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!-- datepicker end -->
 <style>
 #container {
 	position: relative;
 	width: 100%;
 	margin: 0 auto;
+	min-height: 700px;
 }
 
 .main_wrap {
@@ -154,15 +161,14 @@
 	margin: 10px;
 }
 
-.btn_cs>a:hover {
+.btn_cs a:hover {
 	background: transparent;
 	color: #124567 !important;
 	border: 1px solid #124567;
 }
 </style>
 <style>
-/* The Modal (background) */
-.modal {
+.modal_en, .modal_mo {
 	display: none; /* Hidden by default */
 	position: fixed; /* Stay in place */
 	z-index: 1; /* Sit on top */
@@ -176,12 +182,11 @@
 	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
-/* Modal Content */
 .modal-content {
 	background-color: #fefefe;
 	margin: auto;
 	border: 1px solid #888;
-	width: 60%;
+	width: 70%;
 	text-align: right;
 	overflow: hidden;
 }
@@ -191,12 +196,11 @@
 	margin-bottom: 20px;
 }
 
-.modal-content span{
+.modal-content span {
 	padding-right: 20px;
 	overflow: hidden;
 }
 
-/* The Close Button */
 .close {
 	color: #aaaaaa;
 	float: right;
@@ -243,7 +247,7 @@
 			<div class="sub_nav_wrap">
 				<nav class="sub_nav1">
 					<ul>
-						<form id="searchForm" action="open_lecture.le" method="get"
+						<form id="searchForm" action="open_lecture.le" method="post"
 							style="display: inline-block;">
 							<input type="hidden" name="member_code"
 								value="${loginInfo.member_code}">
@@ -267,10 +271,10 @@
 				</nav>
 				<nav class="sub_nav2">
 					<ul class="sub_nav2_btns">
-						<li><a>삭제</a></li>
-						<li><a>수정</a></li>
+						<li><a id="del_btn">삭제</a></li>
+						<li><a id="mo_btn">수정</a></li>
 						<!-- Trigger/Open The Modal -->
-						<li><a id="myBtn">등록</a></li>
+						<li><a id="en_btn">등록</a></li>
 						<li><a id="search_btn">조회</a></li>
 					</ul>
 				</nav>
@@ -327,94 +331,245 @@
 					</tbody>
 				</table>
 			</div>
-			<!-- The Modal -->
-			<div id="myModal" class="modal">
+			<!-- The Modal : 등록 -->
+			<div id="myModal_en" class="modal_en">
 				<!-- Modal content -->
 				<div class="modal-content">
-					<span class="close">&times;</span>
+					<span class="close close_en">&times;</span>
 					<h3>강의 개설</h3>
-					<form id="en_lecForm" action="open_new_lecture" method="get">
-					<table id="open_lec_table">
-						<tr>
-							<th>강의명</th>
-							<td><input type="text" name="lecture_name"></td>
-							<th>강사명</th>
-							<td><input type="text" value="${loginInfo.member_name}"
-								readonly style="border: none;" name="teacher_name"></td>
-						</tr>
-						<tr>
-							<th>시작일</th>
-							<td><input type="date" name="startdate"></td>
-							<th>종료일</th>
-							<td><input type="date" name="enddate"></td>
-						</tr>
-						<tr>
-							<th>강의실</th>
-							<td><select name="select_room">
-									<option value="R101">R101</option>
-									<option value="R201">R201</option>
-									<option value="R301">R301</option>
-									<option value="R401">R401</option>
-							</select></td>
-							<th>교시</th>
-							<td><select name="select_tt">
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-									<option value="4">4</option>
-							</select></td>
-						</tr>
-					</table>
+					<form id="en_lecForm" action="open_new_lecture" method="post">
+						<input type="hidden" name="teacher_code"
+							value="${loginInfo.member_code}">
+						<table id="open_lec_table">
+							<tr>
+								<th>강의명</th>
+								<td colspan="4"><input type="text" name="lecture_name"
+									style="width: 100%;"></td>
+							</tr>
+							<tr>
+								<th>과목명</th>
+								<td><select name="subject_code">
+										<option value="KOR">국어</option>
+										<option value="ENG">영어</option>
+										<option value="MATH">수학</option>
+								</select></td>
+								<th>강사명</th>
+								<td><input type="text" value="${loginInfo.member_name}"
+									readonly style="border: none;" name="teacher_name"></td>
+							</tr>
+							<tr>
+								<th>시작일</th>
+								<td>
+									<!-- <input type="date" name="startdate"> -->
+									 <input	type="text" id="sdate" name="startdate">
+								</td>
+								<th>종료일</th>
+								<td>
+									<!-- <input type="date" name="enddate"> -->
+									<input type="text" id="edate" name="enddate">
+								</td>
+							</tr>
+							<tr>
+								<th>강의실</th>
+								<td><select name="room_code">
+										<option value="R101">R101</option>
+										<option value="R201">R201</option>
+										<option value="R301">R301</option>
+										<option value="R401">R401</option>
+								</select></td>
+								<th>교시</th>
+								<td><select name="timetable_code">
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+								</select></td>
+							</tr>
+						</table>
 					</form>
 					<div class="btn_cs">
-						<a class="btn_cs_cancel">취소</a>
-						<a id="btn_cs_save">저장</a>
+						<a class="btn_cs_en_cancel">취소</a> <a id="btn_cs_en_save">저장</a>
 					</div>
 				</div>
 			</div>
+			<!-- The Modal : 등록 - END -->
+			<!-- The Modal : 수정 -->
+			<div id="myModal_mo" class="modal_mo">
+				<!-- Modal content -->
+				<div class="modal-content">
+					<span class="close close_mo">&times;</span>
+					<h3>강의 정보 수정</h3>
+					<form id="mo_lecForm" action="modify_lecture" method="get">
+						<input type="hidden" name="teacher_code"
+							value="${loginInfo.member_code}">
+						<table id="open_lec_table">
+							<tr>
+								<th>강의코드</th>
+								<td colspan="4"><input type="text" name="lecture_code"
+									style="width: 100%;"></td>
+							</tr>
+							<tr>
+								<th>과목명</th>
+								<td><select name="subject_code">
+										<option value="KOR">국어</option>
+										<option value="ENG">영어</option>
+										<option value="MATH">수학</option>
+								</select></td>
+								<th>강사명</th>
+								<td><input type="text" value="${loginInfo.member_name}"
+									readonly style="border: none;" name="teacher_name"></td>
+							</tr>
+							<tr>
+								<th>시작일</th>
+								<td><input type="date" name="startdate"></td>
+								<th>종료일</th>
+								<td><input type="date" name="enddate"></td>
+							</tr>
+							<tr>
+								<th>강의실</th>
+								<td><select name="room_code">
+										<option value="R101">R101</option>
+										<option value="R201">R201</option>
+										<option value="R301">R301</option>
+										<option value="R401">R401</option>
+								</select></td>
+								<th>교시</th>
+								<td><select name="timetable_code">
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+								</select></td>
+							</tr>
+						</table>
+					</form>
+					<div class="btn_cs">
+						<a class="btn_cs_mo_cancel">취소</a> <a id="btn_cs_mo_save">저장</a>
+					</div>
+				</div>
+			</div>
+			<!-- The Modal : 수정 - END -->
 		</div>
 	</div>
 	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 	<script>
+		/* 조회 */
 		var searchForm = $('#searchForm');
 		$('#search_btn').on("click", function(e) {
 			searchForm.submit();
 		});
-		$('.btn_cs_cancel').on('click', function(){
-			//history.go(-1);
-			modal.style.display = "none";
+		
+		/* 등록 */
+		$('.btn_cs_en_cancel').on('click', function() {
+			modal_en.style.display = "none";
 		});
 		var en_lecForm = $('#en_lecForm');
-		$('#btn_cs_save').on("click", function(e) {
+		$('#btn_cs_en_save').on("click", function(e) {
 			en_lecForm.submit();
+		});
+		
+		/* 수정 */
+		$('.btn_cs_mo_cancel').on('click', function() {
+			modal_mo.style.display = "none";
+		});
+		var mo_lecForm = $('#mo_lecForm');
+		$('#btn_cs_mo_save').on("click", function(e) {
+			mo_lecForm.submit();
+		});
+
+		/* 삭제 */
+		$('#del_btn').on("click", function(e) {
+			//강의 코드 입력 후, 삭제 누르면 삭제
+			
 		});
 	</script>
 	<script>
+		<!-- The Modal : 등록 -->
+		var modal_en = document.getElementById("myModal_en");
+		var en_btn = document.getElementById("en_btn");
+		var span = document.getElementsByClassName("close_en")[0];
+		en_btn.onclick = function() {
+			modal_en.style.display = "block";
+		}
+		span.onclick = function() {
+			modal_en.style.display = "none";
+		}
+		window.onclick = function(event) {
+			if (event.target == modal_en) {
+				modal_en.style.display = "none";
+			}
+		}
+		
+		<!-- The Modal : 수정 -->
 		// Get the modal
-		var modal = document.getElementById("myModal");
+		var modal_mo = document.getElementById("myModal_mo");
 
 		// Get the button that opens the modal
-		var btn = document.getElementById("myBtn");
+		var mo_btn = document.getElementById("mo_btn");
 
 		// Get the <span> element that closes the modal
-		var span = document.getElementsByClassName("close")[0];
+		var span = document.getElementsByClassName("close_mo")[0];
 
 		// When the user clicks the button, open the modal 
-		btn.onclick = function() {
-			modal.style.display = "block";
+		mo_btn.onclick = function() {
+			modal_mo.style.display = "block";
 		}
 
 		// When the user clicks on <span> (x), close the modal
 		span.onclick = function() {
-			modal.style.display = "none";
+			modal_mo.style.display = "none";
 		}
 
 		// When the user clicks anywhere outside of the modal, close it
 		window.onclick = function(event) {
-			if (event.target == modal) {
-				modal.style.display = "none";
+			if (event.target == modal_mo) {
+				modal_mo.style.display = "none";
 			}
 		}
+	</script>
+	<script>
+	<!-- datepicker start -->
+	$(document).ready(function () {
+	    $.datepicker.regional['ko'] = {
+	        closeText: '닫기',
+	        prevText: '이전달',
+	        nextText: '다음달',
+	        currentText: '오늘',
+	        monthNames: ['1월(JAN)','2월(FEB)','3월(MAR)','4월(APR)','5월(MAY)','6월(JUN)',
+	        '7월(JUL)','8월(AUG)','9월(SEP)','10월(OCT)','11월(NOV)','12월(DEC)'],
+	        monthNamesShort: ['1월','2월','3월','4월','5월','6월',
+	        '7월','8월','9월','10월','11월','12월'],
+	        dayNames: ['일','월','화','수','목','금','토'],
+	        dayNamesShort: ['일','월','화','수','목','금','토'],
+	        dayNamesMin: ['일','월','화','수','목','금','토'],
+	        weekHeader: 'Wk',
+	        dateFormat: 'yy-mm-dd',
+	        firstDay: 0,
+	        isRTL: false,
+	        showMonthAfterYear: true,
+	        yearSuffix: '',
+	        showOn: 'both',
+	        buttonText: "달력",
+	        changeMonth: true,
+	        changeYear: true,
+	        showButtonPanel: true,
+	        yearRange: 'c-99:c+99',
+	    };
+	    $.datepicker.setDefaults($.datepicker.regional['ko']);
+
+	    $('#sdate').datepicker();
+	    $('#sdate').datepicker("option", "maxDate", $("#edate").val());
+	    $('#sdate').datepicker("option", "onClose", function ( selectedDate ) {
+	        $("#edate").datepicker( "option", "minDate", selectedDate );
+	    });
+
+	    $('#edate').datepicker();
+	    $('#edate').datepicker("option", "minDate", $("#sdate").val());
+	    $('#edate').datepicker("option", "onClose", function ( selectedDate ) {
+	        $("#sdate").datepicker( "option", "maxDate", selectedDate );
+	    });
+	});
+	<!-- datepicker end -->
 	</script>
 </body>
 </html>

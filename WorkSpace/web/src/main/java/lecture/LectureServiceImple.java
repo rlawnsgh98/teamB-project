@@ -68,4 +68,9 @@ public class LectureServiceImple  implements LectureService {
 		return dao.open_new_lecture(lecturevo);
 	}
 
+	@Override
+	public int modify_lecture(LectureVO lecturevo) {
+		return dao.modify_lecture(lecturevo);
+	}
+
 }

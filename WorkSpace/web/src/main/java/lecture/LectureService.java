@@ -21,5 +21,5 @@ public interface LectureService {
 	
 	List<LectureVO> te_lec_list(HashMap<String, String> tempMap); //로그인한 강사의 개설 강의 목록 조회-kmj
 	int open_new_lecture(LectureVO lecturevo);				     //로그인한 강사가 강의 개설-kmj
-	
+	int modify_lecture(LectureVO lecturevo);         //로그인한 강사가 개설 강의 수정-kmj
 }
