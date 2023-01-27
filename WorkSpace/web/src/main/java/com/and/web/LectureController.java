@@ -129,20 +129,20 @@ public class LectureController {
 
 	// 시험목록 조회
 	@RequestMapping("/exam_list.le")
-	public String exam_list(Model model, HttpSession session) {
+	public String exam_list(Model model, HttpSession session, int member_code, int lecture_code) {
 
 		HashMap<String, Object> map = new HashMap<String, Object>();
 		MemberVO member = (MemberVO) session.getAttribute("loginInfo");
-		LectureVO lecture = (LectureVO) session.getAttribute("lecture");
-		map.put("member_code", member.getMember_code());
+		
+		map.put("member_code", member_code);
 		map.put("type", member.getType());
-		map.put("lecture_code", lecture.getLecture_code());
+		map.put("lecture_code", lecture_code);
 
 		List<ExamVO> list = service.exam_list(map);
 		
 		model.addAttribute("exam_list", list);
 		//시험관련 수강생 수 넘겨주기
-		model.addAttribute("exam_total_num", service.exam_total_num(lecture.getLecture_code()));
+		model.addAttribute("exam_total_num", service.exam_total_num(lecture_code));
 
 		return "lecture/exam_list";
 	}
@@ -226,7 +226,7 @@ public class LectureController {
 	//시험문제 상세화면 연결 - 없으면 만드는 페이지
 	@RequestMapping("/question.le")
 	public String question_list(HttpSession session, Model model, int exam_code) {
-			
+		
 		session.removeAttribute("exam_info");	// 필요없으면 삭제할거
 		
 		ExamVO vo = service.exam_info(exam_code);
@@ -242,13 +242,30 @@ public class LectureController {
 		return "exam/new";
 	}
 	
-	//시험문제 추가
+	//시험문제 다음 화면 연결
+	@RequestMapping("/question_next.le")
+	public String question_next(Model model, int cur_no, int total_question) {
+		if(cur_no == total_question) {
+			model.addAttribute("no", cur_no+1);
+			model.addAttribute("total_question", total_question+1);
+			
+			return "exam/new";
+		}else {
+			model.addAttribute("no", cur_no+1);
+			model.addAttribute("question_info", service.question_info(cur_no+1));
+			return "exam/info";
+		}
+	}
+	
+	//시험문제 저장 - 저장만
 	@RequestMapping("/exam_question_new.le")
-	public String exam_question_new(ExamVO vo) {
-		
-		
-		
-		return "lecture/exam_question_new";
+	public String exam_question_new(QuestionVO vo, Model model) {
+		service.insert_question(vo);
+		model.addAttribute("no", vo.getNo());
+		model.addAttribute("total_question", vo.getNo()+1);
+		//저장한 문제정보 바로 출력
+		model.addAttribute("question_info", vo);
+		return "exam/info";
 	}	
 	
 	//학생리스트 조회

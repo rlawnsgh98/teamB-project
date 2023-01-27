@@ -25,12 +25,16 @@ public interface LectureService {
 	
 	//시험등록
 	int insert_exam(ExamVO vo);
+	//문제등록
+	int insert_question(QuestionVO vo);
 	//특정 강의정보 조회 - lecture table
 	LectureVO lecture_info(int lecture_code);
 	//특정 강의 총 인원수 조회
 	int exam_total_num(int lecture_code);
-	//등록한 시험 문제 조회 - exam_question table
+	//등록한 시험 문제 목록 조회 - exam_question table
 	List<QuestionVO> question_list(int exam_code);
+	//특정 시험 문제 조회
+	QuestionVO question_info(int no);
 	//특정 시험 정보 조회 - exam table
 	ExamVO exam_info(int exam_code);
 }

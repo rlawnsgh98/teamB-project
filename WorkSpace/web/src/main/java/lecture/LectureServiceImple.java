@@ -94,4 +94,14 @@ public class LectureServiceImple  implements LectureService {
 		return dao.exam_info(exam_code);
 	}
 
+	@Override
+	public QuestionVO question_info(int no) {
+		return dao.question_info(no);
+	}
+
+	@Override
+	public int insert_question(QuestionVO vo) {
+		return dao.insert_question(vo);
+	}
+
 }

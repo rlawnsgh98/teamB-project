@@ -15,8 +15,8 @@
 <form action="" method="post" autocomplete="off">
 
 <!-- 시험등록에 필요한 정보(hidden) <- 추가해야함 -->
-<input type='hidden' name='lecture_name' value=''/>
-<input type='hidden' name='lecture_code' value=''/>
+<input type='hidden' name='no' value='${no}'/>
+<input type='hidden' name='' value='${no}'/>
 
 <div class='test-container container'>
 
@@ -94,7 +94,7 @@
 	<!-- 이전, 다음 버튼 -->
 	<ul class='exam-move'>
 		<li><a href='#'><i class="fa-solid fa-caret-left"></i><span style='margin-left:5px'>이전</span></a></li>
-		<li><a href='#'><span style='margin-right:5px'>다음</span><i class="fa-solid fa-caret-right"></i></a></li>
+		<li><a href='question_next.le?cur_no=${no}&total_question=${exam_info.total_question}'><span style='margin-right:5px'>다음</span><i class="fa-solid fa-caret-right"></i></a></li>
 	</ul>
 	
 	<!-- 현재 문제/총 문제 -->

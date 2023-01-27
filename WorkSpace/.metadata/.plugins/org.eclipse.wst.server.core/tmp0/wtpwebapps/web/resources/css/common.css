@@ -484,6 +484,12 @@ ul.grid li{width : 230px; height:150px; border:1px solid #000; box-sizing: borde
 .exam_score span{
 	color:#666;
 }
+.exam-new-title{
+	display: flex;
+    margin: 90px auto 10px auto;
+    width: 700px;
+    align-items: center;
+}
 .exam-info-title{
 	margin:10px auto;
 	width:700px;
@@ -530,7 +536,7 @@ ul.grid li{width : 230px; height:150px; border:1px solid #000; box-sizing: borde
 	border-bottom:1px solid dodgerblue;
 }
 .exam-question{
-	width:725px;
+	width:655px;
 	margin:20px auto !important;
 	display:flex;
 	flex-direction:column;

@@ -45,14 +45,12 @@
 					</c:if>
 					
 					<th>시험</th>
-					
 				</tr>
 					
-			
-					
+			<c:if test="${exam_list ne null}">
 			<c:forEach items="${exam_list}" var="list">
 				<tr>
-					<td>${list.rownum}</th>
+					<td>${list.rownum}</td>
 					<td>${list.exam_title}</td>
 					<td>
 						<c:if test="${list.exam_type eq 1 ? true : false}">모의고사</c:if>
@@ -71,11 +69,11 @@
 						${list.num} / ${exam_total_num}
 					</td>
 					<td>
-						<a class="btn-fill" href='question.le?exam_code=${list.exam_code}'>${list.list eq null ? '문제제출' : '문제수정'}</a>
+						<a class="btn-fill" href='question.le?exam_code=${list.exam_code}'>${list eq null ? '문제제출' : '문제수정'}</a>
 					</td>
 				</tr>
 			</c:forEach>
-					
+			</c:if>
 			</table>
 			
 <!-- 		</div> -->

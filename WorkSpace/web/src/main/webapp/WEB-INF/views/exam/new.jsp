@@ -12,16 +12,17 @@
 
 <h3 class='container text-center board-title text-dark'>시험등록</h3>
 
-<form action="" method="post" autocomplete="off">
+<form action="exam_question_new.le" method="post" autocomplete="off">
 
 <!-- 시험등록에 필요한 정보(hidden) <- 추가해야함 -->
-<input type='hidden' name='lecture_name' value=''/>
-<input type='hidden' name='lecture_code' value=''/>
+<input type='hidden' name='no' value='${no}'/>
+<input type='hidden' name='exam_code' value='${exam_info.exam_code}'/>
+
 
 <div class='test-container container'>
 
 <header>
-	<div>고1 수학</div>		<!-- $로 값 수정 -->
+	<div>${lecture.lecture_name}</div>		<!-- $로 값 수정 -->
 	
 	<table class='test-table'>
 		<colgroup>
@@ -37,14 +38,14 @@
 		</tr>
 		
 		<tr>
-			<th>20</th>
+			<th>${total_question}</th>
 			<th><select name='exam-type'>			<!-- 시험 구분 value => DB에 맞춰 변경 -->
 				<option value='1'>모의고사</option>
 				<option value='2'>쪽지시험</option>
 				<option value='3'>중간평가</option>
 				<option value='4'>기말평가</option>
 			</select></th>
-			<th>2023.01.26</th>
+			<th>${exam_info.startdate}</th>
 		</tr>
 	</table>
 </header>
@@ -66,16 +67,16 @@
 </div>
 
 <!-- 문제 title -->
-<div class='exam_answer mt-90'>
-	<div>2.</div>
+<div class='exam-info-title mt-90'>
+	<div>${no}.</div>
 	<textarea name='exam_title' class='exam_title input-bottom' rows="1" placeholder="문제 입력"></textarea>
 </div>
 <!-- 문제 content -->
-<div class='exam_answer' style='margin-left:25px'>
+<div class='exam-info-content'>
 	<textarea name='exam_content' class='exam_content input-bottom' rows="1" placeholder="내용 입력(선택)"></textarea>
 </div>
 <!-- 객관식 답 -->			
-<ul class='exam_question'>
+<ul class='exam-question'>
 	<li><label><input type="radio" name="answer" value="1"><span>1&nbsp;</span></label><input type="text" name="question1" class='input-bottom' placeholder="번 답안"/></li>
 	<li><label><input type="radio" name="answer" value="2"><span>2&nbsp;</span></label><input type="text" name="question2" class='input-bottom' placeholder="번 답안"/></li>
 	<li><label><input type="radio" name="answer" value="3"><span>3&nbsp;</span></label><input type="text" name="question3" class='input-bottom' placeholder="번 답안"/></li>
@@ -89,7 +90,7 @@
 <!-- 지우기, 저장 -->
 <div class='btn-remove-save'>
 	<a class="btn-exam-empty w-px100 question-save mr-20" onClick="answer_clear()">지우기</a>
-	<a href="#" class="btn-exam-black w-px100 question-save">저장</a>
+	<a onClick="$('form').submit()" class="btn-exam-black w-px100 question-save">저장</a>
 </div>
 
 </div> <!-- test-container 끝 -->
@@ -104,9 +105,9 @@
 	<!-- 현재 문제/총 문제 -->
 	<div class='exam-mark'>		<!-- absolute -->
 		<ul>
-			<li>2</li>
+			<li>${no}</li>
 			<li>/</li>
-			<li>2</li>
+			<li>${total_question}</li>
 		</ul>
 	</div>
 </div>

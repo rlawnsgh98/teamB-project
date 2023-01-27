@@ -117,25 +117,37 @@
 	
 	<!-- 강사가 시험목록 조회 - 응시한 학생 수 컬럼 추가 -->
 	<select id="exam_list_teacher" resultType="vo.ExamVO">
-	select  rownum, ex.*, n.*
+	select  rownum, ex.*, num
 	from    exam ex left outer join (select  e.exam_code exam_code, count(e.exam_code) num
                                 from    member m left outer join exam_take e
                                 on      m.member_code = e.member_code
                                 inner join exam exam
                                 on      e.exam_code = exam.exam_code
-                                where   exam.lecture_code = 1
-                                and		exam.exam_code = 1001
+                                where   exam.lecture_code = #{lecture_code}
                                 and     e.state is not null
                                 group by e.exam_code
                                 ) n
         	on  ex.exam_code = n.exam_code
-	where   lecture_code = 1
+	where   lecture_code = #{lecture_code}
 	</select>
+	
+	<!-- 문제 등록 -->
+	<insert id="insert_question">
+	insert into exam_question (no, exam_code, exam_title, answer, answer_type, score, exam_content, question1, question2, question3, question4)
+	values(#{no}, #{exam_code}, #{exam_title}, #{answer}, #{answer_type}, #{score}, #{exam_content, jdbcType=VARCHAR}
+		, #{question1},#{question2},#{question3},#{question4}
+	)
+	</insert>
 	
 	<!-- 특정 시험 문제 목록 조회 -->
 	<select id="question_list" resultType='vo.QuestionVO'>
 	select * from exam_question where exam_code = #{exam_code}
 	</select>
+	<!-- 특정 시험 문제 정보 -->
+	<select id="question_info" resultType='vo.QuestionVO'>
+	select * from exam_question where no = #{no}
+	</select>
+	
 	<!-- 특정 시험 정보 조회 -->
 	<select id="exam_info" resultType='vo.ExamVO'>
 	select * from exam where exam_code = #{exam_code}
