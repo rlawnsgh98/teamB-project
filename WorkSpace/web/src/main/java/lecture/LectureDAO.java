@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
 import vo.BoardVO;
+import vo.QuestionVO;
 import vo.ExamVO;
 import vo.HomeworkVO;
 import vo.LectureVO;
@@ -56,7 +57,12 @@ public class LectureDAO implements LectureService {
 
 	@Override
 	public List<ExamVO> exam_list(HashMap<String, Object> map) {
-		return sql.selectList("lecture.exam_list", map);
+		List<ExamVO> list = null;
+		if(map.get("type").equals("STUD")) list = sql.selectList("lecture.exam_list", map);
+		else {
+			list = sql.selectList("lecture.exam_list_teacher", map);
+		}
+		return list;
 	}
 
 	@Override
@@ -71,13 +77,22 @@ public class LectureDAO implements LectureService {
 
 	@Override
 	public int insert_exam(ExamVO vo) {
-		// TODO Auto-generated method stub
-		return 0;
+		return sql.insert("lecture.insert_exam", vo);
 	}
 
 	@Override
 	public LectureVO lecture_info(int lecture_code) {
 		return sql.selectOne("lecture.lecture_info", lecture_code);
+	}
+
+	@Override
+	public int exam_total_num(int lecture_code) {
+		return sql.selectOne("lecture.exam_total_num", lecture_code);
+	}
+
+	@Override
+	public List<QuestionVO> question_list(int exam_code) {
+		return sql.selectList("lecture.question_list", exam_code);
 	}
 
 }

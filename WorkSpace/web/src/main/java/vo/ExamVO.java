@@ -1,16 +1,33 @@
 package vo;
 
 import java.sql.Date;
+import java.util.ArrayList;
 
 public class ExamVO {
 	//exam 테이블
-	private int exam_code, lecture_code, exam_type;
+	private int exam_code, lecture_code, exam_type, num;
 	//exam_take 테이블
 	private int answer_code, member_code, total_score, state, rownum;
 	private String subject, exam_title;
 	private Date startdate, duedate;
 	
+	//해당 시험의 문제 목록
+	private ArrayList<QuestionVO> list;
 	
+	
+	
+	public ArrayList<QuestionVO> getList() {
+		return list;
+	}
+	public void setList(ArrayList<QuestionVO> list) {
+		this.list = list;
+	}
+	public int getNum() {
+		return num;
+	}
+	public void setNum(int num) {
+		this.num = num;
+	}
 	public int getRownum() {
 		return rownum;
 	}

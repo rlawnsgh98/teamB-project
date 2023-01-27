@@ -64,8 +64,8 @@ div.btnSet { margin: 20px auto; }
 }
 
 a.btn-fill, a.btn-empty {
-	display: inline-block;
-	height: 34px;
+/* 	display: inline-block; */
+/* 	height: 34px; */
 	padding: 3px 10px;
 	border: 1px solid #3367d6;
 	border-radius: 3px;
@@ -609,9 +609,25 @@ input[name="answer"]{
 }
 
 /* 시험 등록 */
+.exam-container{
+	padding-bottom:50px;
+}
 .exam-new-container{
 	padding-bottom:10px;
 }
+.exam-table{
+	color:#111;
+	margin:10px auto;
+	width: 1000px !important;
+	border-top: 1px solid #cdcdcd;
+}
+.exam-table td{
+	height: 70px;
+	vertical-align:middle;
+}
+
+
+.flex-end{ display:flex; justify-content: flex-end; margin: 0 auto;}
 
 .ml-10{ margin-left:10px }
 

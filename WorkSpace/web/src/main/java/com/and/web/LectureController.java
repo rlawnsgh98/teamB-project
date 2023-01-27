@@ -133,10 +133,14 @@ public class LectureController {
 		MemberVO member = (MemberVO) session.getAttribute("loginInfo");
 		LectureVO lecture = (LectureVO) session.getAttribute("lecture");
 		map.put("member_code", member.getMember_code());
+		map.put("type", member.getType());
 		map.put("lecture_code", lecture.getLecture_code());
 
 		List<ExamVO> list = service.exam_list(map);
+		
 		model.addAttribute("exam_list", list);
+		//시험관련 수강생 수 넘겨주기
+		model.addAttribute("exam_total_num", service.exam_total_num(lecture.getLecture_code()));
 
 		return "lecture/exam_list";
 	}
@@ -207,16 +211,19 @@ public class LectureController {
 	public String exam_new() {
 		return "lecture/exam_new";
 	}	
-	//시험 등록화면 요청
+	//시험 등록 처리
 	@RequestMapping("/exam_insert.le")
 	public String exam_insert(ExamVO vo) {
+		
+		int result = service.insert_exam(vo);
+		System.out.println("시험등록 처리결과 : "+result);
 		
 		return "redirect:exam_list.le";
 	}
 	
 	//시험문제 추가
 	@RequestMapping("/exam_question_new.le")
-	public String exam_question_new() {
+	public String exam_question_new(ExamVO vo) {
 		
 		
 		

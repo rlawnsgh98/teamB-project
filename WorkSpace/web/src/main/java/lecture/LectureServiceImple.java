@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import vo.BoardVO;
+import vo.QuestionVO;
 import vo.ExamVO;
 import vo.HomeworkVO;
 import vo.LectureVO;
@@ -70,13 +71,22 @@ public class LectureServiceImple  implements LectureService {
 
 	@Override
 	public int insert_exam(ExamVO vo) {
-		// TODO Auto-generated method stub
-		return 0;
+		return dao.insert_exam(vo);
 	}
 
 	@Override
 	public LectureVO lecture_info(int lecture_code) {
 		return dao.lecture_info(lecture_code);
+	}
+
+	@Override
+	public int exam_total_num(int lecture_code) {
+		return dao.exam_total_num(lecture_code);
+	}
+
+	@Override
+	public List<QuestionVO> question_list(int exam_code) {
+		return dao.question_list(exam_code);
 	}
 
 }

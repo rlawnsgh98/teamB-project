@@ -5,7 +5,295 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2023-01-25T21:08:02Z</updated>
+  <updated>2023-01-26T23:00:00Z</updated>
+  <entry>
+    <title>A Bootiful Podcast: GraalVM advocate Alina Yurenko on a Bootiful Podcast</title>
+    <link rel="alternate" href="https://spring.io/blog/2023/01/26/a-bootiful-podcast-graalvm-advocate-alina-yurenko-on-a-bootiful-podcast" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2023-01-26:5071</id>
+    <updated>2023-01-26T23:00:00Z</updated>
+    <content type="html">&lt;p&gt;Liiiive from New York, it&amp;rsquo;s a Bootiful Podcast! This week &lt;a href="https://twitter.com/starbuxman"&gt;I (@starbuxman)&lt;/a&gt; talk to Developer Advocate for &lt;a href="https://www.graalvm.org/"&gt;GraalVM&lt;/a&gt; at Oracle Labs, and legend, &lt;a href="https://twitter.com/alina_yurenko"&gt;Alina Yurenko (@alina_yurenko)&lt;/a&gt;&lt;/p&gt;
+&lt;iframe title="GraalVM advocate Alina Yurenko on a Bootiful Podcast" allowtransparency="true" height="150" width="100%" style="border: none; min-width: min(100%, 430px);" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=xjd6p-1373f4d-pb&amp;from=pb6admin&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Arial&amp;skin=1&amp;font-color=&amp;logo_link=episode_page&amp;btn-skin=7"&gt;&lt;/iframe&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Cloud Azure 5.0 is now Generally Available</title>
+    <link rel="alternate" href="https://spring.io/blog/2023/01/26/spring-cloud-azure-5-0-is-now-generally-available" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2023-01-26:5070</id>
+    <updated>2023-01-26T09:00:00Z</updated>
+    <content type="html">&lt;p&gt;We&amp;rsquo;re very pleased to announce that Spring Cloud Azure 5.0 is now generally available.&lt;/p&gt;
+&lt;p&gt;This major release includes the following features, improvements, and documentation updates:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Compatible with Spring Boot 3 and Spring Cloud 2022.0.0&lt;/li&gt;
+  &lt;li&gt;Supports &lt;a href="https://learn.microsoft.com/azure/developer/intro/passwordless-overview"&gt;Passwordless Connections&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Updated &lt;a href="https://learn.microsoft.com/en-us/azure/developer/java/spring/"&gt;Azure for Spring developers documentation&lt;/a&gt; to help Spring developers code, deploy and scale Spring applications on Azure&lt;/li&gt;
+  &lt;li&gt;Redesigned &lt;a href="https://learn.microsoft.com/en-us/azure/developer/java/spring-framework/"&gt;Spring Cloud Azure documentation&lt;/a&gt; with improved scenarios&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src = "https://github.com/joshlong/blog-images/raw/master/spring-cloud-azure-5-ga/upgrades.jpg" /&gt;
+&lt;p&gt;To try Spring Cloud Azure 5.0, simply add the following dependency BOM to your project:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint"&gt;&amp;lt;dependencyManagement&amp;gt;&#xD;
+  &amp;lt;dependencies&amp;gt;&#xD;
+    &amp;lt;dependency&amp;gt;&#xD;
+      &amp;lt;groupId&amp;gt;com.azure.spring&amp;lt;/groupId&amp;gt;&#xD;
+      &amp;lt;artifactId&amp;gt;spring-cloud-azure-dependencies&amp;lt;/artifactId&amp;gt;&#xD;
+      &amp;lt;version&amp;gt;5.0.0&amp;lt;/version&amp;gt;&#xD;
+      &amp;lt;type&amp;gt;pom&amp;lt;/type&amp;gt;&#xD;
+      &amp;lt;scope&amp;gt;import&amp;lt;/scope&amp;gt;&#xD;
+    &amp;lt;/dependency&amp;gt;&#xD;
+  &amp;lt;/dependencies&amp;gt;&#xD;
+&amp;lt;/dependencyManagement&amp;gt;&#xD;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;&lt;a href="#spring-boot-3-and-spring-cloud-2022-0-0-integration" class="anchor" name="spring-boot-3-and-spring-cloud-2022-0-0-integration"&gt;&lt;/a&gt;Spring Boot 3 and Spring Cloud 2022.0.0 integration&lt;/h2&gt;
+&lt;p&gt;Spring Boot 3 and Spring Cloud 2022.0.0 bring many exciting features, requiring some significant changes to Spring Cloud Azure to fully leverage them.&lt;/p&gt;&lt;h3&gt;&lt;a href="#noteworthy-changes-in-this-version" class="anchor" name="noteworthy-changes-in-this-version"&gt;&lt;/a&gt;Noteworthy changes in this version&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+  &lt;p&gt;Deprecated API upgrades, &lt;a href="https://github.com/Azure/azure-sdk-for-java/pull/31543"&gt;Azure/azure-sdk-for-java#31543&lt;/a&gt;:&lt;br/&gt;&lt;code&gt;com.azure.spring.cloud.autoconfigure.aad.implementation.oauth2.AadOAuth2AuthenticatedPrincipal&lt;/code&gt; class removed&lt;br/&gt;&lt;code&gt;com.azure.spring.cloud.autoconfigure.aad.implementation.webapi.AadOboOAuth2AuthorizedClientProvider&lt;/code&gt; class removed&lt;br/&gt;&lt;code&gt;com.azure.spring.cloud.autoconfigure.aad.properties.AadAuthorizationGrantType&lt;/code&gt; class removed&lt;br/&gt;&lt;code&gt;com.azure.spring.cloud.autoconfigure.aad.AadJwtBearerTokenAuthenticationConverter&lt;/code&gt; class removed&lt;br/&gt;&lt;code&gt;AuthorizationGrantType.PASSWORD&lt;/code&gt; no longer supported&lt;br/&gt;&lt;code&gt;com.nimbusds.jwt.proc.DefaultJWTClaimsVerifier#DefaultJWTClaimsVerifier(com.nimbusds.jwt.JWTClaimsSet, java.util.Set&amp;lt;java.lang.String&amp;gt;)&lt;/code&gt; method replaces &lt;code&gt;com.nimbusds.jwt.proc.DefaultJWTClaimsVerifier#DefaultJWTClaimsVerifier()&lt;/code&gt;&lt;br/&gt;&lt;code&gt;AbstractHttpConfigurer&lt;/code&gt; replaces &lt;code&gt;org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter&lt;/code&gt;&lt;br/&gt;&lt;code&gt;spring-cloud-azure-trace-sleuth&lt;/code&gt; artifact removed&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+  &lt;p&gt;Spring Security 6 dependencies upgrades, &lt;a href="https://Azure/azure-sdk-for-java#31808"&gt;Azure/azure-sdk-for-java#31808&lt;/a&gt;:&lt;br/&gt;&lt;code&gt;org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity&lt;/code&gt; annotation replaces &lt;code&gt;org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity&lt;/code&gt;&lt;br/&gt;&lt;code&gt;org.springframework.security.oauth2.server.resource.authentication.BearerTokenAuthenticationToken&lt;/code&gt; class replaces &lt;code&gt;org.springframework.security.oauth2.server.resource.BearerTokenAuthenticationToken&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+  &lt;p&gt;Class package path updates and API polishing/refinement, including reducing the number of public APIs: &lt;a href="https://github.com/Azure/azure-sdk-for-java#32552"&gt;#32552&lt;/a&gt;, &lt;a href="https://github.com/Azure/azure-sdk-for-java#32552"&gt;#32582&lt;/a&gt;, &lt;a href="https://github.com/Azure/azure-sdk-for-java#32597"&gt;#32597&lt;/a&gt; , &lt;a href="https://github.com/Azure/azure-sdk-for-java#32616"&gt;#32616&lt;/a&gt;, &lt;a href="https://Azure/azure-sdk-for-java#32716"&gt;#32716&lt;/a&gt; .&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The following features are planned for future releases:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;GraalVM native image**&lt;/li&gt;
+  &lt;li&gt;Spring Data Cosmos DB&lt;/li&gt;
+  &lt;li&gt;App Configuration Config and Feature Management&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;** Currently available for beta testing, please visit &lt;a href="https://github.com/Azure/azure-sdk-for-java/tree/feature/spring-boot-3/sdk/spring/spring-cloud-azure-native-reachability"&gt;Spring Cloud Azure Native Reachability client library for Java&lt;/a&gt; to give it a try.&lt;/p&gt;
+&lt;p&gt;Stay tuned for updates!&lt;/p&gt;&lt;h2&gt;&lt;a href="#passwordless-connections" class="anchor" name="passwordless-connections"&gt;&lt;/a&gt;Passwordless connections&lt;/h2&gt;
+&lt;p&gt;Using username/password credentials to access one application from another significantly increases overall risk profile. An unauthorized user can gain access to the application using a connection string accidentally checked into source control, sent through an insecure email, pasted into the wrong chat, or otherwise illegitimately obtained. Updating your application to use passwordless connections provides dramatically improved security.&lt;/p&gt;
+&lt;p&gt;Passwordless connections for Java applications to Azure databases and eventing services are generally available with Spring Cloud Azure 5.0, enabling you to access services securely without passing usernames and passwords over the wire.&lt;/p&gt;
+&lt;img src = "https://github.com/joshlong/blog-images/raw/master/spring-cloud-azure-5-ga/passwordless.png"/&gt;
+&lt;p&gt;These Azure Services currently support passwordless connections:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th align="left"&gt;Azure Service &lt;/th&gt;
+      &lt;th align="left"&gt;Quickstart &lt;/th&gt;
+      &lt;th align="left"&gt;Migration guide &lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td align="left"&gt;Azue Database for MySQL &lt;/td&gt;
+      &lt;td align="left"&gt;&lt;a href="https://learn.microsoft.com/en-us/azure/developer/java/spring-framework/configure-spring-data-jpa-with-azure-mysql?tabs=passwordless&amp;toc=%2Fazure%2Fdeveloper%2Fintro%2Ftoc.json&amp;bc=%2Fazure%2Fdeveloper%2Fintro%2Fbreadcrumb%2Ftoc.json"&gt;Spring Data JDBC&lt;/a&gt;, &lt;a href="https://learn.microsoft.com/en-us/azure/developer/java/spring-framework/configure-spring-data-jdbc-with-azure-mysql?tabs=passwordless&amp;toc=%2Fazure%2Fdeveloper%2Fintro%2Ftoc.json&amp;bc=%2Fazure%2Fdeveloper%2Fintro%2Fbreadcrumb%2Ftoc.json"&gt;Spring Data JPA&lt;/a&gt; &lt;/td&gt;
+      &lt;td align="left"&gt;&lt;a href="https://learn.microsoft.com/en-us/azure/developer/java/spring-framework/migrate-mysql-to-passwordless-connection?toc=%2Fazure%2Fdeveloper%2Fintro%2Ftoc.json&amp;bc=%2Fazure%2Fdeveloper%2Fintro%2Fbreadcrumb%2Ftoc.json&amp;tabs=sign-in-azure-cli%2Cjava%2Capp-service%2Capp-service-identity"&gt;Delete passwords and migrate&lt;/a&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td align="left"&gt;Azure Database for PostgreSQL &lt;/td&gt;
+      &lt;td align="left"&gt;&lt;a href="https://learn.microsoft.com/en-us/azure/developer/java/spring-framework/configure-spring-data-jpa-with-azure-postgresql?tabs=passwordless&amp;toc=%2Fazure%2Fdeveloper%2Fintro%2Ftoc.json&amp;bc=%2Fazure%2Fdeveloper%2Fintro%2Fbreadcrumb%2Ftoc.json"&gt;Spring Data JDBC&lt;/a&gt;, &lt;a href="https://learn.microsoft.com/en-us/azure/developer/java/spring-framework/configure-spring-data-jdbc-with-azure-postgresql?tabs=passwordless&amp;toc=%2Fazure%2Fdeveloper%2Fintro%2Ftoc.json&amp;bc=%2Fazure%2Fdeveloper%2Fintro%2Fbreadcrumb%2Ftoc.json"&gt;Spring Data JPA&lt;/a&gt; &lt;/td&gt;
+      &lt;td align="left"&gt;&lt;a href="https://learn.microsoft.com/en-us/azure/developer/java/spring-framework/migrate-sql-database-to-passwordless-connection?toc=%2Fazure%2Fdeveloper%2Fintro%2Ftoc.json&amp;bc=%2Fazure%2Fdeveloper%2Fintro%2Fbreadcrumb%2Ftoc.json&amp;tabs=java%2Capp-service%2Cassign-role-service-connector"&gt;Delete passwords and migrate&lt;/a&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td align="left"&gt;Azure SQL Database &lt;/td&gt;
+      &lt;td align="left"&gt;&lt;a href="https://learn.microsoft.com/en-us/azure/developer/java/spring-framework/deploy-passwordless-spring-database-app?tabs=sqlserver&amp;toc=%2Fazure%2Fdeveloper%2Fintro%2Ftoc.json&amp;bc=%2Fazure%2Fdeveloper%2Fintro%2Fbreadcrumb%2Ftoc.json"&gt;Spring Data JDBC&lt;/a&gt;, &lt;a href="https://learn.microsoft.com/en-us/azure/developer/java/spring-framework/deploy-passwordless-spring-database-app?tabs=sqlserver&amp;toc=%2Fazure%2Fdeveloper%2Fintro%2Ftoc.json&amp;bc=%2Fazure%2Fdeveloper%2Fintro%2Fbreadcrumb%2Ftoc.json"&gt;Spring Data JPA&lt;/a&gt; &lt;/td&gt;
+      &lt;td align="left"&gt;&lt;a href="https://learn.microsoft.com/en-us/azure/developer/java/spring-framework/migrate-sql-database-to-passwordless-connection?toc=%2Fazure%2Fdeveloper%2Fintro%2Ftoc.json&amp;bc=%2Fazure%2Fdeveloper%2Fintro%2Fbreadcrumb%2Ftoc.json&amp;tabs=java%2Capp-service%2Cassign-role-service-connector"&gt;Delete passwords and migrate&lt;/a&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td align="left"&gt;Event Hubs ? Kafka &lt;/td&gt;
+      &lt;td align="left"&gt;&lt;a href="https://learn.microsoft.com/en-us/azure/developer/java/spring-framework/migrate-kafka-to-passwordless-connection?tabs=azure-portal%2Csign-in-azure-cli%2Cspring-cloud-stream-kafka%2Cservice-connector%2Cassign-role-azure-portal"&gt;Spring Cloud Stream Binder for Kafka&lt;/a&gt;, &lt;a href="https://learn.microsoft.com/en-us/azure/developer/java/spring-framework/migrate-kafka-to-passwordless-connection?tabs=azure-portal%2Csign-in-azure-cli%2Cspring-cloud-stream-kafka%2Cservice-connector%2Cassign-role-azure-portal"&gt;Spring Kafka&lt;/a&gt; &lt;/td&gt;
+      &lt;td align="left"&gt;&lt;a href="https://learn.microsoft.com/en-us/azure/developer/java/spring-framework/migrate-kafka-to-passwordless-connection?toc=%2Fazure%2Fdeveloper%2Fintro%2Ftoc.json&amp;bc=%2Fazure%2Fdeveloper%2Fintro%2Fbreadcrumb%2Ftoc.json&amp;tabs=azure-portal%2Csign-in-azure-cli%2Cjava-kafka%2Cservice-connector%2Cservice-connector-identity%2Cassign-role-service-connector"&gt;Delete passwords and migrate&lt;/a&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td align="left"&gt;Storage &lt;/td&gt;
+      &lt;td align="left"&gt;&lt;a href="https://learn.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-java?toc=%2Fazure%2Fdeveloper%2Fintro%2Ftoc.json&amp;bc=%2Fazure%2Fdeveloper%2Fintro%2Fbreadcrumb%2Ftoc.json&amp;tabs=powershell%2Cmanaged-identity%2Croles-azure-portal%2Csign-in-azure-cli"&gt;Storage Blob&lt;/a&gt;, &lt;a href="https://learn.microsoft.com/en-us/azure/storage/queues/storage-quickstart-queues-java?toc=%2Fazure%2Fdeveloper%2Fintro%2Ftoc.json&amp;bc=%2Fazure%2Fdeveloper%2Fintro%2Fbreadcrumb%2Ftoc.json&amp;tabs=powershell%2Cpasswordless%2Croles-azure-portal%2Cenvironment-variable-windows%2Csign-in-azure-cli"&gt;Storage Queues&lt;/a&gt; &lt;/td&gt;
+      &lt;td align="left"&gt;&lt;a href="https://learn.microsoft.com/en-us/azure/storage/common/migrate-azure-credentials?toc=%2Fazure%2Fdeveloper%2Fintro%2Ftoc.json&amp;bc=%2Fazure%2Fdeveloper%2Fintro%2Fbreadcrumb%2Ftoc.json&amp;tabs=roles-azure-portal%2Csign-in-azure-cli%2Cservice-connector%2Cservice-connector-identity%2Cassign-role-service-connector"&gt;Delete passwords and migrate&lt;/a&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Our passwordless journey does not end here. Support for additional Azure services is planned and under development.&lt;/p&gt;&lt;h2&gt;&lt;a href="#spring-initializr" class="anchor" name="spring-initializr"&gt;&lt;/a&gt;Spring Initializr&lt;/h2&gt;
+&lt;p&gt;The Azure Support module in Spring Initializr now supports Spring Boot 3, so you can begin your Spring Cloud Azure 5.0 journey directly from the Spring Initializr.&lt;/p&gt;
+&lt;img src = "https://github.com/joshlong/blog-images/raw/master/spring-cloud-azure-5-ga/initializr.png"/&gt;&lt;h2&gt;&lt;a href="#documentation" class="anchor" name="documentation"&gt;&lt;/a&gt;Documentation&lt;/h2&gt;
+&lt;p&gt;Good documentation is a key part of Spring Cloud Azure. We¡¯ve created a new online resource, &lt;a href="https://learn.microsoft.com/en-us/azure/developer/java/spring/"&gt;Azure for Spring developers&lt;/a&gt;, to help Spring developers code, deploy, and scale their Spring applications on Azure. Whether developers are familiar with Spring and unfamiliar with Azure Service or the other way around ? or new to both! ? they can come to this site to learn. Content will be expanded and updated continuously.&lt;/p&gt;
+&lt;p&gt;In addition, we¡¯ve redesigned the &lt;a href="https://learn.microsoft.com/en-us/azure/developer/java/spring-framework/"&gt;Spring Cloud Azure&lt;/a&gt; documentation to help developers more easily find what they need, combined with useful scenarios.&lt;/p&gt;
+&lt;img src = "https://github.com/joshlong/blog-images/raw/master/spring-cloud-azure-5-ga/docs.png"/&gt;&lt;h2&gt;&lt;a href="#other-bug-fixes-and-feature-improvements" class="anchor" name="other-bug-fixes-and-feature-improvements"&gt;&lt;/a&gt;Other bug fixes and feature improvements&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Support auto startup for the autoconfigured Service Bus Processor client by enabling new property &lt;code&gt;spring.cloud.azure.servicebus.processor.auto-startup&lt;/code&gt; &lt;a href="https://github.com/Azure/azure-sdk-for-java#29997"&gt;#29997&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Provide property &lt;code&gt;spring.cloud.azure.eventhubs.kafka.enabled&lt;/code&gt; to enable/disable Spring Cloud Azure OAuth2 support for Event Hubs for Kafka &lt;a href="https://github.com/Azure/azure-sdk-for-java#30574"&gt;#30574&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Support connecting to Azure AD via proxy (NOTE: custom &lt;code&gt;RestTemplateCustomizer&lt;/code&gt; bean must be provided) &lt;a href="https://github.com/Azure/azure-sdk-for-java#26493"&gt;#26493&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Support spring-cloud-azure-stream-binder-eventhubs connection to Azure China eventhub &lt;a href="https://github.com/Azure/azure-sdk-for-java#30936"&gt;#30936&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Resolved issues in Spring Cloud Stream Azure Kafka with Managed Identity credential refresh &lt;a href="https://github.com/Azure/azure-sdk-for-java#30719"&gt;#30719&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Removed logged warnings for Kafka passwordless autoconfiguration &lt;a href="https://github.com/Azure/azure-sdk-for-java#31182"&gt;#31182&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Enabled the token authentication converter and Azure AD Resource Server configurer adapter to accept custom JWT granted authorities converter &lt;a href="https://github.com/Azure/azure-sdk-for-java#28665"&gt;#28665&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Deleted properties &lt;a href="https://github.com/Azure/azure-sdk-for-java#32465"&gt;#32465&lt;/a&gt;: &lt;code&gt;spring.jms.servicebus.username&lt;/code&gt;,&lt;br/&gt;&lt;code&gt;spring.jms.servicebus.password&lt;/code&gt;, &lt;code&gt;spring.jms.servicebus.remote-uri&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;JacksonHttpSessionOAuth2AuthorizedClientRepository.getAuthorizedClients&lt;/code&gt; now returns an unmodifiable &lt;code&gt;Map&lt;/code&gt; &lt;a href="https://github.com/Azure/azure-sdk-for-java#31190"&gt;#31190&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;RestTemplate&lt;/code&gt; used to get access token now contains only the two required converters &lt;a href="https://github.com/Azure/azure-sdk-for-java#31482"&gt;#31482&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;RestOperations&lt;/code&gt; now properly configured when &lt;code&gt;jwkResolver&lt;/code&gt; is &lt;code&gt;null&lt;/code&gt; &lt;a href="https://github.com/Azure/azure-sdk-for-java#31218"&gt;#31218&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Fixed duplicated &lt;code&gt;scope&lt;/code&gt; parameter &lt;a href="https://github.com/Azure/azure-sdk-for-java#31191"&gt;#31191&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Updated &lt;code&gt;NimbusJwtDecoder&lt;/code&gt; to use &lt;code&gt;RestTemplateBuilder&lt;/code&gt; instead of &lt;code&gt;RestTemplate&lt;/code&gt; &lt;a href="https://github.com/Azure/azure-sdk-for-java#31233"&gt;#31233&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Resolved &lt;code&gt;NoClassDefFoundError&lt;/code&gt; for &lt;code&gt;JSONArray&lt;/code&gt; &lt;a href="https://github.com/Azure/azure-sdk-for-java#31716"&gt;#31716&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Resolve issues appending &lt;code&gt;spring.main.sources&lt;/code&gt; configuration from Spring Cloud Stream Kafka binder &lt;a href="https://github.com/Azure/azure-sdk-for-java#31715"&gt;#31715&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;&lt;a href="#feedback" class="anchor" name="feedback"&gt;&lt;/a&gt;Feedback&lt;/h2&gt;
+&lt;p&gt;Feedback and contributions are always welcome. Please contact us on &lt;a href="https://stackoverflow.com/questions/tagged/spring-cloud-azure"&gt;StackOverflow&lt;/a&gt; or &lt;a href="https://github.com/Azure/azure-sdk-for-java/issues?q=is%3Aissue%20is%3Aopen%20label%3Aazure-spring"&gt;GitHub&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#resources" class="anchor" name="resources"&gt;&lt;/a&gt;Resources&lt;/h2&gt;
+&lt;p&gt;To learn more about Spring Cloud Azure, please visit the following links:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://microsoft.github.io/spring-cloud-azure/current/reference/html/index.html"&gt;Reference documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://aka.ms/spring/msdocs"&gt;Conceptual documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://aka.ms/spring/samples"&gt;Code samples&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://aka.ms/spring/versions"&gt;Spring versions mapping&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Cloud 2022.0.1 (codename Kilburn) Has Been Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2023/01/26/spring-cloud-2022-0-1-codename-kilburn-has-been-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Ryan Baxter</name>
+    </author>
+    <id>tag:spring.io,2023-01-26:5068</id>
+    <updated>2023-01-26T08:49:00Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the community, I am pleased to announce that the General Availability (RELEASE) of the &lt;a href="https://cloud.spring.io"&gt;Spring Cloud 2022.0.1&lt;/a&gt; Release Train is available today. The release can be found in &lt;a href="https://repo1.maven.org/maven2/org/springframework/cloud/spring-cloud-dependencies/2022.0.1/"&gt;Maven Central&lt;/a&gt;. You can check out the 2022.0.1 &lt;a href="https://github.com/spring-cloud/spring-cloud-release/wiki/Spring-Cloud-2022.0.1-Release-Notes"&gt;release notes for more information&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#notable-changes-in-the-2022-0-1-release-train" class="anchor" name="notable-changes-in-the-2022-0-1-release-train"&gt;&lt;/a&gt;Notable Changes in the 2022.0.1 Release Train&lt;/h2&gt;
+&lt;p&gt;This release is compatible with Spring Boot 3.0.2.&lt;/p&gt;&lt;h3&gt;&lt;a href="#spring-cloud-function" class="anchor" name="spring-cloud-function"&gt;&lt;/a&gt;Spring Cloud Function&lt;/h3&gt;
+&lt;p&gt;Few minor &lt;a href="spring-cloud-function-context"&gt;enhancements and bug fixes&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;&lt;a href="#spring-cloud-kubernetes" class="anchor" name="spring-cloud-kubernetes"&gt;&lt;/a&gt;Spring Cloud Kubernetes&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Implement A &lt;code&gt;CatalogWatch&lt;/code&gt; For Kubernetes Java Client ((1042)[https://github.com/spring-cloud/spring-cloud-kubernetes/issues/1042])&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-stream" class="anchor" name="spring-cloud-stream"&gt;&lt;/a&gt;Spring Cloud Stream&lt;/h3&gt;
+&lt;p&gt;Number of &lt;a href="https://github.com/spring-cloud/spring-cloud-stream/milestone/85?closed=1"&gt;enhancements and bug fixes&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;&lt;a href="#spring-cloud-commons" class="anchor" name="spring-cloud-commons"&gt;&lt;/a&gt;Spring Cloud Commons&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Provided setter for &lt;code&gt;DefaultServiceInstance.secure&lt;/code&gt; (&lt;a href="https://github.com/spring-cloud/spring-cloud-commons/pull/1089"&gt;#1089&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Optimised selectors for weighted load-balancing to ensure that selection is always O(1) time (&lt;a href="https://github.com/spring-cloud/spring-cloud-commons/pull/1184"&gt;#1184&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-gateway" class="anchor" name="spring-cloud-gateway"&gt;&lt;/a&gt;Spring Cloud Gateway&lt;/h3&gt;
+&lt;p&gt;A number of bugs were fixed, in particular&lt;br/&gt;* Fixed memory leak of CacheRequestBodyGatewayFilter (&lt;a href="https://github.com/spring-cloud/spring-cloud-gateway/pull/2842"&gt;#2842&lt;/a&gt;)&lt;br/&gt;* Kotlin Route DSL restored (&lt;a href="https://github.com/spring-cloud/spring-cloud-gateway/issues/2813"&gt;#2813&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;The following modules were updated as part of 2022.0.1:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Module &lt;/th&gt;
+      &lt;th&gt;Version &lt;/th&gt;
+      &lt;th&gt;Issues&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Function &lt;/td&gt;
+      &lt;td&gt;4.0.1 &lt;/td&gt;
+      &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-function/milestone/45?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Task &lt;/td&gt;
+      &lt;td&gt;3.0.1 &lt;/td&gt;
+      &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-task/milestone/70?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Kubernetes &lt;/td&gt;
+      &lt;td&gt;3.0.1 &lt;/td&gt;
+      &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-kubernetes/milestone/56?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Openfeign &lt;/td&gt;
+      &lt;td&gt;4.0.1 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Bus &lt;/td&gt;
+      &lt;td&gt;4.0.1 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Stream &lt;/td&gt;
+      &lt;td&gt;4.0.1 &lt;/td&gt;
+      &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-stream/milestone/85?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Commons &lt;/td&gt;
+      &lt;td&gt;4.0.1 &lt;/td&gt;
+      &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-commons/milestone/111?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Contract &lt;/td&gt;
+      &lt;td&gt;4.0.1 &lt;/td&gt;
+      &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-contract/milestone/98?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Netflix &lt;/td&gt;
+      &lt;td&gt;4.0.0 &lt;/td&gt;
+      &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-netflix/milestone/117?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Consul &lt;/td&gt;
+      &lt;td&gt;4.0.1 &lt;/td&gt;
+      &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-consul/milestone/65?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Config &lt;/td&gt;
+      &lt;td&gt;4.0.1 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Build &lt;/td&gt;
+      &lt;td&gt;4.0.1 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Starter Build &lt;/td&gt;
+      &lt;td&gt;2022.0.1 &lt;/td&gt;
+      &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Gateway &lt;/td&gt;
+      &lt;td&gt;4.0.1 &lt;/td&gt;
+      &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-gateway/milestone/75?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;As always, we welcome feedback on &lt;a href="https://github.com/spring-cloud/"&gt;GitHub&lt;/a&gt;, on &lt;a href="https://gitter.im/spring-cloud/spring-cloud"&gt;Gitter&lt;/a&gt;, on &lt;a href="https://stackoverflow.com/questions/tagged/spring-cloud"&gt;Stack Overflow&lt;/a&gt;, or on &lt;a href="https://twitter.com/SpringCloud"&gt;Twitter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To get started with Maven with a BOM (dependency management only):&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint"&gt;&lt;br/&gt;&amp;lt;dependencyManagement&amp;gt;&#xD;
+    &amp;lt;dependencies&amp;gt;&#xD;
+        &amp;lt;dependency&amp;gt;&#xD;
+            &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
+            &amp;lt;artifactId&amp;gt;spring-cloud-dependencies&amp;lt;/artifactId&amp;gt;&#xD;
+            &amp;lt;version&amp;gt;2022.0.1&amp;lt;/version&amp;gt;&#xD;
+            &amp;lt;type&amp;gt;pom&amp;lt;/type&amp;gt;&#xD;
+            &amp;lt;scope&amp;gt;import&amp;lt;/scope&amp;gt;&#xD;
+        &amp;lt;/dependency&amp;gt;&#xD;
+    &amp;lt;/dependencies&amp;gt;&#xD;
+&amp;lt;/dependencyManagement&amp;gt;&#xD;
+&amp;lt;dependencies&amp;gt;&#xD;
+    &amp;lt;dependency&amp;gt;&#xD;
+        &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
+        &amp;lt;artifactId&amp;gt;spring-cloud-starter-config&amp;lt;/artifactId&amp;gt;&#xD;
+    &amp;lt;/dependency&amp;gt;&#xD;
+    &amp;lt;dependency&amp;gt;&#xD;
+        &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
+        &amp;lt;artifactId&amp;gt;spring-cloud-starter-netflix-eureka-client&amp;lt;/artifactId&amp;gt;&#xD;
+    &amp;lt;/dependency&amp;gt;&#xD;
+    ...&#xD;
+&amp;lt;/dependencies&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;or with Gradle:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint"&gt;buildscript {&#xD;
+dependencies {&#xD;
+classpath &amp;quot;io.spring.gradle:dependency-management-plugin:1.0.2.RELEASE&amp;quot;&#xD;
+}&#xD;
+}&#xD;
+&#xD;
+&#xD;
+&#xD;
+apply plugin: &amp;quot;io.spring.dependency-management&amp;quot;&#xD;
+&#xD;
+dependencyManagement {&#xD;
+imports {&#xD;
+mavenBom &amp;#39;org.springframework.cloud:spring-cloud-dependencies:2022.0.1&amp;#39;&#xD;
+}&#xD;
+}&#xD;
+&#xD;
+dependencies {&#xD;
+compile &amp;#39;org.springframework.cloud:spring-cloud-starter-config&amp;#39;&#xD;
+compile &amp;#39;org.springframework.cloud:spring-cloud-starter-netflix-eureka-client&amp;#39;&#xD;
+...&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>Introducing Microservices Patterns with Spring Integration</title>
     <link rel="alternate" href="https://spring.io/blog/2023/01/25/introducing-microservices-patterns-with-spring-integration" />
@@ -524,78 +812,6 @@ The most notable changes are:&lt;/p&gt;
     <updated>2023-01-05T11:00:00Z</updated>
     <content type="html">&lt;p&gt;Hi, Spring fans! In this installment, &lt;a href="https://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; talks to Spring and cloud legend, Spring Cloud Connectors founder, and Cloud Foundry founder, &lt;a href="https://twitter.com/ramnivas"&gt;Ramnivas Laddad (@ramnivas)&lt;/a&gt;&lt;/p&gt;
 &lt;iframe title="Spring and cloud legend Ramnivas Laddad " allowtransparency="true" height="150" width="100%" style="border: none; min-width: min(100%, 430px);" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=e4cqq-13568e2-pb&amp;from=pb6admin&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Arial&amp;skin=1&amp;font-color=&amp;logo_link=episode_page&amp;btn-skin=7"&gt;&lt;/iframe&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Tools 4.17.1 released</title>
-    <link rel="alternate" href="https://spring.io/blog/2023/01/03/spring-tools-4-17-1-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Martin Lippert</name>
-    </author>
-    <id>tag:spring.io,2023-01-03:5050</id>
-    <updated>2023-01-03T19:00:00Z</updated>
-    <content type="html">&lt;p&gt;Dear Spring Community,&lt;/p&gt;
-&lt;p&gt;I am happy to announce the 4.17.1 release of the Spring Tools 4 for Eclipse, Visual Studio Code, and Theia.&lt;/p&gt;&lt;h4&gt;&lt;a href="#fixes-and-improvements" class="anchor" name="fixes-and-improvements"&gt;&lt;/a&gt;fixes and improvements&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;(Spring Boot)&lt;/em&gt; fixed: Eclipse STS 4.17 takes 96 % processor time on Intel i9 (&lt;a href="https://github.com/spring-projects/sts4/issues/934"&gt;#934&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;(Spring Boot)&lt;/em&gt; fixed: BootLanguageServerBootApp class is taking all available cpu continuously (&lt;a href="https://github.com/spring-projects/sts4/issues/932"&gt;#932&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;(Spring Boot)&lt;/em&gt; fixed: OpenRewrite unchecked, but always Language Server Background Job(Loading Rewrite Recipes) (&lt;a href="https://github.com/spring-projects/sts4/issues/925"&gt;#925&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;(Spring Boot)&lt;/em&gt; fixed: [validation] spring.factories EnableAutoConfiguration key for boot 3.0 ignores &amp;lsquo;on&amp;rsquo; setting (&lt;a href="https://github.com/spring-projects/sts4/issues/917"&gt;#917&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;(VSCode)&lt;/em&gt; fixed: [vscode] Boot LS is broken if Java LS launch mode is &amp;lsquo;Hybrid&amp;rsquo; (&lt;a href="https://github.com/spring-projects/sts4/issues/919"&gt;#919&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;&lt;h4&gt;&lt;a href="#known-issues" class="anchor" name="known-issues"&gt;&lt;/a&gt;known issues&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;(Spring Boot)&lt;/em&gt;: The newly introduced additional reconciling for Java source files which is used to show up additional validations and quick fixes can cause increased memory and CPU consumption. In case you stumble upon issues in this area, feel free to disable the reconciling via &lt;code&gt;Preferences -&amp;gt; Extensions -&amp;gt; Spring Boot Tools -&amp;gt; Open Rewrite&lt;/code&gt; (in VSCode) or &lt;code&gt;Preferences -&amp;gt; Language Servers -&amp;gt; Spring Language Servers -&amp;gt; Spring Boot Language Server -&amp;gt; Open Rewrite&lt;/code&gt; (in Eclipse).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;To download the distribution for Eclipse and find links to the marketplace entries for Visual Studio Code and Theia, please go visit:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Spring Tools 4: &lt;a href="https://spring.io/tools/"&gt;https://spring.io/tools/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Detailed changes can be found here: &lt;a href="https://github.com/spring-projects/sts4/wiki/Changelog#2023-01-03-4171-release-incl-language-servers-version-1430"&gt;https://github.com/spring-projects/sts4/wiki/Changelog#2023-01-03-4171-release-incl-language-servers-version-1430&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Spring Tools 4.17.2 is scheduled to be released in early February 2023.&lt;/p&gt;
-&lt;p&gt;Enjoy!&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring - Jan 3rd, 2023</title>
-    <link rel="alternate" href="https://spring.io/blog/2023/01/03/this-week-in-spring-jan-3rd-2023" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2023-01-03:5049</id>
-    <updated>2023-01-03T08:00:00Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! Happy new year! It&amp;rsquo;s &lt;strong&gt;2023&lt;/strong&gt; already! Who saw that comin&amp;rsquo;? I sure didn&amp;rsquo;t. This year promises to be more amazing than ever, and I can&amp;rsquo;t wait to be a part of it.&lt;/p&gt;
-&lt;p&gt;As usual, the first week of January is when we mark the date of the first installment of this humble roundup, &lt;em&gt;This Week in Spring&lt;/em&gt;, &lt;em&gt;waaaay&lt;/em&gt; back in the first week of January 2011! &lt;em&gt;12 years&lt;/em&gt; of &lt;em&gt;This Week in Spring&lt;/em&gt;! Now &lt;em&gt;that&amp;rsquo;s&lt;/em&gt; consistency! &lt;/p&gt;
-&lt;p&gt;And it&amp;rsquo;s only possible because of you, dear community. &lt;em&gt;Thank you&lt;/em&gt;. You, who have been consistently excellent every week of the year for years and years, are truly the reason for the &lt;em&gt;season&lt;/em&gt;, and we appreciate you. This week is no exception! There&amp;rsquo;s a ton of great content, so let&amp;rsquo;s kick the year off right!&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;First, I&amp;rsquo;ll be speaking at the &lt;a href="https://www.meetup.com/atlantajug/events/290659991/"&gt;Atlanta JUG&lt;/a&gt; on the 16th of this month, by the by, so please join me, and we&amp;rsquo;ll dive headfirst into Spring in 2023!&lt;/li&gt;
-  &lt;li&gt;Last week, I had the pleasure of interviewing my friend, and teammate, the legendary &lt;a href="https://spring.io/blog/2022/12/29/a-bootiful-podcast-dashaun-carter-amazing-human-being-father-friend-engineer-and-fellow-spring-developer-advocate"&gt;DaShaun Carter&lt;/a&gt; on a &lt;a href="https://bootifulpodcast.fm"&gt;&lt;em&gt;Bootiful Podcast&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;I &lt;em&gt;love&lt;/em&gt; this post by Rafael Winterhalter (create of ByteBuddy and &lt;a href="https://bootifulpodcast.fm/#/episodes/c106105d-fc05-4321-ad4b-5b7b18e0e722"&gt;&lt;em&gt;Bootiful Podcast&lt;/em&gt; guest&lt;/a&gt; on the amazing publish/subscribe capabilities of PostgreSQL. I love PostgreSQL. But then he goes even further, turning the mechanism into support in Spring Integration. He explains everything in this epic post, &lt;a href="https://www.javaadvent.com/2022/12/using-postgres-as-a-message-queue.html"&gt;&lt;em&gt;Using Postgres as a Message Queue&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://joshlong.com/jl/blogpost/create-an-empty-git-branch.html"&gt;Create a new Git branch with no history&lt;/a&gt; - not strictly speaking Spring-related, but I thought it was interesting. Unless you&amp;rsquo;re not using Git&amp;hellip; I suppose.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/723302494/0/baeldung~NonUniqueResultException-in-Spring-Data-JPA"&gt;NonUniqueResultException in Spring Data JPA&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/723293176/0/baeldung~Observability-with-Spring-Boot"&gt;Observability with Spring Boot 3&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://joshlong.com/jl/blogpost/invalid_shutdown_methods_in_spring_boot_3_aot_graalvm.html"&gt;Oddity with &lt;code&gt;shutdown&lt;/code&gt; methods in Spring Boot 3 AOT and GraalVM&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://tafadzwalnyamukapa.medium.com/spring-boot-3-spring-native-graalvm-with-kubernetes-istio-c26687185366"&gt;Spring Boot (3) Spring Native (GraalVM) with Kubernetes &amp;amp; Istio&#x1f525;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/723177786/0/baeldung~Using-Watermarks-with-iText-in-Java"&gt;Using Watermarks with iText in Java&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://kubernetes.io/blog/2022/12/29/scalable-job-tracking-ga/"&gt;Blog: Kubernetes 1.26: Job Tracking, to Support Massively Parallel Batch Workloads, Is Generally Available&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://kubernetes.io/blog/2022/12/30/advancements-in-kubernetes-traffic-engineering/"&gt;Blog: Kubernetes v1.26: Advancements in Kubernetes Traffic Engineering&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://kubernetes.io/blog/2023/01/02/cross-namespace-data-sources-alpha/"&gt;Blog: Kubernetes v1.26: Alpha support for cross-namespace storage data sources&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>A Bootiful Podcast: DaShaun Carter: amazing human being, father, friend, engineer, and fellow Spring Developer Advocate</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/12/29/a-bootiful-podcast-dashaun-carter-amazing-human-being-father-friend-engineer-and-fellow-spring-developer-advocate" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2022-12-29:5048</id>
-    <updated>2022-12-29T08:00:00Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! this episode, we turn it to 11 and ring in the new year with a fantastic human being, father, friend, engineer, and fellow Spring Developer Advocate: DaShaun Carter (&lt;a href="https://twitter.com/DaShaun"&gt;@dashaun&lt;/a&gt;). &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Happy new year!&lt;/strong&gt;&lt;/p&gt;
-&lt;iframe title="DaShaun Carter: amazing human being, father, friend, engineer, and fellow Spring Developer Advocate" allowtransparency="true" height="150" width="100%" style="border: none; min-width: min(100%, 430px);" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=en3wm-134cd7b-pb&amp;from=pb6admin&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Arial&amp;skin=1&amp;font-color=&amp;logo_link=episode_page&amp;btn-skin=7"&gt;&lt;/iframe&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>
