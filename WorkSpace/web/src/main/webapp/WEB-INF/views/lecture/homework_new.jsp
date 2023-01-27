@@ -20,7 +20,7 @@ href="css/member.css?<%=new java.util.Date()%>">
 	<div id="container py-5">
 		<div class="col-lg-7 mx-auto bg-white rounded shadow">
 		
-			<form method='post' action='homework_new' enctype='multipart/form-data'>
+			<form method='post' action='homework_insert.le' enctype='multipart/form-data'>
 				<table class="table">
 					<tr>
 						<th class="col-3 align-middle px-4 py-3">과제 제목</th>
@@ -32,7 +32,7 @@ href="css/member.css?<%=new java.util.Date()%>">
 					<tr>
 						<th class='col-3 align-middle'>시작 일시</th>
 						<td>
-							<input type='text' name="startdate" class='date' readonly>
+							<input type='text' name="writedate" class='date' readonly>
 							<a id='delete' style="display: none;"><i class="font-r fa-regular fa-calendar-xmark"></i></a>
 						</td>
 						
@@ -50,17 +50,24 @@ href="css/member.css?<%=new java.util.Date()%>">
 						
 						<td class="align-middle" colspan='3'>
 							<input type='file' id='attach-file' style="border:none; padding: 0"
-							accept="image/*" name='profilepath' class="w200">
+							 name='profilepath' class="w200">
 
 							<a id='delete-file'><i class="font-r fa-solid fa-trash-can"></i></a>
 						</td>
 					</tr>
 					<tr>
 						<th class="col-3 align-middle">과제 설명</th>
-						<td colspan='3'><textarea  name='content' class='form-control' ></textarea></td>
+						<td colspan='3'><textarea  name='content' class='form-control'></textarea></td>
 					</tr>
 				</table>
+				<input type="hidden" name="member_code" value="${loginInfo.member_code }">
+				<input type="hidden" name="lecture_code" value="${lecture_info.lecture_code}">
 			</form>
+			<div class='btnSet'>
+				<a class='btn-fill save'>작성완료</a>
+				<a class='btn-empty cancel'>취소</a>
+			</div>			
+			
 		</div>
 	</div>
 	
@@ -77,6 +84,15 @@ href="css/member.css?<%=new java.util.Date()%>">
 			maxDate : endDay,
 		});
 
+		
+		$('.save').on('click', function(){
+			$('form').submit();			
+			
+		});
+		
+		$('.cancel').on('click', function(){
+			history.go(-1);
+		});
 
 	</script>	
 </body>

@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="css/table.css" rel="stylesheet">
+
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
@@ -18,7 +18,7 @@
         <div class="row" style="position: relative;">
 			<%@include file="../include/sidebar.jsp" %>
 
-            <div class="col-lg-7 mx-auto bg-white rounded shadow">
+            <div class="col-lg-8 mx-auto bg-white rounded shadow">
             
 				<table class="table table-fixed table-hover"> 
 

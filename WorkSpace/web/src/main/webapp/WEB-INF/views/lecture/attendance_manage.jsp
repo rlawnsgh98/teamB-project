@@ -2,6 +2,8 @@
     pageEncoding="UTF-8"%>
     
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,11 +20,19 @@
 
 	            
             <div class="col-lg-7 mx-auto bg-white rounded shadow">
-	            <form>
-		            <div class='my-3'>
-		            	날짜 선택 <input type='text' name="startdate" class='date' readonly>
-		            </div>
-	            
+            <form method='post' id="search" action="attendance_manage.le">
+             	<input type="hidden" name="list_size" value="${fn:length(list) }"/>
+	            <input type="hidden" name="lecture_code" value="${lecture_info.lecture_code }">
+		       <div class='my-3'>
+		           날짜 선택 <input type='text' name="attendance_time" class='date' readonly value="${attendance_time }">
+		           <a class='btn-fill search'>조회</a>
+		       </div>
+            </form>
+		            
+	            <form method='post' id='update' action="attendance_update.le" >
+	            	 	<input type="hidden" name="list_size" value="${fn:length(attendance_list) }"/>
+	           			<input type="hidden" name="lecture_code" value="${lecture_info.lecture_code }">
+	            		
 					<table class="table table-fixed table-hover"> 
 						<thead>
 							<tr>
@@ -35,19 +45,25 @@
 						</thead>
 				
 						<tbody>
-							<c:forEach items="${student_list}" var="vo">
+							<c:forEach items="${attendance_list}" var="vo" varStatus="i">
 								<tr>
 									<th scope="col" class="col-1 align-middle"><img src="img/common/default_profile_img.png" style="width:50px; height:50px;"></th>
-									<td scope="col" class="col-3 align-middle">${vo.member_name }</td>
-									<td scope="col" class="col-2"><input type="radio" class="btn-check" name='attendance' id='attendance'> <label class="btn btn-outline-success" for="attendance">출석</label></td>
-									<td scope="col" class="col-2"><input type="radio" class="btn-check" name='attendance' id='absent'>  <label class="btn btn-outline-danger" for="absent">결석</label></td>
-									<td scope="col" class="col-2"><input type="radio" class="btn-check" name='attendance' id='leave'> <label class="btn btn-outline-primary" for="leave">조퇴</label> </td>
+									<td scope="col" class="col-3 align-middle">${vo.member_name } </td>
+									<td scope="col" class="col-2"><input type="radio" class="btn-check" name='state${i.index }' id='attendance${i.index }' value='OK' <c:if test="${vo.state eq 'OK' }">checked</c:if> > <label class="btn btn-outline-success" for="attendance${i.index }">출석</label></td>
+									<td scope="col" class="col-2"><input type="radio" class="btn-check" name='state${i.index }' id='absent${i.index }' value='NO' <c:if test="${vo.state eq 'NO' }">checked</c:if>>  <label class="btn btn-outline-danger" for="absent${i.index }">결석</label></td>
+									<td scope="col" class="col-2"><input type="radio" class="btn-check" name='state${i.index }' id='leave${i.index }' value='HF' <c:if test="${vo.state eq 'HF' }">checked</c:if>> <label class="btn btn-outline-primary" for="leave${i.index }">조퇴</label> </td>
 								</tr>
+								<input type="hidden" name="member_code${i.index }" value="${vo.member_code}">
+								<input type='hidden' name="attendance_time" value="<fmt:formatDate value="${vo.attendance_time }" pattern="yy/MM/dd" />">
+								
 							</c:forEach>
 						</tbody>
 					</table>
 				</form>
-				
+				<div>
+					<a class='btn-fill save'>수정완료</a>
+					<a class='btn-empty cancel'>취소</a>
+				</div>
 				
 			</div>
 		</div>
@@ -56,7 +72,6 @@
 	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
 	<script>
-
 
 		//날짜변경시 날짜삭제 버튼 나오게
 		$('.date').change(function() {
@@ -77,8 +92,23 @@
 		$('.date').datepicker({
 			yearRange : range,
 			maxDate : endDay,
+			dateFormat : 'y/mm/dd'
 		});
 
+		$('.search').on('click', function(){
+			$('#search').submit();			
+			
+		});
+		
+		$('.save').on('click', function(){
+			$('#update').submit();		
+			alert('수정되었습니다.');
+			
+		});
+		
+		$('.cancel').on('click', function(){
+			history.go(-1);
+		});
 
 	</script>
 </body>

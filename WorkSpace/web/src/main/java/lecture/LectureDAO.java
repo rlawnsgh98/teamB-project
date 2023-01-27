@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
+import vo.AttendanceVO;
 import vo.BoardVO;
 import vo.ExamVO;
 import vo.HomeworkVO;
@@ -62,6 +63,41 @@ public class LectureDAO implements LectureService {
 	@Override
 	public List<MemberVO> student_list(int lecture_code) {
 		return sql.selectList("student_list", lecture_code);
+	}
+
+	@Override
+	public void notice_insert(BoardVO vo) {
+		sql.insert("notice_insert", vo);
+	}
+
+	@Override
+	public void notice_update(BoardVO vo) {
+		sql.update("notice_update", vo);
+	}
+
+	@Override
+	public void homework_insert(HomeworkVO vo) {
+		sql.insert("homework_insert", vo);
+	}
+
+	@Override
+	public List<HomeworkVO> teach_homework_list(int lecture_code) {
+		return sql.selectList("teach_homework_list", lecture_code);
+	}
+
+	@Override
+	public List<LectureVO> teacher_lecture_list(int member_code) {
+		return sql.selectList("teach_lecture_list", member_code);
+	}
+
+	@Override
+	public List<AttendanceVO> attendance_list(HashMap<String, Object> map) {
+		return sql.selectList("attendance_list", map);
+	}
+
+	@Override
+	public void attendance_update(HashMap<String, Object> map) {
+		sql.update("attendance_update", map);
 	}
 
 }

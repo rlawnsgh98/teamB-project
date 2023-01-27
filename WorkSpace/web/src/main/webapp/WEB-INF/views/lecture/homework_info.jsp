@@ -41,7 +41,7 @@
 		<div class="col-lg-7 mx-auto bg-white rounded shadow">
 				<table class="table">
 					<tr>
-						<th class='col-3'>제출자</th><td class='text-left'>${info.member_name }</td>
+						<th class='col-3'>제출자</th><td class='text-left'><c:if test="${info.state eq 1}">${info.member_name }</c:if> </td>
 					</tr>
 					<tr>
 						<th class='col-3'>첨부파일</th><td></td>
@@ -57,7 +57,7 @@
 					</tr>
 					
 					<tr>
-						<th class='col-3'>제출일자</th><td class='text-left'>${info.submitdate }</td>
+						<th class='col-3'>제출일자</th><td class='text-left'><c:if test="${info.state eq 1}">${info.submitdate }</c:if></td>
 					</tr>
 				</table>
 		</div>

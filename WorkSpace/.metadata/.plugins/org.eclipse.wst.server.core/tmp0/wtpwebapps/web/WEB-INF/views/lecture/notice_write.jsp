@@ -14,10 +14,9 @@
 <body>
 	<h3>공지 작성</h3>
 	
-	<div id="container py-5">
+	<div id="container">
 		<div class="col-lg-7 mx-auto bg-white rounded shadow">
-		
-			<form method='post' action='notice_write' enctype='multipart/form-data'>
+			<form method='post' action="notice_insert.le">
 				<table class="table">
 					<tr>
 						<th class="col-3 align-middle px-4 py-3">공지제목</th>
@@ -31,8 +30,26 @@
 						</td>
 					</tr>
 				</table>
+				<input type="hidden" name="writer" value="${loginInfo.member_code }">
+				<input type="hidden" name="lecture_code" value="${lecture_info.lecture_code}">
+				<input type="hidden" name="category" value="no">
 			</form>
+				<div class='btnSet'>
+					<a class='btn-fill save'>작성완료</a>
+					<a class='btn-empty cancel'>취소</a>
+				</div>
 		</div>
-	</div>						
+	</div>
+	
+	<script>
+		$('.save').on('click', function(){
+			$('form').submit();			
+			
+		});
+		
+		$('.cancel').on('click', function(){
+			history.go(-1);
+		});
+	</script>						
 </body>
 </html>

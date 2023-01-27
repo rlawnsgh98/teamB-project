@@ -245,12 +245,7 @@ ul.grid li{width : 230px; height:150px; border:1px solid #000; box-sizing: borde
   margin-left: -2px;
 }
 
-.board-table{
-	width:1000px !important;
-	margin:0 auto 30px auto;	
-	padding:0 50px;
-	border-top:1px solid #999 !important;
-}s
+
 
 .w-pct80 { width:80% }
 .w-pct60 { width:60% }

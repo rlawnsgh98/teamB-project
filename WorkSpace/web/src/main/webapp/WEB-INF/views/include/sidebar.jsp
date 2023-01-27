@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 
 <html>
@@ -165,18 +167,19 @@ ul.online-users {
 	</style>
 </head>
 <body>
-        <div class="col-1 border rounded" style="
-    										position: absolute; left:200px;">
+        <div class="col-1 rounded" style="position: absolute; left:200px;">
+										<c:set var="now" value="<%=new java.util.Date()%>" />
+										<c:set var="date" ><fmt:formatDate value="${now}" pattern="yy/MM/dd" /></c:set>
             <div class="profile-card">
-    		<ul class="nav-news-feed">
-              <li><i class="fa fa-list-alt icon1"></i><div><a href="/web/notice_list.le?lecture_code=${lecture_info.lecture_code }">강의 공지사항</a></div></li>
-              <li><i class="fa fa-users icon2"></i><div><a href="/web/homework_list.le?lecture_code=${lecture_info.lecture_code }&member_code=${loginInfo.member_code }">과제</a></div></li>
-              <li><i class="fa fa-user icon3"></i><div><a href="/web/video_list.le?lecture_code=${lecture_info.lecture_code }">영상강의</a></div></li>
-              <li><i class="fa fa-comments icon4"></i><div><a href="/web/exam_list.le?lecture_code=${lecture_info.lecture_code }&member_code=${loginInfo.member_code }">시험</a></div></li>
-              <li><i class="fa fa-picture-o icon5"></i><div><a href="/web/student_list.le?lecture_code=${lecture_info.lecture_code }">학생목록</a></div></li>
-              <li><i class="fa fa-video-camera icon6"></i><div><a href="/web/attendance_manage.le?lecture_code=${lecture_info.lecture_code }">출결관리</a></div></li>
-            </ul>
-</div>
+	    		<ul class="nav-news-feed">
+	              <li><i class="fa fa-list-alt icon1"></i><div><a href="/web/notice_list.le?lecture_code=${lecture_info.lecture_code }">강의 	공지사항</a></div></li>
+	              <li><i class="fa fa-users icon2"></i><div><a href="/web/homework_list.le?lecture_code=${lecture_info.lecture_code }&member_code=${loginInfo.member_code }">과제</a></div></li>
+	              <li><i class="fa fa-user icon3"></i><div><a href="/web/video_list.le?lecture_code=${lecture_info.lecture_code }">영상강의</a></div></li>
+	              <li><i class="fa fa-comments icon4"></i><div><a href="/web/exam_list.le?lecture_code=${lecture_info.lecture_code }&member_code=${loginInfo.member_code }">시험</a></div></li>
+	              <li><i class="fa fa-picture-o icon5"></i><div><a href="/web/student_list.le?lecture_code=${lecture_info.lecture_code }">학생목록</a></div></li>
+	              <li><i class="fa fa-video-camera icon6"></i><div><a href="/web/attendance_manage.le?lecture_code=${lecture_info.lecture_code }&attendance_time=${date}">출결관리</a></div></li>
+	            </ul>
+			</div>
 </div>
 <%-- <nav class="nav flex-column">
 <div id="sidebar-wrapper">

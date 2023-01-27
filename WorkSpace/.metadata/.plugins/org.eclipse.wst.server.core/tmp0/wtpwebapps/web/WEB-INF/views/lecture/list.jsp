@@ -35,7 +35,7 @@
 					<td class="col-3"><a href="lecture_home.le?lecture_code=${vo.lecture_code }">${vo.lecture_name }</a></td>
 					<td class="col-3">${vo.subject_code }</td>
 					<td class="col-3">${vo.teacher_name }</td>
-					<td class="col-3">${vo.timetable_code}교시</td>
+					<td class="col-3">${vo.timetable_code}교시(${vo.timetable_name })</td>
 				</tr>
 			</c:forEach>
 			</tbody>

@@ -28,6 +28,9 @@
 						<td class="col-3 text-left"  style='height: 300px' colspan='5'>${notice_info.content }</td>
 					</tr>
 				</table>
+				<div class='btnSet'>
+					<a class='btn-fill' href="notice_modify.le?board_code=${notice_info.board_code }">수정</a>
+				</div>
 			</div>
 		</div>
 	</div>
