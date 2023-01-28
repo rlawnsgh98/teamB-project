@@ -1,7 +1,6 @@
 package com.and.web;
 
 import java.util.HashMap;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -111,6 +110,33 @@ public class MemberController {
 	public String modify_pw(HttpSession session) {
 		// 응답화면연결
 		return "member/modify_pw";
+	}
+	
+	// 회원 비밀번호 변경 후 로그아웃
+	@ResponseBody
+	@RequestMapping(value="/change_pw", produces="text/html;charset=UTF-8")
+	public String change_pw(HttpSession session, HttpServletRequest request, String pw_old, String pw_new, String pw_ck2) {
+		HashMap<String, String> tempMap = new HashMap<String, String>();
+		tempMap.put("pw_old", pw_old);
+		tempMap.put("pw_new", pw_new);
+		tempMap.put("pw_ck2", pw_ck2);
+		MemberVO vo = (MemberVO) session.getAttribute("loginInfo");
+		int mem_code = vo.getMember_code();
+		tempMap.put("member_code", Integer.toString(mem_code));
+		
+		int count = member.checkPW(pw_old);
+		StringBuffer msg = new StringBuffer("<script>");
+		if(count == 1) {
+			member.change_pw(tempMap);
+			msg.append("alert('비밀번호 변경 완료! 다시 로그인해주세요.'); location.href='").append(request.getContextPath()).append("'; ");
+			session.removeAttribute("loginInfo");
+		}else {
+			msg.append("alert('비밀번호 변경에 실패하셨습니다.'); history.go(-1); ");
+		}
+		msg.append("</script>");
+		
+		// 응답화면연결
+		return msg.toString();
 	}
 
 	// 회원 정보 수정 화면 요청 - 수정 양식 작성창

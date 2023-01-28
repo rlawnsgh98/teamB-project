@@ -30,4 +30,18 @@ select count(*) from member where id = #{id}
 	from member
 	where member_code = #{member_code}
 </select>
+
+<!-- 회원 비밀번호 변경 -->
+<update id="change_pw">
+update member
+set pw = #{pw_new}
+where member_code = #{member_code}
+</update>
+
+<!-- 회원 비밀번호 변경 전 pw_old 확인 -->
+<select id ="checkPW" resultType="int">
+select count(*)
+from member
+where pw = #{pw_old}
+</select>
 </mapper>

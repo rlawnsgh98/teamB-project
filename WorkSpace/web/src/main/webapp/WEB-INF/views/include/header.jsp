@@ -216,9 +216,9 @@ nav ul li:hover ul {
 			<li><a href="gallery_list.le">수강</a></li>
 			<li><a
 				href="open_lecture.le?member_code=${loginInfo.member_code}">강의</a>
-				<ul>
-					<li><a href="#">개설</a></li>
-				</ul></li>
+				<!-- <ul>
+					<li><a href="#">관리</a></li>
+				</ul></li> -->
 			<li><a href="#">게시판</a>
 				<ul>
 					<li class="nav_box_li"><a href="#">공통</a></li>

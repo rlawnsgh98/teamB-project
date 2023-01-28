@@ -66,4 +66,13 @@ public class MemberDAO implements MemberService {
 		return sql.update("member.password_update", vo);
 	}
 
+	@Override
+	public int change_pw(HashMap<String, String> tempMap) {
+		return sql.update("member.change_pw", tempMap);
+	}
+
+	@Override
+	public int checkPW(String pw_old) {
+		return sql.selectOne("member.checkPW", pw_old);
+	}
 }

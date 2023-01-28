@@ -168,7 +168,7 @@
 }
 </style>
 <style>
-.modal_en, .modal_mo {
+.modal_en, .modal_mo, .modal_del {
 	display: none; /* Hidden by default */
 	position: fixed; /* Stay in place */
 	z-index: 1; /* Sit on top */
@@ -191,12 +191,28 @@
 	overflow: hidden;
 }
 
+.modal-content2 {
+	background-color: #fefefe;
+	margin: auto;
+	border: 1px solid #888;
+	width: 30%;
+	text-align: right;
+	overflow: hidden;
+}
+
 .modal-content h3 {
 	text-align: center;
 	margin-bottom: 20px;
 }
 
-.modal-content span {
+.modal-content2 h3{
+	text-align: center;
+	margin-bottom: 20px;
+	margin-top: 30px;
+	margin-left: 40px;
+}
+
+.modal-content span, .modal-content2 span {
 	padding-right: 20px;
 	overflow: hidden;
 }
@@ -360,13 +376,13 @@
 							<tr>
 								<th>시작일</th>
 								<td>
-									<!-- <input type="date" name="startdate"> -->
-									 <input	type="text" id="sdate" name="startdate">
+									<!-- <input type="date" name="startdate"> --> <input
+									type="text" id="en_sdate" name="startdate">
 								</td>
 								<th>종료일</th>
 								<td>
-									<!-- <input type="date" name="enddate"> -->
-									<input type="text" id="edate" name="enddate">
+									<!-- <input type="date" name="enddate"> --> <input type="text"
+									id="en_edate" name="enddate">
 								</td>
 							</tr>
 							<tr>
@@ -399,14 +415,19 @@
 				<div class="modal-content">
 					<span class="close close_mo">&times;</span>
 					<h3>강의 정보 수정</h3>
-					<form id="mo_lecForm" action="modify_lecture" method="get">
+					<form id="mo_lecForm" action="modify_lecture" method="post">
 						<input type="hidden" name="teacher_code"
 							value="${loginInfo.member_code}">
 						<table id="open_lec_table">
 							<tr>
 								<th>강의코드</th>
-								<td colspan="4"><input type="text" name="lecture_code"
-									style="width: 100%;"></td>
+								<td><select name="lecture_code">
+									<c:forEach items="${lec_code_list}" var="l">
+										<option value="${l.lecture_code}">${l.lecture_code}</option>
+									</c:forEach>
+								</select></td>
+								<th>강의명</th>
+								<td><input type="text" name="lecture_name" style="width: 100%;"></td>
 							</tr>
 							<tr>
 								<th>과목명</th>
@@ -421,9 +442,15 @@
 							</tr>
 							<tr>
 								<th>시작일</th>
-								<td><input type="date" name="startdate"></td>
+								<td>
+									<!-- <input type="date" name="startdate"> --> <input
+									type="text" id="mo_sdate" name="startdate">
+								</td>
 								<th>종료일</th>
-								<td><input type="date" name="enddate"></td>
+								<td>
+									<!-- <input type="date" name="enddate"> --> <input type="text"
+									id="mo_edate" name="enddate">
+								</td>
 							</tr>
 							<tr>
 								<th>강의실</th>
@@ -449,6 +476,34 @@
 				</div>
 			</div>
 			<!-- The Modal : 수정 - END -->
+			<!-- The Modal : 삭제 -->
+			<div id="myModal_del" class="modal_del">
+				<!-- Modal content -->
+				<div class="modal-content2">
+					<span class="close close_del">&times;</span>
+					<h3>강의 삭제</h3>
+					<form id="del_lecForm" action="delete_lecture" method="post">
+						<input type="hidden" name="teacher_code"
+							value="${loginInfo.member_code}">
+						<table id="open_lec_table">
+							<tr>
+								<th>강의코드</th>
+								<td>
+									<select name="lecture_code">
+										<c:forEach items="${lec_code_list}" var="l">
+											<option value="${l.lecture_code}">${l.lecture_code}</option>
+										</c:forEach>
+									</select>
+								</td>
+							</tr>
+						</table>
+					</form>
+					<div class="btn_cs">
+						<a class="btn_cs_del_cancel">취소</a> <a id="btn_cs_del_save">확인</a>
+					</div>
+				</div>
+			</div>
+			<!-- The Modal : 삭제 - END -->
 		</div>
 	</div>
 	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
@@ -478,9 +533,12 @@
 		});
 
 		/* 삭제 */
-		$('#del_btn').on("click", function(e) {
-			//강의 코드 입력 후, 삭제 누르면 삭제
-			
+		$('.btn_cs_del_cancel').on('click', function() {
+			modal_del.style.display = "none";
+		});
+		var del_lecForm = $('#del_lecForm');
+		$('#btn_cs_del_save').on("click", function(e) {
+			del_lecForm.submit();
 		});
 	</script>
 	<script>
@@ -504,7 +562,6 @@
 		// Get the modal
 		var modal_mo = document.getElementById("myModal_mo");
 
-		// Get the button that opens the modal
 		var mo_btn = document.getElementById("mo_btn");
 
 		// Get the <span> element that closes the modal
@@ -524,6 +581,32 @@
 		window.onclick = function(event) {
 			if (event.target == modal_mo) {
 				modal_mo.style.display = "none";
+			}
+		}
+		
+		<!-- The Modal : 삭제 -->
+		// Get the modal
+		var modal_del = document.getElementById("myModal_del");
+
+		var del_btn = document.getElementById("del_btn");
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close_del")[0];
+
+		// When the user clicks the button, open the modal 
+		del_btn.onclick = function() {
+			modal_del.style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+			modal_del.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+			if (event.target == modal_del) {
+				modal_del.style.display = "none";
 			}
 		}
 	</script>
@@ -557,16 +640,30 @@
 	    };
 	    $.datepicker.setDefaults($.datepicker.regional['ko']);
 
-	    $('#sdate').datepicker();
-	    $('#sdate').datepicker("option", "maxDate", $("#edate").val());
-	    $('#sdate').datepicker("option", "onClose", function ( selectedDate ) {
-	        $("#edate").datepicker( "option", "minDate", selectedDate );
+	    /* 등록 */
+	    $('#en_sdate').datepicker();
+	    $('#en_sdate').datepicker("option", "maxDate", $("#en_edate").val());
+	    $('#en_sdate').datepicker("option", "onClose", function ( selectedDate ) {
+	        $("#en_edate").datepicker( "option", "minDate", selectedDate );
 	    });
 
-	    $('#edate').datepicker();
-	    $('#edate').datepicker("option", "minDate", $("#sdate").val());
-	    $('#edate').datepicker("option", "onClose", function ( selectedDate ) {
-	        $("#sdate").datepicker( "option", "maxDate", selectedDate );
+	    $('#en_edate').datepicker();
+	    $('#en_edate').datepicker("option", "minDate", $("#en_sdate").val());
+	    $('#en_edate').datepicker("option", "onClose", function ( selectedDate ) {
+	        $("#en_sdate").datepicker( "option", "maxDate", selectedDate );
+	    });
+	    
+	    /* 수정 */
+	    $('#mo_sdate').datepicker();
+	    $('#mo_sdate').datepicker("option", "maxDate", $("#en_edate").val());
+	    $('#mo_sdate').datepicker("option", "onClose", function ( selectedDate ) {
+	        $("#mo_edate").datepicker( "option", "minDate", selectedDate );
+	    });
+
+	    $('#mo_edate').datepicker();
+	    $('#mo_edate').datepicker("option", "minDate", $("#mo_sdate").val());
+	    $('#mo_edate').datepicker("option", "onClose", function ( selectedDate ) {
+	        $("#mo_sdate").datepicker( "option", "maxDate", selectedDate );
 	    });
 	});
 	<!-- datepicker end -->

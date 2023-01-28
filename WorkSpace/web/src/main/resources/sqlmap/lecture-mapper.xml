@@ -112,9 +112,21 @@ set startdate = #{startdate}
 , room_code = #{room_code}
 , timetable_code = #{timetable_code}
 , subject_code = #{subject_code}
+, lecture_name = #{lecture_name}
 where teacher_code = #{teacher_code}
 and lecture_code = #{lecture_code}
-
-
 </update>
+
+<!-- 로그인한 강사가 개설 강의 수정할 때 강의코드 목록 필요-kmj -->
+<select id="lecture_code_list" resultType="vo.LectureVO">
+select lecture_code 
+from lecture
+where teacher_code = #{teacher_code}
+order by lecture_code
+</select>
+
+<!-- 로그인한 강사가 개설 강의 삭제-kmj -->
+<delete id="delete_lecture">
+delete from lecture where lecture_code = #{lecture_code}
+</delete>
 </mapper>
