@@ -214,95 +214,57 @@
 							<ul class="thumb_list">
 								<li>
 									<div class="img">
-										<img src="img/teacher/et01.png">
+										<img src="img/teacher/kt.jpg">
 									</div>
 									<div class="cont_wrap">
 										<div class="text_area">
 											<div class="text_group">
-												<span class="flag_ro_col1">시리즈</span>
-												<span class="flag_ro_col2">중학 뉴런</span>
+												<span class="flag_ro_col1">중3</span>
+												<span class="flag_ro_col2">국어</span>
 											</div>
 											<p class="text_title">
-												<a>EBS 중학 뉴런 영어1</a>
+												<a>[2023]중3 국어 겨울특강</a>
 											</p>
 											<div>
-												<span><a href="#" class="btn btn-outline-dark text-dark">수강신청</a></span>
+												<span><a href="#" class="btn btn-outline-dark text-dark">상세보기</a></span>
 											</div>
 										</div>
 									</div>
 								</li>
 								<li>
 									<div class="img">
-										<img src="img/teacher/et01.png">
+										<img src="img/teacher/et.jpg">
 									</div>
 									<div class="cont_wrap">
 										<div class="text_area">
 											<div class="text_group">
-												<span class="flag_ro_col1">시리즈1</span>
-												<span class="flag_ro_col2">중학 뉴런</span>
+												<span class="flag_ro_col1">중3</span>
+												<span class="flag_ro_col2">영어</span>
 											</div>
 											<p class="text_title">
-												<a>EBS 중학 뉴런 영어1</a>
+												<a>[2023]중3 영어 겨울특강</a>
 											</p>
 											<div>
-												<span><a href="#" class="btn btn-outline-dark text-dark">수강신청</a></span>
+												<span><a href="#" class="btn btn-outline-dark text-dark">상세보기</a></span>
 											</div>
 										</div>
 									</div>
 								</li>
 								<li>
 									<div class="img">
-										<img src="img/teacher/et01.png">
+										<img src="img/teacher/mt.jpg">
 									</div>
 									<div class="cont_wrap">
 										<div class="text_area">
 											<div class="text_group">
-												<span class="flag_ro_col1">시리즈2</span>
-												<span class="flag_ro_col2">중학 뉴런</span>
+												<span class="flag_ro_col1">중3</span>
+												<span class="flag_ro_col2">수학</span>
 											</div>
 											<p class="text_title">
-												<a>EBS 중학 뉴런 영어1</a>
+												<a>[2023]중3 수학 겨울특강</a>
 											</p>
 											<div>
-												<span><a href="#" class="btn btn-outline-dark text-dark">수강신청</a></span>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="img">
-										<img src="img/teacher/et01.png">
-									</div>
-									<div class="cont_wrap">
-										<div class="text_area">
-											<div class="text_group">
-												<span class="flag_ro_col1">시리즈3</span>
-												<span class="flag_ro_col2">중학 뉴런</span>
-											</div>
-											<p class="text_title">
-												<a>EBS 중학 뉴런 영어1</a>
-											</p>
-											<div>
-												<span><a href="#" class="btn btn-outline-dark text-dark">수강신청</a></span>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="img">
-										<img src="img/teacher/et01.png">
-									</div>
-									<div class="cont_wrap">
-										<div class="text_area">
-											<div class="text_group">
-												<span class="flag_ro_col1">시리즈4</span>
-												<span class="flag_ro_col2">중학 뉴런</span>
-											</div>
-											<p class="text_title">
-												<a>EBS 중학 뉴런 영어1</a>
-											</p>
-											<div>
-												<span><a href="#" class="btn btn-outline-dark text-dark">수강신청</a></span>
+												<span><a href="#" class="btn btn-outline-dark text-dark">상세보기</a></span>
 											</div>
 										</div>
 									</div>

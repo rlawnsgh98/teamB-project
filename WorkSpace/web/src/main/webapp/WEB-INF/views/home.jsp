@@ -177,8 +177,9 @@ to {
 .book_shelf {
 	width: 1010px;
 	height: 20px;
-	border: 1px solid #000;
+	border: 1px solid #804000;
 	margin: 0 auto;
+	background-color: #804000;
 }
 
 .book img {
@@ -233,7 +234,7 @@ to {
 				<div class="flex_box_border">
 					<div class="team-item">
 						<div class="position-relative overflow-hidden">
-							<img class="img-fluid" src="img/teacher/teacher1.png">
+							<img class="img-fluid" src="img/teacher/kt.jpg">
 							<div
 								class="team-overlay position-absolute top-50 start-50 translate-middle d-flex align-items-center justify-content-center">
 								<div class="d-flex align-items-center justify-content-start">
@@ -256,7 +257,7 @@ to {
 				<div class="flex_box_border">
 					<div class="team-item">
 						<div class="position-relative overflow-hidden">
-							<img class="img-fluid" src="img/teacher/teacher2.png">
+							<img class="img-fluid" src="img/teacher/et.jpg">
 							<div
 								class="team-overlay position-absolute top-50 start-50 translate-middle d-flex align-items-center justify-content-center">
 								<div class="d-flex align-items-center justify-content-start">
@@ -279,7 +280,7 @@ to {
 				<div class="flex_box_border">
 					<div class="team-item">
 						<div class="position-relative overflow-hidden">
-							<img class="img-fluid" src="img/teacher/teacher1.png">
+							<img class="img-fluid" src="img/teacher/mt.jpg">
 							<div
 								class="team-overlay position-absolute top-50 start-50 translate-middle d-flex align-items-center justify-content-center">
 								<div class="d-flex align-items-center justify-content-start">

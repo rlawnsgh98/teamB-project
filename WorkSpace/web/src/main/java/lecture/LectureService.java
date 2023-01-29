@@ -24,4 +24,5 @@ public interface LectureService {
 	int modify_lecture(LectureVO lecturevo);         //로그인한 강사가 개설 강의 수정-kmj
 	List<LectureVO> lecture_code_list(int teacher_code); //로그인한 강사의 개설된 강의코드 목록-kmj
 	void delete_lecture(int lecture_code);         //로그인한 강사가 개설 강의 삭제-kmj
+	List<LectureVO> sys_lec_list();	// sysdate에 해당 하는 강의 목록 조회-kmj
 }

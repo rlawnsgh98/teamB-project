@@ -82,4 +82,9 @@ public class LectureServiceImple  implements LectureService {
 	public List<LectureVO> lecture_code_list(int teacher_code) {
 		return dao.lecture_code_list(teacher_code);
 	}
+
+	@Override
+	public List<LectureVO> sys_lec_list() {
+		return dao.sys_lec_list();
+	}
 }
