@@ -14,8 +14,7 @@ p {
 }
 
 .footer_wrap {
-	width: 1200px;
-	height: 180px;
+	width: 1040px;
 	margin: 0 auto;
 }
 
@@ -46,7 +45,7 @@ p {
 			<p class="engcopy">&copy;YH-Academy. ALL RIGHT RESERVED.</p>
 		</div>
 		<div class="footer_cont2">
-<!-- 			<img src="img/common/white_daisy.png"> -->
+			<!-- <img src="img/common/white_daisy.png"> -->
 		</div>
 	</div>
 </footer>

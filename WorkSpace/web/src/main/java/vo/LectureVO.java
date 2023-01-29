@@ -99,6 +99,4 @@ public class LectureVO {
 	public void setTimetable_name(String timetable_name) {
 		this.timetable_name = timetable_name;
 	}
-	
-	
 }

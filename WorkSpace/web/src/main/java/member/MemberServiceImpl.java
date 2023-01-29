@@ -64,4 +64,13 @@ public class MemberServiceImpl implements MemberService {
 		return dao.member_password_update(vo);
 	}
 
+	@Override
+	public int change_pw(HashMap<String, String> tempMap) {
+		return dao.change_pw(tempMap);
+	}
+
+	@Override
+	public int checkPW(String pw_old) {
+		return dao.checkPW(pw_old);
+	}
 }

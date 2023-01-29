@@ -180,10 +180,15 @@ fabric.properties
 ### AndroidStudio Patch ###
 
 !/gradle/wrapper/gradle-wrapper.jar
+  
+# End of https://www.toptal.com/developers/gitignore/api/windows,androidstudio,java
+WorkSpace/middle/target/
+WorkSpace/.metadata/
+WorkSpace/middle/target/m2e-wtp/
+middle/target/
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,androidstudio,java
 WorkSpace/middle/target/
 WorkSpace/.metadata/
 WorkSpace/middle/target/m2e-wtp/
 middle/target/
-/.metadata/

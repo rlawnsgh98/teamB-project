@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
+import vo.AttendanceVO;
 import vo.BoardVO;
 import vo.QuestionVO;
 import vo.ExamVO;
@@ -110,4 +111,63 @@ public class LectureDAO implements LectureService {
 		return sql.insert("lecture.insert_question", vo);
 	}
 
+	@Override
+	public void notice_insert(BoardVO vo) {
+		sql.insert("notice_insert", vo);
+	}
+
+	@Override
+	public void notice_update(BoardVO vo) {
+		sql.update("notice_update", vo);
+	}
+
+	@Override
+	public void homework_insert(HomeworkVO vo) {
+		sql.insert("homework_insert", vo);
+	}
+
+	@Override
+	public List<HomeworkVO> teach_homework_list(int lecture_code) {
+		return sql.selectList("teach_homework_list", lecture_code);
+	}
+
+	@Override
+	public List<LectureVO> teacher_lecture_list(int member_code) {
+		return sql.selectList("teach_lecture_list", member_code);
+	}
+
+	@Override
+	public List<AttendanceVO> attendance_list(HashMap<String, Object> map) {
+		return sql.selectList("attendance_list", map);
+	}
+
+	@Override
+	public void attendance_update(HashMap<String, Object> map) {
+		sql.update("attendance_update", map);
+	}
+
+	public List<LectureVO> te_lec_list(HashMap<String, String> tempMap) {
+		return sql.selectList("lecture.te_lec_list", tempMap);
+	}
+
+	@Override
+	public int open_new_lecture(LectureVO lecturevo) {
+		return sql.insert("lecture.open_new_lecture", lecturevo);
+	}
+
+	@Override
+	public int modify_lecture(LectureVO lecturevo) {
+		return sql.update("lecture.modify_lecture", lecturevo);
+	}
+
+	@Override
+	public void delete_lecture(int lecture_code) {
+		sql.delete("lecture.delete_lecture", lecture_code);
+		
+	}
+
+	@Override
+	public List<LectureVO> lecture_code_list(int teacher_code) {
+		return sql.selectList("lecture.lecture_code_list",teacher_code);
+	}
 }

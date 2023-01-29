@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import vo.AttendanceVO;
 import vo.BoardVO;
 import vo.QuestionVO;
 import vo.ExamVO;
@@ -104,4 +105,62 @@ public class LectureServiceImple  implements LectureService {
 		return dao.insert_question(vo);
 	}
 
+	public void notice_insert(BoardVO vo) {
+		dao.notice_insert(vo);
+	}
+
+	@Override
+	public void notice_update(BoardVO vo) {
+		dao.notice_update(vo);
+		
+	}
+
+	@Override
+	public void homework_insert(HomeworkVO vo) {
+		dao.homework_insert(vo);
+	}
+
+	@Override
+	public List<HomeworkVO> teach_homework_list(int lecture_code) {
+		return dao.teach_homework_list(lecture_code);
+	}
+
+	@Override
+	public List<LectureVO> teacher_lecture_list(int member_code) {
+		return dao.teacher_lecture_list(member_code);
+	}
+
+	@Override
+	public List<AttendanceVO> attendance_list(HashMap<String, Object> map) {
+		return dao.attendance_list(map);
+	}
+
+	@Override
+	public void attendance_update(HashMap<String, Object> map) {
+		dao.attendance_update(map);
+	}
+
+	public List<LectureVO> te_lec_list(HashMap<String, String> tempMap) {
+		return dao.te_lec_list(tempMap);
+	}
+
+	@Override
+	public int open_new_lecture(LectureVO lecturevo) {
+		return dao.open_new_lecture(lecturevo);
+	}
+
+	@Override
+	public int modify_lecture(LectureVO lecturevo) {
+		return dao.modify_lecture(lecturevo);
+	}
+
+	@Override
+	public void delete_lecture(int lecture_code) {
+		dao.delete_lecture(lecture_code);
+	}
+
+	@Override
+	public List<LectureVO> lecture_code_list(int teacher_code) {
+		return dao.lecture_code_list(teacher_code);
+	}
 }

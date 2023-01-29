@@ -5,8 +5,22 @@ import java.sql.Date;
 
 public class AttendanceVO {
 	private int lecture_code, member_code, attendance_code; 
-	private String state, ok, no, hf, start, end, week;
+	private String state, ok, no, hf, start, end, week, member_name, profilepath;
 	private Date attendance_time;
+	
+	
+	public String getMember_name() {
+		return member_name;
+	}
+	public void setMember_name(String member_name) {
+		this.member_name = member_name;
+	}
+	public String getProfilepath() {
+		return profilepath;
+	}
+	public void setProfilepath(String profilepath) {
+		this.profilepath = profilepath;
+	}
 	public int getLecture_code() {
 		return lecture_code;
 	}

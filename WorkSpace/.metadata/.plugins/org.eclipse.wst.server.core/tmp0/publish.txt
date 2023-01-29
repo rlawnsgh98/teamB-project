@@ -1,3 +1,8 @@
 #Tomcat publish data
-#Sun Jan 29 15:54:19 KST 2023
+#Sun Jan 29 16:16:26 KST 2023
+=\=\=\=\=\=\=
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\admin\\.m2\\repository\\org\\springframework\\spring-web\\5.3.18\\spring-web-5.3.18.jar=WEB-INF/lib/spring-web-5.3.18.jar
 org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\asdkc\\.m2\\repository\\org\\springframework\\spring-web\\5.3.18\\spring-web-5.3.18.jar=WEB-INF/lib/spring-web-5.3.18.jar
+>>>>>>>=rlawnsgh2
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\hoho0\\.m2\\repository\\org\\springframework\\spring-web\\5.3.18\\spring-web-5.3.18.jar=WEB-INF/lib/spring-web-5.3.18.jar
+<<<<<<<=HEAD

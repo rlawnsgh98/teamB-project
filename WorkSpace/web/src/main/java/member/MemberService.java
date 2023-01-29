@@ -17,4 +17,7 @@ public interface MemberService {
 	String member_userid_email(MemberVO vo); 			//아이디/이메일이 일치하는 회원의 이름 조회
 	//관리자모드 에서는 전체 회원목록 확인
 	List<MemberVO> member_list();
+	
+	int checkPW(String pw_old);			// 비밀번호 변경 전 확인
+	int change_pw(HashMap<String, String> tempMap);	// 비밀번호 변경
 }

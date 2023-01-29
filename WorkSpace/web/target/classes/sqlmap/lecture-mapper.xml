@@ -38,14 +38,27 @@
 	where teacher_code = #{member_code}
 	</select>
 
+	<!-- 학생로그인 강의리스트 -->
 	<select id="list" resultType="vo.LectureVO">
-	select l.*, member_name teacher_name
-	from lecture l left outer join member m 
-	on l.teacher_code = m.member_code
-	where lecture_code in(select lecture_code 
-	                        from enrolment
-	                        where member_code = #{member_code})
+		select l.*, member_name teacher_name, t.timetable_name
+		from lecture l left outer join member m 
+		on l.teacher_code = m.member_code
+		left outer join timetable t
+        on l.timetable_code = t.timetable_code
+		where lecture_code in(select lecture_code 
+		                        from enrolment
+		                        where member_code = #{member_code})
 	</select>
+	
+	<!-- 강사로그인 강의리스트 -->
+	<select id="teach_lecture_list"  resultType="vo.LectureVO">
+		select l.* ,t.timetable_name, (select count(*)from enrolment e where e.lecture_code= l.lecture_code) student_cnt
+		from lecture l left outer join timetable t
+		on l.timetable_code = t.timetable_code
+        where teacher_code= #{member_code}
+	</select>
+	
+	
 	
 	<!-- 선택한 강의의 강의정보, 강사정보 -->
 	<select id="info" resultType="vo.MemberVO">
@@ -78,11 +91,25 @@
 	<select id="homework_list" resultType="vo.HomeworkVO">
 		select rownum, h.*
 		from(select h.homework_code, title, h.content, writedate, duedate, h.filename, h.filepath, lecture_code, h.member_code teacher_code, s.member_code , s.state 
-		    from homework h left outer join homework_submit s
+		    from homework h full outer join homework_submit s
 		    on h.homework_code = s.homework_code
-		    where s.member_code = #{member_code}
-		    and lecture_code = #{lecture_code}
-		    order by writedate desc) h
+            where lecture_code= #{lecture_code}
+            and s.member_code = #{member_code}
+            union all
+            select h.homework_code, title, h.content, writedate, duedate, h.filename, h.filepath, lecture_code, h.member_code teacher_code, s.member_code , s.state 
+		    from homework h full outer join homework_submit s
+		    on h.homework_code = s.homework_code
+            where lecture_code= #{lecture_code}
+            and s.member_code is null
+		    order by writedate desc)h
+	</select>
+	
+	<select id="teach_homework_list" resultType="vo.HomeworkVO">
+		select rownum, h.*
+		from (select *
+		        from homework
+		        where lecture_code = #{lecture_code}
+		        order by writedate desc) h
 	</select>
 	
 	<select id="homework_info" resultType="vo.HomeworkVO">
@@ -168,4 +195,88 @@
 		from member m left outer join enrolment e on m.member_code=e.member_code
 		where e.lecture_code = #{lecture_code}
 	</select>
+	
+	<insert id="notice_insert">
+		insert into board(title, content, writer, category, lecture_code)
+		values(#{title}, #{content}, #{writer}, #{category}, #{lecture_code} )
+	</insert>
+	
+	<update id="notice_update">
+		update board
+		set title=#{title}, content=#{content}
+		where board_code=#{board_code}
+	</update>
+	
+	<insert id="homework_insert">
+		insert into homework(title, content, member_code, writedate, duedate, filename, filepath, lecture_code)
+		values(#{title}, #{content}, #{member_code}, #{writedate}, #{duedate}, #{filename, jdbcType=VARCHAR}, #{filepath, jdbcType=VARCHAR} ,#{lecture_code})
+	</insert>
+	
+	<select id="attendance_list" resultType="vo.AttendanceVO" parameterType="map">
+		select a.*, m.member_name, m.profilepath
+		from attendance a left outer join member m
+		on a.member_code = m.member_code
+		where lecture_code = #{lecture_code}
+		and to_char(attendance_time) = #{attendance_time}
+	</select>
+	<update id="attendance_update" parameterType="map">
+		update attendance
+		set state = #{state}
+		where lecture_code = #{lecture_code}
+		and member_code = #{member_code}
+		and to_char(attendance_time) = #{attendance_time}
+	</update>
+<!-- 로그인한 강사의 개설 강의 목록 조회-kmj -->
+<select id="te_lec_list" resultType="vo.LectureVO">
+select l.lecture_code, l.lecture_name
+, l.startdate, l.enddate, l.room_code, m.member_name teacher_name
+, l.subject_code, l.timetable_code
+from lecture l, member m
+where l.teacher_code = m.member_code
+and teacher_code = (select member_code 
+from member 
+where type='TEACH'
+and member_code = #{member_code})
+<if test='select_subject!=null'>
+and subject_code like '%'|| #{select_subject, jdbcType=VARCHAR}||'%'
+</if>
+<if test='select_year!=null'>
+and  to_char(startdate,'yyyy') like '%'|| #{select_year, jdbcType=VARCHAR} ||'%'   
+</if>
+order by 1
+</select>
+
+<!-- 로그인한 강사가 강의 개설-kmj -->
+<insert id="open_new_lecture">
+insert into lecture(lecture_code, lecture_name, teacher_code, 
+startdate, enddate, room_code, subject_code, timetable_code)
+values(SEQ_LECTURE.nextval, #{lecture_name}, #{teacher_code}, 
+#{startdate}, #{enddate}, #{room_code},#{subject_code},#{timetable_code})
+</insert>
+
+<!-- 로그인한 강사가 개설 강의 수정-kmj -->
+<update id="modify_lecture">
+update lecture
+set startdate = #{startdate}
+, enddate = #{enddate}
+, room_code = #{room_code}
+, timetable_code = #{timetable_code}
+, subject_code = #{subject_code}
+, lecture_name = #{lecture_name}
+where teacher_code = #{teacher_code}
+and lecture_code = #{lecture_code}
+</update>
+
+<!-- 로그인한 강사가 개설 강의 수정할 때 강의코드 목록 필요-kmj -->
+<select id="lecture_code_list" resultType="vo.LectureVO">
+select lecture_code 
+from lecture
+where teacher_code = #{teacher_code}
+order by lecture_code
+</select>
+
+<!-- 로그인한 강사가 개설 강의 삭제-kmj -->
+<delete id="delete_lecture">
+delete from lecture where lecture_code = #{lecture_code}
+</delete>
 </mapper>
