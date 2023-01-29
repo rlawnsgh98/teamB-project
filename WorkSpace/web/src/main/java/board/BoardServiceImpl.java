@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import vo.BoardFileVO;
 import vo.BoardPageVO;
 import vo.BoardVO;
 import vo.ReplyVO;
@@ -41,6 +42,16 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public BoardVO notice_info(int board_code) {
 		return dao.notice_info(board_code);
+	}
+
+	@Override
+	public int board_insert(BoardVO vo) {
+		return dao.board_insert(vo);
+	}
+
+	@Override
+	public BoardFileVO board_file_info(int boardfile_code) {
+		return dao.board_file_info(boardfile_code);
 	}
 
 }

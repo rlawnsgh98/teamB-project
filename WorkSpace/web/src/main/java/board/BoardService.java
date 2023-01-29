@@ -2,14 +2,21 @@ package board;
 
 import java.util.List;
 
+import vo.BoardFileVO;
 import vo.BoardPageVO;
 import vo.BoardVO;
 import vo.ReplyVO;
 
 public interface BoardService {
 
+	//게시판 저장처리
+	int board_insert(BoardVO vo);
+	
 	//게시판 댓글 정보
 	public List<ReplyVO> board_reply(int board_code);
+	
+	//특정 파일 정보 조회
+	public BoardFileVO board_file_info(int boardfile_code);
 	
 	//상세 정보 - 자유게시판
 	public BoardVO board_info(int board_code);

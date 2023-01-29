@@ -12,16 +12,17 @@
 
 <h3 class='container text-center board-title text-dark'>시험등록</h3>
 
-<form action="" method="post" autocomplete="off">
+<form action="question_next.le" method="post" autocomplete="off">
 
 <!-- 시험등록에 필요한 정보(hidden) <- 추가해야함 -->
-<input type='hidden' name='no' value='${no}'/>
-<input type='hidden' name='' value='${no}'/>
+<input type='hidden' name='cur_no' value='${no}'/>
+<input type='hidden' name='total_question' value='${total_question}'/>
+<input type='hidden' name='type' value="${loginInfo.type eq 'STUD' ? 1 : 2}"/>
 
 <div class='test-container container'>
 
 <header>
-	<div>${lecture.lecture_name}</div>		
+	<div class='ml-30'>${lecture.lecture_name}</div>		
 	
 	<table class='test-table'>
 		<colgroup>
@@ -93,8 +94,16 @@
 <div class='exam-footer'>
 	<!-- 이전, 다음 버튼 -->
 	<ul class='exam-move'>
-		<li><a href='#'><i class="fa-solid fa-caret-left"></i><span style='margin-left:5px'>이전</span></a></li>
-		<li><a href='question_next.le?cur_no=${no}&total_question=${exam_info.total_question}'><span style='margin-right:5px'>다음</span><i class="fa-solid fa-caret-right"></i></a></li>
+		<c:if test="${loginInfo.type eq 'STUD'}">
+		<li><a href='question_next.le?cur_no=${no-2}&total_question=${exam_info.total_question}'><i class="fa-solid fa-caret-left"></i><span style='margin-left:5px'>이전</span></a></li>
+			<c:if test="${no < total_question}">
+				<li><a onClick='$("form").submit()'><span style='margin-right:5px'>다음</span><i class="fa-solid fa-caret-right"></i></a></li>
+			</c:if>
+		</c:if>
+		<c:if test="${loginInfo.type eq 'TEACH'}">		
+			<li><a href='question_next.le?cur_no=${no-2}&total_question=${exam_info.total_question}'><i class="fa-solid fa-caret-left"></i><span style='margin-left:5px'>이전</span></a></li>
+			<li><a href='question_next.le?cur_no=${no}&total_question=${exam_info.total_question}'><span style='margin-right:5px'>다음</span><i class="fa-solid fa-caret-right"></i></a></li>
+		</c:if>
 	</ul>
 	
 	<!-- 현재 문제/총 문제 -->
@@ -109,8 +118,12 @@
 
 <!-- 제출, 취소 버튼 -->
 <div class='btn-board'>
-	<a class='btn-exam-empty w-px140 cancel mr-20'>돌아가기</a>
-	<a class='btn-exam-black w-px140 insert'>시험등록</a>
+	<c:if test="${loginInfo.type eq 'TEACH'}">
+		<a class='btn-exam-empty w-px140 cancel'>돌아가기</a>
+	</c:if>
+	<c:if test="${loginInfo.type eq 'STUD'}">
+		<a class='btn-exam-black w-px140 insert' href='exam_list.le?member_code=${loginInfo.member_code}&lecture_code=${exam_info.lecture_code}'>제출하기</a>
+	</c:if>
 </div>
 
 </form>

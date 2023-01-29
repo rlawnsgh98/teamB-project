@@ -30,7 +30,7 @@
 <div class="card-body">
 <div class="wrapper">
 <h1 class='mb-5'>${lecture_info.lecture_name }</h1>
-<c:if test = '${empty lecture_info.profilepath  }'>
+<c:if test = '${empty lecture_info.profilepath}'>
 	<!-- 프로필 이미지가 존재하지 않을 때 -->
 	<img class='user-profile' src="img/testimonial-4.jpg">
 </c:if>
@@ -38,7 +38,7 @@
 	<img class='user-profile' src="${lecture_info.profilepath}">
 </c:if>
 
-<h3>${lecture_info.member_name }</h3>
+<h3>${lecture_info.member_name}</h3>
 <p>Web Developer</p>
 </div>
 <div class="row ">

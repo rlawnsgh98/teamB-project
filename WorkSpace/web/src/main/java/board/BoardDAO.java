@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
+import vo.BoardFileVO;
 import vo.BoardPageVO;
 import vo.BoardVO;
 import vo.ReplyVO;
@@ -36,7 +37,9 @@ public class BoardDAO implements BoardService {
 	}
 	@Override
 	public BoardVO notice_info(int board_code) {
-		return sql.selectOne("board.board_info", board_code);
+		BoardVO vo = sql.selectOne("board.board_info", board_code);
+		vo.setFileList(sql.selectList("board.file_list", board_code));
+		return vo;
 	}
 
 	@Override
@@ -47,6 +50,19 @@ public class BoardDAO implements BoardService {
 	@Override
 	public List<ReplyVO> board_reply(int board_code) {
 		return sql.selectList("board.board_reply", board_code);
+	}
+	@Override
+	public int board_insert(BoardVO vo) {
+		int dml = sql.insert("board.board_insert", vo);
+		//첨부파일이 있는 경우 board_file 테이블에 첨부파일정보도 저장
+		if( vo.getFileList() != null  ) {
+			sql.insert("board.fileInsert", vo);			
+		}		
+		return dml;
+	}
+	@Override
+	public BoardFileVO board_file_info(int boardfile_code) {
+		return sql.selectOne("board.file_info", boardfile_code);
 	}
 	
 

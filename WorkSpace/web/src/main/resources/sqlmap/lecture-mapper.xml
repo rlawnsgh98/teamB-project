@@ -139,6 +139,23 @@
 	)
 	</insert>
 	
+	<!-- 답안 등록 -->
+	<insert id='insert_take'>
+	insert into exam_take (exam_code, member_code)
+	values (#{exam_code}, #{member_code})
+	</insert>
+	
+	<!-- 답안정보 조회 -->
+	<select id="take_info" resultType='vo.ExamTakeVO'>
+	select * from exam_take where member_code = #{member_code} and exam_code = #{exam_code}
+	</select>
+	
+	<!-- 답안 저장 -->
+	<insert id="insert_answer">
+	insert into exam_answer (no, answer_code, answer)
+	values (#{no}, #{answer_code}, #{answer})
+	</insert>
+	
 	<!-- 특정 시험 문제 목록 조회 -->
 	<select id="question_list" resultType='vo.QuestionVO'>
 	select * from exam_question where exam_code = #{exam_code}

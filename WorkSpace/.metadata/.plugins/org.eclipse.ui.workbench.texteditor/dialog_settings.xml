@@ -8,13 +8,21 @@
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="exam_question"/>
+		<item key="selection" value="curPage"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="curPage"/>
+			<item value="test-container"/>
+			<item value="exam_score"/>
+			<item value="exam-score"/>
+			<item value="exam_question_new.le"/>
+			<item value="exam-answer"/>
+			<item value="exam_answer"/>
+			<item value="total"/>
 			<item value="exam_question"/>
 			<item value="exam-question"/>
 			<item value="font-size:18px;"/>
@@ -22,14 +30,6 @@
 			<item value="exam-info"/>
 			<item value="test-con"/>
 			<item value="ExamQu"/>
-			<item value="end"/>
-			<item value="justify-content : end"/>
-			<item value="btnSet"/>
-			<item value="btn-fill"/>
-			<item value="exam"/>
-			<item value="list.le"/>
-			<item value="test-container"/>
-			<item value="exam-move"/>
 		</list>
 		<list key="replacehistory">
 		</list>

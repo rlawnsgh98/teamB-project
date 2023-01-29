@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
 import vo.BoardVO;
+import vo.ExamAnswerVO;
+import vo.ExamTakeVO;
 import vo.QuestionVO;
 import vo.ExamVO;
 import vo.HomeworkVO;
@@ -108,6 +110,21 @@ public class LectureDAO implements LectureService {
 	@Override
 	public int insert_question(QuestionVO vo) {
 		return sql.insert("lecture.insert_question", vo);
+	}
+
+	@Override
+	public int insert_take(HashMap<String, Object> map) {
+		return sql.insert("insert_take", map);
+	}
+
+	@Override
+	public ExamTakeVO take_info(HashMap<String, Object> map) {
+		return sql.selectOne("take_info", map);
+	}
+
+	@Override
+	public int insert_answer(ExamAnswerVO vo) {
+		return sql.insert("insert_answer", vo);
 	}
 
 }

@@ -1,6 +1,5 @@
 package com.and.web;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -13,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import lecture.LectureServiceImple;
 import vo.BoardVO;
+import vo.ExamAnswerVO;
+import vo.ExamTakeVO;
 import vo.ExamVO;
 import vo.HomeworkVO;
 import vo.LectureVO;
@@ -229,6 +230,15 @@ public class LectureController {
 		
 		session.removeAttribute("exam_info");	// 필요없으면 삭제할거
 		
+		MemberVO member = (MemberVO) session.getAttribute("loginInfo");
+		if(member.getType().equals("STUD")) {
+			HashMap<String, Object> map = new HashMap<>();
+			map.put("exam_code", exam_code);
+			map.put("member_code", member.getMember_code());
+			service.insert_take(map);	//take insert
+			session.setAttribute("take_info", service.take_info(map));
+		}
+		
 		ExamVO vo = service.exam_info(exam_code);
 		List<QuestionVO> list = service.question_list(exam_code);
 		vo.setList(list);
@@ -244,29 +254,50 @@ public class LectureController {
 	
 	//시험문제 다음 화면 연결
 	@RequestMapping("/question_next.le")
-	public String question_next(Model model, int cur_no, int total_question) {
+	public String question_next(Model model, HttpSession session, int cur_no, int total_question, int type, String answer) {
 		if(cur_no == total_question) {
 			model.addAttribute("no", cur_no+1);
 			model.addAttribute("total_question", total_question+1);
 			
 			return "exam/new";
 		}else {
+			if(type == 1) {
+				//학생일때 고른 답 저장
+				ExamTakeVO take = (ExamTakeVO)session.getAttribute("take_info");
+				ExamAnswerVO answerVO = new ExamAnswerVO();
+				answerVO.setNo(cur_no);
+				answerVO.setAnswer(answer);
+				answerVO.setAnswer_code(take.getAnswer_code());
+				service.insert_answer(answerVO);
+			}
 			model.addAttribute("no", cur_no+1);
 			model.addAttribute("question_info", service.question_info(cur_no+1));
 			return "exam/info";
 		}
 	}
 	
+	//시험문제 현재 화면 연결
+	@RequestMapping("/question_now.le")
+	public String question_now(Model model, int no) {
+		
+		model.addAttribute("no", no);
+		model.addAttribute("question_info", service.question_info(no));
+		return "exam/info";
+		
+	}
+	
 	//시험문제 저장 - 저장만
 	@RequestMapping("/exam_question_new.le")
-	public String exam_question_new(QuestionVO vo, Model model) {
+	public String exam_question_new(QuestionVO vo, Model model, HttpSession session) {
 		service.insert_question(vo);
 		model.addAttribute("no", vo.getNo());
-		model.addAttribute("total_question", vo.getNo()+1);
+		session.setAttribute("total_question", vo.getNo()+1);
 		//저장한 문제정보 바로 출력
 		model.addAttribute("question_info", vo);
-		return "exam/info";
+		return "redirect:question_now.le";
 	}	
+	
+	
 	
 	//학생리스트 조회
 	@RequestMapping("/student_list.le")

@@ -1,24 +1,70 @@
 package common;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
 
+import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Service;
+import org.springframework.util.FileCopyUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 @Service
 public class CommonService {
+	
+	//물리적인 첨부파일 삭제
+	public void fileDelete(String filepath, HttpServletRequest req) {
+		if( filepath != null ) {
+			filepath = filepath.replace(appURL(req)
+						, "d://app"+req.getContextPath());
+			File file = new File(filepath);
+			if( file.exists() ) file.delete();
+		}
+	}
+	
+	//첨부파일 다운로드
+	public boolean fileDownload(String filename, String filepath
+			, HttpServletRequest request, HttpServletResponse response) throws Exception {
+		
+		// 실제 물리적 위치 지정(filepath에 담기)
+		filepath = filepath.replace( appURL(request), "d://app/"+request.getContextPath() );
+		File file = new File(filepath);
+		
+		// 파일 없으면 false 반환
+		if( ! file.exists() ) return false;
+		
+		//컨텐트 타입 설정
+		String mime = request.getSession().getServletContext().getMimeType(filename); //파일이름, 경로 둘다 상관x
+		response.setContentType(mime);
+		
+		//첨부파일을 다운로드하는 것임을 지정
+		response.setHeader("content-disposition", "attachment; filename="
+				+ URLEncoder.encode( filename, "utf-8" ) );
+		
+		// IO : byte(InputStream/OutputStream)	character(Reader/Writer)
+		// FileIO : FileInputStream/FileOutputStream)	FileReader,FileWriter
+		ServletOutputStream out = response.getOutputStream();
+		
+		//파일정보를 읽어들어 저장해주는 처리
+		FileCopyUtils.copy( new FileInputStream(file), out );
+		out.flush();
+		
+		return true;
+	}
+	
 	//첨부파일 업로드
 		public String fileUpload(String category, MultipartFile file, HttpServletRequest request) {
 			//업로드할 물리적 위치
 			//D:\Study_Spring\.metadata\.....\smart\resources
 			//String path = request.getSession().getServletContext().getRealPath("resources");
 			//프로젝트내의 물리적영역이 아니라 고정적인 물리영역에 저장하도록 한다
-			String path = "d://app" + request.getContextPath(); // d://app/smart
+			String path = "C://app" + request.getContextPath(); // d://app/smart
 			// /upload/myinfo/2022/12/20
 			String upload = "/upload/" + category 
 						  + new SimpleDateFormat("/yyyy/MM/dd").format( new Date() );

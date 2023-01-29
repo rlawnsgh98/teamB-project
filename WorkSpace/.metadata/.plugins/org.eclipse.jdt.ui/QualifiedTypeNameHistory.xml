@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
-    <fullyQualifiedTypeName name="org.springframework.web.servlet.tags.Param"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
     <fullyQualifiedTypeName name="org.springframework.web.filter.CharacterEncodingFilter"/>
     <fullyQualifiedTypeName name="org.apache.commons.dbcp2.BasicDataSource"/>
     <fullyQualifiedTypeName name="org.junit.runner.RunWith"/>
@@ -18,7 +14,6 @@
     <fullyQualifiedTypeName name="org.springframework.web.servlet.View"/>
     <fullyQualifiedTypeName name="org.springframework.web.servlet.view.tiles3.TilesConfigurer"/>
     <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
-    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
     <fullyQualifiedTypeName name="java.io.PrintWriter"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="notice.NoticeService"/>
@@ -39,7 +34,6 @@
     <fullyQualifiedTypeName name="java.util.UUID"/>
     <fullyQualifiedTypeName name="org.apache.commons.mail.Email"/>
     <fullyQualifiedTypeName name="org.apache.commons.mail.HtmlEmail"/>
-    <fullyQualifiedTypeName name="common.CommonService"/>
     <fullyQualifiedTypeName name="javax.print.DocFlavor.READER"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
@@ -57,7 +51,13 @@
     <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
     <fullyQualifiedTypeName name="vo.BoardPageVO"/>
     <fullyQualifiedTypeName name="java.lang.Object"/>
-    <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="vo.ExamQuestionVO"/>
     <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.net.URLEncoder"/>
+    <fullyQualifiedTypeName name="javax.servlet.ServletOutputStream"/>
+    <fullyQualifiedTypeName name="org.springframework.util.FileCopyUtils"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+    <fullyQualifiedTypeName name="common.CommonService"/>
 </qualifiedTypeNameHistroy>

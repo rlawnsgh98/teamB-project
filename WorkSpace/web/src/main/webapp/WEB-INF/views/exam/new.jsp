@@ -22,7 +22,7 @@
 <div class='test-container container'>
 
 <header>
-	<div>${lecture.lecture_name}</div>		<!-- $로 값 수정 -->
+	<div class='ml-30'>${lecture.lecture_name}</div>		<!-- $로 값 수정 -->
 	
 	<table class='test-table'>
 		<colgroup>
@@ -39,12 +39,7 @@
 		
 		<tr>
 			<th>${total_question}</th>
-			<th><select name='exam-type'>			<!-- 시험 구분 value => DB에 맞춰 변경 -->
-				<option value='1'>모의고사</option>
-				<option value='2'>쪽지시험</option>
-				<option value='3'>중간평가</option>
-				<option value='4'>기말평가</option>
-			</select></th>
+			<th>${exam_info.exam_type}</th>
 			<th>${exam_info.startdate}</th>
 		</tr>
 	</table>
@@ -98,8 +93,8 @@
 <div class='exam-footer'>
 	<!-- 이전, 다음 버튼 -->
 	<ul class='exam-move'>
-		<li><a href='#'><i class="fa-solid fa-caret-left"></i><span style='margin-left:5px'>이전</span></a></li>
-		<li><a href='#'><span style='margin-right:5px'>다음</span><i class="fa-solid fa-caret-right"></i></a></li>
+		<li><a href='question_next.le?cur_no=${no-2}&total_question=${exam_info.total_question}'><i class="fa-solid fa-caret-left"></i><span style='margin-left:5px'>이전</span></a></li>
+		<li class='btn-exam-next'><a href='question_next.le?cur_no=${no}&total_question=${exam_info.total_question}'><span style='margin-right:5px'>다음</span><i class="fa-solid fa-caret-right"></i></a></li>
 	</ul>
 	
 	<!-- 현재 문제/총 문제 -->
@@ -114,8 +109,8 @@
 
 <!-- 제출, 취소 버튼 -->
 <div class='btn-board'>
-	<a class='btn-exam-empty w-px140 cancel mr-20'>돌아가기</a>
-	<a class='btn-exam-black w-px140 insert'>시험등록</a>
+	<a class='btn-exam-empty w-px140 cancel'>돌아가기</a>
+<!-- 	<a class='btn-exam-black w-px140 insert'>시험등록</a> -->
 </div>
 
 </form>

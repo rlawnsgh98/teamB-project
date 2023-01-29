@@ -442,7 +442,7 @@ ul.grid li{width : 230px; height:150px; border:1px solid #000; box-sizing: borde
 	margin:20px auto;
 	border:1px solid #CDCDCD;
 	background-color: #FFFEFE;
-	min-height:500px;
+	min-height:300px;
 	width:1000px !important;
 }
 .test-container header{
@@ -473,7 +473,7 @@ ul.grid li{width : 230px; height:150px; border:1px solid #000; box-sizing: borde
 }
 .exam_score{
 	position:absolute;
-	top:135px;
+	top:85px;
 	right:50px;
 }
 .exam_score ul{
@@ -577,6 +577,9 @@ ul.grid li{width : 230px; height:150px; border:1px solid #000; box-sizing: borde
 	font-size:18px;
 	
 }
+.btn-exam-next{
+	display:none;
+}
 .exam-move span{
 	color:#555;
 }
@@ -666,6 +669,7 @@ input[name="answer"]{
 .flex-end{ display:flex; justify-content: flex-end; margin: 0 auto;}
 
 .ml-10{ margin-left:10px }
+.ml-30{ margin-left:30px }
 
 .mr-10 { margin-right:10px }
 .mr-20 { margin-right:20px }

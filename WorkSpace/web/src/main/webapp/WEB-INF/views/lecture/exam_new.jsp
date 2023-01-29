@@ -91,8 +91,8 @@ href="css/member.css?<%=new java.util.Date()%>">
 
 		//생년월일 특정날짜(만8세)까지만 선택가능하도록 제한
 		var today = new Date();
-		var endDay = new Date(today.getFullYear() - 8, today.getMonth(), today
-				.getDate() - 1);
+		var endDay = new Date(today.getFullYear() + 1, today.getMonth() + 2, today
+				.getDate());
 		var range = today.getFullYear() - 80 + ':' + endDay.getFullYear();
 		
 		$('.date').datepicker({

@@ -47,7 +47,7 @@
 		<c:if test="${info.fileList != null}">
 			<ul style='padding:0; margin:0' class='board-files'>
 			<c:forEach items='${info.fileList}' var='file'>
-				<li class='pointer' onClick='fn_download(${file.boardfile_code})'><span style='margin-right:10px'>${file.file_name}</span><i class="fa-solid fa-download"></i></li>
+				<li class='pointer' onClick='fn_download(${file.boardfile_code})' data-file='${file.boardfile_code}'><span style='margin-right:10px; color:dodgerblue'>${file.file_name}</span><i class="fa-solid fa-download"></i></li>
 			</c:forEach>
 			</ul>
 		</c:if>
@@ -59,7 +59,6 @@
 </table>
 
 <!-- 댓글 작성칸 -->
-<form>
 <div class='reply_input w-px1000'>
 <%-- 	<c:if test="${! empty loginInfo}"> --%>
 <%-- 		<img class='profile' src='${loginInfo.profilepath}'> --%>
@@ -78,7 +77,7 @@
 		</li>
 	</ul>
 </div>
-</form>
+
 
 <!-- 댓글 목록 -->
 <c:if test="${! empty reply}">
@@ -109,10 +108,24 @@
 <!-- 여백 -->
 <div style='height:50px'></div>
 
+<form method='post'>
+<input type='hidden' name='board_code' value='${info.board_code}'>
+<input type='hidden' name='url'>
+<input type='hidden' name='file'>
+<input type='hidden' name='curPage' value='${page.curPage}'>
+<input type='hidden' name='search' value='${page.search}'>
+<input type='hidden' name='keyword' value='${page.keyword}'>
+<input type='hidden' name='viewType' value='${page.viewType}'>
+<input type='hidden' name='pageList' value='${page.pageList}'>
+</form>
+
 <script>
 
 function fn_download(file_code){
 	console.log("파일 다운로드 처리 " + file_code);
+	$('[name=url]').val( $(location).attr('href'));
+	$('[name=file]').val( $(this).data('file') );
+	$('form').attr('action', 'download.bo').submit();	
 }
 
 </script>

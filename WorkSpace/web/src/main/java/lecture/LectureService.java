@@ -1,15 +1,16 @@
 package lecture;
 
 import java.util.HashMap;
-
 import java.util.List;
 
 import vo.BoardVO;
-import vo.QuestionVO;
+import vo.ExamAnswerVO;
+import vo.ExamTakeVO;
 import vo.ExamVO;
 import vo.HomeworkVO;
 import vo.LectureVO;
 import vo.MemberVO;
+import vo.QuestionVO;
 
 public interface LectureService {
 	List<LectureVO> lecture_list(int member_code); //학생이 수강중인 강의 리스트 조회
@@ -27,6 +28,12 @@ public interface LectureService {
 	int insert_exam(ExamVO vo);
 	//문제등록
 	int insert_question(QuestionVO vo);
+	//답안등록 - exam_take
+	int insert_take(HashMap<String, Object> map);
+	//답안 정보 조회
+	ExamTakeVO take_info(HashMap<String, Object> map);
+	//답안 저장 - exam_answer
+	int insert_answer(ExamAnswerVO vo);
 	//특정 강의정보 조회 - lecture table
 	LectureVO lecture_info(int lecture_code);
 	//특정 강의 총 인원수 조회

@@ -27,7 +27,7 @@
 			<option value='writer'>작성자</option>
 		</select>
 		<input type='text' name='keyword' class='w-300' value='${page.keyword}'>
-		<a class='btn-board-black'>검색</a>
+		<a class='btn-board-black' onClick='$("form").submit()'>검색</a>
 	</div>
 	<!-- 글쓰기 버튼 -->
 	<a href='new.bo' class='btn-board-black w-px120'>글쓰기</a>
@@ -104,6 +104,15 @@ function fn_submit( board_code ){
 	$('form').submit();
 	
 }
+
+$(function(){
+	$('[name=search]').val( '${page.search}' );
+});
+
+$('[name=pageList], [name=viewType]').on('change', function(){
+// 	$('form').attr('action', 'list.bo');
+	$('form').submit();
+});
 
 </script>
 

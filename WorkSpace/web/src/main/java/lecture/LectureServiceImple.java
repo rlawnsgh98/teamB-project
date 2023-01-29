@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import vo.BoardVO;
+import vo.ExamAnswerVO;
+import vo.ExamTakeVO;
 import vo.QuestionVO;
 import vo.ExamVO;
 import vo.HomeworkVO;
@@ -102,6 +104,21 @@ public class LectureServiceImple  implements LectureService {
 	@Override
 	public int insert_question(QuestionVO vo) {
 		return dao.insert_question(vo);
+	}
+
+	@Override
+	public int insert_take(HashMap<String, Object> map) {
+		return dao.insert_take(map);
+	}
+
+	@Override
+	public ExamTakeVO take_info(HashMap<String, Object> map) {
+		return dao.take_info(map);
+	}
+
+	@Override
+	public int insert_answer(ExamAnswerVO vo) {
+		return dao.insert_answer(vo);
 	}
 
 }

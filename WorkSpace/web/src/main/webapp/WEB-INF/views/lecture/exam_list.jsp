@@ -13,9 +13,12 @@
 
 	<div id="container py-5" class='exam-container'>
 		<h3 class='board-title text-dark'>시험목록</h3>
-		<div class='w-px1000 flex-end'>
-			<a class='btn-fill' href='exam_new.le' style='margin-right:20px'>시험등록</a>
-		</div>
+		<c:if test="${loginInfo.type eq 'TEACH'}">
+			<div class='w-px1000 flex-end'>
+				<a class='btn-fill' href='exam_new.le' style='margin-right:20px'>시험등록</a>
+			</div>
+		</c:if>
+		
         
 <!--             <div class="mx-auto bg-white rounded shadow w-px1000"> -->
 			<table class="table table-fixed exam-table"> 
@@ -65,12 +68,34 @@
 							<c:if test="${list.duedate < date }"><span class="text-danger">[마감]</span></c:if>
 							<c:if test="${list.duedate >= date }"><span class="text-success">[진행중]</span></c:if>
 					</td>
+					<!-- 수강생 -->
+					<c:if test="${loginInfo.type eq 'STUD'}">
+						<td>
+							${list.state eq 0 ? '미제출' : '채점중'}
+						</td>
+					</c:if>
+					
+					<!-- 강사 -->
+					<c:if test="${loginInfo.type eq 'TEACH'}">
+						<td>${list.num} / ${exam_total_num}</td>
+					</c:if>
+					
+					<c:if test="${loginInfo.type eq 'STDU'}">
 					<td>
-						${list.num} / ${exam_total_num}
+						<c:if test="${list.duedate >= date }">
+							<c:if test="${list.state eq 0}">
+								
+									<a class="btn-fill" href='question.le?exam_code=${list.exam_code}'>시험보기</a>
+								
+							</c:if>
+						</c:if>
 					</td>
-					<td>
-						<a class="btn-fill" href='question.le?exam_code=${list.exam_code}'>${list eq null ? '문제제출' : '문제수정'}</a>
-					</td>
+					</c:if>
+					<c:if test="${loginInfo.type eq 'TEACH'}">
+						<td>
+							<a class="btn-fill" href='question.le?exam_code=${list.exam_code}'>문제제출</a>
+						</td>
+					</c:if>
 				</tr>
 			</c:forEach>
 			</c:if>

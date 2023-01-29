@@ -133,8 +133,27 @@
 	
 	<!-- 문제 등록 -->
 	<insert id="insert_question">
-	insert into exam_question (no, exam_code, exam_title, answer, answer_type, score, exam_content)
-	values(#{no}, #{exam_code}, #{exam_title}, #{answer}, #{answer_type}, #{score}, #{exam_content, jdbcType=VARCHAR})
+	insert into exam_question (no, exam_code, exam_title, answer, answer_type, score, exam_content, question1, question2, question3, question4)
+	values(#{no}, #{exam_code}, #{exam_title}, #{answer}, #{answer_type}, #{score}, #{exam_content, jdbcType=VARCHAR}
+		, #{question1},#{question2},#{question3},#{question4}
+	)
+	</insert>
+	
+	<!-- 답안 등록 -->
+	<insert id='insert_take'>
+	insert into exam_take (exam_code, member_code)
+	values (#{exam_code}, #{member_code})
+	</insert>
+	
+	<!-- 답안정보 조회 -->
+	<select id="take_info" resultType='vo.ExamTakeVO'>
+	select * from exam_take where member_code = #{member_code} and exam_code = #{exam_code}
+	</select>
+	
+	<!-- 답안 저장 -->
+	<insert id="insert_answer">
+	insert into exam_answer (no, answer_code, answer)
+	values (#{no}, #{answer_code}, #{answer})
 	</insert>
 	
 	<!-- 특정 시험 문제 목록 조회 -->
