@@ -9,11 +9,20 @@ where id = #{id} and pw = #{pw}
 
 <!-- 회원정보저장: 회원가입 -->
 <insert id='join'>
-insert into member(member_code,id,pw,member_name,gender
-,email,birth,phone,address,type,profilepath)
+insert into member(member_code,id,pw,member_name,gender,type
+,email,birth,phone,address,profilepath)
 values ( SEQ_MEMBER.nextval,#{id},#{pw},#{member_name},#{gender},#{type}
-,#{email, jdbcType=VARCHAR},#{birth, jdbcType=VARCHAR},#{phone, jdbcType=VARCHAR},#{address, jdbcType=VARCHAR},#{profilepath, jdbcType=VARCHAR})	
+,#{email, jdbcType=VARCHAR}
+,#{birth, jdbcType=VARCHAR}
+,#{phone, jdbcType=VARCHAR}
+,#{address, jdbcType=VARCHAR}
+,#{profilepath, jdbcType=VARCHAR})	
 </insert>
+
+<!-- 회원아이디 중복확인(존재유무)-->
+<select id='idCheck' resultType='integer'>
+select count(*) from member where id = #{id}
+</select>
 
 <!-- 회원 상세정보 조회 -->
 <select id="member_info" resultType="vo.MemberVO">
@@ -22,8 +31,17 @@ values ( SEQ_MEMBER.nextval,#{id},#{pw},#{member_name},#{gender},#{type}
 	where member_code = #{member_code}
 </select>
 
-<!-- 회원아이디 중복확인(존재유무)-->
-<select id='idCheck' resultType='integer'>
-select count(*) from member where id = #{id}
+<!-- 회원 비밀번호 변경 -->
+<update id="change_pw">
+update member
+set pw = #{pw_new}
+where member_code = #{member_code}
+</update>
+
+<!-- 회원 비밀번호 변경 전 pw_old 확인 -->
+<select id ="checkPW" resultType="int">
+select count(*)
+from member
+where pw = #{pw_old}
 </select>
 </mapper>

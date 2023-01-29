@@ -307,28 +307,80 @@ public class LectureController {
 	
 	
 
-	// 강의 개설 화면
+	// 로그인한 강사 개설 강의 목록 조회 - kmj
 	@RequestMapping("/open_lecture.le")
-	public String open_lecture(HttpSession session) {
+	public String open_lecture(HttpSession session, Model model, String member_code, String select_subject, String select_year) {
+		HashMap<String, String> tempMap = new HashMap<String, String>();
+		tempMap.put("member_code", member_code);
+		tempMap.put("select_year", select_year);
+		tempMap.put("select_subject", select_subject);
+		
+		session.setAttribute("select_year", select_year);
+		session.setAttribute("select_subject", select_subject);
+		
+		List<LectureVO> te_lec_list = service.te_lec_list(tempMap);
+		model.addAttribute("te_lec_list", te_lec_list);
+		// 강의코드 목록을 조회한다
+		model.addAttribute("lec_code_list", service.lecture_code_list(Integer.parseInt(member_code)));
+		
 		// 응답화면연결
 		return "lecture/open_lecture";
 	}
+	
+	// 로그인한 강사가 강의 개설 버튼 클릭 시 - kmj
+	@RequestMapping("/open_new_lecture")
+	public String open_new_lecture(LectureVO lecturevo, HttpSession session) {
+		service.open_new_lecture(lecturevo);
+		
+		MemberVO vo = (MemberVO) session.getAttribute("loginInfo");
+		int mem_code = vo.getMember_code();
+		
+		// 응답화면연결
+		return "redirect:/open_lecture.le?member_code="+mem_code;
+	}
+	
+	// 로그인한 강사가 개설 강의 수정 버튼 클릭 시 - kmj
+	@RequestMapping("/modify_lecture")
+	public String modify_lecture(LectureVO lecturevo, HttpSession session) {
+		// 수정한다
+		service.modify_lecture(lecturevo);
+		// 로그인한 강사의 코드가 필요하다
+		MemberVO vo = (MemberVO) session.getAttribute("loginInfo");
+		int mem_code = vo.getMember_code();
+		
+		// 응답화면연결
+		return "redirect:/open_lecture.le?member_code="+mem_code;
+	}
+	
+	// 로그인한 강사가 개설 강의 삭제 버튼 클릭 시 - kmj
+	@RequestMapping("/delete_lecture")
+	public String delete_lecture(int lecture_code, HttpSession session) {
+		// 삭제한다
+		service.delete_lecture(lecture_code);
+		
+		// 로그인한 강사의 코드가 필요하다
+		MemberVO vo = (MemberVO) session.getAttribute("loginInfo");
+		int mem_code = vo.getMember_code();
+		
+		// 응답화면연결
+		return "redirect:/open_lecture.le?member_code="+mem_code;
+	}
 
-	// 수강 - 강의 목록 화면 - 갤러리형
+	// 수강 - 강의 목록 화면 - 갤러리형 - kmj
 	@RequestMapping("/gallery_list.le")
 	public String lec_list_test(HttpSession session) {
 		// 응답화면연결
 		return "lecture/gallery_list";
 	}
 
-	// 수강 - 강의 목록 화면 - 리스트형
+	// 수강 - 강의 목록 화면 - 리스트형 - kmj
 	@RequestMapping("/just_list.le")
 	public String lec_list_test2(HttpSession session) {
 		// 응답화면연결
 		return "lecture/just_list";
 	}
 
-	// 수강 신청 버튼 클릭 시 
+	// 수강 신청 버튼 클릭 시 - kmj
 	@RequestMapping("/en_lec_detail.le")
 	public String en_lec_detail(HttpSession session) {
 		// 응답화면연결

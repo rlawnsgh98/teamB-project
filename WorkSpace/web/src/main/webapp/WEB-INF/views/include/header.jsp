@@ -38,20 +38,39 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
 
 <style>
+header {
+	height: 60px;
+}
+
+header h1 {
+	color: #293859;
+}
+
+.header_box {
+	width: 1040px;
+	margin: 0 auto;
+}
+
+.header_box1 {
+	float: left;
+	height: 60px;
+}
+
+.header_box2 {
+	float: right;
+	height: 60px;
+}
+
 nav {
 	margin: 0 auto;
 	width: 100%;
-	height: auto;
-	display: inline-block;
-	background: #293859;
+	height: 60px;
+	background-color: #293859;
 }
 
 nav ul {
 	margin: 0;
 	padding: 0;
-	list-style-type: none;
-	float: left;
-	display: inline-block;
 }
 
 nav ul li {
@@ -76,7 +95,7 @@ nav ul li ul {
 	left: 0;
 	background-color: #293859;
 	float: left;
-	font-size: 12px;
+	width: 100%;
 }
 
 nav ul li ul li {
@@ -87,14 +106,6 @@ nav ul li ul li {
 nav ul li:hover ul {
 	display: block;
 	z-index: 999; /* 우선순위 적용? */
-}
-
-strong {
-	color: #fff;
-}
-
-span {
-	color: #fff;
 }
 
 .text_main {
@@ -113,22 +124,6 @@ span {
 	text-align: left;
 }
 
-.border-inner {
-	position: relative;
-}
-
-.border-inner::before {
-	position: absolute;
-	content: "";
-	background: none;
-	top: 10px;
-	right: 10px;
-	bottom: 10px;
-	left: 10px;
-	border: 1px solid #fff;
-	z-index: 0;
-}
-
 .logo_img {
 	border-radius: 70%;
 }
@@ -138,121 +133,53 @@ span {
 	color: #fff;
 }
 
-.navbar-brand {
-	padding-top: 0.3125rem;
-	padding-bottom: 0.3125rem;
-	margin-right: 1rem;
-	font-size: 1.25rem;
-	white-space: nowrap;
-}
-
 .profile {
-	width: 50px;
-	height: 50px;
-	border-radius: 70%;
-}
-
-
-
-.left-items {
-	width: 60%;
-}
-
-.left-items li:hover {
-	background: black;
-}
-
-.right-items {
-	width: 40%;
-}
-
-.left-items>ul {
-	display: flex;
-	justify-content: center;
-	margin: 0;
-	height: 100%;
-	color: #fff;
-	font-size: 20px;
+	width: 20px;
+	height: 20px;
+	margin-bottom: 2.5px;
 }
 
 .loginfo {
-	height: 100%;
+	margin: 20px 0;
 }
 
 .loginfo>ul {
 	display: flex;
-	justify-content: center;
 	margin: 0;
-	height: inherit;
-}
-
-.nav_link {
-	font-size: 20px;
-	padding: 20px;
+	padding: 0;
 }
 
 .loginfo>ul>li {
 	margin-right: 10px;
 }
 
-.loginfo>ul>li>a {
+.nav_box {
+	width: 1040px;
+	margin: 0 auto;
 	color: #fff;
-	font-size: 20px;
+	height: 60px;
+}
+
+.nav_box ul li a {
+	height: 60px;
+}
+
+.nav_box ul li a:hover {
+	background-color: #627db7;
+}
+
+.nav_box_li a {
+	width: 100%;
 }
 </style>
 </head>
-<div class="container-fluid px-0">
-	<div class="row">
-		<div class="col-lg-4 text-center bg_sub py-3">
-			<div
-				class="d-inline-flex align-items-center justify-content-center navbar-brand">
-				<i class="fa-regular fa-envelope text_main fs-1 me-3"></i>
-				<div class="text-start">
-					<h6 class="text-uppercase mb-1">Email Us</h6>
-					<span>YH2023@naver.com</span>
-				</div>
-			</div>
+<header>
+	<div class="header_box">
+		<div class="header_box1">
+			<h1 class="font-secondary"><a href='<c:url value="/"/>'>YH-Academy</a></h1>
 		</div>
-		<div class="col-lg-4 text-center bg_main border-inner py-3">
-			<div class="d-inline-flex align-items-center justify-content-center">
-				<img src="img/common/icons8_tree.png" alt="로고" class="me-3 logo_img">
-				<h6 class="text-uppercase text-white mb-1 logo_title">YH-Academy</h6>
-			</div>
-		</div>
-		<div class="col-lg-4 text-center bg_sub py-3">
-			<div
-				class="d-inline-flex align-items-center justify-content-center navbar-brand">
-				<i class="fa-solid fa-mobile-screen text_main fs-1 me-3"></i>
-				<div class="text-start">
-					<h6 class="text-uppercase mb-1">Call Us</h6>
-					<span>010-0345-0789</span>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<nav>
-	<div class="container" style="display: flex;
-											height: 80px;
-											align-items: center;">
-		<div class="left-items">
-			<ul>
-				<li><a href='<c:url value="/"/>' style="a: hover{ color:#FFF">홈</a></li>
-				<li><a href="gallery_list.le">수강</a></li>
-				<li><a href="open_lecture.le">강의</a>
-					<ul>
-						<li><a href="open_lecture.le">강의<br>개설</a></li>
-					</ul></li>
-				<li><a href="list.le?member_code=${loginInfo.member_code }" class="nav-item nav-link">내 강의실</a></li>	
-				<li><a href="#">게시판</a>
-					<ul>
-						<li><a href="#">공통</a></li>
-						<li><a href="#">자유게시판</a></li>
-					</ul></li>
-			</ul>
-		</div>
-		<div class="right-items">
-			<c:if test="${empty loginInfo }">
+		<div class="header_box2">
+			<c:if test="${empty loginInfo}">
 				<div class="loginfo">
 					<ul>
 						<!-- 로그인 하지 않은 경우 -->
@@ -261,7 +188,7 @@ span {
 					</ul>
 				</div>
 			</c:if>
-			<c:if test="${not empty loginInfo }">
+			<c:if test="${not empty loginInfo}">
 				<div class="loginfo">
 					<ul>
 						<!-- 로그인 한 경우 -->
@@ -271,14 +198,32 @@ span {
 						</c:if>
 						<c:if test='${not empty loginInfo.profilepath}'>
 							<li><a href="mypage.me"><img class='profile'
-									src='${loginInfo.profilepath}'></a></li>
+									src='${loginInfo.profilepath}'>${loginInfo.member_name}</a></li>
 						</c:if>
-						<li><strong>${loginInfo.member_name }</strong></li>
+						<li><strong>${loginInfo.member_name}</strong></li>
 						<li><a href="modify_pw.me">비밀번호변경</a></li>
 						<li><a href="logout.me">로그아웃</a></li>
 					</ul>
 				</div>
 			</c:if>
 		</div>
+	</div>
+</header>
+<nav>
+	<div class="nav_box">
+		<ul>
+			<li><a href='<c:url value="/"/>'>홈</a></li>
+			<li><a href="gallery_list.le">수강</a></li>
+			<li><a
+				href="open_lecture.le?member_code=${loginInfo.member_code}">강의</a>
+				<!-- <ul>
+					<li><a href="#">관리</a></li>
+				</ul></li> -->
+			<li><a href="#">게시판</a>
+				<ul>
+					<li class="nav_box_li"><a href="#">공통</a></li>
+					<li class="nav_box_li"><a href="#">자유</a></li>
+				</ul></li>
+		</ul>
 	</div>
 </nav>

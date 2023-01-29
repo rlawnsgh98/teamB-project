@@ -12,30 +12,10 @@
 	href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 </head>
 <body>
-	<h1 class="d-none">홈-회원서비스-비밀번호 찾기</h1>
-	<div id="container" class="ct_top">
+	<div id="container">
 		<div class="main_wrap">
-			<h2 class="lnb_title text-center text-dark">회원 서비스</h2>
-			<ul id="lnb" class="lnb_list">
-				<li id="lnb_login"><a href="login.me"
-					class="btn btn-outline-dark rounded-pill text-dark"> 로그인 </a></li>
-				<li id="lnb_join"><a href="member.me"
-					class="btn btn-outline-dark rounded-pill text-dark"> 회원가입 </a></li>
-				<li id="lnb_find"><a href="find.me"
-					class="btn btn-dark rounded-pill text-white"> 비밀번호 찾기 </a></li>
-				<li id="lnb_privacy"><a href="privacy.me"
-					class="btn btn-outline-dark rounded-pill text-dark"> 개인정보취급방침 </a>
-				</li>
-				<li id="lnb_terms"><a href="terms.me"
-					class="btn btn-outline-dark rounded-pill text-dark"> 이용약관 </a></li>
-			</ul>
 			<div id="contet_area">
-				<div class="path">
-					<ol class='path_list'>
-						<li>회원 서비스</li>
-						<li class="last">비밀번호 찾기</li>
-					</ol>
-				</div>
+				<h3>아이디/비밀번호 찾기</h3>
 				<div class="content_body">
 					<div class="find_box1">
 						<div class="find_title">아이디 찾기</div>
