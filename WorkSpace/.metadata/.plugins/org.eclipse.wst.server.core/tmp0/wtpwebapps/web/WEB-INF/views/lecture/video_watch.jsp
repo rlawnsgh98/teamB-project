@@ -10,6 +10,6 @@
 </head>
 <body>
 	<H3>강의시청</H3>
-	<iframe src="https://www.youtube.com/embed/QazeJloOBTw" width=1200 height=600 frameborder=0 allowfullscreen></iframe>
+	<iframe src="https://www.youtube.com/embed/QmbQzJQ_0YE" width=1200 height=600 frameborder=0 allowfullscreen></iframe>
 </body>
 </html>

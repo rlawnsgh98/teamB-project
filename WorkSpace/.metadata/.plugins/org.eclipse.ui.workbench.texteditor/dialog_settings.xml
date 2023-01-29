@@ -1,78 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<section name="org.eclipse.jst.jsp.ui.internal.preferences.ui.JSPTemplatePreferencePage$JSPEditTemplateDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="228"/>
-		<item key="DIALOG_Y_ORIGIN" value="-12"/>
-		<item key="DIALOG_WIDTH" value="612"/>
-		<item key="DIALOG_HEIGHT" value="436"/>
-		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
-	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-<<<<<<< HEAD
-		<item key="selection" value="exam_question"/>
-=======
-		<item key="selection" value="homework_list"/>
->>>>>>> rlawnsgh2
+		<item key="selection" value="exam"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-<<<<<<< HEAD
-			<item value="exam_question"/>
-			<item value="exam-question"/>
-			<item value="font-size:18px;"/>
-			<item value="exam-info-title"/>
-			<item value="exam-info"/>
-			<item value="test-con"/>
-			<item value="ExamQu"/>
-			<item value="end"/>
-			<item value="justify-content : end"/>
-			<item value="btnSet"/>
-			<item value="btn-fill"/>
 			<item value="exam"/>
-			<item value="list.le"/>
-			<item value="test-container"/>
-			<item value="exam-move"/>
-=======
-			<item value="homework_list"/>
-			<item value="exam_list"/>
-			<item value="homeowork_list"/>
-			<item value="homeowokr_list"/>
-			<item value="lecture_list"/>
-			<item value="session"/>
-			<item value="notice_info"/>
-			<item value="member"/>
-			<item value="notice_inf"/>
-			<item value="notice_"/>
-			<item value="modify"/>
-			<item value="lecture_info"/>
-			<item value="lecture_"/>
-			<item value="HttpSession session"/>
-			<item value="sess"/>
->>>>>>> rlawnsgh2
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-<<<<<<< HEAD
-		<item key="DIALOG_X_ORIGIN" value="1508"/>
-		<item key="DIALOG_Y_ORIGIN" value="492"/>
-=======
-		<item key="DIALOG_X_ORIGIN" value="1151"/>
-		<item key="DIALOG_Y_ORIGIN" value="99"/>
->>>>>>> rlawnsgh2
+		<item key="DIALOG_X_ORIGIN" value="655"/>
+		<item key="DIALOG_Y_ORIGIN" value="197"/>
 		<item key="DIALOG_WIDTH" value="322"/>
-		<item key="DIALOG_HEIGHT" value="375"/>
-		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
-	</section>
-	<section name="org.eclipse.wst.xml.ui.internal.preferences.XMLTemplatePreferencePage$XMLEditTemplateDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="218"/>
-		<item key="DIALOG_Y_ORIGIN" value="58"/>
-		<item key="DIALOG_WIDTH" value="818"/>
-		<item key="DIALOG_HEIGHT" value="477"/>
+		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 </section>

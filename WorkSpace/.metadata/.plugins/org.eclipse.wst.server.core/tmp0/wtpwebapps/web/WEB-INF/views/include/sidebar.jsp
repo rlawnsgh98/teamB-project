@@ -1,10 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<<<<<<< HEAD
-=======
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
->>>>>>> rlawnsgh2
 
 
 <html>
@@ -16,13 +13,7 @@
   width: 100%;
   min-height: 90px;
   border-radius: 4px;
-<<<<<<< HEAD
-  padding: 10px 20px;
   color: #fff;
-  margin-bottom: 40px;
-=======
-  color: #fff;
->>>>>>> rlawnsgh2
 }
 
 .profile-card img.profile-photo{
@@ -51,10 +42,6 @@ ul.nav-news-feed{
   padding-right: 20px;
   margin: 0 0 40px 0;
     background:#fff;
-<<<<<<< HEAD
-  padding-top:20px;
-=======
->>>>>>> rlawnsgh2
 }
 
 ul.nav-news-feed li{
@@ -180,19 +167,6 @@ ul.online-users {
 	</style>
 </head>
 <body>
-<<<<<<< HEAD
-        <div class="col-md-2 static">
-            <div class="profile-card">
-    		<ul class="nav-news-feed">
-              <li><i class="fa fa-list-alt icon1"></i><div><a href="/web/notice_list.le?lecture_code=${lecture_info.lecture_code }">공지사항</a></div></li>
-              <li><i class="fa fa-users icon2"></i><div><a href="/web/homework_list.le?lecture_code=${lecture_info.lecture_code }&member_code=${loginInfo.member_code }">과제</a></div></li>
-              <li><i class="fa fa-user icon3"></i><div><a href="/web/video_list.le?lecture_code=${lecture_info.lecture_code }">영상강의</a></div></li>
-              <li><i class="fa fa-comments icon4"></i><div><a href="/web/exam_list.le?lecture_code=${lecture_info.lecture_code }&member_code=${loginInfo.member_code}">시험</a></div></li>
-              <li><i class="fa fa-picture-o icon5"></i><div><a href="/web/student_list.le?lecture_code=${lecture_info.lecture_code }">학생목록</a></div></li>
-              <li><i class="fa fa-video-camera icon6"></i><div><a href="/web/attendance_manage.le?lecture_code=${lecture_info.lecture_code }">출결관리</a></div></li>
-            </ul>
-</div>
-=======
         <div class="col-1 rounded" style="position: absolute; left:200px;">
 										<c:set var="now" value="<%=new java.util.Date()%>" />
 										<c:set var="date" ><fmt:formatDate value="${now}" pattern="yy/MM/dd" /></c:set>
@@ -206,7 +180,6 @@ ul.online-users {
 	              <li><i class="fa fa-video-camera icon6"></i><div><a href="/web/attendance_manage.le?lecture_code=${lecture_info.lecture_code }&attendance_time=${date}">출결관리</a></div></li>
 	            </ul>
 			</div>
->>>>>>> rlawnsgh2
 </div>
 <%-- <nav class="nav flex-column">
 <div id="sidebar-wrapper">

@@ -16,6 +16,7 @@ import vo.MemberVO;
 
 public interface LectureService {
 	List<LectureVO> lecture_list(int member_code); //학생이 수강중인 강의 리스트 조회
+	List<LectureVO> lecture_list_teacher(int member_code); //강사가 강의중인 강의 리스트 조회
 	List<LectureVO> teacher_lecture_list(int member_code); //강사가 강의중인 강의 리스트 조회
 	
 	
