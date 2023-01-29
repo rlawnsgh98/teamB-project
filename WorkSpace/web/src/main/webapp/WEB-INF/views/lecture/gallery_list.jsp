@@ -176,11 +176,21 @@
 											<div class="upper-container"></div>
 											<div class="lower-container">
 												<div>
-													<h6>국어 주혜연 선생님</h6>
+													<h6>${vo.teacher_name}선생님</h6>
 													<h4>${vo.lecture_name}</h4>
 												</div>
 												<div>
-													<img src="img/teacher/kt.jpg">
+													<c:choose>
+														<c:when test="${vo.subject_code eq 'KOR'}">
+															<img src="img/teacher/kt.jpg">
+														</c:when>
+														<c:when test="${vo.subject_code eq 'ENG'}">
+															<img src="img/teacher/et.jpg">
+														</c:when>
+														<c:when test="${vo.subject_code eq 'MATH'}">
+															<img src="img/teacher/mt.jpg">
+														</c:when>
+													</c:choose>
 												</div>
 												<div>
 													<a href="en_lec_detail.le" class="btn">상세보기</a>
@@ -190,63 +200,6 @@
 									</div>
 								</div>
 							</c:forEach>
-							<!-- <div class="profile_card">
-								<div class="cards">
-									<div class="cards-container">
-										<div class="upper-container"></div>
-										<div class="lower-container">
-											<div>
-												<h6>국어 주혜연 선생님</h6>
-												<h4>[2023]중3 국어 겨울특강</h4>
-											</div>
-											<div>
-												<img src="img/teacher/kt.jpg">
-											</div>
-											<div>
-												<a href="en_lec_detail.le" class="btn">상세보기</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div> -->
-							<!-- <div class="profile_card">
-								<div class="cards">
-									<div class="cards-container">
-										<div class="upper-container"></div>
-										<div class="lower-container">
-											<div>
-												<h6>영어 김보라 선생님</h6>
-												<h4>[2023]중3 영어 겨울특강</h4>
-											</div>
-											<div>
-												<img src="img/teacher/et.jpg">
-											</div>
-											<div>
-												<a href="#" class="btn">상세보기</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="profile_card">
-								<div class="cards">
-									<div class="cards-container">
-										<div class="upper-container"></div>
-										<div class="lower-container">
-											<div>
-												<h6>수학 황혜경 선생님</h6>
-												<h4>[2023]중3 수학 겨울특강</h4>
-											</div>
-											<div>
-												<img src="img/teacher/mt.jpg">
-											</div>
-											<div>
-												<a href="#" class="btn">상세보기</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div> -->
 						</div>
 					</div>
 				</div>
