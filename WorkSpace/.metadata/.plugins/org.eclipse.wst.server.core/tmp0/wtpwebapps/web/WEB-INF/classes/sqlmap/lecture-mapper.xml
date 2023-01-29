@@ -133,8 +133,10 @@
 	
 	<!-- 문제 등록 -->
 	<insert id="insert_question">
-	insert into exam_question (no, exam_code, exam_title, answer, answer_type, score, exam_content)
-	values(#{no}, #{exam_code}, #{exam_title}, #{answer}, #{answer_type}, #{score}, #{exam_content, jdbcType=VARCHAR})
+	insert into exam_question (no, exam_code, exam_title, answer, answer_type, score, exam_content, question1, question2, question3, question4)
+	values(#{no}, #{exam_code}, #{exam_title}, #{answer}, #{answer_type}, #{score}, #{exam_content, jdbcType=VARCHAR}
+		, #{question1},#{question2},#{question3},#{question4}
+	)
 	</insert>
 	
 	<!-- 특정 시험 문제 목록 조회 -->
