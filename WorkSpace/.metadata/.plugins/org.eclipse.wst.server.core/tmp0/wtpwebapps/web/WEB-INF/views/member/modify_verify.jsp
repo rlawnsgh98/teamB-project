@@ -13,13 +13,7 @@
 <body>
 	<div id="container" class="ct_top">
 		<div class="main_wrap">
-			<h2 class="lnb_title text-center text-dark">마이페이지</h2>
-			<ul id="lnb" class="lnb_list">
-				<li id="lnb_enrolment_log"><a href="enrolment_log.me"
-					class="btn btn-outline-dark rounded-pill text-dark"> 수강현황 </a></li>
-				<li id="lnb_modify_myinfo"><a href="modify_verify.me"
-					class="btn btn-dark rounded-pill text-white"> 회원정보수정 </a></li>
-			</ul>
+			<h2 class="lnb_title text-center text-dark">회원정보수정</h2>
 			<div id="contet_area2">
 				<div class="content_body">
 					<div class="modify_myinfo_box">

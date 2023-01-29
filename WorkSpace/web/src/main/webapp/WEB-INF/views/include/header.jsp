@@ -219,6 +219,7 @@ nav ul li:hover ul {
 				<!-- <ul>
 					<li><a href="#">관리</a></li>
 				</ul></li> -->
+			<li><a href="list.le?member_code=${loginInfo.member_code }">내 강의실</a></li>		
 			<li><a href="#">게시판</a>
 				<ul>
 					<li class="nav_box_li"><a href="#">공통</a></li>

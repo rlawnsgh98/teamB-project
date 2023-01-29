@@ -1,9 +1,8 @@
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=origin/wonhee_web
 eclipse.preferences.version=1
-<<<<<<< HEAD
-org.eclipse.jdt.core.classpathVariable.M2_REPO=C\:/Users/admin/.m2/repository
-=======
-org.eclipse.jdt.core.classpathVariable.M2_REPO=C\:/Users/asdkc/.m2/repository
->>>>>>> origin/wonhee_web
+org.eclipse.jdt.core.classpathVariable.M2_REPO=C\:/Users/hoho0/.m2/repository
 org.eclipse.jdt.core.codeComplete.visibilityCheck=enabled
 org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
 org.eclipse.jdt.core.compiler.codegen.targetPlatform=11
