@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +13,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
+import common.CommonService;
 import lecture.LectureServiceImple;
 import vo.AttendanceVO;
 import vo.BoardVO;
@@ -27,7 +30,7 @@ import vo.QuestionVO;
 public class LectureController {
 	@Autowired
 	private LectureServiceImple service;
-//	@Autowired private CommonService common;
+	@Autowired private CommonService common;
 
 	// 강의 목록 조회 - 강사 (주소창으로만 접근)
 	@RequestMapping("/list.teacher")
@@ -111,7 +114,7 @@ public class LectureController {
 		return "lecture/homework_list";
 	}
 
-	// 학생이 수강중인 강의의 과제 리스트
+	// 학생이 수강중인 강의의 과제 상세정보
 	@RequestMapping("/homework_info.le")
 	public String homework_info(Model model, int member_code, int homework_code) {
 
@@ -119,7 +122,7 @@ public class LectureController {
 		map.put("member_code", member_code);
 		map.put("homework_code", homework_code);
 
-		HomeworkVO vo = service.homework_info(map);
+		HomeworkVO vo = service.homework_info(homework_code);
 		model.addAttribute("info", vo);
 		
 		HomeworkSubmitVO vo2 = service.homework_submit_info(map);
@@ -127,7 +130,38 @@ public class LectureController {
 		
 		return "lecture/homework_info";
 	}
-	//과제 수정
+	
+	//과제 제출
+	@RequestMapping("/homework_submit.le")
+		public String homework_submit(Model model, int member_code, int homework_code) {
+					
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("member_code", member_code);
+		map.put("homework_code", homework_code);
+
+		HomeworkVO vo = service.homework_info(homework_code);
+		model.addAttribute("info", vo);
+		
+		return "lecture/homework_submit";
+	}
+	
+	//과제 제출 처리
+	@RequestMapping("/homework_submit_insert.le")
+	public String homework_submit_insert(HomeworkSubmitVO vo, HttpSession session,  MultipartFile file, HttpServletRequest request) {
+		MemberVO logininfo = (MemberVO) session.getAttribute("loginInfo");
+		
+		if(!file.isEmpty()) {
+			vo.setFile_name(file.getOriginalFilename());
+			vo.setFile_path(common.fileUpload("homework_submit", file, request));
+		}	
+		
+		service.homework_submit_insert(vo);
+		
+		return "redirect:homework_info.le?homework_code="+vo.getHomework_code() + "&member_code="+logininfo.getMember_code();
+	}
+	
+	
+	//과제제출내용 수정 화면
 	@RequestMapping("/homework_modify.le")
 	public String homework_modify(Model model, int member_code, int homework_code) {
 				
@@ -140,6 +174,59 @@ public class LectureController {
 				
 		return "lecture/homework_modify";
 	}	
+	
+	//과제제출내용 수정 처리
+	@RequestMapping("/homework_submit_update.le")
+	public String homework_submit_update(HomeworkSubmitVO vo, HttpSession session, MultipartFile file, HttpServletRequest request) {
+		MemberVO logininfo = (MemberVO) session.getAttribute("loginInfo");
+		if(!file.isEmpty()) {
+			vo.setFile_name(file.getOriginalFilename());
+			vo.setFile_path(common.fileUpload("homework_submit", file, request));
+		}		
+		service.homework_submit_update(vo);
+		return "redirect:homework_info.le?homework_code="+vo.getHomework_code() + "&member_code="+logininfo.getMember_code();
+	}
+	
+	@ResponseBody @RequestMapping(value = "/download_homework.le", produces="text/html;charset=utf-8")
+	public String download_homework(int homework_code , String url, 
+							HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+		HomeworkVO vo = service.homework_info(homework_code);
+		
+		boolean download = common.fileDownload(vo.getFilename(), vo.getFilepath(),request, response);
+		
+		if(!download) {//첨부된 파일이 실제 물리적으로 존재하지 않는 경우
+			StringBuffer msg = new StringBuffer("<script>");
+			msg.append(" alert('다운로드할 파일이 없습니다!'); location=' ").append(url).append(" ' ");
+			msg.append("</script>");
+			return msg.toString();
+		}else {
+			return null;
+		}
+	}
+	
+	@ResponseBody @RequestMapping(value = "/download_homework_sub.le", produces="text/html;charset=utf-8")
+	public String download_homework_sub(int member_code, int homework_code , String url, 
+							HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("member_code", member_code);
+		map.put("homework_code", homework_code);
+		
+		HomeworkSubmitVO vo = service.homework_submit_info(map);
+		
+		boolean download = common.fileDownload(vo.getFile_name(), vo.getFile_path(),request, response);
+		
+		if(!download) {//첨부된 파일이 실제 물리적으로 존재하지 않는 경우
+			StringBuffer msg = new StringBuffer("<script>");
+			msg.append(" alert('다운로드할 파일이 없습니다!'); location=' ").append(url).append(" ' ");
+			msg.append("</script>");
+			return msg.toString();
+		}else {
+			return null;
+		}
+	}
+	
 
 	// 수강중인 강의의 강의영상 리스트
 	@RequestMapping("/video_list.le")
@@ -194,14 +281,7 @@ public class LectureController {
 		return "lecture/exam_take";
 	}
 	
-	//과제 제출
-		@RequestMapping("/homework_submit.le")
-		public String homework_submit() {
-				
-
-				
-			return "lecture/homework_submit";
-		}
+	
 		
 
 	
@@ -257,12 +337,20 @@ public class LectureController {
 		return "lecture/homework_new";
 	}
 	
+	//과제 등록 처리
 	@RequestMapping("/homework_insert.le")
-	public String homework_insert(HomeworkVO vo) {
+	public String homework_insert(HomeworkVO vo, MultipartFile file, HttpServletRequest request) {
+		
+		if(!file.isEmpty()) {
+			vo.setFilename(file.getOriginalFilename());
+			vo.setFilepath(common.fileUpload("homework_info", file, request));
+		}	
 		
 		service.homework_insert(vo);
 		return "redirect:homework_list.le?member_code="+vo.getMember_code()+"&lecture_code="+vo.getLecture_code();
-	}	
+	}
+	
+	
 	
 	//시험 등록화면 요청
 	@RequestMapping("/exam_new.le")

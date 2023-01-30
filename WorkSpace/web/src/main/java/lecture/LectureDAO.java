@@ -48,8 +48,8 @@ public class LectureDAO implements LectureService {
 	}
 
 	@Override
-	public HomeworkVO homework_info(HashMap<String, Object> map) {
-		return sql.selectOne("lecture.homework_info",map);
+	public HomeworkVO homework_info(int homework_code) {
+		return sql.selectOne("lecture.homework_info",homework_code);
 	}
 
 	@Override
@@ -176,5 +176,15 @@ public class LectureDAO implements LectureService {
 	@Override
 	public HomeworkSubmitVO homework_submit_info(HashMap<String, Object> map) {
 		return sql.selectOne("homework_submit_info", map);
+	}
+
+	@Override
+	public void homework_submit_update(HomeworkSubmitVO vo) {
+		sql.update("homework_submit_update", vo);
+	}
+
+	@Override
+	public void homework_submit_insert(HomeworkSubmitVO vo) {
+		sql.insert("homework_submit_insert", vo);
 	}
 }

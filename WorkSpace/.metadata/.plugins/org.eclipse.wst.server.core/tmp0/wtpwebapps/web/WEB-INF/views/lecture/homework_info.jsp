@@ -31,7 +31,9 @@
 					</tr>
 					<tr>
 						<th class='col-3'>참고자료</th>
-						<td class='text-left'></td>
+						<td class='text-left'>${info.filename }<c:if test='${ ! empty info.filename }'>
+					<a id='download_homework'><i class="font-b fa-solid fa-file-arrow-down"></i></a>
+					</c:if></td>
 					</tr>
 				</table>
 			</div>
@@ -48,7 +50,9 @@
 						<th class='col-3'>과제설명</th><td class='text-left'>${sub_info.content } </td>
 					</tr>
 					<tr>
-						<th class='col-3'>첨부파일</th><td></td>
+						<th class='col-3'>첨부파일</th><td class='text-left'>${sub_info.file_name}<c:if test='${ ! empty sub_info.file_name }'>
+					<a id='download_homework_sub'><i class="font-b fa-solid fa-file-arrow-down"></i></a>
+					</c:if></td>
 					</tr>
 					<tr>
 						<th class='col-3'>제출상태</th>
@@ -74,17 +78,25 @@
 			<!-- 학생 -->
 			<div class='btnSet'>
 				<c:if test="${sub_info eq null}">
-					<a class='btn-fill' href='homework_submit.le'>제출</a>
+					<a class='btn-fill' href='homework_submit.le?homework_code=${info.homework_code }&member_code=${loginInfo.member_code}'>제출</a>
 				</c:if>	
 				<c:if test="${sub_info.state eq 1}">
-					<a class='btn-fill' href='homework_modify.le?homework_code=${sub_info.homework_code }&member_code=${sub_info.member_code}'>수정</a>
+					<a class='btn-fill' href='homework_modify.le?homework_code=${info.homework_code }&member_code=${loginInfo.member_code}'>수정</a>
 				</c:if>
 			</div>
 		</c:if>
 				
 		</c:if>
 	</div>
-	
+	<script type="text/javascript">
+		$('#download_homework').on('click', function(){
+			$(this).attr('href', 'download_homework.le?homework_code=${info.homework_code}&url=' + $(location).attr('href'));
+		});
+		
+		$('#download_homework_sub').on('click', function(){
+			$(this).attr('href', 'download_homework_sub.le?homework_code=${sub_info.homework_code}&member_code=${loginInfo.member_code}&url=' + $(location).attr('href'));
+		});
+	</script>
 
 </body>
 </html>

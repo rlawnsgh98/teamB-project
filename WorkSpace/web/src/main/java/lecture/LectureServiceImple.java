@@ -47,8 +47,8 @@ public class LectureServiceImple  implements LectureService {
 	}
 
 	@Override
-	public HomeworkVO homework_info(HashMap<String, Object> map) {
-		return dao.homework_info(map);
+	public HomeworkVO homework_info(int homework_code) {
+		return dao.homework_info(homework_code);
 	}
 
 	@Override
@@ -169,5 +169,15 @@ public class LectureServiceImple  implements LectureService {
 	@Override
 	public HomeworkSubmitVO homework_submit_info(HashMap<String, Object> map) {
 		return dao.homework_submit_info(map);
+	}
+
+	@Override
+	public void homework_submit_update(HomeworkSubmitVO vo) {
+		dao.homework_submit_update(vo);
+	}
+
+	@Override
+	public void homework_submit_insert(HomeworkSubmitVO vo) {
+		dao.homework_submit_insert(vo);
 	}
 }

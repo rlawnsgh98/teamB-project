@@ -50,7 +50,7 @@ href="css/member.css?<%=new java.util.Date()%>">
 						
 						<td class="align-middle" colspan='3'>
 							<input type='file' id='attach-file' style="border:none; padding: 0"
-							 name='profilepath' class="w200">
+							 name='file' class="w200">
 
 							<a id='delete-file'><i class="font-r fa-solid fa-trash-can"></i></a>
 						</td>

@@ -17,24 +17,25 @@
 	
 	<div class="container py-5">
 		<div class="col-lg-7 mx-auto bg-white rounded shadow">
-			<form method='post' action='join' enctype='multipart/form-data'>
+			<form method='post' action='homework_submit_update.le' enctype='multipart/form-data'>
+				<input type="hidden" name="member_code" value="${sub_info.member_code }">
+				<input type="hidden" name="homework_code" value="${sub_info.homework_code }">
 				<table class="table">
 					<tr>
 						<th class="col-3 align-middle">
 							<label for="content">과제 설명</label>
 						</th>
-						<td><textarea  name='content' class='form-control' value='${sub_info.content }'></textarea></td>
+						<td><textarea  name='content' class='form-control'>${sub_info.content }</textarea></td>
 					</tr>
 					<tr>
-						<th class="col-3">
-							<label for="profilepath">과제제출</label>
-						</th>
+						<th class="col-3">과제제출</th>
 						<td>
 							<div class='align'>
 								<label> 
 									<input type='file' id='attach-file' style="border:none; padding: 0"
-									accept="image/*" name='profilepath' class="w200">
+									 name='file' class="w200">
 								</label> 
+								<span id='file-name'>${sub_info.file_name}</span>
 								<span id='preview'></span> <a id='delete-file'><i
 								class="font-r fa-solid fa-trash-can"></i></a>
 							</div>
@@ -42,7 +43,21 @@
 					</tr>
 				</table>
 			</form>
+			<div class='btnSet'>
+				<a class='btn-fill save'>수정하기</a>
+				<a class='btn-empty cancel'>취소</a>
+			</div>
 		</div>
-	</div>						
+	</div>	
+	<script>
+		$('.save').on('click', function(){
+			$('form').submit();			
+			
+		});
+		
+		$('.cancel').on('click', function(){
+			history.go(-1);
+		});
+	</script>					
 </body>
 </html>

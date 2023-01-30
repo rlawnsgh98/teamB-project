@@ -4,11 +4,23 @@ import java.sql.Date;
 
 
 public class HomeworkSubmitVO {
-	private String member_name, content;
+	private String member_name, content, file_name, file_path;
 	private int submit_code, homework_code, member_code, state, subcnt, notcnt;
 	private Date submitdate;
 	
 	
+	public String getFile_name() {
+		return file_name;
+	}
+	public void setFile_name(String filename) {
+		this.file_name = filename;
+	}
+	public String getFile_path() {
+		return file_path;
+	}
+	public void setFile_path(String filepath) {
+		this.file_path = filepath;
+	}
 	public String getContent() {
 		return content;
 	}

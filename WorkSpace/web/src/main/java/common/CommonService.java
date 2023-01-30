@@ -1,13 +1,18 @@
 package common;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
 
+import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Service;
+import org.springframework.util.FileCopyUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 @Service
@@ -43,5 +48,36 @@ public class CommonService {
 		// 요청 url의 contextpath
 		public String appURL(HttpServletRequest request) {
 			return request.getRequestURL().toString().replace(request.getServletPath(), "");
-		}
+	}
+		
+		
+		
+		//첨부파일 다운로드
+		public boolean fileDownload(String filename, String filepath, 
+									HttpServletRequest request, HttpServletResponse response) throws Exception {
+			//DB: http://localhost/smart/upload/info/2022/12/20/afdlj_abc.png
+			//실제 : d://app/smart/upload/info/2022/12/20/afdlj_abc.png
+			
+			filepath = filepath.replace(appURL(request), "d://app/" + request.getContextPath());
+			File file = new File(filepath);
+			if(!file.exists()) {
+				return false;
+			}
+			
+			String mime = request.getSession().getServletContext().getMimeType(filename);
+			response.setContentType(mime);
+			
+			//첨부파일을 다운로드 하는 것임을 지정
+			response.setHeader("content-disposition", "attachment; filename="
+								+ URLEncoder.encode( filename, "utf-8"));
+			
+			//IO : byte(inputstream/outputstream) 			char(reader/writer)
+			//FileIO : fileinputstream/fileoutputstream		fileReader/filewriter
+			ServletOutputStream out = response.getOutputStream();
+			//파일정보를 읽어들여 저장해주는 처리
+			FileCopyUtils.copy(new FileInputStream(file), out);
+			out.flush();
+			
+			return true;
+		}	
 }

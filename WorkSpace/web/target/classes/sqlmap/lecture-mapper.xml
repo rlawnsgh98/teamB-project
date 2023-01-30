@@ -125,6 +125,18 @@
 		and member_code = #{member_code}
 	</select>
 	
+	<insert id="homework_submit_insert">
+		insert into homework_submit(homework_code, member_code, content, state, file_name, file_path)
+		values (#{homework_code}, #{member_code}, #{content}, 1, #{file_name, jdbcType=VARCHAR}, #{file_path, jdbcType=VARCHAR})
+		
+	</insert>
+	
+	<update id="homework_submit_update">
+		update homework_submit
+		set content=#{content}, submitdate = sysdate, file_name=#{file_name, jdbcType=VARCHAR}, file_path=#{file_path, jdbcType=VARCHAR}
+		where member_code = #{member_code} and homework_code=#{homework_code}
+	</update>
+	
 	<select id="video_list" resultType="vo.BoardVO">
 	select rownum, vi.*
     from(select *
