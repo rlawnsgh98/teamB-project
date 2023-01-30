@@ -4,9 +4,23 @@ import java.sql.Date;
 
 
 public class HomeworkSubmitVO {
+	private String member_name, content;
 	private int submit_code, homework_code, member_code, state, subcnt, notcnt;
 	private Date submitdate;
 	
+	
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+	public String getMember_name() {
+		return member_name;
+	}
+	public void setMember_name(String member_name) {
+		this.member_name = member_name;
+	}
 	public int getSubmit_code() {
 		return submit_code;
 	}

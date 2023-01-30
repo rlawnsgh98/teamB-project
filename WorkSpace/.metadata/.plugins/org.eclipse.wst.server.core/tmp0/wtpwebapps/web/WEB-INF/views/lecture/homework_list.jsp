@@ -15,13 +15,15 @@
 	<div id='container py-5'>
 		<h3>과제목록</h3>
 		<!-- 선생일때 보여줌 -->
-		<div class='btnSet'>
-			<a class='btn-fill' href='homework_new.le'>과제등록</a>
-		</div>		
+		<c:if test="${loginInfo.type eq 'TEACH' }">
+			<div class='btnSet'>
+				<a class='btn-fill' href='homework_new.le'>과제등록</a>
+			</div>		
+		</c:if>
 		<div class="row">
 			<div class="col-lg-7 mx-auto bg-white rounded shadow">
 
-					<table class="table table-fixed ">
+					<table class="table ">
 						<thead>
 							<tr>
 								<th scope="col" class="col-3">번호</th>

@@ -17,6 +17,7 @@ import lecture.LectureServiceImple;
 import vo.AttendanceVO;
 import vo.BoardVO;
 import vo.ExamVO;
+import vo.HomeworkSubmitVO;
 import vo.HomeworkVO;
 import vo.LectureVO;
 import vo.MemberVO;
@@ -120,9 +121,25 @@ public class LectureController {
 
 		HomeworkVO vo = service.homework_info(map);
 		model.addAttribute("info", vo);
-
+		
+		HomeworkSubmitVO vo2 = service.homework_submit_info(map);
+		model.addAttribute("sub_info", vo2);
+		
 		return "lecture/homework_info";
 	}
+	//과제 수정
+	@RequestMapping("/homework_modify.le")
+	public String homework_modify(Model model, int member_code, int homework_code) {
+				
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("member_code", member_code);
+		map.put("homework_code", homework_code);
+		
+		HomeworkSubmitVO vo = service.homework_submit_info(map);
+		model.addAttribute("sub_info", vo);
+				
+		return "lecture/homework_modify";
+	}	
 
 	// 수강중인 강의의 강의영상 리스트
 	@RequestMapping("/video_list.le")
@@ -186,14 +203,7 @@ public class LectureController {
 			return "lecture/homework_submit";
 		}
 		
-	//과제 수정
-	@RequestMapping("/homework_modify.le")
-	public String homework_modify() {
-				
 
-				
-		return "lecture/homework_modify";
-	}	
 	
 	
 	

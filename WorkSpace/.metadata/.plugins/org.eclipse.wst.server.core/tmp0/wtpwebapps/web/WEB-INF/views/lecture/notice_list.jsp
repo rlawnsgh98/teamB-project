@@ -10,11 +10,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>공지 목록</h1>
-            <div class='btnSet'>
-				<a class='btn-fill' href='notice_write.le'>공지작성</a>
-			</div>
-	<div id="container" style="height: 1000px;">
+	<h1>공지 목록</h1>
+	<c:if test="${loginInfo.type eq 'TEACH' }">
+        <div class='btnSet'>
+			<a class='btn-fill' href='notice_write.le'>공지작성</a>
+		</div>
+	</c:if>
+	
+	<div id="container" style="margin-top: 100px; margin-bottom: 400px">
         <div class="row" style="position: relative;">
 			<%@include file="../include/sidebar.jsp" %>
 

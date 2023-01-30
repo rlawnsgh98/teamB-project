@@ -113,13 +113,16 @@
 	</select>
 	
 	<select id="homework_info" resultType="vo.HomeworkVO">
-		select h.homework_code, h.title, h.content, h.writedate, h.duedate, h.filename, h.filepath, h.lecture_code, h.member_code teacher_code, s.member_code , s.state ,s.submitdate, m.member_name
-	    from homework h left outer join homework_submit s
-	    on h.homework_code = s.homework_code
-	    left outer join member m
-   		on s.member_code = m.member_code
-	    where s.member_code = #{member_code}
-	    and h.homework_code=#{homework_code}
+		select * 
+		from homework
+		where homework_code = #{homework_code}
+	</select>
+	
+	<select id="homework_submit_info" resultType="vo.HomeworkSubmitVO" parameterType="map">
+		select s.*, (select member_name from member where member_code = #{member_code} ) member_name
+		from homework_submit s
+		where homework_code = #{homework_code}
+		and member_code = #{member_code}
 	</select>
 	
 	<select id="video_list" resultType="vo.BoardVO">

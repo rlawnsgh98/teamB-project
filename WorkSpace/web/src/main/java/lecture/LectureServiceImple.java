@@ -10,6 +10,7 @@ import vo.AttendanceVO;
 import vo.BoardVO;
 import vo.QuestionVO;
 import vo.ExamVO;
+import vo.HomeworkSubmitVO;
 import vo.HomeworkVO;
 import vo.LectureVO;
 import vo.MemberVO;
@@ -162,5 +163,11 @@ public class LectureServiceImple  implements LectureService {
 	@Override
 	public List<LectureVO> lecture_code_list(int teacher_code) {
 		return dao.lecture_code_list(teacher_code);
+	}
+
+
+	@Override
+	public HomeworkSubmitVO homework_submit_info(HashMap<String, Object> map) {
+		return dao.homework_submit_info(map);
 	}
 }

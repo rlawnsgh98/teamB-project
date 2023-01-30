@@ -177,7 +177,9 @@ ul.online-users {
 	              <li><i class="fa fa-user icon3"></i><div><a href="/web/video_list.le?lecture_code=${lecture_info.lecture_code }">영상강의</a></div></li>
 	              <li><i class="fa fa-comments icon4"></i><div><a href="/web/exam_list.le?lecture_code=${lecture_info.lecture_code }&member_code=${loginInfo.member_code }">시험</a></div></li>
 	              <li><i class="fa fa-picture-o icon5"></i><div><a href="/web/student_list.le?lecture_code=${lecture_info.lecture_code }">학생목록</a></div></li>
-	              <li><i class="fa fa-video-camera icon6"></i><div><a href="/web/attendance_manage.le?lecture_code=${lecture_info.lecture_code }&attendance_time=${date}">출결관리</a></div></li>
+	              <c:if test="${loginInfo.type eq 'TEACH' }">
+	              	<li><i class="fa fa-video-camera icon6"></i><div><a href="/web/attendance_manage.le?lecture_code=${lecture_info.lecture_code }&attendance_time=${date}">출결관리</a></div></li>
+	              </c:if>
 	            </ul>
 			</div>
 </div>

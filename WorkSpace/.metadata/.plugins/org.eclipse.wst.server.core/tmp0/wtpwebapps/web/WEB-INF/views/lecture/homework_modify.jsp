@@ -23,7 +23,7 @@
 						<th class="col-3 align-middle">
 							<label for="content">과제 설명</label>
 						</th>
-						<td><textarea  name='content' class='form-control'></textarea></td>
+						<td><textarea  name='content' class='form-control' value='${sub_info.content }'></textarea></td>
 					</tr>
 					<tr>
 						<th class="col-3">

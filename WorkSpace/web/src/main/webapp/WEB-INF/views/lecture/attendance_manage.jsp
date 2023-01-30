@@ -15,7 +15,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div id="container" style="height: 1000px;">
+	<div id="container" style="margin-top: 100px; margin-bottom: 400px; height: 1000px">
         <div class="row">
 
 	            

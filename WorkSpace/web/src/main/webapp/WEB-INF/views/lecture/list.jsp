@@ -14,19 +14,22 @@
 
 <body>
 	
-	<div id="container py-5">
+	<div id="container py-5" style="margin-top: 100px; margin-bottom: 400px">
 		
         <div class="row">
             <div class="col-lg-7 mx-auto bg-white rounded shadow">
             <h1>강의목록</h1>
-		<table class="table table-fixed table-hover" >
+		<table class="table table-hover" >
 		
 		<thead>
 			<tr>
 				<th scope="col" class="col-3">강의명</th>
 				<th scope="col" class="col-3">과목</th>
-				<th scope="col" class="col-3">담당강사</th>
+				<c:if test="${loginInfo.type eq 'STUD' }">
+					<th scope="col" class="col-3">담당강사</th>
+				</c:if>
 				<th scope="col" class="col-3">시간</th>
+				
 			</tr>
 			</thead>
 			<tbody>
@@ -34,7 +37,9 @@
 				<tr>
 					<td class="col-3"><a href="lecture_home.le?lecture_code=${vo.lecture_code }">${vo.lecture_name}</a></td>
 					<td class="col-3">${vo.subject_code }</td>
-					<td class="col-3">${vo.teacher_name }</td>
+					<c:if test="${loginInfo.type eq 'STUD' }">
+						<td class="col-3">${vo.teacher_name }</td>
+					</c:if>
 					<td class="col-3">${vo.timetable_code}교시(${vo.timetable_name })</td>
 				</tr>
 			</c:forEach>
