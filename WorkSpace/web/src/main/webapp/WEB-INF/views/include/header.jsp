@@ -198,7 +198,7 @@ nav ul li:hover ul {
 						</c:if>
 						<c:if test='${not empty loginInfo.profilepath}'>
 							<li><a href="mypage.me"><img class='profile'
-									src='${loginInfo.profilepath}'>${loginInfo.member_name}
+									src='${loginInfo.profilepath}'>
 								</a>
 							</li>
 						</c:if>

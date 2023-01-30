@@ -140,4 +140,14 @@ and sysdate &gt; startdate
 and sysdate &lt; enddate
 order by 1
 </select>
+
+<select id="sys_lec_one" resultType="vo.LectureVO">
+select l.*,m.member_name teacher_name, s.subject_name
+from lecture l, member m, subject s
+where l.teacher_code = m.member_code
+and l.subject_code = s.subject_code
+and l.lecture_code = #{lecture_code}
+order by 1
+</select>
+
 </mapper>

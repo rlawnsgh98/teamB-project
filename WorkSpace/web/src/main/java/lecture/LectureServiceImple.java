@@ -87,4 +87,8 @@ public class LectureServiceImple  implements LectureService {
 	public List<LectureVO> sys_lec_list() {
 		return dao.sys_lec_list();
 	}
+
+	public LectureVO sys_lec_one(int lecture_code) {
+		return dao.sys_lec_one(lecture_code);
+	}
 }

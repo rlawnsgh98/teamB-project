@@ -193,7 +193,7 @@
 													</c:choose>
 												</div>
 												<div>
-													<a href="en_lec_detail.le" class="btn">상세보기</a>
+													<a href="en_lec_detail.le?lecture_code=${vo.lecture_code}" class="btn">상세보기</a>
 												</div>
 											</div>
 										</div>

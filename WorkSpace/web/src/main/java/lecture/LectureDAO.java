@@ -89,4 +89,8 @@ public class LectureDAO implements LectureService {
 	public List<LectureVO> sys_lec_list() {
 		return sql.selectList("lecture.sys_lec_list");
 	}
+
+	public LectureVO sys_lec_one(int lecture_code) {
+		return sql.selectOne("lecture.sys_lec_one",lecture_code);
+	}
 }

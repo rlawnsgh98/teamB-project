@@ -94,7 +94,9 @@
 	vertical-align: middle;
 	width: 24px;
 	height: 24px;
-	background: #1988cc url('https://mid.ebs.co.kr/images/middle/respond/premium/ico_home.png') 50% 50% no-repeat;
+	background: #1988cc
+		url('https://mid.ebs.co.kr/images/middle/respond/premium/ico_home.png')
+		50% 50% no-repeat;
 	background-size: 16px auto;
 }
 
@@ -274,17 +276,29 @@
 			<div class="sub_wrap">
 				<div class="pm_detail_top">
 					<div class="img">
-						<img src="img/teacher/kt.jpg">
+						<!-- <img src="img/teacher/kt.jpg"> -->
+						<c:choose>
+							<c:when test="${vo.subject_code eq 'KOR'}">
+								<img src="img/teacher/kt.jpg">
+							</c:when>
+							<c:when test="${vo.subject_code eq 'ENG'}">
+								<img src="img/teacher/et.jpg">
+							</c:when>
+							<c:when test="${vo.subject_code eq 'MATH'}">
+								<img src="img/teacher/mt.jpg">
+							</c:when>
+						</c:choose>
 					</div>
 					<div class="lecture">
-						<h2>[2023]중3 국어 겨울특강</h2>
+						<h2>${vo.lecture_name}</h2>
 						<div class="name">
-							<strong>박선향</strong> <span>선생님</span> 
-							<a href="en_lec_teacher_info.le" class="btn"></a>
+							<strong>${vo.teacher_name}</strong> <span>선생님</span> <a
+								href="en_lec_teacher_info.le" class="btn"></a>
 						</div>
 						<div class="btns">
-							<a class="btn1" onclick="enrollment_kt();">수강신청</a> 
-							<a class="btn1">교재구매</a>
+							<a class="btn1"
+								href="en_lec_insert.le?lecture_code=${vo.lecture_code}&member_code=${loginInfo.member_code}"
+								onclick="enrollment_kt();">수강신청</a> <a class="btn1">교재구매</a>
 						</div>
 					</div>
 				</div>
@@ -360,7 +374,8 @@
 					</b>
 				</div>
 				<div class="cont">
-					• 단기간에 3학년 국어 교과서의 개념을 정리해 주는 강좌! <br> • 2015 개정 교육과정의 핵심 사항이 반영된 전략적인 강좌!
+					• 단기간에 3학년 국어 교과서의 개념을 정리해 주는 강좌! <br> • 2015 개정 교육과정의 핵심 사항이
+					반영된 전략적인 강좌!
 				</div>
 			</div>
 		</div>
@@ -371,7 +386,6 @@
 			 alert('로그인 먼저 해주세요.');
 		 }else if(${not empty loginInfo.id && loginInfo.type == 'STUD'}) {
 			 alert('${loginInfo.member_name}님, 수강신청이 완료되었습니다.');
-			 location.href = "enrollment_kt";
 		 }else {
 			 alert('잘못된 접근입니다.');
 		 }
