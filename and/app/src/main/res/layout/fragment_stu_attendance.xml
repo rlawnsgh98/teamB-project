@@ -30,15 +30,14 @@
                 android:backgroundTint="@color/blue"
 
                 app:cardCornerRadius="70dp">
+
                 <TextView
                     android:id="@+id/tv_ok"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:textSize="30dp"
-                    android:text="3"
                     android:textColor="@color/white"
-                    />
+                    android:textSize="30dp" />
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -69,7 +68,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:textSize="30dp"
-                    android:text="3"
                     android:textColor="@color/white"
                     />
 
@@ -102,7 +100,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:textSize="30dp"
-                    android:text="3"
                     android:textColor="@color/white"
                     />
 

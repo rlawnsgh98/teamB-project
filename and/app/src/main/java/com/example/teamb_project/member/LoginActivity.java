@@ -19,7 +19,7 @@ import com.example.teamb_project.vo.MemberVO;
 import com.google.gson.GsonBuilder;
 
 public class LoginActivity extends AppCompatActivity {
-    TextView join_tv,login_tv,find_tv;
+    TextView join_tv,login_tv;
     EditText id_et, pw_et;
 
     Common common = new Common();
@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-      
+
         new Common().changeStatusBarColor(this);
 
         // IP 설정
@@ -73,7 +73,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        // 회원가입 버튼
         join_tv = findViewById(R.id.join_tv);
         join_tv.setOnClickListener(new View.OnClickListener() {
             @Override

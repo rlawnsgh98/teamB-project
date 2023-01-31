@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lecture">
+
+	<!-- 특정 강의조회 -->
+	<select id="lecture_info" resultType='vo.LectureVO'>
+	select l.*, member_name teacher_name 
+	from lecture l inner join member m
+	on l.teacher_code = m.member_code
+	where lecture_code = #{lecture_code}
+	</select>
+
+	<!-- 시험 등록처리 -->
+	<insert id="insert_exam">
+	insert into exam (lecture_code, exam_type, subject, exam_title, startdate, duedate)
+	values ( #{lecture_code}, #{exam_type}, #{subject}, #{exam_title}, #{startdate}, #{duedate} )
+	<selectKey keyProperty="exam_code" resultType="integer" order="AFTER">
+			select seq_exam.currval from dual
+	</selectKey>
+	</insert>
+	
+	<!-- 시험 등록시 수강생들의 exam_take 데이터 생성 -->
+	<insert id="insert_exam_take">
+	<foreach item="item" collection="List"
+        open="insert all " separator=" " close="select * from dual">
+          into exam_take(exam_code, filename, filepath)
+		  values( #{id}, #{item.filename}, #{item.filepath} )
+   	</foreach>
+	</insert>
+
+	<!-- 강의 목록 조회 - 강사 -->
+	<select id="lecture_list_teacher" resultType='vo.LectureVO'>
+	select l.* ,t.timetable_name, (select count(*)
+									from enrolment e 
+									where e.lecture_code= l.lecture_code) student_cnt
+	from lecture l left outer join timetable t
+	on l.timetable_code = t.timetable_code
+	where teacher_code = #{member_code}
+	</select>
+
+	<!-- 학생로그인 강의리스트 -->
+	<select id="list" resultType="vo.LectureVO">
+		select l.*, member_name teacher_name, t.timetable_name
+		from lecture l left outer join member m 
+		on l.teacher_code = m.member_code
+		left outer join timetable t
+        on l.timetable_code = t.timetable_code
+		where lecture_code in(select lecture_code 
+		                        from enrolment
+		                        where member_code = #{member_code})
+	</select>
+	
+	<!-- 강사로그인 강의리스트 -->
+	<select id="teach_lecture_list"  resultType="vo.LectureVO">
+		select l.* ,t.timetable_name, (select count(*)from enrolment e where e.lecture_code= l.lecture_code) student_cnt
+		from lecture l left outer join timetable t
+		on l.timetable_code = t.timetable_code
+        where teacher_code= #{member_code}
+	</select>
+	
+	
+	
+	<!-- 선택한 강의의 강의정보, 강사정보 -->
+	<select id="info" resultType="vo.MemberVO">
+		select  l.* ,m.*, t.timetable_name
+		from member m left outer join lecture l
+		on m.member_code = l.teacher_code
+        left outer join timetable t
+        on l.timetable_code = t.timetable_code
+		where lecture_code = #{lecture_code} 
+	</select>
+	
+	<!-- 선택한 강의의 공지사항 리스트 -->
+	<select id="notice_list" resultType="vo.BoardVO">
+		select rownum, b.*
+		from (select b.*, m.member_name
+		        from board b left outer join member m
+		        on b.writer = m.member_code
+				where lecture_code = #{lecture_code}  and category = 'no' 
+				order by writedate  desc) b
+	</select>
+	
+	<!-- 강의 공지사항 정보 -->
+	<select id="notice_info" resultType="vo.BoardVO">
+		select b.*, m.member_name
+		from board b left outer join member m
+		on b.writer = m.member_code
+		where board_code = #{board_code}
+	</select>
+	
+	<select id="homework_list" resultType="vo.HomeworkVO">
+		select rownum, h.*
+		from(select h.homework_code, title, h.content, writedate, duedate, h.filename, h.filepath, lecture_code, h.member_code teacher_code, s.member_code , s.state 
+		    from homework h full outer join homework_submit s
+		    on h.homework_code = s.homework_code
+            where lecture_code= #{lecture_code}
+            and s.member_code = #{member_code}
+            union all
+            select h.homework_code, title, h.content, writedate, duedate, h.filename, h.filepath, lecture_code, h.member_code teacher_code, s.member_code , s.state 
+		    from homework h full outer join homework_submit s
+		    on h.homework_code = s.homework_code
+            where lecture_code= #{lecture_code}
+            and s.member_code is null
+		    order by writedate desc)h
+	</select>
+	
+	<select id="teach_homework_list" resultType="vo.HomeworkVO">
+		select rownum, h.*
+		from (select *
+		        from homework
+		        where lecture_code = #{lecture_code}
+		        order by writedate desc) h
+	</select>
+	
+	<select id="homework_info" resultType="vo.HomeworkVO">
+		select * 
+		from homework
+		where homework_code = #{homework_code}
+	</select>
+	
+	<select id="homework_submit_info" resultType="vo.HomeworkSubmitVO" parameterType="map">
+		select s.*, (select member_name from member where member_code = #{member_code} ) member_name
+		from homework_submit s
+		where homework_code = #{homework_code}
+		and member_code = #{member_code}
+	</select>
+	
+	<insert id="homework_submit_insert">
+		insert into homework_submit(homework_code, member_code, content, state, file_name, file_path)
+		values (#{homework_code}, #{member_code}, #{content}, 1, #{file_name, jdbcType=VARCHAR}, #{file_path, jdbcType=VARCHAR})
+		
+	</insert>
+	
+	<update id="homework_submit_update">
+		update homework_submit
+		set content=#{content}, submitdate = sysdate, file_name=#{file_name, jdbcType=VARCHAR}, file_path=#{file_path, jdbcType=VARCHAR}
+		where member_code = #{member_code} and homework_code=#{homework_code}
+	</update>
+	
+	<select id="video_list" resultType="vo.BoardVO">
+	select rownum, vi.*
+    from(select *
+		    from board
+		    where category = 'vi'
+		    and lecture_code= #{lecture_code}
+		    order by writedate desc) vi
+	</select>
+	
+	<!-- 학생이 시험목록 조회 -->
+	<select id="exam_list" resultType="vo.ExamVO" parameterType="map">
+		select rownum, e.*
+		from(select *
+		    from exam  left outer join exam_take 
+		    using (exam_code)
+		    where lecture_code = #{lecture_code}
+		    and member_code = #{member_code}
+		    order by startdate desc) e
+	</select>
+	
+	<!-- 강사가 시험목록 조회 - 응시한 학생 수 컬럼 추가 -->
+	<select id="exam_list_teacher" resultType="vo.ExamVO">
+	select  rownum, ex.*, num
+	from    exam ex left outer join (select  e.exam_code exam_code, count(e.exam_code) num
+                                from    member m left outer join exam_take e
+                                on      m.member_code = e.member_code
+                                inner join exam exam
+                                on      e.exam_code = exam.exam_code
+                                where   exam.lecture_code = #{lecture_code}
+                                and     e.state is not null
+                                group by e.exam_code
+                                ) n
+        	on  ex.exam_code = n.exam_code
+	where   lecture_code = #{lecture_code}
+	</select>
+	
+	<!-- 문제 등록 -->
+	<insert id="insert_question">
+	insert into exam_question (no, exam_code, exam_title, answer, answer_type, score, exam_content, question1, question2, question3, question4)
+	values(#{no}, #{exam_code}, #{exam_title}, #{answer}, #{answer_type}, #{score}, #{exam_content, jdbcType=VARCHAR}
+		, #{question1},#{question2},#{question3},#{question4}
+	)
+	</insert>
+	
+	<!-- 특정 시험 문제 목록 조회 -->
+	<select id="question_list" resultType='vo.QuestionVO'>
+	select * from exam_question where exam_code = #{exam_code}
+	</select>
+	<!-- 특정 시험 문제 정보 -->
+	<select id="question_info" resultType='vo.QuestionVO'>
+	select * from exam_question where no = #{no}
+	</select>
+	
+	<!-- 특정 시험 정보 조회 -->
+	<select id="exam_info" resultType='vo.ExamVO'>
+	select * from exam where exam_code = #{exam_code}
+	</select>
+	
+	<!-- 특정 시험 총 인원수 조회 -->
+	<select id="exam_total_num" resultType='integer'>
+	select  count(*)
+	from    lecture l left join enrolment e
+	on      l.lecture_code = e.lecture_code
+	where   status = 1
+	and     l.lecture_code = #{lecture_code}
+	</select>
+	
+	
+	<select id="student_list" resultType="vo.MemberVO">
+		select m.*, lecture_code
+		from member m left outer join enrolment e on m.member_code=e.member_code
+		where e.lecture_code = #{lecture_code}
+	</select>
+	
+	<insert id="notice_insert">
+		insert into board(title, content, writer, category, lecture_code)
+		values(#{title}, #{content}, #{writer}, #{category}, #{lecture_code} )
+	</insert>
+	
+	<update id="notice_update">
+		update board
+		set title=#{title}, content=#{content}
+		where board_code=#{board_code}
+	</update>
+	
+	<insert id="homework_insert">
+		insert into homework(title, content, member_code, writedate, duedate, filename, filepath, lecture_code)
+		values(#{title}, #{content}, #{member_code}, #{writedate}, #{duedate}, #{filename, jdbcType=VARCHAR}, #{filepath, jdbcType=VARCHAR} ,#{lecture_code})
+	</insert>
+	
+	<select id="attendance_list" resultType="vo.AttendanceVO" parameterType="map">
+		select a.*, m.member_name, m.profilepath
+		from attendance a left outer join member m
+		on a.member_code = m.member_code
+		where lecture_code = #{lecture_code}
+		and to_char(attendance_time) = #{attendance_time}
+	</select>
+	<update id="attendance_update" parameterType="map">
+		update attendance
+		set state = #{state}
+		where lecture_code = #{lecture_code}
+		and member_code = #{member_code}
+		and to_char(attendance_time) = #{attendance_time}
+	</update>
+<!-- 로그인한 강사의 개설 강의 목록 조회-kmj -->
+<select id="te_lec_list" resultType="vo.LectureVO">
+select l.lecture_code, l.lecture_name
+, l.startdate, l.enddate, l.room_code, m.member_name teacher_name
+, l.subject_code, l.timetable_code
+from lecture l, member m
+where l.teacher_code = m.member_code
+and teacher_code = (select member_code 
+from member 
+where type='TEACH'
+and member_code = #{member_code})
+<if test='select_subject!=null'>
+and subject_code like '%'|| #{select_subject, jdbcType=VARCHAR}||'%'
+</if>
+<if test='select_year!=null'>
+and  to_char(startdate,'yyyy') like '%'|| #{select_year, jdbcType=VARCHAR} ||'%'   
+</if>
+order by 1
+</select>
+
+<!-- 로그인한 강사가 강의 개설-kmj -->
+<insert id="open_new_lecture">
+insert into lecture(lecture_code, lecture_name, teacher_code, 
+startdate, enddate, room_code, subject_code, timetable_code)
+values(SEQ_LECTURE.nextval, #{lecture_name}, #{teacher_code}, 
+#{startdate}, #{enddate}, #{room_code},#{subject_code},#{timetable_code})
+</insert>
+
+<!-- 로그인한 강사가 개설 강의 수정-kmj -->
+<update id="modify_lecture">
+update lecture
+set startdate = #{startdate}
+, enddate = #{enddate}
+, room_code = #{room_code}
+, timetable_code = #{timetable_code}
+, subject_code = #{subject_code}
+, lecture_name = #{lecture_name}
+where teacher_code = #{teacher_code}
+and lecture_code = #{lecture_code}
+</update>
+
+<!-- 로그인한 강사가 개설 강의 수정할 때 강의코드 목록 필요-kmj -->
+<select id="lecture_code_list" resultType="vo.LectureVO">
+select lecture_code 
+from lecture
+where teacher_code = #{teacher_code}
+order by lecture_code
+</select>
+
+<!-- 로그인한 강사가 개설 강의 삭제-kmj -->
+<delete id="delete_lecture">
+delete from lecture where lecture_code = #{lecture_code}
+</delete>
+
+<!-- sysdate에 해당 하는 강의 목록 조회-kmj -->
+<select id="sys_lec_list" resultType="vo.LectureVO">
+select l.*,m.member_name teacher_name, s.subject_name
+from lecture l, member m, subject s
+where l.teacher_code = m.member_code
+and l.subject_code = s.subject_code
+and sysdate &gt; startdate
+and sysdate &lt; enddate
+order by 1
+</select>
+
+<select id="sys_lec_one" resultType="vo.LectureVO">
+select l.*,m.member_name teacher_name, s.subject_name
+from lecture l, member m, subject s
+where l.teacher_code = m.member_code
+and l.subject_code = s.subject_code
+and l.lecture_code = #{lecture_code}
+order by 1
+</select>
+
+<select id="video_watch" resultType="vo.BoardFileVO">
+	select path
+	from board_file
+	where board_code=#{board_code}
+</select>
+</mapper>

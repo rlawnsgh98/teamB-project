@@ -199,7 +199,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
-                    android:text="글 내용 내용 입 입니 다 입닏 ㄴㄷㄹㄴㄹㅋㄴㄷㄶㄴ콘ㅋㄷㅋ녿ㅋ논ㄷㅋㄴ돈돜ㄴㄷ"
                     android:textColor="@color/font_black"
                     android:textSize="16dp"
                     />

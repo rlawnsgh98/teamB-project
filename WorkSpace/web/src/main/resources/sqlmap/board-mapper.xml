@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="board">
+
+<!-- 특정 게시판의 댓글 목록 조회 -->
+<select id="board_reply" resultType='vo.ReplyVO'>
+select  *
+from    (select r.*, member_name, row_number() over(order by reply_code) no 
+        from board_reply r inner join member m 
+        on r.writer = m.member_code 
+        where board_code = #{board_code})
+order by no desc
+</select>
+
+<!-- 특정 게시판의 파일 정보 조회 -->
+<select id="file_list" resultType='vo.BoardFileVO'>
+	select * from board_file where board_code = #{board_code}
+</select>
+
+<!-- 특정 게시판 정보 조회 -->
+<select id="board_info" resultType='vo.BoardVO'>
+	select  *
+	from    (select b.*, member_name member_name from board b inner join member m on b.writer = m.member_code)
+	where	board_code = #{board_code}
+</select>
+
+<!-- 자유게시판 총 갯수 조회 -->
+<select id="total" resultType='integer'>
+	select count(*) from board where category = 'bo'
+</select>
+<!-- 학원 공지사항 총 갯수 조회 -->
+<select id="total_notice" resultType='integer'>
+	select count(*) from board where category = 'no'
+</select>
+
+<!-- 자유게시판 목록 조회 - 임시로 10개만 조회 -->
+<select id="board_list" resultType='vo.BoardVO'>
+<!-- select  * -->
+<!-- from    (select b.*, member_name, row_number() over(order by board_code) no  -->
+<!--         from board b inner join member m  -->
+<!--         on b.writer = m.member_code  -->
+<!--         where category = 'bo') -->
+<![CDATA[
+	select  *
+	from    (select b.*, member_name, row_number() over(order by board_code) no
+	        from board b inner join member m 
+	        on b.writer = m.member_code 
+	        where category = 'bo'
+	        order by no desc
+	        )
+	where   rownum < 11
+	]]>
+</select>
+
+<!-- 공지사항 목록 조회 -->
+<select id='notice_list' resultType='vo.BoardVO'>
+<![CDATA[
+	select  *
+	from    (select b.*, member_name, row_number() over(order by board_code) no
+	        from board b inner join member m 
+	        on b.writer = m.member_code 
+	        where category = 'no'
+	        and lecture_code is not null
+	        order by no desc
+	        )
+	where   rownum < 11
+]]>
+</select>
+
+<!-- 조회수 증가처리 -->
+<update id='board_read'>
+	update board set readcnt = readcnt + 1 where board_code = #{board_code}
+</update>
+
+</mapper>

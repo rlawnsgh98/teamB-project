@@ -1,0 +1,204 @@
+package com.and.web;
+
+import java.util.HashMap;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
+
+import common.CommonService;
+import lecture.LectureServiceImple;
+import member.MemberService;
+import vo.LectureVO;
+import vo.MemberVO;
+
+@Controller
+public class MemberController {
+	@Autowired
+	private CommonService common;
+	@Autowired
+	private MemberService member;
+	@Autowired
+	private LectureServiceImple service;
+
+	// 회원 가입 화면 요청
+	@RequestMapping("/member.me")
+	public String member(HttpSession session) {
+		session.setAttribute("category", "join");
+		// 응답화면연결
+		return "member/join";
+	}
+
+	// 회원 가입 처리 요청
+	@ResponseBody
+	@RequestMapping(value = "/join")
+	public String join(MemberVO vo, MultipartFile profile_image, HttpServletRequest request) {
+		// 첨부된 프로필 파일이 있는 경우
+		if (!profile_image.isEmpty()) {
+			// 서버의 물리적영역에 첨부파일을 저장한 후 DB에 저장할 수 있도록 처리한다
+			vo.setProfilepath(common.fileUpload("profilepath", profile_image, request));
+		}
+		// 화면에서 입력한 정보를 DB에 신규저장한다
+		StringBuffer msg = new StringBuffer("<script>");
+		if (member.member_join(vo) == 1) {
+			msg.append("alert('회원가입을 축하합니다 ^^'); location='").append(request.getContextPath()).append("'; ");
+		} else {
+			msg.append("alert('회원가입 실패ㅠㅠ'); history.go(-1); ");
+		}
+		msg.append("</script>");
+
+		// 응답화면연결
+		return msg.toString();
+	}
+
+	// 로그인 화면 요청
+	@RequestMapping("/login.me")
+	public String login(HttpSession session) {
+		session.setAttribute("category", "login");
+		// 응답화면연결
+		return "member/login";
+	}
+
+	// 로그인 처리 요청
+	@ResponseBody
+	@RequestMapping("/smartLogin.me")
+	public boolean login(String id, String pw, HttpSession session) {
+		// 비지니스로직 - 화면에서 입력한 아이디/비번이 일치하는 회원정보를 DB에서 조회한다
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("id", id);
+		map.put("pw", pw);
+		MemberVO vo = member.member_login(map);
+
+		// 화면에 출력할 수 있도록 세션에 attribute로 담는다
+		session.setAttribute("loginInfo", vo);
+		return vo == null ? false : true;
+	}
+
+	// 로그아웃 처리 요청
+	@RequestMapping("/logout.me")
+	public String logout(HttpSession session) {
+		// 비지니스로직 - 세션에 있는 로그인정보를 삭제한다
+		session.removeAttribute("loginInfo");
+		// 응답화면연결
+		return "redirect:/";
+	}
+
+	// 아이디 중복확인 요청
+	@ResponseBody
+	@RequestMapping("/idCheck")
+	public boolean idcheck(String id) {
+		// 비지니스로직-화면에서 입력한 아이디가 DB에 존재하는지 확인: 0 아이디 존재X, 1 아이디 존재
+		return member.member_idCheck(id) == 0 ? false : true;
+	}
+
+	// 마이 페이지 화면 요청
+	@RequestMapping("/mypage.me")
+	public String mypage(HttpSession session, Model model) {
+		MemberVO vo = (MemberVO) session.getAttribute("loginInfo");
+		int mem_code = vo.getMember_code();
+		
+		List<LectureVO> lecture_list = service.lecture_list(mem_code);
+		model.addAttribute("lecture_list", lecture_list);
+		// 응답화면연결
+		return "member/mypage";
+	}
+
+	// 회원 정보 수정 화면 요청 - 개인정보수정
+	@RequestMapping("/modify_verify.me")
+	public String modify_verify(HttpSession session) {
+		// 응답화면연결
+		return "member/modify_verify";
+	}
+
+	// 회원 정보 수정 화면 요청 - 비밀번호변경
+	@RequestMapping("/modify_pw.me")
+	public String modify_pw(HttpSession session) {
+		// 응답화면연결
+		return "member/modify_pw";
+	}
+	
+	// 회원 비밀번호 변경 후 로그아웃
+	@ResponseBody
+	@RequestMapping(value="/change_pw", produces="text/html;charset=UTF-8")
+	public String change_pw(HttpSession session, HttpServletRequest request, String pw_old, String pw_new, String pw_ck2) {
+		HashMap<String, String> tempMap = new HashMap<String, String>();
+		tempMap.put("pw_old", pw_old);
+		tempMap.put("pw_new", pw_new);
+		tempMap.put("pw_ck2", pw_ck2);
+		MemberVO vo = (MemberVO) session.getAttribute("loginInfo");
+		int mem_code = vo.getMember_code();
+		tempMap.put("member_code", Integer.toString(mem_code));
+		
+		int count = member.checkPW(pw_old);
+		StringBuffer msg = new StringBuffer("<script>");
+		if(count == 1) {
+			member.change_pw(tempMap);
+			msg.append("alert('비밀번호 변경 완료! 다시 로그인해주세요.'); location.href='").append(request.getContextPath()).append("'; ");
+			session.removeAttribute("loginInfo");
+		}else {
+			msg.append("alert('비밀번호 변경에 실패하셨습니다.'); history.go(-1); ");
+		}
+		msg.append("</script>");
+		
+		// 응답화면연결
+		return msg.toString();
+	}
+
+	// 회원 정보 수정 화면 요청 - 수정 양식 작성창
+	@RequestMapping("/modify_myinfo.me")
+	public String modify_myinfo(HttpSession session) {
+		// 응답화면연결
+		return "member/modify_myinfo";
+	}
+
+	// 회원 정보 수정 화면 요청
+	@RequestMapping("/enrolment_log.me")
+	public String enrolment_log(HttpSession session) {
+		// 응답화면연결
+		return "member/enrolment_log";
+	}
+
+	// 회원 아이디/비밀번호 찾기 화면 요청
+	@RequestMapping("/find.me")
+	public String find(HttpSession session) {
+		// 응답화면연결
+		return "member/find";
+	}
+	
+	// 수강신청 - 강의 목록 화면 - 겔러리형
+	@RequestMapping("/privacy.me")
+	public String lec_list_test(HttpSession session) {
+		// 응답화면연결
+		/* return "member/enrolment_lecture"; */
+		return "member/lec_list_test";
+	}
+	
+	// 수강신청 - 강의 목록 화면 - 리스트형
+	@RequestMapping("/justlist.le")
+	public String lec_list_test2(HttpSession session) {
+		// 응답화면연결
+		return "member/lec_list_test2";
+	}
+	
+	// 수강신청 - 강의 상세 화면 - no
+	@RequestMapping("/en_lec_detail2.le")
+	public String en_lec_detai(HttpSession session) {
+		// 응답화면연결
+		return "member/enrolment_lecture_detail2";
+	}
+	
+	// 디자인 테스트
+	@RequestMapping("/terms.me")
+	public String terms(HttpSession session) {
+		// 응답화면연결
+		/* return "member/design_test_ver3"; */
+		return "member/design_test_ver4";
+	}
+}

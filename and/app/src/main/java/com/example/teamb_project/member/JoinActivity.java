@@ -55,7 +55,7 @@ public class JoinActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_join);
 
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
         new Common().changeStatusBarColor(this);
 
 
