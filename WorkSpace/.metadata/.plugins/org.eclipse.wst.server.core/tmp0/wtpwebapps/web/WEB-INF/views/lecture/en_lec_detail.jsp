@@ -29,7 +29,7 @@
 }
 
 .main_wrap2 {
-	width: 980px;
+	width: 1020px;
 	margin: 0 auto;
 	position: relative;
 	overflow: hidden;
@@ -57,7 +57,7 @@
 	float: left;
 	width: 60%;
 	text-align: left;
-	padding: 50px 0;
+	padding: 80px 0;
 }
 
 .icons {
@@ -94,7 +94,9 @@
 	vertical-align: middle;
 	width: 24px;
 	height: 24px;
-	background-color: #1988cc;
+	background: #1988cc
+		url('https://mid.ebs.co.kr/images/middle/respond/premium/ico_home.png')
+		50% 50% no-repeat;
 	background-size: 16px auto;
 }
 
@@ -125,8 +127,7 @@
 }
 
 .en_table table tbody tr th {
-	background-color: #000;
-	color: #fff;
+	color: #000;
 	padding: 10px 0;
 }
 
@@ -275,20 +276,29 @@
 			<div class="sub_wrap">
 				<div class="pm_detail_top">
 					<div class="img">
-						<img src="img/teacher/teacher1.png">
+						<!-- <img src="img/teacher/kt.jpg"> -->
+						<c:choose>
+							<c:when test="${vo.subject_code eq 'KOR'}">
+								<img src="img/teacher/kt.jpg">
+							</c:when>
+							<c:when test="${vo.subject_code eq 'ENG'}">
+								<img src="img/teacher/et.jpg">
+							</c:when>
+							<c:when test="${vo.subject_code eq 'MATH'}">
+								<img src="img/teacher/mt.jpg">
+							</c:when>
+						</c:choose>
 					</div>
 					<div class="lecture">
-						<div class="icons">
-							<i class="pmico yellow">중학2</i> <i class="pmico blue">내신기본</i> <i
-								class="pmico sky">완강</i> <i class="pmico green">교재</i>
-						</div>
-						<h2>[중2] 싸플 중학 과학</h2>
+						<h2>${vo.lecture_name}</h2>
 						<div class="name">
-							<strong>김청해</strong> <span>선생님</span> <a href="#선생님정보"
-								class="btn"></a>
+							<strong>${vo.teacher_name}</strong> <span>선생님</span> <a
+								href="en_lec_teacher_info.le" class="btn"></a>
 						</div>
 						<div class="btns">
-							<a class="btn1">수강신청</a> <a class="btn1">교재구매</a>
+							<a class="btn1"
+								href="en_lec_insert.le?lecture_code=${vo.lecture_code}&member_code=${loginInfo.member_code}"
+								onclick="enrollment_kt();">수강신청</a> <a class="btn1">교재구매</a>
 						</div>
 					</div>
 				</div>
@@ -301,28 +311,28 @@
 				<table>
 					<tr>
 						<th>수강대상</th>
-						<td>중학2/내신기본</td>
+						<td>중학3/내신기본</td>
 					</tr>
 					<tr>
 						<th>수강기간</th>
-						<td>151강/총180일</td>
+						<td>22/12/30 ~ 23/02/01</td>
 					</tr>
 					<tr>
 						<th>강의교재</th>
-						<td>씨플 중학교 과학 2</td>
+						<td>EBS 중학 뉴런 국어3</td>
 					</tr>
 					<tr>
 						<th>강좌구성</th>
 						<td>
 							<div class="en_progress">
 								<div class="en_bar">
-									<div class="data" style="width: 30%"></div>
+									<div class="data" style="width: 80%"></div>
 								</div>
 								<div class="percent p1">
-									<strong>30%</strong> <span>개념설명</span>
+									<strong>80%</strong> <span>개념설명</span>
 								</div>
 								<div class="percent p2">
-									<strong>70%</strong> <span>문제풀이</span>
+									<strong>20%</strong> <span>문제풀이</span>
 								</div>
 							</div>
 						</td>
@@ -349,19 +359,37 @@
 					</b>
 				</div>
 				<div class="cont">
-					싸플 중학교 과학2 <br> 1. 물질의 구성 <br> 2. 전기와 자기 <br> 3. 태양계
-					<br> 4. 식물과 에너지 <br> 5. 동물과 에너지
+					• 중학교 3학년 국어 교과서 전범위 <br> • 3학년 영역 - 문학,읽기,쓰기,문법,듣기·말하기
 				</div>
 				<div class="tit">
 					<b> 수강대상 <span>lecture target</span>
 					</b>
 				</div>
 				<div class="cont">
-					- 중학교 2학년 과학을 체계적으로 학습하고자 하는 학생 <br> - 과학의 기초가 없어 중학교 과학이 어려운
-					학생 <br> - 수행평가 및 지필고사를 완벽하게 대비하고자 하는 학생
+					• 기본 핵심 개념 학습을 통해 3학년 국어 성적을 미리 잡고 싶은 학생 <br> • 한 학기 교고 핵심 개념을
+					미리 공부하고 싶은 학생
+				</div>
+				<div class="tit">
+					<b> 강좌특징 <span>lecture feature</span>
+					</b>
+				</div>
+				<div class="cont">
+					• 단기간에 3학년 국어 교과서의 개념을 정리해 주는 강좌! <br> • 2015 개정 교육과정의 핵심 사항이
+					반영된 전략적인 강좌!
 				</div>
 			</div>
 		</div>
 	</div>
+	<script>
+	 function enrollment_kt(){
+		 if(${empty loginInfo.id}){
+			 alert('로그인 먼저 해주세요.');
+		 }else if(${not empty loginInfo.id && loginInfo.type == 'STUD'}) {
+			 alert('${loginInfo.member_name}님, 수강신청이 완료되었습니다.');
+		 }else {
+			 alert('잘못된 접근입니다.');
+		 }
+	 }
+	</script>
 </body>
 </html>

@@ -75,11 +75,16 @@ public class LectureController {
 
 	// 선택한 강의의 공지사항 리스트
 	@RequestMapping("/notice_list.le")
-	public String notice_list(Model model, int lecture_code) {
+	public String notice_list(Model model, int lecture_code, HttpSession session) {
+		session.removeAttribute("lecture");
+		session.removeAttribute("lecture_info");
 		// 공지 리스트
+		MemberVO lecture_info = service.info(lecture_code);
+		LectureVO lecture = service.lecture_info(lecture_code);
 		List<BoardVO> notice_list = service.notice_list(lecture_code);
 		model.addAttribute("notice_list", notice_list);
-
+		session.setAttribute("lecture_info", lecture_info);
+		session.setAttribute("lecture", lecture);
 		return "lecture/notice_list";
 	}
 

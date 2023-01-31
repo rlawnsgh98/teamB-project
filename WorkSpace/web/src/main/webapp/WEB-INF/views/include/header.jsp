@@ -198,9 +198,7 @@ nav ul li:hover ul {
 						</c:if>
 						<c:if test='${not empty loginInfo.profilepath}'>
 							<li><a href="mypage.me"><img class='profile'
-									src='${loginInfo.profilepath}'>
-								</a>
-							</li>
+									src='${loginInfo.profilepath}'>${loginInfo.member_name}</a></li>
 						</c:if>
 						<li><strong>${loginInfo.member_name}</strong></li>
 						<li><a href="modify_pw.me">비밀번호변경</a></li>
@@ -216,18 +214,15 @@ nav ul li:hover ul {
 		<ul>
 			<li><a href='<c:url value="/"/>'>홈</a></li>
 			<li><a href="gallery_list.le">수강</a></li>
-				
-			<c:if test="${loginInfo.type == 'TEACH'}">
-				<li><a href="open_lecture.le?member_code=${loginInfo.member_code}">강의</a>
-					<ul>
-						<li><a href="#">관리</a></li>
-					</ul>
-				</li>
-			</c:if>
-			<li><a href="list.le?member_code=${loginInfo.member_code }">내 강의실</a></li>	
+			<li><a
+				href="open_lecture.le?member_code=${loginInfo.member_code}">강의</a>
+				<!-- <ul>
+					<li><a href="#">관리</a></li>lecture_home.le?
+				</ul></li> -->
+			<li><a href="list.le?member_code=${loginInfo.member_code }">내 강의실</a></li>		
 			<li><a href="#">게시판</a>
 				<ul>
-					<li class="nav_box_li"><a href="list.no">공통</a></li>
+					<li class="nav_box_li"><a href="list.no">공지</a></li>
 					<li class="nav_box_li"><a href="list.bo">자유</a></li>
 				</ul></li>
 		</ul>

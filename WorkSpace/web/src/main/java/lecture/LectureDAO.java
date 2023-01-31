@@ -186,6 +186,8 @@ public class LectureDAO implements LectureService {
 	@Override
 	public void homework_submit_insert(HomeworkSubmitVO vo) {
 		sql.insert("homework_submit_insert", vo);
+	}
+	
 	@Override
 	public List<LectureVO> sys_lec_list() {
 		return sql.selectList("lecture.sys_lec_list");

@@ -11,56 +11,8 @@
 <meta charset="utf-8">
 </head>
 
-.main_wrap {
-	position: relative;
-	overflow: hidden;
-}
 
-.sub_wrap {
-	overflow: hidden;
-	padding: 0 100px;
-	width: 1200px;
-	margin: 0 auto;
-}
 
-.wrap1 {
-	float: left;
-	overflow: hidden;
-	width: 300px;
-	height: 495px;
-	border: 1px solid #d2d2d2;
-}
-
-.wrap2 {
-	float: right;
-	overflow: hidden;
-	height: 500px;
-}
-
-.wrap2_1 {
-	width: 380px;
-	height: 240px;
-	float: left;
-	overflow: hidden;
-	position: relative;
-	border: 1px solid #d2d2d2;
-}
-
-.wrap2_2 {
-	float: left;
-	margin-left: 15px;
-	margin-bottom: 15px;
-	width: 270px;
-	height: 240px;
-	border: 1px solid #d2d2d2;
-}
-
-.clr {
-	clear: both;
-	height: 0;
-	overflow: hidden;
-}
-</style>
 <style>
 .mySlides {
 	display: none;
@@ -179,6 +131,55 @@ to {
 	width: 200px;
 	height: 220px;
 	border: 1px solid #d2d2d2;
+}
+.main_wrap {
+	position: relative;
+	overflow: hidden;
+}
+
+.sub_wrap {
+	overflow: hidden;
+	padding: 0 100px;
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.wrap1 {
+	float: left;
+	overflow: hidden;
+	width: 300px;
+	height: 495px;
+	border: 1px solid #d2d2d2;
+}
+
+.wrap2 {
+	float: right;
+	overflow: hidden;
+	height: 500px;
+}
+
+.wrap2_1 {
+	width: 380px;
+	height: 240px;
+	float: left;
+	overflow: hidden;
+	position: relative;
+	border: 1px solid #d2d2d2;
+}
+
+.wrap2_2 {
+	float: left;
+	margin-left: 15px;
+	margin-bottom: 15px;
+	width: 270px;
+	height: 240px;
+	border: 1px solid #d2d2d2;
+}
+
+.clr {
+	clear: both;
+	height: 0;
+	overflow: hidden;
 }
 </style>
 <body>

@@ -222,7 +222,7 @@ nav ul li:hover ul {
 			<li><a href="list.le?member_code=${loginInfo.member_code }">내 강의실</a></li>		
 			<li><a href="#">게시판</a>
 				<ul>
-					<li class="nav_box_li"><a href="list.no">공통</a></li>
+					<li class="nav_box_li"><a href="list.no">공지</a></li>
 					<li class="nav_box_li"><a href="list.bo">자유</a></li>
 				</ul></li>
 		</ul>
