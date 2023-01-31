@@ -179,5 +179,12 @@ public class LectureServiceImple  implements LectureService {
 	@Override
 	public void homework_submit_insert(HomeworkSubmitVO vo) {
 		dao.homework_submit_insert(vo);
+	@Override
+	public List<LectureVO> sys_lec_list() {
+		return dao.sys_lec_list();
+	}
+
+	public LectureVO sys_lec_one(int lecture_code) {
+		return dao.sys_lec_one(lecture_code);
 	}
 }

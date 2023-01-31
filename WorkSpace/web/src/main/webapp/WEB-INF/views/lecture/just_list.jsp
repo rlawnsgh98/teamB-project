@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -133,20 +134,21 @@
 .thumb_list {
 	padding: 10px;
 }
-.thumb_list>li {
+
+.thumb_list_li {
 	display: flex;
 	flex-wrap: wrap;
 	padding: 10px;
 	border-bottom: 1px solid #cccccc;
 }
 
-.img, .img>img {
+.img {
 	width: 100px;
 	height: 100px;
 	overflow: hidden;
 }
 
-.thumb_list>li>.img+.cont_wrap {
+.thumb_list_li>.img+.cont_wrap {
 	width: calc(100% - 13rem);
 	margin-left: 2rem;
 }
@@ -174,7 +176,6 @@
 	border-bottom-right-radius: 0;
 	padding: 0 10px;
 }
-
 </style>
 <body>
 	<div id="container" class="ct_top">
@@ -205,108 +206,47 @@
 							</div>
 							<div class="list_top2">
 								<div class="btn_sort">
-									<span class="material-symbols-outlined"><a href="gallery_list.le">gallery_thumbnail</a></span>
-									<span class="material-symbols-outlined"><a href="just_list.le">list_alt</a></span>
+									<span class="material-symbols-outlined"><a
+										href="gallery_list.le">gallery_thumbnail</a></span> <span
+										class="material-symbols-outlined"><a
+										href="just_list.le">list_alt</a></span>
 								</div>
 							</div>
 						</div>
 						<div class="boxes" style="border-top: 1px solid #000;">
 							<ul class="thumb_list">
-								<li>
-									<div class="img">
-										<img src="img/teacher/et01.png">
-									</div>
-									<div class="cont_wrap">
-										<div class="text_area">
-											<div class="text_group">
-												<span class="flag_ro_col1">시리즈</span>
-												<span class="flag_ro_col2">중학 뉴런</span>
-											</div>
-											<p class="text_title">
-												<a>EBS 중학 뉴런 영어1</a>
-											</p>
-											<div>
-												<span><a href="#" class="btn btn-outline-dark text-dark">수강신청</a></span>
+								<c:forEach items='${sys_lec_list}' var='vo'>
+									<li class="thumb_list_li">
+										<div class="img">
+											<c:choose>
+												<c:when test="${vo.subject_code eq 'KOR'}">
+													<img class="img" src="img/teacher/kt.jpg">
+												</c:when>
+												<c:when test="${vo.subject_code eq 'ENG'}">
+													<img class="img" src="img/teacher/et.jpg">
+												</c:when>
+												<c:when test="${vo.subject_code eq 'MATH'}">
+													<img class="img" src="img/teacher/mt.jpg">
+												</c:when>
+											</c:choose>
+										</div>
+										<div class="cont_wrap">
+											<div class="text_area">
+												<div class="text_group">
+													<span class="flag_ro_col1">중3</span> <span
+														class="flag_ro_col2">${vo.subject_code}</span>
+												</div>
+												<p class="text_title">
+													<a>${vo.lecture_name}</a>
+												</p>
+												<div>
+													<span><a href="en_lec_detail.le"
+														class="btn btn-outline-dark text-dark">상세보기</a></span>
+												</div>
 											</div>
 										</div>
-									</div>
-								</li>
-								<li>
-									<div class="img">
-										<img src="img/teacher/et01.png">
-									</div>
-									<div class="cont_wrap">
-										<div class="text_area">
-											<div class="text_group">
-												<span class="flag_ro_col1">시리즈1</span>
-												<span class="flag_ro_col2">중학 뉴런</span>
-											</div>
-											<p class="text_title">
-												<a>EBS 중학 뉴런 영어1</a>
-											</p>
-											<div>
-												<span><a href="#" class="btn btn-outline-dark text-dark">수강신청</a></span>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="img">
-										<img src="img/teacher/et01.png">
-									</div>
-									<div class="cont_wrap">
-										<div class="text_area">
-											<div class="text_group">
-												<span class="flag_ro_col1">시리즈2</span>
-												<span class="flag_ro_col2">중학 뉴런</span>
-											</div>
-											<p class="text_title">
-												<a>EBS 중학 뉴런 영어1</a>
-											</p>
-											<div>
-												<span><a href="#" class="btn btn-outline-dark text-dark">수강신청</a></span>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="img">
-										<img src="img/teacher/et01.png">
-									</div>
-									<div class="cont_wrap">
-										<div class="text_area">
-											<div class="text_group">
-												<span class="flag_ro_col1">시리즈3</span>
-												<span class="flag_ro_col2">중학 뉴런</span>
-											</div>
-											<p class="text_title">
-												<a>EBS 중학 뉴런 영어1</a>
-											</p>
-											<div>
-												<span><a href="#" class="btn btn-outline-dark text-dark">수강신청</a></span>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="img">
-										<img src="img/teacher/et01.png">
-									</div>
-									<div class="cont_wrap">
-										<div class="text_area">
-											<div class="text_group">
-												<span class="flag_ro_col1">시리즈4</span>
-												<span class="flag_ro_col2">중학 뉴런</span>
-											</div>
-											<p class="text_title">
-												<a>EBS 중학 뉴런 영어1</a>
-											</p>
-											<div>
-												<span><a href="#" class="btn btn-outline-dark text-dark">수강신청</a></span>
-											</div>
-										</div>
-									</div>
-								</li>
+									</li>
+								</c:forEach>
 							</ul>
 						</div>
 					</div>

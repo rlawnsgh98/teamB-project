@@ -489,7 +489,6 @@ public class LectureController {
 	@RequestMapping("/open_new_lecture")
 	public String open_new_lecture(LectureVO lecturevo, HttpSession session) {
 		service.open_new_lecture(lecturevo);
-		
 		MemberVO vo = (MemberVO) session.getAttribute("loginInfo");
 		int mem_code = vo.getMember_code();
 		
@@ -526,23 +525,39 @@ public class LectureController {
 
 	// 수강 - 강의 목록 화면 - 갤러리형 - kmj
 	@RequestMapping("/gallery_list.le")
-	public String lec_list_test(HttpSession session) {
+	public String lec_list_test(HttpSession session, Model model) {	
+		List<LectureVO> sys_lec_list = service.sys_lec_list();
+		model.addAttribute("sys_lec_list", sys_lec_list);
+		
 		// 응답화면연결
 		return "lecture/gallery_list";
 	}
 
 	// 수강 - 강의 목록 화면 - 리스트형 - kmj
 	@RequestMapping("/just_list.le")
-	public String lec_list_test2(HttpSession session) {
+	public String lec_list_test2(HttpSession session, Model model) {
+		List<LectureVO> sys_lec_list = service.sys_lec_list();
+		model.addAttribute("sys_lec_list", sys_lec_list);
+		
 		// 응답화면연결
 		return "lecture/just_list";
 	}
 
-	// 수강 신청 버튼 클릭 시 - kmj
+	// 강의 상세보기 클릭 시 - kmj
 	@RequestMapping("/en_lec_detail.le")
-	public String en_lec_detail(HttpSession session) {
+	public String en_lec_detail(int lecture_code , Model model) {
 		// 응답화면연결
+		LectureVO vo = service.sys_lec_one(lecture_code);
+		model.addAttribute("vo", vo);
 		return "lecture/en_lec_detail";
 	}
-
+	
+	@RequestMapping("/en_lec_teacher_info.le")
+	public String en_lec_teacher_info(HttpSession session) {
+		// 응답화면연결
+		return "lecture/en_lec_teacher_info";
+	}
+	
+	
+	
 }

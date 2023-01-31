@@ -1,17 +1,22 @@
 package com.and.web;
 
 import java.util.HashMap;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import common.CommonService;
+import lecture.LectureServiceImple;
 import member.MemberService;
+import vo.LectureVO;
 import vo.MemberVO;
 
 @Controller
@@ -20,6 +25,8 @@ public class MemberController {
 	private CommonService common;
 	@Autowired
 	private MemberService member;
+	@Autowired
+	private LectureServiceImple service;
 
 	// 회원 가입 화면 요청
 	@RequestMapping("/member.me")
@@ -93,7 +100,12 @@ public class MemberController {
 
 	// 마이 페이지 화면 요청
 	@RequestMapping("/mypage.me")
-	public String mypage(HttpSession session) {
+	public String mypage(HttpSession session, Model model) {
+		MemberVO vo = (MemberVO) session.getAttribute("loginInfo");
+		int mem_code = vo.getMember_code();
+		
+		List<LectureVO> lecture_list = service.lecture_list(mem_code);
+		model.addAttribute("lecture_list", lecture_list);
 		// 응답화면연결
 		return "member/mypage";
 	}

@@ -66,28 +66,50 @@
 					<c:if test="${loginInfo.type != 'TEACH'}">
 						<div class="enrolment_log_box">
 							<h5 class="tb_title">
-								수강 중인 과정 <span>(최근 수강시작일순 10개)</span>
+								수강 중인 과정
 							</h5>
 							<div class="tb_box type_list mypage_course_user_list">
 								<table summary="수강 중인 과정 및 기간을 나타냅니다.">
 									<colgroup>
 										<col style="width: 10%">
-										<col>
-										<col style="width: 27%">
+										<col style="width: 20%">
 										<col style="width: 13%">
+										<col style="width: 13%">
+										<col style="width: 11%">
+										<col style="width: 10%">
+										<col style="width: 10%">
+										<col style="width: 5%">
 									</colgroup>
 									<thead>
 										<tr>
 											<th scope="col">구분</th>
 											<th scope="col">과정명</th>
-											<th scope="col">학습기간</th>
+											<th scope="col">시작일</th>
+											<th scope="col">종료일</th>
 											<th scope="col">강의실</th>
+											<th scope="col">강사명</th>
+											<th scope="col">과목코드</th>
+											<th scope="col">교시</th>
 										</tr>
 									</thead>
 									<tbody>
+										<c:if test="${empty lecture_list}">
 										<tr>
-											<td class="tac" colspan="5">수강 중인 과정이 없습니다.</td>
+											<td class="tac" colspan="8">수강 중인 과정이 없습니다.</td>
 										</tr>
+										</c:if>
+										<c:forEach items='${lecture_list}' var='vo'>
+											<tr class="text-center">
+												<th>${vo.lecture_code}</th>
+												<td>${vo.lecture_name}</td>
+												<td>${vo.startdate}</td>
+												<td>${vo.enddate}</td>
+												<td>${vo.room_code}</td>
+												<td>${vo.teacher_name}</td>
+												<td>${vo.subject_code}</td>
+												<td>${vo.timetable_code}</td>
+											</tr>
+										</c:forEach>
 									</tbody>
 								</table>
 							</div>
