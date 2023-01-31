@@ -15,11 +15,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div id="container" style="margin-top: 100px; margin-bottom: 400px">
+	<div id="container" >
         <div class="row">
 
-	            
-            <div class="col-lg-7 mx-auto bg-white rounded shadow" style=' height: 1000px'>
+	         <%@include file="../include/sidebar.jsp" %>
+            <div class="col-lg-9 mx-auto bg-white rounded shadow" >
             <form method='post' id="search" action="attendance_manage.le">
              	<input type="hidden" name="list_size" value="${fn:length(list) }"/>
 	            <input type="hidden" name="lecture_code" value="${lecture_info.lecture_code }">

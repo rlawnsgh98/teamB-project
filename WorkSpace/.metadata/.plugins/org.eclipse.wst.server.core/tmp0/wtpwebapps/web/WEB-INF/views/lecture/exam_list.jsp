@@ -12,12 +12,13 @@
 <body>
 
 	<div id="container py-5" class='exam-container'>
-		<h3 class='board-title text-dark'>시험목록</h3>
-		<div class='w-px1000 flex-end'>
-			<a class='btn-fill' href='exam_new.le' style='margin-right:20px'>시험등록</a>
+		<h3>시험목록</h3>
+			<div class='btnSet'>
+			<a class='btn-fill' href='exam_new.le'>시험등록</a>
 		</div>
-        
-<!--             <div class="mx-auto bg-white rounded shadow w-px1000"> -->
+		<div class="row">
+        	<%@include file="../include/sidebar.jsp" %>
+			<div class="col-lg-9 mx-auto bg-white rounded shadow">
 			<table class="table table-fixed exam-table"> 
 				<colgroup>
 					<col width='80px'>
@@ -75,8 +76,9 @@
 			</c:forEach>
 			</c:if>
 			</table>
-			
+			</div>
 <!-- 		</div> -->
+</div>
 	</div>
 </body>
 </html>

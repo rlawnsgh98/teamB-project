@@ -12,6 +12,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 	<div id='container py-5'>
 		<h3>과제목록</h3>
 		<!-- 선생일때 보여줌 -->
@@ -21,7 +22,9 @@
 			</div>		
 		</c:if>
 		<div class="row">
-			<div class="col-lg-7 mx-auto bg-white rounded shadow">
+		
+	<%@include file="../include/sidebar.jsp" %>
+			<div class="col-lg-9 mx-auto bg-white rounded shadow">
 
 					<table class="table ">
 						<thead>

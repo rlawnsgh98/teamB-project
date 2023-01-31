@@ -35,7 +35,7 @@
 			<tbody>
 			<c:forEach items="${list}" var="vo">
 				<tr>
-					<td class="col-3"><a href="lecture_home.le?lecture_code=${vo.lecture_code }">${vo.lecture_name}</a></td>
+					<td class="col-3"><a href="notice_list.le?lecture_code=${vo.lecture_code }">${vo.lecture_name}</a></td>
 					<td class="col-3">${vo.subject_code }</td>
 					<c:if test="${loginInfo.type eq 'STUD' }">
 						<td class="col-3">${vo.teacher_name }</td>

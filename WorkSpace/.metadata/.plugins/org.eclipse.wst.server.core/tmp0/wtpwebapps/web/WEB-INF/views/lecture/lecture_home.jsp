@@ -13,6 +13,8 @@
 </head>
 
 <body>
+
+<%@include file="../include/sidebar.jsp" %>
 <main>
 
 <div class="container" style="height: 2000px;">
@@ -62,7 +64,7 @@
 </div>
 </div>
 </div>
-<%@include file="../include/sidebar.jsp" %>
+
 </div>
 
 </main>

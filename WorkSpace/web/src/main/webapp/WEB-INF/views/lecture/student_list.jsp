@@ -11,7 +11,8 @@
 <body>
 	<div id="container py-5">
         <div class="row">
-            <div class="col-lg-7 mx-auto bg-white rounded shadow">
+        	<%@include file="../include/sidebar.jsp" %>
+            <div class="col-lg-9 mx-auto bg-white rounded shadow">
             <h1>학생 목록</h1>
 				<table class="table table-fixed table-hover"> 
 

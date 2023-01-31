@@ -10,6 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 	<h1>공지 목록</h1>
 	<c:if test="${loginInfo.type eq 'TEACH' }">
         <div class='btnSet'>
@@ -19,9 +20,9 @@
 	
 	<div id="container" style="margin-top: 100px; margin-bottom: 400px">
         <div class="row" style="position: relative;">
-			<%@include file="../include/sidebar.jsp" %>
+	<%@include file="../include/sidebar.jsp" %>
 
-            <div class="col-lg-8 mx-auto bg-white rounded shadow">
+            <div class="col-lg-9 mx-auto bg-white rounded shadow">
             
 				<table class="table table-fixed table-hover"> 
 

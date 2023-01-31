@@ -217,7 +217,7 @@ nav ul li:hover ul {
 			<li><a
 				href="open_lecture.le?member_code=${loginInfo.member_code}">강의</a>
 				<!-- <ul>
-					<li><a href="#">관리</a></li>
+					<li><a href="#">관리</a></li>lecture_home.le?
 				</ul></li> -->
 			<li><a href="list.le?member_code=${loginInfo.member_code }">내 강의실</a></li>		
 			<li><a href="#">게시판</a>
